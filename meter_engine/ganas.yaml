@@ -1,0 +1,74 @@
+ekakshara_ganas:
+  description: Single-akshara ganas — one syllable counts as a gana on its own.
+  ganas:
+  - {name: guruvu, telugu: గురువు, pattern: U, aksharas: 1, matras: 2}
+  - {name: laghuvu, telugu: లఘువు, pattern: I, aksharas: 1, matras: 1}
+dvyakshara_ganas:
+  description: Two-akshara ganas — two syllables together form one gana (4 kinds).
+  ganas:
+  - {name: lala, telugu: లల, pattern: II, aksharas: 2, matras: 2}
+  - {name: va, telugu: వ, pattern: IU, aksharas: 2, matras: 3, note: also called "laga"}
+  - {name: ha, telugu: హ, pattern: UI, aksharas: 2, matras: 3, note: also called "gala"}
+  - {name: gaa, telugu: గా, pattern: UU, aksharas: 2, matras: 4, note: also called "gaga"}
+trika_ganas:
+  description: Trika ganas — three-akshara ganas; the 8 standard ganas used in vritta meters.
+  ganas:
+  - {name: bha, telugu: భ, pattern: UII, aksharas: 3, matras: 4, note: initial guru}
+  - {name: ja, telugu: జ, pattern: IUI, aksharas: 3, matras: 4, note: medial guru}
+  - {name: sa, telugu: స, pattern: IIU, aksharas: 3, matras: 4, note: final guru}
+  - {name: na, telugu: న, pattern: III, aksharas: 3, matras: 3, note: all laghus}
+  - {name: ya, telugu: య, pattern: IUU, aksharas: 3, matras: 5, note: initial laghu}
+  - {name: ra, telugu: ర, pattern: UIU, aksharas: 3, matras: 5, note: medial laghu}
+  - {name: ta, telugu: త, pattern: UUI, aksharas: 3, matras: 5, note: final laghu}
+  - {name: ma, telugu: మ, pattern: UUU, aksharas: 3, matras: 6, note: all gurus}
+upaganas:
+  description: Upaganas — matra-gana classes used to build lines in jati/upajati meters
+    (Kandamu, Ataveladi, Tetagiti, Taruvoja, and the like). Ganas within a class are
+    mutually interchangeable — class identity rests on the traditional set of member
+    ganas, not on a fixed matra count.
+  surya_ganas:
+    description: Surya ganas (2 kinds).
+    ganas:
+    - {name: na, telugu: న, pattern: III, aksharas: 3, matras: 3}
+    - {name: ha, telugu: హ, pattern: UI, aksharas: 2, matras: 3}
+  indra_ganas:
+    description: 'Indra ganas (6 kinds). Note: the earlier Notes/Comprehensive_Catalog_Metrical_poetry
+      file in this project mistakenly listed bha, ja, sa, nala, naga, sala — te.wikipedia.org
+      and telugu_prosody_engine independently confirm bha, ra, ta, nala, naga, sala
+      (ra and ta instead of ja and sa).'
+    ganas:
+    - {name: bha, telugu: భ, pattern: UII, aksharas: 3, matras: 4}
+    - {name: ra, telugu: ర, pattern: UIU, aksharas: 3, matras: 5}
+    - {name: ta, telugu: త, pattern: UUI, aksharas: 3, matras: 5}
+    - {name: nala, telugu: నల, pattern: IIII, aksharas: 4, matras: 4}
+    - {name: naga, telugu: నగ, pattern: IIIU, aksharas: 4, matras: 5}
+    - {name: sala, telugu: సల, pattern: IIUI, aksharas: 4, matras: 5}
+  chandra_ganas:
+    description: Chandra ganas — extended/composite ganas of 4-5 aksharas, used at
+      line ends or in special contexts. Taken directly from the telugu_prosody_engine
+      source (ganadefs.py) — the te.wikipedia.org article names the same ganas (under
+      some of these names) but only briefly, not exhaustively.
+    ganas:
+    - {name: bhala, telugu: భల, pattern: UIII, aksharas: 4, matras: 5}
+    - {name: bhaguru, telugu: భగురు, pattern: UIIU, aksharas: 4, matras: 6}
+    - {name: malaghu, telugu: మలఘు, pattern: UUUI, aksharas: 4, matras: 7}
+    - {name: sava, telugu: సవ, pattern: IIUIU, aksharas: 5, matras: 7}
+    - {name: saha, telugu: సహ, pattern: IIUUI, aksharas: 5, matras: 7}
+    - {name: tala, telugu: తల, pattern: UUII, aksharas: 4, matras: 6}
+    - {name: rala, telugu: రల, pattern: UIUI, aksharas: 4, matras: 6}
+    - {name: nava, telugu: నవ, pattern: IIIIU, aksharas: 5, matras: 6}
+    - {name: raguru, telugu: రగురు, pattern: UIUU, aksharas: 4, matras: 7}
+    - {name: taga, telugu: తగ, pattern: UUIU, aksharas: 4, matras: 7}
+    - {name: nagaga, telugu: నగగ, pattern: IIIUU, aksharas: 5, matras: 7}
+    - {name: naha, telugu: నహ, pattern: IIIUI, aksharas: 5, matras: 6}
+    - {name: nalala, telugu: నలల, pattern: IIIII, aksharas: 5, matras: 5}
+  kanda_ganas:
+    description: Kanda ganas — the five 4-matra ganas permitted in Kandamu (chatur-matra ganas).
+      Positional restrictions (no ja at odd ganas, ja/nala at the 6th, guru at the half end)
+      are meter rules, recorded in meter_rules.yaml, not properties of the class.
+    ganas:
+    - {name: bha, telugu: భ, pattern: UII, aksharas: 3, matras: 4}
+    - {name: ja, telugu: జ, pattern: IUI, aksharas: 3, matras: 4}
+    - {name: sa, telugu: స, pattern: IIU, aksharas: 3, matras: 4}
+    - {name: nala, telugu: నల, pattern: IIII, aksharas: 4, matras: 4}
+    - {name: gaa, telugu: గా, pattern: UU, aksharas: 2, matras: 4, note: also called "gaga"}

@@ -1,0 +1,60 @@
+# Hand-scanned classical stanzas with their expected meter.
+# Scansion done by hand for this project (guru = U, laghu = I); verify before
+# citing. Each entry: source, the text, the U/I lines, the expected meter.
+stanzas:
+  - id: pothana-evvanice
+    source: Pothana, Andhra Mahabhagavatamu 8.73 (Gajendra moksham)
+    meter: utpalamala
+    note: text from dataset/bhagavatam.json (8-73-ఉ.), punctuation and arasunna as in the corpus
+    text: |
+      ఎవ్వనిచే జనించు జగ; మెవ్వని లోపల నుండు లీనమై;
+      యెవ్వని యందు డిందుఁ; బరమేశ్వరుఁ డెవ్వఁడు; మూలకారణం
+      బెవ్వఁ; డనాదిమధ్యలయుఁ డెవ్వఁడు; సర్వముఁ దానయైన వాఁ
+      డెవ్వఁడు; వాని నాత్మభవు నీశ్వరు నే శరణంబు వేడెదన్.
+    lines:
+      - UIIUIUIIIUIIUIIUIUIU
+      - UIIUIUIIIUIIUIIUIUIU
+      - UIIUIUIIIUIIUIIUIUIU
+      - UIIUIUIIIUIIUIIUIUIU
+  - id: pothana-indugaladandu
+    source: Pothana, Andhra Mahabhagavatamu 7.275 (Prahlada)
+    meter: kandamu
+    text: |
+      ఇందు గలఁ డందు లేఁ డని
+      సందేహము వలదు చక్రి సర్వోపగతుం
+      డెందెందు వెదకి చూచిన
+      నందందే కలఁడు దానవాగ్రణి వింటే
+    lines:
+      - UIIIUIUII
+      - UUIIIIIUIUUIIU
+      - UUIIIIUII
+      - UUUIIIUIUIIUU
+    ganas: [[భ, జ, భ], [గా, నల, జ, గా, స], [గా, నల, భ], [గా, భ, జ, భ, గా]]
+  - id: sumati-sriramuni
+    source: Baddena, Sumati satakam (opening)
+    meter: kandamu
+    text: |
+      శ్రీరాముని దయచేతను
+      నారూఢిగ సకల జనులు నౌరా యనగా
+      ధారాళమైన నీతులు
+      నోరూరగ జవులు పుట్ట నుడివెద సుమతీ
+    lines:
+      - UUIIIIUII
+      - UUIIIIIIIIUUIIU
+      - UUIUIUII
+      - UUIIIIIUIIIIIIIU
+    ganas: [[గా, నల, భ], [గా, నల, నల, గా, స], [గా, జ, భ], [గా, నల, జ, నల, స]]
+  - id: vemana-uppu-kappuram
+    source: Vemana satakam
+    meter: ataveladi
+    text: |
+      ఉప్పు కప్పురంబు నొక్క పోలికనుండు
+      చూడ చూడ రుచుల జాడ వేరు
+      పురుషులందు పుణ్య పురుషులు వేరయా
+      విశ్వదాభిరామ వినుర వేమ
+    lines:
+      - UIUIUIUIUIIUI
+      - UIUIIIIUIUI
+      - IIIUIUIIIIIUIU
+      - UIUIUIIIIUI
+    ganas: [[హ, హ, హ, ర, సల], [హ, హ, న, హ, హ], [న, హ, హ, నల, ర], [హ, హ, హ, న, హ]]

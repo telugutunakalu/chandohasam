@@ -1,0 +1,38 @@
+digraph "ataveladi" {
+  rankdir=LR; fontname="Helvetica,Arial,sans-serif"; labelloc=b; fontsize=11;
+  label="ఆటవెలది  ·  ataveladi  ·  upajati\n4 lines per unit, slot pattern: odd even odd even\naksharas per line: 10–17  ·  prāsa: no  ·  prāsa-yati: allowed";
+  node [shape=box, style="rounded,filled", fontname="Helvetica,Arial,sans-serif", fontsize=10, fillcolor="#f4f4f4"];
+  edge [color="#607d8b", arrowsize=0.7];
+  subgraph "cluster_odd" {
+    label="slot odd  (lines 1, 3)"; style="rounded,dashed"; color="#90a4ae"; fontsize=10;
+    "odd_start" [shape=circle, label="", width=0.18, fillcolor="#37474f"];
+    "odd_end" [shape=doublecircle, label="", width=0.18, fillcolor="#37474f"];
+    "odd_G1" [label="G1\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "odd_start" -> "odd_G1";
+    "odd_G2" [label="G2\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "odd_G1" -> "odd_G2";
+    "odd_G3" [label="G3\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "odd_G2" -> "odd_G3";
+    "odd_G4" [label="G4\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI\n◆ యతి (gana start)", fillcolor="#ffe082"];
+    "odd_G3" -> "odd_G4";
+    "odd_G5" [label="G5\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI", fillcolor="#f4f4f4"];
+    "odd_G4" -> "odd_G5";
+    "odd_G5" -> "odd_end";
+  }
+  subgraph "cluster_even" {
+    label="slot even  (lines 2, 4)"; style="rounded,dashed"; color="#90a4ae"; fontsize=10;
+    "even_start" [shape=circle, label="", width=0.18, fillcolor="#37474f"];
+    "even_end" [shape=doublecircle, label="", width=0.18, fillcolor="#37474f"];
+    "even_G1" [label="G1\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "even_start" -> "even_G1";
+    "even_G2" [label="G2\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "even_G1" -> "even_G2";
+    "even_G3" [label="G3\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "even_G2" -> "even_G3";
+    "even_G4" [label="G4\nన III  ·  హ UI\n◆ యతి (gana start)", fillcolor="#ffe082"];
+    "even_G3" -> "even_G4";
+    "even_G5" [label="G5\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "even_G4" -> "even_G5";
+    "even_G5" -> "even_end";
+  }
+}

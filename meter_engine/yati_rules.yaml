@@ -1,0 +1,653 @@
+# =============================================================================
+#  yati_rules.yaml — programmable lookup table + rule catalogue for Telugu యతి
+# =============================================================================
+#
+#  WHAT THIS FILE IS
+#    The single data source read by meter_engine/yati_engine.py.  Given TWO
+#    aksharas (the వళి and the akshara at the యతిస్థానము) the engine answers
+#    "which yati do they satisfy, or by which named rule do they fail", with a
+#    provenance trail.  The pairing rules are distilled from
+#    yathi_docs/yathi_compact.md (259 one-line rules, ids YATI-<FAMILY>-<NN>),
+#    itself distilled from yathi_docs/yathi.md (పద్యవిద్య ch. 6).  Every rule id
+#    used here exists in yathi_compact.md with the same status (the test suite
+#    checks this).
+#
+#  HOW TO READ IT
+#    * profiles / status_vocabulary — same contract as prasa_rules.yaml
+#    * alphabet          — vowel classes, consonants, vargas, phonetic classes
+#    * akshara_model     — how an input string / Syllable becomes features
+#    * readings          — how each coordinate is expanded into candidate
+#                          readings (saṁyukta constituents, bindu variants,
+#                          ఋ detachment, svara-pradhāna sandhi hypotheses,
+#                          ubhaya triggers) and how readings are ranked
+#    * maitri_table      — unordered consonant pairs -> rule (the lookup table)
+#    * conditional_pairs — pairs that hold only in one vowel class (ము rules)
+#    * bindu_table       — pairs that need a preceding anusvāra on one side
+#    * cluster_unit_table— whole-cluster equivalences (జ్ఞ, స్న)
+#    * vowel_bridges     — vowel <-> consonant pairings (సరస, ఋ, ఌ)
+#    * sandhi_readings   — written vowel -> possible underlying vowels
+#    * ubhaya_triggers   — lexical patterns that open the vowel track
+#    * blockers          — lexical patterns that close a track
+#    * rules             — the catalogue of operational rules (id, names, status)
+#    * evaluation_pipeline / trail_schema
+#    * attested_examples — fixtures replayed by tests/test_yati_rules.py
+#
+#  RULE ID GRAMMAR (shared with yathi_docs)
+#    YATI-<FAMILY>-<NN>[.<k>]   POS MOD SV VY SY SP UB PY DL RJ EP
+# =============================================================================
+
+schema_version: 1
+
+metadata:
+  title: Telugu యతి (yati) pair lookup table and rule catalogue
+  source: yathi_docs/yathi_compact.md
+  source_detail: yathi_docs/rules/*.md (bullets) <- yathi_docs/yathi.md (పద్యవిద్య ch. 6, 20 parts)
+  compiled_on: "2026-09-14"
+  engine: meter_engine/yati_engine.py
+  companion: meter_engine/prasa_rules.yaml (prāsa-yati fallback reuses prasa_engine.lookup_pair)
+  related_files:
+    - meter_engine/meter_rules.yaml      # yati positions per meter, prasa_yati flag
+    - meter_engine/indic_meter_dawg/     # scansion.Syllable and parser.Segmentation.yati_aksharas feed evaluate_line
+
+profile_order: [strict, relaxed, historical]
+
+profiles:
+  strict:
+    label_en: Strict — Appakavi / Kavitraya canon
+    label_te: కఠిన
+    accepted_statuses: [canonical, canonical_subtype, mandatory, informational]
+  relaxed:
+    label_en: Relaxed — later lākṣaṇikas and kāvya usage (ర-ల, ద-డ generalised, స్నా-త, విశ్వామిత్ర vowel) + ర/ఱ orthographic relaxation
+    label_te: సడలింపు
+    accepted_statuses: [canonical, canonical_subtype, mandatory, informational, accepted_relaxation, orthographic_relaxation]
+  historical:
+    label_en: Historical — additionally IDENTIFY deprecated forms (బహుయతి lapses, prāsa-yati variants); forbidden still fails
+    label_te: చారిత్రక
+    accepted_statuses: [canonical, canonical_subtype, mandatory, informational, accepted_relaxation, orthographic_relaxation, deprecated]
+
+status_vocabulary:
+  canonical: core rule; every profile applies it
+  canonical_subtype: named sub-variety; every profile applies it
+  mandatory: constraint whose violation fails every profile
+  accepted_relaxation: sanctioned by later lākṣaṇikas / usage; needs profile >= relaxed
+  orthographic_relaxation: ర/ఱ — forbidden by the early canon, not distinguished by printed corpora; accepted from relaxed on (project decision, same as prāsa)
+  deprecated: attested but apraśasta; identified only in the historical profile
+  forbidden: never a match; the rule names the failure
+  informational: annotation only
+
+# -----------------------------------------------------------------------------
+alphabet:
+  vowel_classes:                      # YATI-SV-01 — every rule presupposes this
+    A: [అ, ఆ, ఐ, ఔ]
+    I: [ఇ, ఈ, ఋ, ౠ, ఌ, ౡ, ఎ, ఏ]
+    U: [ఉ, ఊ, ఒ, ఓ]
+  matras: {"ా": ఆ, "ి": ఇ, "ీ": ఈ, "ు": ఉ, "ూ": ఊ, "ృ": ఋ, "ౄ": ౠ, "ౢ": ఌ, "ౣ": ౡ, "ె": ఎ, "ే": ఏ, "ై": ఐ, "ొ": ఒ, "ో": ఓ, "ౌ": ఔ}
+  consonants: [క, ఖ, గ, ఘ, ఙ, చ, ఛ, జ, ఝ, ఞ, ట, ఠ, డ, ఢ, ణ, త, థ, ద, ధ, న, ప, ఫ, బ, భ, మ, య, ర, ఱ, ల, ళ, వ, శ, ష, స, హ]
+  dantya_map: {ౘ: చ, ౙ: జ}           # savarṇa (Bāla Vyākaraṇam Saṁjñā 7); YATI-VY-02.1 / YATI-VY-12.1
+  vargas:
+    - {name: ka, members: [క, ఖ, గ, ఘ, ఙ]}
+    - {name: ca, members: [చ, ఛ, జ, ఝ, ఞ]}
+    - {name: ṭa, members: [ట, ఠ, డ, ఢ, ణ]}
+    - {name: ta, members: [త, థ, ద, ధ, న]}
+    - {name: pa, members: [ప, ఫ, బ, భ, మ]}
+  classes:
+    stops: [క, ఖ, గ, ఘ, చ, ఛ, జ, ఝ, ట, ఠ, డ, ఢ, త, థ, ద, ధ, ప, ఫ, బ, భ]
+    nasal: [ఙ, ఞ, ణ, న, మ]
+    sibilant: [శ, ష, స]
+    semivowel: [య, ర, ల, వ]
+    mavarna_hosts: [య, ర, ల, వ, శ, ష, స, హ]   # YATI-SP-03: ం + these <-> మ
+    labial_stops: [ప, ఫ, బ, భ]                 # YATI-VY-16/17, YATI-DL-06
+
+# -----------------------------------------------------------------------------
+akshara_model:
+  input_forms:
+    - a Telugu akshara string, e.g. "క", "గా", "శ్రీ", "క్ష్మా"
+    - the same string with a LEADING "ం" meaning "the preceding akshara carries an anusvāra" (ంత, ండ) -> pre_bindu
+    - the same string with a LEADING dead consonant meaning "fused with the preceding drutam / pollu" (న్సా, ల్గీ) -> pre_dead + onset
+    - an indic_meter_dawg.scansion.Syllable (or any object with .onset .vowel .anusvara .visarga .dead .candrabindu)
+  normalisation:                      # YATI-EP-02
+    - NFC; ౝ -> న్; drop ఽ, ZW chars, length marks
+    - ఁ (ardhabindu) is dropped: no effect on yati (YATI-MOD-01)
+    - ం / ః ON the akshara are recorded but ignored for pairing (YATI-MOD-02, YATI-MOD-04)
+    - a trailing dead consonant on the akshara is ignored for pairing (YATI-MOD-05)
+    - a preceding ం (pre_bindu) is a FLAG that adds pairs (YATI-MOD-03); a preceding dead న్/ల్ joins the onset (YATI-MOD-06, YATI-SY-08/09)
+    - ౘ/ౙ are normalised to చ/జ for pairing (savarṇa)
+
+# -----------------------------------------------------------------------------
+readings:
+  description: >
+    Each coordinate is expanded into candidate readings (YATI-EP-03).  A reading is
+    (track, consonant|None, vowel, bindu, via, rank).  Lower rank = closer to the
+    written text; the best accepted match is the one with the lowest combined rank.
+  ranks:
+    0: written reading — first onset consonant + vowel, or the bare vowel
+    1: another onset constituent (YATI-SY-01), a geminate (YATI-SY-03), a bindu variant (YATI-VY-03), a fused pre_dead constituent (YATI-SY-08/09), a confirmed sandhi split supplied by the caller (YATI-SV-02)
+    2: ఋ / ఌ detachment (YATI-SV-05/06/07, YATI-DL-01) and cluster-unit equivalences (జ్ఞ, స్న)
+    3: ubhaya vowel opened by a lexical trigger (YATI-UB-*)
+    4: svara-pradhāna sandhi hypothesis from the written vowel alone (YATI-SV-02.2), drutam న+V and యడాగమ readings
+    5: hidden-vowel hypotheses — గూఢస్వర అ under ఓ/ఏ (YATI-SV-04), వృద్ధి option B (YATI-SV-08)
+  sandhi_modes:
+    "off": no hypotheses of rank 4/5 (only readings the text or the caller establishes)
+    hypothesis: default — rank 4/5 readings are generated and reported as hypotheses; at most ONE side may be a hypothesis
+    acchu: hypothesis + the vowel-only path (YATI-SV-02.10) — both sides may be hypotheses, so any two same-class vowels pair (telugu_prosody_engine's experimental_sandhi; markedly permissive)
+    confirmed: the caller supplies the underlying vowel(s) (vowel_a / vowel_b); they get rank 1
+
+# -----------------------------------------------------------------------------
+#  THE LOOKUP TABLE: unordered consonant pairs -> rule.  Identity -> YATI-VY-01.
+#  Every pair also needs the two vowels in one class (YATI-SV-01.1), except
+#  where a rule says otherwise.  Pairs not listed and not identical -> no yati
+#  (named YATI-RJ-00 "no maitri").
+# -----------------------------------------------------------------------------
+maitri_table:
+  symmetric: true
+  identity_rule: YATI-VY-01
+  default_rule: YATI-RJ-00
+  vargaja_rule: YATI-VY-02.1          # generated: all pairs among positions 1-4 of each varga (39 pairs incl. ౘ/ౙ folded into చ/జ)
+  pairs:
+    # న-ణ, ఋజు, ఊష్మ
+    - {consonants: [న, ణ], rule: YATI-VY-04}
+    - {consonants: [య, హ], rule: YATI-VY-08}
+    - {consonants: [శ, ష], rule: YATI-VY-11}
+    - {consonants: [శ, స], rule: YATI-VY-11}
+    - {consonants: [ష, స], rule: YATI-VY-11}
+    # సరసయతి-4: sibilants with palatals (18 pairs)
+    - {consonants: [శ, చ], rule: YATI-VY-12}
+    - {consonants: [శ, ఛ], rule: YATI-VY-12}
+    - {consonants: [శ, జ], rule: YATI-VY-12}
+    - {consonants: [శ, ఝ], rule: YATI-VY-12}
+    - {consonants: [ష, చ], rule: YATI-VY-12}
+    - {consonants: [ష, ఛ], rule: YATI-VY-12}
+    - {consonants: [ష, జ], rule: YATI-VY-12}
+    - {consonants: [ష, ఝ], rule: YATI-VY-12}
+    - {consonants: [స, చ], rule: YATI-VY-12}
+    - {consonants: [స, ఛ], rule: YATI-VY-12}
+    - {consonants: [స, జ], rule: YATI-VY-12}
+    - {consonants: [స, ఝ], rule: YATI-VY-12}
+    # అభేద, అభేదవర్గ, ల-ళ
+    - {consonants: [వ, బ], rule: YATI-VY-13}
+    - {consonants: [వ, ప], rule: YATI-VY-14}
+    - {consonants: [వ, ఫ], rule: YATI-VY-14}
+    - {consonants: [వ, భ], rule: YATI-VY-14}
+    - {consonants: [ల, ళ], rule: YATI-VY-15}
+    # late / derived (profile >= relaxed)
+    - {consonants: [ర, ఱ], rule: YATI-SP-08}
+    - {consonants: [ల, డ], rule: YATI-DL-04}
+    - {consonants: [ళ, డ], rule: YATI-DL-04}
+    - {consonants: [ద, డ], rule: YATI-DL-05}
+    - {consonants: [ర, ల], rule: YATI-DL-02}
+    - {consonants: [ర, ళ], rule: YATI-DL-02.1}
+    # explicitly forbidden (named in the trail)
+    - {consonants: [ల, ఢ], rule: YATI-RJ-13}
+    - {consonants: [ళ, ఢ], rule: YATI-RJ-13}
+    - {consonants: [ధ, డ], rule: YATI-RJ-14}
+    - {consonants: [ద, ఢ], rule: YATI-RJ-14}
+    - {consonants: [త, డ], rule: YATI-RJ-14}
+    - {consonants: [మ, వ], rule: YATI-RJ-07}
+    - {consonants: [య, ర], rule: YATI-RJ-06}
+    - {consonants: [య, ల], rule: YATI-RJ-06}
+    - {consonants: [య, వ], rule: YATI-RJ-06}
+    - {consonants: [ర, వ], rule: YATI-RJ-06}
+    - {consonants: [ల, వ], rule: YATI-RJ-06}
+    - {consonants: [శ, హ], rule: YATI-RJ-06}
+    - {consonants: [ష, హ], rule: YATI-RJ-06}
+    - {consonants: [స, హ], rule: YATI-RJ-06}
+  # stop (1-4) with the nasal (5) of its own varga WITHOUT a preceding bindu -> named failure
+  stop_nasal_without_bindu_rule: YATI-RJ-05
+
+# pairs that hold only when BOTH vowels are in the named class (override the table / forbidden entries)
+conditional_pairs:
+  - {consonants: [మ, ప], vowel_class: U, rule: YATI-VY-16, note: ము (suffix) or stem ము (YATI-VY-17) <-> పు-series}
+  - {consonants: [మ, ఫ], vowel_class: U, rule: YATI-VY-16}
+  - {consonants: [మ, బ], vowel_class: U, rule: YATI-VY-16}
+  - {consonants: [మ, భ], vowel_class: U, rule: YATI-VY-16}
+  - {consonants: [మ, వ], vowel_class: U, rule: YATI-DL-06, note: ము-వు; overrides YATI-RJ-07 in the U class}
+
+# preceding-anusvāra pairs: `bindu_side` consonants carry pre_bindu; `other` has none unless both: true
+bindu_table:
+  - {rule: YATI-VY-03, bindu_side: [క, ఖ, గ, ఘ], other: [ఙ]}
+  - {rule: YATI-VY-03, bindu_side: [చ, ఛ, జ, ఝ], other: [ఞ]}
+  - {rule: YATI-VY-03, bindu_side: [ట, ఠ, డ, ఢ], other: [ణ]}
+  - {rule: YATI-VY-03, bindu_side: [త, థ, ద, ధ], other: [న]}
+  - {rule: YATI-VY-03, bindu_side: [ప, ఫ, బ, భ], other: [మ]}
+  - {rule: YATI-VY-05, bindu_side: [ట, ఠ, డ, ఢ], other: [న]}
+  - {rule: YATI-VY-05, bindu_side: [త, థ, ద, ధ], other: [ణ]}
+  - {rule: YATI-VY-06, bindu_side: [ట, ఠ, డ, ఢ], other: [త, థ, ద, ధ], both: true}
+  - {rule: YATI-SP-03, bindu_side: [య, ర, ల, వ, శ, ష, స, హ], other: [మ]}
+
+# whole-cluster equivalences: an onset equal to `cluster` may be read as each `as` consonant
+cluster_unit_table:
+  - {cluster: [జ, ఞ], as: [న, ణ], rule: YATI-SP-01}
+  - {cluster: [జ, ఞ], as: [క, ఖ, గ, ఘ], rule: YATI-SP-02}
+  - {cluster: [స, న], vowel: ఆ, as: [త, థ, ద, ధ], rule: YATI-DL-09, note: the word స్నాన; accepted_relaxation}
+
+# vowel <-> consonant bridges (the only cases where a vowel pairs with a consonant)
+vowel_bridges:
+  - {rule: YATI-VY-09, consonant: య, vowel_classes: [A, I, U], note: సరసయతి-2; only a శబ్దసిద్ధ య (YATI-VY-09.1)}
+  - {rule: YATI-VY-10, consonant: హ, vowel_classes: [A, I, U], note: సరసయతి-3}
+  - {rule: YATI-SV-05, vowel: ఋ, consonant: ర, consonant_vowel_class: I, note: ఋ <-> రి రీ రె రే; host consonant of a bound ఋ ignored}
+  - {rule: YATI-SV-05.5, vowel: ఋ, consonant: ఱ, consonant_vowel_class: I, note: orthographic_relaxation}
+  - {rule: YATI-DL-01, vowel: ఌ, consonant: ల, consonant_vowel_class: I}
+  - {rule: YATI-DL-01, vowel: ఌ, consonant: ళ, consonant_vowel_class: I}
+  # named failures for vowel-vs-consonant attempts
+  - {rule: YATI-RJ-08, vowel_class: U, consonant: వ, consonant_vowel_class: U, forbidden: true, note: ఉ-వు}
+  - {rule: YATI-RJ-10, vowel: ఋ, consonant: ర, consonant_vowel_class: U, forbidden: true, note: ఋ-రు}
+  - {rule: YATI-RJ-12, vowel: ఋ, consonant: ల, consonant_vowel_class: I, forbidden: true, note: ఋ-లి}
+
+# ఋ / ఌ detachment (YATI-SV-05.4: the only vowels allowed to leave their host consonant)
+detachable_vowels:
+  ఋ: {bare_vs_bound: YATI-SV-06, bound_vs_bound: YATI-SV-07, bound_vs_ra_I: YATI-SV-05.2, bare_vs_ra_I: YATI-SV-05, bare_vs_bare: YATI-SV-03.1}
+  ౠ: {bare_vs_bound: YATI-SV-06, bound_vs_bound: YATI-SV-07, bound_vs_ra_I: YATI-SV-05.2, bare_vs_ra_I: YATI-SV-05, bare_vs_bare: YATI-SV-03.1}
+  ఌ: {bare_vs_bound: YATI-DL-01, bound_vs_bound: YATI-DL-01, bound_vs_ra_I: YATI-DL-01, bare_vs_ra_I: YATI-DL-01, bare_vs_bare: YATI-SV-01}
+
+# svara-pradhāna hypotheses: written vowel -> [underlying vowel, rule, rank]
+sandhi_readings:
+  ఆ: [[అ, YATI-SV-02, 4], [ఆ, YATI-SV-02, 4]]                  # సవర్ణదీర్ఘ, ఆ-initial word
+  ఏ: [[ఇ, YATI-SV-02, 4], [ఈ, YATI-SV-02, 4], [ఎ, YATI-SV-02, 4], [ఏ, YATI-SV-02, 4], [అ, YATI-SV-04.4, 5]]   # గుణ, ఉత్వ+ఎ, పూర్వరూప
+  ఓ: [[ఉ, YATI-SV-02, 4], [ఊ, YATI-SV-02, 4], [ఒ, YATI-SV-02, 4], [ఓ, YATI-SV-02, 4], [అ, YATI-SV-04, 5]]     # గుణ, ఉత్వ+ఒ, గూఢస్వర
+  ఐ: [[ఐ, YATI-SV-02, 4], [ఏ, YATI-SV-08, 5]]                  # ఇత్వ+ఐ; వృద్ధి option B
+  ఔ: [[ఔ, YATI-SV-02, 4], [ఓ, YATI-SV-08, 5]]
+  అ: [[అ, YATI-SV-02, 4]]                                     # అత్వ sandhi (ఉన్న+అప్పుడు), జశ్త్వ, విసర్గ
+  ఇ: [[ఇ, YATI-SV-02, 4]]
+  ఈ: [[ఈ, YATI-SV-02, 4]]
+  ఉ: [[ఉ, YATI-SV-02, 4]]
+  ఊ: [[ఊ, YATI-SV-02, 4]]
+  ఎ: [[ఎ, YATI-SV-02, 4]]
+  ఒ: [[ఒ, YATI-SV-02, 4]]
+  ఋ: [[ఋ, YATI-SV-03.2, 4]]
+  # onset-specific: a lone న (drutam+V) and a lone య (యడాగమ+V) are vowel readings too (YATI-SV-02.2); handled in code with the same rank 4
+
+# lexical triggers that open the vowel track (ubhaya) — heuristic, pattern over the WORD containing the akshara
+ubhaya_triggers:
+  suffix:
+    - {rule: YATI-UB-01, akshara_vowel: ఇ, akshara_anusvara: true, after: "చ", vowel: ఇ, note: -ఇంచు (ధరించు, పోషించి); the trigger akshara carries ఇం and is followed by చ/ప}
+    - {rule: YATI-UB-01, akshara_vowel: ఇ, akshara_anusvara: true, after: "ప", vowel: ఇ, note: -ఇంప (ఉపమింపఁగ)}
+    - {rule: YATI-UB-02, akshara_vowel: ఏ, after: "ని", vowel: ఏ, note: -ఏని}
+    - {rule: YATI-UB-03, akshara_vowel: ఏ, after: "సి", vowel: ఏ, note: -ఏసి}
+    - {rule: YATI-UB-04, akshara_vowel: ఎ, after: "ఁడు", vowel: ఎ, note: -ఎఁడు (measure)}
+    - {rule: YATI-UB-19, akshara: "కై", vowel: ఐ, note: dative కై; also అ via కయి}
+  ordinal:                            # YATI-UB-05: the akshara before వ in these words -> అ
+    words: [రెండవ, మూడవ, మూఁడవ, నాలవ, నాలుగవ, ఐదవ, అయిదవ, ఆరవ, ఏడవ, ఎనిమిదవ, తొమ్మిదవ, పదవ, పదునొకండవ, పండ్రెండవ, పదుమూఁడవ]
+    rule: YATI-UB-05
+    vowel: అ
+  prefix:                             # YATI-UB-10.7: word starts with the fused form; the junction akshara (index) -> vowels
+    - {rule: YATI-UB-10, form: ప్రా, index: 0, vowels: [అ, ఆ]}
+    - {rule: YATI-UB-10, form: ప్రో, index: 0, vowels: [ఉ, ఊ]}
+    - {rule: YATI-UB-10, form: ప్రే, index: 0, vowels: [ఇ, ఈ]}
+    - {rule: YATI-UB-10, form: పరా, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: పలా, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: పరే, index: 1, vowels: [ఇ]}
+    - {rule: YATI-UB-10, form: పరో, index: 1, vowels: [ఊ]}
+    - {rule: YATI-UB-10, form: అపా, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: అపే, index: 1, vowels: [ఇ, ఈ]}
+    - {rule: YATI-UB-10, form: అపో, index: 1, vowels: [ఊ]}
+    - {rule: YATI-UB-10, form: సమ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: సమా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: సమి, index: 1, vowels: [ఇ]}
+    - {rule: YATI-UB-10, form: సమీ, index: 1, vowels: [ఈ, అ]}
+    - {rule: YATI-UB-10, form: సము, index: 1, vowels: [ఉ]}
+    - {rule: YATI-UB-10, form: సమూ, index: 1, vowels: [ఊ]}
+    - {rule: YATI-UB-10, form: సమే, index: 1, vowels: [ఏ]}
+    - {rule: YATI-UB-10, form: అన్వ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: అన్వి, index: 1, vowels: [ఇ]}
+    - {rule: YATI-UB-10, form: అన్వీ, index: 1, vowels: [ఈ]}
+    - {rule: YATI-UB-10, form: అవా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: అవే, index: 1, vowels: [ఈ]}
+    - {rule: YATI-UB-10, form: నిర, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: నిరా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: నిరీ, index: 1, vowels: [ఈ]}
+    - {rule: YATI-UB-10, form: దుర, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: దురా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: దురు, index: 1, vowels: [ఉ]}
+    - {rule: YATI-UB-10, form: వీ, index: 0, vowels: [ఈ]}
+    - {rule: YATI-UB-10, form: వ్యా, index: 0, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: వ్య, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-10, form: న్యా, index: 0, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: న్య, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-10, form: అధీ, index: 1, vowels: [ఇ, ఈ]}
+    - {rule: YATI-UB-10, form: అధ్యా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: అధ్య, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: అప్య, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: అపీ, index: 1, vowels: [ఇ]}
+    - {rule: YATI-UB-10, form: అతీ, index: 1, vowels: [ఇ]}
+    - {rule: YATI-UB-10, form: అత్య, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: అత్యా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: అత్యు, index: 1, vowels: [ఉ]}
+    - {rule: YATI-UB-10, form: సూ, index: 0, vowels: [ఉ]}
+    - {rule: YATI-UB-10, form: స్వా, index: 0, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: స్వ, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-10, form: ఉద, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: ఉదా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-10, form: ఉదీ, index: 1, vowels: [ఈ]}
+    - {rule: YATI-UB-10, form: అభీ, index: 1, vowels: [ఇ, ఈ]}
+    - {rule: YATI-UB-10, form: అభ్య, index: 1, vowels: [అ, ఉ]}
+    - {rule: YATI-UB-10, form: ప్రత్య, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-10, form: ప్రత్యే, index: 1, vowels: [ఏ]}
+    - {rule: YATI-UB-10, form: ప్రతీ, index: 1, vowels: [ఇ, ఈ]}
+    - {rule: YATI-UB-10, form: పరీ, index: 1, vowels: [ఈ]}
+    - {rule: YATI-UB-10, form: పర్య, index: 1, vowels: [అ, ఆ]}
+    - {rule: YATI-UB-10, form: ఉపా, index: 1, vowels: [అ, ఆ]}
+    - {rule: YATI-UB-10, form: ఉపే, index: 1, vowels: [ఇ, ఈ]}
+  lexicon:                            # nitya-samāsa and other fixed tokens: word startswith `form`; junction akshara index -> vowels
+    - {rule: YATI-UB-11.1, form: కర్ణా, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: వనౌ, index: 1, vowels: [ఓ, ఔ]}
+    - {rule: YATI-UB-11.1, form: ద్వీప, index: 0, vowels: [అ, ఈ]}
+    - {rule: YATI-UB-11.1, form: అంతరీ, index: 2, vowels: [అ, ఈ]}
+    - {rule: YATI-UB-11.1, form: ప్రతీప, index: 1, vowels: [అ, ఈ]}
+    - {rule: YATI-UB-11.1, form: సమీప, index: 1, vowels: [అ, ఈ]}
+    - {rule: YATI-UB-11.1, form: ఆపోశ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: స్వాంత, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: ఏకాంత, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: అన్యోన్య, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: ద్వార, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: గవాక్ష, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: సిద్ధాంత, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: రాద్ధాంత, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: శుద్ధాంత, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: వృత్తాంత, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: లతాంత, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: వాతాయన, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: రసాయన, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: రామాయణ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: బాదరాయణ, index: 2, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: పరాయణ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: పారాయణ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: ఉత్తరాయణ, index: 2, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: దక్షిణాయన, index: 2, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: మార్తాండ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: బ్రహ్మాండ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: అజాండ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-11.1, form: అక్షౌహిణి, index: 1, vowels: [ఊ, ఔ]}
+    - {rule: YATI-UB-11.1, form: అక్షోహిణి, index: 1, vowels: [ఊ]}
+    - {rule: YATI-UB-11.3, form: సాంగ, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-11.3, form: సాదర, index: 0, vowels: [ఆ]}
+    - {rule: YATI-UB-11.3, form: సార్థ, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-11.4, form: విశ్వామిత్ర, index: 1, vowels: [అ], status_override: accepted_relaxation}
+    - {rule: YATI-UB-12, form: నారాయణ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-12, form: జనార్దన, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-12, form: దామోదర, index: 1, vowels: [ఉ]}
+    - {rule: YATI-UB-12, form: సాంబ, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-12, form: మురారి, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-12, form: పురారి, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-12, form: లంబోదర, index: 1, vowels: [ఉ]}
+    - {rule: YATI-UB-12, form: మందార, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-12, form: నారికేళ, index: 2, vowels: [ఈ]}
+    - {rule: YATI-UB-13, form: అనంత, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-13, form: అనన్య, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-13, form: అనర్గళ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-13, form: అనర్ఘ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-13, form: అనర్హ, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-13, form: అనారత, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-13, form: అనూన, index: 1, vowels: [ఊ]}
+    - {rule: YATI-UB-13, form: అనేక, index: 1, vowels: [ఏ]}
+    - {rule: YATI-UB-13, form: నాక, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-13, form: నాసత్య, index: 0, vowels: [ఆ]}
+    - {rule: YATI-UB-13, form: నాస్తి, index: 0, vowels: [అ]}
+    - {rule: YATI-UB-13, form: నైక, index: 0, vowels: [ఏ]}
+    - {rule: YATI-UB-16, form: ఇల్లా, index: 1, vowels: [ఆ]}
+    - {rule: YATI-UB-16, form: కూర్చుండ, index: 1, vowels: [ఉ]}
+    - {rule: YATI-UB-16, form: ఒకొండ, index: 1, vowels: [ఒ]}
+    - {rule: YATI-UB-16, form: ఒక్కొండ, index: 1, vowels: [ఒ]}
+    - {rule: YATI-UB-16, form: ఉన్నది, index: 1, vowels: [అ]}
+    - {rule: YATI-UB-16, form: ఉన్నవి, index: 1, vowels: [అ]}
+  suffix_ubhaya:                      # the akshara IS the last of the word and matches `ending`
+    - {rule: YATI-UB-18, ending: రాలు, index_from_end: 2, vowels: [ఆ], note: రాగమసంధి — junction రా}
+  name_suffixes:                      # YATI-UB-17: base + honorific; the akshara before the suffix -> అ (ఆ for ఆయి)
+    - {suffix: అయ్య, vowel: అ}
+    - {suffix: అమ్మ, vowel: అ}
+    - {suffix: అన్న, vowel: అ}
+    - {suffix: అక్క, vowel: అ}
+    - {suffix: అప్ప, vowel: అ}
+    - {suffix: అరుసు, vowel: అ}
+    - {suffix: ఆయి, vowel: ఆ}
+
+# lexical patterns that CLOSE a track (YATI-EP-03.1)
+blockers:
+  - {rule: YATI-DL-12, kind: hal_only, akshara_vowel: ఎ, after: "డు", note: verbal -ఎడు}
+  - {rule: YATI-DL-12, kind: hal_only, akshara_vowel: ఎ, after: "డి", note: verbal -ఎడి}
+  - {rule: YATI-UB-14, kind: hal_only, akshara_vowel: ఆ, after: "యిత", word_prefixes: [కుమారాయిత, ఇంద్రాయిత, భద్రాయిత, భృంగాయిత, చంద్రాయిత, మేఘాయిత], note: క్యచ్ denominatives (attested lexicon only — a bare "-ఆయిత" pattern also hits టుగాగమ words like గయ్యంపుటాయితము)}
+  - {rule: YATI-UB-14, kind: hal_only, akshara_vowel: ఆ, after: "యమాన", word_prefixes: [శబ్దాయమాన, మూర్ఖాయిష్యమాణ], note: క్యచ్ -ఆయమాన}
+  - {rule: YATI-SP-06, kind: hal_only, word_endings: [చేతిది, నాది, నీది, దానిది, అట్టిది, మంచిది], exact_word: true, index_from_end: 0, note: ప్రత్యేక — elided అది; blocks only the vowel track of the final ది of exactly these words}
+  - {rule: YATI-DL-11, kind: svara_only, word_prefixes: [కట్ట, నిట్ట, నట్ట, చిట్ట, కుట్ట], index: 1, note: ద్విరుక్త ట}
+  - {rule: YATI-DL-10, kind: svara_only, word_endings: [లార], index_from_end: 1, note: ఆరగాగమ}
+
+# -----------------------------------------------------------------------------
+#  RULE CATALOGUE — every id the engine can emit.  `compact` = same id in
+#  yathi_docs/yathi_compact.md (status must agree; checked by the tests).
+# -----------------------------------------------------------------------------
+rules:
+  # --- svara ---
+  - {id: YATI-SV-01, kind: bheda, status: canonical, src: "6.2.1", names: {te: స్వరమైత్రి యతి, en: vowel-class yati}, label: {te: స్వరయతి}}
+  - {id: YATI-SV-01.1, kind: mandatory, status: mandatory, src: "6.2.1", names: {te: హల్లు-అచ్చు ఉభయమైత్రి, en: consonant AND vowel must pair}}
+  - {id: YATI-SV-02, kind: vidhana, status: canonical, src: "6.3", names: {te: స్వరప్రధాన యతి, en: svara-pradhāna (sandhi) yati}, label: {te: స్వరప్రధాన యతి}}
+  - {id: YATI-SV-02.2, kind: vidhana, status: canonical, src: "6.3.4-6.3.5", names: {te: ద్రుత/యడాగమ స్వరప్రధాన, en: drutam+V and yaḍāgama+V read as the vowel}}
+  - {id: YATI-SV-02.10, kind: vidhana, status: accepted_relaxation, src: "6.3.6 (borrowed: telugu_prosody_engine experimental_sandhi)", names: {te: అచ్చు-ఆధారిత సంధి యతి, en: vowel-only acceptance — sandhi assumed on both sides}, label: {te: అచ్చు-ఆధారిత యతి}, note: generated only in sandhi mode "acchu"; every match is flagged as a hypothesis}
+  - {id: YATI-SV-03.1, kind: bheda, status: canonical, src: "6.3.10", names: {te: ఋ స్వరయతి, en: bare ఋ with I-class vowels}, label: {te: ఋ స్వరయతి}}
+  - {id: YATI-SV-03.2, kind: vidhana, status: canonical, src: "6.3.10", names: {te: పరపదాది ఋ, en: ఋ as second-word initial}}
+  - {id: YATI-SV-04, kind: vidhana, status: canonical, src: "6.4", names: {te: లుప్తవిసర్గక / గూఢస్వర యతి, en: hidden-అ (visarga-ō) yati}, label: {te: గూఢస్వరయతి}}
+  - {id: YATI-SV-04.4, kind: vidhana, status: informational, src: "6.4", names: {te: పూర్వరూప గూఢ అ, en: hidden అ by pūrvarūpa}}
+  - {id: YATI-SV-05, kind: bheda, status: canonical, src: "6.5", names: {te: ఋ యతి / రివడి, en: ఋ with రి రీ రె రే}, label: {te: ఋ యతి}}
+  - {id: YATI-SV-05.2, kind: vidhana, status: canonical, src: "6.5.2", names: {te: వట్రసుడి ఋ యతి, en: bound ఋ with రి-series}, label: {te: ఋ యతి (వట్రసుడి)}}
+  - {id: YATI-SV-05.5, kind: bheda, status: orthographic_relaxation, src: "6.38.3", names: {te: ఋ-ఱి యతి, en: ఋ with ఱి-series}}
+  - {id: YATI-SV-06, kind: vidhana, status: canonical, src: "6.6", names: {te: ఋత్వసంబంధ యతి, en: bound ఋ with a bare I-class vowel}, label: {te: ఋత్వసంబంధ యతి}}
+  - {id: YATI-SV-07, kind: bheda, status: canonical, src: "6.7", names: {te: ఋత్వసామ్య యతి, en: bound ఋ with bound ఋ}, label: {te: ఋత్వసామ్య యతి}}
+  - {id: YATI-SV-08, kind: vidhana, status: canonical, src: "6.8", names: {te: వృద్ధి యతి, en: vṛddhi dual option}, label: {te: వృద్ధి యతి}}
+  # --- vyañjana ---
+  - {id: YATI-VY-01, kind: bheda, status: canonical, src: "6.10", names: {te: ప్రాణి యతి, en: identity yati}, label: {te: ప్రాణి యతి}}
+  - {id: YATI-VY-02.1, kind: bheda, status: canonical, src: "6.11", names: {te: వర్గజ యతి, en: same-varga stop yati}, label: {te: వర్గజ యతి}}
+  - {id: YATI-VY-03, kind: bheda, status: canonical, src: "6.12", names: {te: బిందు యతి, en: anusvāra+stop with class nasal}, label: {te: బిందు యతి}}
+  - {id: YATI-VY-04, kind: bheda, status: canonical, src: "6.13", names: {te: న-ణ యతి (సరసయతి-1), en: na-ṇa yati}, label: {te: న-ణ యతి}}
+  - {id: YATI-VY-05, kind: bheda, status: canonical, src: "6.14", names: {te: అనునాసికాక్షర యతి, en: anusvāra+ṭa/ta stop with the other nasal}, label: {te: అనునాసికాక్షర యతి}}
+  - {id: YATI-VY-06, kind: bheda, status: canonical, src: "6.15", names: {te: అనుస్వారసంబంధ యతి, en: anusvāra+ṭa with anusvāra+ta}, label: {te: అనుస్వారసంబంధ యతి}}
+  - {id: YATI-VY-08, kind: bheda, status: canonical, src: "6.16", names: {te: ఋజు యతి, en: ya-ha yati}, label: {te: ఋజు యతి}}
+  - {id: YATI-VY-09, kind: bheda, status: canonical, src: "6.17", names: {te: సరసయతి-2 (అ-య), en: vowel with ya}, label: {te: సరసయతి (అ-య)}}
+  - {id: YATI-VY-10, kind: bheda, status: canonical, src: "6.18", names: {te: సరసయతి-3 (అ-హ), en: vowel with ha}, label: {te: సరసయతి (అ-హ)}}
+  - {id: YATI-VY-11, kind: bheda, status: canonical, src: "6.19", names: {te: ఊష్మ యతి, en: sibilant yati}, label: {te: ఊష్మ యతి}}
+  - {id: YATI-VY-12, kind: bheda, status: canonical, src: "6.20", names: {te: సరసయతి-4 (శషస-చజ), en: sibilant with palatal}, label: {te: సరసయతి (శ-చ)}}
+  - {id: YATI-VY-13, kind: bheda, status: canonical, src: "6.21", names: {te: అభేద యతి (వ-బ), en: va-ba yati}, label: {te: అభేద యతి}}
+  - {id: YATI-VY-14, kind: bheda, status: canonical, src: "6.22", names: {te: అభేదవర్గ యతి (వ-ప/ఫ/భ), en: va with pa pha bha}, label: {te: అభేదవర్గ యతి}}
+  - {id: YATI-VY-15, kind: bheda, status: canonical, src: "6.23", names: {te: అభేద యతి-2 (ల-ళ), en: la-ḷa yati}, label: {te: ల-ళ అభేద యతి}}
+  - {id: YATI-VY-16, kind: bheda, status: canonical, src: "6.24", names: {te: ము విభక్తి యతి / పోలిక వడి, en: mu with pu-series}, label: {te: ము విభక్తి యతి}}
+  - {id: YATI-VY-17, kind: bheda, status: canonical, src: "6.25", names: {te: ముకార యతి, en: stem mu with pu-series}}
+  # --- saṁyukta ---
+  - {id: YATI-SY-01, kind: vidhana, status: canonical, src: "6.26", names: {te: సంయుక్త యతి, en: any cluster constituent}, label: {te: సంయుక్త యతి}}
+  - {id: YATI-SY-03, kind: vidhana, status: canonical, src: "6.26.3", names: {te: ద్విత్వాక్షర యతి, en: geminate read as its consonant}}
+  - {id: YATI-SY-05, kind: vidhana, status: canonical, src: "6.26.5", names: {te: క్ష యతి, en: kṣa split}}
+  - {id: YATI-SY-08, kind: vidhana, status: canonical, src: "6.28", names: {te: నకార సంశ్లేషము, en: drutam fusion across the line break}, label: {te: న-సంశ్లేష సంయుక్త యతి}}
+  - {id: YATI-SY-09, kind: vidhana, status: canonical, src: "6.29", names: {te: లకార సంశ్లేషము, en: pollu-la fusion}, label: {te: ల-సంశ్లేష సంయుక్త యతి}}
+  - {id: YATI-SY-11, kind: vidhana, status: mandatory, src: "6.30", names: {te: బహుయతి నియతి, en: same constituent for every caesura}, label: {te: బహుయతి నియతి}}
+  - {id: YATI-SY-11.2, kind: vidhana, status: canonical, src: "6.30.2", names: {te: సీసము మినహాయింపు, en: sīsamu halves exempt}}
+  # --- special ---
+  - {id: YATI-SP-01, kind: bheda, status: canonical, src: "6.31", names: {te: తద్భవవ్యాజ యతి, en: jña with na/ṇa}, label: {te: తద్భవవ్యాజ యతి}}
+  - {id: YATI-SP-02, kind: bheda, status: canonical, src: "6.32", names: {te: విశేష యతి, en: jña with ka-varga}, label: {te: విశేష యతి}}
+  - {id: YATI-SP-03, kind: bheda, status: canonical, src: "6.33", names: {te: మవర్ణ యతి / మా వడి, en: anusvāra+semivowel/spirant with ma}, label: {te: మవర్ణ యతి}}
+  - {id: YATI-SP-06, kind: vidhana, status: mandatory, src: "6.36", names: {te: ప్రత్యేక యతి, en: elided అది/అవి — consonant only}}
+  - {id: YATI-SP-07, kind: bheda, status: canonical, src: "6.37", names: {te: ఏకతర యతి, en: ra only with ra, ṟa only with ṟa}, label: {te: ఏకతర యతి}}
+  - {id: YATI-SP-08, kind: bheda, status: orthographic_relaxation, src: "6.38", names: {te: ద్విరేఫ యతి / ఱవడి, en: ra with ṟa}, label: {te: ద్విరేఫ యతి}}
+  # --- ubhaya ---
+  - {id: YATI-UB-01, kind: ubhaya, status: canonical, src: "6.40", names: {te: భిన్న యతి, en: -iñcu dual track}, label: {te: భిన్న యతి}}
+  - {id: YATI-UB-02, kind: ubhaya, status: canonical, src: "6.41", names: {te: నిత్య యతి, en: -ēni dual track}, label: {te: నిత్య యతి}}
+  - {id: YATI-UB-03, kind: ubhaya, status: canonical, src: "6.42", names: {te: విభాగ యతి, en: -ēsi dual track}, label: {te: విభాగ యతి}}
+  - {id: YATI-UB-04, kind: ubhaya, status: canonical, src: "6.42.2", names: {te: ఎఁడు ప్రత్యయ యతి, en: -eḍu measure dual track}}
+  - {id: YATI-UB-05, kind: ubhaya, status: canonical, src: "6.42.3", names: {te: అవ ప్రత్యయ యతి, en: ordinal -ava dual track}}
+  - {id: YATI-UB-10, kind: ubhaya, status: canonical, src: "6.47", names: {te: ప్రాది యతి, en: upasarga dual track}, label: {te: ప్రాది యతి}}
+  - {id: YATI-UB-11.1, kind: ubhaya, status: canonical, src: "6.48", names: {te: నిత్యసమాస యతి, en: nitya-samāsa dual track}, label: {te: నిత్యసమాస యతి}}
+  - {id: YATI-UB-11.3, kind: ubhaya, status: mandatory, src: "6.48", names: {te: సహార్థక స- యతి, en: sa- prefix dual track}}
+  - {id: YATI-UB-11.4, kind: ubhaya, status: accepted_relaxation, src: "6.48", names: {te: విశ్వామిత్ర యతి, en: viśvāmitra vowel track (flagged)}}
+  - {id: YATI-UB-12, kind: ubhaya, status: canonical, src: "6.48", names: {te: నిత్యసమాస నామ యతి, en: deity-name dual track}}
+  - {id: YATI-UB-13, kind: ubhaya, status: canonical, src: "6.48", names: {te: నఞ్ సమాస యతి, en: nañ-compound dual track}}
+  - {id: YATI-UB-14, kind: reject, status: forbidden, src: "6.48", names: {te: క్యచ్ నిషేధము, en: kyac vowel track forbidden}}
+  - {id: YATI-UB-16, kind: ubhaya, status: canonical, src: "6.49", names: {te: దేశ్య నిత్యసమాస యతి, en: native fused-unit dual track}}
+  - {id: YATI-UB-17, kind: ubhaya, status: canonical, src: "6.50", names: {te: నామాఖండ యతి, en: name+honorific dual track}}
+  - {id: YATI-UB-18, kind: ubhaya, status: canonical, src: "6.51", names: {te: రాగమసంధి యతి, en: rugāgama dual track}}
+  - {id: YATI-UB-19, kind: ubhaya, status: canonical, src: "6.56", names: {te: చతుర్థీ విభక్తి యతి, en: dative kai dual track}}
+  # --- prāsa yati ---
+  - {id: YATI-PY-01, kind: prasa, status: canonical, src: "6.53", names: {te: ప్రాసయతి, en: prāsa-yati fallback}, label: {te: ప్రాసయతి}}
+  - {id: YATI-PY-02, kind: prasa, status: mandatory, src: "6.53", names: {te: ప్రాసయతి అనుమతి, en: permitted metres only}}
+  - {id: YATI-PY-03, kind: prasa, status: mandatory, src: "6.53", names: {te: ప్రాసపూర్వాక్షర నియమము, en: weight parity of the preceding aksharas}}
+  - {id: YATI-PY-25, kind: procedure, status: canonical, src: "6.53", names: {te: యతి-ప్రాసయతి ప్రాధాన్యము, en: head yati takes precedence}}
+  # --- derived / late ---
+  - {id: YATI-DL-01, kind: bheda, status: canonical, src: "6.54", names: {te: ఌకార యతి, en: ḷ-vowel yati}, label: {te: ఌకార యతి}}
+  - {id: YATI-DL-02, kind: bheda, status: accepted_relaxation, src: "6.55", names: {te: ర-ల యతి, en: ra-la yati}, label: {te: ర-ల యతి}}
+  - {id: YATI-DL-02.1, kind: bheda, status: accepted_relaxation, src: "6.55", names: {te: ర-ళ యతి, en: ra-ḷa yati}, label: {te: ర-ళ యతి}}
+  - {id: YATI-DL-04, kind: bheda, status: canonical, src: "6.58", names: {te: ల-డ / ళ-డ అభేద యతి, en: la/ḷa with ḍa}, label: {te: ల-డ అభేద యతి}}
+  - {id: YATI-DL-05, kind: bheda, status: accepted_relaxation, src: "6.59", names: {te: ద-డ సావర్ణ్య యతి, en: da-ḍa yati}, label: {te: ద-డ సావర్ణ్య యతి}}
+  - {id: YATI-DL-06, kind: bheda, status: canonical, src: "6.63", names: {te: ము-వు యతి, en: mu with vu}, label: {te: ము-వు యతి}}
+  - {id: YATI-DL-09, kind: vidhana, status: accepted_relaxation, src: "6.74", names: {te: స్నాన యతి, en: snā with ta}, label: {te: స్నాన యతి}}
+  - {id: YATI-DL-10, kind: vidhana, status: mandatory, src: "6.75", names: {te: ఆగమ నియమము, en: augment consonant never on the hal track}}
+  - {id: YATI-DL-11, kind: vidhana, status: mandatory, src: "6.76", names: {te: ద్విరుక్త టకారము, en: geminate ṭa — vowel only}}
+  - {id: YATI-DL-12, kind: vidhana, status: mandatory, src: "6.77", names: {te: -ఎడి/-ఎడు నియమము, en: verbal -eḍu — consonant only}}
+  # --- rejected (named failures) ---
+  - {id: YATI-RJ-00, kind: reject, status: forbidden, src: "6.1.3", names: {te: మైత్రి లేదు, en: no maitri between these consonants}, compact: false}
+  - {id: YATI-RJ-03, kind: reject, status: mandatory, src: "6.5.3", names: {te: అచ్చు-హల్లు వియోగ నిషేధము, en: vowel cannot leave its consonant (except ఋ)}}
+  - {id: YATI-RJ-04, kind: reject, status: mandatory, src: "6.2.1", names: {te: స్వరవర్గ భేదము, en: vowel classes differ}}
+  - {id: YATI-RJ-05, kind: reject, status: forbidden, src: "6.62", names: {te: బిందురహిత వర్గపంచమాక్షర యతి, en: stop with class nasal without anusvāra}}
+  - {id: YATI-RJ-06, kind: reject, status: forbidden, src: "6.67", names: {te: య-శ వర్గద్వయ యతి, en: semivowel/spirant cross pairs}}
+  - {id: YATI-RJ-07, kind: reject, status: forbidden, src: "6.68", names: {te: సంభావన వడి (మ-వ), en: ma with va}}
+  - {id: YATI-RJ-08, kind: reject, status: forbidden, src: "6.69", names: {te: ఉ-వు యతి, en: u-vowel with vu}}
+  - {id: YATI-RJ-10, kind: reject, status: forbidden, src: "6.71", names: {te: ఋ-రు యతి, en: ṛ with ru}}
+  - {id: YATI-RJ-12, kind: reject, status: forbidden, src: "6.55", names: {te: ఋ-లి యతి, en: ṛ with li}}
+  - {id: YATI-RJ-13, kind: reject, status: forbidden, src: "6.58", names: {te: ల-ఢ / ళ-ఢ, en: la/ḷa with ḍha}}
+  - {id: YATI-RJ-14, kind: reject, status: forbidden, src: "6.59", names: {te: ధ-డ / ద-ఢ / త-డ, en: other dental-retroflex pairs}}
+  - {id: YATI-RJ-25, kind: reject, status: deprecated, src: "6.30.4", names: {te: బహుయతి నియతిభంగము, en: constituent switched between caesuras}}
+  # --- procedures ---
+  - {id: YATI-EP-02, kind: procedure, status: mandatory, src: "6.1.9", names: {te: సాధారణీకరణము, en: normalisation}}
+  - {id: YATI-EP-03, kind: procedure, status: canonical, src: "6.3,6.26,6.39", names: {te: పఠన జాలము, en: candidate lattice}}
+  - {id: YATI-EP-03.1, kind: procedure, status: mandatory, src: engine, names: {te: నిషిద్ధ పఠనములు, en: blocked readings}}
+  - {id: YATI-EP-04, kind: procedure, status: canonical, src: "6.1.3", names: {te: వర్గ పోలిక, en: compare as (consonant class, vowel class)}}
+  - {id: YATI-EP-07, kind: procedure, status: mandatory, src: "6.30", names: {te: బహుయతి పరిశీలన, en: bahu-yati check}}
+  - {id: YATI-EP-08, kind: procedure, status: canonical, src: "6.53", names: {te: ప్రాసయతి ప్రత్యామ్నాయము, en: prāsa-yati fallback}}
+
+evaluation_pipeline:
+  - {step: 1, fn: parse_akshara, rule: YATI-EP-02, does: normalise the two inputs into Akshara features (pre_bindu, pre_dead, onset, vowel, marks)}
+  - {step: 2, fn: readings_for, rule: YATI-EP-03, does: expand each coordinate into ranked readings (written, saṁyukta constituents, bindu variants, ఋ detachment, cluster units, ubhaya triggers, sandhi hypotheses); apply blockers (YATI-EP-03.1)}
+  - {step: 3, fn: pair_rule, rule: YATI-EP-04, does: for every reading pair look up the bhēda rule (svara class / maitri table / bindu table / vowel bridges / detachment) and check the vowel classes}
+  - {step: 4, fn: rank, does: keep every candidate; the best is the accepted one with the lowest (rank_a + rank_b); named failures are kept as `rejected`}
+  - {step: 5, fn: evaluate_line, rule: YATI-EP-07, does: per yati group; bahu-yati consistency; prāsa-yati fallback (YATI-EP-08) when the meter permits and head yati fails}
+
+trail_schema:
+  entry: {rule: rule id, outcome: pass|fail|info, detail: human-readable, data: machine-readable}
+  result: {matched: bool, best: Match|null, candidates: [Match], rejected: [Match], min_profile: str|null, why: str}
+  match: {rule, status, label_te, reading_a, reading_b, vidhana: [ids], rank, hypothesis: bool}
+
+# -----------------------------------------------------------------------------
+#  FIXTURES — pairs (and a few lines) with the expected verdict per profile.
+#  `a` = వళి, `b` = akshara at the యతిస్థానము.  A leading ం = preceding anusvāra;
+#  a leading dead consonant = fused predecessor.
+# -----------------------------------------------------------------------------
+attested_examples:
+  # svara
+  - {id: EX-SV-01a, a: అ, b: ఆ, expect: {matched: true, rule: YATI-SV-01, min_profile: strict}, cite: "6.2.1"}
+  - {id: EX-SV-01b, a: ఇ, b: ఏ, expect: {matched: true, rule: YATI-SV-01, min_profile: strict}}
+  - {id: EX-SV-01c, a: ఉ, b: ఓ, expect: {matched: true, rule: YATI-SV-01, min_profile: strict}}
+  - {id: EX-SV-01x, a: అ, b: ఇ, expect: {matched: false, rejected_includes: [YATI-RJ-04]}, cite: "6.2.1 cross-class"}
+  - {id: EX-SV-03, a: ఇ, b: ఋ, expect: {matched: true, rule: YATI-SV-03.1, min_profile: strict}, cite: "Kāśīkhaṇḍam 2-74"}
+  - {id: EX-SV-02-hyp, a: అ, b: దా, sandhi: hypothesis, expect: {matched: true, rule: YATI-SV-02, hypothesis: true, min_profile: strict}, cite: "వేద+అర్థ (Bhāratam Ādi 1-66)"}
+  - {id: EX-SV-02-off, a: అ, b: దా, sandhi: "off", expect: {matched: false, rejected_includes: [YATI-RJ-03]}}
+  - {id: EX-SV-02-acchu, a: బె, b: డె, sandhi: acchu, expect: {strict: false, relaxed: true, rule: YATI-SV-02.10, hypothesis: true, min_profile: relaxed}, cite: "బు+ఎవ్వఁడు ↔ డు+ఎవ్వఁడు (Bhāgavatam 8-84) without printed evidence"}
+  - {id: EX-SV-02-acchu-x, a: బె, b: డు, sandhi: acchu, expect: {matched: false}, note: vowel classes differ even under the vowel-only path}
+  - {id: EX-SV-02-confirmed, a: అ, b: దా, vowel_b: అ, expect: {matched: true, rule: YATI-SV-02, hypothesis: false, min_profile: strict}}
+  - {id: EX-SV-02-guna, a: ఇ, b: మే, vowel_b: ఈ, expect: {matched: true, rule: YATI-SV-02}, cite: "పరమ+ఈశ్వర (Virāṭa 1-27)"}
+  - {id: EX-SV-02-druta, a: అ, b: నా, sandhi: hypothesis, expect: {matched: true, rule_in: [YATI-SV-02, YATI-SV-02.2], hypothesis: true}, cite: "నగరిలోన్+ఆ (Bhāgavatam 8-95): drutam+ఆ or సవర్ణదీర్ఘ — both readings give ఆ/అ"}
+  - {id: EX-SV-04, a: అ, b: సో, sandhi: hypothesis, expect: {matched: true, rule: YATI-SV-04, hypothesis: true}, cite: "సః+అహమ్ (Anuśāsanika 4-180)"}
+  - {id: EX-SV-05a, a: ఋ, b: రి, expect: {matched: true, rule: YATI-SV-05, min_profile: strict}, cite: "ఋత్విజుండని విచారించి (Sabhā 2-11)"}
+  - {id: EX-SV-05b, a: ఋ, b: ర్చి, expect: {matched: true, rule: YATI-SV-05, vidhana_includes: [YATI-SY-01]}, cite: "6.5.1 యర్చించి"}
+  - {id: EX-SV-05c, a: నృ, b: రి, expect: {matched: true, rule: YATI-SV-05.2}, cite: "నృపవరేణ్యుఁడిట్లు రిపుఁ (Śalya 2-57)"}
+  - {id: EX-SV-05d, a: కృ, b: ప్రి, expect: {matched: true, rule: YATI-SV-05.2, vidhana_includes: [YATI-SY-01]}, cite: "కృతివినిర్మింపుమిఁక మాకుఁ బ్రియము (Manu 1-13)"}
+  - {id: EX-SV-05x, a: కృ, b: రు, expect: {matched: false, rejected_includes: [YATI-RJ-10]}, cite: "6.5.4 invalid row"}
+  - {id: EX-SV-06, a: ఇ, b: గృ, expect: {matched: true, rule: YATI-SV-06}, cite: "ఇరుగడలం ... గృష్ణుఁడు (Bhāgavatam 4-122)"}
+  - {id: EX-SV-06b, a: ఏ, b: వృ, expect: {matched: true, rule: YATI-SV-06}, cite: "ఏనుంగులెనిమిది వృషభంబు (Āraṇya 3-64)"}
+  - {id: EX-SV-07, a: మృ, b: గృ, expect: {matched: true, rule: YATI-SV-07}, cite: "Appakavīyamu 3-34"}
+  - {id: EX-SV-07b, a: గృ, b: శృ, expect: {matched: true, rule: YATI-SV-07}, cite: "Appakavīyamu 3-36"}
+  - {id: EX-SV-07x, a: క, b: ప, expect: {matched: false, rejected_includes: [YATI-RJ-00]}, cite: "6.7.1 క≠ప"}
+  - {id: EX-SV-08a, a: అ, b: గై, sandhi: hypothesis, expect: {matched: true, rule: YATI-SV-02, hypothesis: true, min_profile: strict}, cite: "భోగైక: written ఐ is class A (option A) — a sandhi hypothesis at the pair level"}
+  - {id: EX-SV-08b, a: ఆ, b: మై, vowel_b: ఐ, expect: {matched: true, rule: YATI-SV-02}, cite: "ఆ పర్వతాగ్ర హేమైక (Bhāgavatam 1-2) option A"}
+  - {id: EX-SV-08c, a: ఎ, b: కై, vowel_b: ఏ, expect: {matched: true, rule: YATI-SV-02}, cite: "లోకైక ↔ ఎఱ్ఱన (Āraṇya 7-469) option B"}
+  - {id: EX-SV-08d, a: ఎ, b: కై, sandhi: hypothesis, expect: {matched: true, rule: YATI-SV-08, hypothesis: true}}
+  # vyañjana
+  - {id: EX-VY-01a, a: క, b: కా, expect: {matched: true, rule: YATI-VY-01, min_profile: strict}, cite: "Sabhā 1-30"}
+  - {id: EX-VY-01b, a: కి, b: కృ, expect: {matched: true, rule: YATI-VY-01}, cite: "Manu 2-17"}
+  - {id: EX-VY-01x, a: క, b: కి, expect: {matched: false, rejected_includes: [YATI-RJ-04]}, cite: "6.10 cross-group"}
+  - {id: EX-VY-02a, a: క, b: గా, expect: {matched: true, rule: YATI-VY-02.1, min_profile: strict}, cite: "Bhāgavatam 10-1233"}
+  - {id: EX-VY-02b, a: కి, b: గీ, expect: {matched: true, rule: YATI-VY-02.1}, cite: "Manu 2-7"}
+  - {id: EX-VY-02c, a: ఛ, b: ఝ, expect: {matched: true, rule: YATI-VY-02.1}, cite: "Amuktamālyada 5-196"}
+  - {id: EX-VY-02d, a: చ, b: ౙా, expect: {matched: true, rule: YATI-VY-02.1}, cite: "dantya ౙ folded into జ"}
+  - {id: EX-VY-02x, a: క, b: గి, expect: {matched: false, rejected_includes: [YATI-RJ-04]}}
+  - {id: EX-VY-02y, a: త, b: న, expect: {matched: false, rejected_includes: [YATI-RJ-05]}, cite: "6.11 nasal excluded"}
+  - {id: EX-VY-03a, a: ంత, b: న, expect: {matched: true, rule: YATI-VY-03, min_profile: strict}, cite: "Manu 2-12"}
+  - {id: EX-VY-03b, a: న, b: ంత, expect: {matched: true, rule: YATI-VY-03}}
+  - {id: EX-VY-03c, a: ండు, b: ణు, expect: {matched: true, rule: YATI-VY-03}, cite: "Virāṭa 6-179"}
+  - {id: EX-VY-03d, a: ంప, b: ప, expect: {matched: true, rule: YATI-VY-01}, cite: "6.12.1 bindu adds, never cancels"}
+  - {id: EX-VY-03e, a: ంప, b: భ, expect: {matched: true, rule: YATI-VY-02.1}}
+  - {id: EX-VY-04, a: న, b: ణా, expect: {matched: true, rule: YATI-VY-04}, cite: "Manu 2-26"}
+  - {id: EX-VY-05a, a: న, b: ంటా, expect: {matched: true, rule: YATI-VY-05}, cite: "పురఘంటావీథి (Nalacaritra 7-21)"}
+  - {id: EX-VY-05b, a: ంద, b: ణ, expect: {matched: true, rule: YATI-VY-05}, cite: "Virāṭa 7-74"}
+  - {id: EX-VY-05x, a: ంక, b: న, expect: {matched: false}, cite: "6.14 only ṭa/ta"}
+  - {id: EX-VY-06, a: ంద, b: ంట, expect: {matched: true, rule: YATI-VY-06}, cite: "Appakavīyamu 3-59"}
+  - {id: EX-VY-07x, a: ఇ, b: రి, sandhi: "off", expect: {matched: false, rejected_includes: [YATI-RJ-03]}, cite: "6.15.4 no transitivity (with sandhi hypotheses off; రి could otherwise hide a word-initial ఇ)"}
+  - {id: EX-VY-08, a: య, b: హ, expect: {matched: true, rule: YATI-VY-08}, cite: "Ādi 8-101"}
+  - {id: EX-VY-09a, a: అ, b: య, expect: {matched: true, rule: YATI-VY-09}, cite: "Āraṇya 2-223"}
+  - {id: EX-VY-09b, a: ఉ, b: యో, expect: {matched: true, rule: YATI-VY-09}, cite: "Ādi 2-87"}
+  - {id: EX-VY-09x, a: అ, b: యి, expect: {matched: false, rejected_includes: [YATI-RJ-04]}}
+  - {id: EX-VY-10a, a: అ, b: హ, expect: {matched: true, rule: YATI-VY-10}, cite: "Ādi 6-79"}
+  - {id: EX-VY-10b, a: ఋ, b: హి, expect: {matched: true, rule: YATI-VY-10}, cite: "Gōpīnātha Bāla 287"}
+  - {id: EX-VY-11, a: శ, b: ష, expect: {matched: true, rule: YATI-VY-11}, cite: "Raṅganātha Bāla 3"}
+  - {id: EX-VY-12a, a: చ, b: శ, expect: {matched: true, rule: YATI-VY-12}, cite: "Gōpīnātha Yuddha 1647"}
+  - {id: EX-VY-12b, a: సి, b: చి, expect: {matched: true, rule: YATI-VY-12}, cite: "Manu 3-93"}
+  - {id: EX-VY-12c, a: ఝ, b: స, expect: {matched: true, rule: YATI-VY-12}}
+  - {id: EX-VY-13, a: బా, b: వ, expect: {matched: true, rule: YATI-VY-13}, cite: "Śānti 3-182"}
+  - {id: EX-VY-14a, a: వ, b: ప, expect: {matched: true, rule: YATI-VY-14}, cite: "Ādi 1-125"}
+  - {id: EX-VY-14b, a: ఫే, b: వే, expect: {matched: true, rule: YATI-VY-14}, cite: "Śivarātri 5-62"}
+  - {id: EX-VY-15, a: ల, b: ళ, expect: {matched: true, rule: YATI-VY-15}, cite: "Ādi 4-44"}
+  - {id: EX-VY-16a, a: పు, b: ము, expect: {matched: true, rule: YATI-VY-16}, cite: "Appakavīyamu 3-70"}
+  - {id: EX-VY-16b, a: భో, b: ము, expect: {matched: true, rule: YATI-VY-16}}
+  - {id: EX-VY-16x, a: ప, b: మ, expect: {matched: false, rejected_includes: [YATI-RJ-05]}, cite: "6.24: only with U vowels"}
+  # saṁyukta
+  - {id: EX-SY-01a, a: శ్రీ, b: చె, expect: {matched: true, rule: YATI-VY-12, vidhana_includes: [YATI-SY-01]}, cite: "6.26 శ్రీ as శీ"}
+  - {id: EX-SY-01b, a: శ్రీ, b: రి, expect: {matched: true, rule: YATI-SP-07, vidhana_includes: [YATI-SY-01]}, cite: "6.26 శ్రీ as రీ"}
+  - {id: EX-SY-03, a: త్త, b: థా, expect: {matched: true, rule: YATI-VY-02.1, vidhana_includes: [YATI-SY-03]}}
+  - {id: EX-SY-05a, a: క్ష, b: గా, expect: {matched: true, rule: YATI-VY-02.1, vidhana_includes: [YATI-SY-05]}, cite: "Ādi 2-175"}
+  - {id: EX-SY-05b, a: క్ష, b: జె, expect: {matched: false}, cite: "vowel class: క్ష(అ) vs జె(ఎ) — the book's line has క్షమ...జే? no: Ādi 1-217 జె with క్ష is a class breach unless sandhi; kept as negative"}
+  - {id: EX-SY-05c, a: క్ష, b: శా, expect: {matched: true, rule: YATI-VY-11, vidhana_includes: [YATI-SY-05]}, cite: "Bhāgavatam 1-29"}
+  - {id: EX-SY-06, a: క్ష, b: ఖ్యా, expect: {matched: true, rule: YATI-VY-02.1}, cite: "Āraṇya 3-323"}
+  - {id: EX-SY-07, a: క్ష్మా, b: ంప, expect: {matched: true, rule: YATI-VY-03}, cite: "Appakavīyamu 3-109 line 3"}
+  - {id: EX-SY-08a, a: న్+సా, b: న్య, expect: {matched: true, rule: YATI-VY-01, vidhana_includes: [YATI-SY-08]}, cite: "Manu 1-55"}
+  - {id: EX-SY-08b, a: సా, b: న్య, prev_dead_a: న, expect: {matched: true, rule: YATI-VY-01, vidhana_includes: [YATI-SY-08]}}
+  - {id: EX-SY-08c, a: సా, b: న్య, sandhi: "off", expect: {matched: false}, note: without the fused drutam there is no match (sandhi hypotheses off)}
+  - {id: EX-SY-09, a: గీ, b: లీ, prev_dead_a: ల, expect: {matched: true, rule: YATI-VY-01, vidhana_includes: [YATI-SY-09]}, cite: "Virāṭa 2-55"}
+  # special
+  - {id: EX-SP-01, a: జ్ఞా, b: న, expect: {matched: true, rule: YATI-SP-01}, cite: "Udyōga 3-348"}
+  - {id: EX-SP-02, a: జ్ఞా, b: కా, expect: {matched: true, rule: YATI-SP-02}, cite: "Udyōga 4-255"}
+  - {id: EX-SP-03, a: మ, b: ంయ, expect: {matched: true, rule: YATI-SP-03}, cite: "Appakavīyamu 3-76"}
+  - {id: EX-SP-03b, a: మై, b: ంహ, expect: {matched: true, rule: YATI-SP-03}}
+  - {id: EX-SP-07a, a: రా, b: ర, expect: {matched: true, rule: YATI-SP-07}, cite: "Nannaya Ādi 1-3"}
+  - {id: EX-SP-07b, a: ఱు, b: ఱు, expect: {matched: true, rule: YATI-SP-07}}
+  - {id: EX-SP-08, a: ర, b: ఱ, expect: {strict: false, relaxed: true, rule: YATI-SP-08, min_profile: relaxed}, cite: "Sulakṣaṇasāramu 2-164"}
+  - {id: EX-SP-08b, a: కృ, b: ఱి, sandhi: "off", expect: {strict: false, relaxed: true, rule: YATI-SV-05.5, min_profile: relaxed}}
+  # derived / late
+  - {id: EX-DL-01, a: కౢ, b: లీ, expect: {matched: true, rule: YATI-DL-01}, cite: "కౢప్త ధమ్మిల్లము"}
+  - {id: EX-DL-02, a: రే, b: లీ, expect: {strict: false, relaxed: true, rule: YATI-DL-02, min_profile: relaxed}, cite: "Errana Uttara Harivaṁśamu 7-181"}
+  - {id: EX-DL-04, a: లా, b: డ, expect: {matched: true, rule: YATI-DL-04, min_profile: strict}}
+  - {id: EX-DL-04x, a: ల, b: ఢ, expect: {matched: false, rejected_includes: [YATI-RJ-13]}}
+  - {id: EX-DL-05, a: డా, b: దా, expect: {strict: false, relaxed: true, rule: YATI-DL-05, min_profile: relaxed}, cite: "Dāśarathī Śatakamu"}
+  - {id: EX-DL-05x, a: ధ, b: డ, expect: {matched: false, rejected_includes: [YATI-RJ-14]}}
+  - {id: EX-DL-06, a: ము, b: వొ, expect: {matched: true, rule: YATI-DL-06, min_profile: strict}, cite: "Karṇa 2-30"}
+  - {id: EX-DL-06x, a: మ, b: వ, expect: {matched: false, rejected_includes: [YATI-RJ-07]}}
+  - {id: EX-DL-09, a: స్నా, b: త, sandhi: "off", expect: {strict: false, relaxed: true, rule: YATI-DL-09, min_profile: relaxed, rejected_includes: [YATI-RJ-05]}, cite: "Bhāgavatam 7-115 స్నా-త; in strict mode స్నా->న vs త is the nasal-without-bindu failure"}
+  - {id: EX-DL-09b, a: స్నా, b: తా, expect: {strict: false, relaxed: true, rule: YATI-DL-09, min_profile: relaxed}, cite: "Bhāgavatam 8-269"}
+  - {id: EX-DL-09c, a: స్నా, b: సం, expect: {matched: true, rule: YATI-VY-01}, cite: "Bhāgavatam 4-86"}
+  # rejections named
+  - {id: EX-RJ-06, a: య, b: ర, sandhi: "off", expect: {matched: false, rejected_includes: [YATI-RJ-06]}}
+  - {id: EX-RJ-08, a: ఉ, b: వు, sandhi: "off", expect: {matched: false, rejected_includes: [YATI-RJ-08]}}
+  - {id: EX-RJ-09, a: కు, b: కృ, expect: {matched: false, rejected_includes: [YATI-RJ-04]}, cite: "6.70 ఉ-ఋ"}
+  - {id: EX-RJ-12, a: ఋ, b: లి, sandhi: "off", expect: {matched: false, rejected_includes: [YATI-RJ-12]}}
+  # ubhaya via word context
+  - {id: EX-UB-01, a: ఈ, b: మిం, word_b: ఉపమింపఁగ, index_b: 2, expect: {matched: true, rule: YATI-UB-01}, cite: "Nannaya Ādi 5-151"}
+  - {id: EX-UB-01b, a: వీ, b: వి, word_b: ప్రభవించిన, index_b: 2, expect: {matched: true, rule: YATI-VY-01}, cite: "same stanza, consonant track"}
+  - {id: EX-UB-02, a: ఎ, b: డే, word_b: కర్ముఁడేని, index_b: 2, expect: {matched: true, rule: YATI-UB-02}, cite: "Appakavīyamu 3-214"}
+  - {id: EX-UB-10a, a: అ, b: ప్రా, word_b: ప్రాప్తి, index_b: 0, sandhi: "off", expect: {matched: true, rule: YATI-UB-10}, cite: "Appakavīyamu 3-133 line 1"}
+  - {id: EX-UB-10b, a: బ, b: ప్రా, word_b: ప్రాప్తి, index_b: 0, expect: {matched: true, rule: YATI-VY-02.1}, cite: "line 2"}
+  - {id: EX-UB-10c, a: ర, b: ప్రా, word_b: ప్రాప్తి, index_b: 0, expect: {matched: true, rule: YATI-SP-07, vidhana_includes: [YATI-SY-01]}, cite: "line 3"}
+  - {id: EX-UB-12, a: అ, b: రా, word_b: నారాయణ, index_b: 1, sandhi: "off", expect: {matched: true, rule: YATI-UB-12}, cite: "Nannaya Ādi 1-25"}
+  - {id: EX-UB-13, a: అ, b: నం, word_b: అనంత, index_b: 1, sandhi: "off", expect: {matched: true, rule: YATI-UB-13}}
+  - {id: EX-DL-12, a: ఎ, b: కె, word_b: పలికెడు, index_b: 2, sandhi: hypothesis, expect: {matched: false}, cite: "6.77 verbal -ఎడు: consonant only"}
+  - {id: EX-DL-12b, a: కి, b: కె, word_b: పలికెడు, index_b: 2, expect: {matched: true, rule: YATI-VY-01}, cite: "Ādi 8-40"}

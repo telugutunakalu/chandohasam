@@ -1,0 +1,37 @@
+digraph "vasamtatilakamu / all" {
+  rankdir=LR; fontname="Helvetica,Arial,sans-serif"; labelloc=t;
+  label="vasamtatilakamu / all  ·  15 states, 14 edges";
+  node [shape=circle, style=filled, fillcolor="#f4f4f4", fontname="Helvetica,Arial,sans-serif", fontsize=9];
+  edge [fontname="Helvetica", fontsize=9];
+  "__start" [shape=point];
+  "__start" -> "0";
+  "0" [label="0"];
+  "1" [label="1"];
+  "2" [label="2"];
+  "3" [label="3"];
+  "4" [label="4"];
+  "5" [label="5"];
+  "6" [label="6"];
+  "7" [label="7"];
+  "8" [label="8"];
+  "9" [label="9"];
+  "10" [label="10"];
+  "11" [label="11"];
+  "12" [label="12"];
+  "13" [label="13"];
+  "14" [shape=doublecircle, label="14"];
+  "0" -> "1" [label="U (2)", style=solid];
+  "1" -> "2" [label="U (2)", style=solid];
+  "2" -> "3" [label="I (1)", style=dashed];
+  "3" -> "4" [label="U (2)", style=solid];
+  "4" -> "5" [label="I (1)", style=dashed];
+  "5" -> "6" [label="I (1)", style=dashed];
+  "6" -> "7" [label="I (1)", style=dashed];
+  "7" -> "8" [label="U (2)", style=solid];
+  "8" -> "9" [label="I (1)", style=dashed];
+  "9" -> "10" [label="I (1)", style=dashed];
+  "10" -> "11" [label="U (2)", style=solid];
+  "11" -> "12" [label="I (1)", style=dashed];
+  "12" -> "13" [label="U (2)", style=solid];
+  "13" -> "14" [label="U (2)", style=solid];
+}

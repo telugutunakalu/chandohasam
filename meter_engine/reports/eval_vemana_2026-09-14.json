@@ -1,0 +1,5625 @@
+{
+ "summary": {
+  "date": "2026-09-14",
+  "corpus": "../dataset/vemana.json",
+  "name": "vemana",
+  "poems": 1164,
+  "identified": 1014,
+  "unidentified": 150,
+  "seconds": 452.7,
+  "identified_meters": {
+   "ataveladi": 872,
+   "(none)": 150,
+   "kandamu": 131,
+   "tetagiti": 5,
+   "utpalamala": 3,
+   "champakamala": 2,
+   "seesamu+ataveladi": 1
+  },
+  "label_agreement": {
+   "agree": 873,
+   "differ": 141
+  },
+  "configs": {
+   "relaxed/hypothesis": {
+    "totals": {
+     "poems": 1014,
+     "prasa_applicable": 136,
+     "prasa_ok": 1008,
+     "yati_ok": 977,
+     "all_ok": 971
+    },
+    "per_meter": {
+     "ataveladi": {
+      "poems": 872,
+      "prasa_ok": 872,
+      "yati_ok": 843,
+      "all_ok": 843
+     },
+     "kandamu": {
+      "poems": 131,
+      "prasa_ok": 125,
+      "yati_ok": 126,
+      "all_ok": 120
+     },
+     "tetagiti": {
+      "poems": 5,
+      "prasa_ok": 5,
+      "yati_ok": 4,
+      "all_ok": 4
+     },
+     "utpalamala": {
+      "poems": 3,
+      "prasa_ok": 3,
+      "yati_ok": 2,
+      "all_ok": 2
+     },
+     "champakamala": {
+      "poems": 2,
+      "prasa_ok": 2,
+      "yati_ok": 2,
+      "all_ok": 2
+     },
+     "seesamu+ataveladi": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 0,
+      "all_ok": 0
+     }
+    }
+   },
+   "relaxed/acchu": {
+    "totals": {
+     "poems": 1014,
+     "prasa_applicable": 136,
+     "prasa_ok": 1008,
+     "yati_ok": 996,
+     "all_ok": 990
+    },
+    "per_meter": {
+     "ataveladi": {
+      "poems": 872,
+      "prasa_ok": 872,
+      "yati_ok": 859,
+      "all_ok": 859
+     },
+     "kandamu": {
+      "poems": 131,
+      "prasa_ok": 125,
+      "yati_ok": 129,
+      "all_ok": 123
+     },
+     "tetagiti": {
+      "poems": 5,
+      "prasa_ok": 5,
+      "yati_ok": 4,
+      "all_ok": 4
+     },
+     "utpalamala": {
+      "poems": 3,
+      "prasa_ok": 3,
+      "yati_ok": 2,
+      "all_ok": 2
+     },
+     "champakamala": {
+      "poems": 2,
+      "prasa_ok": 2,
+      "yati_ok": 2,
+      "all_ok": 2
+     },
+     "seesamu+ataveladi": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 0,
+      "all_ok": 0
+     }
+    }
+   }
+  },
+  "yati_rules": {
+   "YATI-VY-01": 2287,
+   "YATI-VY-02.1": 662,
+   "YATI-PY-01": 172,
+   "YATI-VY-09": 161,
+   "YATI-SV-02": 132,
+   "YATI-VY-12": 117,
+   "YATI-SV-02.2": 94,
+   "✗": 40,
+   "YATI-SP-07": 36,
+   "YATI-VY-11": 25,
+   "YATI-VY-10": 25,
+   "YATI-VY-14": 8,
+   "YATI-VY-08": 6,
+   "YATI-SV-04": 5,
+   "YATI-VY-13": 4,
+   "YATI-SV-01": 3,
+   "YATI-SV-06": 3,
+   "YATI-DL-05": 3,
+   "YATI-SP-08": 3,
+   "YATI-SP-02": 3,
+   "YATI-UB-01": 2,
+   "YATI-DL-02": 1,
+   "YATI-VY-16": 1,
+   "YATI-DL-04": 1,
+   "YATI-SV-04.4": 1,
+   "YATI-SV-03.1": 1,
+   "YATI-UB-19": 1,
+   "YATI-DL-09": 1
+  },
+  "prasa_labels": {
+   "'న'కార ప్రాస": 22,
+   "రేఫ ప్రాస": 10,
+   "'ద'కార ప్రాస": 8,
+   "'ల'కార ప్రాస": 8,
+   "'మ'కార ప్రాస": 7,
+   "'త'కార ప్రాస": 6,
+   "'వ'కార ప్రాస": 5,
+   "'య'కార ప్రాస": 5,
+   "'క'కార ప్రాస": 4,
+   "✗ PRASA-VAIRA-GENERIC": 4,
+   "'చ్చ' ద్విత్వాక్షర ప్రాస": 3,
+   "'క్క' ద్విత్వాక్షర ప్రాస": 3,
+   "'డ'కార ప్రాస": 3,
+   "'న్న' ద్విత్వాక్షర ప్రాస": 3,
+   "'ప్ప' ద్విత్వాక్షర ప్రాస": 3,
+   "'ష'కార ప్రాస": 3,
+   "పూర్ణబిందుపూర్వక 'ద'కార ప్రాస": 2,
+   "శకటరేఫ ప్రాస": 2,
+   "'చ'కార ప్రాస": 2,
+   "✗ PRASA-PURVAKSHARA-01": 2,
+   "'స'కార ప్రాస": 2,
+   "'త్త' ద్విత్వాక్షర ప్రాస": 2,
+   "'ర్మ' సంయుక్తాక్షర ప్రాస": 2,
+   "'హ'కార ప్రాస": 2,
+   "'గ'కార ప్రాస": 2,
+   "'జ్ఞ' సంయుక్తాక్షర ప్రాస": 1,
+   "పూర్ణబిందుపూర్వక 'ద్ర' సంయుక్తాక్షర ప్రాస": 1,
+   "ల-ళ అభేద ప్రాసము": 1,
+   "పూర్ణబిందుపూర్వక 'చ'కార ప్రాస": 1,
+   "ర-ఱ లిపిసడలింపు ప్రాసము": 1,
+   "'ల్ల' ద్విత్వాక్షర ప్రాస": 1,
+   "'ట్ట' ద్విత్వాక్షర ప్రాస": 1,
+   "పూర్ణబిందుపూర్వక 'త'కార ప్రాస": 1,
+   "పూర్ణబిందుపూర్వక 'డ'కార ప్రాస": 1,
+   "'త్య' సంయుక్తాక్షర ప్రాస": 1,
+   "'ప'కార ప్రాస": 1,
+   "'ఖ'కార ప్రాస": 1,
+   "'ధ'కార ప్రాస": 1,
+   "'క్ష' సంయుక్తాక్షర ప్రాస": 1,
+   "'ర్వ' సంయుక్తాక్షర ప్రాస": 1,
+   "'ద్గ' సంయుక్తాక్షర ప్రాస": 1,
+   "'మ్మ' ద్విత్వాక్షర ప్రాస": 1,
+   "'ట'కార ప్రాస": 1,
+   "ఖండాఖండ 'గ'కార ప్రాస": 1,
+   "'వ్వ' ద్విత్వాక్షర ప్రాస": 1,
+   "'య్య' ద్విత్వాక్షర ప్రాస": 1
+  }
+ },
+ "unidentified": [
+  {
+   "id": "vemana-83-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-101-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 7,
+     "reason": "line 2 breaks at akshara 7 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-102-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 13,
+     "reason": "line 3 breaks at akshara 13 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-105-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 3,
+     "akshara": 9,
+     "reason": "line 3 breaks at akshara 9 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-106-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 15,
+     "reason": "line 2 breaks at akshara 15 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 2,
+     "akshara": 11,
+     "reason": "line 2 breaks at akshara 11 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-113-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 5,
+     "reason": "line 3 breaks at akshara 5 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-126-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 10,
+     "reason": "line 2 breaks at akshara 10 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-129-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-142-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-144-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 11,
+     "reason": "line 2 breaks at akshara 11 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-177-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-197-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 13,
+     "reason": "line 2 breaks at akshara 13 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-199-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 3,
+     "reason": "line 3 breaks at akshara 3 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-205-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-215-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 3,
+     "reason": "line 3 breaks at akshara 3 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-224-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 15,
+     "reason": "line 3 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 2
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-258-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 3,
+     "akshara": 13,
+     "reason": "line 3 breaks at akshara 13 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-265-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 15,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-267-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 10,
+     "reason": "line 4 breaks at akshara 10 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-268-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 12,
+     "reason": "line 2 breaks at akshara 12 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-309-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 11,
+     "reason": "line 3 breaks at akshara 11 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 14,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-312-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 4,
+     "reason": "line 3 breaks at akshara 4 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-323-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-328-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-358-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-361-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-380-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-399-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 14,
+     "reason": "line 3 breaks at akshara 14 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-419-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-426-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 11,
+     "reason": "line 3 breaks at akshara 11 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-439-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 12,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-441-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 13,
+     "reason": "line 3 breaks at akshara 13 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-445-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-483-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 7,
+     "reason": "line 3 breaks at akshara 7 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-489-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-497-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 13,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-504-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 11,
+     "reason": "line 3 breaks at akshara 11 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-509-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 3,
+     "akshara": 3,
+     "reason": "line 3 breaks at akshara 3 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-538-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 2,
+     "akshara": 3,
+     "reason": "line 2 breaks at akshara 3 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-545-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-548-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 13,
+     "reason": "line 3 breaks at akshara 13 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-572-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 7,
+     "reason": "line 3 breaks at akshara 7 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-579-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 14,
+     "reason": "line 3 breaks at akshara 14 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-591-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 4,
+     "akshara": 4,
+     "reason": "line 4 breaks at akshara 4 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-600-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-602-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 16,
+     "reason": "line 3 breaks at akshara 16 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-614-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 7,
+     "reason": "line 3 breaks at akshara 7 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-634-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-635-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-637-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 7,
+     "reason": "line 3 breaks at akshara 7 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-655-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "champakamala",
+     "line_no": 4,
+     "akshara": 20,
+     "reason": "line 4 breaks at akshara 20 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 19,
+     "reason": "line 1 breaks at akshara 19 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-662-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-664-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 7,
+     "reason": "line 3 breaks at akshara 7 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 7,
+     "reason": "line 2 breaks at akshara 7 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-666-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-670-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 2,
+     "reason": "line 2 breaks at akshara 2 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-671-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 2,
+     "akshara": 14,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-672-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-673-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-677-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 4,
+     "reason": "line 3 breaks at akshara 4 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-721-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-735-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-736-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-760-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-775-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-781-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-783-సీ.",
+   "label": "seesamu",
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 28,
+     "reason": "line 1 breaks at akshara 28 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-795-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-799-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-804-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 7,
+     "reason": "line 3 breaks at akshara 7 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-810-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-813-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-820-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 7,
+     "reason": "line 2 breaks at akshara 7 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-825-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 9,
+     "reason": "line 3 breaks at akshara 9 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-830-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-832-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 10,
+     "reason": "line 4 breaks at akshara 10 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-834-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-846-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 4,
+     "reason": "line 2 breaks at akshara 4 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-852-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-853-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-859-సీ.",
+   "label": "seesamu",
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 27,
+     "reason": "line 1 breaks at akshara 27 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-867-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 9,
+     "reason": "line 2 breaks at akshara 9 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-868-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-877-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 12,
+     "reason": "line 3 breaks at akshara 12 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-881-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-885-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-887-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 16,
+     "reason": "line 3 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-895-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 13,
+     "reason": "line 2 breaks at akshara 13 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-898-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 3,
+     "akshara": 14,
+     "reason": "line 3 breaks at akshara 14 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 2,
+     "reason": "line 2 breaks at akshara 2 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-908-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "utpalamala",
+     "line_no": 1,
+     "akshara": 20,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 breaks at akshara 18 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-931-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 4,
+     "reason": "line 2 breaks at akshara 4 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-942-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 4,
+     "akshara": 5,
+     "reason": "line 4 breaks at akshara 5 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-943-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 13,
+     "reason": "line 2 breaks at akshara 13 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-946-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-949-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-953-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-954-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 10,
+     "reason": "line 4 breaks at akshara 10 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-958-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 3,
+     "akshara": 6,
+     "reason": "line 3 breaks at akshara 6 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-962-సీ.",
+   "label": "seesamu",
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 27,
+     "reason": "line 1 breaks at akshara 27 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-968-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-970-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-973-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-979-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-981-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-982-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 2,
+     "akshara": 11,
+     "reason": "line 2 breaks at akshara 11 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-984-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-989-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-991-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 2,
+     "akshara": 5,
+     "reason": "line 2 breaks at akshara 5 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 5,
+     "reason": "line 2 breaks at akshara 5 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-999-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 7,
+     "reason": "line 2 breaks at akshara 7 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1000-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 3,
+     "reason": "line 2 breaks at akshara 3 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1002-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 3,
+     "reason": "line 2 breaks at akshara 3 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1003-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1012-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 15,
+     "reason": "line 3 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1014-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 14,
+     "reason": "line 4 breaks at akshara 14 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1015-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1018-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 10,
+     "reason": "line 4 breaks at akshara 10 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1019-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 12,
+     "reason": "line 3 breaks at akshara 12 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1021-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 11,
+     "reason": "line 2 breaks at akshara 11 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1022-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 6,
+     "reason": "line 4 breaks at akshara 6 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1023-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 13,
+     "reason": "line 3 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1024-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 6,
+     "reason": "line 3 breaks at akshara 6 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1025-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 15,
+     "reason": "line 2 breaks at akshara 15 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1027-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1029-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 7,
+     "reason": "line 2 breaks at akshara 7 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1032-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1034-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1036-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1039-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 15,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1040-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1041-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1044-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1045-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1048-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 4,
+     "akshara": 14,
+     "reason": "line 4 breaks at akshara 14 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1049-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 14,
+     "reason": "line 3 breaks at akshara 14 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1058-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1061-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1067-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1070-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 4,
+     "reason": "line 3 breaks at akshara 4 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1071-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 6,
+     "reason": "line 2 breaks at akshara 6 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1074-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1075-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 3,
+     "reason": "line 3 breaks at akshara 3 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1078-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1100-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 4,
+     "akshara": 13,
+     "reason": "line 4 breaks at akshara 13 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kavichakravarti",
+     "line_no": 1,
+     "akshara": 7,
+     "reason": "line 1 breaks at akshara 7 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1107-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 10,
+     "reason": "line 4 breaks at akshara 10 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1110-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 11,
+     "reason": "line 3 breaks at akshara 11 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1118-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 12,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1122-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 4,
+     "reason": "line 2 breaks at akshara 4 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1127-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1148-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 13,
+     "reason": "line 3 breaks at akshara 13 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1154-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "vemana-1158-ఆ.",
+   "label": "aataveladi",
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 2,
+     "akshara": 14,
+     "reason": "line 2 ends too early for slot even (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  }
+ ],
+ "failing": {
+  "relaxed/hypothesis": [
+   {
+    "id": "vemana-47-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "వెం",
+       "కొం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: వ-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-71-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "గు",
+       "గృ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: గ-గ identity; but vowels ఉ/ఋ are in classes U/I"
+     }
+    ]
+   },
+   {
+    "id": "vemana-86-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "దా",
+       "దే"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: ద-ద identity; but vowels ఆ/ఏ are in classes A/I"
+     }
+    ]
+   },
+   {
+    "id": "vemana-137-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "పే",
+       "లె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-178-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "బు",
+       "గ్రు"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: బ-గ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-219-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "పు",
+       "రుం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-ర: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-233-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "క",
+       "గు"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: క-గ same varga (ka); but vowels అ/ఉ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "vemana-296-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "డ",
+       "మ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: డ-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-332-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "ప",
+       "స"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-స: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-359-ఆ.",
+    "meter": "tetagiti",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "కూ",
+       "ప"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ప: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-397-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "ప",
+       "చె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-చ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-400-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       12
+      ],
+      "aksharas": [
+       "స",
+       "పా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: స-ప: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "బ",
+       "మ"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: బ-మ: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "vemana-412-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "మం",
+       "లా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-462-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "బ",
+       "చా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: బ-చ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-477-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "pre-prāsa aksharas mix guru and laghu: line 1 ఊ(U), line 2 వా(U), line 3 పె(I), line 4 వీ(U)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-488-ఆ.",
+    "meter": "utpalamala",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utpalamala",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "మా",
+       "యె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-య: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-550-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "కు",
+       "యె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-య: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-584-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "ఇ",
+       "త"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఇ vs consonant తఅ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "vemana-589-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "రా",
+       "మ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ర-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-601-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "మ్రా",
+       "జ్ఞా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-జ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-621-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "ప్రీ",
+       "ధా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-ధ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-640-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "భ్ర",
+       "వే"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: భ-వ table; but vowels అ/ఏ are in classes A/I"
+     }
+    ]
+   },
+   {
+    "id": "vemana-651-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "ఱం",
+       "ప"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ఱ-ప: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-684-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "ఉ",
+       "త"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఉ vs consonant తఅ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "vemana-725-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "న (line 1) vs ద (line 2): న and ద have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-729-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "చం",
+       "చె"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: చ-చ identity; but vowels అ/ఎ are in classes A/I"
+     }
+    ]
+   },
+   {
+    "id": "vemana-742-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "హ (line 1) vs ష (line 2): హ and ష have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-764-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "వ",
+       "మం"
+      ],
+      "detail": "YATI-RJ-07 సంభావన వడి (మ-వ): వ-మ table"
+     }
+    ]
+   },
+   {
+    "id": "vemana-776-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "శ",
+       "ప"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: శ-ప: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-843-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "న (line 1) vs ర (line 2): న and ర have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-855-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "వి",
+       "సే"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: వ-స: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-856-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "pre-prāsa aksharas mix guru and laghu: line 1 త(I), line 2 త(I), line 3 తా(U), line 4 త(I)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-894-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "ఆ",
+       "యె"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఆ vs consonant యఎ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "vemana-906-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "కొ",
+       "బ్ర"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-917-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "ద (line 1) vs చ (line 2): ద and చ have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-945-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "గు",
+       "రు"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: గ-ర: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-956-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "మ",
+       "యొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-య: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-980-సీ.",
+    "meter": "seesamu+ataveladi",
+    "label": "seesamu",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       14,
+       20
+      ],
+      "aksharas": [
+       "చు",
+       "నఁ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: చ-న: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 3,
+      "positions": [
+       15,
+       23
+      ],
+      "aksharas": [
+       "ను",
+       "నె"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: న-న identity; but vowels ఉ/ఎ are in classes U/I"
+     },
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 4,
+      "positions": [
+       14,
+       20
+      ],
+      "aksharas": [
+       "దె",
+       "గ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ద-గ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-998-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "హృ",
+       "నొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: హ-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-1042-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "పా",
+       "పొ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: ప-ప identity; but vowels ఆ/ఒ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "vemana-1060-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "రం",
+       "ప"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ర-ప: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-1112-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "లా",
+       "మ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-1163-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "శి",
+       "శ్రు"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: శ-శ identity; but vowels ఇ/ఉ are in classes I/U"
+     }
+    ]
+   }
+  ],
+  "relaxed/acchu": [
+   {
+    "id": "vemana-47-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "వెం",
+       "కొం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: వ-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-71-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "గు",
+       "గృ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: గ-గ identity; but vowels ఉ/ఋ are in classes U/I"
+     }
+    ]
+   },
+   {
+    "id": "vemana-233-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "క",
+       "గు"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: క-గ same varga (ka); but vowels అ/ఉ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "vemana-359-ఆ.",
+    "meter": "tetagiti",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "కూ",
+       "ప"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ప: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-397-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "ప",
+       "చె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-చ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-477-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "pre-prāsa aksharas mix guru and laghu: line 1 ఊ(U), line 2 వా(U), line 3 పె(I), line 4 వీ(U)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-488-ఆ.",
+    "meter": "utpalamala",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utpalamala",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "మా",
+       "యె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-య: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-550-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "కు",
+       "యె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-య: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-584-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "ఇ",
+       "త"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఇ vs consonant తఅ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "vemana-621-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "ప్రీ",
+       "ధా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-ధ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-684-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "ఉ",
+       "త"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఉ vs consonant తఅ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "vemana-725-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "న (line 1) vs ద (line 2): న and ద have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-729-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "చం",
+       "చె"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: చ-చ identity; but vowels అ/ఎ are in classes A/I"
+     }
+    ]
+   },
+   {
+    "id": "vemana-742-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "హ (line 1) vs ష (line 2): హ and ష have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-843-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "న (line 1) vs ర (line 2): న and ర have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-856-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "pre-prāsa aksharas mix guru and laghu: line 1 త(I), line 2 త(I), line 3 తా(U), line 4 త(I)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-894-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "ఆ",
+       "యె"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఆ vs consonant యఎ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "vemana-906-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "కొ",
+       "బ్ర"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-917-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "kandamu",
+      "detail": "ద (line 1) vs చ (line 2): ద and చ have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "vemana-956-ఆ.",
+    "meter": "kandamu",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "మ",
+       "యొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-య: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-980-సీ.",
+    "meter": "seesamu+ataveladi",
+    "label": "seesamu",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       14,
+       20
+      ],
+      "aksharas": [
+       "చు",
+       "నఁ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: చ-న: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 3,
+      "positions": [
+       15,
+       23
+      ],
+      "aksharas": [
+       "ను",
+       "నె"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: న-న identity; but vowels ఉ/ఎ are in classes U/I"
+     },
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 4,
+      "positions": [
+       14,
+       20
+      ],
+      "aksharas": [
+       "దె",
+       "గ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ద-గ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-998-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "హృ",
+       "నొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: హ-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "vemana-1042-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "పా",
+       "పొ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: ప-ప identity; but vowels ఆ/ఒ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "vemana-1163-ఆ.",
+    "meter": "ataveladi",
+    "label": "aataveladi",
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "శి",
+       "శ్రు"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: శ-శ identity; but vowels ఇ/ఉ are in classes I/U"
+     }
+    ]
+   }
+  ]
+ }
+}

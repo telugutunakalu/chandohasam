@@ -1,0 +1,33 @@
+digraph "lalita / all" {
+  rankdir=LR; fontname="Helvetica,Arial,sans-serif"; labelloc=t;
+  label="lalita / all  ·  13 states, 12 edges";
+  node [shape=circle, style=filled, fillcolor="#f4f4f4", fontname="Helvetica,Arial,sans-serif", fontsize=9];
+  edge [fontname="Helvetica", fontsize=9];
+  "__start" [shape=point];
+  "__start" -> "0";
+  "0" [label="0"];
+  "1" [label="1"];
+  "2" [label="2"];
+  "3" [label="3"];
+  "4" [label="4"];
+  "5" [label="5"];
+  "6" [label="6"];
+  "7" [label="7"];
+  "8" [label="8"];
+  "9" [label="9"];
+  "10" [label="10"];
+  "11" [label="11"];
+  "12" [shape=doublecircle, label="12"];
+  "0" -> "1" [label="U (2)", style=solid];
+  "1" -> "2" [label="U (2)", style=solid];
+  "2" -> "3" [label="I (1)", style=dashed];
+  "3" -> "4" [label="U (2)", style=solid];
+  "4" -> "5" [label="I (1)", style=dashed];
+  "5" -> "6" [label="I (1)", style=dashed];
+  "6" -> "7" [label="I (1)", style=dashed];
+  "7" -> "8" [label="U (2)", style=solid];
+  "8" -> "9" [label="I (1)", style=dashed];
+  "9" -> "10" [label="U (2)", style=solid];
+  "10" -> "11" [label="I (1)", style=dashed];
+  "11" -> "12" [label="U (2)", style=solid];
+}

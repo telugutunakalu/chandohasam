@@ -1,0 +1,70 @@
+{
+  "full": {
+    "gemma": {
+      "accuracy": 0.9486710963455149,
+      "pairwise": {
+        "poth~kuch": 0.952,
+        "poth~vema": 0.9491,
+        "kuch~vema": 0.9423
+      }
+    },
+    "aksharatensor": {
+      "accuracy": 0.8538205980066446,
+      "pairwise": {
+        "poth~kuch": 0.861,
+        "poth~vema": 0.8778,
+        "kuch~vema": 0.804
+      }
+    },
+    "gemma+aksharatensor": {
+      "accuracy": 0.953156146179402,
+      "pairwise": {
+        "poth~kuch": 0.9574,
+        "poth~vema": 0.9525,
+        "kuch~vema": 0.9469
+      }
+    },
+    "char_ngram": {
+      "accuracy": 0.9956810631229236,
+      "pairwise": {
+        "poth~kuch": 0.9979,
+        "poth~vema": 0.995,
+        "kuch~vema": 0.9929
+      }
+    }
+  },
+  "stripped": {
+    "gemma": {
+      "accuracy": 0.8056478405315615,
+      "pairwise": {
+        "poth~kuch": 0.8243,
+        "poth~vema": 0.8084,
+        "kuch~vema": 0.7691
+      }
+    },
+    "aksharatensor": {
+      "accuracy": 0.7795681063122923,
+      "pairwise": {
+        "poth~kuch": 0.8357,
+        "poth~vema": 0.7899,
+        "kuch~vema": 0.6664
+      }
+    },
+    "gemma+aksharatensor": {
+      "accuracy": 0.8295681063122924,
+      "pairwise": {
+        "poth~kuch": 0.8456,
+        "poth~vema": 0.833,
+        "kuch~vema": 0.7965
+      }
+    },
+    "char_ngram": {
+      "accuracy": 0.9460132890365448,
+      "pairwise": {
+        "poth~kuch": 0.957,
+        "poth~vema": 0.9513,
+        "kuch~vema": 0.9187
+      }
+    }
+  }
+}

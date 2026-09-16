@@ -1,0 +1,441 @@
+<title>The MAUVE Gate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Telugu:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #F7F8F5;
+    --surface: #FFFFFF;
+    --ink: #1F2823;
+    --ink-2: #4A5650;
+    --ink-3: #75817B;
+    --rule: #DDE2DD;
+    --accent: #068973;
+    --accent-soft: #E0EFEA;
+    --gold: #8A6A1F;
+    --gold-soft: #F4ECD6;
+    --fail: #A8432E;
+    --track: #ECEFEA;
+    --code-bg: #EFF2EE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #151B18;
+      --surface: #1C2420;
+      --ink: #E6EBE7;
+      --ink-2: #AEB9B2;
+      --ink-3: #7E8A83;
+      --rule: #2C3630;
+      --accent: #2FB8A6;
+      --accent-soft: #1E3B35;
+      --gold: #D9B45C;
+      --gold-soft: #33301E;
+      --fail: #D98268;
+      --track: #232C27;
+      --code-bg: #212A25;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #151B18;
+    --surface: #1C2420;
+    --ink: #E6EBE7;
+    --ink-2: #AEB9B2;
+    --ink-3: #7E8A83;
+    --rule: #2C3630;
+    --accent: #2FB8A6;
+    --accent-soft: #1E3B35;
+    --gold: #D9B45C;
+    --gold-soft: #33301E;
+    --fail: #D98268;
+    --track: #232C27;
+    --code-bg: #212A25;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+  .wrap { max-width: 78ch; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+
+  /* ---------- masthead ---------- */
+  .eyebrow {
+    font-size: .72rem; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-3); margin: 0 0 .9rem;
+  }
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: clamp(2.1rem, 5.5vw, 3rem);
+    font-weight: 500; line-height: 1.12; text-wrap: balance;
+    margin: 0 0 1rem; letter-spacing: -.01em;
+  }
+  .standfirst {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.22rem; line-height: 1.5; color: var(--ink-2);
+    margin: 0 0 1.6rem; text-wrap: balance;
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; align-items: center;
+          font-size: .82rem; color: var(--ink-3); }
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    background: var(--gold-soft); color: var(--gold);
+    border: 1px solid color-mix(in oklab, var(--gold) 35%, transparent);
+    font-weight: 700; font-size: .78rem; letter-spacing: .08em;
+    padding: .3rem .75rem; border-radius: 999px; text-transform: uppercase;
+  }
+  .chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%;
+                  background: var(--gold); }
+
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2.6rem 0; }
+
+  /* ---------- sections ---------- */
+  h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.55rem; font-weight: 600; line-height: 1.2;
+    margin: 2.8rem 0 .9rem; text-wrap: balance;
+  }
+  h2 .no {
+    font-family: "IBM Plex Mono", monospace; font-size: .85rem;
+    color: var(--accent); font-weight: 500; margin-right: .6rem;
+    vertical-align: .18em; letter-spacing: .05em;
+  }
+  h3 { font-size: 1.02rem; font-weight: 600; margin: 1.8rem 0 .5rem; }
+  p { margin: 0 0 1.05rem; max-width: 72ch; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); }
+  code, .mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .86em; background: var(--code-bg);
+    padding: .08em .35em; border-radius: 4px;
+  }
+  ul, ol { padding-left: 1.3rem; margin: 0 0 1.05rem; }
+  li { margin-bottom: .35rem; }
+  li::marker { color: var(--ink-3); }
+
+  .callout {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 1rem 1.25rem; margin: 1.4rem 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* ---------- figures ---------- */
+  figure { margin: 1.8rem 0 2.2rem; }
+  .fig-card {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 1.4rem 1.5rem 1.1rem;
+  }
+  .fig-title { font-weight: 600; font-size: .95rem; margin: 0 0 .15rem; }
+  .fig-sub { font-size: .8rem; color: var(--ink-3); margin: 0 0 1.15rem; }
+  figcaption { font-size: .82rem; color: var(--ink-2); margin-top: .8rem;
+               line-height: 1.5; }
+
+  .bars { display: grid; grid-template-columns: minmax(11ch, 17ch) 1fr;
+          gap: .55rem .9rem; align-items: center; }
+  .bar-label { font-size: .82rem; color: var(--ink-2); text-align: right;
+               line-height: 1.25; }
+  .bar-label small { display: block; color: var(--ink-3); font-size: .72rem; }
+  .bar-track { position: relative; height: 22px; background: var(--track);
+               border-radius: 4px; }
+  .bar-fill {
+    position: absolute; inset: 3px auto 3px 0; border-radius: 3px;
+    background: var(--accent); min-width: 3px;
+    transition: filter .12s;
+  }
+  .bar-row:hover .bar-fill { filter: brightness(1.12); }
+  .bar-fill.dim { background: color-mix(in oklab, var(--accent) 45%, var(--track)); }
+  .bar-val {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    font-family: "IBM Plex Mono", monospace; font-size: .78rem;
+    font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap;
+  }
+  .bar-whisker { position: absolute; top: 50%; height: 9px; width: 2px;
+                 transform: translateY(-50%);
+                 border-left: 1.5px solid var(--ink-3);
+                 border-right: 1.5px solid var(--ink-3); background: none; }
+  .refline { position: absolute; top: -4px; bottom: -4px; width: 0;
+             border-left: 2px dashed color-mix(in oklab, var(--ink-3) 55%, transparent); }
+  .bar-row { display: contents; cursor: default; }
+
+  #tip {
+    position: fixed; z-index: 10; pointer-events: none; display: none;
+    background: var(--ink); color: var(--paper);
+    font-size: .76rem; line-height: 1.45; padding: .5rem .7rem;
+    border-radius: 6px; max-width: 30ch;
+  }
+  #tip b { color: var(--paper); }
+
+  /* ---------- tables ---------- */
+  .tbl-wrap { overflow-x: auto; margin: 1.4rem 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+  th { text-align: left; font-size: .72rem; text-transform: uppercase;
+       letter-spacing: .09em; color: var(--ink-3); font-weight: 600;
+       padding: .45rem .8rem .45rem 0; border-bottom: 1px solid var(--rule); }
+  td { padding: .5rem .8rem .5rem 0; border-bottom: 1px solid var(--rule);
+       vertical-align: top; }
+  td.num { font-family: "IBM Plex Mono", monospace; font-size: .82rem;
+           font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* ---------- verse specimens ---------- */
+  .specimens { display: grid; gap: 1px; background: var(--rule);
+               border: 1px solid var(--rule); border-radius: 10px;
+               overflow: hidden; margin: 1.6rem 0; }
+  .spec { background: var(--surface); padding: 1.05rem 1.3rem; }
+  .spec-tag { font-size: .7rem; font-weight: 700; letter-spacing: .11em;
+              text-transform: uppercase; color: var(--accent); margin: 0 0 .45rem;
+              display: flex; align-items: baseline; gap: .7rem; }
+  .spec-tag .score { font-family: "IBM Plex Mono", monospace; font-weight: 500;
+                     color: var(--ink-3); letter-spacing: 0; text-transform: none; }
+  .telugu {
+    font-family: "Noto Serif Telugu", "Newsreader", serif;
+    font-size: 1.02rem; line-height: 2; margin: 0; white-space: pre-line;
+  }
+  .spec.bad .spec-tag { color: var(--fail); }
+
+  .footer { margin-top: 3rem; font-size: .8rem; color: var(--ink-3); }
+  .footer code { font-size: .78rem; }
+
+  @media (max-width: 560px) {
+    .bars { grid-template-columns: 1fr; gap: .15rem; }
+    .bar-label { text-align: left; margin-top: .5rem; }
+  }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Chandohasam · Experiment Report · MauveOnPothana</p>
+  <h1>The MAUVE Gate</h1>
+  <p class="standfirst">Can a modern multilingual embedder support MAUVE on
+  15th-century Telugu metrical verse? We tested the sanity gate declared in
+  proposal §5.2 on Pothana's <em>Andhra Mahabhagavatamu</em> — and then pushed
+  past it with degradation ladders and a second poet.</p>
+  <div class="meta">
+    <span class="chip">Gate: Pass</span>
+    <span>google/embeddinggemma-300m</span>
+    <span>3,214 Pothana padyas · 1,164 Vemana padyas</span>
+    <span>2026-08-18</span>
+  </div>
+
+  <hr>
+
+  <h2><span class="no">01</span>What was at stake</h2>
+  <p>MAUVE compares the <em>embedding distribution</em> of one batch of texts
+  against another — no per-poem reference needed. The proposal leans on it as
+  the distributional-semantics leg of evaluation, but multilingual embedders
+  are trained on modern prose, and classical padya text is far out of
+  distribution. So §5.2 commits to a gate before trusting it:</p>
+  <div class="callout">
+    <p><strong>Held-out Pothana vs. Pothana must score near 1</strong>, and
+    Pothana vs. metrically-shaped gibberish must score
+    <strong>near 0</strong>. If the conditions do not separate, MAUVE is not
+    measuring what we need.</p>
+  </div>
+  <p>Every text unit here is one complete padyam embedded as a single 768-d
+  vector (Clustering prompt, normalized). MAUVE then quantizes both point
+  clouds with PCA + <i>k</i>-means (~n/10 buckets) and reports the area under
+  the divergence frontier between the two histograms. All comparisons use
+  equal sample sizes per side and 5 seeds.</p>
+
+  <h2><span class="no">02</span>The corpus behind the numbers</h2>
+  <p>From the <code>bhagavatam.txt</code> dump we extracted
+  <strong>3,214 complete padyas</strong> — poems only. Excluded: 1,537
+  vachanas and 9 gadyas (prose), web boilerplate lines lodged inside verses
+  («ఈ బ్రౌజరు అనుకూలం కాదు»), and <strong>1,030 verses truncated in the
+  source itself</strong> (fewer than 4 lines; 8 for సీసము). No gloss
+  (టీకా/భావము) leaks into any poem — verified. Top meters: కందము 1,017 ·
+  తేటగీతి 661 · సీసము 464 · ఆటవెలది 313 · మత్తేభము 224 · చంపకమాల 215 ·
+  ఉత్పలమాల 182 · శార్దూలము 100.</p>
+
+  <h2><span class="no">03</span>The gate, and the ladder past it</h2>
+  <p>Beyond the two gate conditions we ran a full degradation ladder, each
+  rung destroying more structure than the last:</p>
+
+  <figure>
+    <div class="fig-card">
+      <p class="fig-title">MAUVE degradation ladder on Pothana</p>
+      <p class="fig-sub">Mean over 5 seeds · whiskers ±1σ · dashed line = same-distribution baseline (0.957)</p>
+      <div class="bars" id="fig1"></div>
+    </div>
+    <figcaption>Held-out Pothana vs. Pothana scores 0.957; matched-length
+    akshara gibberish scores 0.005 — a ~200× separation. <strong>The gate
+    passes.</strong> Degradation is monotone, and the cliff sits between
+    word-shuffle (0.716) and akshara-shuffle (0.028): word identity, not
+    word order, is the embedder's load-bearing feature.</figcaption>
+  </figure>
+
+  <p>What each rung did to the very first verse of the Bhagavatamu
+  (శ్రీకైవల్య పదంబు…, శార్దూలము):</p>
+
+  <div class="specimens">
+    <div class="spec">
+      <p class="spec-tag">Original <span class="score">baseline 0.957</span></p>
+      <p class="telugu">శ్రీకైవల్య పదంబుఁ జేరుటకునైచింతించెదన్ లోక ర
+క్షైకారంభకు, భక్త పాలన కళాసంరంభకున్, దానవో
+ద్రేకస్తంభకుఁ, గేళి లోల విలసద్దృగ్జాల సంభూత నా
+నాకంజాత భవాండ కుంభకు, మహానందాంగనాడింభకున్.</p>
+    </div>
+    <div class="spec">
+      <p class="spec-tag">Line shuffle — lines intact, stanza order destroyed <span class="score">0.906</span></p>
+      <p class="telugu">శ్రీకైవల్య పదంబుఁ జేరుటకునైచింతించెదన్ లోక ర
+ద్రేకస్తంభకుఁ, గేళి లోల విలసద్దృగ్జాల సంభూత నా
+క్షైకారంభకు, భక్త పాలన కళాసంరంభకున్, దానవో
+నాకంజాత భవాండ కుంభకు, మహానందాంగనాడింభకున్.</p>
+    </div>
+    <div class="spec">
+      <p class="spec-tag">Word shuffle — same words, order scrambled <span class="score">0.716</span></p>
+      <p class="telugu">ద్రేకస్తంభకుఁ, కుంభకు, నాకంజాత సంభూత శ్రీకైవల్య
+భవాండ గేళి జేరుటకునైచింతించెదన్ లోక దానవో
+క్షైకారంభకు, పాలన ర మహానందాంగనాడింభకున్. భక్త నా
+కళాసంరంభకున్, పదంబుఁ విలసద్దృగ్జాల లోల</p>
+    </div>
+    <div class="spec bad">
+      <p class="spec-tag">Akshara shuffle — the poem's own aksharas, no words <span class="score">0.028</span></p>
+      <p class="telugu">వోచెభజే లోదాంక్త కాభనల,కరతకునం కైల భ
+భపభూమశ్రీళి ళాబుఁ లోరుట డగక్షైదంనాకుచింన్ ద్దృ,.
+జాతిం,న్దకుం భసం రండిం స్తంభద్రేలలకం సనదా వాం
+హాతనాసం గ్జాపాగే కుల్యవనై కనాకుఁకభ,రంకువిన్కు</p>
+    </div>
+    <div class="spec bad">
+      <p class="spec-tag">Akshara gibberish — corpus graphemes, matched lengths <span class="score">0.005</span></p>
+      <p class="telugu">న్సార్మూన్వాంత్తేప్తన్భాడ్డంయ్యెంశధృచ్చుక్క్త్రంకోఁర్ఘా ద్ద్వి లైల్పొం విం
+రెంమోఁస్థ్యంష్ఠింర్వుఁక్లే ద్వ్యార్ధిథిఁల్చిర్దూత్త్వంనేంత్రుర్ఖ నఛబ నుంర్వుపన్దుః
+క్కంషప్పడ్గుఉం ష్ఠిప్రే క్షింవ్రీఫే మ్రం త్కాంష్క తాంస్మేశ్శన్నృన్స్వద్రత్క్షో
+ప్యాళ్లెర్చుఁ హఁత్కింర్వ్యద్భ్రాలెఁఢీస్సబోఁయ్యేఱ్ఱంత్ముచ్ఛఁఘాహశ్రో ళ్ళుగాఁ0 డ్పా</p>
+    </div>
+  </div>
+
+  <h2><span class="no">04</span>A second poet enters</h2>
+  <p>Would the gate result generalize beyond one text — and what does MAUVE
+  see between two impeccable canonical corpora? We converted
+  <strong>1,164 unique Vemana padyalu</strong> (1,258 blocks, 94 exact
+  duplicates removed; almost pure ఆటవెలది) and ran every comparison at
+  matched sample size.</p>
+
+  <figure>
+    <div class="fig-card">
+      <p class="fig-title">Pothana vs. Vemana, at matched n</p>
+      <p class="fig-sub">Mean over 5 seeds · whiskers ±1σ · dashed line = same-distribution baseline</p>
+      <div class="bars" id="fig2"></div>
+    </div>
+    <figcaption>Both corpora pass their own split gate at ~0.96 — but against
+    each other they score 0.03, near the gibberish floor. Restricting Pothana
+    to its ఆటవెలది poems (meter-controlled) recovers almost nothing: 0.05.
+    The gap is <strong>register and era, not meter mix</strong>.</figcaption>
+  </figure>
+
+  <h2><span class="no">05</span>Findings</h2>
+  <ol>
+    <li><strong>The gate passes, and generalizes.</strong> Same-distribution
+    halves score ≈0.96 for both Pothana and Vemana; gibberish scores 0.005.
+    EmbeddingGemma is usable for the Telugu-verse MAUVE protocol.</li>
+    <li><strong>Meter-matching is mandatory.</strong> Vritta poems vs.
+    jati/upajati poems — both canonical Pothana — collapse MAUVE to 0.21.
+    An unmatched meter mix masquerades as a quality gap, exactly as §5.2's
+    "meter-matched canonical verse" anticipates.</li>
+    <li><strong>Register-matching is just as mandatory — and this is new.</strong>
+    Pothana vs. Vemana scores 0.03 even meter-controlled. The reference pool
+    must be matched on author/register/source-tradition, not just meter;
+    §5.2 should be tightened accordingly, and every evaluation should name
+    its reference corpus.</li>
+    <li><strong>MAUVE is a batch-composition instrument, not a per-poem
+    coherence judge.</strong> Scrambling every poem's line order costs only
+    0.05; scrambling word order only 0.24 — but destroying word identity
+    while keeping the poem's own aksharas costs 0.93 (word-shuffle 0.716
+    → akshara-shuffle 0.028). The embedder is bag-of-<em>words</em>: real
+    lexical items carry nearly all the signal, their order very little.
+    Per-poem coherence must come from the Kavyalankara Sangrahamu suite and
+    human ratings — the ladder is the concrete evidence for that division
+    of labor.</li>
+  </ol>
+
+  <h2><span class="no">06</span>Caveats &amp; next steps</h2>
+  <ul>
+    <li>The gibberish control is unconstrained akshara soup — a proxy for the
+    proposal's <em>trie-valid</em> nonsense. Rerun once the metrical trie can
+    generate.</li>
+    <li>MAUVE values depend on unit size, n, and bucket count; ours are
+    poem-level, n as marked per figure, ~n/10 buckets. Generated batches must
+    be scored against a meter- and register-matched pool at the same n.</li>
+    <li>The bhagavatam.txt dump loses ~24% of padyas to truncation; a
+    re-crawl would complete the corpus-contribution story (§4.3).</li>
+    <li>For సీసము, "lines" are 8 half-lines, so line-shuffle is slightly
+    harsher there than for 4-line meters.</li>
+  </ul>
+
+  <p class="footer">Team Chandohasam — Mahesh Emani · Samvaran Kashyap
+  Rallabandi · Radhe Shyam Salopanthula.<br>
+  Code &amp; data: <code>MauveOnPothana/</code> — <code>extract_poems.py</code>,
+  <code>extract_vemana.py</code>, <code>run_mauve_experiment.py</code>,
+  <code>compare_vemana_pothana.py</code>, <code>results.json</code>,
+  <code>results_vemana.json</code>. MAUVE: Pillutla et&nbsp;al., NeurIPS 2021
+  (<code>mauve-text</code>, features supplied directly; no GPT-2 step).</p>
+
+</div>
+
+<div id="tip"></div>
+
+<script>
+  const BASELINE1 = 0.9569, BASELINE2 = 0.957;
+
+  const fig1 = [
+    { label: "Held-out split", sub: "stratified", v: 0.9569, sd: 0.0034, n: 1601, note: "Same-distribution baseline. Gate condition A: near 1. ✓" },
+    { label: "Held-out split", sub: "random", v: 0.9531, sd: 0.0044, n: 1607, note: "Plain random 50/50 — stratification barely matters." },
+    { label: "Line shuffle", sub: "within poem", v: 0.9060, sd: 0.0068, n: 1601, note: "Every line intact, stanza order destroyed (non-identity permutation forced)." },
+    { label: "Word shuffle", sub: "within poem", v: 0.7155, sd: 0.0343, n: 1601, note: "Same vocabulary, per-line word counts preserved, order scrambled." },
+    { label: "Meter mismatch", sub: "vritta vs jati", v: 0.2139, sd: 0.0292, n: 721, note: "ఉ/చ/మ/శా vs క/ఆ/తే — both sides canonical Pothana. Diagnostic, not pass/fail." },
+    { label: "Akshara shuffle", sub: "within poem", v: 0.0279, sd: 0.0016, n: 1601, note: "Poem's own aksharas kept, word identity destroyed. The cliff: −0.69 from word-shuffle." },
+    { label: "Gibberish", sub: "akshara soup", v: 0.0046, sd: 0.0001, n: 1601, note: "Random corpus graphemes, matched line structure. Gate condition B: near 0. ✓", dim: false },
+  ];
+
+  const fig2 = [
+    { label: "Vemana split", sub: "n=582", v: 0.9568, sd: 0.0149, n: 582, note: "Vemana's own 50/50 held-out split — the gate generalizes." },
+    { label: "Pothana split", sub: "n=582", v: 0.9518, sd: 0.0180, n: 582, note: "Pothana stratified split subsampled to the same n." },
+    { label: "Vemana split", sub: "n=313", v: 0.9574, sd: 0.0045, n: 313, note: "Same-distribution reference at the meter-controlled comparison's n." },
+    { label: "Pothana ఆ. vs Vemana", sub: "meter-controlled", v: 0.0505, sd: 0.0067, n: 313, note: "Both sides pure ఆటవెలది — meter identical, register different." },
+    { label: "Pothana vs Vemana", sub: "mixed meters", v: 0.0305, sd: 0.0037, n: 582, note: "Two canonical corpora, near the gibberish floor. Register dominates." },
+  ];
+
+  const tip = document.getElementById("tip");
+  function fmt(x, d) { return x.toFixed(d); }
+
+  function render(id, rows, baseline) {
+    const host = document.getElementById(id);
+    let html = "";
+    rows.forEach(r => {
+      const pct = (r.v * 100);
+      const wlo = Math.max(0, (r.v - r.sd) * 100), whi = Math.min(100, (r.v + r.sd) * 100);
+      const inside = pct > 22;
+      html += `
+      <div class="bar-row" data-note="${r.note}" data-v="${fmt(r.v,4)}" data-sd="${fmt(r.sd,4)}" data-n="${r.n}">
+        <div class="bar-label">${r.label}<small>${r.sub}</small></div>
+        <div class="bar-track" role="img" aria-label="${r.label} ${r.sub}: MAUVE ${fmt(r.v,3)} plus or minus ${fmt(r.sd,3)}">
+          <div class="refline" style="left:${baseline*100}%"></div>
+          <div class="bar-fill${r.dim ? ' dim':''}" style="width:${pct}%"></div>
+          <div class="bar-whisker" style="left:calc(${wlo}% - 1px); width:${Math.max(whi-wlo, .4)}%"></div>
+          <div class="bar-val" style="${inside ? `right:calc(${100-pct}% + 8px); color: var(--paper);` : `left:calc(${pct}% + 8px);`}">${fmt(r.v,3)}</div>
+        </div>
+      </div>`;
+    });
+    host.innerHTML = html;
+  }
+
+  render("fig1", fig1, BASELINE1);
+  render("fig2", fig2, BASELINE2);
+
+  document.querySelectorAll(".bar-row").forEach(row => {
+    row.addEventListener("mousemove", e => {
+      tip.innerHTML = `<b>MAUVE ${row.dataset.v} ± ${row.dataset.sd}</b><br>` +
+                      `n/side ${row.dataset.n} · 5 seeds<br>${row.dataset.note}`;
+      tip.style.display = "block";
+      const pad = 14, w = tip.offsetWidth;
+      let x = e.clientX + pad;
+      if (x + w > window.innerWidth - 8) x = e.clientX - w - pad;
+      tip.style.left = x + "px";
+      tip.style.top = (e.clientY + pad) + "px";
+    });
+    row.addEventListener("mouseleave", () => { tip.style.display = "none"; });
+  });
+</script>

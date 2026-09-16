@@ -1,0 +1,72 @@
+# Regression guard: numbers produced by the DAWG built from meter_rules.yaml.
+# 2026-09-13 initial; 2026-09-14 sarvalaghu_seesamu redefined as 6 నలల + 2 న (Pothana 11-72), max line 36.
+# 2026-09-14 taralamu (id 34, న భ ర స జ జ గ, yati 12) added: +1 line, no new confusable pair.
+# 2026-09-14 ids 35-41 (malini, manini, kavirajavirajitamu, vanamayuramu, mangalamahasri, layagrahi,
+#   layavibhati; rules from telugu_prosody_engine's catalogue) added: +7 lines, no new confusable pair.
+# 2026-09-15 kavichakravarti (19), sarvalaghu_kandamu (21) and the abstract ragada (26) removed (no poem in
+#   any source); sarvalaghu_seesamu (31) folded into seesamu as its alternative slot pattern (seesamu/laghu).
+# If a yaml edit changes a meter's language, a test fails; update this file deliberately.
+stats:
+  meters: 37
+  hypotheses: 40
+  nfa_states: 1171
+  dfa_states_unminimized: 1573
+  dfa_states: 1431
+  dfa_edges: 2514
+  distinct_lines: 370315
+  acyclic: true
+  max_line_length: 36
+ambiguous_lines: 16979
+total_lines: 370315
+confusable_pairs:
+  seesamu|taruvoja: 16416
+  madhyakkara|turagagati_ragada: 448
+  dvipada|madhuragati_ragada: 48
+  ataveladi|tetagiti: 24
+  dvipada|tetagiti: 20
+  hayapracara_ragada|kandamu: 16
+  ataveladi|dvipada: 4
+  madhuragati_ragada|vidyunmala: 1
+  pamcacamaramu|turagagati_ragada: 1
+  madhuragati_ragada|totakamu: 1
+slot_language_sizes:
+  utpalamala/all: 1
+  champakamala/all: 1
+  mattebhavikriditamu/all: 1
+  sardulavikriditamu/all: 1
+  sragdhara/all: 1
+  mahasragdhara/all: 1
+  totakamu/all: 1
+  bhujangaprayatamu/all: 1
+  mattakokilamu/all: 1
+  pamcacamaramu/all: 1
+  vasamtatilakamu/all: 1
+  indravajra/all: 1
+  upendravajra/all: 1
+  salini/all: 1
+  rathoddhata/all: 1
+  sragvini/all: 1
+  vidyunmala/all: 1
+  lalita/all: 1
+  kandamu/odd: 80
+  kandamu/even: 320
+  utsahamu/all: 128
+  taruvoja/all: 186624
+  dvipada/all: 432
+  madhyakkara/all: 5184
+  madhuragati_ragada/all: 625
+  turagagati_ragada/all: 6561
+  hayapracara_ragada/all: 81
+  seesamu/all: 186624
+  seesamu/laghu: 1
+  ataveladi/odd: 288
+  ataveladi/even: 32
+  tetagiti/all: 288
+  taralamu/all: 1
+  malini/all: 1
+  manini/all: 1
+  kavirajavirajitamu/all: 1
+  vanamayuramu/all: 1
+  mangalamahasri/all: 1
+  layagrahi/all: 1
+  layavibhati/all: 1

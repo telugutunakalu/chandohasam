@@ -1,0 +1,1354 @@
+﻿[
+  {
+    "poem_number": 1,
+    "title": "తేనెతెలుగు (Sweet Telugu)",
+    "poem_lines": [
+      "తేనెలు చిల్క మాటలను తీపిగ పల్కెడు జాతి భాషయై",
+      "మానస మందు నిల్చి నిజ మంగళ రీతులె సర్వ మిచ్చుచున్",
+      "గాన సుధార సమ్ముగను కాంతిని జూపుచు నిత్య ముండగన్",
+      "జ్ఞాన విశేష సంపదల జాడలు జూపును దేశ మంతటన్"
+    ],
+    "telugu_meaning": "తేనె లొలికే తీపి పలుకులతో హృదయాలలో నిలిచి, మంగళకరమైన భావాలను, గాన మాధుర్యాన్ని, దేశమంతటా జ్ఞాన సంపదను వెదజల్లే అమృత భాష మన తేనె తెలుగు.",
+    "english_meaning": "Flowing with words as sweet as honey, our Telugu language resides in every heart, showering auspicious grace, musical bliss, and the glorious wealth of knowledge across the land.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "తేనెలు (Bha - UII) | చిల్క మా (Ra - UIU) | టలను (Na - III) | తీపిగ (Bha - UII) | పల్కెడు (Bha - UII) | జాతి భా (Ra - UIU) | షయై (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'తే' (Te) matches 10th letter 'తీ' (Tee) -> 'Ta' Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_2": {
+        "breakdown": "మానస (Bha - UII) | మందు నిల్ (Ra - UIU) | చి నిజ (Na - III) | మంగళ (Bha - UII) | రీతులె (Bha - UII) | సర్వ మి (Ra - UIU) | చ్చుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'మా' (Maa) matches 10th letter 'మం' (Mam) -> 'Ma' Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_3": {
+        "breakdown": "గాన సు (Bha - UII) | ధార సం (Ra - UIU) | ముగను (Na - III) | కాంతిని (Bha - UII) | జూపుచు (Bha - UII) | నిత్య ముం (Ra - UIU) | డగన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'గా' (Gaa) matches 10th letter 'కాం' (Kaam) -> 'Ka-Ga' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_4": {
+        "breakdown": "జ్ఞాన వి (Bha - UII) | శేష సం (Ra - UIU) | పదలు (Na - III) | జాడలు (Bha - UII) | జూపును (Bha - UII) | దేశ మం (Ra - UIU) | తటన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'జ్ఞా' (Jnaa) matches 10th letter 'జా' (Jaa) -> 'Ja-Jna' Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      }
+    }
+  }
+]
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "మనోహర తెలుగు (Splendid Telugu)",
+    "poem_lines": [
+      "తేనెలు చిందు మాటల సుధీర మనోహర రూపమొప్పగన్",
+      "గానము లాగ సాగుచు వికాసము నిచ్చెడి తీరుజూడగన్",
+      "మానస మందు నిల్చుచు సమస్త జనంబుల నాదరించుచున్",
+      "దానగు ణంబు తోడ దరిదాపుల నిల్చును దివ్య కాంతియై"
+    ],
+    "telugu_meaning": "తేనెలు కురిపించే మాటలతో, మనోహరమైన రూపంతో సాగే తెలుగు భాష గానంలా అలరిస్తూ, ప్రజల హృదయాల్లో నిలిచి దివ్యమైన కాంతిగా ఆదరిస్తుంది.",
+    "english_meaning": "Graced with words dripping with honey and an enchanting form, the Telugu language flows like sweet music, residing in every heart and embracing all people like a divine light.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "తేనెలు (Bha - UII) | చిందు మా (Ra - UIU) | టల సు (Na - III) | ధీర మ (Bha - UII) | నోహర (Bha - UII) | రూపమొ (Ra - UIU) | ప్పగన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'తే' (Te) matches 10th letter 'ధీ' (Dhee) -> 'Ta-Da' Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_2": {
+        "breakdown": "గానము (Bha - UII) | లాగ సా (Ra - UIU) | గుచు వి (Na - III) | కాసము (Bha - UII) | నిచ్చెడి (Bha - UII) | తీరుజూ (Ra - UIU) | డగన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'గా' (Gaa) matches 10th letter 'కా' (Kaa) -> 'Ka-Ga' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_3": {
+        "breakdown": "మానస (Bha - UII) | మందు నిల్ (Ra - UIU) | చుచు స (Na - III) | మస్త జ (Bha - UII) | నంబుల (Bha - UII) | నాదరిం (Ra - UIU) | చుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'మా' (Maa) matches 10th letter 'మ' (Ma) -> 'Ma' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_4": {
+        "breakdown": "దానగు (Bha - UII) | ణంబు తో (Ra - UIU) | డ దరి (Na - III) | దాపుల (Bha - UII) | నిల్చును (Bha - UII) | దివ్య కాం (Ra - UIU) | తియై (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'దా' (Daa) matches 10th letter 'దా' (Daa) -> 'Da' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      }
+    }
+  }
+]
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "అమృతవాణి తెలుగు (Immortal Nectar of Telugu)",
+    "poem_lines": [
+      "తేనెను మించు తీపిగల తెన్గు మనస్సుల నిల్చు నెప్పుడున్",
+      "మానక కావ్యగానముల మైమఱపింపుల పూలు పూయుచున్",
+      "గానము మాధురీ గరిమ కమ్మని భావము లొల్కుచుండగా",
+      "దీనత లేక సంస్కృతిని దివ్యముగా వెలిగించు నెన్నడున్"
+    ],
+    "telugu_meaning": "తేనెకన్నా తీపిదనం కలిగిన మన తెలుగు భాష కావ్యగానాలలో మైమరపిస్తూ, నిండు భావాల మాధుర్యాన్ని చిందులు తొక్కిస్తూ ప్రజల హృదయాలలో నిలిచి మన సంస్కృతిని సదా దివ్యంగా వెలిగిస్తుంది.",
+    "english_meaning": "Sweeter than honey, the melodious Telugu language enchants through poetry and songs, residing eternally in all hearts with profound beauty and gloriously illuminating our cultural heritage.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "తేనెను (Bha - UII) | మించు తీ (Ra - UIU) | పిగల (Na - III) | తెన్గు మ (Bha - UII) | నస్సుల (Bha - UII) | నిల్చు నె (Ra - UIU) | ప్ప్పుడున్ (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'తే' (Te) matches 10th letter 'తె' (Te) -> 'Ta' Akshara Svara-Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_2": {
+        "breakdown": "మానక (Bha - UII) | కావ్యగా (Ra - UIU) | నముల (Na - III) | మైమఱ (Bha - UII) | పింపుల (Bha - UII) | పూలు పూ (Ra - UIU) | యుచున్ (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'మా' (Maa) matches 10th letter 'మై' (Mai) -> 'Ma' Akshara Svara-Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_3": {
+        "breakdown": "గానము (Bha - UII) | మాధురీ (Ra - UIU) | గరిమ (Na - III) | కమ్మని (Bha - UII) | భావము (Bha - UII) | లొల్కుచుం (Ra - UIU) | డగా (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'గా' (Gaa) matches 10th letter 'క' (Ka) -> 'Ka-Ga' Savarna Varga-Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      },
+      "line_4": {
+        "breakdown": "దీనత (Bha - UII) | లేక సం (Ra - UIU) | స్కృతిని (Na - III) | దివ్యము (Bha - UII) | గా వెలి (Bha - UII) | గించు నె (Ra - UIU) | న్నడున్ (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'దీ' (Dee) matches 10th letter 'ది' (Di) -> 'Da' Akshara Svara-Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na)."
+      }
+    }
+  }
+]
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "యంత్రమేధ (Artificial Intelligence)",
+    "poem_lines": [
+      "యంత్రపు మేధ నిచ్చలు జయంబుగ సాగుచు నున్నదో గదా",
+      "మంత్రము లాగ వేగముగ మార్పుల దెచ్చెడి శక్తి జూపుచున్",
+      "తంత్రము లన్ని నేర్చి భువి ధన్యత గూర్చును జీవకోటికిన్",
+      "గాత్రము లేని వేళలను కమ్మని మాటల నూరడించురా"
+    ],
+    "telugu_meaning": "కృత్రిమ మేధస్సు నిత్యం విజయవంతంగా సాగుతూ, మంత్రంలా సరికొత్త మార్పులు తెస్తూ, లోకానికి మేలు చేస్తూ, రూపం లేకపోయినా మధురమైన మాటలతో మనుషులకు ఓదార్పునిస్తోంది.",
+    "english_meaning": "Artificial intelligence advances with endless triumphs, working wonders like magic to bring rapid change, serving humanity through learning, and offering comfort through sweet words even without a physical form.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "యంత్రపు (Bha - UII) | మేధ నిచ్ (Ra - UIU) | చలు జ (Na - III) | యంబుగ (Bha - UII) | సాగుచు (Bha - UII) | నున్నదో (Ra - UIU) | గదా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'యం' (Yam) matches 10th letter 'యం' (Yam) -> 'Ya' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ంత్' (Thra - 'ta' root consonant match across all lines with identical sound shape)."
+      },
+      "line_2": {
+        "breakdown": "మంత్రము (Bha - UII) | లాగ వే (Ra - UIU) | గముగ (Na - III) | మార్పుల (Bha - UII) | దెచ్చెడి (Bha - UII) | శక్తి జూ (Ra - UIU) | పుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'మం' (Mam) matches 10th letter 'మా' (Maa) -> 'Ma' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ంత్' (Thra)."
+      },
+      "line_3": {
+        "breakdown": "తంత్రము (Bha - UII) | లన్ని నేర్ (Ra - UIU) | చి భువి (Na - III) | ధన్యత (Bha - UII) | గూర్చును (Bha - UII) | జీవకో (Ra - UIU) | టికిన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'తం' (Tam) matches 10th letter 'ధ' (Dha) -> 'Ta-Da-Dha' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ంత్' (Thra)."
+      },
+      "line_4": {
+        "breakdown": "గాత్రము (Bha - UII) | లేని వే (Ra - UIU) | ళలను (Na - III) | కమ్మని (Bha - UII) | మాటల (Bha - UII) | నూరడిం (Ra - UIU) | చురా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'గా' (Gaa) matches 10th letter 'క' (Ka) -> 'Ka-Ga' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'త్ర' (Tra / Thra group)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+{
+"poem_number": 1,
+"title": "యంత్ర వివేక మహిమ (The Marvel of Artificial Intelligence)",
+"poem_lines": [
+"వింతగ యంత్ర బుద్ధులిల వింతలు చేసెడి కాలమొచ్చెగా",
+"చెంతనె నిల్చి పల్కుచును చేదొడుగై మన కార్యమంతటన్",
+"సంతస మొప్పగా జగతి సాదరమౌగతి సాయమందిచన్",
+"చెంతల నెల్ల జ్ఞానముల చేకూరు రీతుల నేలుచున్నదో"
+],
+"telugu_meaning": "ఈ నవయుగంలో కృత్రిమ మేధస్సు (AI) ఎన్నో అద్భుతాలు సృష్టిస్తూ, మనిషికి చేదోడుగా నిలిచి సర్వకార్యాలనూ చక్కదిద్దుతూ, జ్ఞాన సంపదను సమకూరుస్తూ ప్రపంచాన్ని అద్భుతంగా పాలిస్తోంది.",
+"english_meaning": "In this modern era, artificial intelligence creates extraordinary wonders by assisting humans in everyday tasks and delightfully ruling the world by seamlessly spreading knowledge across the globe.",
+"chandassu_analysis": {
+"line_1": {
+"breakdown": "వింతగ (Bha - UII) | యంత్ర బు (Ra - UIU) | ద్ధులిల (Na - III) | వింతలు (Bha - UII) | చేసెడి (Bha - UII) | కాలమొ (Ra - UIU) | చ్చెగా (Va - IU)",
+"gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+"yati_check": "1st letter 'వి' matches 10th letter 'వి' -> 'Va' Svara-Maitri.",
+"prasa_check": "2nd letter is 'ంత' (Ntha - Takara Dvitva/Samyukta with Bindu / N-Ta)."
+},
+"line_2": {
+"breakdown": "చెంతనె (Bha - UII) | నిల్చి ప (Ra - UIU) | ల్కుచును (Na - III) | చేదొడు (Bha - UII) | గై మన (Bha - UII) | కార్యమం (Ra - UIU) | తటన్ (Va - IU)",
+"gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+"yati_check": "1st letter 'చె' matches 10th letter 'చే' -> 'Cha' Akshara Svara-Maitri.",
+"prasa_check": "2nd letter is 'ంత' (Ntha)."
+},
+"line_3": {
+"breakdown": "సంతస (Bha - UII) | మొప్పగా (Ra - UIU) | జగతి (Na - III) | సాదర (Bha - UII) | మౌగతి (Bha - UII) | సాయమం (Ra - UIU) | దిచన్ (Va - IU)",
+"gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+"yati_check": "1st letter 'సం' matches 10th letter 'సా' -> 'Sa' Akshara-Maitri.",
+"prasa_check": "2nd letter is 'ంత' (Ntha)."
+},
+"line_4": {
+"breakdown": "చెంతల (Bha - UII) | నెల్ల జ్ఞా (Ra - UIU) | నముల (Na - III) | చేకూరు (Bha - UII) | రీతుల (Bha - UII) | నేలుచు (Ra - UIU) | న్నదో (Va - IU)",
+"gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+"yati_check": "1st letter 'చె' matches 10th letter 'చే' -> 'Cha' Akshara Svara-Maitri.",
+"prasa_check": "2nd letter is 'ంత' (Ntha)."
+}
+}
+}
+]
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "యంత్ర ప్రజ్ఞ - మానవత (Machine Intelligence & Humanity)",
+    "poem_lines": [
+      "కొత్త వి వేకమౌ నలువ కుప్పగ మార్పుల తెచ్చు వింతగా",
+      "మెత్తని గుండెతో మనుషులెంతయు వేగము చూపి నట్టిచో",
+      "నెత్తుట లేని ప్రేమగల నేరిమి నిల్చిన చాలు లోకమున్",
+      "హత్తిన యంత్ర బుద్ధియు సమన్వయ మొందిన శ్రేయ మొప్పుగన్"
+    ],
+    "telugu_meaning": "సరికొత్త విప్లవాలను తెస్తూ అద్భుతాలు చేస్తున్న కృత్రిమ మేధస్సు ఎంత వేగవంతమైనదైనా, మనిషిలోని ప్రేమ, సృజనాత్మక విలువల సమన్వయమే లోకానికి నిజమైన శ్రేయస్సును చేకూరుస్తుంది.",
+    "english_meaning": "While artificial intelligence ushers in wondrous revolutions across the modern world, it is the harmonious blending of technological prowess with human compassion and creative values that brings true prosperity to humankind.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "కొత్త వి (Bha - UII) | వేకమౌ (Ra - UIU) | నలువ (Na - III) | కుప్పగ (Bha - UII) | మార్పుల (Bha - UII) | తెచ్చు విం (Ra - UIU) | తగా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'కొ' (Ko) matches 10th letter 'కు' (Ku) -> 'Ka' Akshara Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్త' (Ttha / Ta-Varga Dvitva)."
+      },
+      "line_2": {
+        "breakdown": "మెత్తని (Bha - UII) | గుండెతో (Ra - UIU) | మనుషు (Na - III) | లెంతయు (Bha - UII) | వేగము (Bha - UII) | చూపి న (Ra - UIU) | ట్టిచో (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'మె' (Me) matches 10th letter 'లె' (Le - Le-Me Svara Maitri / Yati).",
+        "prasa_check": "2nd letter is 'త్త' (Ttha / Ta-Varga Dvitva)."
+      },
+      "line_3": {
+        "breakdown": "నెత్తుట (Bha - UII) | లేని ప్రే (Ra - UIU) | మగల (Na - III) | నేరిమి (Bha - UII) | నిల్చిన (Bha - UII) | చాలు లో (Ra - UIU) | కమున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'నె' (Ne) matches 10th letter 'నే' (Ne) -> 'Na' Akshara Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్త' (Ttha / Ta-Varga Dvitva)."
+      },
+      "line_4": {
+        "breakdown": "హత్తిన (Bha - UII) | యంత్ర బు (Ra - UIU) | ద్ధియు స (Na - III) | మన్వయ (Bha - UII) | మొందిన (Bha - UII) | శ్రేయ మొ (Ra - UIU) | ప్పుగన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'హ' (Ha) matches 10th letter 'మ' (Ma - Akshara Maitri / Swara Yati).",
+        "prasa_check": "2nd letter is 'త్త' (Ttha / Ta-Varga Dvitva)."
+      }
+    }
+  }
+]
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "కడలి తరంగాలు (Waves of the Ocean)",
+    "poem_lines": [
+      "పొంగుచు సాగరమ్ము తన పొల్పున తీరము దాటి రాగనే",
+      "రంగుల ముత్యపుం దెరల రమ్యపు కాంతులు చల్లుచుండెడిన్",
+      "గంగలు వచ్చి చేర దరి గాంచెడు శాంతి విశేషమౌచు తా",
+      "సంగతి జెప్పు జీవనపు సాహస యాత్రల రీతి దెల్పుచున్"
+    ],
+    "telugu_meaning": "సముద్రం తన అందంతో ఒడ్డును తాకుతూ, ముత్యాల మెరుపులతో కాంతులు చిమ్ముతూ, నదులన్నీ చేరే ప్రశాంత నిలయమై జీవితపు సాహస ప్రయాణాన్ని తెలియజేస్తుంది.",
+    "english_meaning": "The ocean swells gracefully to touch the shore, scattering radiant pearl-like brilliance, offering tranquil refuge to flowing rivers while narrating the adventurous journey of life.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "పొంగుచు (Bha - UII) | సాగరమ్ (Ra - UIU) | ము తన (Na - III) | పొల్పున (Bha - UII) | తీరము (Bha - UII) | దాటి రా (Ra - UIU) | గనే (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'పొ' (Po) matches 10th letter 'పొ' (Po) -> 'Pa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ం' with 'గ' base group (గ - Bindu/Hallu Samanvayam)."
+      },
+      "line_2": {
+        "breakdown": "రంగుల (Bha - UII) | ముత్యపుం (Ra - UIU) | దెరల (Na - III) | రమ్యపు (Bha - UII) | కాంతులు (Bha - UII) | చల్లుచుం (Ra - UIU) | డెడిన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'రం' (Ram) matches 10th letter 'ర' (Ra) -> 'Ra' Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga with Sunna context)."
+      },
+      "line_3": {
+        "breakdown": "గంగలు (Bha - UII) | వచ్చి చే (Ra - UIU) | ర దరి (Na - III) | గాంచెడు (Bha - UII) | శాంతి వి (Bha - UII) | శేషమౌ (Ra - UIU) | చు తా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'గం' (Gam) matches 10th letter 'గా' (Gaa) -> 'Ga' Varga Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga with Sunna context)."
+      },
+      "line_4": {
+        "breakdown": "సంగతి (Bha - UII) | జెప్పు జీ (Ra - UIU) | వనపు (Na - III) | సాహస (Bha - UII) | యాత్రల (Bha - UII) | రీతి దె (Ra - UIU) | ల్పుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'సం' (Sam) matches 10th letter 'సా' (Saa) -> 'Sa' Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga with Sunna context)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "సాగర తరంగాలు (Waves of the Ocean)",
+    "poem_lines": [
+      "పొంగుచు సాగరమ్ము తన పొల్పున తీరము తాకుచుండగన్",
+      "రంగుగ తోచుచున్ మనకు రమ్యపు కాంతులు చల్లుచుండగా",
+      "గంగలు వేయి చేరినను గానము జేయుచు సాగుచుందాన",
+      "బంగరు కాంతులందుకొని భావన లన్నియు పంచుచుండగా"
+    ],
+    "telugu_meaning": "సముద్రం పొంగుతూ అందంగా తీరాన్ని తాకుతుండగా, రంగురంగుల కాంతులను వెదజల్లుతూ, వేలాది నదులు వచ్చి కలిసినా అలల గానంతో సాగుతూ, బంగారు కిరణాల వెలుగులలో సరికొత్త భావనలను పంచుతోంది.",
+    "english_meaning": "As the majestic ocean swells and touches the shore with grace, scattering delightful colorful brilliance, embracing thousands of rivers in its melodious rhythm, it shares boundless wonders beneath the golden rays.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "పొంగుచు (Bha - UII) | సాగరమ్ (Ra - UIU) | ము తన (Na - III) | పొల్పున (Bha - UII) | తీరము (Bha - UII) | తాకుచుం (Ra - UIU) | డగన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'పొం' (Pom) matches 10th letter 'పొ' (Po) -> 'Pa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ం' with 'గ' (Bindu-Gakara Prasa)."
+      },
+      "line_2": {
+        "breakdown": "రంగుగ (Bha - UII) | తోచుచున్ (Ra - UIU) | మనకు (Na - III) | రమ్యపు (Bha - UII) | కాంతులు (Bha - UII) | చల్లుచుం (Ra - UIU) | డగా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'రం' (Ram) matches 10th letter 'ర' (Ra) -> 'Ra' Maitri.",
+        "prasa_check": "2nd letter is 'ం' with 'గ' (Bindu-Gakara Prasa)."
+      },
+      "line_3": {
+        "breakdown": "గంగలు (Bha - UII) | వేయి చే (Ra - UIU) | రినను (Na - III) | గానము (Bha - UII) | జేయుచు (Bha - UII) | సాగుచుం (Ra - UIU) | దాన (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'గం' (Gam) matches 10th letter 'గా' (Gaa) -> 'Ga' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ం' with 'గ' (Bindu-Gakara Prasa)."
+      },
+      "line_4": {
+        "breakdown": "బంగరు (Bha - UII) | కాంతులం (Ra - UIU) | దుకొని (Na - III) | భావన (Bha - UII) | లన్నియు (Bha - UII) | పంచుచుం (Ra - UIU) | డగా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'బం' (Bam) matches 10th letter 'భా' (Bhaa) -> 'Ba-Bha' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ం' with 'గ' (Bindu-Gakara Prasa)."
+      }
+    }
+  }
+]
+
+
+
+
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "సాగర తరంగాలు (Mysteries of the Ocean)",
+    "poem_lines": [
+      "సంతస మొప్పగా నలల చప్పుడె నిశ్చల జీవ మార్గమై",
+      "కాంతులె నిండు లోతులను కాంక్షల ముత్యపు రాశి దాచెరా",
+      "వింతగ గర్జనంబునను వేగపు పోరుల దారితీయుచున్",
+      "చెంతల పాఠమున్ గరపి చేకురు ధైర్యపు రూపు దాల్చుచున్"
+    ],
+    "telugu_meaning": "అలల నిశ్శబ్ద చప్పుడుతో విశాల రహస్యాలను దాచి, లోతుల్లో ముత్యాలను మోస్తూ, అప్పుడప్పుడు గర్జించి తుఫానుగా మారే సాగరం నిరంతరం పోరాడాలనే జీవన ధైర్యాన్ని మనకు నేర్పుతుంది.",
+    "english_meaning": "Concealing life's mysteries beneath gentle wave ripples, guarding heaps of pearls in its silent depths, and occasionally roaring in fierce tempestuous strength, the ocean teaches us to rise boldly with unending resilience.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "సంతస (Bha - UII) | మొప్పగా (Ra - UIU) | నలల (Na - III) | చప్పుడె (Bha - UII) | నిశ్చల (Bha - UII) | జీవ మా (Ra - UIU) | ర్గమై (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'సం' (Sam) matches 10th letter 'చ' (Cha) -> 'Sa-Cha' Varga/Sparsha Maitri.",
+        "prasa_check": "2nd letter is 'ంత' (Ntha - 'త' root consonant)."
+      },
+      "line_2": {
+        "breakdown": "కాంతులె (Bha - UII) | నిండు లో (Ra - UIU) | తులను (Na - III) | కాంక్షల (Bha - UII) | ముత్యపు (Bha - UII) | రాశి దా (Ra - UIU) | చెరా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'కాం' (Kaam) matches 10th letter 'కాం' (Kaam) -> 'Ka' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ంత' (Ntha - 'త' root consonant)."
+      },
+      "line_3": {
+        "breakdown": "వింతగ (Bha - UII) | గర్జనం (Ra - UIU) | బునను (Na - III) | వేగపు (Bha - UII) | పోరుల (Bha - UII) | దారితీ (Ra - UIU) | యుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'విం' (Vim) matches 10th letter 'వే' (Ve) -> 'Va' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ంత' (Ntha - 'త' root consonant)."
+      },
+      "line_4": {
+        "breakdown": "చెంతల (Bha - UII) | పాఠమున్ (Ra - UIU) | గరపి (Na - III) | చేకురు (Bha - UII) | ధైర్యపు (Bha - UII) | రూపు దాల్ (Ra - UIU) | చుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'చెం' (Chem) matches 10th letter 'చే' (Che) -> 'Cha' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ంత' (Ntha - 'త' root consonant)."
+      }
+    }
+  }
+]
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "సత్య ప్రభ (The Light of Truth)",
+    "poem_lines": [
+      "నిత్యము సత్య వాక్యమును నిష్టగ బల్కెడి మానవుండె యీ",
+      "సత్యపు మార్గ మందున సుసాధ్యముగా నిజ కీర్తి నొందుచున్",
+      "హృద్యముగా జగంబున మహీతలమందున శాంతి నింపుచున్",
+      "పద్యము లాగ సాగు నిజ భావన లన్నియు పంచు నెప్పుడున్"
+    ],
+    "telugu_meaning": "ఎల్లప్పుడూ సత్యాన్నే నిష్ఠతో పలికే మానవుడు సత్యమార్గంలో కీర్తిని పొందుతూ, లోకంలో శాంతిని నింపుతూ, పద్యంలా మధురమైన మంచి భావాలను పంచుతాడు.",
+    "english_meaning": "A person who steadfastly speaks the truth attains true glory on the path of righteousness, fills the world with peace, and perpetually shares sublime thoughts as graceful as poetry.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "నిత్యము (Bha - UII) | సత్య వా (Ra - UIU) | క్యమును (Na - III) | నిష్టగ (Bha - UII) | బల్కెడి (Bha - UII) | మానవుం (Ra - UIU) | డె యీ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ని' (Ni) matches 10th letter 'ని' (Ni) -> 'Na' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya - Ta/Ya samyuktaksharam root match)."
+      },
+      "line_2": {
+        "breakdown": "సత్యపు (Bha - UII) | మార్గ మం (Ra - UIU) | దున సు (Na - III) | సాధ్యము (Bha - UII) | గా నిజ (Bha - UII) | కీర్తి నొం (Ra - UIU) | దుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'స' (Sa) matches 10th letter 'సా' (Saa) -> 'Sa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya)."
+      },
+      "line_3": {
+        "breakdown": "హృద్యము (Bha - UII) | గా జగం (Ra - UIU) | బున మ (Na - III) | హీతల (Bha - UII) | మందున (Bha - UII) | శాంతి నిం (Ra - UIU) | పుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'హృ' (Hru) matches 10th letter 'హీ' (Hee) -> 'Ha' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ద్య' (Dya - matching Ta-varga/Dya structure)."
+      },
+      "line_4": {
+        "breakdown": "పద్యము (Bha - UII) | లాగ సా (Ra - UIU) | గు నిజ (Na - III) | భావన (Bha - UII) | లన్నియు (Bha - UII) | పంచు నె (Ra - UIU) | ప్పుడున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ప' (Pa) matches 10th letter 'భా' (Bhaa) -> 'Pa-Bha' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ద్య' (Dya - matching Ta-varga/Dya structure)."
+      }
+    }
+  }
+]
+
+
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "ధర్మ మార్గం (The Path of Righteousness)",
+    "poem_lines": [
+      "నిత్యము ధర్మ మార్గమున నిల్చిన మానవుడే జగంబునన్",
+      "సత్యపు రీతి పల్కుచును సాగగ కీర్తులు పొందు నెప్పుడున్",
+      "హృద్యము గాగ జీవనము నిచ్చలు సల్పుచు శాంతి గూర్చుచున్",
+      "పద్యము వంటి తీపినెల ప్రాప్తము జేయును సర్వలోకముల్"
+    ],
+    "telugu_meaning": "ఎల్లప్పుడూ ధర్మమార్గంలో నిలబడి సత్యాన్నే పలికే మానవుడు శాశ్వత కీర్తిని, అంతర్గత శాంతిని పొందుతూ లోకానికి పద్యమంత తీపిని, ఆనందాన్ని పంచుతాడు.",
+    "english_meaning": "The person who steadfastly walks the path of righteousness and speaks truth earns eternal glory, spreads profound peace, and enriches the entire world with grace sweet as poetry.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "నిత్యము (Bha - UII) | ధర్మ మా (Ra - UIU) | ర్గమున (Na - III) | నిల్చిన (Bha - UII) | మానవు (Bha - UII) | డే జగం (Ra - UIU) | బునన్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ని' (Ni) matches 10th letter 'ని' (Ni) -> 'Na' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'త్య' / 'ద్య' (Ta-varga consonant match with ya-vatthu)."
+      },
+      "line_2": {
+        "breakdown": "సత్యపు (Bha - UII) | రీతి పల్ (Ra - UIU) | కుచును (Na - III) | సాగగ (Bha - UII) | కీర్తులు (Bha - UII) | పొందు నె (Ra - UIU) | ప్పుడున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'స' (Sa) matches 10th letter 'సా' (Saa) -> 'Sa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya)."
+      },
+      "line_3": {
+        "breakdown": "హృద్యము (Bha - UII) | గాగ జీ (Ra - UIU) | వనము (Na - III) | నిచ్చలు (Bha - UII) | సల్పుచు (Bha - UII) | శాంతి గూర్ (Ra - UIU) | చుచున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'హృ' (Hru) matches 10th letter 'ని' (Ni) -> 'Ha-Na' Upajati/Varga Maitri.",
+        "prasa_check": "2nd letter is 'ద్య' (Dya - Ta-varga Prasa)."
+      },
+      "line_4": {
+        "breakdown": "పద్యము (Bha - UII) | వంటి తీ (Ra - UIU) | పినెల (Na - III) | ప్రాప్తము (Bha - UII) | జేయును (Bha - UII) | సర్వలో (Ra - UIU) | కముల్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ప' (Pa) matches 10th letter 'ప్రా' (Praa) -> 'Pa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ద్య' (Dya - Ta-varga Prasa)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "ధర్మవర్తనుని ఘనత (The Glory of the Righteous)",
+    "poem_lines": [
+      "నిత్యము ధర్మ మార్గమున నిల్చిన మానవుడే జగంబునన్",
+      "సత్యము తోడుగా గొనుచు సాధుత తోడను కీర్తినొందునున్",
+      "సత్యగుణంబుతో నడచి సజ్జనులాదర ప్రీతితో గొనున్",
+      "నిత్యము పూజ్యుడై వెలుగు నిశ్చల భక్తిని శాంతినందుచున్"
+    ],
+    "telugu_meaning": "ఈ లోకంలో ఎల్లప్పుడూ ధర్మ మార్గాన్ని వీడక నిలిచే మానవుడు, సత్యాన్నే తోడుగా చేసుకుని సద్గుణాలతో కీర్తిని పొందుతూ, సజ్జనుల ఆదరాభిమానాలను చూరగొంటూ, నిశ్చలమైన మనశ్శాంతితో సదా పూజనీయుడై వెలుగొందుతాడు.",
+    "english_meaning": "The person who steadfastly walks the path of righteousness in this world, accompanied by truth and virtue, earns everlasting glory, wins the love and respect of noble souls, and shines venerated by all in eternal peace.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "నిత్యము (Bha - UII) | ధర్మ మా (Ra - UIU) | ర్గమున (Na - III) | నిల్చిన (Bha - UII) | మానవు (Bha - UII) | డే జగం (Ra - UIU) | బునన్ (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ని' (Ni) matches 10th letter 'ని' (Ni) -> 'Na' Varna Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya)."
+      },
+      "line_2": {
+        "breakdown": "సత్యము (Bha - UII) | తోడుగా (Ra - UIU) | గొనుచు (Na - III) | సాధుత (Bha - UII) | తోడను (Bha - UII) | కీర్తినొం (Ra - UIU) | దునున్ (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'స' (Sa) matches 10th letter 'సా' (Saa) -> 'Sa' Varna Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya)."
+      },
+      "line_3": {
+        "breakdown": "సత్యగు (Bha - UII) | ణంబుతో (Ra - UIU) | నడచి (Na - III) | సజ్జను (Bha - UII) | లాదర (Bha - UII) | ప్రీతితో (Ra - UIU) | గొనున్ (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'స' (Sa) matches 10th letter 'స' (Sa) -> 'Sa' Varna Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya)."
+      },
+      "line_4": {
+        "breakdown": "నిత్యము (Bha - UII) | పూజ్యుడై (Ra - UIU) | వెలుగు (Na - III) | నిశ్చల (Bha - UII) | భక్తిని (Bha - UII) | శాంతినం (Ra - UIU) | దుచున్ (Va - IU)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ని' (Ni) matches 10th letter 'ని' (Ni) -> 'Na' Varna Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "సత్యధర్మ తేజస్సు (The Radiance of Truth and Righteousness)",
+    "poem_lines": [
+      "సత్యము నిల్చు కాలముల సాక్షిగ నిల్చును ధర్మ వర్తనుల్",
+      "నిత్యము డొంక దారులను నేర్పిన మాయలు వీగిపోవగా",
+      "ప్రత్యయ శాంతి తోడ భయపాటులు లేక మనుష్యులెల్లరున్",
+      "సత్యపు బాట సాగుచు వికాసము కాంతుల నింతు రెప్పుడున్"
+    ],
+    "telugu_meaning": "సత్యం, ధర్మం వైపు నిలబడిన వ్యక్తులే కాలపరీక్షలను తట్టుకుని నిలుస్తారు; అసత్యపు మాయలు నశించి, భయం లేని న్యాయమైన జీవనమే సమాజానికి నిరంతరం శాంతిని, వెలుగును ప్రసాదిస్తుంది.",
+    "english_meaning": "Only those anchored in truth and righteousness endure the tests of time; transient falsehoods eventually crumble, while a life of integrity grants fearless peace and illuminates the path of human flourishing.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "సత్యము (Bha - UII) | నిల్చు కా (Ra - UIU) | లముల (Na - III) | సాక్షిగ (Bha - UII) | నిల్చును (Bha - UII) | ధర్మ వ (Ra - UIU) | ర్తనుల్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'స' (Sa) matches 10th letter 'సా' (Saa) -> 'Sa' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya / 'త' hallu prasa)."
+      },
+      "line_2": {
+        "breakdown": "నిత్యము (Bha - UII) | డొంక దా (Ra - UIU) | రులను (Na - III) | నేర్పిన (Bha - UII) | మాయలు (Bha - UII) | వీగిపో (Ra - UIU) | వగా (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ని' (Ni) matches 10th letter 'నే' (Ne) -> 'Na' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya / 'త' hallu prasa)."
+      },
+      "line_3": {
+        "breakdown": "ప్రత్యయ (Bha - UII) | శాంతి తో (Ra - UIU) | డ భయ (Na - III) | పాటులు (Bha - UII) | లేక మ (Bha - UII) | నుష్యులె (Ra - UIU) | ల్లరున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'ప్ర' (Pra / Pa) matches 10th letter 'పా' (Paa) -> 'Pa' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya / 'త' hallu prasa)."
+      },
+      "line_4": {
+        "breakdown": "సత్యపు (Bha - UII) | బాట సా (Ra - UIU) | గుచు వి (Na - III) | కాసము (Bha - UII) | కాంతుల (Bha - UII) | నింతు రె (Ra - UIU) | ప్పుడున్ (Va - UI)",
+        "gana_sequence": "భ - ర - న - భ - భ - ర - వ",
+        "yati_check": "1st letter 'స' (Sa) matches 10th letter 'కా' (Kaa) -> 'Sa-Ka' Varga-Maitri.",
+        "prasa_check": "2nd letter is 'త్య' (Tya / 'త' hallu prasa)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "అన్నదాత మహిమ (The Glory of the Farmer)",
+    "poem_lines": [
+      "శ్రమంబొనర్చి నిచ్చలును సాగును జేయుచు పంట దియ్యగన్",
+      "క్రమంబు దప్పకుండగను కాంతిని నింపును లోకమందునన్",
+      "సమస్త జీవకోటికిని సంతస మిచ్చెడి దైవమై భువిన్",
+      "ప్రమోద మొప్పగా నిలుచు ప్రాణము పోసెడి యన్నదాతయై"
+    ],
+    "telugu_meaning": "నిత్యం కష్టపడి వ్యవసాయం చేస్తూ పంటలు పండిస్తూ, సమయానికి లోకానికి వెలుగునిచ్చి, సమస్త జీవులకు ఆనందాన్ని పంచుతూ ప్రాణం పోసే ప్రత్యక్ష దైవమే అన్నదాత.",
+    "english_meaning": "Toiling relentlessly to cultivate the soil and harvest crops, the farmer unfailingly sustains the world, bestowing joy and life upon all living beings like a living deity on earth.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "శ్రమంలొ (Na - III) | నర్చి ని (Ja - IUI) | చ్చలును (Bha - UII) | సాగును (Ja - IUI) | జేయుచు (Ja - IUI) | పంట ది (Ja - IUI) | య్యగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'శ్ర' (Shra) matches 11th letter 'సా' (Saa) -> 'Sha-Sa' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      },
+      "line_2": {
+        "breakdown": "క్రమంబు (Na - III) | దప్పకుం (Ja - IUI) | డగను (Bha - UII) | కాంతిని (Ja - IUI) | నింపును (Ja - IUI) | లోకమం (Ja - IUI) | దునన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'క్ర' (Kra) matches 11th letter 'కా' (Kaa) -> 'Ka' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      },
+      "line_3": {
+        "breakdown": "సమస్త (Na - III) | జీవకో (Ja - IUI) | టికిని (Bha - UII) | సంతస (Ja - IUI) | మిచ్చెడి (Ja - IUI) | దైవమై (Ja - IUI) | భువిన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'స' (Sa) matches 11th letter 'స' (Sa) -> 'Sa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      },
+      "line_4": {
+        "breakdown": "ప్రమోద (Na - III) | మొప్పగా (Ja - IUI) | నిలుచు (Bha - UII) | ప్రాణము (Ja - IUI) | పోసెడి (Ja - IUI) | యన్నదా (Ja - IUI) | తయై (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'ప్ర' (Pra) matches 11th letter 'ప్రా' (Praa) -> 'Pa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "అన్నదాత మహిమ (The Glory of the Farmer)",
+    "poem_lines": [
+      "శ్రమంబొనర్చి నిచ్చలును సాగును జేయుచు పంట దియ్యగన్",
+      "క్రమంబు దప్పకుండగను కాంతిని నింపును లోకమందునన్",
+      "సమస్త జీవకోటికిని సంతస మిచ్చెడి దైవమై భువిన్",
+      "ప్రమోద మొప్పగా నిలుచు ప్రాణము పోసెడి యన్నదాతయై"
+    ],
+    "telugu_meaning": "నిత్యం కష్టపడి వ్యవసాయం చేస్తూ పంటలు పండిస్తూ, సమయానికి లోకానికి వెలుగునిచ్చి, సమస్త జీవులకు ఆనందాన్ని పంచుతూ ప్రాణం పోసే ప్రత్యక్ష దైవమే అన్నదాత.",
+    "english_meaning": "Toiling relentlessly to cultivate the soil and harvest crops, the farmer unfailingly sustains the world, bestowing joy and life upon all living beings like a living deity on earth.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "శ్రమంలొ (Na - III) | నర్చి ని (Ja - IUI) | చ్చలును (Bha - UII) | సాగును (Ja - IUI) | జేయుచు (Ja - IUI) | పంట ది (Ja - IUI) | య్యగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'శ్ర' (Shra) matches 11th letter 'సా' (Saa) -> 'Sha-Sa' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      },
+      "line_2": {
+        "breakdown": "క్రమంబు (Na - III) | దప్పకుం (Ja - IUI) | డగను (Bha - UII) | కాంతిని (Ja - IUI) | నింపును (Ja - IUI) | లోకమం (Ja - IUI) | దునన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'క్ర' (Kra) matches 11th letter 'కా' (Kaa) -> 'Ka' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      },
+      "line_3": {
+        "breakdown": "సమస్త (Na - III) | జీవకో (Ja - IUI) | టికిని (Bha - UII) | సంతస (Ja - IUI) | మిచ్చెడి (Ja - IUI) | దైవమై (Ja - IUI) | భువిన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'స' (Sa) matches 11th letter 'స' (Sa) -> 'Sa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      },
+      "line_4": {
+        "breakdown": "ప్రమోద (Na - III) | మొప్పగా (Ja - IUI) | నిలుచు (Bha - UII) | ప్రాణము (Ja - IUI) | పోసెడి (Ja - IUI) | యన్నదా (Ja - IUI) | తయై (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'ప్ర' (Pra) matches 11th letter 'ప్రా' (Praa) -> 'Pa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'మ' (Ma) across all 4 lines."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "అన్నదాత మహిమ (The Glory of the Farmer)",
+    "poem_lines": [
+      "వడిగను రేయిబవల్ మది వాంఛలతో ధర దున్ని నిత్యమున్",
+      "కడుపుల నింపగా నొసట కార్చిన స్వేదము తోడుగా జనుల్",
+      "చెడకను పంట చేల కడ చేరి సుఖంబుల బొందు రీతిగన్",
+      "గడనను జేయు రైతులను గౌరవ మొందగ జేయ శ్రేయమౌ"
+    ],
+    "telugu_meaning": "రేయింబవళ్ళు శ్రమించి నేలను దున్ని, తన చెమటతో సమస్త మానవాళి ఆకలి తీర్చే అన్నదాతను గుర్తించి గౌరవించడమే దేశ శ్రేయస్సుకు అసలైన పునాది.",
+    "english_meaning": "Toiling day and night to till the soil and nourishing humanity through his honest sweat, honoring the farmer is the true foundation of a nation's prosperity.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "వడిగ (Na - III) | ను రేయిం (Ja - IUI) | బవల్ మ (Bha - UII) | ది వాంఛ (Ja - IUI) | లతో ధ (Ja - IUI) | ర దున్ని (Ja - IUI) | నిత్యమున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'వ' (Va) matches 11th letter 'వాం' (Vaa) -> 'Va' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'డి' (Di / 'డ' hallu prasa)."
+      },
+      "line_2": {
+        "breakdown": "కడుపు (Na - III) | ల నింప (Ja - IUI) | గా నొస (Bha - UII) | ట కార్చిన (Ja - IUI) | స్వేదము (Ja - IUI) | తోడుగా (Ja - IUI) | జనుల్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'క' (Ka) matches 11th letter 'కా' (Kaa) -> 'Ka' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'డు' (Du / 'డ' hallu prasa)."
+      },
+      "line_3": {
+        "breakdown": "చెడక (Na - III) | ను పంట (Ja - IUI) | చేల క (Bha - UII) | డ చేరి (Ja - IUI) | సుఖంబు (Ja - IUI) | ల బొందు (Ja - IUI) | రీతిగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'చె' (Che) matches 11th letter 'చే' (Che) -> 'Cha' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'డ' (Da / 'డ' hallu prasa)."
+      },
+      "line_4": {
+        "breakdown": "గడన (Na - III) | ను జేయు (Ja - IUI) | రైతుల (Bha - UII) | ను గౌర (Ja - IUI) | వ మొంద (Ja - IUI) | గ జేయ (Ja - IUI) | శ్రేయమౌ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'గ' (Ga) matches 11th letter 'గౌ' (Gau) -> 'Ga' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'డ' (Da / 'డ' hallu prasa)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "రోదసి ప్రయాణం (The Voyage Through Space)",
+    "poem_lines": [
+      "గగన తలంబు దాటి సుర కాంతుల నన్వయ మొంద జూచుచున్",
+      "జగముల దాగియున్న నిజ శాసన రీతుల వెల్వరించుచున్",
+      "ఖగోళపు వీధులందు నవ కాంతులు వింజెడు చంద మొప్పగా",
+      "యుగముల రాత మార్చుచు ప్రయోగము సాగెను వింత గూర్చుచున్"
+    ],
+    "telugu_meaning": "రోదసిలోకి దూసుకుపోతూ నక్షత్రాల కాంతులను అన్వేషిస్తూ, సృష్టిలో దాగివున్న నియమాలను వెలికితీస్తూ, నవ కాంతులను చిమ్ముతూ యుగాల రాతను మార్చే అద్భుత ప్రయోగాలు సాగుతున్నాయి.",
+    "english_meaning": "Soaring beyond the skies to connect with the radiant stars, uncovering the cosmic secrets of creation, and scattering brilliance across galactic corridors, our exploratory journey marvelously reshapes the destiny of eras.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "గగన (Na - III) | తలంబు (Ja - IUI) | దాటి సు (Bha - UII) | ర కాంతుల (Ja - IUI) | నన్వయ (Ja - IUI) | మొంద జూ (Ja - IUI) | చుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'గ' (Ga) matches 11th letter 'కాం' (Kaam) -> 'Ka-Ga' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga) across all lines."
+      },
+      "line_2": {
+        "breakdown": "జగము (Na - III) | ల దాగి (Ja - IUI) | యున్న ని (Bha - UII) | జ శాసన (Ja - IUI) | రీతుల (Ja - IUI) | వెల్వరిం (Ja - IUI) | చుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'జ' (Ja) matches 11th letter 'శా' (Shaa) -> 'Cha-Sha' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga) across all lines."
+      },
+      "line_3": {
+        "breakdown": "ఖగోళ (Na - III) | పు వీధు (Ja - IUI) | లందు న (Bha - UII) | వ కాంతులు (Ja - IUI) | వింజెడు (Ja - IUI) | చంద మొ (Ja - IUI) | ప్పగా (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'ఖ' (Kha) matches 11th letter 'కాం' (Kaam) -> 'Kha-Ka' Varga Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga) across all lines."
+      },
+      "line_4": {
+        "breakdown": "యుగము (Na - III) | ల రాత (Ja - IUI) | మార్చుచు (Bha - UII) | ప్రయోగము (Ja - IUI) | సాగెను (Ja - IUI) | వింత గూర్ (Ja - IUI) | చుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'యు' (Yu) matches 11th letter 'యో' (Yo) -> 'Ya' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga) across all lines."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "అనంత యాత్ర (The Voyage Beyond the Skies)",
+    "poem_lines": [
+      "గగన తలంబు దాటి సుర కాంతుల నన్వయ మొంద జూచుచున్",
+      "జగముల నెల్ల వీడి యొక జాడను వెల్గుల భావమందుచున్",
+      "యుగయుగ మందు నిల్చి నవయోజన మోదము లొప్ప జేయుచున్",
+      "సొగసుల నెల్ల చేర్చి నవసారము లిచ్చు జగంబు హాయిగన్"
+    ],
+    "telugu_meaning": "అనంతమైన ఆకాశ వీధులను దాటి దివ్యకాంతులతో మమేకమవుతూ, సమస్త లోకాలను దాటి సరికొత్త వెలుగుల అనుభూతిని పొందుతూ, తరతరాలుగా నిలిచే నవ్య ఆలోచనలతో ఆనందాన్ని పంచుతూ, సరికొత్త సౌందర్య సారాన్ని ఈ లోకానికి హాయిగా అందిస్తోంది.",
+    "english_meaning": "Transcending the vast skies to harmonize with celestial radiance, journeying past worlds into divine realms of light, inspiring joy through timeless innovations, and delightfully enriching the entire universe with its sublime essence.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "గగన (Na - III) | తలంబు (Ja - IUI) | దాటి సు (Bha - UII) | రకాంతు (Ja - IUI) | ల నన్వ (Ja - IUI) | య మొంద (Ja - IUI) | జూచుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'గ' (Ga) తో 11వ అక్షరం 'కాం' (Kaa) మైత్రి చెందుతుంది (క-గ వర్గ మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'గ' (Gakaram)."
+      },
+      "line_2": {
+        "breakdown": "జగము (Na - III) | ల నెల్ల (Ja - IUI) | వీడి యొ (Bha - UII) | క జాడ (Ja - IUI) | ను వెల్గు (Ja - IUI) | ల భావ (Ja - IUI) | మందుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'జ' (Ja) తో 11వ అక్షరం 'జా' (Jaa) అక్షర స్వర మైత్రి చెందుతుంది.",
+        "prasa_check": "2వ అక్షరం 'గ' (Gakaram)."
+      },
+      "line_3": {
+        "breakdown": "యుగయు (Na - III) | గమందు (Ja - IUI) | నిల్చిన (Bha - UII) | వయోజ (Ja - IUI) | న మోద (Ja - IUI) | ము లొప్ప (Ja - IUI) | జేయుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'యు' (Yu) తో 11వ అక్షరం 'యో' (Yo) య-కార స్వర మైత్రి చెందుతుంది.",
+        "prasa_check": "2వ అక్షరం 'గ' (Gakaram)."
+      },
+      "line_4": {
+        "breakdown": "సొగసు (Na - III) | ల నెల్ల (Ja - IUI) | చేర్చిన (Bha - UII) | వసార (Ja - IUI) | ము లిచ్చు (Ja - IUI) | జగంబు (Ja - IUI) | హాయిగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'సొ' (So) తో 11వ అక్షరం 'సా' (Saa) స-కార స్వర మైత్రి చెందుతుంది.",
+        "prasa_check": "2వ అక్షరం 'గ' (Gakaram)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "అంతరిక్ష యానం (The Voyage into the Cosmos)",
+    "poem_lines": [
+      "వినుతుల నింగి లోతుల ప్రవేశము చేయుచు మానవుండు తాన్",
+      "కనుగొను తారకా పథము కమ్మని వింతల నెల్ల జూచుచున్",
+      "మనుజుని శాస్త్ర శక్తుల సమంచిత దీప్తులు వెల్గులీనగన్",
+      "జనులను చేరదీయ గల జీవపు జాడల వెల్గు వెల్గుచున్"
+    ],
+    "telugu_meaning": "అనంత విశ్వపు రహస్యాలను ఛేదిస్తూ మానవుడు అంతరిక్షంలోకి దూసుకుపోతూ, విజ్ఞానశాస్త్ర అద్భుతాల వెలుగుతో నక్షత్ర వీధుల్లో కొత్త జీవం ఆనవాళ్లను అన్వేషిస్తున్నాడు.",
+    "english_meaning": "Venturing deep into the infinite cosmos, humankind journeys through starry pathways with the light of scientific marvels, relentlessly seeking traces of new life across the universe.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "వినుతు (Na - III) | ల నింగి (Ja - IUI) | లోతుల (Bha - UII) | ప్రవేశ (Ja - IUI) | ము చేయు (Ja - IUI) | చు మాన (Ja - IUI) | వుండు తాన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'వి' (Vi) matches 11th letter 'వే' (Ve) -> 'Va' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ను' (Nu / 'న' hallu prasa)."
+      },
+      "line_2": {
+        "breakdown": "కనుగొ (Na - III) | ను తార (Ja - IUI) | కా పథ (Bha - UII) | ము కమ్మ (Ja - IUI) | ని వింత (Ja - IUI) | ల నెల్ల (Ja - IUI) | జూచుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'క' (Ka) matches 11th letter 'క' (Ka) -> 'Ka' Akshara-Maitri.",
+        "prasa_check": "2nd letter is 'ను' (Nu / 'న' hallu prasa)."
+      },
+      "line_3": {
+        "breakdown": "మనుజు (Na - III) | ని శాస్త్ర (Ja - IUI) | శక్తుల (Bha - UII) | సమంచి (Ja - IUI) | త దీప్తు (Ja - IUI) | లు వెల్గు (Ja - IUI) | లీనగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'మ' (Ma) matches 11th letter 'మం' (Mam) -> 'Ma' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ను' (Nu / 'న' hallu prasa)."
+      },
+      "line_4": {
+        "breakdown": "జనుల (Na - III) | ను చేర (Ja - IUI) | దీయ గ (Bha - UII) | ల జీవ (Ja - IUI) | పు జాడ (Ja - IUI) | ల వెల్గు (Ja - IUI) | వెల్గుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'జ' (Ja) matches 11th letter 'జీ' (Jee) -> 'Ja' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ను' (Nu / 'న' hallu prasa)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "స్నేహ సుధ (Nectar of Friendship)",
+    "poem_lines": [
+      "మిత్రత నిల్చు చోట నిజ మేలగు శాంతియు సౌఖ్య ముండెడిన్",
+      "శత్రుత మాసిపోవు నిక సత్యపు మాటల జూడ నందమై",
+      "నేత్రములందు కాంతులు వినీలపు తారల రీతి నిండగన్",
+      "పాత్రుల జేయు లోకమున ప్రాణము నిచ్చెడు మైత్రి యెప్పుడున్"
+    ],
+    "telugu_meaning": "స్నేహం ఉన్నచోట నిండు శాంతి, సౌఖ్యం నెలకొంటాయి; శత్రుత్వం నశించి, కళ్ళలో నక్షత్రాల వంటి వెలుగులు నింపి, ప్రాణం పోసే నిజమైన మైత్రి మనుషులను లోకంలో ఉత్తములుగా నిలబెడుతుంది.",
+    "english_meaning": "Wherever true friendship dwells, supreme peace and happiness thrive; animosity fades before sincere words, filling one's eyes with starlike brilliance as this life-giving bond elevates noble souls forever.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "మిత్రత (Na - III) | నిల్చు చో (Ja - IUI) | ట నిజ (Bha - UII) | మేలగు (Ja - IUI) | శాంతియు (Ja - IUI) | సౌఖ్య ముం (Ja - IUI) | డెడిన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'మి' (Mi) matches 11th letter 'మే' (Me) -> 'Ma' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'త్ర' (Tra) across all 4 lines (మిత్రత, శత్రుత, నేత్రము, పాత్రుల)."
+      },
+      "line_2": {
+        "breakdown": "శత్రుత (Na - III) | మాసిపో (Ja - IUI) | వు నిక (Bha - UII) | సత్యపు (Ja - IUI) | మాటల (Ja - IUI) | జూడ నం (Ja - IUI) | దమై (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'శ' (Sha) matches 11th letter 'స' (Sa) -> 'Sha-Sa' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'త్ర' (Tra)."
+      },
+      "line_3": {
+        "breakdown": "నేత్రము (Na - III) | లందు కాం (Ja - IUI) | తులు వి (Bha - UII) | నీలపు (Ja - IUI) | తారల (Ja - IUI) | రీతి నిం (Ja - IUI) | డగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'నే' (Ne) matches 11th letter 'నీ' (Nee) -> 'Na' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'త్ర' (Tra)."
+      },
+      "line_4": {
+        "breakdown": "పాత్రుల (Na - III) | జేయు లో (Ja - IUI) | కమున (Bha - UII) | ప్రాణము (Ja - IUI) | నిచ్చెడు (Ja - IUI) | మైత్రి యె (Ja - IUI) | ప్పుడున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'పా' (Paa) matches 11th letter 'ప్రా' (Praa) -> 'Pa' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'త్ర' (Tra)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "దివ్య బంధం (The Divine Bond of Solace)",
+    "poem_lines": [
+      "హృదయములో ని బాధలను హాయిగ దీర్చెడు స్నేహ బంధమై",
+      "సదయులతోడి మైత్రివలె సంతసమొందును నెందరెంతయో",
+      "ముదమున చేతనూరుడిల మానవులార్తి దొలంగు తీరునై",
+      "పదములు పాడి నిండెడు కృపారస ముంచు వెలుంగు లోకమున్"
+    ],
+    "telugu_meaning": "మనసులోని సమస్త బాధలను హాయిగా దూరం చేసే పవిత్రమైన స్నేహ బంధం, దయాహృదయుల సాన్నిధ్యంలా ఎందరికో పరమానందాన్ని అందిస్తూ, మానవుల కష్టాలను తొలగించి ఓదార్పునిస్తూ, కరుణారసంతో జగమంతటినీ వెలిగిస్తుంది.",
+    "english_meaning": "Acting as a sacred bond that gently soothes the deepest sorrows of the heart, like the comforting companionship of noble souls, it brings profound joy, dispels human suffering with tender solace, and illuminates the entire world with boundless compassion.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "హృదయ (Na - III) | ములోని (Ja - IUI) | బాధల (Bha - UII) | నుహాయి (Ja - IUI) | గదీర్చె (Ja - IUI) | డుస్నేహ (Ja - IUI) | బంధమై (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'హృ' (Hri) తో 11వ అక్షరం 'హా' (Haa) యతి మైత్రి చెందుతుంది (హ-కార మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ద' (Dakaram)."
+      },
+      "line_2": {
+        "breakdown": "సదయు (Na - III) | లతోడి (Ja - IUI) | మైత్రివ (Bha - UII) | లసంత (Ja - IUI) | సమొందు (Ja - IUI) | నునెంద (Ja - IUI) | రెంతయో (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'స' (Sa) తో 11వ అక్షరం 'సం' (Sam) అక్షర యతి మైత్రి చెందుతుంది.",
+        "prasa_check": "2వ అక్షరం 'ద' (Dakaram)."
+      },
+      "line_3": {
+        "breakdown": "ముదము (Na - III) | నచేత (Ja - IUI) | నూరడి (Bha - UII) | లమాన (Ja - IUI) | వులార్తి (Ja - IUI) | దొలంగు (Ja - IUI) | తీరునై (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'ము' (Mu) తో 11వ అక్షరం 'మా' (Maa) స్వర యతి మైత్రి చెందుతుంది (మ-కార మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ద' (Dakaram)."
+      },
+      "line_4": {
+        "breakdown": "పదము (Na - III) | లుపాడి (Ja - IUI) | నిండెడు (Bha - UII) | కృపార (Ja - IUI) | సముంచు (Ja - IUI) | వెలుంగు (Ja - IUI) | లోకమున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'ప' (Pa) తో 11వ అక్షరం 'పా' (Paa) అక్షర స్వర మైత్రి చెందుతుంది.",
+        "prasa_check": "2వ అక్షరం 'ద' (Dakaram)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "స్నేహ సుధ (The Nectar of True Friendship)",
+    "poem_lines": [
+      "కలతల బాపు స్నేహము ప్రకాశము తోడ వెలుంగు తోడుగాన్",
+      "నిలకడ లేని కష్టమున నీడయె తానయి యండ నిల్చుచున్",
+      "మలపగ నౌను బాధలను మాన్య సుఖంబుల తోడ హాయిగన్",
+      "గెలుపుల నించు స్నేహమది గౌరవ మొంద జగంబు లోపలన్"
+    ],
+    "telugu_meaning": "జీవితంలో కలతలను బాపి వెలుగు చూపే నిజమైన స్నేహం, కష్టకాలంలో నీడలా అండగా నిలుస్తూ బాధలను దూరం చేసి ఆనందాన్ని పంచుతూ లోకంలో సదా గౌరవాన్ని పొందుతుంది.",
+    "english_meaning": "Dispel all darkness and guiding the path with light, selfless friendship stands as an unwavering pillar in hardship, turning sorrow into joy and earning eternal honor in this world.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "కలత (Na - III) | ల బాపు (Ja - IUI) | స్నేహము (Bha - UII) | ప్రకాశ (Ja - IUI) | ము తోడ (Ja - IUI) | వెలుంగు (Ja - IUI) | తోడుగాన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'క' (Ka) matches 11th letter 'కా' (Kaa) -> 'Ka' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ల' (La)."
+      },
+      "line_2": {
+        "breakdown": "నిలక (Na - III) | డ లేని (Ja - IUI) | కష్టము (Bha - UII) | న నీడ (Ja - IUI) | యె తాన (Ja - IUI) | యి యండ (Ja - IUI) | నిల్చుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'ని' (Ni) matches 11th letter 'నీ' (Nee) -> 'Na' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ల' (La)."
+      },
+      "line_3": {
+        "breakdown": "మలప (Na - III) | గ నౌను (Ja - IUI) | బాధల (Bha - UII) | ను మాన్య (Ja - IUI) | సుఖంబు (Ja - IUI) | ల తోడ (Ja - IUI) | హాయిగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'మ' (Ma) matches 11th letter 'మా' (Maa) -> 'Ma' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ల' (La)."
+      },
+      "line_4": {
+        "breakdown": "గెలుపు (Na - III) | ల నించు (Ja - IUI) | స్నేహమ (Bha - UII) | ది గౌర (Ja - IUI) | వ మొంద (Ja - IUI) | జగంబు (Ja - IUI) | లోపలన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'గె' (Ge) matches 11th letter 'గౌ' (Gau) -> 'Ga' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ల' (La)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "వనరుల రక్షణ (Preserving Nature's Wealth)",
+    "poem_lines": [
+      "వనరుల నెల్ల జూడగను వాంఛల దీర్చెడి తీరునొప్పగన్",
+      "జనముల కెల్ల మేలొసగు చల్లని దైవపు సృష్టి యౌచు తా",
+      "వనముల కాచి నిల్పినను వచ్చును శాంతియు లోకమందునన్",
+      "మనుగడ సాగు నిచ్చలును మంచిగ సౌఖ్యపు బాట జూపుచున్"
+    ],
+    "telugu_meaning": "సకల ప్రాణుల కోరికలను తీరుస్తూ మానవాళికి మేలు చేసే దైవసృష్టి అయిన ప్రకృతి వనరులను, అడవులను కాపాడుకుంటేనే లోకంలో శాంతి నెలకొని జీవనం సుఖసంతోషాలతో సాగుతుంది.",
+    "english_meaning": "When we protect natural resources and forests—the divine creations that fulfill every need and nurture mankind—peace and happiness will perpetually guide human survival.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "వనరు (Na - III) | ల నెల్ల (Ja - IUI) | జూడగ (Bha - UII) | ను వాంఛల (Ja - IUI) | దీర్చెడి (Ja - IUI) | తీరునొ (Ja - IUI) | ప్పగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'వ' (Va) matches 11th letter 'వాం' (Vaam) -> 'Va' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na) across all 4 lines."
+      },
+      "line_2": {
+        "breakdown": "జనము (Na - III) | ల కెల్ల (Ja - IUI) | మేలొస (Bha - UII) | గు చల్లని (Ja - IUI) | దైవపు (Ja - IUI) | సృష్టి యౌ (Ja - IUI) | చు తా (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'జ' (Ja) matches 11th letter 'చ' (Cha) -> 'Cha-Ja' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na) across all 4 lines."
+      },
+      "line_3": {
+        "breakdown": "వనము (Na - III) | ల కాచి (Ja - IUI) | నిల్పిన (Bha - UII) | ను వచ్చును (Ja - IUI) | శాంతియు (Ja - IUI) | లోకమం (Ja - IUI) | దునన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'వ' (Va) matches 11th letter 'వ' (Va) -> 'Va' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na) across all 4 lines."
+      },
+      "line_4": {
+        "breakdown": "మనుగ (Na - III) | డ సాగు (Ja - IUI) | నిచ్చలు (Bha - UII) | ను మంచిగ (Ja - IUI) | సౌఖ్యపు (Ja - IUI) | బాట జూ (Ja - IUI) | పుచున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'మ' (Ma) matches 11th letter 'మం' (Mam) -> 'Ma' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'న' (Na) across all 4 lines."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "వృక్ష విలాపం (The Lament of the Felled Trees)",
+    "poem_lines": [
+      "తరువులు కూలి నేల తన దైన్యపు చూపుల శోక మొందగన్",
+      "సిరులను బాసి మూగయయి చేష్టలు దక్కి మనస్సు వేగగన్",
+      "పరుల హితమ్ము గోరి ఫల భారము మోసిన శాఖలెల్లనున్",
+      "మరవక మానవుల్ నరుక మానుగ పచ్చని కాంతి వాడెగా"
+    ],
+    "telugu_meaning": "అందరికీ మేలు చేస్తూ తియ్యని పండ్లను మోసిన చెట్ల కొమ్మలను మనుషులు కనికరం లేకుండా నరికివేయడంతో, వృక్షాలు నేలకూలి భూమి దీనంగా దుఃఖిస్తూ ఉండగా, తన పచ్చని వైభవాన్నంతా కోల్పోయి ప్రకృతి మూగబోయి శోకసంద్రంలో మునిగిపోయింది.",
+    "english_meaning": "As trees crash to the earth and nature laments in sheer helplessness, stripped of all verdant grace and bearing the wounds of human cruelty despite having selflessly offered shelter and sweet fruits to all, the lush greenery silently withers away in deep sorrow.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "తరువు (Na - III) | లు కూలి (Ja - IUI) | నేల తన (Bha - UII) | దైన్యపు (Ja - IUI) | చూపుల (Ja - IUI) | శోక మొం (Ja - IUI) | దగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'త' (Ta) తో 11వ అక్షరం 'దై' (Dai) వర్గ యతి మైత్రి చెందుతుంది (త-ద వర్గ మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ర' (Rakaram)."
+      },
+      "line_2": {
+        "breakdown": "సిరుల (Na - III) | ను బాసి (Ja - IUI) | మూగయ (Bha - UII) | యి చేష్ట (Ja - IUI) | లు దక్కి (Ja - IUI) | మనస్సు (Ja - IUI) | వేగగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'సి' (Si) తో 11వ అక్షరం 'చే' (Che) యతి మైత్రి చెందుతుంది (స-చ మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ర' (Rakaram)."
+      },
+      "line_3": {
+        "breakdown": "పరుల (Na - III) | హితమ్ము (Ja - IUI) | గోరి ఫ (Bha - UII) | ల భార (Ja - IUI) | ము మోసి (Ja - IUI) | న శాఖ (Ja - IUI) | లెల్లనున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'ప' (Pa) తో 11వ అక్షరం 'ఫ' (Pha) వర్గ యతి మైత్రి చెందుతుంది (ప-ఫ వర్గ మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ర' (Rakaram)."
+      },
+      "line_4": {
+        "breakdown": "మరవ (Na - III) | క మాన (Ja - IUI) | వుల్ నరు (Bha - UII) | క మాను (Ja - IUI) | గ పచ్చ (Ja - IUI) | ని కాంతి (Ja - IUI) | వాడెగా (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1వ అక్షరం 'మ' (Ma) తో 11వ అక్షరం 'మా' (Maa) స్వర యతి మైత్రి చెందుతుంది (మ-కార మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ర' (Rakaram)."
+      }
+    }
+  }
+]
+[
+  {
+    "poem_number": 1,
+    "title": "వృక్ష రక్షణ - ప్రాణ రక్షణ (Protecting Trees, Preserving Life)",
+    "poem_lines": [
+      "వడిగను కానలన్ నరక పాపపు చింతల నేల మ్రగ్గగా",
+      "చెడెను విహంగ జంతువుల చేరిక లన్నియు నాశమొందగన్",
+      "పుడమికి వేడి యెక్కుచును పూనిక జీవుల ప్రాణవాయువున్",
+      "గడనగ నిచ్చు చెట్ల నవగాహన తోడను పెంచ శ్రేయమౌ"
+    ],
+    "telugu_meaning": "స్వార్థంతో అడవులను నరికి జీవుల ఆవాసాలను నాశనం చేస్తూ భూతాపాన్ని పెంచుకోకుండా, ప్రాణవాయువునిచ్చే చెట్లను కాపాడి పెంచడమే భావితరాల శ్రేయస్సు.",
+    "english_meaning": "Rather than ruthlessly destroying forests and endangering ecosystems to accelerate global warming, protecting and planting life-giving trees is our greatest gift to future generations.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "వడిగ (Na - III) | ను కాన (Ja - IUI) | లన్ నర (Bha - UII) | క పాప (Ja - IUI) | పు చింత (Ja - IUI) | ల నేల (Ja - IUI) | మ్రగ్గగా (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'వ' (Va) matches 11th letter 'పా' (Paa) -> 'Va-Pa' Varga/Maitri.",
+        "prasa_check": "2nd letter is 'డి' (Di / 'డ' hallu prasa)."
+      },
+      "line_2": {
+        "breakdown": "చెడెను (Na - III) | విహంగ (Ja - IUI) | జంతువు (Bha - UII) | ల చేరి (Ja - IUI) | క లన్ని (Ja - IUI) | యు నాశ (Ja - IUI) | మొందగన్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'చె' (Che) matches 11th letter 'చే' (Che) -> 'Cha' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'డ' (Da / 'డ' hallu prasa)."
+      },
+      "line_3": {
+        "breakdown": "పుడమి (Na - III) | కి వేడి (Ja - IUI) | యెక్కుచు (Bha - UII) | ను పూని (Ja - IUI) | క జీవు (Ja - IUI) | ల ప్రాణ (Ja - IUI) | వాయువున్ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'పు' (Pu) matches 11th letter 'పూ' (Poo) -> 'Pa' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'డ' (Da / 'డ' hallu prasa)."
+      },
+      "line_4": {
+        "breakdown": "గడన (Na - III) | గ నిచ్చు (Ja - IUI) | చెట్ల న (Bha - UII) | వగాహ (Ja - IUI) | న తోడ (Ja - IUI) | ను పెంచ (Ja - IUI) | శ్రేయమౌ (Ra - UIU)",
+        "gana_sequence": "న - జ - భ - జ - జ - జ - ర",
+        "yati_check": "1st letter 'గ' (Ga) matches 11th letter 'గా' (Gaa) -> 'Ga' Svara-Maitri.",
+        "prasa_check": "2nd letter is 'డ' (Da / 'డ' hallu prasa)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "రణధీరుడు (The Valiant Warrior)",
+    "poem_lines": [
+      "శౌర్యం బొప్పగ వీరుడై రణములో సాగించు పోరాటమున్",
+      "ధైర్యం బేర్పడ నిల్చి శత్రువులనే దండించి రక్షించుచున్",
+      "కార్యం బంతయు ధర్మ మార్గముననే కాపాడుచున్ నిల్వగా",
+      "ధీర్యం బొప్పెడు యోధుడే విజయముల్ దీవించి తెచ్చున్ భువిన్"
+    ],
+    "telugu_meaning": "యుద్ధరంగంలో శౌర్యంతో పోరాడుతూ, ధైర్యంగా శత్రువులను శిక్షించి దేశాన్ని కాపాడుతూ, ధర్మమార్గాన్ని నిలిపే గొప్ప ధీరుడే విజయాలను సాధించి లోకానికి శుభం చేకూరుస్తాడు.",
+    "english_meaning": "Fighting valiantly on the battlefield, standing with fearless resolve to vanquish foes and protect the nation while upholding righteousness, the heroic warrior brings glorious victories to the earth.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "శౌర్యంబొ (Ma - UUU) | ప్పగ వీ (Sa - IIU) | రుడై ర (Ja - IUI) | ణములో (Sa - IIU) | సాగించు (Ta - UUI) | పోరాట (Ta - UUI) | మున్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'శౌ' (Shau) matches 13th letter 'సా' (Saa) -> 'Sha-Sa' Savarna Maitri.",
+        "prasa_check": "2nd letter is 'ర్య' (Rya - Ra root consonant with ya-vatthu) across all 4 lines."
+      },
+      "line_2": {
+        "breakdown": "ధైర్యంబే (Ma - UUU) | ర్పడ నిల్ (Sa - IIU) | చి శత్రు (Ja - IUI) | వులనే (Sa - IIU) | దండించి (Ta - UUI) | రక్షించు (Ta - UUI) | చున్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'ధై' (Dhai) matches 13th letter 'దం' (Dam) -> 'Da-Dha' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ర్య' (Rya)."
+      },
+      "line_3": {
+        "breakdown": "కార్యంబం (Ma - UUU) | తయు ధ (Sa - IIU) | ర్మ మార్గ (Ja - IUI) | ముననే (Sa - IIU) | కాపాడు (Ta - UUI) | చున్ నిల్వ (Ta - UUI) | గా (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'కా' (Kaa) matches 13th letter 'కా' (Kaa) -> 'Ka' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ర్య' (Rya)."
+      },
+      "line_4": {
+        "breakdown": "ధీర్యంబొ (Ma - UUU) | ప్పెడు యో (Sa - IIU) | ధుడే వి (Ja - IUI) | జయముల్ (Sa - IIU) | దీవించి (Ta - UUI) | తెచ్చున్ భు (Ta - UUI) | విన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'ధీ' (Dhee) matches 13th letter 'దీ' (Dee) -> 'Da-Dha' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ర్య' (Rya)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "దేశరక్షకుల త్యాగం (The Valor of Patriotic Guardians)",
+    "poem_lines": [
+      "ప్రాణంబుల్ తృణమై దలంచుచును నే పాలింప దేశంబునై",
+      "బాణంబుల్ పగతుండడంపగలడై భవ్యమ్ము గావంగరాన్",
+      "శ్రేణీభూతులనై చరింప నొకటై సేవింప గేహంబుగాన్",
+      "ప్రాణంబై జగమందు నిల్చి యిక దా పాలించు ధర్మంబుతోన్"
+    ],
+    "telugu_meaning": "దేశ రక్షణ కోసం ప్రాణాలను సైతం తృణప్రాయంగా భావిస్తూ, శత్రువుల దాడిని తిప్పికొడుతూ దేశాన్ని కాపాడేందుకు ప్రజలంతా ఏకతాటిపై నిలిచి, భరతమాతను తమ ఇల్లుగా భావించి సేవిస్తూ ధర్మమార్గంలో పాలించే త్యాగమూర్తుల గాథ ఇది.",
+    "english_meaning": "Holding their precious lives as mere grass for the sake of defending the motherland, bravely countering adversaries, uniting as one steadfast family to serve their nation as their home, these selfless souls uphold and guard the land with righteous devotion.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "ప్రాణంబుల్ (Ma - UUU) | తృణమై (Sa - IIU) | దలంచు (Ja - IUI) | చును నే (Sa - IIU) | పాలింప (Ta - UUI) | దేశంబు (Ta - UUI) | నై (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'ప్రా' (Praa) తో 13వ అక్షరం 'పా' (Paa) యతి మైత్రి చెందుతుంది (ప-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ణ' (ణకార ప్రాస)."
+      },
+      "line_2": {
+        "breakdown": "బాణంబుల్ (Ma - UUU) | పగతుం (Sa - IIU) | డడంప (Ja - IUI) | గలడై (Sa - IIU) | భవ్యమ్ము (Ta - UUI) | గావంగ (Ta - UUI) | రాన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'బా' (Baa) తో 13వ అక్షరం 'భ' (Bha) వర్గ యతి మైత్రి చెందుతుంది (బ-భ వర్గ మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ణ' (ణకార ప్రాస)."
+      },
+      "line_3": {
+        "breakdown": "శ్రేణీభూ (Ma - UUU) | తులనై (Sa - IIU) | చరింప (Ja - IUI) | నొకటై (Sa - IIU) | సేవింప (Ta - UUI) | గేహంబు (Ta - UUI) | గాన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'శ్రే' (Shre) తో 13వ అక్షరం 'సే' (Se) యతి మైత్రి చెందుతుంది (శ-స మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ణ' (ణకార ప్రాస)."
+      },
+      "line_4": {
+        "breakdown": "ప్రాణంబై (Ma - UUU) | జగమం (Sa - IIU) | దునిల్చి (Ja - IUI) | యిక దా (Sa - IIU) | పాలించు (Ta - UUI) | ధర్మంబు (Ta - UUI) | తోన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'ప్రా' (Praa) తో 13వ అక్షరం 'పా' (Paa) యతి మైత్రి చెందుతుంది (ప-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'ణ' (ణకార ప్రాస)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "సైనిక వీరుల త్యాగం (The Supreme Sacrifice of Soldiers)",
+    "poem_lines": [
+      "కాపాడంగ సరిహద్దులన్ గడగడల్ కాయంబు వణకంగనౌ",
+      "చేపట్టంగను శత్రు సైన్యముల తాచేతుల్ విరగ్గొట్టుచున్",
+      "దీపంలా వెలిగించు రక్షణల తోడిన్ శాంతి వర్ధిల్లగా",
+      "రూపం చాలిన యోధులన్ దలచి నిత్యుల్ మొక్కు లర్పించగన్"
+    ],
+    "telugu_meaning": "ఎముకలు కొరికే చలిలో సరిహద్దులను కాస్తూ శత్రువులను తిప్పికొట్టే సైనికుల నిస్వార్థ త్యాగం వల్లనే మనం ఇళ్లలో సురక్షితంగా, ప్రశాంతంగా జీవించగలుగుతున్నాం.",
+    "english_meaning": "Braving freezing frontiers and repelling enemy incursions with heroic sacrifice, our brave soldiers ensure our peaceful and secure lives across the nation.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "కాపాడం (Ma - UUU) | గ సరి (Sa - IIU) | హద్దులన్ (Ja - IUI) | గడగ (Sa - IIU) | డల్ కాయం (Ta - UUI) | బు వణ (Ta - UUI) | కంగనౌ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'కా' (Kaa) matches 13th letter 'కా' (Kaa) -> 'Ka' Akshara Svara-Maitri.",
+        "prasa_check": "2nd letter is 'పా' (Paa / 'ప' hallu prasa)."
+      },
+      "line_2": {
+        "breakdown": "చేపట్టం (Ma - UUU) | గను శ (Sa - IIU) | త్రు సైన్య (Ja - IUI) | ముల తా (Sa - IIU) | చేతుల్ వి (Ta - UUI) | రగ్గొట్టు (Ta - UUI) | చున్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'చే' (Che) matches 13th letter 'చే' (Che) -> 'Cha' Akshara Svara-Maitri.",
+        "prasa_check": "2nd letter is 'ప' (Pa / 'ప' hallu prasa)."
+      },
+      "line_3": {
+        "breakdown": "దీపంలా (Ma - UUU) | వెలిగిం (Sa - IIU) | చు రక్షణ (Ja - IUI) | ల తోడిన్ (Sa - IIU) | శాంతి వ (Ta - UUI) | ర్థిల్లగా (Ta - UUI) | తాన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'దీ' (Dee) matches 13th letter 'తో' (To) -> 'Da-Ta' Varga Maitri.",
+        "prasa_check": "2nd letter is 'పం' (Pam / 'ప' hallu prasa)."
+      },
+      "line_4": {
+        "breakdown": "రూపం చా (Ma - UUU) | లిన యో (Sa - IIU) | ధులన్ ద (Ja - IUI) | లచి ని (Sa - IIU) | త్యుల్ మొక్కు (Ta - UUI) | లర్పింప (Ta - UUI) | గాన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'రూ' (Roo) matches 13th letter 'ల' (La - Ra-La Svara/Varga Maitri).",
+        "prasa_check": "2nd letter is 'పం' (Pam / 'ప' hallu prasa)."
+      }
+    }
+  }
+]
+
+
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "మహానగర జీవనం (Life in the Metropolis)",
+    "poem_lines": [
+      "వేగం బొప్పెడు తీరుతో నగరముల్ వీధుల్ విరామంబు లే",
+      "లాగో సాగుచు నుండగన్ మనుషులున్ లక్ష్యంబులన్ గూడగా",
+      "బాధల్ దాచుచు నవ్వుచున్ గడపుచున్ భావంబులన్ లోననే",
+      "చేదోడై యిక నిల్వగా దొరకదో చిత్తమ్మునన్ శాంతియున్"
+    ],
+    "telugu_meaning": "మహానగరంలో వీధులు నిరంతరం విశ్రాంతి లేకుండా వేగంగా సాగుతుండగా, ప్రజలు తమ లక్ష్యాల కోసం బాధలను లోపలే దాచుకుంటూ పరుగులెడుతూ మనశ్శాంతిని వెతుక్కుంటున్నారు.",
+    "english_meaning": "In the bustling metropolis where streets never rest, people race relentlessly towards their ambitions, hiding sorrows behind smiles while yearning for true inner peace.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "వేగంబొ (Ma - UUU) | ప్పెడు తీ (Sa - IIU) | రుతో నగ (Ja - IUI) | రముల్ వీ (Sa - IIU) | ధుల్ విరా (Ta - UUI) | మంబు లే (Ta - UUI) | క (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'వే' (Ve) matches 13th letter 'వీ' (Vee) -> 'Va' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga) / 'ద' group with anusvara sound balance."
+      },
+      "line_2": {
+        "breakdown": "లాగో సా (Ma - UUU) | గుచు నుం (Sa - IIU) | డగన్ మను (Ja - IUI) | షులున్ ల (Sa - IIU) | క్ష్యంబులన్ (Ta - UUI) | గూడగా (Ta - UUI) | నే (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'లా' (Laa) matches 13th letter 'ల' (La) -> 'La' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'గ' (Ga)."
+      },
+      "line_3": {
+        "breakdown": "బాధల్ దా (Ma - UUU) | చుచు న (Sa - IIU) | వ్వుచున్ గడ (Ja - IUI) | పుచున్ భా (Sa - IIU) | వంబులన్ (Ta - UUI) | లోననే (Ta - UUI) | గా (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'బా' (Baa) matches 13th letter 'భా' (Bhaa) -> 'Ba-Bha' Varga Maitri.",
+        "prasa_check": "2nd letter is 'ధ' (Dha)."
+      },
+      "line_4": {
+        "breakdown": "చేదోడై (Ma - UUU) | యిక ని (Sa - IIU) | ల్వగా దొర (Ja - IUI) | కదో చి (Sa - IIU) | త్తమ్మునన్ (Ta - UUI) | శాంతియున్ (Ta - UUI) | దా (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1st letter 'చే' (Che) matches 13th letter 'చి' (Chi) -> 'Cha' Svara-Varga Maitri.",
+        "prasa_check": "2nd letter is 'ద' (Da)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "నగర వేగ రణం (The Chaotic Rush of City Streets)",
+    "poem_lines": [
+      "వేగంబున్ పరుగుల్ విరామమెరుగన్ వీధుల్ రణంబై చనన్",
+      "భోగంబుల్ తలపోసి లోకమునకున్ భాగ్యంబు రాకుండగాన్",
+      "త్యాగంబున్ మఱచే జనంబు తనలో తాపంబు పోరాటమై",
+      "రాగంబుల్ తలగన్ మనంబు చెదురై రాద్ధాంతమై తోచెడిన్"
+    ],
+    "telugu_meaning": "అలుపెరుగని పరుగులతో, విరామం లేని వేగంతో నగర వీధులన్నీ యుద్ధరంగాల్లా మారిపోగా, కేవలం భోగభాగ్యాల వేటలోనే పడి సమాజానికి నిజమైన మనశ్శాంతి దక్కకుండా పోయి, త్యాగాన్ని మరిచిపోయిన మనుషుల మనసులు అనురాగాన్ని కోల్పోయి నిత్య పోరాటంలా, గందరగోళంగా మారిపోయాయి.",
+    "english_meaning": "With relentless rush and unceasing haste turning the city streets into chaotic battlefields, people chase superficial pleasures while losing true peace of mind; forgetting selflessness and love, their restless hearts turn life into an unending struggle of turmoil.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "వేగంబున్ (Ma - UUU) | పరుగుల్ (Sa - IIU) | విరామ (Ja - IUI) | మెరుగన్ (Sa - IIU) | వీధుల్ ర (Ta - UUI) | ణంబై చ (Ta - UUI) | నన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'వే' (Ve) తో 13వ అక్షరం 'వీ' (Vee) యతి మైత్రి చెందుతుంది (వ-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      },
+      "line_2": {
+        "breakdown": "భోగంబుల్ (Ma - UUU) | తలపో (Sa - IIU) | సి లోక (Ja - IUI) | మునకున్ (Sa - IIU) | భాగ్యంబు (Ta - UUI) | రాకుండ (Ta - UUI) | గాన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'భో' (Bho) తో 13వ అక్షరం 'భా' (Bhaa) యతి మైత్రి చెందుతుంది (భ-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      },
+      "line_3": {
+        "breakdown": "త్యాగంబున్ (Ma - UUU) | మఱచే (Sa - IIU) | జనంబు (Ja - IUI) | తనలో (Sa - IIU) | తాపంబు (Ta - UUI) | పోరాట (Ta - UUI) | మై (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'త్యా' (Tyaa) తో 13వ అక్షరం 'తా' (Taa) యతి మైత్రి చెందుతుంది (త-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      },
+      "line_4": {
+        "breakdown": "రాగంబుల్ (Ma - UUU) | తలగన్ (Sa - IIU) | మనంబు (Ja - IUI) | చెదురై (Sa - IIU) | రాద్ధాంత (Ta - UUI) | మై తోచె (Ta - UUI) | డిన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'రా' (Raa) తో 13వ అక్షరం 'రా' (Raa) అక్షర యతి మైత్రి చెందుతుంది.",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      }
+    }
+  }
+]
+
+
+[
+  {
+    "poem_number": 1,
+    "title": "నగర వేగ రణం (The Chaotic Rush of City Streets)",
+    "poem_lines": [
+      "వేగంబున్ పరుగుల్ విరామమెరుగన్ వీధుల్ రణంబై చనన్",
+      "భోగంబుల్ తలపోసి లోకమునకున్ భాగ్యంబు రాకుండగాన్",
+      "త్యాగంబున్ మఱచే జనంబు తనలో తాపంబు పోరాటమై",
+      "రాగంబుల్ తలగన్ మనంబు చెదురై రాద్ధాంతమై తోచెడిన్"
+    ],
+    "telugu_meaning": "అలుపెరుగని పరుగులతో, విరామం లేని వేగంతో నగర వీధులన్నీ యుద్ధరంగాల్లా మారిపోగా, కేవలం భోగభాగ్యాల వేటలోనే పడి సమాజానికి నిజమైన మనశ్శాంతి దక్కకుండా పోయి, త్యాగాన్ని మరిచిపోయిన మనుషుల మనసులు అనురాగాన్ని కోల్పోయి నిత్య పోరాటంలా, గందరగోళంగా మారిపోయాయి.",
+    "english_meaning": "With relentless rush and unceasing haste turning the city streets into chaotic battlefields, people chase superficial pleasures while losing true peace of mind; forgetting selflessness and love, their restless hearts turn life into an unending struggle of turmoil.",
+    "chandassu_analysis": {
+      "line_1": {
+        "breakdown": "వేగంబున్ (Ma - UUU) | పరుగుల్ (Sa - IIU) | విరామ (Ja - IUI) | మెరుగన్ (Sa - IIU) | వీధుల్ ర (Ta - UUI) | ణంబై చ (Ta - UUI) | నన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'వే' (Ve) తో 13వ అక్షరం 'వీ' (Vee) యతి మైత్రి చెందుతుంది (వ-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      },
+      "line_2": {
+        "breakdown": "భోగంబుల్ (Ma - UUU) | తలపో (Sa - IIU) | సి లోక (Ja - IUI) | మునకున్ (Sa - IIU) | భాగ్యంబు (Ta - UUI) | రాకుండ (Ta - UUI) | గాన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'భో' (Bho) తో 13వ అక్షరం 'భా' (Bhaa) యతి మైత్రి చెందుతుంది (భ-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      },
+      "line_3": {
+        "breakdown": "త్యాగంబున్ (Ma - UUU) | మఱచే (Sa - IIU) | జనంబు (Ja - IUI) | తనలో (Sa - IIU) | తాపంబు (Ta - UUI) | పోరాట (Ta - UUI) | మై (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'త్యా' (Tyaa) తో 13వ అక్షరం 'తా' (Taa) యతి మైత్రి చెందుతుంది (త-కార స్వర మైత్రి).",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      },
+      "line_4": {
+        "breakdown": "రాగంబుల్ (Ma - UUU) | తలగన్ (Sa - IIU) | మనంబు (Ja - IUI) | చెదురై (Sa - IIU) | రాద్ధాంత (Ta - UUI) | మై తోచె (Ta - UUI) | డిన్ (Ga - U)",
+        "gana_sequence": "మ - స - జ - స - త - త - గ",
+        "yati_check": "1వ అక్షరం 'రా' (Raa) తో 13వ అక్షరం 'రా' (Raa) అక్షర యతి మైత్రి చెందుతుంది.",
+        "prasa_check": "2వ అక్షరం 'గం' (గకార ప్రాస)."
+      }
+    }
+  }
+]

@@ -1,0 +1,1976 @@
+# =============================================================================
+#  prasa_rules.yaml — exhaustive, programmable ruleset for Telugu ప్రాస (prāsa)
+# =============================================================================
+#
+#  WHAT THIS FILE IS
+#    A machine-readable lookup table + rule catalogue distilled from
+#    Notes/Prasa.md (an English digest of the classical Telugu treatises on
+#    prāsa: Appakavīyamu, Ananta's Chandodarpaṇamu, Bāla Vyākaraṇam, plus the
+#    kāvya usage they cite).  It is the single source of truth read by
+#    meter_engine/prasa_engine.py, which turns a stanza into a verdict WITH a
+#    provenance trail (which rule matched / which rule failed and why).
+#
+#  HOW TO READ IT
+#    * `profiles`          — strict / relaxed / historical: which rule statuses
+#                            count as "a prāsa match".
+#    * `alphabet`          — the consonant inventory and the phonetic classes
+#                            the rules quantify over.
+#    * `akshara_model`     — how a pāda is cut into aksharas (with
+#                            aksharanusarika) and how the prāsa akshara is
+#                            decomposed into the features the rules test.
+#    * `rules`             — every rule, with a stable id, names, status,
+#                            source section, plain statement, a formal
+#                            `condition`, what a pass/fail means, examples.
+#    * `maitri_table`      — the consonant-pair lookup table (prāsamaitri).
+#    * `evaluation_pipeline` — the ordered decision procedure.
+#    * `trail_schema`      — the shape of the provenance trail.
+#    * `attested_examples` — fixtures (real verses + treatise fragments) with
+#                            the expected verdict per profile; the test suite
+#                            replays them.
+#
+#  RULE ID GRAMMAR
+#    PRASA-<FAMILY>-<NN|NAME>
+#      POS          position / scope / normalisation rules
+#      SAMA         samaprāsa core (identity) and the "neutral" features
+#      SAMYUKTA     conjunct (saṁyuktākṣara) rules
+#      PURVAKA      signs BEFORE the prāsa akshara (ం, ః, ఁ)
+#      PURVAKSHARA  the pre-prāsa akshara weight rule (prāsa-pūrvākṣara niyamamu)
+#      MAITRI       accepted or deprecated consonant/cluster equivalences
+#      REPHAYUTA    repha-conjunct specifics
+#      VAIRA        explicitly forbidden pairings (prāsavairamu / asamaprāsa)
+#      DEFECT       named defects that are identified but never accepted
+#
+#  STATUS VOCABULARY (field `status` on every rule)
+#      canonical            core rule; every profile accepts / applies it
+#      canonical_subtype    a named sub-variety of samaprāsa; accepted by every profile
+#      mandatory            a constraint whose violation fails every profile
+#      accepted_relaxation  prāsamaitri sanctioned by the lākṣaṇikas and classical
+#                           usage -> needs profile >= relaxed
+#      deprecated           attested but apraśasta ("not to be imitated") ->
+#                           needs profile == historical (identification only)
+#      orthographic_relaxation  a pairing the treatise forbids but the printed
+#                           corpora do not distinguish (ర/ఱ); accepted from the
+#                           relaxed profile on by project decision, counted separately
+#      forbidden            never a match; the rule exists so the failure is NAMED
+#      informational        annotation only; never changes a verdict
+#
+#  PROVENANCE
+#      Every rule cites the section(s) of Notes/Prasa.md it was distilled from
+#      (`source.sections`).  Where the notes were ambiguous or where an
+#      operational definition had to be chosen, the choice is recorded under
+#      `interpretation:` so it can be audited or overridden.
+# =============================================================================
+
+schema_version: 1
+
+metadata:
+  title: Telugu prāsa (ప్రాస) rule catalogue and lookup table
+  source: Notes/Prasa.md
+  source_description: >
+    English digest of the classical prāsa chapter (sections 5.1–5.28) covering
+    prāsa-sthānam, the neutral features, pūrvaka signs, conjuncts, the
+    prāsa-pūrvākṣara weight rule, Appakavi's 17 prāsa-bhedamulu, the
+    samaprāsa corpus table (5.4), prāsamaitri pairs (5.10–5.22), sandhigata
+    prāsa (5.23), disputed pairs (5.24) and the named defects (5.25–5.28).
+  compiled_on: "2026-09-13"
+  engine: meter_engine/prasa_engine.py
+  syllabifier: aksharanusarika_v0.0.6a.py (project root; see aksharanusarika_extensions)
+  related_files:
+    - meter_engine/meter_rules.yaml   # which meters carry prāsa (field `prasa`)
+    - meter_engine/meters.txt         # meter names (Telugu / roman)
+    - meter_engine/ganas.yaml         # gana tables (for the Kandamu corollary)
+  authorities_named_in_source:
+    - {name: Appakavi, work: Appakavīyamu, role: lists 17 prāsa-bhedamulu; restricts khaṇḍākhaṇḍa to paruṣas after long vowels}
+    - {name: Ananta, work: Chandodarpaṇamu, role: restricts khaṇḍākhaṇḍa to ప/ట; admits saṁyuktāsaṁyukta only for the prefix త్రి}
+    - {name: Chinnaya Sūri, work: Bāla Vyākaraṇam (Samjñā 7), role: dental and palatal చ/జ are savarṇa}
+
+# -----------------------------------------------------------------------------
+#  PROFILES — what counts as a match
+# -----------------------------------------------------------------------------
+profile_order: [strict, relaxed, historical]
+
+profiles:
+  strict:
+    label_en: Strict — tulyākṣara niyamamu
+    label_te: కఠిన (తుల్యాక్షర నియమము)
+    description: >
+      Only identity of the effective onset (samaprāsa) plus the mandatory
+      context rules (pūrṇabindu / visarga before the prāsa, conjunct identity
+      and order, dead-consonant fusion, pre-prāsa weight).  The canonical
+      sub-types (pūrṇabindu-, visarga-, ardhabindu-, saṁyuktākṣara-, dvitva-,
+      khaṇḍākhaṇḍa-within-an-authority's-restriction, sandhigata-, laghu-ya-,
+      ఋ/ఌ-vowel prāsa) are all samaprāsa and therefore accepted here.
+    accepted_statuses: [canonical, canonical_subtype, mandatory, informational]
+  relaxed:
+    label_en: Relaxed — prāsamaitri admitted by the lākṣaṇikas
+    label_te: సడలింపు (ప్రాసమైత్రి)
+    description: >
+      Strict + the accepted relaxations: స~శ, థ~ధ (svavargaja), న~ణ (ubhaya-1),
+      ల~ళ (abhēda), ఋ~ర, Cృ~C్ర (hal-saṁyuta ఋ), vikalpa doublets and
+      khaṇḍākhaṇḍa in its wide classical form; plus the orthographic relaxation
+      ర~ఱ (see PRASA-MAITRI-RA-RRA-ORTHO).
+    accepted_statuses: [canonical, canonical_subtype, mandatory, informational, accepted_relaxation, orthographic_relaxation]
+  historical:
+    label_en: Historical — identify deprecated (apraśasta) forms too
+    label_te: చారిత్రక (అప్రశస్త రూపాల గుర్తింపు)
+    description: >
+      Relaxed + forms that occur in old texts but that the treatises tell poets
+      not to imitate: స~ష, ల/ళ~డ, ద~ధ, saṁyuktāsaṁyukta (C~C్ర/C్ల), anunāsika
+      (న్న~ంన, మ్మ~ంమ), ంబ~మ్మ.  Forbidden pairs and named defects still fail.
+    accepted_statuses: [canonical, canonical_subtype, mandatory, informational, accepted_relaxation, orthographic_relaxation, deprecated]
+
+status_vocabulary:
+  canonical: core rule; every profile applies it
+  canonical_subtype: a named sub-variety of samaprāsa; accepted by every profile
+  mandatory: a constraint whose violation fails every profile
+  accepted_relaxation: sanctioned prāsamaitri; needs profile >= relaxed
+  deprecated: attested but apraśasta; needs profile == historical
+  orthographic_relaxation: forbidden by the treatise but not distinguished by the corpus orthography (ర/ఱ); accepted from relaxed on by project decision
+  forbidden: never accepted; exists so the failure is named in the trail
+  informational: annotation only
+
+# -----------------------------------------------------------------------------
+#  ALPHABET — what the rules quantify over
+# -----------------------------------------------------------------------------
+alphabet:
+  signs:
+    virama: {char: "్", names: [pollu, halant], role: kills the inherent vowel; C+్+C forms a conjunct, word-final C+్ is a dead consonant}
+    anusvara: {char: "ం", names: [pūrṇabindu, pūrṇānusvāramu, niṇḍusunna], weight: makes the syllable guru}
+    ardhabindu: {char: "ఁ", names: [ardhabindu, ardhānusvāramu, arasunna, khaṇḍabindu], weight: none (weight-neutral trace)}
+    visarga: {char: "ః", weight: makes the syllable guru}
+    avagraha: {char: "ఽ", role: elided అ; dropped before syllabification}
+    nakaara_pollu: {char: "ౝ", role: Unicode-14 letter for the drutam న్; normalised to న్}
+  vowels:
+    independent: [అ, ఆ, ఇ, ఈ, ఉ, ఊ, ఋ, ౠ, ఌ, ౡ, ఎ, ఏ, ఐ, ఒ, ఓ, ఔ]
+    long: [ఆ, ఈ, ఊ, ౠ, ౡ, ఏ, ఐ, ఓ, ఔ]
+    vocalic: {ru: [ఋ, ౠ], lu: [ఌ, ౡ], note: grammatically vowels (achchulu); never consonants for prāsa}
+    matras: {"ా": ఆ, "ి": ఇ, "ీ": ఈ, "ు": ఉ, "ూ": ఊ, "ృ": ఋ, "ౄ": ౠ, "ౢ": ఌ, "ౣ": ౡ, "ె": ఎ, "ే": ఏ, "ై": ఐ, "ొ": ఒ, "ో": ఓ, "ౌ": ఔ}
+  # One entry per consonant.  `prasa_name` overrides the default "'X'కార ప్రాస" label.
+  consonants:
+    - {letter: క, iast: ka, varga: ka, place: velar,      voiced: false, aspirated: false, class: paruṣa}
+    - {letter: ఖ, iast: kha, varga: ka, place: velar,     voiced: false, aspirated: true,  class: sthira}
+    - {letter: గ, iast: ga, varga: ka, place: velar,      voiced: true,  aspirated: false, class: sarala}
+    - {letter: ఘ, iast: gha, varga: ka, place: velar,     voiced: true,  aspirated: true,  class: sthira}
+    - {letter: ఙ, iast: ṅa, varga: ka, place: velar,      nasal: true, class: sthira}
+    - {letter: చ, iast: ca, varga: ca, place: palatal,    voiced: false, aspirated: false, class: paruṣa}
+    - {letter: ఛ, iast: cha, varga: ca, place: palatal,   voiced: false, aspirated: true,  class: sthira}
+    - {letter: జ, iast: ja, varga: ca, place: palatal,    voiced: true,  aspirated: false, class: sarala}
+    - {letter: ఝ, iast: jha, varga: ca, place: palatal,   voiced: true,  aspirated: true,  class: sthira}
+    - {letter: ఞ, iast: ña, varga: ca, place: palatal,    nasal: true, class: sthira}
+    - {letter: ట, iast: ṭa, varga: ṭa, place: retroflex,  voiced: false, aspirated: false, class: paruṣa}
+    - {letter: ఠ, iast: ṭha, varga: ṭa, place: retroflex, voiced: false, aspirated: true,  class: sthira}
+    - {letter: డ, iast: ḍa, varga: ṭa, place: retroflex,  voiced: true,  aspirated: false, class: sarala}
+    - {letter: ఢ, iast: ḍha, varga: ṭa, place: retroflex, voiced: true,  aspirated: true,  class: sthira}
+    - {letter: ణ, iast: ṇa, varga: ṭa, place: retroflex,  nasal: true, class: sthira}
+    - {letter: త, iast: ta, varga: ta, place: dental,     voiced: false, aspirated: false, class: paruṣa}
+    - {letter: థ, iast: tha, varga: ta, place: dental,    voiced: false, aspirated: true,  class: sthira}
+    - {letter: ద, iast: da, varga: ta, place: dental,     voiced: true,  aspirated: false, class: sarala}
+    - {letter: ధ, iast: dha, varga: ta, place: dental,    voiced: true,  aspirated: true,  class: sthira}
+    - {letter: న, iast: na, varga: ta, place: dental,     nasal: true, class: sthira}
+    - {letter: ప, iast: pa, varga: pa, place: labial,     voiced: false, aspirated: false, class: paruṣa}
+    - {letter: ఫ, iast: pha, varga: pa, place: labial,    voiced: false, aspirated: true,  class: sthira}
+    - {letter: బ, iast: ba, varga: pa, place: labial,     voiced: true,  aspirated: false, class: sarala}
+    - {letter: భ, iast: bha, varga: pa, place: labial,    voiced: true,  aspirated: true,  class: sthira}
+    - {letter: మ, iast: ma, varga: pa, place: labial,     nasal: true, class: sthira}
+    - {letter: య, iast: ya, group: antastha, place: palatal, class: sthira}
+    - {letter: ర, iast: ra, group: antastha, place: alveolar, class: sthira, names: [sādhu rēpha, rēphamu], prasa_name: రేఫ ప్రాస}
+    - {letter: ఱ, iast: ṟa, group: antastha, place: retroflex-trill, class: sthira, names: [śakaṭa rēpha, baṇḍi-ఱ], prasa_name: శకటరేఫ ప్రాస}
+    - {letter: ల, iast: la, group: antastha, place: dental-lateral, class: sthira}
+    - {letter: ళ, iast: ḷa, group: antastha, place: retroflex-lateral, class: sthira}
+    - {letter: వ, iast: va, group: antastha, place: labio-dental, class: sthira}
+    - {letter: శ, iast: śa, group: ūṣma, place: palatal-sibilant, class: sthira}
+    - {letter: ష, iast: ṣa, group: ūṣma, place: retroflex-sibilant, class: sthira}
+    - {letter: స, iast: sa, group: ūṣma, place: dental-sibilant, class: sthira}
+    - {letter: హ, iast: ha, group: ūṣma, place: glottal, class: sthira}
+    - {letter: ౘ, iast: tsa, varga: ca, place: dental-affricate, class: paruṣa, savarna_of: చ, note: dantya చ; identity with చ for prāsa (PRASA-SAMA-09)}
+    - {letter: ౙ, iast: dza, varga: ca, place: dental-affricate, class: sarala, savarna_of: జ, note: dantya జ; identity with జ for prāsa (PRASA-SAMA-09)}
+  # The five vargas in the canonical order [unvoiced, unvoiced-aspirate, voiced, voiced-aspirate, nasal].
+  # Rules refer to positions: 1st=paruṣa, 2nd/4th=aspirates (svavargaja), 3rd=voiced stop, 5th=class nasal.
+  vargas:
+    - {name: ka, members: [క, ఖ, గ, ఘ, ఙ]}
+    - {name: ca, members: [చ, ఛ, జ, ఝ, ఞ]}
+    - {name: ṭa, members: [ట, ఠ, డ, ఢ, ణ]}
+    - {name: ta, members: [త, థ, ద, ధ, న]}
+    - {name: pa, members: [ప, ఫ, బ, భ, మ]}
+  classes:
+    parusha: [క, చ, ట, త, ప]          # పరుషములు (unvoiced stops)
+    sarala: [గ, జ, డ, ద, బ]           # సరళములు (voiced stops)
+    nasal: [ఙ, ఞ, ణ, న, మ]            # అనునాసికములు
+    sibilant: [శ, ష, స]               # ఊష్మములు (హ excluded)
+    liquid_lateral: [ర, ఱ, ల, ళ]
+    aspirated: [ఖ, ఘ, ఛ, ఝ, ఠ, ఢ, థ, ధ, ఫ, భ]
+  # ద్రుత సంధి (5.23.2): Xన్ + paruṣa -> Xం + the class VOICED stop (పుత్రున్ కని -> పుత్రుంగని).
+  druta_sandhi_map: {క: గ, చ: జ, ట: డ, త: ద, ప: బ}
+  # గసడదవాదేశము (5.23.4): word-initial paruṣa after a Telugu word mutates to గ/స/డ/ద/వ; the
+  # mutated consonant IS the prāsa consonant (the text is evaluated as written).
+  gasadadava_map: {క: గ, చ: స, ట: డ, త: ద, ప: వ}
+
+# -----------------------------------------------------------------------------
+#  aksharanusarika: how the engine uses the project's akshara splitter
+# -----------------------------------------------------------------------------
+aksharanusarika_extensions:
+  description: >
+    prasa_engine imports aksharanusarika_v*.py from the project root and uses
+    split_aksharalu() (akshara tokens; ' ', '\n', 'ఁ' and ZWSP are emitted as
+    their own ignorable tokens; a word-final dead consonant is merged into the
+    preceding akshara: 'నిన్ వదలి' -> ['నిన్', ' ', 'వ', 'ద', 'లి']) and
+    akshara_ganavibhajana() (U/I marks per token, with conjunct
+    retro-lengthening of the previous syllable).  Two tables are EXTENDED at
+    load time; nothing is altered.
+  extensions:
+    - {table: telugu_consonants, add: [ౘ, ౙ], why: dental ca/ja must form aksharas with their matras}
+    - {table: dependent_to_independent, add: {"ౢ": ఌ, "ౣ": ౡ}, why: the vocalic-ḷ signs must attach to their consonant (కౢప్తి)}
+    - {table: long_vowels, add: ["ౣ"], why: long vocalic ḷ is guru}
+  input_normalisation:
+    - NFC normalisation (recomposes ె+ౖ into ై)
+    - ౝ (nakaara pollu) -> న్
+    - dropped: avagraha ఽ, length marks ౕ/ౖ, Telugu digits, fraction signs, ZWJ/ZWNJ
+    - every non-Telugu run (punctuation, quotes, Latin) becomes a word boundary (space)
+
+# -----------------------------------------------------------------------------
+#  AKSHARA MODEL — the features every rule refers to
+# -----------------------------------------------------------------------------
+akshara_model:
+  description: >
+    For each pāda the engine takes the first two non-ignorable akshara tokens:
+    the PRE-PRĀSA akshara (prāsa-pūrvākṣaramu, 1st) and the PRĀSA akshara
+    (prāsākṣaramu, 2nd).  The prāsa akshara is decomposed into an ONSET
+    (ordered consonant sequence), a VOWEL, and TRAILING signs.  Signs that sit
+    BEFORE the prāsa akshara are read off the pre-prāsa akshara and the tokens
+    between the two.
+  line_features:                       # names match prasa_engine.LineFeatures
+    purva: 1st akshara token (as split)
+    prasa: 2nd akshara token (as split)
+    onset: effective consonant sequence of the prāsa akshara AFTER saṁśleṣa (PRASA-POS-06) and dantya normalisation (PRASA-POS-08); e.g. 'క్రి' -> [క, ర], 'క్క' -> [క, క], 'నిన్'+'వ' -> [న, వ]
+    onset_written: the same before normalisation
+    vowel: independent-vowel form of the prāsa akshara's vowel; 'అ' when inherent; ఋ/ౠ/ఌ/ౡ are vowels here
+    bare_vowel: the prāsa akshara is an independent vowel with no consonant (e.g. ఋ in 'బా ఋభుపతి')
+    trailing_anusvara: ం after the prāsa akshara (bindu-sahita) — neutral
+    trailing_visarga: ః after the prāsa akshara (visarga-sahita) — neutral
+    trailing_pollu: dead consonant(s) ending the prāsa akshara ('తిన్' -> [న], 'వుల్' -> [ల]) — neutral
+    purva_purnabindu: the pre-prāsa akshara ends in ం  (bindu-pūrvaka)
+    purva_visarga: the pre-prāsa akshara ends in ః     (visarga-pūrvaka)
+    ardhabindu_before: an ఁ token sits between the two aksharas
+    fused_from_purva: dead consonant(s) moved from the pre-prāsa akshara into the onset (saṁśleṣa)
+    space_between: a word boundary sits between the two aksharas
+    purva_weight_positional: U/I of the pre-prāsa akshara as scanned in the line (conjunct retro-lengthening applied)
+    purva_weight_intrinsic: U/I of the pre-prāsa akshara on its own (long vowel / ం / ః / dead consonant only)
+    prasa_weight: U/I of the prāsa akshara (informational — PRASA-SAMA-10)
+    repha_cluster: onset is [C, ర]
+    light_cluster_hint: "lexicon | word_initial_kraravadi | null — heuristic for PRASA-PURVAKSHARA-04"
+    laghu_ya_hint: prāsa akshara is a word-initial య after a vowel-final word (probable yaḍāgama, PRASA-SAMA-11)
+    reading: "as_written | druta_sandhi (PRASA-POS-07)"
+  pada_boundary_note: >
+    Classical pādas do not respect word boundaries; a word may straddle two
+    pādas.  The treatise fragments quoted in `attested_examples` are therefore
+    given as PĀDA-INITIAL slices (the prāsa akshara must be the 2nd akshara of
+    the pāda).  Fragments that were sliced are marked input_kind: pada_initial_slice.
+
+# -----------------------------------------------------------------------------
+#  METER ELIGIBILITY (PRASA-POS-02) — cross-reference to meter_rules.yaml
+# -----------------------------------------------------------------------------
+meter_eligibility:
+  description: >
+    A meter's lakṣaṇam states only WHETHER prāsa is present.  Once present,
+    the complete standard body of prāsa rules applies unchanged (no per-meter
+    variants).  The engine reads the boolean `prasa` field of
+    meter_engine/meter_rules.yaml when a meter name is supplied.
+  required_examples:
+    vrittas: [utpalamala, champakamala, sardulavikriditamu, mattebhavikriditamu, sragdhara, mahasragdhara, mattakokilamu, totakamu, bhujangaprayatamu, pamcacamaramu, vasamtatilakamu, indravajra, upendravajra, salini, rathoddhata, sragvini, vidyunmala, lalita, taralamu, malini, manini, kavirajavirajitamu, vanamayuramu, mangalamahasri, layagrahi, layavibhati]
+    jatis: [kandamu, utsahamu, taruvoja, dvipada, madhyakkara]
+    ragadas: [madhuragati_ragada, turagagati_ragada, hayapracara_ragada]
+  excluded_examples:
+    upajatis: [seesamu, ataveladi, tetagiti, manjari_dvipada]
+    other: [dandakamu]
+  pairing:
+    default: all_lines           # every pair of pādas in the stanza is compared
+    couplet_meters: [dvipada, ragada, madhuragati_ragada, turagagati_ragada, hayapracara_ragada]
+    couplet_note: for couplet meters the stanza handed to the engine is the couplet (2 pādas), so all_lines == the couplet
+  purvakshara_rule_exempt_meter_classes: [asama_vritta, upajati_vritta, vishama_vritta]
+  purvakshara_rule_note: >
+    Sama vṛttas satisfy the pre-prāsa weight rule automatically (fixed gana
+    pattern); jātis (Kandamu, …) must be checked; asama vṛttas are exempt
+    (recognised apavādamu).  Pass meter_class to the engine to trigger the exemption.
+
+# -----------------------------------------------------------------------------
+#  LIGHT REPHA LEXICON — heuristic support for PRASA-PURVAKSHARA-04
+# -----------------------------------------------------------------------------
+light_repha_lexicon:
+  description: >
+    Native Telugu words whose repha cluster is pronounced light and does NOT
+    lengthen the preceding syllable (5.17 rule 2 krāravaḍi; 5.18 laghudvitva).
+    Matched by word-prefix against the word that contains the prāsa akshara.
+    Extend freely; the list is heuristic and every use is flagged in the trail.
+  stems: [అద్రుచు, అద్రిచి, ఎద్రుచు, ఎద్రిచి, పద్రుచు, పద్రిచి, చిద్రుప, విద్రుప, జిద్రుప, యద్రువ, క్రందు, క్రాలు, క్రొత్త, క్రొక్కారు, క్రార, క్రొమ్ముడి, క్రువ్వు, క్రొవ్వు, క్రిక్కిరి, క్రుంగు, క్రమ్ము]
+
+# =============================================================================
+#  RULES
+# =============================================================================
+#  Field guide
+#    id / names {en, te, iast} / aliases / category / status / source.sections
+#    statement      — plain-language rule (as in the notes)
+#    condition      — formal predicate over the akshara_model features
+#    on_pass        — classification recorded in the trail / label
+#    on_fail        — the defect named in the trail (and how the message reads)
+#    examples       — pointers into attested_examples
+#    implemented_by — prasa_engine function that realises the rule
+#    interpretation — any operational choice the notes left open
+# =============================================================================
+rules:
+
+  # ---------------------------------------------------------------------------
+  #  A. POSITION, SCOPE, NORMALISATION
+  # ---------------------------------------------------------------------------
+  - id: PRASA-POS-01
+    names: {en: Prāsa position (2nd akshara of every pāda), te: ప్రాసస్థానము, iast: prāsa-sthānamu}
+    category: position
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Definition, Universal Mechanics]}
+    statement: >
+      Prāsa is the rhyme of the SECOND akshara (prāsākṣaramu) of each pāda of a
+      stanza; the FIRST akshara is the pre-prāsa akshara (prāsa-pūrvākṣaramu).
+      Only the consonant(s) of the prāsa akshara are compared.
+    condition: {type: extraction, purva: "akshara[1]", prasa: "akshara[2]", requires: at least 2 aksharas per pāda}
+    on_fail: {error: a pāda with fewer than two aksharas cannot be evaluated}
+    implemented_by: prasa_engine.extract_line
+
+  - id: PRASA-POS-02
+    names: {en: Meter eligibility, te: ఛందో అర్హత}
+    category: position
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Meter Eligibility]}
+    statement: >
+      Prāsa is required in vṛttas, in the prāsa-bearing jātis (Kandamu,
+      Utsāhamu, Dvipada, …) and in special meters; it is absent in the
+      upajātis (Sīsamu, Tēṭagīti, Āṭaveladi, Mañjari Dvipada) and in Daṇḍakamu.
+      The lakṣaṇam of a meter says only whether prāsa is present.
+    condition: {type: meter_lookup, table: meter_engine/meter_rules.yaml, field: prasa}
+    on_pass: {applicable: true}
+    on_fail: {applicable: false, note: the stanza is still analysed but the verdict is marked not applicable}
+    implemented_by: prasa_engine.evaluate
+
+  - id: PRASA-POS-03
+    names: {en: Uniformity across meters, te: ఛందోనిరపేక్షత}
+    category: position
+    status: informational
+    source: {file: Notes/Prasa.md, sections: [Universal Mechanics]}
+    statement: >
+      Prāsa rules operate identically in every meter that enforces prāsa: a
+      permissible pair (స/శ) is permissible everywhere, an impermissible pair
+      (డ/ఢ) is impermissible everywhere; no meter has custom prāsa variants.
+    condition: {type: none}
+
+  - id: PRASA-POS-04
+    names: {en: Stanza scope — every pair of pādas, te: పాదజోడీల పరిశీలన}
+    category: position
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Consonant identity, 5.5, 5.6]}
+    statement: >
+      The treatises phrase every requirement as "if line 1 has X, lines 2–4
+      must have X".  Because prāsamaitri is not always transitive (స~శ and
+      స~ష do not imply శ~ష) the engine compares EVERY pair of pādas; the
+      stanza matches only when every pair matches.
+    condition: {type: all_pairs, requires: at least 2 pādas}
+    implemented_by: prasa_engine.evaluate
+    interpretation: all-pairs rather than line-1-vs-rest; the trail reports each pair separately.
+
+  - id: PRASA-POS-05
+    names: {en: Sandhi surface form is what is judged, te: సంధిగత రూపమే ప్రమాణము}
+    category: position
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Sandhigatamu, 5.23]}
+    statement: >
+      Prāsa is determined solely by the final phonetic shape after sandhi;
+      pre-sandhi forms are irrelevant (unlike yati).  Syllables inherent in a
+      word (śabda-siddha) and syllables produced by sandhi (sandhigata) match
+      freely (see PRASA-SAMA-12).
+    condition: {type: normalisation, action: evaluate the text exactly as written; never reconstruct pre-sandhi forms}
+
+  - id: PRASA-POS-06
+    names: {en: Saṁśleṣa — a dead consonant on the pre-prāsa akshara fuses into the prāsa onset, te: సంశ్లేషము (ద్రుతము / పొల్లు ముందున్నప్పుడు)}
+    category: position
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Drutamu (preceding), Prasākṣaramu – Pollu La-kāramu (preceding)]}
+    statement: >
+      A drutam (న్) or a pollu ల్ (or any dead consonant) that immediately
+      precedes the prāsa akshara cannot be split off to claim a simple
+      consonant rhyme: it fuses with the following consonant and the prāsa
+      akshara becomes that conjunct (నిన్ వదలి -> న్వ; పూవుల్ విరియ -> ల్వి).
+      The conjunct must then be matched in every line (PRASA-SAMYUKTA-01/02).
+    condition: {type: normalisation, when: purva.trailing_pollu non-empty, action: onset = purva.trailing_pollu + prasa.onset}
+    on_pass: {trail: info entry naming the fused consonant and the effective onset}
+    examples: [EX-DRUTAM-FUSION-FAIL, EX-DRUTAM-CONJUNCT-VALID, EX-POLLU-LA-FUSION-FAIL, EX-POLLU-LA-CONJUNCT-VALID]
+    implemented_by: prasa_engine.extract_line
+
+  - id: PRASA-POS-07
+    names: {en: Druta-sandhi alternative reading, te: ద్రుతసంధి (సరళాదేశ) పఠనము}
+    category: position
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Drutamu (Sandhi Transformation to Bindu), 5.23.2]}
+    statement: >
+      When a drutam precedes a paruṣa the alternative sandhi outcome softens
+      the stop to its sarala and turns the drutam into a bindu (పుత్రున్ కని ->
+      పుత్రుంగని); the prāsa akshara is then a bindu-pūrvaka గ and must satisfy
+      PRASA-PURVAKA-01.  The engine tries this reading only when the written
+      (saṁśleṣa) reading fails, and says so in the trail.
+    condition: {type: alternative_reading, when: "purva.trailing_pollu == [న] and onset == [న, C] with C in paruṣa ∪ sarala", action: "purva_purnabindu=true; onset=[druta_sandhi_map[C]]"}
+    implemented_by: prasa_engine.druta_sandhi_reading
+    interpretation: the written reading is preferred; the alternative is used only to rescue an otherwise failing pair, flagged reading=druta_sandhi.
+
+  - id: PRASA-POS-08
+    names: {en: Dantya ౘ/ౙ normalisation, te: దంత్య చ/జ సమీకరణము}
+    category: position
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prāsa – Dantya Ca and Ja (5.1.12)]}
+    statement: The dental letters ౘ and ౙ are read as చ and జ before comparison (see PRASA-SAMA-09).
+    condition: {type: normalisation, map: {ౘ: చ, ౙ: జ}}
+    implemented_by: prasa_engine.parse_akshara
+
+  # ---------------------------------------------------------------------------
+  #  B. SAMAPRĀSA CORE AND THE NEUTRAL FEATURES
+  # ---------------------------------------------------------------------------
+  - id: PRASA-SAMA-01
+    names: {en: Samaprāsa — identical consonant (tulyākṣara niyamamu), te: సమప్రాస (తుల్యాక్షర నియమము), iast: samaprāsa}
+    aliases: [హల్లు నియమము, consonant identity]
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Consonant identity, 5.3, 5.4]}
+    statement: >
+      The base consonant (hallu) occupying the prāsa position must be
+      identical in every pāda.  When the prāsa akshara is a conjunct the whole
+      ordered consonant sequence must be identical (PRASA-SAMYUKTA-02).
+      Aspirates are distinct from their unaspirated counterparts (ఖ≠క …),
+      the three sibilants are three separate series, ర≠ఱ and ల≠ళ under this
+      rule (relaxations are separate rules with their own status).
+    condition: {type: onset_identity, compare: onset sequences of the two lines}
+    on_pass: {classification: PRASA-SAMA-01, label_te: "'X'కార ప్రాస", label_en: X-kāra prāsa}
+    on_fail: {defect: the failing pair is named by the maitri_table (a VAIRA rule) or PRASA-VAIRA-GENERIC}
+    examples: [EX-SAMA-KA, EX-SAMA-KHA, EX-SAMA-THA, EX-SAMA-DA, EX-SAMA-NNA, EX-SAMA-TA-VOWELS, EX-SAMA-LA, EX-SAMA-SSA, EX-SAMA-RRA]
+    implemented_by: prasa_engine.compare_onsets
+
+  - id: PRASA-SAMA-02
+    names: {en: Vowel neutrality, te: అచ్చు నిరపేక్షత}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Vowel neutrality, Examples of Identical Vowel Occurrences]}
+    statement: >
+      No rule governs the vowels attached to the prāsa consonants; they may be
+      identical or entirely different (తా/తో/తి/త is as valid as త/త/త/త).
+    condition: {type: feature_neutral, feature: vowel}
+    on_pass: {trail: info entry when the vowels differ}
+    examples: [EX-SAMA-VA-VOWELS, EX-SAMA-TA-MIXED-VOWELS]
+
+  - id: PRASA-SAMA-03
+    names: {en: ఋ-tva sahita — vaṭruvasuḍi is a vowel, te: ఋత్వ సహిత ప్రాసాక్షరము}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – R̥tva Sahitamu, 5.6.3]}
+    statement: >
+      ృ/ౄ are vowels; a prāsa consonant with vaṭruvasuḍi (కృ) needs no ృ in the
+      other lines and pairs with the same consonant under any vowel (క/కి/కృ).
+      కృ = క్+ఋ is NOT a conjunct; క్రు = క్+ర్+ఉ IS (see PRASA-REPHAYUTA-KRARAKOMMU).
+      Long ౄ is theoretically valid but practically unattested in prāsa.
+    condition: {type: feature_neutral, feature: vowel, values: [ఋ, ౠ]}
+    examples: [EX-SAMA-RU-VOWEL]
+
+  - id: PRASA-SAMA-04
+    names: {en: ఌ-kāra sahita, te: ఌకార సహిత ప్రాసాక్షరము}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – ఌ-kāra Sahitamu]}
+    statement: >
+      ఌ/ౡ are vowels; కౢ (as in కౢప్తి) validly rhymes with క/కి.  Only one
+      classical instance is recorded (Rāghava Pāṇḍavīyamu 1-3: క, కౢ, క, కి).
+    condition: {type: feature_neutral, feature: vowel, values: [ఌ, ౡ]}
+    examples: [EX-LU-KARA]
+
+  - id: PRASA-SAMA-05
+    names: {en: Bindu-sahita — a trailing anusvāra is neutral, te: బిందు సహిత ప్రాసాక్షరము}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Bindu Sahitamu]}
+    statement: >
+      An anusvāra FOLLOWING the prāsa akshara (కం, కిం) is unconstrained: కం, క,
+      కి, కు rhyme through the shared క్.  (Contrast the anusvāra BEFORE the
+      prāsa akshara, PRASA-PURVAKA-01, which is binding.)
+    condition: {type: feature_neutral, feature: trailing_anusvara}
+    examples: [EX-SAMA-NA, EX-SAMA-TA-MIXED-VOWELS, EX-PURNABINDU-HA-VISARGA]
+
+  - id: PRASA-SAMA-06
+    names: {en: Visarga-sahita — a trailing visarga is neutral, te: విసర్గ సహిత ప్రాసాక్షరము}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Visarga (following)]}
+    statement: A visarga following the prāsa akshara (యః) is unconstrained; యు/యః/యై/యు is a valid య-kāra prāsa (Bhāratam Ādi 3-11).
+    condition: {type: feature_neutral, feature: trailing_visarga}
+    examples: [EX-VISARGA-SAHITA, EX-PURNABINDU-HA-VISARGA]
+
+  - id: PRASA-SAMA-07
+    names: {en: Drutam following the prāsa akshara is neutral, te: ద్రుత సహిత ప్రాసాక్షరము}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Drutamu (following)]}
+    statement: >
+      A drutam న్ immediately after the prāsa akshara (ప్రీతిన్ వైరి: prāsa తిన్)
+      makes the akshara guru but is ignored for the rhyme; the prāsa syllable is తి.
+    condition: {type: feature_neutral, feature: trailing_pollu, values: [న]}
+    examples: [EX-DRUTAM-TRAILING-NEUTRAL]
+
+  - id: PRASA-SAMA-08
+    names: {en: Pollu ల్ (or any dead consonant) following the prāsa akshara is neutral, te: పొల్లు లకార సహిత ప్రాసాక్షరము}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Pollu La-kāramu (following)]}
+    statement: >
+      A pure ల్ right after the prāsa akshara (ఠావుల్ దప్పెను: prāsa వుల్) is
+      ignored for the rhyme (Bhāgavatam 8-90: వొ, వుల్, వే, వే).  The engine
+      generalises to any word-final dead consonant on the prāsa akshara.
+    condition: {type: feature_neutral, feature: trailing_pollu}
+    examples: [EX-SAMA-VA-POLLU-LA]
+    interpretation: generalised from ల్ to every dead consonant that ends the prāsa akshara.
+
+  - id: PRASA-SAMA-09
+    names: {en: Dantya and tālavya చ/జ are savarṇa, te: దంత్య-తాలవ్య చజ సవర్ణత}
+    category: onset
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Prāsa – Dantya Ca and Ja (5.1.12)], grammar: Bāla Vyākaraṇam Samjñā 7}
+    statement: Dental ౘ and palatal చ (likewise ౙ and జ) are homogeneous; their pairing is a pure identity rhyme (samaprāsa).
+    condition: {type: identity_after_normalisation, map: {ౘ: చ, ౙ: జ}}
+    on_pass: {classification: PRASA-SAMA-01, trail: info entry naming the dental letter}
+    examples: [EX-DANTYA-CA]
+
+  - id: PRASA-SAMA-10
+    names: {en: Weight of the prāsa akshara itself is free, te: ప్రాసాక్షర గురులఘు స్వేచ్ఛ}
+    category: onset
+    status: informational
+    source: {file: Notes/Prasa.md, sections: [Sūkṣmāṁśamulu 5.2.2 (Weight Rule Applies Solely to Pre-Prasa Syllables)]}
+    statement: >
+      The guru/laghu uniformity mandate binds the 1st akshara only; the prāsa
+      aksharas may mix heavy and light across lines (వు/వా/విం/వు) provided the
+      line's gana pattern is intact.
+    condition: {type: feature_neutral, feature: prasa_weight}
+    examples: [EX-PRASA-WEIGHT-FREE]
+
+  - id: PRASA-SAMA-11
+    names: {en: Laghu-yakāra prāsa — augment య and root య rhyme freely, te: లఘు యకార ప్రాసము}
+    category: onset
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: ["5.9"], appakavi_list: 15}
+    statement: >
+      A య inserted by sandhi (yaḍāgama, 'laghu') and an inherent root య
+      ('alaghu') rhyme freely (ఈ యున్న / బోయి / త్యాయత / మా యిన్ని).  The engine
+      makes no distinction; it only flags a probable yaḍāgama (word-initial య
+      after a vowel-final word) as information.
+    condition: {type: onset_identity, note: no separate check; heuristic hint only}
+    examples: [EX-LAGHU-YA, EX-LAGHU-YA-2]
+
+  - id: PRASA-SAMA-12
+    names: {en: Sandhigata prāsa — sandhi-derived and inherent consonants match freely, te: సంధిగత ప్రాసము}
+    category: onset
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Sandhigatamu, "5.23", "5.23.1", "5.23.4"], appakavi_list: 17}
+    statement: >
+      A prāsa akshara created by vowel sandhi (తాను+ఊరక -> తానూరక, నూ) or by
+      consonant sandhi, and the gasaḍadavādēśa mutations (వాఁడు+కొట్టె ->
+      వాఁడుగొట్టె), are judged on the RESULTING consonant; they rhyme with
+      inherent (śabda-siddha) consonants without restriction.
+    condition: {type: onset_identity, note: consequence of PRASA-POS-05 — nothing extra to test}
+    examples: [EX-SANDHIGATA]
+
+  # ---------------------------------------------------------------------------
+  #  C. CONJUNCTS (SAṀYUKTĀKṢARA)
+  # ---------------------------------------------------------------------------
+  - id: PRASA-SAMYUKTA-01
+    names: {en: Conjunct presence must agree (saṁyuktākṣara prāsamu), te: సంయుక్తాక్షర ప్రాసము, iast: saṁyuktākṣara prāsamu}
+    category: conjunct
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Saṁyuktamu, "5.6"], appakavi_list: 4}
+    statement: >
+      If the prāsa akshara of one line is a conjunct, the prāsa aksharas of
+      all other lines must be conjuncts too; if it is simple, no other line
+      may have a conjunct.
+    condition: {type: pairwise_equal, feature: len(onset) > 1}
+    on_pass: {classification: PRASA-SAMYUKTA-01 (when the onset has 2+ consonants), label_te: "'X్Y' సంయుక్తాక్షర ప్రాస"}
+    on_fail: {defect: conjunct vs simple consonant; message names the fused consonant when the cluster arose by saṁśleṣa}
+    examples: [EX-SAMYUKTA-SRA, EX-SAMYUKTA-PRESENCE-FAIL]
+    implemented_by: prasa_engine.compare_onsets
+
+  - id: PRASA-SAMYUKTA-02
+    names: {en: Constituent consonants and their order must be identical (kramamu), te: సంయుక్తాక్షర క్రమ నియమము}
+    category: conjunct
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Saṁyuktamu (Strict order and identity), "5.6.4"]}
+    statement: >
+      The consonants of the cluster must appear in the same order in every
+      line: తర్క (ర్క = ర+క) may only rhyme with ర్క; చక్రి (క్రి = క+ర) only
+      with క్ర-clusters.  Reversal (ర్క vs క్ర) violates the rhyme.
+    condition: {type: onset_identity, compare: ordered sequences}
+    on_fail: {defect: cluster mismatch / reversed order}
+    examples: [EX-SAMYUKTA-ORDER-FAIL]
+
+  - id: PRASA-SAMYUKTA-03
+    names: {en: Dvitvākṣara prāsa — a geminate must be matched by the same geminate, te: ద్విత్వాక్షర ప్రాసము}
+    category: conjunct
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: ["5.6.2"]}
+    statement: "If the prāsa akshara is a doubled consonant (క్క), every line must carry the geminate of that identical consonant (Sumatī: క్క, క్కి, క్కి, క్కు).  A cluster whose two members are maitri-related (ళ్ల beside ల్ల under ల-ళ abhēda) counts as a geminate; the element-wise maitri step then prices the relaxation."
+    condition: {type: pairwise_equal, feature: "onset is [C, C]"}
+    on_pass: {classification: PRASA-SAMYUKTA-03, label_te: "'క్క' ద్విత్వాక్షర ప్రాస"}
+    on_fail: {defect: geminate vs non-geminate cluster}
+    examples: [EX-DVITVA-KKA, EX-DVITVA-LLA]
+
+  - id: PRASA-SAMYUKTA-04
+    names: {en: Three-consonant clusters keep all three in order, te: త్రిహల్ సంయుక్త ప్రాస}
+    category: conjunct
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: ["5.6.5"]}
+    statement: Clusters of three consonants must preserve all three consonants in identical order across all lines.
+    condition: {type: onset_identity, note: same mechanism as SAMYUKTA-02; recorded as a classification for 3+ clusters}
+    examples: [EX-THREE-CONSONANT, EX-ADHIKA-DEFECT]
+
+  - id: PRASA-SAMYUKTA-05
+    names: {en: ఋ inside a conjunct is a vowel, te: సంయుక్తాక్షర ఋత్వ సహితము}
+    category: conjunct
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: ["5.6.3"]}
+    statement: If a conjunct carries ృ (క్తృ), the other lines need not; any vowel may follow the same cluster.
+    condition: {type: feature_neutral, feature: vowel, values: [ఋ, ౠ]}
+
+  - id: PRASA-SAMYUKTA-06
+    names: {en: Pūrṇabindu-pūrvaka saṁyuktākṣara prāsa, te: పూర్ణబిందుపూర్వక సంయుక్తాక్షర ప్రాస}
+    category: conjunct
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: ["5.6.7"]}
+    statement: If the conjunct is preceded by a full bindu, every other line must have the identical conjunct preceded by a full bindu (composition of PRASA-PURVAKA-01 and PRASA-SAMYUKTA-01/02).
+    condition: {type: conjunction, of: [PRASA-PURVAKA-01, PRASA-SAMYUKTA-02]}
+    examples: [EX-REPHAYUTA-KRARAKOMMU-IDENTITY]
+
+  - id: PRASA-SAMYUKTA-07
+    names: {en: Drutam-fused conjunct prāsa (న్X), te: ద్రుతసంశ్లేష సంయుక్తాక్షర ప్రాస}
+    category: conjunct
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Drutamu (Valid Conjunct Example)]}
+    statement: When every line shares the conjunct formed by a preceding drutam (అన్వయ / మన్వంతర / ధన్వంతరి / నిన్వదలి) the stanza carries a valid 'న్వ'కార saṁyuktākṣara prāsa.
+    condition: {type: onset_identity, requires: fused_from_purva contains న in some line}
+    examples: [EX-DRUTAM-CONJUNCT-VALID]
+
+  - id: PRASA-SAMYUKTA-08
+    names: {en: Pollu-ల్-fused conjunct prāsa (ల్X), te: లకారసంశ్లేష సంయుక్తాక్షర ప్రాస}
+    category: conjunct
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Pollu La-kāramu (Valid Conjunct Example)]}
+    statement: చెల్వ / కల్వ / కొల్వ / (పూ)వుల్విరియ share the cluster ల్వ formed by the pollu ల్ — a valid 'ల్వ'కార saṁyuktākṣara prāsa.
+    condition: {type: onset_identity, requires: fused_from_purva contains ల in some line}
+    examples: [EX-POLLU-LA-CONJUNCT-VALID]
+
+  # ---------------------------------------------------------------------------
+  #  D. SIGNS BEFORE THE PRĀSA AKSHARA (PŪRVAKA)
+  # ---------------------------------------------------------------------------
+  - id: PRASA-PURVAKA-01
+    names: {en: Pūrṇabindu prāsa — a full bindu before the prāsa akshara binds every line, te: పూర్ణబిందు ప్రాసము, iast: pūrṇabindu prāsamu}
+    aliases: [బిందుపూర్వక ప్రాస, niṇḍusunna prāsa]
+    category: purvaka
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Bindupūrvakamu, "5.5"], appakavi_list: 2}
+    statement: >
+      If the prāsa akshara of line 1 is preceded by ం (నిండు…: prāsa డు after ం),
+      the prāsa aksharas of every other line must also be preceded by ం; if
+      line 1 has none, no other line may have one.  When present in every
+      line the stanza is a Pūrṇabindu prāsamu (a samaprāsa).
+    condition: {type: pairwise_equal, feature: purva_purnabindu}
+    on_pass: {classification: PRASA-PURVAKA-01 (when true in both lines), label_prefix_te: పూర్ణబిందుపూర్వక}
+    on_fail: {defect: bindu asymmetry; the message names the line with ం and the line without}
+    exceptions: [PRASA-MAITRI-ANUNASIKA, PRASA-MAITRI-MBA-MMA, PRASA-MAITRI-BINDU-SAMSLESHA]
+    examples: [EX-PURNABINDU-DA, EX-PURNABINDU-TTA, EX-PURNABINDU-APPAKAVI, EX-PURNABINDU-FAIL]
+    implemented_by: prasa_engine.compare_pair
+
+  - id: PRASA-PURVAKA-02
+    names: {en: Visarga prāsa — a visarga before the prāsa akshara binds every line, te: విసర్గ ప్రాసము, iast: visarga prāsamu}
+    aliases: [విసర్గపూర్వక ప్రాస]
+    category: purvaka
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Visarga (preceding), "5.5.3"]}
+    statement: >
+      If line 1's prāsa consonant is preceded by ః (దుఃఖ…: prāsa ఖ after ః),
+      every line must have the same consonant preceded by ః; if line 1 has no
+      visarga before the prāsa, no line may have one.
+    condition: {type: pairwise_equal, feature: purva_visarga}
+    on_pass: {classification: PRASA-PURVAKA-02, label_prefix_te: విసర్గపూర్వక}
+    on_fail: {defect: visarga asymmetry}
+    examples: [EX-VISARGA-PURVAKA, EX-VISARGA-PURVAKA-FAIL]
+
+  - id: PRASA-PURVAKA-03
+    names: {en: Ardhabindu prāsa — uniform half-bindu before the prāsa akshara, te: అర్ధబిందు ప్రాసము, iast: ardhabindu prāsamu}
+    category: purvaka
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Bindupūrvakamu (Ardhabindu Option A), "5.7"], appakavi_list: 1}
+    statement: >
+      When every line's prāsa akshara is preceded by ఁ (వీఁక / దాఁకిన / రాఁకలి /
+      వ్రేఁకని) the stanza is an Ardhabindu samaprāsa.  Unlike the full bindu,
+      keeping the ardhabindu uniform is optional, not compulsory.
+    condition: {type: pairwise_equal, feature: ardhabindu_before, when_true: classification}
+    on_pass: {classification: PRASA-PURVAKA-03, label_prefix_te: అర్ధబిందు}
+    examples: [EX-ARDHABINDU-UNIFORM, EX-ARDHABINDU-UNIFORM-2]
+
+  - id: PRASA-PURVAKA-04A
+    names: {en: Khaṇḍākhaṇḍa prāsa within Ananta's restriction (ప/ట), te: ఖండాఖండ ప్రాసము (అనంతుని నియమము)}
+    category: purvaka
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Bindupūrvakamu (Option B), "5.8"], appakavi_list: 3}
+    statement: >
+      A prāsa akshara preceded by ఁ may rhyme with one lacking ఁ.  Ananta limited
+      the licence to the consonants ప and ట (…వటమాత్రంబఁట / లఁట ముక్తి).
+    condition: {type: mixed_feature, feature: ardhabindu_before, consonants: [ప, ట], test: "onset[0] of the ఁ-bearing line in consonants"}
+    on_pass: {classification: PRASA-PURVAKA-04A, label_prefix_te: ఖండాఖండ}
+    examples: [EX-KHANDAKHANDA-ANANTA]
+    implemented_by: prasa_engine._khandakhanda_variant
+
+  - id: PRASA-PURVAKA-04B
+    names: {en: Khaṇḍākhaṇḍa prāsa within Appakavi's restriction (paruṣa after a long vowel), te: ఖండాఖండ ప్రాసము (అప్పకవి నియమము)}
+    category: purvaka
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: ["5.8"]}
+    statement: Appakavi limited the mixed-ardhabindu licence to unvoiced consonants (paruṣas క చ ట త ప) following long vowels (బాఁకిడిన against ఆ కొలువు / లాకృతి / దాకారిత).
+    condition: {type: mixed_feature, feature: ardhabindu_before, test: "onset[0] in parusha and purva.vowel in long vowels"}
+    on_pass: {classification: PRASA-PURVAKA-04B, label_prefix_te: ఖండాఖండ}
+    examples: [EX-KHANDAKHANDA-APPAKAVI]
+
+  - id: PRASA-PURVAKA-04C
+    names: {en: Khaṇḍākhaṇḍa prāsa in its wide classical form, te: ఖండాఖండ ప్రాసము (కావ్యప్రయోగ విస్తృతి)}
+    category: purvaka
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: ["5.8"]}
+    statement: Classical poetry applies the mixed-ardhabindu licence more widely — after short vowels and with voiced consonants — beyond both authorities' restrictions.
+    condition: {type: mixed_feature, feature: ardhabindu_before, test: neither 04A nor 04B applies}
+    on_pass: {classification: PRASA-PURVAKA-04C, label_prefix_te: ఖండాఖండ}
+    examples: [EX-KHANDAKHANDA-WIDE]
+
+  # ---------------------------------------------------------------------------
+  #  E. THE PRE-PRĀSA AKSHARA WEIGHT RULE (PRĀSA-PŪRVĀKṢARA NIYAMAMU)
+  # ---------------------------------------------------------------------------
+  - id: PRASA-PURVAKSHARA-01
+    names: {en: Pre-prāsa akshara weight uniformity, te: ప్రాసపూర్వాక్షర నియమము, iast: prāsa-pūrvākṣara niyamamu}
+    category: weight
+    status: mandatory
+    source: {file: Notes/Prasa.md, sections: [Prāsa Pūrvākṣara Niyama Prayōjanamu, Sūkṣmāṁśamulu 5.2.2]}
+    statement: >
+      The 1st akshara of every pāda must have the same metrical weight — all
+      guru or all laghu.  Sama vṛttas satisfy this automatically (Utpalamāla /
+      Śārdūlamu start guru, Campakamāla / Mattēbhamu start laghu); jātis
+      (Kandamu) must satisfy it by gana choice; asama vṛttas are exempt.
+    condition: {type: all_lines_equal, feature: purva_weight_positional, exempt_when: meter_class in purvakshara_rule_exempt_meter_classes}
+    on_pass: {classification: PRASA-PURVAKSHARA-01}
+    on_fail: {defect: mixed guru/laghu pre-prāsa aksharas; message lists every line's weight}
+    examples: [EX-WEIGHT-FAIL, EX-WEIGHT-HRASVA-GURU]
+    implemented_by: prasa_engine._weight_rule
+
+  - id: PRASA-PURVAKSHARA-02
+    names: {en: Metrical weight, not vowel length, te: గురులఘు (హ్రస్వదీర్ఘము కాదు)}
+    category: weight
+    status: canonical
+    source: {file: Notes/Prasa.md, sections: [Sūkṣmāṁśamulu 5.2.2 (Prosodic Weight Over Vowel Length)]}
+    statement: >
+      The rule regulates guru/laghu, not hrasva/dīrgha: a short vowel made
+      heavy by a following conjunct (కు before క్షి) counts as guru beside an
+      inherently long vowel (రా).  కు, రా, ర, నా are uniformly guru.
+    condition: {type: definition, positional weight = intrinsic weight OR retro-lengthening by the following conjunct}
+    on_pass: {trail: info entry listing the short-vowel aksharas that count as guru}
+    examples: [EX-WEIGHT-HRASVA-GURU]
+
+  - id: PRASA-PURVAKSHARA-03
+    names: {en: Kandamu gana corollary, te: కందపద్య గణనియమ ఫలితము}
+    category: weight
+    status: informational
+    source: {file: Notes/Prasa.md, sections: [Prāsa Pūrvākṣara Niyama Prayōjanamu (Deliberate Enforcement in Jati Meters)]}
+    statement: >
+      In Kandamu the initial ganas భ and గగ start guru; జ, స, నల start laghu.
+      If line 1 opens with భ/గగ, lines 2–4 must open with భ/గగ; if it opens
+      with స/నల, they must open with laghu-initial ganas (జ/స/నల in even lines,
+      స/నల in line 3).  The weight rule thus constrains gana selection.
+    condition: {type: none, see: meter_engine/ganas.yaml}
+
+  - id: PRASA-PURVAKSHARA-04
+    names: {en: Light repha clusters — krāravaḍi and laghudvitva, te: క్రారవడి / లఘుద్విత్వ ప్రాసము, iast: rēphayuta (rule 2) & laghudvitva prāsamu}
+    category: weight
+    status: canonical_subtype
+    source: {file: Notes/Prasa.md, sections: ["5.17 (Rule 2)", "5.18"], appakavi_list: 7}
+    statement: >
+      (a) When a native Telugu word begins with a repha cluster (క్రందు, క్రాలు,
+      క్రొత్త) the cluster is pronounced lightly and does not lengthen the
+      preceding word's final syllable; the preceding syllables must therefore be
+      gurus in their own right (ఈ క్రార / లై క్రాలుచుఁ / శ్రీ క్రొమ్ముడి / వాక్రువ్వ).
+      (b) Laghudvitva: medial light repha clusters in select Telugu words
+      (అద్రుచు, ఎద్రుచు, పద్రుచు, చిద్రుప) leave the preceding short vowel laghu;
+      if such a cluster is the prāsa akshara every line must use a light
+      cluster so all preceding syllables stay laghu (ఎద్రిచిన / పద్రిచిన /
+      విద్రుపఁగఁ / జిద్రుపలు).
+    condition: {type: weight_reinterpretation, when: positional weights are not uniform and some line has light_cluster_hint, action: use intrinsic weight for hinted lines and re-test uniformity}
+    on_pass: {classification: PRASA-PURVAKSHARA-04, trail: pass entry marked heuristic}
+    examples: [EX-KRARAVADI-WEIGHT, EX-LAGHUDVITVA]
+    interpretation: >
+      Lightness is lexical; the engine uses light_repha_lexicon (prefix match)
+      and the word-initial position of a repha cluster as heuristics, and only
+      to rescue a stanza whose positional weights are non-uniform.
+
+  # ---------------------------------------------------------------------------
+  #  F. PRĀSAMAITRI — accepted consonant / cluster equivalences
+  # ---------------------------------------------------------------------------
+  - id: PRASA-MAITRI-SA-SHA
+    names: {en: స ~ శ sibilant compatibility, te: స-శ ప్రాసము, iast: sa-śa prāsamu}
+    category: maitri
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: [Prāsamaitri (5.1.13), "5.12"], appakavi_list: 11}
+    statement: >
+      Dental స and palatal శ have prāsamaitri through articulatory closeness and
+      may rhyme across lines, also under a preceding bindu (ంస~ంశ), as geminates
+      (స్స~శ్శ) and inside identical clusters (స్య~శ్య, స్ర~శ్ర).
+    condition: {type: consonant_pair, pair: [స, శ], positions: any position of equal-length onsets}
+    on_pass: {classification: PRASA-MAITRI-SA-SHA}
+    label: {te: స-శ ప్రాసము (ప్రాసమైత్రి), en: sa-śa prāsa (prāsamaitri)}
+    examples: [EX-MAITRI-SA-SHA, EX-MAITRI-SA-SHA-REAL]
+
+  - id: PRASA-MAITRI-THA-DHA
+    names: {en: థ ~ ధ svavargaja prāsa, te: స్వవర్గజ ప్రాసము (థ-ధ), iast: svavargaja prāsamu}
+    category: maitri
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: ["5.10", "5.24.5"], appakavi_list: 13}
+    statement: >
+      Within the dental class the 2nd consonant థ and the 4th ధ may rhyme (both
+      aspirates); the licence also holds under a full bindu (ంథ~ంధ) and in
+      clusters (ర్థ~ర్ధ).  It is NOT extendable to the other vargas (క-ఖ, గ-ఘ,
+      చ-ఛ, ట-ఠ, ప-ఫ, బ-భ remain forbidden — PRASA-VAIRA-SVAVARGAJA-EXT).
+    condition: {type: consonant_pair, pair: [థ, ధ]}
+    on_pass: {classification: PRASA-MAITRI-THA-DHA}
+    label: {te: థ-ధ స్వవర్గజ ప్రాసము, en: tha-dha svavargaja prāsa}
+    examples: [EX-MAITRI-THA-DHA, EX-MAITRI-THA-DHA-BINDU]
+
+  - id: PRASA-MAITRI-NA-NNA
+    names: {en: న ~ ణ ubhaya prāsa (1), te: ఉభయ ప్రాసము (న-ణ), iast: ubhaya prāsamu-1}
+    category: maitri
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: ["5.11"], appakavi_list: 9}
+    statement: >
+      In Sanskrit loans ణ is either inherent (sahaja) or derived from న by sandhi
+      (ādēśa).  Appakavi let ādēśa-ణ rhyme with sahaja-ణ and with dental న;
+      classical usage lets both kinds of ణ rhyme freely with న.  (ణ~ణ is plain
+      samaprāsa; the sahaja/ādēśa distinction is lexical and not tested.)
+    condition: {type: consonant_pair, pair: [న, ణ]}
+    on_pass: {classification: PRASA-MAITRI-NA-NNA}
+    label: {te: న-ణ ఉభయ ప్రాసము, en: na-ṇa ubhaya prāsa}
+    examples: [EX-MAITRI-NA-NNA, EX-MAITRI-NNA-IDENTITY]
+
+  - id: PRASA-MAITRI-LA-LLA
+    names: {en: ల ~ ళ abhēda prāsa, te: అభేద ప్రాసము (ల-ళ), iast: abhēda prāsamu}
+    category: maitri
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: ["5.14"], appakavi_list: 16}
+    statement: Dental ల and retroflex ళ are treated as non-distinct and rhyme freely in Sanskrit loans and native Telugu words (అలఘుఁడు/బలుఁడు/ప్రళయాంతకుఁడు/లలిత; కులశైలంబులు/గలఁగెఁ/దలఁకిరి/కళవళమయ్యెన్).
+    condition: {type: consonant_pair, pair: [ల, ళ]}
+    on_pass: {classification: PRASA-MAITRI-LA-LLA}
+    label: {te: ల-ళ అభేద ప్రాసము, en: la-ḷa abhēda prāsa}
+    examples: [EX-MAITRI-LA-LLA-SANSKRIT, EX-MAITRI-LA-LLA-TELUGU, EX-MAITRI-LA-LLA-REAL]
+
+  - id: PRASA-MAITRI-RU-RA
+    names: {en: ఋ prāsa — word-initial vocalic ఋ rhymes with ర, te: ఋ ప్రాసము, iast: ṛ-kāra prāsamu}
+    category: structural
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: ["5.15"], appakavi_list: 14}
+    statement: >
+      A word-initial ఋ standing in the prāsa slot (బా ఋభుపతి; ఆ ఋషికుమారు) may
+      rhyme with the consonant ర, because initial ఋ has a consonantal r-onset
+      and substitutes for r in sandhi.
+    condition: {type: pair_pattern, side_a: {bare_vowel: true, vowel_in: [ఋ, ౠ]}, side_b: {onset: [ర]}}
+    on_pass: {classification: PRASA-MAITRI-RU-RA}
+    label: {te: ఋ ప్రాసము, en: ṛ prāsa (vowel ఋ ~ ర)}
+    examples: [EX-MAITRI-RU-RA, EX-MAITRI-RU-RA-2]
+
+  - id: PRASA-MAITRI-RU-HALSAMYUTA
+    names: {en: Hal-saṁyuta ఋ prāsa — Cృ rhymes with C్ర, te: హల్సంయుత ఋ ప్రాసము, iast: hal-saṁyuta ṛ-prāsamu}
+    category: structural
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: ["5.15", "5.16"]}
+    statement: >
+      A consonant with vaṭruvasuḍi (తృ) may rhyme with the same consonant in a
+      repha conjunct (త్ర, త్రి): క్షత్రియ / క్షత్రియ / చరిత్రము / మాంధాతృ.  This is
+      the only phonetically grounded form of saṁyuktāsaṁyukta.  It is BLOCKED
+      when the conjunct side carries ు/ూ (krārakommu, PRASA-REPHAYUTA-KRARAKOMMU).
+    condition: {type: pair_pattern, side_a: {onset: [C], vowel_in: [ఋ, ౠ]}, side_b: {onset: [C, ర], vowel_not_in: [ఉ, ఊ]}, bind: {C: any consonant}}
+    on_pass: {classification: PRASA-MAITRI-RU-HALSAMYUTA}
+    label: {te: హల్సంయుత ఋ ప్రాసము (తృ ~ త్ర), en: hal-saṁyuta ṛ prāsa (Cṛ ~ Cra)}
+    examples: [EX-MAITRI-RU-HALSAMYUTA]
+
+  - id: PRASA-MAITRI-VIKALPA
+    names: {en: Vikalpa prāsa — nasal-sandhi doublets, te: వికల్ప ప్రాసము, iast: vikalpa prāsamu}
+    category: structural
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: ["5.19"], appakavi_list: 8}
+    statement: >
+      Sanskrit anunāsika sandhi gives a stop + nasal two valid shapes — class
+      nasal (5th) or class voiced stop (3rd): వాఙ్నియమ / వాగ్నియమ, ద్యన్మోద /
+      ద్యద్మోద.  A poet may write one shape and rhyme it with lines using the
+      other (అగ్ని / భుఙ్నివహము / డగ్నుల / యగ్నియనన్; పద్మా / పద్మావతిఁ / ద్యన్మోదంబునఁ /
+      పద్మము).  Valid only for sandhi between independent words, not for
+      obligatory suffixes such as -maya, -mātra — verify manually.
+    condition: {type: pair_pattern, side_a: {onset: [N5, X]}, side_b: {onset: [S3, X]}, bind: {N5: class nasal of varga V, S3: voiced stop of the same varga V, X: any nasal consonant}}
+    on_pass: {classification: PRASA-MAITRI-VIKALPA, trail: requires_manual_verification=true}
+    label: {te: వికల్ప ప్రాసము, en: vikalpa prāsa (sandhi doublet)}
+    examples: [EX-VIKALPA, EX-VIKALPA-2]
+    transcription_note: the notes print the first example as భుజ్ని; it is read as భుఙ్ని (ఙ = class nasal of the క-varga, as the rule requires and as the doublet భుగ్ని shows).
+
+  - id: PRASA-MAITRI-BINDU-SAMSLESHA
+    names: {en: Bindu ~ saṁśleṣa spelling of one nasal + stop (ంద ~ న్ద), te: బిందు-సంశ్లేష ప్రాసము (ంద ~ న్ద), iast: bindu prāsamu}
+    category: structural
+    status: accepted_relaxation
+    source: {file: Notes/Prasa.md, sections: [Prasākṣaramu – Drutamu (preceding), "5.23.2"], convention: telugu_prosody_engine/yatiprasa.py accepts the pair as బిందు ప్రాసము}
+    statement: >
+      A drutam before a stop has two written outcomes — saṁśleṣa (చున్ + దర్పంబులు
+      -> చున్దర్పంబులు, prāsa న్ద) or bindu (-> చుందర్పంబులు, prāsa ంద; with a
+      paruṣa the stop softens: పుత్రున్ కని -> పుత్రుంగని).  When one line shows
+      the conjunct spelling and another the bindu spelling of the same nasal +
+      stop (or of the drutam-softened stop, న్క ~ ంగ), the pair is accepted as a
+      relaxation and the pūrṇabindu-uniformity rule is waived for it.
+    condition: {type: pair_pattern, side_a: {purva_purnabindu: true, onset: [C]}, side_b: {purva_purnabindu: false, onset: [న, C]}, alt: "side_b onset [న, P] with druta_sandhi_map[P] == C"}
+    on_pass: {classification: PRASA-MAITRI-BINDU-SAMSLESHA}
+    label: {te: బిందు-సంశ్లేష ప్రాసము (ంద ~ న్ద), en: bindu ~ saṁśleṣa prāsa (ంC ~ న్C)}
+    examples: [EX-BINDU-SAMSLESHA-REAL, EX-BINDU-SAMSLESHA-SOFTENED]
+    interpretation: >
+      The treatise says the drutam "either forms a conjunct or becomes a bindu"
+      and must then satisfy the bindu-pūrvaka rules; it does not explicitly
+      sanction mixing the two spellings across lines, so the pair is priced as a
+      relaxation rather than as samaprāsa.  Attested in the corpus
+      (Bhāgavatam 10.1-1152-శా.: ఎందు / బృందా / విందు / చున్ద).
+
+  # ---------------------------------------------------------------------------
+  #  F2. ORTHOGRAPHIC RELAXATIONS — corpus-driven project decisions, not treatise licences
+  # ---------------------------------------------------------------------------
+  - id: PRASA-MAITRI-RA-RRA-ORTHO
+    names: {en: ర ~ ఱ orthographic relaxation (rēpha ~ śakaṭarēpha), te: ర-ఱ లిపిసడలింపు ప్రాసము, iast: rēpha–śakaṭarēpha lipi-saḍalimpu prāsamu}
+    category: maitri
+    status: orthographic_relaxation
+    supersedes: PRASA-VAIRA-RA-RRA
+    source: {file: meter_engine/corpus_runs/bhagavatam_summary.md, sections: [Notes/Prasa.md 5.22 (the treatise rule being relaxed), corpus run 2026-09-13], decision: project decision 2026-09-13}
+    statement: >
+      The treatise forbids ర against ఱ (prāsavairamu, PRASA-VAIRA-RA-RRA).  The
+      printed corpora, however, do not distinguish ర from ఱ reliably — the
+      Bhāgavatam edition in dataset/ pairs them in 70 of 4,552 prāsa-bearing
+      poems — and the śakaṭarēpha had merged with ర in speech by Pōtana's time.
+      By project decision the pair is accepted as an ORTHOGRAPHIC relaxation: a
+      property of the text's spelling, not a treatise licence, carried under its
+      own status so it can be counted separately or switched off.  Under the
+      strict profile the pair still fails, and the trail names both this rule
+      and the superseded treatise rule.
+    condition: {type: consonant_pair, pair: [ర, ఱ]}
+    on_pass: {classification: PRASA-MAITRI-RA-RRA-ORTHO, trail: a note naming the superseded rule PRASA-VAIRA-RA-RRA}
+    label: {te: ర-ఱ లిపిసడలింపు ప్రాసము, en: ra ~ ṟa orthographic relaxation}
+    examples: [EX-VAIRA-RA-RRA, EX-RA-RRA-ORTHO-REAL]
+    how_to_disable: "set this rule's status back to forbidden, or point the maitri_table row for [ర, ఱ] at PRASA-VAIRA-RA-RRA"
+
+  # ---------------------------------------------------------------------------
+  #  G. DEPRECATED (APRAŚASTA) RELAXATIONS — historical profile only
+  # ---------------------------------------------------------------------------
+  - id: PRASA-MAITRI-SA-SSA
+    names: {en: స ~ ష ubhaya prāsa (2) — deprecated, te: ఉభయ ప్రాసము (స-ష), iast: ubhaya prāsamu-2}
+    category: maitri
+    status: deprecated
+    source: {file: Notes/Prasa.md, sections: ["5.13"]}
+    statement: >
+      Appakavi proposed that a substitute ష (ādēśa, from స) could rhyme with
+      natural ష and with స.  ādēśa-ష ~ sahaja-ష is plain samaprāsa; స ~ ష lacks
+      phonetic justification and is not recommended for emulation
+      (వసుధా / రసదళ / విసరాంబుజ / విషమ).
+    condition: {type: consonant_pair, pair: [స, ష]}
+    label: {te: స-ష ఉభయ ప్రాసము (అప్రశస్తము), en: sa-ṣa ubhaya prāsa (deprecated)}
+    examples: [EX-SA-SSA-DEPRECATED, EX-SSA-ADESA-SAHAJA]
+
+  - id: PRASA-MAITRI-LA-DA
+    names: {en: ల/ళ ~ డ — deprecated doublet-based rhyme, te: ల-డ / ళ-డ ప్రాసము (అప్రశస్తము)}
+    category: maitri
+    status: deprecated
+    source: {file: Notes/Prasa.md, sections: ["5.14"]}
+    statement: Appakavi also proposed ల~డ and ళ~డ on the strength of interchangeable word doublets (la-ḍayōr abhēdaḥ); arbitrary pairings without doublets are unattested and deprecated.
+    condition: {type: consonant_pair, pairs: [[ల, డ], [ళ, డ]]}
+    label: {te: ల-డ అభేద ప్రాసము (అప్రశస్తము), en: la/ḷa-ḍa abhēda prāsa (deprecated)}
+    examples: [EX-LA-DA-DEPRECATED]
+
+  - id: PRASA-MAITRI-DA-DHA
+    names: {en: ద ~ ధ — deprecated, te: ద-ధ ప్రాసము (అప్రశస్తము)}
+    category: maitri
+    status: deprecated
+    source: {file: Notes/Prasa.md, sections: ["5.24.1"]}
+    statement: Pairing unaspirated ద with aspirated ధ (ముదము / బుధులు) lacks articulatory balance; apraśasta, unlike థ~ధ which pairs two aspirates.
+    condition: {type: consonant_pair, pair: [ద, ధ]}
+    label: {te: ద-ధ ప్రాసము (అప్రశస్తము), en: da-dha prāsa (deprecated)}
+    examples: [EX-DA-DHA-DEPRECATED]
+
+  - id: PRASA-MAITRI-SAMYUKTASAMYUKTA
+    names: {en: Saṁyuktāsaṁyukta prāsa — C్ర/C్ల rhyming with plain C (deprecated), te: సంయుక్తాసంయుక్త ప్రాసము, iast: saṁyuktāsaṁyukta prāsamu}
+    category: structural
+    status: deprecated
+    source: {file: Notes/Prasa.md, sections: ["5.16"], appakavi_list: 5}
+    statement: >
+      A proposed relaxation letting a consonant conjunct with repha (or ల)
+      rhyme with the bare consonant (క్రొ ~ కా/కో/కీ, Bhāratam Āraṇya 6-103).
+      Ananta admitted it only for the numeral prefix త్రి (Triprāsamu).  Lacks
+      phonetic similarity; deprecated.
+    condition: {type: pair_pattern, side_a: {onset: [C]}, side_b: {onset: [C, R]}, bind: {C: any consonant, R: [ర, ల]}, note: Triprāsamu flagged when C=త and the cluster vowel is ఇ}
+    label: {te: సంయుక్తాసంయుక్త ప్రాసము (అప్రశస్తము), en: saṁyuktāsaṁyukta prāsa (deprecated)}
+    examples: [EX-SAMYUKTA-PRESENCE-FAIL, EX-TRIPRASA]
+
+  - id: PRASA-MAITRI-ANUNASIKA
+    names: {en: Anunāsika prāsa — న్న ~ ంన, మ్మ ~ ంమ (deprecated), te: అనునాసిక ప్రాసము, iast: anunāsika prāsamu}
+    category: structural
+    status: deprecated
+    source: {file: Notes/Prasa.md, sections: ["5.20"], appakavi_list: 10}
+    statement: >
+      Geminate న rhymes with bindu + న (మిన్నేఱు / తన్నాభిని / సాంనిధ్యము / సంనుతి)
+      and geminate మ with bindu + మ (తమ్ములను / మమ్ముల / …మ్మురసంహరు / సంమదమున),
+      reflecting doublets like sannidhi / saṁnidhi.  Non-standard orthography;
+      deprecated.  The pair is DEFINED by a pūrṇabindu asymmetry, so it is the
+      only sanctioned exception to PRASA-PURVAKA-01.
+    condition: {type: pair_pattern, side_a: {purva_purnabindu: false, onset: [N, N]}, side_b: {purva_purnabindu: true, onset: [N]}, bind: {N: [న, మ]}}
+    label: {te: అనునాసిక ప్రాసము (అప్రశస్తము), en: anunāsika prāsa (deprecated)}
+    examples: [EX-ANUNASIKA, EX-ANUNASIKA-MA]
+
+  - id: PRASA-MAITRI-MBA-MMA
+    names: {en: ంబ ~ మ్మ prāsamaitri prāsa (deprecated), te: ప్రాసమైత్రి ప్రాసము (ంబ-మ్మ), iast: prāsamaitri prāsamu}
+    category: structural
+    status: deprecated
+    source: {file: Notes/Prasa.md, sections: ["5.21"], appakavi_list: 11}
+    statement: >
+      Full-bindu బ rhyming with geminate మ on the strength of the -ంబు / -మ్ము
+      inflection doublets (బింబంబు / బింబమ్ము): ఇమ్ముగ / బమ్మున / ధ్రమ్మను /
+      ద్యుంబరముం.  Articulatorily distinct; early poets avoided it; deprecated.
+      Second sanctioned exception to PRASA-PURVAKA-01.
+    condition: {type: pair_pattern, side_a: {purva_purnabindu: true, onset: [బ]}, side_b: {purva_purnabindu: false, onset: [మ, మ]}}
+    label: {te: ంబ-మ్మ ప్రాసమైత్రి ప్రాసము (అప్రశస్తము), en: mba-mma prāsamaitri prāsa (deprecated)}
+    examples: [EX-MBA-MMA, EX-MBA-MMA-2]
+
+  # ---------------------------------------------------------------------------
+  #  H. REPHA-CONJUNCT SPECIFICS
+  # ---------------------------------------------------------------------------
+  - id: PRASA-REPHAYUTA-KRARAKOMMU
+    names: {en: Krārakommu vs vaṭruvasuḍi may not rhyme, te: రేఫయుత ప్రాసము (క్రారకొమ్ము ≠ వట్రువసుడి), iast: rēphayuta prāsamu (rule 1)}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.17 (Rule 1)"], appakavi_list: 6}
+    statement: >
+      A conjunct consonant + ర + ు/ూ (krārakommu: క్రు, క్రూ, గ్రు) cannot rhyme
+      with the consonant carrying vocalic ఋ/ౠ (కృ, కౄ) despite the acoustic
+      likeness; krārakommus rhyme only with other repha conjuncts
+      (సంగ్రామ / చం గ్రుమ్మఱుచున్న / నం గ్రుచ్చి / చెం గ్రూరాస్త్రములు).
+    condition: {type: pair_pattern, side_a: {onset: [C, ర], vowel_in: [ఉ, ఊ]}, side_b: {onset: [C], vowel_in: [ఋ, ౠ]}, verdict: fail}
+    on_fail: {defect: krārakommu vs vaṭruvasuḍi}
+    examples: [EX-REPHAYUTA-KRARAKOMMU-IDENTITY, EX-REPHAYUTA-KRARAKOMMU-FAIL]
+
+  # ---------------------------------------------------------------------------
+  #  I. FORBIDDEN PAIRS (PRĀSAVAIRAMU / ASAMAPRĀSA) — never accepted, always named
+  # ---------------------------------------------------------------------------
+  - id: PRASA-VAIRA-RA-RRA
+    names: {en: ర ≠ ఱ (prāsavairamu), te: ప్రాసవైరము (ర-ఱ), iast: prāsavairamu}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.22", Key Prosodic Distinctions], appakavi_list: 12}
+    statement: Sādhu rēpha ర and śakaṭa rēpha ఱ are strictly forbidden from rhyming; ర only with ర (Bhāratam Ādi 1-26), ఱ only with ఱ (Bhāgavatam 8-130).
+    condition: {type: consonant_pair, pair: [ర, ఱ], verdict: fail}
+    superseded_by: PRASA-MAITRI-RA-RRA-ORTHO
+    active_in_table: false   # since 2026-09-13 the maitri_table row for [ర, ఱ] points at the orthographic relaxation; kept as the treatise statement
+    examples: [EX-VAIRA-RA-RRA]
+
+  - id: PRASA-VAIRA-TA-DA
+    names: {en: ట ≠ డ, te: ట-డ ప్రాస చెల్లదు}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.24.2"]}
+    statement: Unvoiced retroflex ట with voiced retroflex డ (మాట / జాడ) causes an audible break in the cadence — impermissible.
+    condition: {type: consonant_pair, pair: [ట, డ], verdict: fail}
+    examples: [EX-VAIRA-TA-DA]
+
+  - id: PRASA-VAIRA-DA-DDA
+    names: {en: ద ≠ డ, te: ద-డ ప్రాస దోషము}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.24.3"]}
+    statement: Dental ద with retroflex డ (పదము / కడుపు) — distinct articulatory zones; manuscript occurrences are dialect corruptions or copyist errors.
+    condition: {type: consonant_pair, pair: [ద, డ], verdict: fail}
+    examples: [EX-VAIRA-DA-DDA]
+
+  - id: PRASA-VAIRA-DDA-DDHA
+    names: {en: డ ≠ ఢ, te: డ-ఢ ప్రాస చెల్లదు}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: [Universal Mechanics, Prāsamaitri (5.1.13), "5.24.4"]}
+    statement: Unaspirated డ with aspirated ఢ (జడ / మూఢ) is universally rejected across all meters.
+    condition: {type: consonant_pair, pair: [డ, ఢ], verdict: fail}
+    examples: [EX-VAIRA-DDA-DDHA]
+
+  - id: PRASA-VAIRA-RA-LA
+    names: {en: ర ≠ ల (niṣiddhamu), te: ర-ల ప్రాస నిషిద్ధము}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.24.6"]}
+    statement: Telugu prosody keeps an absolute barrier between rēpha and la-kāra (తరము / తలము), although Sanskrit śleṣa allows ralayōr abhēdaḥ.
+    condition: {type: consonant_pair, pair: [ర, ల], verdict: fail}
+    examples: [EX-VAIRA-RA-LA]
+
+  - id: PRASA-VAIRA-SVAVARGAJA-EXT
+    names: {en: Svavargaja licence does not extend beyond థ-ధ, te: స్వవర్గజ ప్రాస విస్తరణ నిషేధము}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.24.5", Key Prosodic Distinctions (Aspiration Independence)]}
+    statement: The 2nd/4th-consonant licence is restricted to థ-ధ; క-ఖ, గ-ఘ, చ-ఛ, ట-ఠ, ప-ఫ, బ-భ are non-standard.  Aspirates require exact aspirate-to-aspirate correspondence.
+    condition: {type: consonant_pair, pairs: [[క, ఖ], [గ, ఘ], [చ, ఛ], [ట, ఠ], [ప, ఫ], [బ, భ]], verdict: fail}
+    examples: [EX-VAIRA-SVAVARGAJA-EXT]
+
+  - id: PRASA-VAIRA-GENERIC
+    names: {en: No prāsamaitri between these consonants (asamaprāsa), te: ప్రాసమైత్రి లేదు (అసమప్రాస)}
+    category: forbidden
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: [Prāsamaitri (5.1.13), Key Prosodic Distinctions]}
+    statement: Any consonant pair not listed in the maitri_table has no compatibility; the sibilants are three separate series (only స~శ relaxed), ల≠ళ and ర≠ఱ under identity, aspirates are distinct from their plain counterparts.
+    condition: {type: default, applies_to: every pair absent from maitri_table}
+
+  # ---------------------------------------------------------------------------
+  #  J. NAMED DEFECTS — identified in the trail, never accepted
+  # ---------------------------------------------------------------------------
+  - id: PRASA-DEFECT-PURNARDHABINDU
+    names: {en: Pūrṇārdhabindu prāsa — ం against ఁ, te: పూర్ణార్ధబిందు ప్రాసము, iast: pūrṇārdhabindu prāsamu}
+    category: defect
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.26"]}
+    statement: "Rhyming a prāsa akshara preceded by ం (guru-making) with one preceded by ఁ (weightless): కొండ vs గోఁడు.  Breaches both PRASA-PURVAKA-01 and the weight rule; an unapproved asamaprāsa."
+    condition: {type: pair_pattern, side_a: {purva_purnabindu: true}, side_b: {ardhabindu_before: true}, verdict: fail}
+    examples: [EX-PURNARDHABINDU-DEFECT]
+
+  - id: PRASA-DEFECT-ADHIKA
+    names: {en: Adhika prāsa — surplus consonant / surplus syllable, te: అధిక ప్రాసము, iast: adhika prāsamu}
+    category: defect
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.28"]}
+    statement: >
+      (1) An extra consonant present in the cluster of some lines but missing
+      in others (స్త్ర vs స్త) — an asamaprāsa, failed and named.  (2) Extending
+      the rhyme into the 3rd akshara (dvyakṣara prāsa) irregularly — reported
+      as information only, since the 2nd-akshara rule is unaffected.
+    condition: {type: pair_pattern, test: one onset is a proper prefix of the other (and the pair is not the deprecated C~C్ర/C్ల form), verdict: fail}
+    examples: [EX-ADHIKA-DEFECT]
+
+  - id: PRASA-DEFECT-SANTA
+    names: {en: Śānta prāsa — muted / partial rhyme, te: శాంతప్రాసము, iast: śānta prāsamu}
+    category: defect
+    status: forbidden
+    source: {file: Notes/Prasa.md, sections: ["5.25"]}
+    statement: A non-standard irregular rhyme where a consonant's sharpness is softened by sandhi or nasal resonance; documented only to explain rare early lines, not to be followed.
+    condition: {type: identification_only, test: two different onsets, at least one a cluster, sharing their first or last consonant}
+    interpretation: >
+      The notes give no operational test; the engine adopts the convention of
+      the existing telugu_prosody_engine (shared first/last consonant) purely
+      to NAME the pattern in the trail.  It never produces a match.
+
+# =============================================================================
+#  MAITRI TABLE — the consonant-pair lookup table
+# =============================================================================
+#  lookup(a, b):  a == b (after ౘ/ౙ normalisation)      -> PRASA-SAMA-01
+#                 {a, b} listed below (unordered)         -> that rule
+#                 otherwise                               -> default_rule
+#  The rule's `status` decides the profile:  accepted_relaxation -> relaxed,
+#  deprecated -> historical, forbidden -> never.  `prasa_engine.maitri_matrix()`
+#  expands this into all 630 unordered pairs (identity included) of the 35 base consonants.
+maitri_table:
+  symmetric: true
+  default_rule: PRASA-VAIRA-GENERIC
+  pairs:
+    # accepted relaxations (profile >= relaxed)
+    - {consonants: [స, శ], rule: PRASA-MAITRI-SA-SHA}
+    - {consonants: [థ, ధ], rule: PRASA-MAITRI-THA-DHA}
+    - {consonants: [న, ణ], rule: PRASA-MAITRI-NA-NNA}
+    - {consonants: [ల, ళ], rule: PRASA-MAITRI-LA-LLA}
+    # deprecated (profile == historical)
+    - {consonants: [స, ష], rule: PRASA-MAITRI-SA-SSA}
+    - {consonants: [ల, డ], rule: PRASA-MAITRI-LA-DA}
+    - {consonants: [ళ, డ], rule: PRASA-MAITRI-LA-DA}
+    - {consonants: [ద, ధ], rule: PRASA-MAITRI-DA-DHA}
+    # orthographic relaxation (profile >= relaxed) — supersedes the treatise's prāsavairamu, see the rule
+    - {consonants: [ర, ఱ], rule: PRASA-MAITRI-RA-RRA-ORTHO}
+    # explicitly forbidden (named in the trail)
+    - {consonants: [ట, డ], rule: PRASA-VAIRA-TA-DA}
+    - {consonants: [ద, డ], rule: PRASA-VAIRA-DA-DDA}
+    - {consonants: [డ, ఢ], rule: PRASA-VAIRA-DDA-DDHA}
+    - {consonants: [ర, ల], rule: PRASA-VAIRA-RA-LA}
+    - {consonants: [క, ఖ], rule: PRASA-VAIRA-SVAVARGAJA-EXT}
+    - {consonants: [గ, ఘ], rule: PRASA-VAIRA-SVAVARGAJA-EXT}
+    - {consonants: [చ, ఛ], rule: PRASA-VAIRA-SVAVARGAJA-EXT}
+    - {consonants: [ట, ఠ], rule: PRASA-VAIRA-SVAVARGAJA-EXT}
+    - {consonants: [ప, ఫ], rule: PRASA-VAIRA-SVAVARGAJA-EXT}
+    - {consonants: [బ, భ], rule: PRASA-VAIRA-SVAVARGAJA-EXT}
+  # Structural (cluster-level) equivalences live in their rules, not in the pair
+  # table, because they test more than two consonants:
+  structural_rules: [PRASA-MAITRI-RU-RA, PRASA-MAITRI-RU-HALSAMYUTA, PRASA-MAITRI-VIKALPA, PRASA-MAITRI-BINDU-SAMSLESHA, PRASA-MAITRI-SAMYUKTASAMYUKTA, PRASA-MAITRI-ANUNASIKA, PRASA-MAITRI-MBA-MMA, PRASA-REPHAYUTA-KRARAKOMMU]
+
+# =============================================================================
+#  APPAKAVI'S 17 PRĀSA-BHEDAMULU  (5.3) — cross-reference to rule ids
+# =============================================================================
+appakavi_17:
+  entries:
+    - {n: 1,  te: అర్ధబిందు ప్రాసము,        iast: Ardhabindu prāsamu,        rules: [PRASA-PURVAKA-03]}
+    - {n: 2,  te: పూర్ణబిందు ప్రాసము,       iast: Pūrṇabindu prāsamu,        rules: [PRASA-PURVAKA-01]}
+    - {n: 3,  te: ఖండాఖండ ప్రాసము,          iast: Khaṇḍākhaṇḍa prāsamu,      rules: [PRASA-PURVAKA-04A, PRASA-PURVAKA-04B, PRASA-PURVAKA-04C]}
+    - {n: 4,  te: సంయుక్తాక్షర ప్రాసము,     iast: Saṁyuktākṣara prāsamu,     rules: [PRASA-SAMYUKTA-01, PRASA-SAMYUKTA-02, PRASA-SAMYUKTA-03, PRASA-SAMYUKTA-04]}
+    - {n: 5,  te: సంయుక్తాసంయుక్త ప్రాసము,  iast: Saṁyuktāsaṁyukta prāsamu,  rules: [PRASA-MAITRI-SAMYUKTASAMYUKTA]}
+    - {n: 6,  te: రేఫయుత ప్రాసము,           iast: Rēphayuta prāsamu,         rules: [PRASA-REPHAYUTA-KRARAKOMMU, PRASA-PURVAKSHARA-04]}
+    - {n: 7,  te: లఘుద్విత్వ ప్రాసము,       iast: Laghudvitva prāsamu,       rules: [PRASA-PURVAKSHARA-04]}
+    - {n: 8,  te: వికల్ప ప్రాసము,            iast: Vikalpa prāsamu,           rules: [PRASA-MAITRI-VIKALPA]}
+    - {n: 9,  te: ఉభయ ప్రాసము,               iast: Ubhaya prāsamu,            rules: [PRASA-MAITRI-NA-NNA, PRASA-MAITRI-SA-SSA]}
+    - {n: 10, te: అనునాసిక ప్రాసము,          iast: Anunāsika prāsamu,         rules: [PRASA-MAITRI-ANUNASIKA]}
+    - {n: 11, te: ప్రాసమైత్రి ప్రాసము,       iast: Prāsamaitri prāsamu,       rules: [PRASA-MAITRI-SA-SHA, PRASA-MAITRI-MBA-MMA]}
+    - {n: 12, te: ప్రాసవైరము,                iast: Prāsavairamu,              rules: [PRASA-VAIRA-RA-RRA, PRASA-MAITRI-RA-RRA-ORTHO]}
+    - {n: 13, te: స్వవర్గజ ప్రాసము,          iast: Svavargaja prāsamu,        rules: [PRASA-MAITRI-THA-DHA]}
+    - {n: 14, te: ఋ ప్రాసము,                 iast: R̥-kāra prāsamu,            rules: [PRASA-MAITRI-RU-RA, PRASA-MAITRI-RU-HALSAMYUTA]}
+    - {n: 15, te: లఘు యకార ప్రాసము,          iast: Laghu yakāra prāsamu,      rules: [PRASA-SAMA-11]}
+    - {n: 16, te: అభేద ప్రాసము,              iast: Abhēda prāsamu,            rules: [PRASA-MAITRI-LA-LLA, PRASA-MAITRI-LA-DA]}
+    - {n: 17, te: సంధిగత ప్రాసము,            iast: Sandhigata prāsamu,        rules: [PRASA-SAMA-12, PRASA-POS-05, PRASA-POS-07]}
+  beyond_the_17: [PRASA-PURVAKA-02, PRASA-MAITRI-BINDU-SAMSLESHA, PRASA-DEFECT-SANTA, PRASA-DEFECT-PURNARDHABINDU, PRASA-DEFECT-ADHIKA, PRASA-VAIRA-TA-DA, PRASA-VAIRA-DA-DDA, PRASA-VAIRA-DDA-DDHA, PRASA-VAIRA-RA-LA, PRASA-VAIRA-SVAVARGAJA-EXT, PRASA-MAITRI-DA-DHA]
+
+# =============================================================================
+#  SAMAPRĀSA CORPUS TABLE (5.4) — one attested identity series per consonant
+#  (syllables as quoted in the notes; the citations follow the notes' edition)
+# =============================================================================
+samaprasa_corpus:
+  - {consonant: క, designation: "'క'కార ప్రాస", syllables: [క, క, క, కు], source: Bhāgavata 7-267 (Utpalamāla)}
+  - {consonant: ఖ, designation: "'ఖ'కార ప్రాస", syllables: [ఖి, ఖ, ఖి, ఖు], source: Bhāgavata 7-478 (Mattēbhamu)}
+  - {consonant: గ, designation: "'గ'కార ప్రాస", syllables: [గ, గ, గ, గి], source: Āmuktamālyada 1-80 (Campakamāla)}
+  - {consonant: ఘ, designation: "'ఘ'కార ప్రాస", syllables: [ఘో, ఘా, ఘా, ఘో], source: Bhārata Virāṭa 4-202 (Śārdūlamu)}
+  - {consonant: చ, designation: "'చ'కార ప్రాస", syllables: [చి, చి, చి, చి], source: Manu Caritra 2-29 (Utpalamāla)}
+  - {consonant: చ, designation: "'చే'కార-'చ'కార ప్రాస (dantya/tālavya)", syllables: [చే, చా, చేం, చం], source: Bhāgavata 10-Pūrva 743 (Śārdūlamu)}
+  - {consonant: జ, designation: "'జ'కార ప్రాస", syllables: [జ, జ, జి, జ], source: Bhārata Ādi 1-3 (Utpalamāla)}
+  - {consonant: జ, designation: "'జే'కార-'జ'కార ప్రాస (dantya/tālavya)", syllables: [జే, జే, జ, జి], source: Bhāgavata 10-Pūrva 764 (Kandamu)}
+  - {consonant: ట, designation: "'ట'కార ప్రాస", syllables: [ట, ట, టు, ట], source: Bhāgavata 10-Pūrva 870 (Campakamāla)}
+  - {consonant: ఠ, designation: "'ఠ'కార ప్రాస", syllables: [ఠీ, ఠి, ఠ, ఠ], source: Bhāgavata 10-Pūrva 1069 (Śārdūlamu)}
+  - {consonant: డ, designation: "'డ'కార ప్రాస", syllables: [డు, డు, డు, డి], source: Bhāgavata 1-167 (Campakamāla)}
+  - {consonant: ణ, designation: "'ణ'కార ప్రాస", syllables: [ణ, ణి, ణ, ణ], source: Āmuktamālyada 4-141 (Kandamu)}
+  - {consonant: త, designation: "'త'కార ప్రాస", syllables: [తో, త, తం, త], source: Bhāgavata 7-271 (Śārdūlamu)}
+  - {consonant: థ, designation: "'థ'కార ప్రాస", syllables: [థు, థి, థ, థ], source: Bhāgavata 8-70 (Mattēbhamu)}
+  - {consonant: ద, designation: "'ద'కార ప్రాస", syllables: [ద, ది, ది, ద], source: Bhāgavata 1-5 (Utpalamāla)}
+  - {consonant: ధ, designation: "'ధ'కార ప్రాస", syllables: [ధం, ధూ, ధం, ధ], source: Bhārata Virāṭa 2-275 (Śārdūlamu)}
+  - {consonant: న, designation: "'న'కార ప్రాస", syllables: [నీ, ని, నా, నుం], source: Bhāgavata 7-123 (Śārdūlamu)}
+  - {consonant: ప, designation: "'ప'కార ప్రాస", syllables: [ప, పి, ప, ప], source: Bhāgavata 1-191 (Utpalamāla)}
+  - {consonant: ఫ, designation: "'ఫ'కార ప్రాస", syllables: [ఫు, ఫూ, ఫా, ఫ], source: Rāmābhyudayam (Śārdūlamu)}
+  - {consonant: బ, designation: "'బ'కార ప్రాస", syllables: [బి, బ, బి, బ], source: Haravilāsam 7-55 (Campakamāla)}
+  - {consonant: భ, designation: "'భ'కార ప్రాస", syllables: [భ, భ, భ, భ], source: Bhāgavata 1-360 (Mattēbhamu)}
+  - {consonant: మ, designation: "'మ'కార ప్రాస", syllables: [మా, మె, మ, మా], source: Manu Caritra 1-62 (Kandamu)}
+  - {consonant: య, designation: "'య'కార ప్రాస", syllables: [య, య, యు, యు], source: Bhārata Ādi 1-89 (Utpalamāla)}
+  - {consonant: ర, designation: రేఫ ప్రాస, syllables: [ర, ర, రు, ర], source: Bhārata Ādi 1-26 (Utpalamāla)}
+  - {consonant: ఱ, designation: శకటరేఫ ప్రాస, syllables: [ఱు, ఱ, ఱ, ఱ], source: Bhāgavata 8-130 (Kandamu)}
+  - {consonant: ల, designation: "'ల'కార ప్రాస", syllables: [లి, లి, ల, లి], source: Bhāgavata 1-2 (Utpalamāla)}
+  - {consonant: ళ, designation: "'ళ'కార ప్రాస", syllables: [ళీ, ళీ, ళీ, ళీ], source: Manu Caritra 3-85 (Kandamu)}
+  - {consonant: వ, designation: "'వ'కార ప్రాస", syllables: [వి, వి, వం, వ], source: Manu Caritra 1-65 (Kandamu)}
+  - {consonant: శ, designation: "'శ'కార ప్రాస", syllables: [శి, శి, శ, శ], source: Bhāgavata 10-Pūrva 1645 (Mattēbhamu)}
+  - {consonant: ష, designation: "'ష'కార ప్రాస", syllables: [షా, ష, ష, ష], source: Bhāgavata 7-233 (Śārdūlamu)}
+  - {consonant: స, designation: "'స'కార ప్రాస", syllables: [స, సె, సు, స], source: Bhāgavata 10-Pūrva 1080 (Utpalamāla)}
+  - {consonant: హ, designation: "'హ'కార ప్రాస", syllables: [హు, హి, హ, హి], source: Bhārata Ādi 1-104 (Campakamāla)}
+
+# =============================================================================
+#  EVALUATION PIPELINE — the ordered decision procedure (prasa_engine.evaluate)
+# =============================================================================
+evaluation_pipeline:
+  - step: 1
+    name: meter eligibility
+    rules: [PRASA-POS-02]
+    does: if a meter is named, read `prasa` from meter_rules.yaml; mark the result applicable/not; if a meter_class is exempt, skip step 7
+  - step: 2
+    name: syllabify each pāda
+    rules: [PRASA-POS-01, PRASA-POS-08]
+    does: sanitize -> aksharanusarika.split_aksharalu -> akshara_ganavibhajana; take the 1st and 2nd non-ignorable tokens
+  - step: 3
+    name: decompose
+    rules: [PRASA-POS-06]
+    does: parse both aksharas (onset / vowel / trailing signs); move a dead consonant on the 1st akshara into the onset (saṁśleṣa); record ం/ః on the 1st akshara and ఁ between the two
+  - step: 4
+    name: pair loop (every unordered pair of pādas)
+    rules: [PRASA-POS-04]
+    does: run steps 5–6 for each pair; a pair's min_profile is the least permissive profile whose accepted statuses cover every rule the match used; None when a hard failure occurred
+  - step: 5
+    name: signs before the prāsa akshara
+    rules: [PRASA-PURVAKA-01, PRASA-DEFECT-PURNARDHABINDU, PRASA-PURVAKA-02, PRASA-PURVAKA-03, PRASA-PURVAKA-04A, PRASA-PURVAKA-04B, PRASA-PURVAKA-04C, PRASA-MAITRI-ANUNASIKA, PRASA-MAITRI-MBA-MMA, PRASA-MAITRI-BINDU-SAMSLESHA]
+    does: ం asymmetry fails unless the pair is an anunāsika / ంబ-మ్మ / bindu~saṁśleṣa (ంద~న్ద) form; ః asymmetry fails; ఁ is classified (uniform / mixed-by-authority)
+  - step: 6
+    name: onset comparison (prasa_engine.compare_onsets), in this order
+    rules_in_order:
+      - PRASA-MAITRI-RU-RA            # bare ఋ vs ర
+      - PRASA-REPHAYUTA-KRARAKOMMU    # C్రు vs Cృ -> fail (before any relaxation can claim it)
+      - PRASA-SAMA-01                 # identical onsets (+ SAMYUKTA classifications)
+      - PRASA-MAITRI-RU-HALSAMYUTA    # Cృ vs C్ర
+      - PRASA-MAITRI-VIKALPA          # [N5,X] vs [S3,X]
+      - element-wise maitri_table     # equal-length onsets; geminate constraint PRASA-SAMYUKTA-03 first
+      - PRASA-MAITRI-SAMYUKTASAMYUKTA # [C] vs [C,ర/ల]
+      - PRASA-DEFECT-ADHIKA           # one onset a proper prefix of the other
+      - PRASA-SAMYUKTA-01 / -02       # conjunct vs simple / mismatched clusters -> fail
+    does: the first applicable branch decides; a failing branch also appends identification notes (PRASA-DEFECT-SANTA) when the pattern fits
+  - step: 6b
+    name: druta-sandhi alternative reading
+    rules: [PRASA-POS-07]
+    does: only if the pair failed outright and a line has న్ fused before a paruṣa/sarala; re-run the pair with Xం + sarala; keep it if it matches (flag reading=druta_sandhi)
+  - step: 7
+    name: pre-prāsa weight rule (stanza level)
+    rules: [PRASA-PURVAKSHARA-01, PRASA-PURVAKSHARA-02, PRASA-PURVAKSHARA-04]
+    does: positional U/I of the 1st aksharas must be uniform; otherwise retry with intrinsic weights for lines flagged as light repha clusters (heuristic)
+  - step: 8
+    name: aggregate
+    does: >
+      matched(profile) = no hard failure in any pair, weight rule ok, and every
+      rule used is accepted by the profile.  min_profile = the most permissive
+      of the pair minima (None if any pair is None or the weight rule failed).
+      classifications = union of pair classifications in rule order; label =
+      pūrvaka prefixes + core (identity name or maitri rule label).
+
+# =============================================================================
+#  TRAIL SCHEMA — what every verdict carries (prasa_engine.PrasaResult)
+# =============================================================================
+trail_schema:
+  result:
+    profile: the profile the verdict was computed for
+    matched: bool — the stanza satisfies prāsa under `profile`
+    applicable: bool — false when the named meter has no prāsa
+    min_profile: strict | relaxed | historical | null — least permissive profile that accepts the stanza
+    would_match_under: the profile that WOULD accept it when `matched` is false and min_profile is not null
+    prasa_consonant: effective onset of line 1 (e.g. త, న్వ, క్క) or the bare vowel
+    label_te / label_en: composed name, e.g. "పూర్ణబిందుపూర్వక 'ద'కార ప్రాస", "స-శ ప్రాసము (ప్రాసమైత్రి)"
+    classifications: "[{rule, name_te, name_en, status}] — every named prāsa the stanza exhibits"
+    violations: "[{rule, scope, detail}] — under the requested profile (hard failures + relaxations the profile does not accept)"
+    lines: per-line LineFeatures (see akshara_model.line_features)
+    pairs: per-pair {lines, reading, rules_used, statuses_used, min_profile, hard_failures, classifications}
+    trail: ordered [{rule, status, scope, detail, data}]
+  trail_entry:
+    rule: rule id from this file
+    status: pass | fail | info | note | na
+    scope: "\"line:N\" | \"pair:N-M\" | \"stanza\""
+    detail: human-readable explanation naming the lines and aksharas involved
+    data: machine-readable specifics (onsets, positions, weights, status, heuristic flags)
+
+# =============================================================================
+#  DIVERGENCES from the older telugu_prosody_engine tables (for the record)
+# =============================================================================
+divergences:
+  description: >
+    telugu_prosody_engine/telugu_prosody/yatiprasa.py carries a much more
+    permissive PRASA_CONSONANT_GROUPS table (ఱ,ర / ల,ళ,డ,ర / ప,వ / ద,డ / క,గ / …).
+    This file follows Notes/Prasa.md, which explicitly forbids several of
+    those pairs; the engine's groups are therefore NOT imported.
+  pairs_permitted_there_but_forbidden_here: [[ట, డ], [ద, డ], [డ, ఢ], [ర, ల], [క, ఖ], [గ, ఘ], [చ, ఛ], [ట, ఠ], [ప, ఫ], [బ, భ], [క, గ], [ప, వ], [ద, న], [బ, మ], [గ, ఙ], [జ, ఞ], [డ, ణ], [త, ద], [ప, బ], [చ, జ], [ఛ, ఝ], [జ, ఝ], [ఠ, ఢ], [ఫ, భ], [ఖ, ఘ]]
+  conventions_borrowed: [PRASA-DEFECT-SANTA operational test (shared first/last consonant), identification only]
+  note_on_ra_rra: the older engine's ఱ,ర group is now mirrored by PRASA-MAITRI-RA-RRA-ORTHO, but as a separately counted orthographic relaxation rather than a plain equivalence
+
+# =============================================================================
+#  ATTESTED EXAMPLES — fixtures replayed by tests/test_prasa_rules.py
+# =============================================================================
+#  input_kind:
+#    full_padas          — complete pādas from dataset/bhagavatam.json (id given)
+#    pada_initial_slice  — treatise fragment cut so the prāsa akshara is 2nd
+#    synthetic           — constructed from the syllables the notes give
+#  expected:
+#    strict / relaxed / historical — matched under that profile
+#    min_profile — least permissive accepting profile (null = never)
+#    classifications_include / failing_rules_include — rule ids that must appear
+#    prasa_consonant — effective onset of line 1
+attested_examples:
+
+  # ---- identity (samaprāsa) with real verses ---------------------------------
+  - id: EX-SAMA-KA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '7-267-ఉ.', meter: ఉత్పలమాల, cited_in: '5.4 (క)'}
+    input_kind: full_padas
+    padas: ['లోకము లన్నియున్ గడియలోన జయించినవాఁడ వింద్రియా', 'నీకముఁ జిత్తమున్ గెలువ నేరవు నిన్ను నిబద్ధుఁ జేయు నీ', 'భీకర శత్రు లార్వురఁ బ్రభిన్నులఁ జేయుము ప్రాణికోటిలో', 'నీకు విరోధి లేఁ డొకఁడు నేర్పునఁ జూడుము దానవేశ్వరా!']
+    expected: {strict: true, relaxed: true, historical: true, min_profile: strict, classifications_include: [PRASA-SAMA-01, PRASA-PURVAKSHARA-01], prasa_consonant: క}
+  - id: EX-SAMA-KHA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '7-478-మ.', meter: మత్తేభవిక్రీడితము, cited_in: '5.4 (ఖ)'}
+    input_kind: full_padas
+    padas: ['అఖిలాధారుఁ డజాది దుర్లభుఁడు బ్రహ్మంబైన విష్ణుండు నీ', 'మఖమం దర్చితుఁడై నివాసగతుఁ డైమర్త్యాకృతిన్ సేవ్యుఁ డై', 'సఖియై చారకుఁ డై మనోదయితుఁ డైసంబంధి యై మంత్రి యై', 'సుఖదుండయ్యె భవన్మహామహిమ దాఁజోద్యంబు ధాత్రీశ్వరా!']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ఖ}
+  - id: EX-SAMA-THA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '8-70-మ.', meter: మత్తేభవిక్రీడితము, cited_in: '5.4 (థ)'}
+    input_kind: full_padas
+    padas: ['పృథుశక్తిన్ గజ మా జలగ్రహముతోఁబెక్కేండ్లు పోరాడి, సం', 'శిథిలంబై, తన లావు వైరిబలముంజింతించి, మిథ్యామనో', 'రథమిం కేటికి? దీని గెల్వ సరి పోరంజాలరా దంచు స', 'వ్యథమై యిట్లనుఁ బూర్వపుణ్యఫల దివ్యజ్ఞాన సంపత్తితోన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: థ}
+  - id: EX-SAMA-DA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-5-ఉ.', meter: ఉత్పలమాల, cited_in: '5.4 (ద)'}
+    input_kind: full_padas
+    padas: ['ఆదర మొప్ప మ్రొక్కిడుదునద్రి సుతా హృదయానురాగ సం', 'పాదికి, దోషభేదికిఁ, బ్రపన్నవినోదికి, విఘ్నవల్లికా', 'చ్ఛేదికి, మంజువాదికి, నశేష జగజ్జన నంద వేదికిన్,', 'మోదకఖాదికిన్, సమదమూషక సాదికి, సుప్రసాదికిన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ద}
+  - id: EX-SAMA-NNA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-6-ఉ.', meter: ఉత్పలమాల, cited_in: 'Example 7 (ణి, ణి, ణి, ణి)'}
+    input_kind: full_padas
+    padas: ['క్షోణితలంబునన్ నుదురుసోఁకఁగ మ్రొక్కి నుతింతు సైకత', 'శ్రోణికిఁ, జంచరీక చయసుందరవేణికి, రక్షితామర', 'శ్రేణికిఁ, దోయజాతభవచిత్త వశీకరణైక వాణికిన్,', 'వాణికి. నక్షదామ శుకవారిజ పుస్తక రమ్య పాణికిన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ణ}
+  - id: EX-SAMA-TA-VOWELS
+    rule: PRASA-SAMA-02
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-3-ఉ.', meter: ఉత్పలమాల, cited_in: 'Example 6 (త, త, త, త)'}
+    input_kind: full_padas
+    padas: ['ఆతత సేవఁ జేసెద సమస్త చరాచర భూత సృష్టి వి', 'జ్ఞాతకు, భారతీ హృదయసౌఖ్య విధాతకు, వేదరాశి ని', 'ర్ణేతకు, దేవతా నికరనేతకుఁ, గల్మష ఛేత్తకున్, నత', 'త్రాతకు, ధాతకున్, నిఖిలతాపస లోక శుభప్రదాతకున్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: త}
+  - id: EX-SAMA-TA-MIXED-VOWELS
+    rule: PRASA-SAMA-02
+    source: {text: Pōtana Bhāgavatam, dataset_id: '7-271-శా.', meter: శార్దూలవిక్రీడితము, cited_in: '5.4 (త: తో, త, తం, త)'}
+    input_kind: full_padas
+    padas: ['నాతోడం బ్రతిభాష లాడెదు జగన్నాథుండ నా కంటె నీ', 'భూతశ్రేణికి రాజు లేఁ డొకఁడు; సంపూర్ణ ప్రభావుండు మ', 'ద్భ్రాతంజంపిన మున్ను నే వెదకితింబల్మాఱు నారాయణుం', 'డేతద్విశ్వములోన లేఁడు; మఱి వాఁడెందుండురా? దుర్మతీ!']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: త}
+  - id: EX-SAMA-NA
+    rule: PRASA-SAMA-05
+    source: {text: Pōtana Bhāgavatam, dataset_id: '7-123-శా.', meter: శార్దూలవిక్రీడితము, cited_in: '5.4 (న: నీ, ని, నా, నుం)'}
+    input_kind: full_padas
+    padas: ['పానీయంబులు ద్రావుచుం గుడుచుచున్ భాషించుచున్ హాస లీ', 'లా నిద్రాదులు చేయుచుం దిరుగుచున్ లక్షించుచున్ సంతత', 'శ్రీనారాయణ పాదపద్మయుగళీ చింతామృ తాస్వాద సం', 'ధానుండై మఱచెన్ సురారిసుతుఁ డే త ద్విశ్వమున్ భూవరా!']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: న}
+  - id: EX-SAMA-LA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-2-ఉ.', meter: ఉత్పలమాల, cited_in: '5.4 (ల: లి, లి, ల, లి)'}
+    input_kind: full_padas
+    padas: ['వాలిన భక్తి మ్రొక్కెద నవారిత తాండవ కేళికిన్, దయా', 'శాలికి, శూలికిన్, శిఖరిజా ముఖ పద్మ మయూఖ మాలికిన్,', 'బాల శశాంక మౌళికిఁ, గపాలికి, మన్మథ గర్వ పర్వతో', 'న్మూలికి, నారదాది మునిముఖ్య మనస్సరసీరుహాలికిన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ల}
+  - id: EX-SAMA-VA-VOWELS
+    rule: PRASA-SAMA-02
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-137-మ.', meter: మత్తేభవిక్రీడితము, cited_in: 'Example 4 pattern (వి, వు, వ, వ)'}
+    input_kind: full_padas
+    padas: ['అవనీచక్రములోన నే పురుషుఁ డే యామ్నాయమున్ విన్న మా', 'ధవుపై లోకశరణ్యుపై భవములం దప్పింపఁగాఁ జాలు భ', 'క్తివిశేషంబు జనించు నట్టి భువనక్షేమంకరంబైన భా', 'గవతామ్నాయము బాదరాయణుఁడు దాఁ గల్పించె నేర్పొప్పగన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: వ}
+  - id: EX-SAMA-VA-POLLU-LA
+    rule: PRASA-SAMA-08
+    source: {text: Pōtana Bhāgavatam, dataset_id: '8-90-శా.', meter: శార్దూలవిక్రీడితము, cited_in: 'Pollu La-kāramu (following): వొ, వుల్, వే, వే'}
+    input_kind: full_padas
+    padas: ['"లా వొక్కింతయు లేదు; ధైర్యము విలోలంబయ్యె; బ్రాణంబులున్', 'ఠావుల్ దప్పెను; మూర్ఛ వచ్ఛెఁ; దనువున్ డస్సెన్; శ్రమంబయ్యెడిన్;', 'నీవే తప్ప నితఃపరం బెఱుఁగ; మన్నింపందగున్ దీనునిన్;', 'రావే! యీశ్వర! కావవే వరద! సంరక్షింపు భద్రాత్మకా!']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: వ}
+  - id: EX-SAMA-SSA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '7-233-శా.', meter: శార్దూలవిక్రీడితము, cited_in: '5.4 (ష)'}
+    input_kind: full_padas
+    padas: ['యోషారత్నము నాథదైవత విశాలోద్యోగ మా తల్లి ని', 'ర్వైషమ్యంబున నాథురాక మదిలోవాంఛించి నిర్దోష యై', 'యీషద్భీతియు లేక గర్భపరిరక్షేచ్ఛన్ విచారించి శు', 'శ్రూషల్చేయుచు నుండె నారదునకున్సువ్యక్త శీలంబునన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ష}
+  - id: EX-SAMA-RRA
+    rule: PRASA-VAIRA-RA-RRA
+    source: {text: Pōtana Bhāgavatam, dataset_id: '8-130-క.', meter: కందము, cited_in: '5.4 / 5.22 (శకటరేఫ only)'}
+    input_kind: full_padas
+    padas: ['ఎఱుఁగుదు తెఱవా! యెప్పుడు', 'మఱవను సకలంబు నన్నుమఱచిన యెడలన్', 'మఱతు నని యెఱిఁగి మొఱఁగక', 'మఱవక మొఱ యిడిర యేనిమఱి యన్యములన్.’']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ఱ}
+  - id: EX-SAMA-RA-REAL
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-29-ఉ.', meter: ఉత్పలమాల}
+    input_kind: full_padas
+    padas: ['హారికి, నందగోకులవిహారికిఁ జక్రసమీరదైత్య సం', 'హారికి, భక్తదుఃఖపరిహారికి, గోపనితంబినీ మనో', 'హారికి, దుష్టసంపదపహారికి, ఘోషకుటీపయోఘృతా', 'హారికి, బాలకగ్రహమహాసురదుర్వనితాప్రహారికిన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ర}
+  - id: EX-SAMA-RU-VOWEL
+    rule: PRASA-SAMA-03
+    source: {text: Pōtana Bhāgavatam, dataset_id: '6-138-క.', meter: కందము}
+    input_kind: full_padas
+    padas: ['అకృతజ్ఞుఁడ నై విడిచితిఁ', 'బ్రకృతిం గల బంధువులనుబాల్యమున ననున్', 'వికృతిఁ జనకుండఁ బెంచిన', 'సుకృతుల మజ్జనకవరులశోభనకరులన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: క}
+  - id: EX-SAMA-PA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-167-క.', meter: కందము}
+    input_kind: full_padas
+    padas: ['భూపాలకులకు విప్రుల', 'గోపింపం జేయఁ దగదు కోపించినఁ, ద', 'త్కోపానలంబు మొదలికి', 'భూపాలాటవులఁ గాల్చు భూకంపముగన్.""']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ప}
+  - id: EX-SAMA-GA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '10.1-1080-త.', meter: తరలము}
+    input_kind: full_padas
+    padas: ['తగవు ధర్మముఁ జూడనొల్లకదల్లిదండ్రుల బంధులన్', 'మగల బిడ్డలఁ బాసి వచ్చినమన్నిషక్తల మిమ్ము నేఁ', 'దగదు; పాసితిఁ దప్పు సైపుఁడు;తద్వియోగభరంబునన్', 'వగలఁ బొందుచు మీర లాడినవాక్యముల్ వినుచుండితిన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: గ}
+  - id: EX-SAMA-DDA
+    rule: PRASA-SAMA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '10.1-328-క.', meter: కందము}
+    input_kind: full_padas
+    padas: ['కడు లచ్చి గలిగె నేనిం', 'గుడుతురు గట్టుదురు గాక కొడుకుల నగుచున్', 'బడుగుల వాడలపైఁ బడ', 'విడుతురె రాకాంత లెందు? విమలేందుముఖీ!']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: డ}
+
+  # ---- signs before the prāsa akshara ----------------------------------------
+  - id: EX-PURNABINDU-DA
+    rule: PRASA-PURVAKA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '7-275-క.', meter: కందము, cited_in: '5.5 (ఇందుఁగలడందు…)'}
+    input_kind: full_padas
+    padas: ['ఇందుగలఁ డందు లేఁ డని', 'సందేహము వలదు చక్రిసర్వోపగతుం', 'డెందెందు వెదకి చూచిన', 'నందందే కలఁడు దానవాగ్రణి! వింటే."']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-01, PRASA-SAMA-01], prasa_consonant: ద}
+  - id: EX-PURNABINDU-TTA
+    rule: PRASA-PURVAKA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-360-క.', meter: కందము}
+    input_kind: full_padas
+    padas: ['కంటకులు నృపులుసూడఁగ,', 'మింటం గంపించు యంత్రమీనముఁ గోలన్', 'గెంటించి మనము వాలుం', 'గంటిం జేకొంటి మతని కరుణన కాదే?']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-01, PRASA-SAMA-01], prasa_consonant: ట}
+  - id: EX-PURNABINDU-HA-VISARGA
+    rule: PRASA-SAMA-06
+    source: {text: Pōtana Bhāgavatam, dataset_id: '10.1-1575-శా.', meter: శార్దూలవిక్రీడితము, note: 'line 1 prāsa akshara హః carries a trailing visarga; lines 2/4 a trailing bindu; all four are bindu-pūrvaka'}
+    input_kind: full_padas
+    padas: ['అంహఃకర్ములు దల్లడిల్ల భయదాహంకారుఁడై సీరి దో', 'రంహంబొప్ప హలాహతిన్ రథ ధనూరథ్యంబులం గూల్చి త', 'త్సంహారస్పృహఁ జొచ్చి పట్టెను జరాసంధున్ మదాంధున్ మహా', 'సింహంబుం బ్రతిసింహముఖ్యము బలశ్రీఁబట్టు నేర్పేర్పడన్.']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-01, PRASA-SAMA-01], prasa_consonant: హ}
+  - id: EX-PURNABINDU-APPAKAVI
+    rule: PRASA-PURVAKA-01
+    source: {text: Appakavīyamu 5-3-301, cited_in: '5.5'}
+    input_kind: pada_initial_slice
+    padas: ['పొందింప', 'బృందావన', 'బిందీవరాక్షి', 'నందన']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-01, PRASA-SAMA-01], prasa_consonant: ద}
+  - id: EX-PURNABINDU-FAIL
+    rule: PRASA-PURVAKA-01
+    source: {text: constructed from the rule statement (నిండు… against a plain ద line), cited_in: 'Bindupūrvakamu, 5.5'}
+    input_kind: synthetic
+    padas: ['నిండుమనసున', 'పాదములు', 'నందనుడు', 'వందనము']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-PURVAKA-01], prasa_consonant: డ}
+  - id: EX-VISARGA-PURVAKA
+    rule: PRASA-PURVAKA-02
+    source: {text: 'Bhāgavatam 10-Pūrva-1575 (notes edition): దుఃఖింపన్ / చేతఃఖేదంబెల్ల / భూస్వఃఖేలజ్జనమెల్ల / మేదఃఖండంబులు', cited_in: '5.5.3', note: 'the notes print ఃభే in line 2; read ఃఖే as the listed prāsa syllables require'}
+    input_kind: pada_initial_slice
+    padas: ['దుఃఖింపన్', 'తఃఖేదంబెల్ల', 'స్వఃఖేలజ్జనమెల్ల', 'దఃఖండంబులు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-02, PRASA-SAMA-01], prasa_consonant: ఖ}
+  - id: EX-VISARGA-PURVAKA-FAIL
+    rule: PRASA-PURVAKA-02
+    source: {text: constructed (a plain ఖ line among visarga-pūrvaka lines), cited_in: '5.5.3'}
+    input_kind: synthetic
+    padas: ['దుఃఖింపన్', 'శాఖలు', 'తఃఖేదంబెల్ల', 'దఃఖండంబులు']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-PURVAKA-02]}
+  - id: EX-ARDHABINDU-UNIFORM
+    rule: PRASA-PURVAKA-03
+    source: {text: Bhāratam Virāṭa 5-193, cited_in: '5.7'}
+    input_kind: pada_initial_slice
+    padas: ['వీఁక', 'దాఁకిన', 'రాఁకలి', 'వ్రేఁకని']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-03, PRASA-SAMA-01], prasa_consonant: క}
+  - id: EX-ARDHABINDU-UNIFORM-2
+    rule: PRASA-PURVAKA-03
+    source: {text: Dāśarathī Śatakam, cited_in: '5.7'}
+    input_kind: pada_initial_slice
+    padas: ['నోఁచిన', 'చోఁచేనివాఁడు', 'రాఁచి', 'దాఁచేనివాఁడు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-03, PRASA-SAMA-01], prasa_consonant: చ}
+  - id: EX-KHANDAKHANDA-ANANTA
+    rule: PRASA-PURVAKA-04A
+    source: {text: Śrīkālahastīśvara Śatakam 1-81, cited_in: '5.8'}
+    input_kind: pada_initial_slice
+    padas: ['ఇటువంటి', 'పటుబుద్ధికి', 'వటమాత్రంబఁట', 'లఁట ముక్తి']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-04A, PRASA-SAMA-01], prasa_consonant: ట}
+  - id: EX-KHANDAKHANDA-APPAKAVI
+    rule: PRASA-PURVAKA-04B
+    source: {text: Bhāratam Udyōga 4-3-255, cited_in: '5.8'}
+    input_kind: pada_initial_slice
+    padas: ['ఆ కొలువువారు', 'లాకృతి', 'బాఁకిడిన', 'దాకారిత']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-04B, PRASA-SAMA-01], prasa_consonant: క}
+  - id: EX-KHANDAKHANDA-WIDE
+    rule: PRASA-PURVAKA-04C
+    source: {text: constructed (ఁ before a voiced డ after a long vowel — outside both restrictions), cited_in: '5.8'}
+    input_kind: synthetic
+    padas: ['వాఁడు', 'పాడు', 'కూడు', 'వీడు']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-PURVAKA-04C, PRASA-SAMA-01], prasa_consonant: డ}
+  - id: EX-PURNARDHABINDU-DEFECT
+    rule: PRASA-DEFECT-PURNARDHABINDU
+    source: {text: 'కొండ… vs గోఁడు…', cited_in: '5.26'}
+    input_kind: synthetic
+    padas: ['కొండ', 'గోఁడు', 'మండ', 'దండ']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-PURVAKA-01, PRASA-DEFECT-PURNARDHABINDU]}
+
+  # ---- conjuncts ---------------------------------------------------------------
+  - id: EX-SAMYUKTA-SRA
+    rule: PRASA-SAMYUKTA-01
+    source: {text: Bhāratam Ādi 1-6 (ఆశ్రిత / పద్యాశ్రమ / ర్ణాశ్రమ / కాశ్రయుఁడు), cited_in: '5.6'}
+    input_kind: pada_initial_slice
+    padas: ['ఆశ్రిత', 'ద్యాశ్రమ', 'ర్ణాశ్రమ', 'కాశ్రయుఁడు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01, PRASA-SAMYUKTA-01, PRASA-SAMYUKTA-02], prasa_consonant: శ్ర}
+  - id: EX-DVITVA-KKA
+    rule: PRASA-SAMYUKTA-03
+    source: {text: Sumatī Śatakam, cited_in: '5.6.2'}
+    input_kind: pada_initial_slice
+    padas: ['అక్కఱకు', 'మ్రొక్కిన', 'నెక్కిన', 'గ్రక్కున']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01, PRASA-SAMYUKTA-01, PRASA-SAMYUKTA-03], prasa_consonant: క్క}
+  - id: EX-DVITVA-LLA
+    rule: PRASA-SAMYUKTA-03
+    source: {text: Pōtana Bhāgavatam, dataset_id: '1-275-క.', meter: కందము}
+    input_kind: full_padas
+    padas: ['ఎల్లప్పుడు మా యిండ్లను', 'వల్లభుఁడు వసించు; నేమ వల్లభలము శ్రీ', 'వల్లభున కనుచు గోపీ', 'వల్లభుచే సతులు మమతవలఁ బడి రనఘా!']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMYUKTA-03], prasa_consonant: ల్ల}
+  - id: EX-SAMYUKTA-PTA-BINDU
+    rule: PRASA-SAMYUKTA-01
+    source: {text: Pōtana Bhāgavatam, dataset_id: '8-574-క.', meter: కందము, note: trailing ం on three of the four prāsa aksharas}
+    input_kind: full_padas
+    padas: ['వ్యాప్తింబొందక వగవక', 'ప్రాప్తంబగు లేశమైనఁబదివే లనుచుం', 'దృప్తింజెందని మనుజుఁడు', 'సప్తద్వీపముల నయినఁజక్కంబడునే?']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMYUKTA-01], prasa_consonant: ప్త}
+  - id: EX-THREE-CONSONANT
+    rule: PRASA-SAMYUKTA-04
+    source: {text: constructed (స్త్ర in every line), cited_in: '5.6.5'}
+    input_kind: synthetic
+    padas: ['ఆస్త్రము', 'శాస్త్రము', 'మాస్త్రము', 'నాస్త్రము']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMYUKTA-04], prasa_consonant: స్త్ర}
+  - id: EX-ADHIKA-DEFECT
+    rule: PRASA-DEFECT-ADHIKA
+    source: {text: constructed (స్త్ర vs స్త), cited_in: '5.28 (form 1)'}
+    input_kind: synthetic
+    padas: ['ఆస్త్రము', 'శాస్తము']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-DEFECT-ADHIKA]}
+  - id: EX-SAMYUKTA-ORDER-FAIL
+    rule: PRASA-SAMYUKTA-02
+    source: {text: 'తర్క… (ర్క) vs చక్రి… (క్రి)', cited_in: 'Saṁyuktamu (order dependency), 5.6.4'}
+    input_kind: synthetic
+    padas: ['తర్కము', 'చక్రిని', 'అర్కుడు', 'వక్రము']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-SAMYUKTA-02]}
+  - id: EX-SAMYUKTA-PRESENCE-FAIL
+    rule: PRASA-MAITRI-SAMYUKTASAMYUKTA
+    source: {text: 'Bhāratam Āraṇya 6-103 (ఆ క్రొక్కారను / కా / కో / కీ)', cited_in: '5.16'}
+    input_kind: synthetic
+    padas: ['ఆ క్రొక్కారను', 'ఆ కాలము', 'ఆ కోరిక', 'ఆ కీలము']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-SAMYUKTASAMYUKTA], failing_rules_include: [PRASA-MAITRI-SAMYUKTASAMYUKTA], prasa_consonant: క్ర}
+  - id: EX-TRIPRASA
+    rule: PRASA-MAITRI-SAMYUKTASAMYUKTA
+    source: {text: Ananta's Triprāsamu (త్రి against త), cited_in: '5.16'}
+    input_kind: synthetic
+    padas: ['ఆ త్రిపురము', 'మా తిరము', 'నా తీరము', 'ఈ తెరువు']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-SAMYUKTASAMYUKTA]}
+  - id: EX-DRUTAM-FUSION-FAIL
+    rule: PRASA-POS-06
+    source: {text: 'దేవర… / నీవు… / కావున… / నిన్ వదలి…', cited_in: 'Drutamu (Invalid Example — Syllable Splitting)'}
+    input_kind: pada_initial_slice
+    padas: ['దేవర', 'నీవు', 'కావున', 'నిన్ వదలి']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-SAMYUKTA-01]}
+  - id: EX-DRUTAM-CONJUNCT-VALID
+    rule: PRASA-SAMYUKTA-07
+    source: {text: 'అన్వయ… / మన్వంతర… / ధన్వంతరి… / నిన్వదలి…', cited_in: 'Drutamu (Valid Conjunct Example)'}
+    input_kind: pada_initial_slice
+    padas: ['అన్వయ', 'మన్వంతర', 'ధన్వంతరి', 'నిన్ వదలి']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMYUKTA-01, PRASA-SAMYUKTA-07], prasa_consonant: న్వ}
+  - id: EX-POLLU-LA-FUSION-FAIL
+    rule: PRASA-POS-06
+    source: {text: 'కోవెల… / సేవ… / భావము… / పూవుల్ విరియ…', cited_in: 'Pollu La-kāramu (Invalid Example — Illegitimate Splitting)', note: 'the fragment straddles the pāda boundary; the pāda begins with వుల్'}
+    input_kind: pada_initial_slice
+    padas: ['కోవెల', 'సేవ', 'భావము', 'వుల్ విరియ']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-SAMYUKTA-01]}
+  - id: EX-POLLU-LA-CONJUNCT-VALID
+    rule: PRASA-SAMYUKTA-08
+    source: {text: 'చెల్వ… / కల్వ… / కొల్వ… / పూవుల్విరియ…', cited_in: 'Pollu La-kāramu (Valid Conjunct Example)'}
+    input_kind: pada_initial_slice
+    padas: ['చెల్వ', 'కల్వ', 'కొల్వ', 'వుల్ విరియ']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMYUKTA-01, PRASA-SAMYUKTA-08], prasa_consonant: ల్వ}
+  - id: EX-DRUTAM-TRAILING-NEUTRAL
+    rule: PRASA-SAMA-07
+    source: {text: 'Bhāratam Ādi 1-78 (తా, తో, తిన్, త)', cited_in: 'Drutamu (following)'}
+    input_kind: synthetic
+    padas: ['నాతా', 'మాతో', 'ప్రీతిన్ వైరి', 'జాతము']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: త}
+
+  # ---- accepted prāsamaitri (relaxed profile) ---------------------------------
+  - id: EX-MAITRI-SA-SHA
+    rule: PRASA-MAITRI-SA-SHA
+    source: {text: Vēmulavāḍa Bhīmakavi chāṭu, cited_in: '5.12'}
+    input_kind: pada_initial_slice
+    padas: ['బిసరుహ', 'మసకపుఁ', 'దశరథసూను', 'పశుపతి']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-SA-SHA], failing_rules_include: [PRASA-MAITRI-SA-SHA], prasa_consonant: స}
+  - id: EX-MAITRI-SA-SHA-REAL
+    rule: PRASA-MAITRI-SA-SHA
+    source: {text: Pōtana Bhāgavatam, dataset_id: '8-575-శా.', meter: శార్దూలవిక్రీడితము, cited_in: '5.12 (ఆశాపాశము / వారాశి / గాసింబొందిరి / కామాశన్)'}
+    input_kind: full_padas
+    padas: ['ఆశాపాశము దాఁ గడున్ నిడుపు; లేదంతంబు రాజేంద్ర! వా', 'రాశిప్రావృత మేదినీవలయ సామ్రాజ్యంబు చేకూడియుం', 'గాసింబొందిరిఁ గాక వైన్య గయ భూకాంతాదులున్నర్థకా', 'మాశంబాయఁగ నేర్చిరే మును నిజాశాంతంబులం జూచిరే.']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-SA-SHA], prasa_consonant: శ}
+  - id: EX-MAITRI-THA-DHA
+    rule: PRASA-MAITRI-THA-DHA
+    source: {text: Bhāgavatam 6-7-138 (notes edition), cited_in: '5.10'}
+    input_kind: pada_initial_slice
+    padas: ['ఆ ధనేశు', 'ద్యాధరేంద్రులు', 'యాధికారులు', 'వీథి సర్వపథీనులు']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-THA-DHA], prasa_consonant: ధ}
+  - id: EX-MAITRI-THA-DHA-BINDU
+    rule: PRASA-MAITRI-THA-DHA
+    source: {text: Bhāratam Āraṇya 4-159 (అంధక / బాంధవ / మనోగ్రంథి / మోహాంధులు), cited_in: '5.10 (bindu form ంథ-ంధ)'}
+    input_kind: pada_initial_slice
+    padas: ['అంధక', 'బాంధవ', 'గ్రంథి', 'హాంధులు']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-PURVAKA-01, PRASA-MAITRI-THA-DHA], prasa_consonant: ధ}
+  - id: EX-MAITRI-NNA-IDENTITY
+    rule: PRASA-MAITRI-NA-NNA
+    source: {text: Bhāratam Udyōga 1-299 (ādēśa-ణ ×3 + sahaja-ణ), cited_in: '5.11', note: 'programmatically plain samaprāsa — the sahaja/ādēśa distinction is lexical'}
+    input_kind: pada_initial_slice
+    padas: ['ద్రోణుఁడు', 'బ్రాణములు', 'క్షీణ', 'స్థాణునకైన']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ణ}
+  - id: EX-MAITRI-NA-NNA
+    rule: PRASA-MAITRI-NA-NNA
+    source: {text: Bhojarājīyam 5-296, cited_in: '5.11'}
+    input_kind: pada_initial_slice
+    padas: ['ప్రాణాపాన', 'దాన సమానములు', 'గానోపెడునది', 'ప్రాణంబననన్నమనఁగఁ']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-NA-NNA], prasa_consonant: ణ}
+  - id: EX-MAITRI-LA-LLA-SANSKRIT
+    rule: PRASA-MAITRI-LA-LLA
+    source: {text: Bhāratam Ādi 3-79, cited_in: '5.14'}
+    input_kind: pada_initial_slice
+    padas: ['అలఘుఁడు', 'బలుఁడు', 'ప్రళయాంతకుఁడు', 'లలిత']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-LA-LLA], prasa_consonant: ల}
+  - id: EX-MAITRI-LA-LLA-TELUGU
+    rule: PRASA-MAITRI-LA-LLA
+    source: {text: Haravilāsam 4-139, cited_in: '5.14'}
+    input_kind: pada_initial_slice
+    padas: ['కులశైలంబులు', 'గలఁగెఁ', 'దలఁకిరి', 'కళవళమయ్యెన్']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-LA-LLA], prasa_consonant: ల}
+  - id: EX-MAITRI-LA-LLA-REAL
+    rule: PRASA-MAITRI-LA-LLA
+    source: {text: Pōtana Bhāgavatam, dataset_id: '10.1-743-క.', meter: కందము}
+    input_kind: full_padas
+    padas: ['జలధర గభీర రవమున', 'నళినదళాక్షుండు దమ్మునామాంకములం', 'బిలిచిన విని ప్రతిఘోషణ', 'ములుజేయుచుఁ బసులు దిరిగెముదమున నధిపా!']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-LA-LLA], prasa_consonant: ల}
+  - id: EX-MAITRI-RU-RA
+    rule: PRASA-MAITRI-RU-RA
+    source: {text: Appakavīyamu 5-3-359, cited_in: '5.15'}
+    input_kind: pada_initial_slice
+    padas: ['ధారుణి', 'గా రేఫ', 'నారికినై', 'బా ఋభుపతి']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-RU-RA], prasa_consonant: ర}
+  - id: EX-MAITRI-RU-RA-2
+    rule: PRASA-MAITRI-RU-RA
+    source: {text: Bhāratam Ādi 3-104, cited_in: '5.15'}
+    input_kind: pada_initial_slice
+    padas: ['ఆ ఋషికుమారు', 'చీరలు', 'హారము', 'భారమునందొక్క']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-RU-RA], prasa_consonant: ఋ}
+  - id: EX-MAITRI-RU-HALSAMYUTA
+    rule: PRASA-MAITRI-RU-HALSAMYUTA
+    source: {text: Bhāratam Ādi 2-175 (క్షత్రియ / క్షత్రియ / చరిత్రము / మాంధాతృ), cited_in: '5.16'}
+    input_kind: pada_initial_slice
+    padas: ['క్షత్రియ', 'క్షత్రియ', 'రిత్రము', 'ధాతృ']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-RU-HALSAMYUTA], prasa_consonant: త్ర}
+  - id: EX-REPHAYUTA-KRARAKOMMU-IDENTITY
+    rule: PRASA-REPHAYUTA-KRARAKOMMU
+    source: {text: Appakavīyamu 5-3-324, cited_in: '5.17 (krārakommus rhyme with repha conjuncts)'}
+    input_kind: pada_initial_slice
+    padas: ['సంగ్రామ', 'చం గ్రుమ్మఱుచున్న', 'నం గ్రుచ్చి', 'చెం గ్రూరాస్త్రములు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-01, PRASA-SAMYUKTA-06], prasa_consonant: గ్ర}
+  - id: EX-REPHAYUTA-KRARAKOMMU-FAIL
+    rule: PRASA-REPHAYUTA-KRARAKOMMU
+    source: {text: constructed (క్రు vs కృ), cited_in: '5.17 (Rule 1)'}
+    input_kind: synthetic
+    padas: ['ఆ క్రుంకె', 'ఆ కృపను', 'ఆ క్రూరత', 'ఆ కృతము']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-REPHAYUTA-KRARAKOMMU]}
+  - id: EX-KRARAVADI-WEIGHT
+    rule: PRASA-PURVAKSHARA-04
+    source: {text: Appakavīyamu 5-3-325, cited_in: '5.17 (Rule 2)'}
+    input_kind: pada_initial_slice
+    padas: ['ఈ క్రార', 'లై క్రాలుచుఁ', 'శ్రీ క్రొమ్ముడి', 'వాక్రువ్వందరమె']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMYUKTA-01], prasa_consonant: క్ర}
+  - id: EX-LAGHUDVITVA
+    rule: PRASA-PURVAKSHARA-04
+    source: {text: Bhāratam Udyōga 4-109, cited_in: '5.18'}
+    input_kind: pada_initial_slice
+    padas: ['ఎద్రిచిన', 'పద్రిచిన', 'విద్రుపఁగఁ', 'జిద్రుపలు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMYUKTA-01], prasa_consonant: ద్ర}
+  - id: EX-VIKALPA
+    rule: PRASA-MAITRI-VIKALPA
+    source: {text: Bhāratam Ādi 7-153, cited_in: '5.19', note: 'భుజ్ని in the notes read as భుఙ్ని'}
+    input_kind: pada_initial_slice
+    padas: ['అగ్ని', 'భుఙ్నివహము', 'డగ్నుల', 'యగ్నియనన్']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-VIKALPA], prasa_consonant: గ్న}
+  - id: EX-VIKALPA-2
+    rule: PRASA-MAITRI-VIKALPA
+    source: {text: Lakṣaṇa Śirōmaṇi 4-413, cited_in: '5.19'}
+    input_kind: pada_initial_slice
+    padas: ['పద్మా', 'పద్మావతిఁ', 'ద్యన్మోదంబునఁ', 'పద్మము']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-VIKALPA], prasa_consonant: ద్మ}
+
+  # ---- deprecated forms (historical profile only) ------------------------------
+  - id: EX-ANUNASIKA
+    rule: PRASA-MAITRI-ANUNASIKA
+    source: {text: Appakavīyamu 5-3-341, cited_in: '5.20'}
+    input_kind: pada_initial_slice
+    padas: ['మిన్నేఱు', 'తన్నాభిని', 'సాంనిధ్యము', 'సంనుతి']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-ANUNASIKA], failing_rules_include: [PRASA-MAITRI-ANUNASIKA], prasa_consonant: న్న}
+  - id: EX-ANUNASIKA-MA
+    rule: PRASA-MAITRI-ANUNASIKA
+    source: {text: Appakavīyamu 5-3-342, cited_in: '5.20'}
+    input_kind: pada_initial_slice
+    padas: ['తమ్ములను', 'మమ్ముల', 'క్తిమ్మురసంహరు', 'సంమదమున']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-ANUNASIKA], prasa_consonant: మ్మ}
+  - id: EX-MBA-MMA
+    rule: PRASA-MAITRI-MBA-MMA
+    source: {text: Sukavimanōrañjanamu citing Bhāratam Ādi 1-76, cited_in: '5.21'}
+    input_kind: pada_initial_slice
+    padas: ['ఇమ్ముగ', 'బమ్మున', 'ధ్రమ్మను', 'ద్యుంబరముం']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-MBA-MMA], prasa_consonant: మ్మ}
+  - id: EX-MBA-MMA-2
+    rule: PRASA-MAITRI-MBA-MMA
+    source: {text: Jaimini Bhāratamu 7-145 (అమ్మఖవాజి / మోవం బసివెట్టి / గ్రంబున / త్రంబయి), cited_in: '5.21'}
+    input_kind: pada_initial_slice
+    padas: ['అమ్మఖవాజి', 'వం బసివెట్టి', 'గ్రంబున', 'త్రంబయి']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-MBA-MMA, PRASA-PURVAKA-01], prasa_consonant: మ్మ}
+  - id: EX-SA-SSA-DEPRECATED
+    rule: PRASA-MAITRI-SA-SSA
+    source: {text: Sāmbavilāsamu 5-3-331, cited_in: '5.13'}
+    input_kind: pada_initial_slice
+    padas: ['వసుధా', 'రసదళ', 'విసరాంబుజ', 'విషమ']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-SA-SSA], prasa_consonant: స}
+  - id: EX-SSA-ADESA-SAHAJA
+    rule: PRASA-MAITRI-SA-SSA
+    source: {text: Traiśaṅkavōpākhyānamu 5-3-330, cited_in: '5.13 (ādēśa-ష with sahaja-ష is samaprāsa)'}
+    input_kind: pada_initial_slice
+    padas: ['ద్విషునకు', 'వృషునకు', 'త్రిషునకు', 'విషమాక్షునకు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: ష}
+  - id: EX-DA-DHA-DEPRECATED
+    rule: PRASA-MAITRI-DA-DHA
+    source: {text: 'ముదము vs బుధులు', cited_in: '5.24.1'}
+    input_kind: synthetic
+    padas: ['ముదము', 'బుధులు']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-DA-DHA], failing_rules_include: [PRASA-MAITRI-DA-DHA]}
+  - id: EX-LA-DA-DEPRECATED
+    rule: PRASA-MAITRI-LA-DA
+    source: {text: constructed (ల against డ), cited_in: '5.14 (la-ḍayōr abhēdaḥ, deprecated)'}
+    input_kind: synthetic
+    padas: ['కలము', 'కడలి', 'జలము', 'పడవ']
+    expected: {strict: false, relaxed: false, historical: true, min_profile: historical, classifications_include: [PRASA-MAITRI-LA-DA], prasa_consonant: ల}
+
+  # ---- forbidden pairs (never accepted, always named) --------------------------
+  - id: EX-VAIRA-RA-RRA
+    rule: PRASA-MAITRI-RA-RRA-ORTHO
+    source: {text: 'Bhāratam Ādi 1-26 (ర) against Bhāgavatam 8-130 (ఱ)', cited_in: '5.22', note: 'the treatise forbids the pair; accepted here as an orthographic relaxation by project decision (2026-09-13)'}
+    input_kind: synthetic
+    padas: ['సారము', 'నారుచి', 'పేఱు', 'ఊఱట']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-RA-RRA-ORTHO], failing_rules_include: [PRASA-MAITRI-RA-RRA-ORTHO], prasa_consonant: ర}
+  - id: EX-VAIRA-TA-DA
+    rule: PRASA-VAIRA-TA-DA
+    source: {text: 'మాట vs జాడ', cited_in: '5.24.2'}
+    input_kind: synthetic
+    padas: ['మాటలు', 'జాడలు']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-VAIRA-TA-DA]}
+  - id: EX-VAIRA-DA-DDA
+    rule: PRASA-VAIRA-DA-DDA
+    source: {text: 'పదము vs కడుపు', cited_in: '5.24.3'}
+    input_kind: synthetic
+    padas: ['పదము', 'కడుపు']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-VAIRA-DA-DDA]}
+  - id: EX-VAIRA-DDA-DDHA
+    rule: PRASA-VAIRA-DDA-DDHA
+    source: {text: 'జడ vs మూఢ', cited_in: '5.24.4'}
+    input_kind: synthetic
+    padas: ['జాడలు', 'మూఢత']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-VAIRA-DDA-DDHA]}
+  - id: EX-VAIRA-RA-LA
+    rule: PRASA-VAIRA-RA-LA
+    source: {text: 'తరము vs తలము', cited_in: '5.24.6'}
+    input_kind: synthetic
+    padas: ['తరము', 'తలము']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-VAIRA-RA-LA]}
+  - id: EX-VAIRA-SVAVARGAJA-EXT
+    rule: PRASA-VAIRA-SVAVARGAJA-EXT
+    source: {text: constructed (క against ఖ), cited_in: '5.24.5'}
+    input_kind: synthetic
+    padas: ['అకట', 'సఖుడు']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-VAIRA-SVAVARGAJA-EXT]}
+  - id: EX-VAIRA-GENERIC
+    rule: PRASA-VAIRA-GENERIC
+    source: {text: constructed (మ against ర — no maitri anywhere), cited_in: 'Prāsamaitri (5.1.13)'}
+    input_kind: synthetic
+    padas: ['కమల', 'తరువు']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-VAIRA-GENERIC]}
+
+  # ---- pre-prāsa weight rule -----------------------------------------------------
+  - id: EX-WEIGHT-FAIL
+    rule: PRASA-PURVAKSHARA-01
+    source: {text: constructed (laghu అ against guru కా/మా/నా with a matching క), cited_in: 'Prāsa Pūrvākṣara Niyama'}
+    input_kind: synthetic
+    padas: ['అకట', 'కాకము', 'మాకులు', 'నాకము']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, classifications_include: [PRASA-SAMA-01], failing_rules_include: [PRASA-PURVAKSHARA-01], prasa_consonant: క}
+  - id: EX-WEIGHT-HRASVA-GURU
+    rule: PRASA-PURVAKSHARA-02
+    source: {text: 'Bhāratam Ādi 1-134 pattern (కు, రా, ర, నా all guru)', cited_in: 'Sūkṣmāṁśamulu 5.2.2 Example 3'}
+    input_kind: synthetic
+    padas: ['కుక్షిని', 'రాక్షస', 'రక్షింప', 'నాక్షయ']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKSHARA-01, PRASA-SAMYUKTA-01], prasa_consonant: క్ష}
+  - id: EX-PRASA-WEIGHT-FREE
+    rule: PRASA-SAMA-10
+    source: {text: 'Manu Caritra 1-67 pattern (నా, దే, గా, గా + వు, వా, విం, వు)', cited_in: 'Sūkṣmāṁśamulu 5.2.2 Example 4'}
+    input_kind: synthetic
+    padas: ['నావు', 'దేవా', 'గావిం', 'గావు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: వ}
+
+  # ---- miscellany ------------------------------------------------------------------
+  - id: EX-LAGHU-YA
+    rule: PRASA-SAMA-11
+    source: {text: Bhāratam Ādi 1-116, cited_in: '5.9'}
+    input_kind: pada_initial_slice
+    padas: ['ఈ యున్న', 'బోయి', 'త్యాయత', 'మా యిన్ని']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: య}
+  - id: EX-LAGHU-YA-2
+    rule: PRASA-SAMA-11
+    source: {text: Bhāgavatam 10-Pūrva-328 (notes edition), cited_in: '5.9'}
+    input_kind: pada_initial_slice
+    padas: ['ఓ యమ్మ', 'మా యిండ్లను', 'పోయెదమెక్కడికైనను', 'మా యన్నల']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: య}
+  - id: EX-SANDHIGATA
+    rule: PRASA-SAMA-12
+    source: {text: 'Appakavīyamu 3-297 (న, నూ, న, ని — తానూరక, క్రియచేనిఁక)', cited_in: 'Sandhigatamu, 5.23'}
+    input_kind: synthetic
+    padas: ['దానవ', 'తానూరక', 'మానవ', 'చేనిఁక']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: న}
+  - id: EX-DANTYA-CA
+    rule: PRASA-SAMA-09
+    source: {text: constructed (dental ౘ against palatal చ), cited_in: '5.1.12'}
+    input_kind: synthetic
+    padas: ['అౘల', 'అచల', 'కౘలి', 'నచలి']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: చ}
+  - id: EX-LU-KARA
+    rule: PRASA-SAMA-04
+    source: {text: 'Rāghava Pāṇḍavīyamu 1-3 (క, కౢ, క, కి)', cited_in: 'ఌ-kāra Sahitamu'}
+    input_kind: synthetic
+    padas: ['నాక', 'నాకౢప్తి', 'నాక', 'నాకి']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: క}
+  - id: EX-DRUTA-SANDHI-READING
+    rule: PRASA-POS-07
+    source: {text: 'constructed on పుత్రున్ కని -> పుత్రుంగని', cited_in: '5.23.2'}
+    input_kind: synthetic
+    padas: ['నిన్ కని', 'చెంగని', 'నింగిని', 'రంగము']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-PURVAKA-01, PRASA-SAMA-01], prasa_consonant: గ}
+  - id: EX-VISARGA-SAHITA
+    rule: PRASA-SAMA-06
+    source: {text: 'Bhāratam Ādi 3-11 (యు, యః, యై, యు)', cited_in: 'Prasākṣaramu – Visarga (following)'}
+    input_kind: synthetic
+    padas: ['నాయు', 'మాయః', 'కాయై', 'రాయు']
+    expected: {strict: true, min_profile: strict, classifications_include: [PRASA-SAMA-01], prasa_consonant: య}
+
+  - id: EX-BINDU-SAMSLESHA-REAL
+    rule: PRASA-MAITRI-BINDU-SAMSLESHA
+    source: {text: Pōtana Bhāgavatam, dataset_id: '10.1-1152-శా.', meter: శార్దూలవిక్రీడితము, note: 'line 4 చున్దర్పంబులు spells the drutam as a conjunct; lines 1–3 have ంద'}
+    input_kind: full_padas
+    padas: ['"ఎందున్నన్నెదిరించి పోరుటకు దేవేంద్రాదులుం జాల రీ', 'బృందారణ్యము మంద నిప్పుడు మదాభీరార్భకుల్ రామ గో', 'విందుల్వర్ధిలుచున్న వారఁట రణోర్వింగంసుని ద్రుంతు మం', 'చున్దర్పంబులు పల్కుచుందు రఁట యీచోద్యంబులన్ వింటిరే?']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-PURVAKA-01, PRASA-MAITRI-BINDU-SAMSLESHA], prasa_consonant: ద}
+  - id: EX-BINDU-SAMSLESHA-SOFTENED
+    rule: PRASA-MAITRI-BINDU-SAMSLESHA
+    source: {text: constructed (ంగ against the fused drutam spelling న్క), cited_in: '5.23.2'}
+    input_kind: synthetic
+    padas: ['చెంగని', 'నిన్కని']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-BINDU-SAMSLESHA], prasa_consonant: గ}
+  - id: EX-DVITVA-ABHEDA-REAL
+    rule: PRASA-SAMYUKTA-03
+    source: {text: Pōtana Bhāgavatam, dataset_id: '10.2-199-శా.', meter: శార్దూలవిక్రీడితము, note: 'ల్ల in lines 1–3, ళ్ల in line 4 — a geminate under ల-ళ abhēda'}
+    input_kind: full_padas
+    padas: ['"ఇల్లాలం గిటియైన కాలమున మున్నేనంచు ఘోషింతు వో!', 'తల్లీ!నిన్నుఁ దలంచి యైన నిచటందన్నుం గృపం గావఁడే!', 'చెల్లంబో! తలఁ ద్రుంచె" నంచు నిల నాక్షేపించు చందంబునన్', 'ద్రెళ్లెంజప్పుడు గాఁగ భూమిసుతుఁ డుద్దీప్తాహవక్షోణిపై.']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-LA-LLA, PRASA-SAMYUKTA-03], prasa_consonant: ల్ల}
+  - id: EX-SARALADESA-NOTE
+    rule: PRASA-SAMA-12
+    source: {text: Pōtana Bhāgavatam, dataset_id: '10.1-715-క.', meter: కందము, note: 'line 4 పైఁబడ: బ is the సరళాదేశ of ప after the arasunna; as written it does not rhyme with ప'}
+    input_kind: full_padas
+    padas: ['నీపాదంబులు నమ్మిన', 'నాపద లెక్కడివి? జనులకత్యుగ్ర మహా', 'దీపిత దావజ్వలనము', 'పైఁబడ కుండెడి విధంబుభావింపఁగదే."']
+    expected: {strict: false, relaxed: false, historical: false, min_profile: null, failing_rules_include: [PRASA-VAIRA-GENERIC], prasa_consonant: ప}
+
+  - id: EX-RA-RRA-ORTHO-REAL
+    rule: PRASA-MAITRI-RA-RRA-ORTHO
+    source: {text: Pōtana Bhāgavatam, dataset_id: '3-43-చ.', meter: చంపకమాల, note: 'ర in lines 1–3, ఱ in line 4 — one of 70 such poems in the corpus'}
+    input_kind: full_padas
+    padas: ['నరవర! వేణుజానలవినష్ట మహాటవిమాడ్కిఁ బాండు భూ', 'వరధృతరాష్ట్ర సూను లనివార్య నిరూఢ విరోధ మెత్తి యొం', 'డొరుల జయింపఁ గోరి కదనోర్విఁ గురుక్షితిపాలముఖ్యు లం', 'దఱుమృతు లౌటయున్ విని ఘనంబుగ శోకనిమగ్నచిత్తుఁడై.']
+    expected: {strict: false, relaxed: true, historical: true, min_profile: relaxed, classifications_include: [PRASA-MAITRI-RA-RRA-ORTHO], failing_rules_include: [PRASA-MAITRI-RA-RRA-ORTHO], prasa_consonant: ర}
+
+# =============================================================================
+#  CORPUS OBSERVATIONS — what the engine sees on dataset/bhagavatam.json
+#  (recorded for provenance; they do not change any rule)
+# =============================================================================
+corpus_observations:
+  - date: "2026-09-13"
+    run: python3 meter_engine/run_corpus.py --dataset dataset/bhagavatam.json --out meter_engine/corpus_runs/bhagavatam
+    scope: all 7366 verse records of dataset/bhagavatam.json (2700 prose records skipped); 4550 poems in prāsa-bearing metres, 2816 in సీసము / తేటగీతి / ఆటవెలది / శ్లోకము
+    corpus_corrections: 9-198 and 10.1-322 relabelled కందము -> ఆటవెలది before this run (dataset/CORRECTIONS.md); they were the only poems with no rhyming pair at all
+    min_profile_distribution: {strict: 4398, relaxed: 142, historical: 3, none: 7}
+    relaxations_used: {PRASA-MAITRI-RA-RRA-ORTHO: 70, PRASA-MAITRI-LA-LLA: 51, PRASA-MAITRI-THA-DHA: 8, PRASA-PURVAKA-04C: 6, PRASA-MAITRI-DA-DHA: 3, PRASA-MAITRI-NA-NNA: 3, PRASA-MAITRI-SA-SHA: 2, PRASA-MAITRI-RU-HALSAMYUTA: 1, PRASA-MAITRI-BINDU-SAMSLESHA: 1}
+    notes:
+      - >
+        ర/ఱ mixing occurs in 70 poems (1.5%).  By project decision (2026-09-13) it is accepted as an
+        orthographic relaxation (PRASA-MAITRI-RA-RRA-ORTHO) because printed corpora do not distinguish
+        the two letters reliably; the treatise's prāsavairamu (PRASA-VAIRA-RA-RRA) is kept as a
+        superseded statement and is named in the trail of every such poem.
+      - >
+        The seven remaining non-matches are genuine as printed: 6-523-క. (డే against ర, probably an
+        edition slip), 10.1-715-క. (పైఁబడ — సరళాదేశ బ against ప), 3-616-క. (ంబు against మ),
+        10.1-1009-క. (భ్రాంతి — bindu-pūrvaka త against plain త), 10.1-550-క. (ద్జ్ఞ against జ్ఞ),
+        12-29-క. (ర్య against ర), 3-151-క. (pre-prāsa weight: సీరుహ straddles the pāda boundary).
+      - >
+        ల-ళ abhēda is the commonest treatise relaxation in the corpus (51 poems); saṁyuktākṣara prāsa
+        occurs in 587 poems (368 of them geminates) and pūrṇabindu-pūrvaka prāsa in 326.

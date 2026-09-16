@@ -1,0 +1,34 @@
+digraph "kandamu" {
+  rankdir=LR; fontname="Helvetica,Arial,sans-serif"; labelloc=b; fontsize=11;
+  label="కందము  ·  kandamu  ·  jati\n4 lines per unit, slot pattern: odd even odd even\naksharas per line: 6–20  ·  prāsa: yes  ·  prāsa-yati: no\nstanza rule: first_akshara_weight_uniform";
+  node [shape=box, style="rounded,filled", fontname="Helvetica,Arial,sans-serif", fontsize=10, fillcolor="#f4f4f4"];
+  edge [color="#607d8b", arrowsize=0.7];
+  subgraph "cluster_odd" {
+    label="slot odd  (lines 1, 3)"; style="rounded,dashed"; color="#90a4ae"; fontsize=10;
+    "odd_start" [shape=circle, label="", width=0.18, fillcolor="#37474f"];
+    "odd_end" [shape=doublecircle, label="", width=0.18, fillcolor="#37474f"];
+    "odd_G1" [label="G1\nభ UII  ·  స IIU\nనల IIII  ·  గా UU", fillcolor="#f4f4f4"];
+    "odd_start" -> "odd_G1";
+    "odd_G2" [label="G2\nభ UII  ·  జ IUI\nస IIU  ·  నల IIII\nగా UU", fillcolor="#f4f4f4"];
+    "odd_G1" -> "odd_G2";
+    "odd_G3" [label="G3\nభ UII  ·  స IIU\nనల IIII  ·  గా UU", fillcolor="#f4f4f4"];
+    "odd_G2" -> "odd_G3";
+    "odd_G3" -> "odd_end";
+  }
+  subgraph "cluster_even" {
+    label="slot even  (lines 2, 4)"; style="rounded,dashed"; color="#90a4ae"; fontsize=10;
+    "even_start" [shape=circle, label="", width=0.18, fillcolor="#37474f"];
+    "even_end" [shape=doublecircle, label="", width=0.18, fillcolor="#37474f"];
+    "even_G1" [label="G1\nభ UII  ·  జ IUI\nస IIU  ·  నల IIII\nగా UU", fillcolor="#f4f4f4"];
+    "even_start" -> "even_G1";
+    "even_G2" [label="G2\nభ UII  ·  స IIU\nనల IIII  ·  గా UU", fillcolor="#f4f4f4"];
+    "even_G1" -> "even_G2";
+    "even_G3" [label="G3\nజ IUI  ·  నల IIII", fillcolor="#f4f4f4"];
+    "even_G2" -> "even_G3";
+    "even_G4" [label="G4\nభ UII  ·  స IIU\nనల IIII  ·  గా UU\n◆ యతి (gana start)", fillcolor="#ffe082"];
+    "even_G3" -> "even_G4";
+    "even_G5" [label="G5\nస IIU  ·  గా UU", fillcolor="#f4f4f4"];
+    "even_G4" -> "even_G5";
+    "even_G5" -> "even_end";
+  }
+}

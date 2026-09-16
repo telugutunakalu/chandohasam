@@ -1,0 +1,873 @@
+meters:
+- id: 1
+  name: utpalamala
+  padalu: 4
+  no_of_ganas: [7, 7, 7, 7]
+  aksharalu: {min: 20, max: 20}
+  ganalu: భ, ర, న, భ, భ, ర, వ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 10]
+  - [1, 10]
+  - [1, 10]
+  - [1, 10]
+  prasa: true
+  prasa_yati: false
+  udaharana: పుణ్యుఁడు రామచంద్రుఁ డట పోయి ముదంబునఁ గాంచె దండకారణ్యముఁ దాపసో త్తమశరణ్యము నుద్దత బర్హి...
+  structure:
+    system: fixed
+    slots:
+      all: [భ, ర, న, భ, భ, ర, వ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [10]
+- id: 2
+  name: champakamala
+  padalu: 4
+  no_of_ganas: [7, 7, 7, 7]
+  aksharalu: {min: 21, max: 21}
+  ganalu: న, జ, భ, జ, జ, జ, ర
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 11]
+  - [1, 11]
+  - [1, 11]
+  - [1, 11]
+  prasa: true
+  prasa_yati: false
+  udaharana: పదములఁ బట్టినం దలకుబా టొకయింతయు లేక శూరతన్ మదగజవల్లభుండు ధృతిమంతుఁడు దంత యుగాంత ఘట్టనం జెదరఁగఁ జిమ్మె
+    న మ్మకరి చిప్పలు పాదులు దప్ప నొప్పఱన్ వదలి జలగ్రహంబు కరి వాలముమూలముఁ జీరెఁ గోరులన్.
+  structure:
+    system: fixed
+    slots:
+      all: [న, జ, భ, జ, జ, జ, ర]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [11]
+- id: 3
+  name: mattebhavikriditamu
+  padalu: 4
+  no_of_ganas: [7, 7, 7, 7]
+  aksharalu: {min: 20, max: 20}
+  ganalu: స, భ, ర, న, మ, య, వ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 14]
+  - [1, 14]
+  - [1, 14]
+  - [1, 14]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [స, భ, ర, న, మ, య, వ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [14]
+- id: 4
+  name: sardulavikriditamu
+  padalu: 4
+  no_of_ganas: [7, 7, 7, 7]
+  aksharalu: {min: 19, max: 19}
+  ganalu: మ, స, జ, స, త, త, గ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 13]
+  - [1, 13]
+  - [1, 13]
+  - [1, 13]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [మ, స, జ, స, త, త, గ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [13]
+- id: 5
+  name: sragdhara
+  padalu: 4
+  no_of_ganas: [7, 7, 7, 7]
+  aksharalu: {min: 21, max: 21}
+  ganalu: మ, ర, భ, న, య, య, య
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 8, 15]
+  - [1, 8, 15]
+  - [1, 8, 15]
+  - [1, 8, 15]
+  prasa: true
+  prasa_yati: false
+  udaharana: కూలున్ గుఱ్ఱంబు లేనుంగులు ధరఁ గెడయుం గుప్పలై నుగ్గునూచై వ్రాలున్ దేరుల్ హతంబై వడిఁబడు సుభటవ్రాతముల్...
+  structure:
+    system: fixed
+    slots:
+      all: [మ, ర, భ, న, య, య, య]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [8, 15]
+- id: 6
+  name: mahasragdhara
+  padalu: 4
+  no_of_ganas: [8, 8, 8, 8]
+  aksharalu: {min: 22, max: 22}
+  ganalu: స, త, త, న, స, ర, ర, గ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 9, 16]
+  - [1, 9, 16]
+  - [1, 9, 16]
+  - [1, 9, 16]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [స, త, త, న, స, ర, ర, గ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [9, 16]
+- id: 7
+  name: totakamu
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 12, max: 12}
+  ganalu: స, స, స, స
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  prasa: true
+  prasa_yati: false
+  udaharana: కరుణాకర! శ్రీకర! కంబుకరా! శరణాగతసంగతజాడ్యహరా! పరిరక్షితశిక్షితభక్తమురా! కరిరాజశుభప్రద! కాంతిధరా!
+  structure:
+    system: fixed
+    slots:
+      all: [స, స, స, స]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [9]
+- id: 8
+  name: bhujangaprayatamu
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 12, max: 12}
+  ganalu: య, య, య, య
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  prasa: true
+  prasa_yati: false
+  udaharana: హరించుం గలిప్రేరితాఘంబు లెల్లన్ భరించున్ ధరన్ రామభధ్రుండుఁ బోలెన్ జరించున్ సదా వేదశాస్త్రానువృత్తిన్
+    వరించున్ విశేషించి వైకుంఠుభక్తిన్.
+  structure:
+    system: fixed
+    slots:
+      all: [య, య, య, య]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [8]
+- id: 9
+  name: mattakokilamu
+  padalu: 4
+  no_of_ganas: [6, 6, 6, 6]
+  aksharalu: {min: 18, max: 18}
+  ganalu: ర, స, జ, జ, భ, ర
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 11]
+  - [1, 11]
+  - [1, 11]
+  - [1, 11]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [ర, స, జ, జ, భ, ర]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [11]
+- id: 10
+  name: pamcacamaramu
+  padalu: 4
+  no_of_ganas: [6, 6, 6, 6]
+  aksharalu: {min: 16, max: 16}
+  ganalu: జ, ర, జ, ర, జ, గ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 10]
+  - [1, 10]
+  - [1, 10]
+  - [1, 10]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [జ, ర, జ, ర, జ, గ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [10]
+- id: 11
+  name: vasamtatilakamu
+  padalu: 4
+  no_of_ganas: [5, 5, 5, 5]
+  aksharalu: {min: 14, max: 14}
+  ganalu: త, భ, జ, జ, గా
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [త, భ, జ, జ, గా]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [8]
+- id: 12
+  name: indravajra
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 11, max: 11}
+  ganalu: త, త, జ, గా
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [త, త, జ, గా]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [8]
+- id: 13
+  name: upendravajra
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 11, max: 11}
+  ganalu: జ, త, జ, గా
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  - [1, 8]
+  prasa: true
+  prasa_yati: false
+  udaharana: తపస్వి వాక్యంబులు దప్పవయ్యెన్; నెపంబునం గంటిమి నిన్నుఁ జూడన్ తపంబు లొప్పెన్...
+  structure:
+    system: fixed
+    slots:
+      all: [జ, త, జ, గా]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [8]
+- id: 14
+  name: salini
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 11, max: 11}
+  ganalu: మ, త, త, గా
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 7]
+  - [1, 7]
+  - [1, 7]
+  - [1, 7]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [మ, త, త, గా]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [7]
+- id: 15
+  name: rathoddhata
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 11, max: 11}
+  ganalu: ర, న, ర, వ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 7]
+  - [1, 7]
+  - [1, 7]
+  - [1, 7]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [ర, న, ర, వ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [7]
+- id: 16
+  name: sragvini
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 12, max: 12}
+  ganalu: ర, ర, ర, ర
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 7]
+  - [1, 7]
+  - [1, 7]
+  - [1, 7]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [ర, ర, ర, ర]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [7]
+- id: 17
+  name: vidyunmala
+  padalu: 4
+  no_of_ganas: [3, 3, 3, 3]
+  aksharalu: {min: 8, max: 8}
+  ganalu: మ, మ, గా
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 5]
+  - [1, 5]
+  - [1, 5]
+  - [1, 5]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [మ, మ, గా]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [5]
+- id: 18
+  name: lalita
+  padalu: 4
+  no_of_ganas: [4, 4, 4, 4]
+  aksharalu: {min: 12, max: 12}
+  ganalu: త, భ, జ, ర
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: fixed
+    slots:
+      all: [త, భ, జ, ర]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [9]
+- id: 20
+  name: kandamu
+  padalu: 4
+  no_of_ganas: [3, 5, 3, 5]
+  aksharalu: {min: 6, max: 20}
+  ganalu: 1,3 పాదాలలో 3 గణములు; 2,4 పాదాలలో 5 గణములు (భ,జ,స,నల,గా మాత్రమే)
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [0, 0]
+  - [1, 4]
+  - [0, 0]
+  - [1, 4]
+  prasa: true
+  prasa_yati: false
+  udaharana: భూథలనాథుఁడు రాముఁడు ప్రీతుండై పెండ్లియాడెఁ బృథుగుణమణి సంఘాతన్ భాగ్యోపేతన్ సీతన్ ముఖకాంతివిజిత సితఖద్యోతన్.
+  structure:
+    system: gana
+    slots:
+      odd: [kanda, kanda, kanda]
+      even: [kanda, kanda, kanda, kanda, kanda]
+    slot_pattern: [odd, even, odd, even]
+    yati_ganas:
+      odd: []
+      even: [4]
+    constraints:
+    - rule: forbid_gana
+      slot: odd
+      positions: [1, 3]
+      gana: జ
+      why: జగణము బేసి గణములలో (1,3,5,7) రాకూడదు
+    - rule: forbid_gana
+      slot: even
+      positions: [2, 4]
+      gana: జ
+      why: జగణము బేసి గణములలో (1,3,5,7) రాకూడదు — even line ganas 2,4 are half-ganas 5,7
+    - rule: require_gana
+      slot: even
+      positions: [3]
+      gana: [జ, నల]
+      why: ఆరవ గణము జగణము లేదా నలము
+    - {rule: line_ends_with, slot: even, weight: U, why: పాదాంతమున (అర్ధభాగాంతమున) గురువు}
+    stanza_constraints:
+    - {rule: first_akshara_weight_uniform, why: 'మొదటి అక్షరము గురువైన అన్ని పాదములలో గురువు, లఘువైన లఘువు — verify against
+        Appakaviyamu'}
+- id: 22
+  name: utsahamu
+  padalu: 4
+  no_of_ganas: [8, 8, 8, 8]
+  aksharalu: {min: 15, max: 22}
+  ganalu: 7 సూర్యగణములు + గురువు
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 5]
+  - [1, 5]
+  - [1, 5]
+  - [1, 5]
+  prasa: true
+  prasa_yati: false
+  udaharana: సాహచర్య మమర సప్త సవితృవర్గమతి సము త్సాహ మెక్క నొక్క గురుఁడు చరణములు భజింపఁగా
+  structure:
+    system: gana
+    slots:
+      all: [surya, surya, surya, surya, surya, surya, surya, గ]
+    slot_pattern: [all, all, all, all]
+    yati_ganas: [5]
+- id: 23
+  name: taruvoja
+  padalu: 4
+  no_of_ganas: [8, 8, 8, 8]
+  aksharalu: {min: 22, max: 30}
+  ganalu: 3 ఇంద్ర, 1 సూర్య, 3 ఇంద్ర, 1 సూర్య
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 3, 5, 7]
+  - [1, 3, 5, 7]
+  - [1, 3, 5, 7]
+  - [1, 3, 5, 7]
+  prasa: true
+  prasa_yati: false
+  udaharana: ఏ నెల్ల ప్రొద్దు నా యెడ లోనఁ దలఁతు నీయభిప్రాయంబ యిది దారుణంబు
+  structure:
+    system: gana
+    slots:
+      all: [indra, indra, indra, surya, indra, indra, indra, surya]
+    slot_pattern: [all, all, all, all]
+    yati_ganas: [3, 5, 7]
+- id: 24
+  name: dvipada
+  padalu: 2
+  no_of_ganas: [4, 4]
+  aksharalu: {min: 11, max: 15}
+  ganalu: 3 ఇంద్ర, 1 సూర్య
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 3]
+  - [1, 3]
+  prasa: true
+  prasa_yati: false
+  udaharana: శ్రీకామినీనాధుజితదైత్యనాధు లోకరక్షణకృత్యులోకైకనిత్యు
+  structure:
+    system: gana
+    slots:
+      all: [indra, indra, indra, surya]
+    slot_pattern: [all, all]
+    yati_ganas: [3]
+    repeatable: true
+- id: 25
+  name: madhyakkara
+  padalu: 4
+  no_of_ganas: [6, 6, 6, 6]
+  aksharalu: {min: 16, max: 22}
+  ganalu: 2 ఇంద్ర, 1 సూర్య, 2 ఇంద్ర, 1 సూర్య
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 4]
+  - [1, 4]
+  - [1, 4]
+  - [1, 4]
+  prasa: true
+  prasa_yati: false
+  structure:
+    system: gana
+    slots:
+      all: [indra, indra, surya, indra, indra, surya]
+    slot_pattern: [all, all, all, all]
+    yati_ganas: [4]
+- id: 27
+  name: madhuragati_ragada
+  padalu: 2
+  no_of_ganas: [4, 4]
+  aksharalu: {min: 8, max: 16}
+  ganalu: 4 చతుర్మాత్రా గణములు
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 3]
+  - [1, 3]
+  prasa: true
+  prasa_yati: true
+  udaharana: శ్రీవనితాధిపుఁ జేరి భజింపుఁడు
+  structure:
+    system: matra
+    slots:
+      all: [m4, m4, m4, m4]
+    slot_pattern: [all, all]
+    yati_ganas: [3]
+    repeatable: true
+- id: 28
+  name: turagagati_ragada
+  padalu: 4
+  no_of_ganas: [8, 8, 8, 8]
+  aksharalu: {min: 16, max: 24}
+  ganalu: 8 త్రిమాత్రా గణములు
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 5]
+  - [1, 5]
+  - [1, 5]
+  - [1, 5]
+  prasa: true
+  prasa_yati: true
+  structure:
+    system: matra
+    slots:
+      all: [m3, m3, m3, m3, m3, m3, m3, m3]
+    slot_pattern: [all, all, all, all]
+    yati_ganas: [5]
+    repeatable: true
+- id: 29
+  name: hayapracara_ragada
+  padalu: 2
+  no_of_ganas: [4, 4]
+  aksharalu: {min: 8, max: 12}
+  ganalu: 4 త్రిమాత్రా గణములు
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 3]
+  - [1, 3]
+  prasa: true
+  prasa_yati: true
+  udaharana: తెల్లగ పడె తిన్నగ పడె
+  structure:
+    system: matra
+    is_variant_of: turagagati_ragada
+    slots:
+      all: [m3, m3, m3, m3]
+    slot_pattern: [all, all]
+    yati_ganas: [3]
+    repeatable: true
+- id: 30
+  name: seesamu
+  padalu: 4
+  no_of_ganas: [8, 8, 8, 8]
+  aksharalu: {min: 22, max: 36}   # 36 = the all-laghu form: 6 నలల (5) + 2 న (3), Pothana 11-72-ససీ.
+  ganalu: 6 ఇంద్ర గణములు, 2 సూర్య గణములు
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 3, 7]
+  - [1, 3, 7]
+  - [1, 3, 7]
+  - [1, 3, 7]
+  prasa: false
+  prasa_yati: true
+  structure:
+    system: gana
+    slots:
+      all: [indra, indra, indra, indra, indra, indra, surya, surya]
+      laghu: [నలల, నలల, నలల, నలల, నలల, నలల, న, న]   # సర్వలఘు సీసము: the all-laghu indra is the 5-matra నలల (IIIII), not నల
+    slot_pattern: [all, all, all, all]
+    alt_slot_patterns:
+    - [laghu, laghu, laghu, laghu]   # a stanza is either wholly regular or wholly all-laghu, never mixed
+    yati_ganas: [3, 7]
+    followed_by: [ataveladi, tetagiti]
+    halves_per_line: 2   # each pada is printed as two half-lines (yati at gana 3 and 7 = halves of 4 ganas)
+    notes: the all-laghu form (సర్వలఘు సీసము, Pothana 11-72) is the alternative slot pattern of this meter
+- id: 32
+  name: ataveladi
+  padalu: 4
+  no_of_ganas: [5, 5, 5, 5]
+  aksharalu: {min: 10, max: 17}
+  ganalu: 1,3 పాదాలలో 3 సూర్య + 2 ఇంద్ర; 2,4 పాదాలలో 5 సూర్య
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 4]
+  - [1, 4]
+  - [1, 4]
+  - [1, 4]
+  prasa: false
+  prasa_yati: true
+  udaharana: ఇనగణత్రయంబునింద్రద్వయంబును హంసపంచకంబు నాటి వెలది
+  structure:
+    system: gana
+    slots:
+      odd: [surya, surya, surya, indra, indra]
+      even: [surya, surya, surya, surya, surya]
+    slot_pattern: [odd, even, odd, even]
+    yati_ganas: [4]
+- id: 33
+  name: tetagiti
+  padalu: 4
+  no_of_ganas: [5, 5, 5, 5]
+  aksharalu: {min: 12, max: 17}
+  ganalu: 1 సూర్య, 2 ఇంద్ర, 2 సూర్య
+  gana_type: variable
+  yati_exists: true
+  yati_type: ganayati
+  yati:
+  - [1, 4]
+  - [1, 4]
+  - [1, 4]
+  - [1, 4]
+  prasa: false
+  prasa_yati: true
+  structure:
+    system: gana
+    slots:
+      all: [surya, indra, indra, surya, surya]
+    slot_pattern: [all, all, all, all]
+    yati_ganas: [4]
+- id: 34
+  name: taralamu
+  padalu: 4
+  no_of_ganas: [7, 7, 7, 7]
+  aksharalu: {min: 19, max: 19}
+  ganalu: న, భ, ర, స, జ, జ, గ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 12]
+  - [1, 12]
+  - [1, 12]
+  - [1, 12]
+  prasa: true
+  prasa_yati: false
+  udaharana: పరమపావన! విశ్వభావన! బాంధవప్రకరావనా! (భాగవతము 3-1053)
+  structure:
+    system: fixed
+    slots:
+      all: [న, భ, ర, స, జ, జ, గ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [12]
+- id: 35
+  name: malini
+  padalu: 4
+  no_of_ganas: [5, 5, 5, 5]
+  aksharalu: {min: 15, max: 15}
+  ganalu: న, న, మ, య, య
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  prasa: true
+  prasa_yati: false
+  udaharana: సకల నిగమవేద్యున్‌ సంసృతివ్యాధివైద్యున్‌ మకుటవిమలమూర్తిన్‌ మాలినీవృత్త పూర్తిన్‌
+  structure:
+    system: fixed
+    slots:
+      all: [న, న, మ, య, య]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [9]
+- id: 36
+  name: manini
+  padalu: 4
+  no_of_ganas: [8, 8, 8, 8]
+  aksharalu: {min: 22, max: 22}
+  ganalu: భ, భ, భ, భ, భ, భ, భ, గ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 7, 13, 19]
+  - [1, 7, 13, 19]
+  - [1, 7, 13, 19]
+  - [1, 7, 13, 19]
+  prasa: true
+  prasa_yati: false
+  udaharana: కొన్నెలపువ్వును గోఱలపాఁగయుఁ గూర్చిన కెంజడ కొప్పునకున్‌
+  structure:
+    system: fixed
+    slots:
+      all: [భ, భ, భ, భ, భ, భ, భ, గ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [7, 13, 19]
+    halves_per_line: 2
+    notes: Pothana prints each pāda as two half-lines (10.1-214); both printings are identified
+- id: 37
+  name: kavirajavirajitamu
+  padalu: 4
+  no_of_ganas: [8, 8, 8, 8]
+  aksharalu: {min: 23, max: 23}
+  ganalu: న, జ, జ, జ, జ, జ, జ, వ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 8, 14, 20]
+  - [1, 8, 14, 20]
+  - [1, 8, 14, 20]
+  - [1, 8, 14, 20]
+  prasa: true
+  prasa_yati: false
+  udaharana: కమలదళంబులకైవడిఁ జెన్నగు కన్నులు జారుముఖప్రభలున్‌
+  structure:
+    system: fixed
+    slots:
+      all: [న, జ, జ, జ, జ, జ, జ, వ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [8, 14, 20]
+- id: 38
+  name: vanamayuramu
+  padalu: 4
+  no_of_ganas: [5, 5, 5, 5]
+  aksharalu: {min: 14, max: 14}
+  ganalu: భ, జ, స, న, గా
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  - [1, 9]
+  prasa: true
+  prasa_yati: false
+  udaharana: ఉన్నతములై వనమయూరకృతులోలిన్ ఎన్నగ భజంబులపయిన్ సనగగంబుల్
+  structure:
+    system: fixed
+    slots:
+      all: [భ, జ, స, న, గా]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [9]
+- id: 39
+  name: mangalamahasri
+  padalu: 4
+  no_of_ganas: [9, 9, 9, 9]
+  aksharalu: {min: 26, max: 26}
+  ganalu: భ, జ, స, న, భ, జ, స, న, గా
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 9, 17]
+  - [1, 9, 17]
+  - [1, 9, 17]
+  - [1, 9, 17]
+  prasa: true
+  prasa_yati: false
+  udaharana: చిత్తములఁ జూపులను జిత్తజుని తండ్రిపయిఁ జెంది గజదంతియతు లొందన్‌
+  structure:
+    system: fixed
+    slots:
+      all: [భ, జ, స, న, భ, జ, స, న, గా]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [9, 17]
+- id: 40
+  name: layagrahi
+  padalu: 4
+  no_of_ganas: [10, 10, 10, 10]
+  aksharalu: {min: 30, max: 30}
+  ganalu: భ, జ, స, న, భ, జ, స, న, భ, య
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 9, 17, 25]
+  - [1, 9, 17, 25]
+  - [1, 9, 17, 25]
+  - [1, 9, 17, 25]
+  prasa: true
+  prasa_yati: true
+  udaharana: కమ్మని లతంతముల కుమ్మొనసి వచ్చు మధు పమ్ముల సుగీతనిన దమ్ములెసఁగెం జూ
+  structure:
+    system: fixed
+    slots:
+      all: [భ, జ, స, న, భ, జ, స, న, భ, య]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [9, 17, 25]
+    halves_per_line: 2
+    notes: the yati points take ప్రాసయతి (the second akshara of each segment rhymes with the pāda's prāsa), not yati-maitri; Pothana prints each pāda as two half-lines
+- id: 41
+  name: layavibhati
+  padalu: 4
+  no_of_ganas: [12, 12, 12, 12]
+  aksharalu: {min: 34, max: 34}
+  ganalu: న, స, న, న, స, న, న, స, న, న, స, గ
+  gana_type: fixed
+  yati_exists: true
+  yati_type: aksharayati
+  yati:
+  - [1, 10, 19, 28]
+  - [1, 10, 19, 28]
+  - [1, 10, 19, 28]
+  - [1, 10, 19, 28]
+  prasa: true
+  prasa_yati: true
+  udaharana: అలికులము నీలముల చెలువము వహింప నవడళముల హరిన్మణుల పొలుపు నదలిర్పన్
+  structure:
+    system: fixed
+    slots:
+      all: [న, స, న, న, స, న, న, స, న, న, స, గ]
+    slot_pattern: [all, all, all, all]
+    yati_aksharas: [10, 19, 28]
+    halves_per_line: 2
+    notes: the yati points take ప్రాసయతి (the second akshara of each segment rhymes with the pāda's prāsa), not yati-maitri; Pothana prints each pāda as two half-lines

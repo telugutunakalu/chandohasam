@@ -1,0 +1,28 @@
+digraph "taruvoja" {
+  rankdir=LR; fontname="Helvetica,Arial,sans-serif"; labelloc=b; fontsize=11;
+  label="తరువోజ  ·  taruvoja  ·  jati\n4 lines per unit, slot pattern: all all all all\naksharas per line: 22–30  ·  prāsa: yes  ·  prāsa-yati: no";
+  node [shape=box, style="rounded,filled", fontname="Helvetica,Arial,sans-serif", fontsize=10, fillcolor="#f4f4f4"];
+  edge [color="#607d8b", arrowsize=0.7];
+  subgraph "cluster_all" {
+    label="slot all  (lines 1, 2, 3, 4)"; style="rounded,dashed"; color="#90a4ae"; fontsize=10;
+    "all_start" [shape=circle, label="", width=0.18, fillcolor="#37474f"];
+    "all_end" [shape=doublecircle, label="", width=0.18, fillcolor="#37474f"];
+    "all_G1" [label="G1\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI", fillcolor="#f4f4f4"];
+    "all_start" -> "all_G1";
+    "all_G2" [label="G2\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI", fillcolor="#f4f4f4"];
+    "all_G1" -> "all_G2";
+    "all_G3" [label="G3\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI\n◆ యతి (gana start)", fillcolor="#ffe082"];
+    "all_G2" -> "all_G3";
+    "all_G4" [label="G4\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "all_G3" -> "all_G4";
+    "all_G5" [label="G5\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI\n◆ యతి (gana start)", fillcolor="#ffe082"];
+    "all_G4" -> "all_G5";
+    "all_G6" [label="G6\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI", fillcolor="#f4f4f4"];
+    "all_G5" -> "all_G6";
+    "all_G7" [label="G7\nభ UII  ·  ర UIU\nత UUI  ·  నల IIII\nనగ IIIU  ·  సల IIUI\n◆ యతి (gana start)", fillcolor="#ffe082"];
+    "all_G6" -> "all_G7";
+    "all_G8" [label="G8\nన III  ·  హ UI", fillcolor="#f4f4f4"];
+    "all_G7" -> "all_G8";
+    "all_G8" -> "all_end";
+  }
+}

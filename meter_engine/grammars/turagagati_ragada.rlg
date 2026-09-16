@@ -1,0 +1,316 @@
+# తురగగతి_రగడ · turagagati_ragada — prosodic grammar (jati, 4 lines, repeatable, 16–24 aksharas per line)
+# generated from meter_rules.yaml by indic_meter_dawg; do not edit by hand
+#
+# One grammar, three forms: (1) hierarchical, for reading; (2) right-linear, the same language flattened;
+# (3) strict, one symbol per production = the prosodic automaton. All three generate exactly the same poems.
+#
+# Terminals: U = guru (2 matras), I = laghu (1 matra), ⏎ = line separator.
+# Nonterminals: Poem, Unit, Line_<slot>, gana classes (Surya, Indra, Kanda, M4 …), ganas (భ, ర, …).
+#   Kanda−జ  = the class minus జ (a constraint removed it)   Kanda=జ|నల = only జ or నల allowed
+#   Kanda$U  = only members ending in a guru                   X⟨U⟩ = inside the branch where every line starts with U
+#   L2.G3    = line 2, about to read gana 3 (forms 2 and 3)
+#   A_UUI_2  = inside alternative UUI of A, 2 symbols already read (form 3 only)
+
+# ===== 1. Hierarchical: Poem → lines → gana classes → ganas → symbols
+# poem
+Poem → Unit | Unit ⏎ Poem                        # one unit
+Unit → Line ⏎ Line ⏎ Line ⏎ Line                 # 4 lines
+
+# lines
+Line → M3 M3 M3 M3 M3 M3 M3 M3                   # slot all: 8 ganas
+
+# gana classes
+M3 → వ | హ | న                                   # class m3
+
+# ganas → symbols
+వ → I U                                          # va, 3 matras
+హ → U I                                          # ha, 3 matras
+న → I I I                                        # na, 3 matras
+
+# ===== 2. Right-linear (A → wB | w) over {U, I, ⏎}: the hierarchy flattened
+Poem → IU L1.G2 | UI L1.G2 | III L1.G2
+L1.G1 → IU L1.G2 | UI L1.G2 | III L1.G2
+L1.G2 → IU L1.G3 | UI L1.G3 | III L1.G3
+L1.G3 → IU L1.G4 | UI L1.G4 | III L1.G4
+L1.G4 → IU L1.G5 | UI L1.G5 | III L1.G5
+L1.G5 → IU L1.G6 | UI L1.G6 | III L1.G6
+L1.G6 → IU L1.G7 | UI L1.G7 | III L1.G7
+L1.G7 → IU L1.G8 | UI L1.G8 | III L1.G8
+L1.G8 → IU⏎ L2.G1 | UI⏎ L2.G1 | III⏎ L2.G1
+L2.G1 → IU L2.G2 | UI L2.G2 | III L2.G2
+L2.G2 → IU L2.G3 | UI L2.G3 | III L2.G3
+L2.G3 → IU L2.G4 | UI L2.G4 | III L2.G4
+L2.G4 → IU L2.G5 | UI L2.G5 | III L2.G5
+L2.G5 → IU L2.G6 | UI L2.G6 | III L2.G6
+L2.G6 → IU L2.G7 | UI L2.G7 | III L2.G7
+L2.G7 → IU L2.G8 | UI L2.G8 | III L2.G8
+L2.G8 → IU⏎ L3.G1 | UI⏎ L3.G1 | III⏎ L3.G1
+L3.G1 → IU L3.G2 | UI L3.G2 | III L3.G2
+L3.G2 → IU L3.G3 | UI L3.G3 | III L3.G3
+L3.G3 → IU L3.G4 | UI L3.G4 | III L3.G4
+L3.G4 → IU L3.G5 | UI L3.G5 | III L3.G5
+L3.G5 → IU L3.G6 | UI L3.G6 | III L3.G6
+L3.G6 → IU L3.G7 | UI L3.G7 | III L3.G7
+L3.G7 → IU L3.G8 | UI L3.G8 | III L3.G8
+L3.G8 → IU⏎ L4.G1 | UI⏎ L4.G1 | III⏎ L4.G1
+L4.G1 → IU L4.G2 | UI L4.G2 | III L4.G2
+L4.G2 → IU L4.G3 | UI L4.G3 | III L4.G3
+L4.G3 → IU L4.G4 | UI L4.G4 | III L4.G4
+L4.G4 → IU L4.G5 | UI L4.G5 | III L4.G5
+L4.G5 → IU L4.G6 | UI L4.G6 | III L4.G6
+L4.G6 → IU L4.G7 | UI L4.G7 | III L4.G7
+L4.G7 → IU L4.G8 | UI L4.G8 | III L4.G8
+L4.G8 → IU | IU⏎ L1.G1 | UI | UI⏎ L1.G1 | III | III⏎ L1.G1
+
+# ===== 3. Strict (A → aB | a): 250 productions, 182 states;
+# minimized prosodic automaton: 100 states. Every production is commented.
+Poem → I Poem_IU_1                # వ va: symbol 1/2 read, 1 to go
+Poem_IU_1 → U L1.G2               # వ va: symbol 2/2, complete → L1.G2
+L1.G1 → I L1.G1_IU_1              # వ va: symbol 1/2 read, 1 to go
+L1.G1_IU_1 → U L1.G2              # వ va: symbol 2/2, complete → L1.G2
+Poem → U Poem_UI_1                # హ ha: symbol 1/2 read, 1 to go
+Poem_UI_1 → I L1.G2               # హ ha: symbol 2/2, complete → L1.G2
+L1.G1 → U L1.G1_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L1.G1_UI_1 → I L1.G2              # హ ha: symbol 2/2, complete → L1.G2
+Poem → I Poem_III_1               # న na: symbol 1/3 read, 2 to go
+Poem_III_1 → I Poem_III_2         # న na: symbol 2/3 read, 1 to go
+Poem_III_2 → I L1.G2              # న na: symbol 3/3, complete → L1.G2
+L1.G1 → I L1.G1_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G1_III_1 → I L1.G1_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G1_III_2 → I L1.G2             # న na: symbol 3/3, complete → L1.G2
+L1.G2 → I L1.G2_IU_1              # వ va: symbol 1/2 read, 1 to go
+L1.G2_IU_1 → U L1.G3              # వ va: symbol 2/2, complete → L1.G3
+L1.G2 → U L1.G2_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L1.G2_UI_1 → I L1.G3              # హ ha: symbol 2/2, complete → L1.G3
+L1.G2 → I L1.G2_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G2_III_1 → I L1.G2_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G2_III_2 → I L1.G3             # న na: symbol 3/3, complete → L1.G3
+L1.G3 → I L1.G3_IU_1              # వ va: symbol 1/2 read, 1 to go
+L1.G3_IU_1 → U L1.G4              # వ va: symbol 2/2, complete → L1.G4
+L1.G3 → U L1.G3_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L1.G3_UI_1 → I L1.G4              # హ ha: symbol 2/2, complete → L1.G4
+L1.G3 → I L1.G3_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G3_III_1 → I L1.G3_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G3_III_2 → I L1.G4             # న na: symbol 3/3, complete → L1.G4
+L1.G4 → I L1.G4_IU_1              # వ va: symbol 1/2 read, 1 to go
+L1.G4_IU_1 → U L1.G5              # వ va: symbol 2/2, complete → L1.G5
+L1.G4 → U L1.G4_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L1.G4_UI_1 → I L1.G5              # హ ha: symbol 2/2, complete → L1.G5
+L1.G4 → I L1.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G4_III_1 → I L1.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G4_III_2 → I L1.G5             # న na: symbol 3/3, complete → L1.G5
+L1.G5 → I L1.G5_IU_1              # వ va: symbol 1/2 read, 1 to go
+L1.G5_IU_1 → U L1.G6              # వ va: symbol 2/2, complete → L1.G6
+L1.G5 → U L1.G5_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L1.G5_UI_1 → I L1.G6              # హ ha: symbol 2/2, complete → L1.G6
+L1.G5 → I L1.G5_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G5_III_1 → I L1.G5_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G5_III_2 → I L1.G6             # న na: symbol 3/3, complete → L1.G6
+L1.G6 → I L1.G6_IU_1              # వ va: symbol 1/2 read, 1 to go
+L1.G6_IU_1 → U L1.G7              # వ va: symbol 2/2, complete → L1.G7
+L1.G6 → U L1.G6_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L1.G6_UI_1 → I L1.G7              # హ ha: symbol 2/2, complete → L1.G7
+L1.G6 → I L1.G6_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G6_III_1 → I L1.G6_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G6_III_2 → I L1.G7             # న na: symbol 3/3, complete → L1.G7
+L1.G7 → I L1.G7_IU_1              # వ va: symbol 1/2 read, 1 to go
+L1.G7_IU_1 → U L1.G8              # వ va: symbol 2/2, complete → L1.G8
+L1.G7 → U L1.G7_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L1.G7_UI_1 → I L1.G8              # హ ha: symbol 2/2, complete → L1.G8
+L1.G7 → I L1.G7_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G7_III_1 → I L1.G7_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G7_III_2 → I L1.G8             # న na: symbol 3/3, complete → L1.G8
+L1.G8 → I L1.G8_IUNL_1            # వ va: symbol 1/3 read, 2 to go
+L1.G8_IUNL_1 → U L1.G8_IUNL_2     # వ va: symbol 2/3 read, 1 to go
+L1.G8_IUNL_2 → ⏎ L2.G1            # వ va: symbol 3/3, complete → L2.G1
+L1.G8 → U L1.G8_UINL_1            # హ ha: symbol 1/3 read, 2 to go
+L1.G8_UINL_1 → I L1.G8_UINL_2     # హ ha: symbol 2/3 read, 1 to go
+L1.G8_UINL_2 → ⏎ L2.G1            # హ ha: symbol 3/3, complete → L2.G1
+L1.G8 → I L1.G8_IIINL_1           # న na: symbol 1/4 read, 3 to go
+L1.G8_IIINL_1 → I L1.G8_IIINL_2   # న na: symbol 2/4 read, 2 to go
+L1.G8_IIINL_2 → I L1.G8_IIINL_3   # న na: symbol 3/4 read, 1 to go
+L1.G8_IIINL_3 → ⏎ L2.G1           # న na: symbol 4/4, complete → L2.G1
+L2.G1 → I L2.G1_IU_1              # వ va: symbol 1/2 read, 1 to go
+L2.G1_IU_1 → U L2.G2              # వ va: symbol 2/2, complete → L2.G2
+L2.G1 → U L2.G1_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L2.G1_UI_1 → I L2.G2              # హ ha: symbol 2/2, complete → L2.G2
+L2.G1 → I L2.G1_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G1_III_1 → I L2.G1_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G1_III_2 → I L2.G2             # న na: symbol 3/3, complete → L2.G2
+L2.G2 → I L2.G2_IU_1              # వ va: symbol 1/2 read, 1 to go
+L2.G2_IU_1 → U L2.G3              # వ va: symbol 2/2, complete → L2.G3
+L2.G2 → U L2.G2_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L2.G2_UI_1 → I L2.G3              # హ ha: symbol 2/2, complete → L2.G3
+L2.G2 → I L2.G2_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G2_III_1 → I L2.G2_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G2_III_2 → I L2.G3             # న na: symbol 3/3, complete → L2.G3
+L2.G3 → I L2.G3_IU_1              # వ va: symbol 1/2 read, 1 to go
+L2.G3_IU_1 → U L2.G4              # వ va: symbol 2/2, complete → L2.G4
+L2.G3 → U L2.G3_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L2.G3_UI_1 → I L2.G4              # హ ha: symbol 2/2, complete → L2.G4
+L2.G3 → I L2.G3_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G3_III_1 → I L2.G3_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G3_III_2 → I L2.G4             # న na: symbol 3/3, complete → L2.G4
+L2.G4 → I L2.G4_IU_1              # వ va: symbol 1/2 read, 1 to go
+L2.G4_IU_1 → U L2.G5              # వ va: symbol 2/2, complete → L2.G5
+L2.G4 → U L2.G4_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L2.G4_UI_1 → I L2.G5              # హ ha: symbol 2/2, complete → L2.G5
+L2.G4 → I L2.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G4_III_1 → I L2.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G4_III_2 → I L2.G5             # న na: symbol 3/3, complete → L2.G5
+L2.G5 → I L2.G5_IU_1              # వ va: symbol 1/2 read, 1 to go
+L2.G5_IU_1 → U L2.G6              # వ va: symbol 2/2, complete → L2.G6
+L2.G5 → U L2.G5_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L2.G5_UI_1 → I L2.G6              # హ ha: symbol 2/2, complete → L2.G6
+L2.G5 → I L2.G5_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G5_III_1 → I L2.G5_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G5_III_2 → I L2.G6             # న na: symbol 3/3, complete → L2.G6
+L2.G6 → I L2.G6_IU_1              # వ va: symbol 1/2 read, 1 to go
+L2.G6_IU_1 → U L2.G7              # వ va: symbol 2/2, complete → L2.G7
+L2.G6 → U L2.G6_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L2.G6_UI_1 → I L2.G7              # హ ha: symbol 2/2, complete → L2.G7
+L2.G6 → I L2.G6_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G6_III_1 → I L2.G6_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G6_III_2 → I L2.G7             # న na: symbol 3/3, complete → L2.G7
+L2.G7 → I L2.G7_IU_1              # వ va: symbol 1/2 read, 1 to go
+L2.G7_IU_1 → U L2.G8              # వ va: symbol 2/2, complete → L2.G8
+L2.G7 → U L2.G7_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L2.G7_UI_1 → I L2.G8              # హ ha: symbol 2/2, complete → L2.G8
+L2.G7 → I L2.G7_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G7_III_1 → I L2.G7_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G7_III_2 → I L2.G8             # న na: symbol 3/3, complete → L2.G8
+L2.G8 → I L2.G8_IUNL_1            # వ va: symbol 1/3 read, 2 to go
+L2.G8_IUNL_1 → U L2.G8_IUNL_2     # వ va: symbol 2/3 read, 1 to go
+L2.G8_IUNL_2 → ⏎ L3.G1            # వ va: symbol 3/3, complete → L3.G1
+L2.G8 → U L2.G8_UINL_1            # హ ha: symbol 1/3 read, 2 to go
+L2.G8_UINL_1 → I L2.G8_UINL_2     # హ ha: symbol 2/3 read, 1 to go
+L2.G8_UINL_2 → ⏎ L3.G1            # హ ha: symbol 3/3, complete → L3.G1
+L2.G8 → I L2.G8_IIINL_1           # న na: symbol 1/4 read, 3 to go
+L2.G8_IIINL_1 → I L2.G8_IIINL_2   # న na: symbol 2/4 read, 2 to go
+L2.G8_IIINL_2 → I L2.G8_IIINL_3   # న na: symbol 3/4 read, 1 to go
+L2.G8_IIINL_3 → ⏎ L3.G1           # న na: symbol 4/4, complete → L3.G1
+L3.G1 → I L3.G1_IU_1              # వ va: symbol 1/2 read, 1 to go
+L3.G1_IU_1 → U L3.G2              # వ va: symbol 2/2, complete → L3.G2
+L3.G1 → U L3.G1_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L3.G1_UI_1 → I L3.G2              # హ ha: symbol 2/2, complete → L3.G2
+L3.G1 → I L3.G1_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G1_III_1 → I L3.G1_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G1_III_2 → I L3.G2             # న na: symbol 3/3, complete → L3.G2
+L3.G2 → I L3.G2_IU_1              # వ va: symbol 1/2 read, 1 to go
+L3.G2_IU_1 → U L3.G3              # వ va: symbol 2/2, complete → L3.G3
+L3.G2 → U L3.G2_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L3.G2_UI_1 → I L3.G3              # హ ha: symbol 2/2, complete → L3.G3
+L3.G2 → I L3.G2_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G2_III_1 → I L3.G2_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G2_III_2 → I L3.G3             # న na: symbol 3/3, complete → L3.G3
+L3.G3 → I L3.G3_IU_1              # వ va: symbol 1/2 read, 1 to go
+L3.G3_IU_1 → U L3.G4              # వ va: symbol 2/2, complete → L3.G4
+L3.G3 → U L3.G3_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L3.G3_UI_1 → I L3.G4              # హ ha: symbol 2/2, complete → L3.G4
+L3.G3 → I L3.G3_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G3_III_1 → I L3.G3_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G3_III_2 → I L3.G4             # న na: symbol 3/3, complete → L3.G4
+L3.G4 → I L3.G4_IU_1              # వ va: symbol 1/2 read, 1 to go
+L3.G4_IU_1 → U L3.G5              # వ va: symbol 2/2, complete → L3.G5
+L3.G4 → U L3.G4_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L3.G4_UI_1 → I L3.G5              # హ ha: symbol 2/2, complete → L3.G5
+L3.G4 → I L3.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G4_III_1 → I L3.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G4_III_2 → I L3.G5             # న na: symbol 3/3, complete → L3.G5
+L3.G5 → I L3.G5_IU_1              # వ va: symbol 1/2 read, 1 to go
+L3.G5_IU_1 → U L3.G6              # వ va: symbol 2/2, complete → L3.G6
+L3.G5 → U L3.G5_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L3.G5_UI_1 → I L3.G6              # హ ha: symbol 2/2, complete → L3.G6
+L3.G5 → I L3.G5_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G5_III_1 → I L3.G5_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G5_III_2 → I L3.G6             # న na: symbol 3/3, complete → L3.G6
+L3.G6 → I L3.G6_IU_1              # వ va: symbol 1/2 read, 1 to go
+L3.G6_IU_1 → U L3.G7              # వ va: symbol 2/2, complete → L3.G7
+L3.G6 → U L3.G6_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L3.G6_UI_1 → I L3.G7              # హ ha: symbol 2/2, complete → L3.G7
+L3.G6 → I L3.G6_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G6_III_1 → I L3.G6_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G6_III_2 → I L3.G7             # న na: symbol 3/3, complete → L3.G7
+L3.G7 → I L3.G7_IU_1              # వ va: symbol 1/2 read, 1 to go
+L3.G7_IU_1 → U L3.G8              # వ va: symbol 2/2, complete → L3.G8
+L3.G7 → U L3.G7_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L3.G7_UI_1 → I L3.G8              # హ ha: symbol 2/2, complete → L3.G8
+L3.G7 → I L3.G7_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G7_III_1 → I L3.G7_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G7_III_2 → I L3.G8             # న na: symbol 3/3, complete → L3.G8
+L3.G8 → I L3.G8_IUNL_1            # వ va: symbol 1/3 read, 2 to go
+L3.G8_IUNL_1 → U L3.G8_IUNL_2     # వ va: symbol 2/3 read, 1 to go
+L3.G8_IUNL_2 → ⏎ L4.G1            # వ va: symbol 3/3, complete → L4.G1
+L3.G8 → U L3.G8_UINL_1            # హ ha: symbol 1/3 read, 2 to go
+L3.G8_UINL_1 → I L3.G8_UINL_2     # హ ha: symbol 2/3 read, 1 to go
+L3.G8_UINL_2 → ⏎ L4.G1            # హ ha: symbol 3/3, complete → L4.G1
+L3.G8 → I L3.G8_IIINL_1           # న na: symbol 1/4 read, 3 to go
+L3.G8_IIINL_1 → I L3.G8_IIINL_2   # న na: symbol 2/4 read, 2 to go
+L3.G8_IIINL_2 → I L3.G8_IIINL_3   # న na: symbol 3/4 read, 1 to go
+L3.G8_IIINL_3 → ⏎ L4.G1           # న na: symbol 4/4, complete → L4.G1
+L4.G1 → I L4.G1_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G1_IU_1 → U L4.G2              # వ va: symbol 2/2, complete → L4.G2
+L4.G1 → U L4.G1_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G1_UI_1 → I L4.G2              # హ ha: symbol 2/2, complete → L4.G2
+L4.G1 → I L4.G1_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G1_III_1 → I L4.G1_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G1_III_2 → I L4.G2             # న na: symbol 3/3, complete → L4.G2
+L4.G2 → I L4.G2_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G2_IU_1 → U L4.G3              # వ va: symbol 2/2, complete → L4.G3
+L4.G2 → U L4.G2_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G2_UI_1 → I L4.G3              # హ ha: symbol 2/2, complete → L4.G3
+L4.G2 → I L4.G2_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G2_III_1 → I L4.G2_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G2_III_2 → I L4.G3             # న na: symbol 3/3, complete → L4.G3
+L4.G3 → I L4.G3_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G3_IU_1 → U L4.G4              # వ va: symbol 2/2, complete → L4.G4
+L4.G3 → U L4.G3_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G3_UI_1 → I L4.G4              # హ ha: symbol 2/2, complete → L4.G4
+L4.G3 → I L4.G3_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G3_III_1 → I L4.G3_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G3_III_2 → I L4.G4             # న na: symbol 3/3, complete → L4.G4
+L4.G4 → I L4.G4_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G4_IU_1 → U L4.G5              # వ va: symbol 2/2, complete → L4.G5
+L4.G4 → U L4.G4_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G4_UI_1 → I L4.G5              # హ ha: symbol 2/2, complete → L4.G5
+L4.G4 → I L4.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G4_III_1 → I L4.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G4_III_2 → I L4.G5             # న na: symbol 3/3, complete → L4.G5
+L4.G5 → I L4.G5_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G5_IU_1 → U L4.G6              # వ va: symbol 2/2, complete → L4.G6
+L4.G5 → U L4.G5_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G5_UI_1 → I L4.G6              # హ ha: symbol 2/2, complete → L4.G6
+L4.G5 → I L4.G5_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G5_III_1 → I L4.G5_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G5_III_2 → I L4.G6             # న na: symbol 3/3, complete → L4.G6
+L4.G6 → I L4.G6_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G6_IU_1 → U L4.G7              # వ va: symbol 2/2, complete → L4.G7
+L4.G6 → U L4.G6_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G6_UI_1 → I L4.G7              # హ ha: symbol 2/2, complete → L4.G7
+L4.G6 → I L4.G6_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G6_III_1 → I L4.G6_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G6_III_2 → I L4.G7             # న na: symbol 3/3, complete → L4.G7
+L4.G7 → I L4.G7_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G7_IU_1 → U L4.G8              # వ va: symbol 2/2, complete → L4.G8
+L4.G7 → U L4.G7_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G7_UI_1 → I L4.G8              # హ ha: symbol 2/2, complete → L4.G8
+L4.G7 → I L4.G7_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G7_III_1 → I L4.G7_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G7_III_2 → I L4.G8             # న na: symbol 3/3, complete → L4.G8
+L4.G8 → I L4.G8_IU_1              # వ va: symbol 1/2 read, 1 to go
+L4.G8_IU_1 → U                    # వ va: symbol 2/2, complete, line ends
+L4.G8 → I L4.G8_IUNL_1            # వ va: symbol 1/3 read, 2 to go
+L4.G8_IUNL_1 → U L4.G8_IUNL_2     # వ va: symbol 2/3 read, 1 to go
+L4.G8_IUNL_2 → ⏎ L1.G1            # వ va: symbol 3/3, complete → L1.G1
+L4.G8 → U L4.G8_UI_1              # హ ha: symbol 1/2 read, 1 to go
+L4.G8_UI_1 → I                    # హ ha: symbol 2/2, complete, line ends
+L4.G8 → U L4.G8_UINL_1            # హ ha: symbol 1/3 read, 2 to go
+L4.G8_UINL_1 → I L4.G8_UINL_2     # హ ha: symbol 2/3 read, 1 to go
+L4.G8_UINL_2 → ⏎ L1.G1            # హ ha: symbol 3/3, complete → L1.G1
+L4.G8 → I L4.G8_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G8_III_1 → I L4.G8_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G8_III_2 → I                   # న na: symbol 3/3, complete, line ends
+L4.G8 → I L4.G8_IIINL_1           # న na: symbol 1/4 read, 3 to go
+L4.G8_IIINL_1 → I L4.G8_IIINL_2   # న na: symbol 2/4 read, 2 to go
+L4.G8_IIINL_2 → I L4.G8_IIINL_3   # న na: symbol 3/4 read, 1 to go
+L4.G8_IIINL_3 → ⏎ L1.G1           # న na: symbol 4/4, complete → L1.G1

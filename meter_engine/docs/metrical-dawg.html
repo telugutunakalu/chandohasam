@@ -1,0 +1,578 @@
+<title>Telugu Metre DAWG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Karla:wght@400;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Telugu:wght@400;600&display=swap">
+
+<style>
+  :root {
+    --paper:   #eceee9;
+    --surface: #fbfbf8;
+    --ink:     #1d2321;
+    --muted:   #6a726e;
+    --rule:    #d7dbd4;
+    --accent:  #1b6a5a;
+    --guru:    #a4551a;
+    --guru-bg: #f3e3d4;
+    --laghu:   #235f9a;
+    --laghu-bg:#dde7f2;
+    --shade:   #e3e6e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:   #111513;
+      --surface: #191e1c;
+      --ink:     #e7ece7;
+      --muted:   #98a19c;
+      --rule:    #2b332f;
+      --accent:  #4ec0a4;
+      --guru:    #e2a068;
+      --guru-bg: #35271c;
+      --laghu:   #85b6e2;
+      --laghu-bg:#1b2836;
+      --shade:   #1f2522;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:   #111513;
+    --surface: #191e1c;
+    --ink:     #e7ece7;
+    --muted:   #98a19c;
+    --rule:    #2b332f;
+    --accent:  #4ec0a4;
+    --guru:    #e2a068;
+    --guru-bg: #35271c;
+    --laghu:   #85b6e2;
+    --laghu-bg:#1b2836;
+    --shade:   #1f2522;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Karla", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    padding: 0 20px;
+  }
+  .page { max-width: 940px; margin: 0 auto; padding-block: 3.5rem 4rem; }
+  .prose { max-width: 66ch; }
+
+  h1, h2 { font-family: "Newsreader", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(2.1rem, 4.5vw, 3rem); line-height: 1.1; letter-spacing: -0.01em; }
+  h2 { font-size: 1.4rem; line-height: 1.25; }
+  p { margin: 0; }
+
+  .eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .te { font-family: "Noto Sans Telugu", sans-serif; line-height: 1.9; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+  header { display: flex; flex-direction: column; gap: 0.9rem; padding-bottom: 2.5rem; }
+  header .lede { font-size: 1.12rem; color: var(--muted); max-width: 60ch; }
+  header .lede strong { color: var(--ink); font-weight: 600; }
+
+  section { display: flex; flex-direction: column; gap: 1.1rem; padding-block: 2.6rem; border-top: 1px solid var(--rule); }
+
+  .verse {
+    font-family: "Noto Sans Telugu", sans-serif; line-height: 2.05; letter-spacing: 0.02em;
+    border-left: 2px solid var(--accent); padding-left: 1rem; color: var(--ink);
+  }
+  .verse .src { display: block; font-family: "Karla", sans-serif; font-size: 0.82rem; color: var(--muted); letter-spacing: 0; margin-top: 0.5rem; }
+
+  /* ---- scansion tape ---- */
+  .tape { display: flex; flex-wrap: nowrap; gap: 3px; }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 0.4rem 0.35rem 0.3rem; border-radius: 3px; min-width: 2.2rem; }
+  .cell .ak { font-family: "Noto Sans Telugu", sans-serif; font-size: 1.05rem; line-height: 1.9; }
+  .cell .wt { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; font-weight: 500; }
+  .cell .ix { font-family: "IBM Plex Mono", monospace; font-size: 0.6rem; color: var(--muted); }
+  .w-U { background: var(--guru-bg); }
+  .w-U .wt { color: var(--guru); }
+  .w-I { background: var(--laghu-bg); }
+  .w-I .wt { color: var(--laghu); }
+  .cell.flag { box-shadow: inset 0 0 0 1.5px var(--accent); }
+  .marks { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
+  .marks b { color: var(--accent); font-weight: 600; }
+  .legend { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
+  .swatch { display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 2px; margin-right: 0.35rem; }
+
+  /* ---- figures ---- */
+  figure { margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+  .plate { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1.4rem 1rem; overflow-x: auto; }
+  .plate svg { display: block; width: 100%; max-width: 100%; height: auto; min-width: 480px; }
+  figcaption { font-size: 0.88rem; color: var(--muted); max-width: 64ch; }
+  figcaption b { color: var(--ink); font-weight: 600; }
+
+  /* ---- table ---- */
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); padding-bottom: 0.6rem; }
+  th, td { padding: 0.55rem 0.7rem; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 600; }
+  tbody td.num { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+  tbody tr.here td { background: var(--shade); }
+  tfoot td { font-weight: 600; border-bottom: none; border-top: 2px solid var(--rule); }
+  .ratio { color: var(--accent); }
+
+  /* ---- walk ---- */
+  .walk { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1.3rem; display: flex; flex-direction: column; gap: 1.1rem; }
+  .readout { display: flex; align-items: flex-end; gap: 1.6rem; flex-wrap: wrap; }
+  .symbols { display: flex; gap: 3px; flex-wrap: wrap; }
+  .sym {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.85rem; font-weight: 500;
+    width: 1.6rem; height: 1.9rem; display: grid; place-items: center;
+    border: 1px solid var(--rule); border-radius: 3px; color: var(--muted); background: transparent;
+  }
+  .sym.read-U { background: var(--guru-bg); color: var(--guru); border-color: transparent; }
+  .sym.read-I { background: var(--laghu-bg); color: var(--laghu); border-color: transparent; }
+  .alive { display: flex; align-items: baseline; gap: 0.55rem; }
+  .alive .n { font-family: "IBM Plex Mono", monospace; font-size: 2rem; font-weight: 500; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .alive .lbl { font-size: 0.85rem; color: var(--muted); line-height: 1.35; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; min-height: 2rem; }
+  .chip { font-family: "Noto Sans Telugu", sans-serif; font-size: 0.85rem; line-height: 1.8; padding: 0.15rem 0.55rem; border-radius: 999px; background: var(--shade); color: var(--ink); }
+  .chip.win { background: var(--accent); color: var(--surface); font-weight: 600; }
+  .chip .slot { font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; color: var(--muted); margin-left: 0.3rem; }
+  .chip.win .slot { color: var(--surface); opacity: 0.8; }
+  .controls { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+  button {
+    font-family: "Karla", sans-serif; font-size: 0.9rem; font-weight: 600;
+    padding: 0.45rem 1rem; border-radius: 3px; border: 1px solid var(--accent);
+    background: transparent; color: var(--accent); cursor: pointer;
+  }
+  button:hover:not(:disabled) { background: var(--accent); color: var(--surface); }
+  button:disabled { opacity: 0.4; cursor: default; }
+  button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .hint { font-size: 0.85rem; color: var(--muted); }
+
+  ul.plain { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  @media (max-width: 560px) { .alive .n { font-size: 1.6rem; } }
+</style>
+
+<main class="page">
+
+  <header>
+    <span class="eyebrow">meter_engine · indic_meter_dawg</span>
+    <h1>Telugu Metre DAWG</h1>
+    <p class="lede">Every legal pāda of all 37 catalogue metres is one path through a single automaton:
+      <strong>370,315</strong> paths in <strong>1,431 states</strong>. Walked against Pōtana's opening
+      <span class="te">శార్దూలవిక్రీడితము</span>, it knows the metre <strong>eight aksharas in</strong>.</p>
+  </header>
+
+  <section>
+    <span class="eyebrow">The poem</span>
+    <h2>Bhāgavatam 1-1</h2>
+    <p class="verse">
+      శ్రీకైవల్య పదంబుఁ జేరుటకునైచింతించెదన్ లోక ర<br>
+      క్షైకారంభకు, భక్త పాలన కళాసంరంభకున్, దానవో<br>
+      ద్రేకస్తంభకుఁ, గేళి లోల విలసద్దృగ్జాల సంభూత నా<br>
+      నాకంజాత భవాండ కుంభకు, మహానందాంగనాడింభకున్.
+      <span class="src">శార్దూలవిక్రీడితము · మ స జ స త త గ · 19 aksharas · యతి at 13 · ప్రాస required</span>
+    </p>
+    <p class="prose">The scanner turns the first pāda into aksharas and marks each one guru (U, heavy) or
+      laghu (I, light). The DAWG never sees Telugu. It reads this string, left to right.</p>
+    <div class="scroll"><div class="tape" id="tape"></div></div>
+    <p class="marks">
+      <span><b>2</b> — the ప్రాస seat: కై, and కా, క, కం below it</span>
+      <span><b>13</b> — the యతి: చిం, against శ్రీ</span>
+      <span><b>19</b> — ends laghu, where the metre wants guru</span>
+    </p>
+    <p class="legend">
+      <span><span class="swatch" style="background: var(--guru-bg)"></span>U — గురువు</span>
+      <span><span class="swatch" style="background: var(--laghu-bg)"></span>I — లఘువు</span>
+      <span class="mono">UUUIIUIUIIIUUUIUUII</span>
+    </p>
+  </section>
+
+  <section>
+    <span class="eyebrow">One metre, whole</span>
+    <h2>A vritta is a single path</h2>
+    <p class="prose">A <span class="te">వృత్తము</span> fixes every akshara. There is no choice anywhere in the line, so
+      <span class="te">శార్దూలవిక్రీడితము</span>'s whole language is one string of 19 weights, and its slot automaton is a
+      corridor: 20 states, 19 edges, one path. The యతి falls on the first akshara of the fifth gaṇa.</p>
+
+    <figure>
+      <div class="plate">
+        <svg viewBox="0 0 760 200" role="img" aria-label="Seven gana boxes in a row spelling ma sa ja sa ta ta ga, spanning nineteen aksharas, with the yati marked at akshara thirteen and the final guru marked as filled by a laghu.">
+          <defs>
+            <marker id="ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#1b6a5a"></path>
+            </marker>
+          </defs>
+
+          <line x1="424" y1="34" x2="424" y2="150" stroke="currentColor" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="4 4"></line>
+          <text x="424" y="26" font-family="Noto Sans Telugu, sans-serif" font-size="12" fill="currentColor" opacity="0.75" text-anchor="middle">యతి · akshara 13</text>
+
+          <g>
+            <rect x="34" y="60" width="96" height="52" rx="4" fill="var(--guru-bg)"></rect>
+            <rect x="140" y="60" width="96" height="52" rx="4" fill="var(--shade)"></rect>
+            <rect x="246" y="60" width="96" height="52" rx="4" fill="var(--shade)"></rect>
+            <rect x="352" y="60" width="96" height="52" rx="4" fill="var(--shade)"></rect>
+            <rect x="458" y="60" width="96" height="52" rx="4" fill="var(--shade)"></rect>
+            <rect x="564" y="60" width="96" height="52" rx="4" fill="var(--shade)"></rect>
+            <rect x="670" y="60" width="56" height="52" rx="4" fill="var(--laghu-bg)"></rect>
+          </g>
+          <g font-family="Noto Sans Telugu, sans-serif" font-size="16" fill="currentColor" text-anchor="middle">
+            <text x="82" y="84">మ</text><text x="188" y="84">స</text><text x="294" y="84">జ</text>
+            <text x="400" y="84">స</text><text x="506" y="84">త</text><text x="612" y="84">త</text><text x="698" y="84">గ</text>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor" opacity="0.75" text-anchor="middle">
+            <text x="82" y="104">UUU</text><text x="188" y="104">IIU</text><text x="294" y="104">IUI</text>
+            <text x="400" y="104">IIU</text><text x="506" y="104">UUI</text><text x="612" y="104">UUI</text><text x="698" y="104">U</text>
+          </g>
+          <g font-family="Karla, sans-serif" font-size="10" fill="currentColor" opacity="0.55" text-anchor="middle">
+            <text x="82" y="128">1–3</text><text x="188" y="128">4–6</text><text x="294" y="128">7–9</text>
+            <text x="400" y="128">10–12</text><text x="506" y="128">13–15</text><text x="612" y="128">16–18</text><text x="698" y="128">19</text>
+          </g>
+
+          <g stroke="#1b6a5a" stroke-width="1.4" marker-end="url(#ar1)">
+            <line x1="130" y1="86" x2="138" y2="86"></line>
+            <line x1="236" y1="86" x2="244" y2="86"></line>
+            <line x1="342" y1="86" x2="350" y2="86"></line>
+            <line x1="448" y1="86" x2="456" y2="86"></line>
+            <line x1="554" y1="86" x2="562" y2="86"></line>
+            <line x1="660" y1="86" x2="668" y2="86"></line>
+          </g>
+
+          <text x="698" y="152" font-family="Karla, sans-serif" font-size="11" fill="var(--laghu)" text-anchor="middle">filled by ర</text>
+          <text x="698" y="167" font-family="Karla, sans-serif" font-size="11" fill="var(--laghu)" text-anchor="middle">a laghu</text>
+          <text x="34" y="176" font-family="Karla, sans-serif" font-size="12" fill="currentColor" opacity="0.7">పాదాంత లఘువు: a line-final laghu counts as guru — the engine records it rather than assuming it</text>
+        </svg>
+      </div>
+      <figcaption>Seven gaṇas, nineteen aksharas, one legal string. This pāda ends on <b>ర</b>, a laghu, where the
+        template wants a guru; it is accepted under the <b>pādānta</b> rule, and the report marks pāda 1 as having used it.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <span class="eyebrow">Identification</span>
+    <h2>Where it stops being anything else</h2>
+    <p class="prose">Identifying a pāda is not a search over metres. The engine walks the weights once, carrying the
+      set of metre slots still alive. Forty slots are possible before a single akshara is read. Step through and watch
+      them go.</p>
+
+    <div class="walk">
+      <div class="readout">
+        <div>
+          <div class="eyebrow" style="margin-bottom:0.4rem">Read so far</div>
+          <div class="symbols" id="symbols"></div>
+        </div>
+        <div class="alive">
+          <span class="n" id="count">7</span>
+          <span class="lbl">metre slots<br>still possible</span>
+        </div>
+      </div>
+      <div class="chips" id="chips" aria-live="polite"></div>
+      <div class="controls">
+        <button id="back" type="button">Back</button>
+        <button id="next" type="button">Read next akshara</button>
+        <button id="reset" type="button">Reset</button>
+        <span class="hint" id="hint"></span>
+      </div>
+    </div>
+
+    <figure>
+      <div class="plate">
+        <svg viewBox="0 0 760 190" role="img" aria-label="Bar chart of surviving metre slots per akshara: 40 before reading, then 28, 14, 7, 4, 4, 3, 3, then 1 from the eighth akshara onward.">
+          <g stroke="currentColor" stroke-opacity="0.18" stroke-width="1">
+            <line x1="40" y1="30" x2="748" y2="30"></line>
+            <line x1="40" y1="90" x2="748" y2="90"></line>
+            <line x1="40" y1="150" x2="748" y2="150"></line>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.6" text-anchor="end">
+            <text x="32" y="34">40</text><text x="32" y="94">20</text><text x="32" y="154">0</text>
+          </g>
+          <g id="bars"></g>
+          <g font-family="Karla, sans-serif" font-size="10" fill="currentColor" opacity="0.6">
+            <text x="40" y="172">before reading</text>
+            <text x="300" y="172" text-anchor="middle">akshara 8: only one metre left</text>
+            <text x="748" y="172" text-anchor="end">19</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Three aksharas remove 33 of the 40 slots. By the <b>eighth</b> only
+        <span class="te">శార్దూలవిక్రీడితము</span> survives, and the remaining eleven aksharas confirm rather than decide.
+        A weight no survivor allows kills the walk, and that position is the error the report prints.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <span class="eyebrow">A fair question</span>
+    <h2>Is it just a tree?</h2>
+    <p class="prose">Near the start it behaves like one: 1,024 of the 1,431 states have exactly one way in.
+      But 406 states — 28% of the machine — can be reached by more than one reading, and one state has 34 ways in.
+      A tree of 1,431 nodes has 1,430 edges. This has <b>2,514</b>, so <b>1,084 edges arrive at a state that already
+      had a parent</b>. That is the whole trick, and it is what a tree cannot do.</p>
+
+    <figure>
+      <div class="plate">
+        <svg viewBox="0 0 760 250" role="img" aria-label="Three different six-akshara openings converge on one state, after which their continuations are shared.">
+          <defs>
+            <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#1b6a5a"></path>
+            </marker>
+          </defs>
+          <g font-family="IBM Plex Mono, monospace" font-size="13" text-anchor="middle">
+            <g>
+              <rect x="30" y="42" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="45" y="60" fill="var(--guru)">U</text>
+              <rect x="64" y="42" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="79" y="60" fill="var(--guru)">U</text>
+              <rect x="98" y="42" width="30" height="26" rx="3" fill="var(--laghu-bg)"></rect><text x="113" y="60" fill="var(--laghu)">I</text>
+              <rect x="132" y="42" width="30" height="26" rx="3" fill="var(--laghu-bg)"></rect><text x="147" y="60" fill="var(--laghu)">I</text>
+              <rect x="166" y="42" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="181" y="60" fill="var(--guru)">U</text>
+              <rect x="200" y="42" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="215" y="60" fill="var(--guru)">U</text>
+            </g>
+            <g>
+              <rect x="30" y="112" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="45" y="130" fill="var(--guru)">U</text>
+              <rect x="64" y="112" width="30" height="26" rx="3" fill="var(--laghu-bg)"></rect><text x="79" y="130" fill="var(--laghu)">I</text>
+              <rect x="98" y="112" width="30" height="26" rx="3" fill="var(--laghu-bg)"></rect><text x="113" y="130" fill="var(--laghu)">I</text>
+              <rect x="132" y="112" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="147" y="130" fill="var(--guru)">U</text>
+              <rect x="166" y="112" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="181" y="130" fill="var(--guru)">U</text>
+              <rect x="200" y="112" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="215" y="130" fill="var(--guru)">U</text>
+            </g>
+            <g>
+              <rect x="30" y="182" width="30" height="26" rx="3" fill="var(--laghu-bg)"></rect><text x="45" y="200" fill="var(--laghu)">I</text>
+              <rect x="64" y="182" width="30" height="26" rx="3" fill="var(--laghu-bg)"></rect><text x="79" y="200" fill="var(--laghu)">I</text>
+              <rect x="98" y="182" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="113" y="200" fill="var(--guru)">U</text>
+              <rect x="132" y="182" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="147" y="200" fill="var(--guru)">U</text>
+              <rect x="166" y="182" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="181" y="200" fill="var(--guru)">U</text>
+              <rect x="200" y="182" width="30" height="26" rx="3" fill="var(--guru-bg)"></rect><text x="215" y="200" fill="var(--guru)">U</text>
+            </g>
+          </g>
+          <g stroke="#1b6a5a" fill="none" stroke-width="1.5" marker-end="url(#ar3)">
+            <path d="M242,55 Q330,55 402,118"></path>
+            <path d="M242,125 L402,125"></path>
+            <path d="M242,195 Q330,195 402,132"></path>
+            <path d="M428,125 L556,125"></path>
+          </g>
+          <circle cx="416" cy="125" r="10" fill="#1b6a5a"></circle>
+          <text x="416" y="158" font-family="Karla, sans-serif" font-size="11" fill="currentColor" opacity="0.7" text-anchor="middle">one state</text>
+          <text x="566" y="120" font-family="Karla, sans-serif" font-size="12" fill="currentColor">every continuation</text>
+          <text x="566" y="137" font-family="Karla, sans-serif" font-size="12" fill="currentColor">from here is shared</text>
+          <text x="30" y="26" font-family="Karla, sans-serif" font-size="12" fill="currentColor" opacity="0.6">three different openings, six aksharas each</text>
+        </svg>
+      </div>
+      <figcaption>Three readings that agree on nothing but their length land in the same state, because what the metres
+        still allow after them is identical. A tree would carry <b>three separate copies</b> of everything that follows.
+        The same joining is why <b>370,315 pādas end in only 379 accepting states</b>.</figcaption>
+    </figure>
+
+    <p class="prose">Three is not the ceiling either. Going out, a state has at most two edges, because the alphabet is
+      only U and I: 1,117 states have both, 280 have one, and 34 are dead ends where a pāda can only finish. Going in,
+      nothing caps it. The busiest state in the machine is reached from <b>34 different states</b>.</p>
+
+    <figure>
+      <div class="plate">
+        <svg viewBox="0 0 760 260" role="img" aria-label="Thirty-four states lead into a single state, which has exactly two outgoing edges, one for U and one for I.">
+          <defs>
+            <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#1b6a5a"></path>
+            </marker>
+          </defs>
+
+          <g fill="currentColor" fill-opacity="0.5">
+            <circle cx="78" cy="38" r="5"></circle><circle cx="78" cy="66" r="5"></circle>
+            <circle cx="78" cy="94" r="5"></circle><circle cx="78" cy="122" r="5"></circle>
+            <circle cx="78" cy="150" r="5"></circle><circle cx="78" cy="178" r="5"></circle>
+            <circle cx="78" cy="206" r="5"></circle><circle cx="78" cy="234" r="5"></circle>
+          </g>
+          <g stroke="#1b6a5a" stroke-opacity="0.75" fill="none" stroke-width="1.3" marker-end="url(#ar4)">
+            <line x1="90" y1="38" x2="356" y2="126"></line>
+            <line x1="90" y1="66" x2="356" y2="127"></line>
+            <line x1="90" y1="94" x2="356" y2="128"></line>
+            <line x1="90" y1="122" x2="356" y2="129"></line>
+            <line x1="90" y1="150" x2="356" y2="131"></line>
+            <line x1="90" y1="178" x2="356" y2="132"></line>
+            <line x1="90" y1="206" x2="356" y2="133"></line>
+            <line x1="90" y1="234" x2="356" y2="134"></line>
+          </g>
+          <text x="78" y="20" font-family="Karla, sans-serif" font-size="11" fill="currentColor" opacity="0.65" text-anchor="middle">8 of 34 drawn</text>
+
+          <circle cx="372" cy="130" r="12" fill="#1b6a5a"></circle>
+          <text x="372" y="166" font-family="Karla, sans-serif" font-size="12" fill="currentColor" text-anchor="middle">34 ways in</text>
+          <text x="372" y="182" font-family="Karla, sans-serif" font-size="11" fill="currentColor" opacity="0.65" text-anchor="middle">2 ways out</text>
+
+          <g stroke="#1b6a5a" fill="none" stroke-width="1.5" marker-end="url(#ar4)">
+            <path d="M388,124 Q470,96 542,88"></path>
+            <path d="M388,136 Q470,164 542,172"></path>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="middle">
+            <text x="470" y="92" fill="var(--guru)">U</text>
+            <text x="470" y="182" fill="var(--laghu)">I</text>
+          </g>
+          <circle cx="554" cy="86" r="6" fill="#1b6a5a"></circle>
+          <circle cx="554" cy="174" r="6" fill="#1b6a5a"></circle>
+
+          <g font-family="Karla, sans-serif" font-size="12" fill="currentColor">
+            <text x="586" y="82">the only two</text>
+            <text x="586" y="99">letters there are</text>
+          </g>
+          <text x="586" y="174" font-family="Karla, sans-serif" font-size="11" fill="currentColor" opacity="0.65">everything past this</text>
+          <text x="586" y="190" font-family="Karla, sans-serif" font-size="11" fill="currentColor" opacity="0.65">point is stored once</text>
+        </svg>
+      </div>
+      <figcaption>All 34 arrivals are readings of a <span class="te">సీసము</span> pāda — 31 of them reaching it on a guru,
+        3 on a laghu, some after <b>13 aksharas and some after 14</b>. A tree would need 34 copies of every ending that
+        follows; the machine keeps one.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <span class="eyebrow">What the sharing buys</span>
+    <h2>Measured, slot by slot</h2>
+    <div class="scroll">
+      <table>
+        <caption>Legal pādas of one metre slot, against the nodes a prefix tree needs and the states the DAWG uses.</caption>
+        <thead>
+          <tr><th>Metre slot</th><th>Legal pādas</th><th>Tree nodes</th><th>DAWG states</th><th>Smaller by</th></tr>
+        </thead>
+        <tbody>
+          <tr class="here"><td><span class="te">శార్దూలవిక్రీడితము</span></td><td class="num">1</td><td class="num">20</td><td class="num">20</td><td class="num">—</td></tr>
+          <tr><td><span class="te">ఆటవెలది</span> even</td><td class="num">32</td><td class="num">156</td><td class="num">16</td><td class="num ratio">10×</td></tr>
+          <tr><td><span class="te">కందము</span> odd</td><td class="num">80</td><td class="num">234</td><td class="num">13</td><td class="num ratio">18×</td></tr>
+          <tr><td><span class="te">ఉత్సాహము</span></td><td class="num">128</td><td class="num">764</td><td class="num">23</td><td class="num ratio">33×</td></tr>
+          <tr><td><span class="te">తేటగీతి</span></td><td class="num">288</td><td class="num">1,268</td><td class="num">20</td><td class="num ratio">63×</td></tr>
+          <tr><td><span class="te">కందము</span> even</td><td class="num">320</td><td class="num">1,337</td><td class="num">20</td><td class="num ratio">67×</td></tr>
+          <tr><td><span class="te">ద్విపద</span></td><td class="num">432</td><td class="num">1,640</td><td class="num">19</td><td class="num ratio">86×</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>All 37 metres, 40 slots</td><td class="num">370,315</td><td class="num">1,417,226</td><td class="num">1,431</td><td class="num ratio">990×</td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="prose">A vritta gains nothing on its own: one line needs 20 nodes either way. Its saving is lateral.
+      Of the 20 states on this pāda's path, <b>8 are shared with other metres</b> — the ones the walk above passes
+      through while more than one slot is still alive. Only from the eighth akshara does the path run private.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Where the walk stops</span>
+    <h2>What the machine will not tell you</h2>
+    <ul class="plain prose">
+      <li><b>Sound, at the యతి.</b> The DAWG locates akshara 13; whether చిం agrees with శ్రీ is the yati engine's
+        verdict. Here it does, under YATI-VY-12, and so do the other three pādas.</li>
+      <li><b>ప్రాస.</b> The second-akshara rhyme is checked separately: కై, కా, క, కం, a క-prāsa across the four pādas.</li>
+      <li><b>The scansion itself.</b> The machine trusts the U and I it is handed — which is why the pādānta laghu on
+        pāda 1 is recorded in the report rather than quietly assumed.</li>
+      <li><b>Meaning.</b> A perfectly metrical line of nonsense walks the automaton exactly like Pōtana.</li>
+    </ul>
+  </section>
+
+</main>
+
+<script>
+  const TAPE = [
+    ["శ్రీ","U"],["కై","U"],["వ","U"],["ల్య","I"],["ప","I"],["దం","U"],["బుఁ","I"],["జే","U"],["రు","I"],["ట","I"],
+    ["కు","I"],["నై","U"],["చిం","U"],["తిం","U"],["చె","I"],["దన్","U"],["లో","U"],["క","I"],["ర","I"]
+  ];
+  const tapeEl = document.getElementById("tape");
+  TAPE.forEach(([ak, w], i) => {
+    const d = document.createElement("div");
+    d.className = "cell w-" + w + ((i === 1 || i === 12) ? " flag" : "");
+    const a = document.createElement("span"); a.className = "ak"; a.textContent = ak;
+    const t = document.createElement("span"); t.className = "wt"; t.textContent = w;
+    const x = document.createElement("span"); x.className = "ix"; x.textContent = i + 1;
+    d.append(a, t, x);
+    tapeEl.appendChild(d);
+  });
+
+  const TE = {
+    utpalamala:"ఉత్పలమాల", champakamala:"చంపకమాల", mattebhavikriditamu:"మత్తేభవిక్రీడితము",
+    sardulavikriditamu:"శార్దూలవిక్రీడితము", sragdhara:"స్రగ్ధర", mahasragdhara:"మహాస్రగ్ధర",
+    totakamu:"తోటకము", bhujangaprayatamu:"భుజంగప్రయాతము", mattakokilamu:"మత్తకోకిలము",
+    pamcacamaramu:"పంచచామరము", vasamtatilakamu:"వసంతతిలకము", indravajra:"ఇంద్రవజ్ర",
+    upendravajra:"ఉపేంద్రవజ్ర", salini:"శాలిని", rathoddhata:"రథోద్ధత", sragvini:"స్రగ్విణి",
+    vidyunmala:"విద్యున్మాల", lalita:"లలిత", kandamu:"కందము", utsahamu:"ఉత్సాహము",
+    taruvoja:"తరువోజ", dvipada:"ద్విపద", madhyakkara:"మధ్యాక్కర", madhuragati_ragada:"మధురగతి రగడ",
+    turagagati_ragada:"తురగగతి రగడ", hayapracara_ragada:"హయప్రచార రగడ", seesamu:"సీసము",
+    ataveladi:"ఆటవెలది", tetagiti:"తేటగీతి", taralamu:"తరళము", malini:"మాలిని", manini:"మానిని",
+    kavirajavirajitamu:"కవిరాజవిరాజితము", vanamayuramu:"వనమయూరము", mangalamahasri:"మంగళమహాశ్రీ",
+    layagrahi:"లయగ్రాహి", layavibhati:"లయవిభాతి"
+  };
+
+  const ALL40 = ["ataveladi/even","ataveladi/odd","bhujangaprayatamu/all","champakamala/all","dvipada/all","hayapracara_ragada/all","indravajra/all","kandamu/even","kandamu/odd","kavirajavirajitamu/all","lalita/all","layagrahi/all","layavibhati/all","madhuragati_ragada/all","madhyakkara/all","mahasragdhara/all","malini/all","mangalamahasri/all","manini/all","mattakokilamu/all","mattebhavikriditamu/all","pamcacamaramu/all","rathoddhata/all","salini/all","sardulavikriditamu/all","seesamu/all","seesamu/laghu","sragdhara/all","sragvini/all","taralamu/all","taruvoja/all","tetagiti/all","totakamu/all","turagagati_ragada/all","upendravajra/all","utpalamala/all","utsahamu/all","vanamayuramu/all","vasamtatilakamu/all","vidyunmala/all"];
+  const A1 = ["ataveladi/even","ataveladi/odd","dvipada/all","hayapracara_ragada/all","indravajra/all","kandamu/even","kandamu/odd","lalita/all","layagrahi/all","madhuragati_ragada/all","madhyakkara/all","mangalamahasri/all","manini/all","mattakokilamu/all","rathoddhata/all","salini/all","sardulavikriditamu/all","seesamu/all","sragdhara/all","sragvini/all","taruvoja/all","tetagiti/all","turagagati_ragada/all","utpalamala/all","utsahamu/all","vanamayuramu/all","vasamtatilakamu/all","vidyunmala/all"];
+  const A2 = ["dvipada/all","indravajra/all","kandamu/even","kandamu/odd","lalita/all","madhuragati_ragada/all","madhyakkara/all","salini/all","sardulavikriditamu/all","seesamu/all","sragdhara/all","taruvoja/all","vasamtatilakamu/all","vidyunmala/all"];
+  const A3 = ["kandamu/even","kandamu/odd","madhuragati_ragada/all","salini/all","sardulavikriditamu/all","sragdhara/all","vidyunmala/all"];
+  const A4 = ["kandamu/even","kandamu/odd","madhuragati_ragada/all","sardulavikriditamu/all"];
+  const A6 = ["kandamu/odd","madhuragati_ragada/all","sardulavikriditamu/all"];
+  const ONE = ["sardulavikriditamu/all"];
+  const PAT = "UUUIIUIUIIIUUUIUUII";
+
+  const STEPS = [{ sym: null, alive: ALL40, note: "40 of 40 — nothing read yet" }];
+  const seq = [A1, A2, A3, A4, A4, A6, A6, ONE, ONE, ONE, ONE, ONE, ONE, ONE, ONE, ONE, ONE, ONE, ONE];
+  const notes = [
+    "12 gone: every metre whose pāda cannot open guru",
+    "14 gone, including all of ఆటవెలది and తేటగీతి",
+    "7 gone — three aksharas have removed 33 of 40",
+    "3 gone: శాలిని, స్రగ్ధర, విద్యున్మాల",
+    "none gone — all four still allow a laghu here",
+    "కందము's even pāda drops out",
+    "none gone",
+    "కందము and మధురగతి రగడ drop: only శార్దూలవిక్రీడితము is left",
+    "confirming", "confirming", "confirming", "confirming", "confirming", "confirming",
+    "confirming", "confirming", "confirming", "confirming",
+    "ends laghu where the metre wants guru — accepted under the pādānta rule"
+  ];
+  seq.forEach((alive, i) => STEPS.push({ sym: PAT[i], alive, note: notes[i] }));
+
+  const COUNTS = STEPS.map(s => s.alive.length);
+  const barsEl = document.getElementById("bars");
+  const NS = "http://www.w3.org/2000/svg";
+  COUNTS.forEach((c, i) => {
+    const w = 30, x = 40 + i * 35.4, h = c * 3;
+    const r = document.createElementNS(NS, "rect");
+    r.setAttribute("x", x); r.setAttribute("y", 150 - h);
+    r.setAttribute("width", w); r.setAttribute("height", Math.max(h, 2));
+    r.setAttribute("rx", "2"); r.setAttribute("data-bar", i);
+    barsEl.appendChild(r);
+  });
+
+  let step = 3;
+  const symbolsEl = document.getElementById("symbols");
+  const chipsEl = document.getElementById("chips");
+  const countEl = document.getElementById("count");
+  const hintEl = document.getElementById("hint");
+  const backBtn = document.getElementById("back");
+  const nextBtn = document.getElementById("next");
+  const resetBtn = document.getElementById("reset");
+
+  function render() {
+    symbolsEl.textContent = "";
+    for (let i = 1; i < STEPS.length; i++) {
+      const s = document.createElement("span");
+      const read = i <= step;
+      s.className = "sym" + (read ? " read-" + STEPS[i].sym : "");
+      s.textContent = read ? STEPS[i].sym : "·";
+      symbolsEl.appendChild(s);
+    }
+    const alive = STEPS[step].alive;
+    countEl.textContent = alive.length;
+    chipsEl.textContent = "";
+    alive.forEach(h => {
+      const [meter, slot] = h.split("/");
+      const c = document.createElement("span");
+      c.className = "chip" + (alive.length === 1 ? " win" : "");
+      c.textContent = TE[meter] || meter;
+      if (slot !== "all") {
+        const sp = document.createElement("span");
+        sp.className = "slot"; sp.textContent = slot;
+        c.appendChild(sp);
+      }
+      chipsEl.appendChild(c);
+    });
+    hintEl.textContent = STEPS[step].note;
+    barsEl.querySelectorAll("rect").forEach((r, i) => {
+      const on = i <= step;
+      r.setAttribute("fill", on ? "var(--accent)" : "var(--shade)");
+      r.setAttribute("opacity", i === step ? "1" : (on ? "0.55" : "1"));
+    });
+    backBtn.disabled = step === 0;
+    nextBtn.disabled = step === STEPS.length - 1;
+  }
+
+  backBtn.addEventListener("click", () => { if (step > 0) { step--; render(); } });
+  nextBtn.addEventListener("click", () => { if (step < STEPS.length - 1) { step++; render(); } });
+  resetBtn.addEventListener("click", () => { step = 0; render(); });
+  render();
+</script>

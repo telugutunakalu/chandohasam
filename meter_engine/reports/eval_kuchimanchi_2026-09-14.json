@@ -1,0 +1,5551 @@
+{
+ "summary": {
+  "date": "2026-09-14",
+  "corpus": "../dataset/kuchimanchi_timmakavi.json",
+  "name": "kuchimanchi",
+  "poems": 1642,
+  "identified": 1550,
+  "unidentified": 92,
+  "seconds": 1037.8,
+  "identified_meters": {
+   "kandamu": 512,
+   "tetagiti": 370,
+   "seesamu+tetagiti": 226,
+   "ataveladi": 171,
+   "champakamala": 142,
+   "(none)": 92,
+   "mattebhavikriditamu": 57,
+   "utpalamala": 38,
+   "sardulavikriditamu": 21,
+   "madhuragati_ragada": 5,
+   "utsahamu": 2,
+   "bhujangaprayatamu": 2,
+   "totakamu": 1,
+   "mattakokilamu": 1,
+   "pamcacamaramu": 1,
+   "sragvini": 1
+  },
+  "label_agreement": {},
+  "configs": {
+   "relaxed/hypothesis": {
+    "totals": {
+     "poems": 1550,
+     "prasa_applicable": 783,
+     "prasa_ok": 1547,
+     "yati_ok": 1455,
+     "all_ok": 1452
+    },
+    "per_meter": {
+     "mattebhavikriditamu": {
+      "poems": 57,
+      "prasa_ok": 55,
+      "yati_ok": 50,
+      "all_ok": 48
+     },
+     "sardulavikriditamu": {
+      "poems": 21,
+      "prasa_ok": 21,
+      "yati_ok": 20,
+      "all_ok": 20
+     },
+     "seesamu+tetagiti": {
+      "poems": 226,
+      "prasa_ok": 226,
+      "yati_ok": 196,
+      "all_ok": 196
+     },
+     "champakamala": {
+      "poems": 142,
+      "prasa_ok": 141,
+      "yati_ok": 135,
+      "all_ok": 134
+     },
+     "tetagiti": {
+      "poems": 370,
+      "prasa_ok": 370,
+      "yati_ok": 356,
+      "all_ok": 356
+     },
+     "kandamu": {
+      "poems": 512,
+      "prasa_ok": 512,
+      "yati_ok": 492,
+      "all_ok": 492
+     },
+     "utpalamala": {
+      "poems": 38,
+      "prasa_ok": 38,
+      "yati_ok": 35,
+      "all_ok": 35
+     },
+     "ataveladi": {
+      "poems": 171,
+      "prasa_ok": 171,
+      "yati_ok": 160,
+      "all_ok": 160
+     },
+     "madhuragati_ragada": {
+      "poems": 5,
+      "prasa_ok": 5,
+      "yati_ok": 4,
+      "all_ok": 4
+     },
+     "totakamu": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "utsahamu": {
+      "poems": 2,
+      "prasa_ok": 2,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "mattakokilamu": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "pamcacamaramu": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "bhujangaprayatamu": {
+      "poems": 2,
+      "prasa_ok": 2,
+      "yati_ok": 2,
+      "all_ok": 2
+     },
+     "sragvini": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     }
+    }
+   },
+   "relaxed/acchu": {
+    "totals": {
+     "poems": 1550,
+     "prasa_applicable": 783,
+     "prasa_ok": 1547,
+     "yati_ok": 1524,
+     "all_ok": 1521
+    },
+    "per_meter": {
+     "mattebhavikriditamu": {
+      "poems": 57,
+      "prasa_ok": 55,
+      "yati_ok": 55,
+      "all_ok": 53
+     },
+     "sardulavikriditamu": {
+      "poems": 21,
+      "prasa_ok": 21,
+      "yati_ok": 21,
+      "all_ok": 21
+     },
+     "seesamu+tetagiti": {
+      "poems": 226,
+      "prasa_ok": 226,
+      "yati_ok": 214,
+      "all_ok": 214
+     },
+     "champakamala": {
+      "poems": 142,
+      "prasa_ok": 141,
+      "yati_ok": 140,
+      "all_ok": 139
+     },
+     "tetagiti": {
+      "poems": 370,
+      "prasa_ok": 370,
+      "yati_ok": 366,
+      "all_ok": 366
+     },
+     "kandamu": {
+      "poems": 512,
+      "prasa_ok": 512,
+      "yati_ok": 510,
+      "all_ok": 510
+     },
+     "utpalamala": {
+      "poems": 38,
+      "prasa_ok": 38,
+      "yati_ok": 37,
+      "all_ok": 37
+     },
+     "ataveladi": {
+      "poems": 171,
+      "prasa_ok": 171,
+      "yati_ok": 170,
+      "all_ok": 170
+     },
+     "madhuragati_ragada": {
+      "poems": 5,
+      "prasa_ok": 5,
+      "yati_ok": 4,
+      "all_ok": 4
+     },
+     "totakamu": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "utsahamu": {
+      "poems": 2,
+      "prasa_ok": 2,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "mattakokilamu": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "pamcacamaramu": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     },
+     "bhujangaprayatamu": {
+      "poems": 2,
+      "prasa_ok": 2,
+      "yati_ok": 2,
+      "all_ok": 2
+     },
+     "sragvini": {
+      "poems": 1,
+      "prasa_ok": 1,
+      "yati_ok": 1,
+      "all_ok": 1
+     }
+    }
+   }
+  },
+  "yati_rules": {
+   "YATI-VY-01": 2679,
+   "YATI-PY-01": 1310,
+   "YATI-VY-02.1": 1279,
+   "YATI-SV-02": 447,
+   "YATI-VY-09": 421,
+   "YATI-VY-12": 226,
+   "YATI-SP-07": 145,
+   "YATI-SV-02.2": 112,
+   "✗": 101,
+   "YATI-VY-11": 46,
+   "YATI-VY-10": 39,
+   "YATI-VY-16": 24,
+   "YATI-VY-13": 23,
+   "YATI-VY-14": 20,
+   "YATI-VY-03": 14,
+   "YATI-DL-02": 14,
+   "YATI-SV-04.4": 9,
+   "YATI-DL-05": 7,
+   "YATI-SP-08": 7,
+   "YATI-VY-04": 6,
+   "YATI-SV-01": 6,
+   "YATI-SV-04": 5,
+   "YATI-VY-08": 5,
+   "YATI-DL-04": 5,
+   "YATI-VY-05": 4,
+   "YATI-SV-05.2": 4,
+   "YATI-VY-15": 4,
+   "YATI-UB-01": 4,
+   "YATI-SV-06": 3,
+   "YATI-SV-08": 3,
+   "YATI-UB-03": 3,
+   "YATI-UB-17": 3,
+   "YATI-UB-19": 2,
+   "YATI-SP-01": 1,
+   "YATI-SV-07": 1,
+   "YATI-UB-10": 1,
+   "YATI-UB-11.1": 1
+  },
+  "prasa_labels": {
+   "రేఫ ప్రాస": 131,
+   "'న'కార ప్రాస": 108,
+   "'ల'కార ప్రాస": 98,
+   "'డ'కార ప్రాస": 56,
+   "'వ'కార ప్రాస": 35,
+   "శకటరేఫ ప్రాస": 27,
+   "'ద'కార ప్రాస": 25,
+   "'క్క' ద్విత్వాక్షర ప్రాస": 24,
+   "'క'కార ప్రాస": 20,
+   "'గ'కార ప్రాస": 20,
+   "'న్న' ద్విత్వాక్షర ప్రాస": 15,
+   "'మ్మ' ద్విత్వాక్షర ప్రాస": 13,
+   "'ల్ల' ద్విత్వాక్షర ప్రాస": 12,
+   "'ట'కార ప్రాస": 12,
+   "'ప్ప' ద్విత్వాక్షర ప్రాస": 11,
+   "'ప'కార ప్రాస": 10,
+   "'య'కార ప్రాస": 10,
+   "'మ'కార ప్రాస": 10,
+   "పూర్ణబిందుపూర్వక 'త'కార ప్రాస": 10,
+   "'జ'కార ప్రాస": 9,
+   "ర-ఱ లిపిసడలింపు ప్రాసము": 8,
+   "'చ్చ' ద్విత్వాక్షర ప్రాస": 8,
+   "'స'కార ప్రాస": 8,
+   "'త'కార ప్రాస": 7,
+   "'బ్బ' ద్విత్వాక్షర ప్రాస": 7,
+   "పూర్ణబిందుపూర్వక 'డ'కార ప్రాస": 6,
+   "'త్త' ద్విత్వాక్షర ప్రాస": 6,
+   "పూర్ణబిందుపూర్వక 'గ'కార ప్రాస": 6,
+   "'చ'కార ప్రాస": 5,
+   "ఖండాఖండ 'క'కార ప్రాస": 5,
+   "'ట్ట' ద్విత్వాక్షర ప్రాస": 5,
+   "ల-ళ అభేద ప్రాసము": 5,
+   "పూర్ణబిందుపూర్వక 'ద'కార ప్రాస": 4,
+   "'వ్వ' ద్విత్వాక్షర ప్రాస": 4,
+   "'య్య' ద్విత్వాక్షర ప్రాస": 4,
+   "'ద్ద' ద్విత్వాక్షర ప్రాస": 4,
+   "✗ PRASA-VAIRA-GENERIC": 3,
+   "అర్ధబిందు 'డ'కార ప్రాస": 3,
+   "పూర్ణబిందుపూర్వక 'చ'కార ప్రాస": 3,
+   "'హ'కార ప్రాస": 2,
+   "'ణ'కార ప్రాస": 2,
+   "ఖండాఖండ 'గ'కార ప్రాస": 2,
+   "'జ్జ' ద్విత్వాక్షర ప్రాస": 2,
+   "ఖండాఖండ 'త'కార ప్రాస": 2,
+   "పూర్ణబిందుపూర్వక 'ట'కార ప్రాస": 2,
+   "'శ'కార ప్రాస": 1,
+   "పూర్ణబిందుపూర్వక 'క'కార ప్రాస": 1,
+   "'ద్వ' సంయుక్తాక్షర ప్రాస": 1,
+   "పూర్ణబిందుపూర్వక 'డ్ర' సంయుక్తాక్షర ప్రాస": 1,
+   "అర్ధబిందు 'గ'కార ప్రాస": 1,
+   "పూర్ణబిందుపూర్వక 'ప'కార ప్రాస": 1,
+   "అర్ధబిందు ఖండాఖండ 'త'కార ప్రాస": 1,
+   "అర్ధబిందు ఖండాఖండ 'ట'కార ప్రాస": 1,
+   "'గ్గ' ద్విత్వాక్షర ప్రాస": 1,
+   "ఖండాఖండ 'ద'కార ప్రాస": 1,
+   "'స్త' సంయుక్తాక్షర ప్రాస": 1,
+   "ఖండాఖండ 'చ'కార ప్రాస": 1,
+   "అర్ధబిందు 'క'కార ప్రాస": 1,
+   "'ర్చ' సంయుక్తాక్షర ప్రాస": 1
+  }
+ },
+ "unidentified": [
+  {
+   "id": "kuchimanchi-1",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-2",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-6",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 2,
+     "akshara": 14,
+     "reason": "line 2 breaks at akshara 14 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-7",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 2,
+     "akshara": 4,
+     "reason": "line 2 breaks at akshara 4 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-9",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 4,
+     "akshara": 11,
+     "reason": "line 4 breaks at akshara 11 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-10",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-12",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-15",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 2,
+     "akshara": 15,
+     "reason": "line 2 breaks at akshara 15 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-16",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 4,
+     "akshara": 10,
+     "reason": "line 4 breaks at akshara 10 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-18",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-22",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-23",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-24",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-25",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 breaks at akshara 18 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-29",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 2,
+     "akshara": 3,
+     "reason": "line 2 breaks at akshara 3 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-30",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-32",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-33",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-38",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-43",
+   "label": null,
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "bhujangaprayatamu",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-54",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 4,
+     "akshara": 8,
+     "reason": "line 4 breaks at akshara 8 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-55",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-57",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 2,
+     "akshara": 20,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-59",
+   "label": null,
+   "failures": [
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "bhujangaprayatamu",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-60",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 breaks at akshara 18 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-65",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-67",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-71",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 2,
+     "akshara": 11,
+     "reason": "line 2 breaks at akshara 11 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-81",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 2,
+     "akshara": 18,
+     "reason": "line 2 breaks at akshara 18 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-83",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 4,
+     "akshara": 6,
+     "reason": "line 4 breaks at akshara 6 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-84",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 4,
+     "akshara": 10,
+     "reason": "line 4 breaks at akshara 10 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-88",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 2,
+     "akshara": 13,
+     "reason": "line 2 breaks at akshara 13 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-90",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-92",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 2,
+     "akshara": 10,
+     "reason": "line 2 breaks at akshara 10 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-94",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-96",
+   "label": null,
+   "failures": [
+    {
+     "meter": "sardulavikriditamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-98",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-100",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-108",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-117",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-119",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-126",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 3,
+     "akshara": 9,
+     "reason": "line 3 breaks at akshara 9 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-147",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 8,
+     "reason": "line 1 breaks at akshara 8 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-162",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 2,
+     "akshara": 7,
+     "reason": "line 2 breaks at akshara 7 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-174",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 3,
+     "akshara": 18,
+     "reason": "line 3 breaks at akshara 18 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-176",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 2,
+     "akshara": 26,
+     "reason": "line 2 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 4,
+     "reason": "line 1 breaks at akshara 4 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-182",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 7,
+     "reason": "line 1 breaks at akshara 7 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 7,
+     "reason": "line 1 breaks at akshara 7 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-204",
+   "label": null,
+   "failures": [
+    {
+     "meter": "champakamala",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 breaks at akshara 18 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 breaks at akshara 18 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-210",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 19,
+     "reason": "line 1 breaks at akshara 19 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-213",
+   "label": null,
+   "failures": [
+    {
+     "meter": "champakamala",
+     "line_no": 2,
+     "akshara": 22,
+     "reason": "line 2 breaks at akshara 22 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 19,
+     "reason": "line 1 breaks at akshara 19 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-261",
+   "label": null,
+   "failures": [
+    {
+     "meter": "champakamala",
+     "line_no": 3,
+     "akshara": 6,
+     "reason": "line 3 breaks at akshara 6 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 19,
+     "reason": "line 1 breaks at akshara 19 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-265",
+   "label": null,
+   "failures": [
+    {
+     "meter": "champakamala",
+     "line_no": 3,
+     "akshara": 17,
+     "reason": "line 3 breaks at akshara 17 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 19,
+     "reason": "line 1 breaks at akshara 19 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-288",
+   "label": null,
+   "failures": [
+    {
+     "meter": "champakamala",
+     "line_no": 3,
+     "akshara": 15,
+     "reason": "line 3 breaks at akshara 15 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 19,
+     "reason": "line 1 breaks at akshara 19 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-392",
+   "label": null,
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 12,
+     "reason": "line 2 breaks at akshara 12 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-492",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 20,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 20,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-498",
+   "label": null,
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 3,
+     "akshara": 10,
+     "reason": "line 3 breaks at akshara 10 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-505",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-544",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-582",
+   "label": null,
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 4,
+     "akshara": 7,
+     "reason": "line 4 breaks at akshara 7 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-606",
+   "label": null,
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 15,
+     "reason": "line 2 ends too early for slot even (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-714",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 4,
+     "akshara": 18,
+     "reason": "line 4 breaks at akshara 18 for slot all",
+     "lines_survived": 3
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-722",
+   "label": null,
+   "failures": [
+    {
+     "meter": "utpalamala",
+     "line_no": 2,
+     "akshara": 18,
+     "reason": "line 2 breaks at akshara 18 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 18,
+     "reason": "line 1 breaks at akshara 18 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-735",
+   "label": null,
+   "failures": [
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 2,
+     "akshara": 9,
+     "reason": "line 2 breaks at akshara 9 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-863",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-877",
+   "label": null,
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 8,
+     "reason": "line 2 breaks at akshara 8 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-882",
+   "label": null,
+   "failures": [
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 2,
+     "akshara": 3,
+     "reason": "line 2 breaks at akshara 3 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-926",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 20,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 20,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1042",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 14,
+     "reason": "line 4 ends too early for slot even (needs more aksharas)",
+     "lines_survived": 3
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1053",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 ends too early for slot even (needs more aksharas)",
+     "lines_survived": 3
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "utsahamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1083",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1111",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 20,
+     "reason": "line 1 breaks at akshara 20 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1112",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 15 is not 4",
+     "lines_survived": 0
+    },
+    {
+     "meter": "bhujangaprayatamu",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 15 is not 4",
+     "lines_survived": 0
+    },
+    {
+     "meter": "champakamala",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 15 is not 4",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1113",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 7 is not 4",
+     "lines_survived": 0
+    },
+    {
+     "meter": "bhujangaprayatamu",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 7 is not 4",
+     "lines_survived": 0
+    },
+    {
+     "meter": "champakamala",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 7 is not 4",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1114",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 25,
+     "reason": "line 1 breaks at akshara 25 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1115",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1159",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 19,
+     "reason": "line 1 breaks at akshara 19 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1176",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 3,
+     "reason": "line 1 breaks at akshara 3 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1208",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1220",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 breaks at akshara 10 for slot odd",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1256",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 3,
+     "akshara": 18,
+     "reason": "line 3 breaks at akshara 18 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1261",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 5,
+     "akshara": 4,
+     "reason": "line 5 breaks at akshara 4 for slot all",
+     "lines_survived": 4
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 2,
+     "akshara": 6,
+     "reason": "line 2 breaks at akshara 6 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1263",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1276",
+   "label": null,
+   "failures": [
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 2,
+     "akshara": 9,
+     "reason": "line 2 breaks at akshara 9 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 9,
+     "reason": "line 2 breaks at akshara 9 for slot even",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1281",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1345",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot odd (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1432",
+   "label": null,
+   "failures": [
+    {
+     "meter": "tetagiti",
+     "line_no": 2,
+     "akshara": 10,
+     "reason": "line 2 breaks at akshara 10 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1434",
+   "label": null,
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 3,
+     "akshara": 2,
+     "reason": "line 3 breaks at akshara 2 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1452",
+   "label": null,
+   "failures": [
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1533",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 breaks at akshara 14 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1608",
+   "label": null,
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 3,
+     "akshara": 10,
+     "reason": "line 3 breaks at akshara 10 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 14,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1624",
+   "label": null,
+   "failures": [
+    {
+     "meter": "mattebhavikriditamu",
+     "line_no": 1,
+     "akshara": 17,
+     "reason": "line 1 breaks at akshara 17 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "kandamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "kuchimanchi-1632",
+   "label": null,
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 13,
+     "reason": "line 1 breaks at akshara 13 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 2,
+     "reason": "line 1 breaks at akshara 2 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  }
+ ],
+ "failing": {
+  "relaxed/hypothesis": [
+   {
+    "id": "kuchimanchi-11",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "mattebhavikriditamu",
+      "detail": "త (line 1) vs ర (line 2): త and ర have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-13",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 4,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "బ",
+       "ర్గా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: బ-ర: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-14",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 2,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "క్క",
+       "ద్మా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ద: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-17",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 3,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "యు",
+       "బం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: య-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-20",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 2,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "ర్జు",
+       "త్రీ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ర-త: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 3,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "త్క",
+       "ద్ఘో"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: త-ద same varga (ta); but vowels అ/ఓ are in classes A/U"
+     },
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 4,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "యు",
+       "ర్గా"
+      ],
+      "detail": "YATI-RJ-06 య-శ వర్గద్వయ యతి: య-ర table"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-53",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 2,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "ళ్లె",
+       "న్నే"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ళ-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-56",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "mattebhavikriditamu",
+      "detail": "న (line 1) vs మ (line 2): న and మ have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-82",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 4,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "మ్మ",
+       "ర్గా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-ర: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-103",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "న",
+       "బొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-107",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 1,
+      "positions": [
+       16,
+       23
+      ],
+      "aksharas": [
+       "మే",
+       "గో"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-గ: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       14,
+       20
+      ],
+      "aksharas": [
+       "గ్రౌ",
+       "ఝూ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: గ-ఝ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-113",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "న",
+       "జా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-జ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-127",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "యె",
+       "ట"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: య-ట: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-130",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 4,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "క",
+       "ద"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ద: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "ఎం",
+       "య"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఎ vs consonant యఅ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-135",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "వ",
+       "మ"
+      ],
+      "detail": "YATI-RJ-07 సంభావన వడి (మ-వ): వ-మ table"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-136",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 4,
+      "positions": [
+       14,
+       22
+      ],
+      "aksharas": [
+       "ప",
+       "ము"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: ప-మ: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-154",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "లో",
+       "ర్తి"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: ల-ర table; but vowels ఓ/ఇ are in classes U/I"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-155",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "కా",
+       "లం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-159",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       15,
+       21
+      ],
+      "aksharas": [
+       "కౌ",
+       "చ్చ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-చ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-165",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "న",
+       "మి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-177",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "క",
+       "న"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-179",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 3,
+      "positions": [
+       16,
+       24
+      ],
+      "aksharas": [
+       "కొ",
+       "బొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-180",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "నె",
+       "ట్లె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-ట: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-185",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ని",
+       "కె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-189",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       15,
+       21
+      ],
+      "aksharas": [
+       "పు",
+       "మ"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: ప-మ: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-215",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 3,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ల",
+       "నై"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-222",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "చు",
+       "రూ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: చ-ర: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-227",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "బ్బు",
+       "ప"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: బ-ప same varga (pa); but vowels ఉ/అ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-235",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "త",
+       "సి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: త-స: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-236",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "సు",
+       "కొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: స-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-255",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "champakamala",
+      "detail": "ర (line 1) vs క (line 3): ర and క have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-295",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "లా",
+       "న్న"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-307",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ఒ",
+       "తె"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఒ vs consonant తఎ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-341",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "క",
+       "లా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-342",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "లొ",
+       "మొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-348",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ద",
+       "నం"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: ద-న: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-363",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "బ",
+       "మ"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: బ-మ: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-373",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "న",
+       "ల"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-418",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "కి",
+       "ట్టి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ట: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-435",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       14,
+       21
+      ],
+      "aksharas": [
+       "రొ",
+       "టొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ర-ట: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 4,
+      "positions": [
+       15,
+       22
+      ],
+      "aksharas": [
+       "ట్టే",
+       "లి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ట-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-474",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "ద",
+       "టం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ద-ట: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-484",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "క",
+       "ల"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-485",
+    "meter": "utpalamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utpalamala",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "ఱా",
+       "లం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ఱ-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-527",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "క",
+       "ల"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-553",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "రో",
+       "టొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ర-ట: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-592",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "కే",
+       "సీ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-స: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-594",
+    "meter": "sardulavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "sardulavikriditamu",
+      "pada": 4,
+      "positions": [
+       1,
+       13
+      ],
+      "aksharas": [
+       "లేఁ",
+       "వె"
+      ],
+      "detail": "YATI-RJ-06 య-శ వర్గద్వయ యతి: ల-వ table"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-597",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "వొ",
+       "కు"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: వ-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-612",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       12
+      ],
+      "aksharas": [
+       "పొ",
+       "లొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-616",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "ల",
+       "క"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-638",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "న",
+       "ద్రె"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: న-ద: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-640",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "జి",
+       "చ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: జ-చ same varga (ca); but vowels ఇ/అ are in classes I/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-641",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "క",
+       "వ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-వ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-648",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "తే",
+       "త"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: త-త identity; but vowels ఏ/అ are in classes I/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-666",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "లొ",
+       "చు"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-చ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-672",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "వై",
+       "వె"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: వ-వ identity; but vowels ఐ/ఎ are in classes A/I"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-732",
+    "meter": "utpalamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utpalamala",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "విం",
+       "గిం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: వ-గ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-768",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "ల",
+       "ట"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-ట: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-793",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "నె",
+       "వే"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-వ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-803",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "కొ",
+       "లొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-859",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "బ",
+       "డా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: బ-డ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-898",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "లె",
+       "మె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-954",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 3,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ఱ",
+       "లా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ఱ-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-963",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 4,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "లీఁ",
+       "కేఁ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-975",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "ల్ప",
+       "క"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-983",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "య",
+       "డె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: య-డ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-995",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "క",
+       "ల"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-998",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "కె",
+       "వె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-వ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1000",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "వె",
+       "మె"
+      ],
+      "detail": "YATI-RJ-07 సంభావన వడి (మ-వ): వ-మ table"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1008",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 4,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "డ",
+       "నా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: డ-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1033",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "క",
+       "న్నా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1040",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "కొ",
+       "కా"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: క-క identity; but vowels ఒ/ఆ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1046",
+    "meter": "madhuragati_ragada",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "madhuragati_ragada",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "పె",
+       "న్క"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-న: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "madhuragati_ragada",
+      "pada": 3,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "గొ",
+       "ద"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: గ-ద: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1076",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "వెం",
+       "కే"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: వ-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1079",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "ద",
+       "రం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ద-ర: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1084",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ల",
+       "ద"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-ద: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1097",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "లు",
+       "చు"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-చ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1109",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ల",
+       "నై"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-న: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1123",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "బు",
+       "బ్బ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: బ-బ identity; but vowels ఉ/అ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1179",
+    "meter": "utpalamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utpalamala",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "బో",
+       "బెం"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: బ-బ identity; but vowels ఓ/ఎ are in classes U/I"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1185",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "లం",
+       "బ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1195",
+    "meter": "utsahamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utsahamu",
+      "pada": 3,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ర్ల",
+       "లొ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: ర-ల table; but vowels అ/ఒ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1202",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "త్రె",
+       "సి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: త-స: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1216",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "లా",
+       "క"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1219",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 1,
+      "positions": [
+       16,
+       24
+      ],
+      "aksharas": [
+       "క",
+       "వ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-వ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1227",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "కొం",
+       "క్క"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: క-క identity; but vowels ఒ/అ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1242",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "గ",
+       "గొ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: గ-గ identity; but vowels అ/ఒ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1254",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       17,
+       23
+      ],
+      "aksharas": [
+       "డా",
+       "డె"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: డ-డ identity; but vowels ఆ/ఎ are in classes A/I"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1308",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "కి",
+       "లే"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: క-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1332",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "లిఁ",
+       "మె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ల-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1400",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 2,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "సె",
+       "బి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: స-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1407",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "త",
+       "డ్తె"
+      ],
+      "detail": "YATI-RJ-14 ధ-డ / ద-ఢ / త-డ: త-డ table"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1410",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "ఱె",
+       "లిం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ఱ-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1421",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "న",
+       "ద్రె"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: న-ద: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1446",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "మీ",
+       "కె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: మ-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1469",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 4,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "రె",
+       "కేఁ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ర-క: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1566",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       12
+      ],
+      "aksharas": [
+       "ప",
+       "లా"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-ల: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1586",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "బ",
+       "మ"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: బ-మ: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1625",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "అ",
+       "యు"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel అ vs consonant యఉ: a vowel cannot leave its consonant"
+     }
+    ]
+   }
+  ],
+  "relaxed/acchu": [
+   {
+    "id": "kuchimanchi-11",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "mattebhavikriditamu",
+      "detail": "త (line 1) vs ర (line 2): త and ర have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-17",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 3,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "యు",
+       "బం"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: య-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-20",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 2,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "ర్జు",
+       "త్రీ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ర-త: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "mattebhavikriditamu",
+      "pada": 4,
+      "positions": [
+       1,
+       14
+      ],
+      "aksharas": [
+       "యు",
+       "ర్గా"
+      ],
+      "detail": "YATI-RJ-06 య-శ వర్గద్వయ యతి: య-ర table"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-56",
+    "meter": "mattebhavikriditamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "mattebhavikriditamu",
+      "detail": "న (line 1) vs మ (line 2): న and మ have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-103",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "న",
+       "బొ"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-బ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-127",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 3,
+      "positions": [
+       1,
+       8
+      ],
+      "aksharas": [
+       "యె",
+       "ట"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: య-ట: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-130",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "ఎం",
+       "య"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఎ vs consonant యఅ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-136",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 4,
+      "positions": [
+       14,
+       22
+      ],
+      "aksharas": [
+       "ప",
+       "ము"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: ప-మ: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-154",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "లో",
+       "ర్తి"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: ల-ర table; but vowels ఓ/ఇ are in classes U/I"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-165",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "న",
+       "మి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: న-మ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-189",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       15,
+       21
+      ],
+      "aksharas": [
+       "పు",
+       "మ"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: ప-మ: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-227",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "బ్బు",
+       "ప"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: బ-ప same varga (pa); but vowels ఉ/అ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-235",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "champakamala",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "త",
+       "సి"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: త-స: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-255",
+    "meter": "champakamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "prasa",
+      "unit": "champakamala",
+      "detail": "ర (line 1) vs క (line 3): ర and క have no prāsamaitri — No prāsamaitri between these consonants (asamaprāsa)"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-307",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 1,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ఒ",
+       "తె"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel ఒ vs consonant తఎ: a vowel cannot leave its consonant"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-638",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "న",
+       "ద్రె"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: న-ద: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-640",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "జి",
+       "చ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: జ-చ same varga (ca); but vowels ఇ/అ are in classes I/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-983",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "య",
+       "డె"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: య-డ: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1040",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 2,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "కొ",
+       "కా"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: క-క identity; but vowels ఒ/ఆ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1046",
+    "meter": "madhuragati_ragada",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "madhuragati_ragada",
+      "pada": 1,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "పె",
+       "న్క"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: ప-న: no maitri"
+     },
+     {
+      "kind": "yati",
+      "unit": "madhuragati_ragada",
+      "pada": 3,
+      "positions": [
+       1,
+       7
+      ],
+      "aksharas": [
+       "గొ",
+       "ద"
+      ],
+      "detail": "YATI-RJ-00 మైత్రి లేదు: గ-ద: no maitri"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1123",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "బు",
+       "బ్బ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: బ-బ identity; but vowels ఉ/అ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1179",
+    "meter": "utpalamala",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utpalamala",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "బో",
+       "బెం"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: బ-బ identity; but vowels ఓ/ఎ are in classes U/I"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1195",
+    "meter": "utsahamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "utsahamu",
+      "pada": 3,
+      "positions": [
+       1,
+       11
+      ],
+      "aksharas": [
+       "ర్ల",
+       "లొ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: ర-ల table; but vowels అ/ఒ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1227",
+    "meter": "tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 3,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "కొం",
+       "క్క"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: క-క identity; but vowels ఒ/అ are in classes U/A"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1242",
+    "meter": "kandamu",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "kandamu",
+      "pada": 4,
+      "positions": [
+       1,
+       10
+      ],
+      "aksharas": [
+       "గ",
+       "గొ"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: గ-గ identity; but vowels అ/ఒ are in classes A/U"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1254",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       17,
+       23
+      ],
+      "aksharas": [
+       "డా",
+       "డె"
+      ],
+      "detail": "YATI-RJ-04 స్వరవర్గ భేదము: డ-డ identity; but vowels ఆ/ఎ are in classes A/I"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1407",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "seesamu",
+      "pada": 2,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "త",
+       "డ్తె"
+      ],
+      "detail": "YATI-RJ-14 ధ-డ / ద-ఢ / త-డ: త-డ table"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1421",
+    "meter": "seesamu+tetagiti",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "tetagiti",
+      "pada": 4,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "న",
+       "ద్రె"
+      ],
+      "detail": "YATI-RJ-05 బిందురహిత వర్గపంచమాక్షర యతి: న-ద: stop with its class nasal without a preceding ం"
+     }
+    ]
+   },
+   {
+    "id": "kuchimanchi-1625",
+    "meter": "ataveladi",
+    "label": null,
+    "problems": [
+     {
+      "kind": "yati",
+      "unit": "ataveladi",
+      "pada": 1,
+      "positions": [
+       1,
+       9
+      ],
+      "aksharas": [
+       "అ",
+       "యు"
+      ],
+      "detail": "YATI-RJ-03 అచ్చు-హల్లు వియోగ నిషేధము: vowel అ vs consonant యఉ: a vowel cannot leave its consonant"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,38 @@
+id	name	name_in_telugu	type_of_chandassu	is_variant_of	alternative_names
+1	utpalamala	ఉత్పలమాల	vrutta
+2	champakamala	చంపకమాల	vrutta
+3	mattebhavikriditamu	మత్తేభవిక్రీడితము	vrutta
+4	sardulavikriditamu	శార్దూలవిక్రీడితము	vrutta
+5	sragdhara	స్రగ్ధర	vrutta
+6	mahasragdhara	మహాస్రగ్ధర	vrutta
+7	totakamu	తోటకము	vrutta
+8	bhujangaprayatamu	భుజంగప్రయాతము	vrutta
+9	mattakokilamu	మత్తకోకిలము	vrutta
+10	pamcacamaramu	పంచచామరము	vrutta
+11	vasamtatilakamu	వసంతతిలకము	vrutta
+12	indravajra	ఇంద్రవజ్ర	vrutta
+13	upendravajra	ఉపేంద్రవజ్ర	vrutta
+14	salini	శాలిని	vrutta
+15	rathoddhata	రథోద్ధత	vrutta
+16	sragvini	స్రగ్విణి	vrutta
+17	vidyunmala	విద్యున్మాల	vrutta
+18	lalita	లలిత	vrutta		manimanjari|మణిమంజరి
+20	kandamu	కందము	jati
+22	utsahamu	ఉత్సాహము	jati
+23	taruvoja	తరువోజ	jati
+24	dvipada	ద్విపద	jati
+25	madhyakkara	మధ్యాక్కర	jati
+27	madhuragati_ragada	మధురగతి_రగడ	jati
+28	turagagati_ragada	తురగగతి_రగడ	jati
+29	hayapracara_ragada	హయప్రచార_రగడ	jati	28
+30	seesamu	సీసము	upajati		sarvalaghu_seesamu|సర్వలఘు_సీసము
+32	ataveladi	ఆటవెలది	upajati
+33	tetagiti	తేటగీతి	upajati
+34	taralamu	తరళము	vrutta		tarala|dhruvakokila|తరలము|ధ్రువకోకిల
+35	malini	మాలిని	vrutta		nandimukhi|నాందీముఖీ
+36	manini	మానిని	vrutta		madira|latakusuma|sangata|మదిరా|లతాకుసుమ|సంగతా
+37	kavirajavirajitamu	కవిరాజవిరాజితము	vrutta		hamsagati|mahatarunidayita|sravanabharanam|హంసగతి|మహాతరుణీదయిత|శ్రవణాభరణమ్
+38	vanamayuramu	వనమయూరము	vrutta		induvadana|indravadana|ఇందువదన|ఇన్ద్రవదనా
+39	mangalamahasri	మంగళమహాశ్రీ	vrutta		mamgalamahasri|మంగళమహశ్రీ
+40	layagrahi	లయగ్రాహి	vrutta
+41	layavibhati	లయవిభాతి	vrutta

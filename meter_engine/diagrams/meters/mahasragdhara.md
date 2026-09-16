@@ -1,0 +1,29 @@
+# మహాస్రగ్ధర · mahasragdhara
+
+```mermaid
+flowchart LR
+  subgraph all["slot all"]
+    direction LR
+    all_start(( ))
+    all_G1["G1<br/>స IIU"]
+    all_start --> all_G1
+    all_G2["G2<br/>త UUI"]
+    all_G1 --> all_G2
+    all_G3["G3<br/>త UUI<br/>◆ యతి @ akshara 9"]
+    all_G2 --> all_G3
+    all_G4["G4<br/>న III"]
+    all_G3 --> all_G4
+    all_G5["G5<br/>స IIU"]
+    all_G4 --> all_G5
+    all_G6["G6<br/>ర UIU<br/>◆ యతి @ akshara 16"]
+    all_G5 --> all_G6
+    all_G7["G7<br/>ర UIU"]
+    all_G6 --> all_G7
+    all_G8["G8<br/>గురువు U"]
+    all_G7 --> all_G8
+    all_end((( )))
+    all_G8 --> all_end
+  end
+  classDef yati fill:#ffe082,stroke:#f9a825;
+  class all_G3,all_G6 yati;
+```

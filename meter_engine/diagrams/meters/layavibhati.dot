@@ -1,0 +1,36 @@
+digraph "layavibhati" {
+  rankdir=LR; fontname="Helvetica,Arial,sans-serif"; labelloc=b; fontsize=11;
+  label="లయవిభాతి  ·  layavibhati  ·  vrutta\n4 lines per unit, slot pattern: all all all all\naksharas per line: 34  ·  prāsa: yes  ·  prāsa-yati: allowed";
+  node [shape=box, style="rounded,filled", fontname="Helvetica,Arial,sans-serif", fontsize=10, fillcolor="#f4f4f4"];
+  edge [color="#607d8b", arrowsize=0.7];
+  subgraph "cluster_all" {
+    label="slot all  (lines 1, 2, 3, 4)"; style="rounded,dashed"; color="#90a4ae"; fontsize=10;
+    "all_start" [shape=circle, label="", width=0.18, fillcolor="#37474f"];
+    "all_end" [shape=doublecircle, label="", width=0.18, fillcolor="#37474f"];
+    "all_G1" [label="G1\nన III", fillcolor="#e3f2fd"];
+    "all_start" -> "all_G1";
+    "all_G2" [label="G2\nస IIU", fillcolor="#e3f2fd"];
+    "all_G1" -> "all_G2";
+    "all_G3" [label="G3\nన III", fillcolor="#e3f2fd"];
+    "all_G2" -> "all_G3";
+    "all_G4" [label="G4\nన III\n◆ యతి @ akshara 10", fillcolor="#ffe082"];
+    "all_G3" -> "all_G4";
+    "all_G5" [label="G5\nస IIU", fillcolor="#e3f2fd"];
+    "all_G4" -> "all_G5";
+    "all_G6" [label="G6\nన III", fillcolor="#e3f2fd"];
+    "all_G5" -> "all_G6";
+    "all_G7" [label="G7\nన III\n◆ యతి @ akshara 19", fillcolor="#ffe082"];
+    "all_G6" -> "all_G7";
+    "all_G8" [label="G8\nస IIU", fillcolor="#e3f2fd"];
+    "all_G7" -> "all_G8";
+    "all_G9" [label="G9\nన III", fillcolor="#e3f2fd"];
+    "all_G8" -> "all_G9";
+    "all_G10" [label="G10\nన III\n◆ యతి @ akshara 28", fillcolor="#ffe082"];
+    "all_G9" -> "all_G10";
+    "all_G11" [label="G11\nస IIU", fillcolor="#e3f2fd"];
+    "all_G10" -> "all_G11";
+    "all_G12" [label="G12\nగురువు U", fillcolor="#e3f2fd"];
+    "all_G11" -> "all_G12";
+    "all_G12" -> "all_end";
+  }
+}

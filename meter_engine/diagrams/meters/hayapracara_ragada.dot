@@ -1,0 +1,20 @@
+digraph "hayapracara_ragada" {
+  rankdir=LR; fontname="Helvetica,Arial,sans-serif"; labelloc=b; fontsize=11;
+  label="హయప్రచార_రగడ  ·  hayapracara_ragada  ·  jati\n2 lines per unit, slot pattern: all all  (repeatable)\naksharas per line: 8–12  ·  prāsa: yes  ·  prāsa-yati: allowed\nvariant of turagagati_ragada";
+  node [shape=box, style="rounded,filled", fontname="Helvetica,Arial,sans-serif", fontsize=10, fillcolor="#f4f4f4"];
+  edge [color="#607d8b", arrowsize=0.7];
+  subgraph "cluster_all" {
+    label="slot all  (lines 1, 2)"; style="rounded,dashed"; color="#90a4ae"; fontsize=10;
+    "all_start" [shape=circle, label="", width=0.18, fillcolor="#37474f"];
+    "all_end" [shape=doublecircle, label="", width=0.18, fillcolor="#37474f"];
+    "all_G1" [label="G1\nవ IU  ·  హ UI\nన III", fillcolor="#f4f4f4"];
+    "all_start" -> "all_G1";
+    "all_G2" [label="G2\nవ IU  ·  హ UI\nన III", fillcolor="#f4f4f4"];
+    "all_G1" -> "all_G2";
+    "all_G3" [label="G3\nవ IU  ·  హ UI\nన III\n◆ యతి (gana start)", fillcolor="#ffe082"];
+    "all_G2" -> "all_G3";
+    "all_G4" [label="G4\nవ IU  ·  హ UI\nన III", fillcolor="#f4f4f4"];
+    "all_G3" -> "all_G4";
+    "all_G4" -> "all_end";
+  }
+}

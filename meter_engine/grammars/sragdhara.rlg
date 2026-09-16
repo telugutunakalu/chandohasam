@@ -1,0 +1,146 @@
+# స్రగ్ధర · sragdhara — prosodic grammar (vrutta, 4 lines, 21 aksharas per line)
+# generated from meter_rules.yaml by indic_meter_dawg; do not edit by hand
+#
+# One grammar, three forms: (1) hierarchical, for reading; (2) right-linear, the same language flattened;
+# (3) strict, one symbol per production = the prosodic automaton. All three generate exactly the same poems.
+#
+# Terminals: U = guru (2 matras), I = laghu (1 matra), ⏎ = line separator.
+# Nonterminals: Poem, Unit, Line_<slot>, gana classes (Surya, Indra, Kanda, M4 …), ganas (భ, ర, …).
+#   Kanda−జ  = the class minus జ (a constraint removed it)   Kanda=జ|నల = only జ or నల allowed
+#   Kanda$U  = only members ending in a guru                   X⟨U⟩ = inside the branch where every line starts with U
+#   L2.G3    = line 2, about to read gana 3 (forms 2 and 3)
+#   A_UUI_2  = inside alternative UUI of A, 2 symbols already read (form 3 only)
+
+# ===== 1. Hierarchical: Poem → lines → gana classes → ganas → symbols
+# poem
+Poem → Line ⏎ Line ⏎ Line ⏎ Line                 # 4 lines
+
+# lines
+Line → మ ర భ న య య య                             # slot all: 7 ganas
+
+# ganas → symbols
+మ → U U U                                        # ma, 6 matras
+ర → U I U                                        # ra, 5 matras
+భ → U I I                                        # bha, 4 matras
+న → I I I                                        # na, 3 matras
+య → I U U                                        # ya, 5 matras
+
+# ===== 2. Right-linear (A → wB | w) over {U, I, ⏎}: the hierarchy flattened
+Poem → UUU L1.G2
+L1.G2 → UIU L1.G3
+L1.G3 → UII L1.G4
+L1.G4 → III L1.G5
+L1.G5 → IUU L1.G6
+L1.G6 → IUU L1.G7
+L1.G7 → IUU⏎ L2.G1
+L2.G1 → UUU L2.G2
+L2.G2 → UIU L2.G3
+L2.G3 → UII L2.G4
+L2.G4 → III L2.G5
+L2.G5 → IUU L2.G6
+L2.G6 → IUU L2.G7
+L2.G7 → IUU⏎ L3.G1
+L3.G1 → UUU L3.G2
+L3.G2 → UIU L3.G3
+L3.G3 → UII L3.G4
+L3.G4 → III L3.G5
+L3.G5 → IUU L3.G6
+L3.G6 → IUU L3.G7
+L3.G7 → IUU⏎ L4.G1
+L4.G1 → UUU L4.G2
+L4.G2 → UIU L4.G3
+L4.G3 → UII L4.G4
+L4.G4 → III L4.G5
+L4.G5 → IUU L4.G6
+L4.G6 → IUU L4.G7
+L4.G7 → IUU
+
+# ===== 3. Strict (A → aB | a): 87 productions, 88 states;
+# minimized prosodic automaton: 88 states. Every production is commented.
+Poem → U Poem_UUU_1               # మ ma: symbol 1/3 read, 2 to go
+Poem_UUU_1 → U Poem_UUU_2         # మ ma: symbol 2/3 read, 1 to go
+Poem_UUU_2 → U L1.G2              # మ ma: symbol 3/3, complete → L1.G2
+L1.G2 → U L1.G2_UIU_1             # ర ra: symbol 1/3 read, 2 to go
+L1.G2_UIU_1 → I L1.G2_UIU_2       # ర ra: symbol 2/3 read, 1 to go
+L1.G2_UIU_2 → U L1.G3             # ర ra: symbol 3/3, complete → L1.G3
+L1.G3 → U L1.G3_UII_1             # భ bha: symbol 1/3 read, 2 to go
+L1.G3_UII_1 → I L1.G3_UII_2       # భ bha: symbol 2/3 read, 1 to go
+L1.G3_UII_2 → I L1.G4             # భ bha: symbol 3/3, complete → L1.G4
+L1.G4 → I L1.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L1.G4_III_1 → I L1.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L1.G4_III_2 → I L1.G5             # న na: symbol 3/3, complete → L1.G5
+L1.G5 → I L1.G5_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L1.G5_IUU_1 → U L1.G5_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L1.G5_IUU_2 → U L1.G6             # య ya: symbol 3/3, complete → L1.G6
+L1.G6 → I L1.G6_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L1.G6_IUU_1 → U L1.G6_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L1.G6_IUU_2 → U L1.G7             # య ya: symbol 3/3, complete → L1.G7
+L1.G7 → I L1.G7_IUUNL_1           # య ya: symbol 1/4 read, 3 to go
+L1.G7_IUUNL_1 → U L1.G7_IUUNL_2   # య ya: symbol 2/4 read, 2 to go
+L1.G7_IUUNL_2 → U L1.G7_IUUNL_3   # య ya: symbol 3/4 read, 1 to go
+L1.G7_IUUNL_3 → ⏎ L2.G1           # య ya: symbol 4/4, complete → L2.G1
+L2.G1 → U L2.G1_UUU_1             # మ ma: symbol 1/3 read, 2 to go
+L2.G1_UUU_1 → U L2.G1_UUU_2       # మ ma: symbol 2/3 read, 1 to go
+L2.G1_UUU_2 → U L2.G2             # మ ma: symbol 3/3, complete → L2.G2
+L2.G2 → U L2.G2_UIU_1             # ర ra: symbol 1/3 read, 2 to go
+L2.G2_UIU_1 → I L2.G2_UIU_2       # ర ra: symbol 2/3 read, 1 to go
+L2.G2_UIU_2 → U L2.G3             # ర ra: symbol 3/3, complete → L2.G3
+L2.G3 → U L2.G3_UII_1             # భ bha: symbol 1/3 read, 2 to go
+L2.G3_UII_1 → I L2.G3_UII_2       # భ bha: symbol 2/3 read, 1 to go
+L2.G3_UII_2 → I L2.G4             # భ bha: symbol 3/3, complete → L2.G4
+L2.G4 → I L2.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L2.G4_III_1 → I L2.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L2.G4_III_2 → I L2.G5             # న na: symbol 3/3, complete → L2.G5
+L2.G5 → I L2.G5_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L2.G5_IUU_1 → U L2.G5_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L2.G5_IUU_2 → U L2.G6             # య ya: symbol 3/3, complete → L2.G6
+L2.G6 → I L2.G6_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L2.G6_IUU_1 → U L2.G6_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L2.G6_IUU_2 → U L2.G7             # య ya: symbol 3/3, complete → L2.G7
+L2.G7 → I L2.G7_IUUNL_1           # య ya: symbol 1/4 read, 3 to go
+L2.G7_IUUNL_1 → U L2.G7_IUUNL_2   # య ya: symbol 2/4 read, 2 to go
+L2.G7_IUUNL_2 → U L2.G7_IUUNL_3   # య ya: symbol 3/4 read, 1 to go
+L2.G7_IUUNL_3 → ⏎ L3.G1           # య ya: symbol 4/4, complete → L3.G1
+L3.G1 → U L3.G1_UUU_1             # మ ma: symbol 1/3 read, 2 to go
+L3.G1_UUU_1 → U L3.G1_UUU_2       # మ ma: symbol 2/3 read, 1 to go
+L3.G1_UUU_2 → U L3.G2             # మ ma: symbol 3/3, complete → L3.G2
+L3.G2 → U L3.G2_UIU_1             # ర ra: symbol 1/3 read, 2 to go
+L3.G2_UIU_1 → I L3.G2_UIU_2       # ర ra: symbol 2/3 read, 1 to go
+L3.G2_UIU_2 → U L3.G3             # ర ra: symbol 3/3, complete → L3.G3
+L3.G3 → U L3.G3_UII_1             # భ bha: symbol 1/3 read, 2 to go
+L3.G3_UII_1 → I L3.G3_UII_2       # భ bha: symbol 2/3 read, 1 to go
+L3.G3_UII_2 → I L3.G4             # భ bha: symbol 3/3, complete → L3.G4
+L3.G4 → I L3.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L3.G4_III_1 → I L3.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L3.G4_III_2 → I L3.G5             # న na: symbol 3/3, complete → L3.G5
+L3.G5 → I L3.G5_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L3.G5_IUU_1 → U L3.G5_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L3.G5_IUU_2 → U L3.G6             # య ya: symbol 3/3, complete → L3.G6
+L3.G6 → I L3.G6_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L3.G6_IUU_1 → U L3.G6_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L3.G6_IUU_2 → U L3.G7             # య ya: symbol 3/3, complete → L3.G7
+L3.G7 → I L3.G7_IUUNL_1           # య ya: symbol 1/4 read, 3 to go
+L3.G7_IUUNL_1 → U L3.G7_IUUNL_2   # య ya: symbol 2/4 read, 2 to go
+L3.G7_IUUNL_2 → U L3.G7_IUUNL_3   # య ya: symbol 3/4 read, 1 to go
+L3.G7_IUUNL_3 → ⏎ L4.G1           # య ya: symbol 4/4, complete → L4.G1
+L4.G1 → U L4.G1_UUU_1             # మ ma: symbol 1/3 read, 2 to go
+L4.G1_UUU_1 → U L4.G1_UUU_2       # మ ma: symbol 2/3 read, 1 to go
+L4.G1_UUU_2 → U L4.G2             # మ ma: symbol 3/3, complete → L4.G2
+L4.G2 → U L4.G2_UIU_1             # ర ra: symbol 1/3 read, 2 to go
+L4.G2_UIU_1 → I L4.G2_UIU_2       # ర ra: symbol 2/3 read, 1 to go
+L4.G2_UIU_2 → U L4.G3             # ర ra: symbol 3/3, complete → L4.G3
+L4.G3 → U L4.G3_UII_1             # భ bha: symbol 1/3 read, 2 to go
+L4.G3_UII_1 → I L4.G3_UII_2       # భ bha: symbol 2/3 read, 1 to go
+L4.G3_UII_2 → I L4.G4             # భ bha: symbol 3/3, complete → L4.G4
+L4.G4 → I L4.G4_III_1             # న na: symbol 1/3 read, 2 to go
+L4.G4_III_1 → I L4.G4_III_2       # న na: symbol 2/3 read, 1 to go
+L4.G4_III_2 → I L4.G5             # న na: symbol 3/3, complete → L4.G5
+L4.G5 → I L4.G5_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L4.G5_IUU_1 → U L4.G5_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L4.G5_IUU_2 → U L4.G6             # య ya: symbol 3/3, complete → L4.G6
+L4.G6 → I L4.G6_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L4.G6_IUU_1 → U L4.G6_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L4.G6_IUU_2 → U L4.G7             # య ya: symbol 3/3, complete → L4.G7
+L4.G7 → I L4.G7_IUU_1             # య ya: symbol 1/3 read, 2 to go
+L4.G7_IUU_1 → U L4.G7_IUU_2       # య ya: symbol 2/3 read, 1 to go
+L4.G7_IUU_2 → U                   # య ya: symbol 3/3, complete, line ends

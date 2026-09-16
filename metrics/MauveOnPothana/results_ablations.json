@@ -1,0 +1,102 @@
+{
+  "aksharatensor_full_poems": {
+    "accuracy": 0.8538205980066446,
+    "confusion": [
+      [
+        2884,
+        221,
+        109
+      ],
+      [
+        300,
+        1297,
+        45
+      ],
+      [
+        140,
+        65,
+        959
+      ]
+    ],
+    "pairwise_row_acc": {
+      "pothana~kuchimanchi": 0.860996705107084,
+      "pothana~vemana": 0.8777980813156693,
+      "kuchimanchi~vemana": 0.8039914468995011
+    }
+  },
+  "char_ngram_full_poems": {
+    "accuracy": 0.9956810631229236,
+    "confusion": [
+      [
+        3208,
+        6,
+        0
+      ],
+      [
+        4,
+        1638,
+        0
+      ],
+      [
+        14,
+        2,
+        1148
+      ]
+    ],
+    "pairwise_row_acc": {
+      "pothana~kuchimanchi": 0.9979406919275123,
+      "pothana~vemana": 0.9949748743718593,
+      "kuchimanchi~vemana": 0.992872416250891
+    }
+  },
+  "aksharatensor_makuta_stripped": {
+    "accuracy": 0.7795681063122923,
+    "confusion": [
+      [
+        2823,
+        218,
+        173
+      ],
+      [
+        291,
+        1235,
+        116
+      ],
+      [
+        323,
+        206,
+        635
+      ]
+    ],
+    "pairwise_row_acc": {
+      "pothana~kuchimanchi": 0.835667215815486,
+      "pothana~vemana": 0.789858382823207,
+      "kuchimanchi~vemana": 0.6664290805416964
+    }
+  },
+  "char_ngram_makuta_stripped": {
+    "accuracy": 0.9460132890365448,
+    "confusion": [
+      [
+        3117,
+        44,
+        53
+      ],
+      [
+        105,
+        1530,
+        7
+      ],
+      [
+        92,
+        24,
+        1048
+      ]
+    ],
+    "pairwise_row_acc": {
+      "pothana~kuchimanchi": 0.9569604612850082,
+      "pothana~vemana": 0.9513476473275468,
+      "kuchimanchi~vemana": 0.9187455452601568
+    }
+  }
+}

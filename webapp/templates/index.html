@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="page">
+    <h1>తెలుగు ఛందస్సు <span class="subtitle">Telugu Meter Analyzer</span></h1>
+
+    <form method="post" class="poem-form">
+        <textarea name="poem" rows="6" placeholder="{{ example }}" lang="te">{{ poem_text }}</textarea>
+        <div class="form-row">
+            <label for="profile">Profile</label>
+            <select name="profile" id="profile">
+                {% for p in profiles %}
+                    <option value="{{ p }}" {% if p == profile %}selected{% endif %}>{{ p }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Analyze</button>
+        </div>
+    </form>
+
+    {% if error %}
+        <div class="banner banner-error">{{ error }}</div>
+    {% endif %}
+
+    {% if analysis %}
+        {% if not analysis.identified %}
+            <div class="banner banner-fail">
+                <strong>Metre not identified.</strong>
+                <ul class="failure-list">
+                    {% for f in analysis.failures[:8] %}
+                        <li>{{ f.meter }} — pāda {{ f.line_no }}{% if f.akshara %}, akshara {{ f.akshara }}{% endif %}: {{ f.reason }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <div class="banner {{ 'banner-pass' if analysis.matched else 'banner-fail' }}">
+                <span class="verdict">{{ '✓ Matched' if analysis.matched else '✗ Not fully matched' }}</span>
+                <span class="meter-name">{{ analysis.name_te }} <span class="meter-en">({{ analysis.meter }})</span></span>
+                {% if analysis.ambiguous %}
+                    <span class="ambiguous">ambiguous — also considered: {{ analysis.candidates | join(', ') }}</span>
+                {% endif %}
+                <span class="badge {{ 'badge-pass' if analysis.prasa_matched else 'badge-fail' }}">ప్రాస {{ '✓' if analysis.prasa_matched else '✗' }}</span>
+                <span class="badge {{ 'badge-pass' if analysis.yati_matched else 'badge-fail' }}">యతి {{ '✓' if analysis.yati_matched else '✗' }}</span>
+            </div>
+
+            {% for u in analysis.units %}
+                <section class="unit">
+                    <h2>{{ u.name_te }} <span class="meter-en">({{ u.meter }})</span></h2>
+                    {% for n in u.notes %}<p class="note">{{ n }}</p>{% endfor %}
+                    {% for v in u.violations %}<p class="note note-warn">{{ v }}</p>{% endfor %}
+
+                    {% set max_ganas = (u.lines | map(attribute='ganas') | map('length') | list | max) %}
+                    <table class="gana-table">
+                        {% for line in u.lines %}
+                            <tr>
+                                <td class="line-check" title="yati checkpoints on this pāda">
+                                    {% if line.yati_matched %}<span class="check-pass">✓</span>{% else %}<span class="check-fail">✗</span>{% endif %}
+                                </td>
+                                {% for gana in line.ganas %}
+                                    <td class="gana-cell">
+                                        <div class="gana-label">{{ gana.telugu }} [{{ gana.aksharas | length }}]</div>
+                                        <div class="gana-pattern" title="{% set rules = gana.aksharas | map(attribute='rules') | list %}{% for a in gana.aksharas %}{{ a.text }}: {{ ', '.join(a.rules) }}{% if a.vikalpa %} (vikalpa: {{ a.vikalpa }}){% endif %}; {% endfor %}">
+                                            {% for a in gana.aksharas %}<span class="weight weight-{{ 'u' if a.weight == 'U' else 'i' }}">{{ 'U' if a.weight == 'U' else '|' }}</span>{% endfor %}
+                                        </div>
+                                        <div class="gana-aksharas">{{ (gana.aksharas | map(attribute='text') | list) | join(' ') }}</div>
+                                    </td>
+                                {% endfor %}
+                                {% for _ in range(max_ganas - line.ganas | length) %}
+                                    <td class="gana-cell gana-empty"></td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+
+                    {% for line in u.lines %}
+                        {% if line.yati %}
+                            <div class="yati-block">
+                                <div class="yati-label">పాదం {{ line.line_no }} — యతి చిహ్నాలు</div>
+                                {% for s in line.yati %}
+                                    <div class="yati-seat {{ 'yati-pass' if s.matched else 'yati-fail' }}">
+                                        <span class="yati-icon">{{ '✓' if s.matched else '✗' }}</span>
+                                        <span class="yati-positions">{{ s.positions | join('-') }}</span>
+                                        <span class="yati-aksharas">{{ s.aksharas | join(' ↔ ') }}</span>
+                                        {% if s.label_te %}<span class="yati-label">{{ s.label_te }}</span>{% endif %}
+                                        <span class="yati-detail">{{ s.detail }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if u.prasa and u.prasa.applicable %}
+                        <div class="prasa-block {{ 'prasa-pass' if u.prasa.matched else 'prasa-fail' }}">
+                            <span class="prasa-verdict">{{ '✓' if u.prasa.matched else '✗' }} {{ u.prasa.label_te }}</span>
+                            <span class="prasa-consonant">consonant: {{ u.prasa.consonant or '—' }}</span>
+                            <div class="prasa-seats">
+                                {% for s in u.prasa.seats %}
+                                    <span class="prasa-seat">పాదం {{ s.line_no }}: {{ s.purva }}·{{ s.prasa }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="prasa-block prasa-na">ప్రాస not required by this metre</div>
+                    {% endif %}
+                </section>
+            {% endfor %}
+        {% endif %}
+
+        <details class="raw-toggle">
+            <summary>Raw report</summary>
+            <pre>{{ analysis.render() }}</pre>
+        </details>
+    {% endif %}
+</main>
+{% endblock %}

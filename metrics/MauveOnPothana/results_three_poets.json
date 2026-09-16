@@ -1,0 +1,91 @@
+{
+  "n_per_side": 582,
+  "seeds": 5,
+  "corpus_sizes": {
+    "pothana": 3214,
+    "kuchimanchi": 1642,
+    "vemana": 1164
+  },
+  "mauve_gemma": {
+    "pothana~pothana": {
+      "mean": 0.9512688791527015,
+      "std": 0.010357948461318012
+    },
+    "pothana~kuchimanchi": {
+      "mean": 0.04347583624863062,
+      "std": 0.007925641274878123
+    },
+    "pothana~vemana": {
+      "mean": 0.032759617997346974,
+      "std": 0.002257553715341929
+    },
+    "kuchimanchi~kuchimanchi": {
+      "mean": 0.9470641063418492,
+      "std": 0.026264051928215085
+    },
+    "kuchimanchi~vemana": {
+      "mean": 0.010206646838095548,
+      "std": 0.0012468205252153964
+    },
+    "vemana~vemana": {
+      "mean": 0.9568078892035793,
+      "std": 0.014868320001972761
+    }
+  },
+  "mauve_aksharatensor": {
+    "pothana~pothana": {
+      "mean": 0.958817038700347,
+      "std": 0.004586915070952645
+    },
+    "pothana~kuchimanchi": {
+      "mean": 0.08257356800618507,
+      "std": 0.01699209637234463
+    },
+    "pothana~vemana": {
+      "mean": 0.1061003742819286,
+      "std": 0.01709283230705175
+    },
+    "kuchimanchi~kuchimanchi": {
+      "mean": 0.954357370169663,
+      "std": 0.022279503169632765
+    },
+    "kuchimanchi~vemana": {
+      "mean": 0.05837056033451904,
+      "std": 0.007686016494030568
+    },
+    "vemana~vemana": {
+      "mean": 0.9619650620303897,
+      "std": 0.01787805434877397
+    }
+  },
+  "classification_aksharatensor": {
+    "accuracy": 0.8538205980066446,
+    "confusion": [
+      [
+        2884,
+        221,
+        109
+      ],
+      [
+        300,
+        1297,
+        45
+      ],
+      [
+        140,
+        65,
+        959
+      ]
+    ],
+    "labels": [
+      "pothana",
+      "kuchimanchi",
+      "vemana"
+    ],
+    "pairwise_row_accuracy": {
+      "pothana~kuchimanchi": 0.860996705107084,
+      "pothana~vemana": 0.8777980813156693,
+      "kuchimanchi~vemana": 0.8039914468995011
+    }
+  }
+}

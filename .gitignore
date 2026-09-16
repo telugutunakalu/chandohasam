@@ -1,0 +1,49 @@
+# ---- secrets ----
+gcloud_agent_platform/api_key.txt
+*.env
+.env*
+*.pem
+*.key
+*credentials*.json
+*service-account*.json
+
+# ---- excluded from this repo by choice ----
+proposal/
+reference_papers/
+telugu_prosody_engine/
+
+# PDFs are not tracked (third-party scans / papers, ~200MB)
+*.pdf
+resources/
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- node / webapp assets ----
+node_modules/
+.next/
+npm-debug.log*
+
+# ---- derived / regenerable artifacts ----
+metrics/MauveOnPothana/embeddings_cache/
+dataset/backup/
+
+# ---- os / editor ----
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

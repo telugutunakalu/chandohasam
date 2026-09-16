@@ -1,0 +1,561 @@
+/* Color Palette */
+:root {
+  --bg:            #faf8f4;
+  --surface:       #ffffff;
+  --border:        #e6e1d8;
+  --text:          #2b2620;
+  --text-muted:    #8a8375;
+
+  --guru:          #b45309;
+  --guru-bg:       #fdf1e0;
+  --laghu:         #2563a6;
+  --laghu-bg:      #e8f1fb;
+
+  --pass:          #1e7a4c;
+  --pass-bg:       #e7f5ee;
+  --fail:          #b3261e;
+  --fail-bg:       #fbeaea;
+
+  --accent:        #7c3aed;
+}
+
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Page Layout */
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--text);
+  font-family: 'Noto Sans Telugu', sans-serif;
+}
+
+h1 .subtitle {
+  display: block;
+  font-size: 0.6em;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.8rem 0;
+  color: var(--text);
+  font-family: 'Noto Sans Telugu', sans-serif;
+}
+
+h2 .meter-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75em;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+/* Form */
+.poem-form {
+  background: var(--surface);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  resize: vertical;
+  min-height: 9rem;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+label {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+select {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+button {
+  padding: 0.6rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #6d28d9;
+}
+
+button:active {
+  background: #5b21b6;
+}
+
+/* Banners */
+.banner {
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.banner-pass {
+  background: var(--pass-bg);
+  color: var(--pass);
+  border: 1px solid rgba(30, 122, 76, 0.2);
+}
+
+.banner-fail {
+  background: var(--fail-bg);
+  color: var(--fail);
+  border: 1px solid rgba(179, 38, 30, 0.2);
+}
+
+.banner-error {
+  background: var(--fail-bg);
+  color: var(--fail);
+  border: 1px solid rgba(179, 38, 30, 0.2);
+}
+
+.banner strong {
+  font-weight: 600;
+}
+
+.verdict {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.meter-name {
+  font-weight: 500;
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-size: 1.1rem;
+}
+
+.meter-name .meter-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85em;
+  color: currentColor;
+  opacity: 0.8;
+  margin-left: 0.4rem;
+}
+
+.ambiguous {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-pass {
+  background: rgba(30, 122, 76, 0.15);
+  color: var(--pass);
+}
+
+.badge-fail {
+  background: rgba(179, 38, 30, 0.15);
+  color: var(--fail);
+}
+
+.failure-list {
+  margin-left: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.failure-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Unit */
+.unit {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.note {
+  padding: 0.6rem 0.9rem;
+  margin: 0.5rem 0;
+  background: var(--bg);
+  border-left: 3px solid var(--text-muted);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.note-warn {
+  border-left-color: var(--fail);
+  color: var(--fail);
+  background: var(--fail-bg);
+}
+
+/* Gaṇa Table */
+.gana-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+}
+
+.gana-table tr:nth-child(odd) {
+  background: var(--surface);
+}
+
+.gana-table tr:nth-child(even) {
+  background: var(--bg);
+}
+
+.gana-table td {
+  border: 1px solid var(--border);
+  padding: 0.8rem 0.6rem;
+  text-align: center;
+}
+
+.line-check {
+  width: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.check-pass {
+  color: var(--pass);
+}
+
+.check-fail {
+  color: var(--fail);
+}
+
+.gana-cell {
+  padding: 0.6rem 0.4rem;
+  vertical-align: middle;
+}
+
+.gana-label {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.gana-pattern {
+  display: flex;
+  justify-content: center;
+  gap: 0.15rem;
+  margin: 0.3rem 0;
+  cursor: help;
+}
+
+.weight {
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Inter', monospace;
+  min-width: 1.2em;
+}
+
+.weight-u {
+  color: var(--guru);
+}
+
+.weight-i {
+  color: var(--laghu);
+}
+
+.gana-aksharas {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+.gana-empty {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Yati */
+.yati-block {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: var(--bg);
+  border-radius: 6px;
+}
+
+.yati-label {
+  display: block;
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+.yati-seat {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--surface);
+  border-left: 3px solid;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.yati-pass {
+  border-left-color: var(--pass);
+  background: var(--pass-bg);
+  color: var(--pass);
+}
+
+.yati-fail {
+  border-left-color: var(--fail);
+  background: var(--fail-bg);
+  color: var(--fail);
+}
+
+.yati-icon {
+  font-weight: 600;
+  min-width: 1.2em;
+  text-align: center;
+}
+
+.yati-positions {
+  font-weight: 600;
+  font-family: 'Inter', monospace;
+}
+
+.yati-aksharas {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  line-height: 1.6;
+}
+
+.yati-label {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.yati-detail {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  flex-basis: 100%;
+  margin-left: 1.8rem;
+}
+
+/* Prāsa */
+.prasa-block {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.prasa-pass {
+  background: var(--pass-bg);
+  border-color: rgba(30, 122, 76, 0.2);
+  color: var(--pass);
+}
+
+.prasa-fail {
+  background: var(--fail-bg);
+  border-color: rgba(179, 38, 30, 0.2);
+  color: var(--fail);
+}
+
+.prasa-na {
+  background: var(--bg);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+.prasa-verdict {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-size: 1rem;
+}
+
+.prasa-consonant {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  opacity: 0.9;
+}
+
+.prasa-seats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.prasa-seat {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  padding: 0.3rem 0.6rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Raw Report */
+.raw-toggle {
+  margin-top: 2rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.raw-toggle summary {
+  padding: 0.8rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: 500;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.raw-toggle summary:hover {
+  background: #f1ede5;
+}
+
+.raw-toggle pre {
+  margin-top: 0.8rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Inter', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page {
+    padding: 1rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  select,
+  button {
+    width: 100%;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .gana-table {
+    font-size: 0.85rem;
+  }
+
+  .gana-table td {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .gana-label {
+    font-size: 0.7rem;
+  }
+
+  .gana-aksharas {
+    font-size: 0.85rem;
+  }
+
+  .gana-pattern {
+    gap: 0.1rem;
+  }
+
+  .weight {
+    font-size: 0.75rem;
+  }
+}

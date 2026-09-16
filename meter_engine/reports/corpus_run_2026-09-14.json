@@ -1,0 +1,807 @@
+{
+ "summary": {
+  "date": "2026-09-14",
+  "corpus": "/home/samvaran/phd_workspace/anlp_project/dataset/bhagavatam.json",
+  "poems_in_corpus": 10066,
+  "run": 7317,
+  "skipped": {
+   "vachanamu": 2684,
+   "taralamu": 23,
+   "malini": 12,
+   "gadya": 14,
+   "dandakamu": 2,
+   "kavirajavirajitamu": 3,
+   "slokamu": 1,
+   "mangalamahasri": 1,
+   "layagrahi": 4,
+   "vanamayuramu": 1,
+   "manini": 1,
+   "layavibhati": 3
+  },
+  "levels": {
+   "canonical": 6883,
+   "vikalpa": 410,
+   "compound": 14
+  },
+  "seconds": 5.1,
+  "per_metre": {
+   "sardulavikriditamu": {
+    "agree": 289,
+    "complete": 289
+   },
+   "utpalamala": {
+    "agree": 471,
+    "complete": 471
+   },
+   "mattebhavikriditamu": {
+    "agree": 586,
+    "complete": 586
+   },
+   "tetagiti": {
+    "agree": 1050,
+    "complete": 1051,
+    "none": 1
+   },
+   "seesamu": {
+    "agree": 1044,
+    "complete": 1048,
+    "none": 4
+   },
+   "ataveladi": {
+    "agree": 716,
+    "complete": 716
+   },
+   "kandamu": {
+    "agree": 2603,
+    "complete": 2608,
+    "none": 5
+   },
+   "champakamala": {
+    "agree": 490,
+    "complete": 490
+   },
+   "mattakokilamu": {
+    "agree": 41,
+    "complete": 41
+   },
+   "bhujangaprayatamu": {
+    "agree": 1,
+    "complete": 1
+   },
+   "sragdhara": {
+    "agree": 3,
+    "complete": 3
+   },
+   "indravajra": {
+    "agree": 4,
+    "complete": 4
+   },
+   "utsahamu": {
+    "agree": 3,
+    "complete": 3
+   },
+   "mahasragdhara": {
+    "agree": 2,
+    "complete": 2
+   },
+   "sragvini": {
+    "agree": 1,
+    "complete": 1
+   },
+   "totakamu": {
+    "agree": 1,
+    "complete": 1
+   },
+   "upendravajra": {
+    "agree": 1,
+    "complete": 1
+   },
+   "pamcacamaramu": {
+    "agree": 1,
+    "complete": 1
+   }
+  },
+  "totals": {
+   "agree": 7307,
+   "in-cands": 0,
+   "other": 0,
+   "none": 10
+  }
+ },
+ "details": [
+  {
+   "id": "1-445-సీ.",
+   "label": "seesamu",
+   "target": "seesamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "పౌ రా ణి కో త్త మ బ్ర తు కు ము పె క్కేం డ్లు | UUIUIIIIIIUUI | vikalpa@6",
+    "తా మ ర సా క్షు ని ధ వ ళ య శ ము | UIIUIIIIIIII | vikalpa@-",
+    "మ ర ణ శీ లు ర మై న మా కె ఱిం గిం చి తి | IIIUIIUIUIUUII | vikalpa@-",
+    "క ల్పి తం బ గు క్ర తు క ర్మ మం దుఁ | UIUIIIIUIUI | vikalpa@5",
+    "బొ గ ల చేఁ బొ గి లి య బు ద్ద చి త్తు ల మై న | IIIUIIIIUIUIIUI | vikalpa@-",
+    "మ ము హ రి ప ద ప ద్మ మ ధు ర ర స మున్ | IIIIIIUIIIIIIU | vikalpa@-",
+    "ద్రా విం చి తి వి నీ వు ధ న్యు ల మై తి మి | UUIIIUIUIIUII | vikalpa@-",
+    "స్వ ర్గ మే ని యు న ప వ ర్గ మే ని | UIUIIIIUIUI | vikalpa@-"
+   ],
+   "verse": [
+    "\"\"పౌరాణికోత్తమ! బ్రతుకుము పెక్కేండ్లు-",
+    "తామరసాక్షుని ధవళయశము",
+    "మరణశీలురమైన మా కెఱింగించితి-",
+    "కల్పితంబగు క్రతుకర్మమందుఁ",
+    "బొగలచేఁ బొగిలి యబుద్దచిత్తులమైన-",
+    "మము హరి పదపద్మ మధుర రసమున్",
+    "ద్రావించితివి నీవు ధన్యులమైతిమి-",
+    "స్వర్గమేనియు నపవర్గమేని"
+   ],
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 3,
+     "akshara": 29,
+     "reason": "line 3 breaks at akshara 29 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 12,
+     "reason": "line 1 breaks at akshara 12 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 2,
+     "reason": "line 1 breaks at akshara 2 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 2,
+     "reason": "line 1 breaks at akshara 2 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "sarvalaghu_seesamu",
+     "line_no": 1,
+     "akshara": 1,
+     "reason": "line 1 breaks at akshara 1 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "2-91.1-క.",
+   "label": "kandamu",
+   "target": "kandamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "ఏ దో నొ క క ర్మ ఫ ల | UUIIUIII | vikalpa@-",
+    "ప్రా దు ర్భా వ మ గు లో క పా ల న కే | UUUIIIUIUIIU | vikalpa@-",
+    "కా దే వుం డ భ య ప్ర తి | UUUIIUII | vikalpa@6",
+    "పా ద క మ గు మో క్ష ము న కుఁ బ తి యె ట్ల న్నన్ | UIIIIUIIIIIIIUU | vikalpa@13"
+   ],
+   "verse": [
+    "ఏదోనొకకర్మఫల",
+    "ప్రాదుర్భావ మగు లోక పాలన కే",
+    "కా దేవుం డభయప్రతి",
+    "పాదక మగు మోక్షమునకుఁ బతి యె ట్లన్నన్."
+   ],
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 2,
+     "akshara": 13,
+     "reason": "line 2 ends too early for slot even (needs more aksharas)",
+     "lines_survived": 1
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "3-800-క.",
+   "label": "kandamu",
+   "target": "kandamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "ని గ మా ర్థ గో చ రుం డ నఁ | IIUIUIUII | vikalpa@-",
+    "ద గు హ రి చ రి త ప్ర సం గ త త్ప ర చి త్తుం | IIIIIIUIUIUIIUU | vikalpa@7",
+    "డ గు న త ని కి స్వాం త రం గ ము | IIIIIIUIUII | vikalpa@6",
+    "ల గు యా మ ము లొ గి న యా త యా మ ము ల య్యెన్ | IIUIIIIIUIUIIUU | vikalpa@-"
+   ],
+   "verse": [
+    "నిగమార్థగోచరుం డనఁ",
+    "దగుహరిచరితప్రసంగతత్పర చిత్తుం",
+    "డగునతనికి స్వాంతరంగము",
+    "లగుయామము లొగి నయాతయామము లయ్యెన్."
+   ],
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 3,
+     "akshara": 9,
+     "reason": "line 3 breaks at akshara 9 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "9-156.1-తే.",
+   "label": "tetagiti",
+   "target": "tetagiti",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "యు న్న న లు వ ది యే డ్వు రు ను త్త రో ర్వి | UIIIIIUIIUIUI | vikalpa@-",
+    "ద క్షి ణో ర్వి యుఁ గా చి రి తం డ్రి యం త | UIUIIUIIUIUI | vikalpa@-",
+    "న ష్ట కా శ్రా ద్ధ మొ న రిం తు న ను చు న గ్ర | UIUUIIIUIIIIUI | vikalpa@13",
+    "సు తు వి కు క్షి ని రీ క్షిం చి శు ద్ధ మై న | IIIUIIUUIUIUI | vikalpa@-",
+    "మాం స ఖం డం బు దె మ్మ నె మ హి త య శుఁ డు | UIUUIUIIIIIIII | vikalpa@-"
+   ],
+   "verse": [
+    "యున్ననలువది యేడ్వురునుత్త రోర్వి",
+    "దక్షిణోర్వియుఁ గాచిరితండ్రి యంత",
+    "నష్టకాశ్రాద్ధ మొనరింతుననుచు నగ్ర",
+    "సుతు వికుక్షి నిరీక్షించిశుద్ధమైన",
+    "మాంసఖండంబు దెమ్మనెమహితయశుఁడు."
+   ],
+   "failures": [
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 5 is not 4",
+     "lines_survived": 0
+    },
+    {
+     "meter": "bhujangaprayatamu",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 5 is not 4",
+     "lines_survived": 0
+    },
+    {
+     "meter": "champakamala",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 5 is not 4",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 5 is not a multiple of 2",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 5 is not a multiple of 2",
+     "lines_survived": 0
+    },
+    {
+     "meter": "indravajra",
+     "line_no": 1,
+     "akshara": null,
+     "reason": "line count 5 is not 4",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "10.1-1009-క.",
+   "label": "kandamu",
+   "target": "kandamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "భూ త ము ల లో న వె లిఁ బ్ర | UIIIUIIII | vikalpa@8",
+    "ఖ్యా తుం డ గు న ట్టి వా నిఁ గాం త లు కా ళిం | UUIIUIUIUIIUU | vikalpa@-",
+    "దీ తీ ర వ నాం త ర ము ల | UUIIUIIII | vikalpa@-",
+    "భ్రాం తి న్వె దు కం గఁ జ ని రి పా డు చు న ధి పా గో పి క లు కృ ష్ణు ని వె ద కు ట గ ణ న | UUIIUIIIIUIIIIUUIIIUIIIIIIIII | vikalpa@-"
+   ],
+   "verse": [
+    "భూతముల లోన వెలిఁ బ్ర",
+    "ఖ్యాతుండగునట్టివానిఁ;గాంతలు కాళిం",
+    "దీతీర వనాంతరముల",
+    "భ్రాంతిన్వెదుకంగఁ జనిరిపాడుచు నధిపా!^ గోపికలు కృష్ణుని వెదకుట - గణన"
+   ],
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 4,
+     "akshara": 16,
+     "reason": "line 4 breaks at akshara 16 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 10,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "10.1-1509-క.",
+   "label": "kandamu",
+   "target": "kandamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "బం ధుం డ వు స ద్ద్యో హి త | UUIIUUII | vikalpa@-",
+    "సం ధుం డ వు వా విఁ జూ డ జ న కుఁ డ వు కృ పా | UUIIUIUIIIIIIIU | vikalpa@-",
+    "సిం ధుం డ వె ల్ల గు ణ ము ల | UUIUIIIII | vikalpa@-",
+    "నం ధుం డ వు గా వు ప్రో వ న ర్హుం డ వెం దున్ | UUIIUIUIUUIUU | vikalpa@6"
+   ],
+   "verse": [
+    "\"బంధుండవు సద్ద్యోహిత",
+    "సంధుండవు వావిఁ జూడజనకుఁడవు కృపా",
+    "సింధుండ వెల్ల గుణముల",
+    "నంధుండవుగావు ప్రోవనర్హుండ వెందున్."
+   ],
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 4,
+     "akshara": 12,
+     "reason": "line 4 breaks at akshara 12 for slot even",
+     "lines_survived": 3
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhyakkara",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "taruvoja",
+     "line_no": 1,
+     "akshara": 5,
+     "reason": "line 1 breaks at akshara 5 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "10.2-574-సీ.",
+   "label": "seesamu",
+   "target": "seesamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "భూ రి య శో ధ ను లా ర తా లాం కుం డు | UIIUIIUIUUUI | vikalpa@-",
+    "చ ను దెం చి న గ రో ప వ న ము నం దు | IIUIIIUIIIIUI | vikalpa@-",
+    "ను న్న వాఁ డ ని న వా రు త్సా హ ము న బ లుఁ | UIUIIIUUUIIIII | vikalpa@-",
+    "బొ డ గ ను వే డు క బు ద్ధిఁ దోఁ పఁ | IIIIUIIUIUI | vikalpa@-",
+    "న రా రు కా ని కల్ గొ ని చ ని య ర్ఘ్య పా | IUIUIUIIIIUIU | vikalpa@-",
+    "ద్యా ది స త్కృ తు లు నె య్య ము నఁ జే సి | UIUIIIUIIIUI | vikalpa@-",
+    "ధే ను వు ని చ్చి స మ్మా నిం చి యం ద ఱు | UIIUIUUUIUII | vikalpa@-",
+    "నం దం ద వం ద నం బా చ రిం చి | UUIUIUUIUI | vikalpa@-"
+   ],
+   "verse": [
+    "\"భూరియశోధనులార!తాలాంకుండు-",
+    "చనుదెంచి నగరోపవనము నందు",
+    "నున్నవాఁ\"డనిన వారుత్సాహమున బలుఁ-",
+    "బొడగను వేడుకబుద్ధిఁ దోఁపఁ",
+    "నరారు కానికల్‌గొనిచని యర్ఘ్యపా-",
+    "ద్యాదిసత్కృతులు నెయ్యమునఁ జేసి",
+    "ధేనువు నిచ్చి సమ్మానించి యందఱు-",
+    "నందంద వందనంబాచరించి"
+   ],
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 3,
+     "akshara": 2,
+     "reason": "line 3 breaks at akshara 2 for slot all",
+     "lines_survived": 2
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 breaks at akshara 11 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 7,
+     "reason": "line 1 breaks at akshara 7 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 7,
+     "reason": "line 1 breaks at akshara 7 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "sarvalaghu_seesamu",
+     "line_no": 1,
+     "akshara": 1,
+     "reason": "line 1 breaks at akshara 1 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "10.2-621-సీ.",
+   "label": "seesamu",
+   "target": "seesamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "స క లా ర్థ సం వే ది యొ యిం టి లో ప లఁ | IIUIUUIIUIUII | vikalpa@-",
+    "జె లి తో డ ము చ్చ టల్ సె ప్పు చుం డు | IIUIUIUUIUI | vikalpa@-",
+    "వి పు ల య శో ని ధి వే ఱొ క యిం టి లో | IIIIUIIUIIUIU | vikalpa@-",
+    "స ర సి జా న నఁ గూ డి స ర స మా డుఁ | IIIUIIUIIIIUI | vikalpa@-",
+    "బుం డ రీ క ద ళా క్షుఁ డొం డొ క యిం టి లోఁ | UIUIIUIUIIUIU | vikalpa@-",
+    "ద రు ణి కి హా ర వ ల్ల రు లు గ్రు చ్చుఁ | IIIIUIUIIIUI | vikalpa@10",
+    "గ రు ణా ప యో ని ధి మ ఱి యొ క యిం టి లోఁ | IIUIUIIIIIIUIU | vikalpa@-",
+    "జె లిఁ గూ డి వి డి య ము సే యు చుం డు | IIUIIIIIUIUI | vikalpa@-"
+   ],
+   "verse": [
+    "సకలార్థసంవేదియొయింటిలోపలఁ-",
+    "జెలితోడ ముచ్చటల్‌సెప్పుచుండు",
+    "విపులయశోనిధివేఱొక యింటిలో-",
+    "సరసిజాననఁ గూడిసరస మాడుఁ",
+    "బుండరీకదళాక్షుఁడొండొక యింటిలోఁ-",
+    "దరుణికి హారవల్లరులు గ్రుచ్చుఁ",
+    "గరుణాపయోనిధిమఱియొక యింటిలోఁ-",
+    "జెలిఁ గూడి విడియముసేయుచుండు"
+   ],
+   "failures": [
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "seesamu",
+     "line_no": 1,
+     "akshara": 9,
+     "reason": "line 1 breaks at akshara 9 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 3,
+     "reason": "line 1 breaks at akshara 3 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "sarvalaghu_seesamu",
+     "line_no": 1,
+     "akshara": 3,
+     "reason": "line 1 breaks at akshara 3 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 3,
+     "reason": "line 1 breaks at akshara 3 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "10.2-825-క.",
+   "label": "kandamu",
+   "target": "kandamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "స లి ల ము లు లే ని ఠా వు న | IIIIIUIUII | vikalpa@-",
+    "వ లు వ లు వె స నె గ యఁ ది గి చి వా ర క తో యం | IIIIIIIIIIIIUIIUU | vikalpa@-",
+    "బు లు గ ల చో ట నుం జే లం | IIIIUIUUU | vikalpa@-",
+    "బు లు ద డి యఁ గఁ బ డి యె ని జ వి భు త్వ ము ద ఱుఁ గన్ | IIIIIIIIIIIIUIIIIU | vikalpa@-"
+   ],
+   "verse": [
+    "సలిలములు లేని ఠావున",
+    "వలువలు వెస నెగయఁ దిగిచివారక తోయం",
+    "బులుగల చోటనుం జేలం",
+    "బులుదడియఁగఁ బడియె నిజవిభుత్వము దఱుఁగన్"
+   ],
+   "failures": [
+    {
+     "meter": "kandamu",
+     "line_no": 3,
+     "akshara": 7,
+     "reason": "line 3 breaks at akshara 7 for slot odd",
+     "lines_survived": 2
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "tetagiti",
+     "line_no": 1,
+     "akshara": 11,
+     "reason": "line 1 ends too early for slot all (needs more aksharas)",
+     "lines_survived": 0
+    },
+    {
+     "meter": "ataveladi",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot odd",
+     "lines_survived": 0
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 6,
+     "reason": "line 1 breaks at akshara 6 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  },
+  {
+   "id": "10.2-1037-సీ.",
+   "label": "seesamu",
+   "target": "seesamu",
+   "complete": true,
+   "bucket": "none",
+   "best": null,
+   "candidates": [],
+   "notes": [],
+   "scansion": [
+    "ధ ర ణీ శ బ లుఁ డు ను స ర సి జో ద రుఁ డు న | IIUIIIIIIIIUIIII | vikalpa@-",
+    "వో న్న త సు ఖ లీ ల నుం డు నం తఁ | UIIIIUIUIUI | vikalpa@-",
+    "జ టు లో గ్ర క ల్పాం త స మ య మం దు నుఁ బో | IIUIUUIIIIUIIU | vikalpa@-",
+    "దృ గ స హ్య మై స ము ద్దీ ప్త మ గు చు | IIUIUIUUIIII | vikalpa@-",
+    "రా జి ల్లు సూ ర్యో ప రా గం బు స ను దెం చు | UUIUUIUUIIIUI | vikalpa@-",
+    "టె ఱిఁ గి భూ జ ను లె ల్ల వ రు సఁ గ ద లి | IIIUIIUIIIIIII | vikalpa@-",
+    "ము ను జ మ ద గ్ని రా ముఁ డు పూ ని ము య్యే డు | IIIIUIUIIUIUUI | vikalpa@-",
+    "మా ఱు లు ఘ న బ లో దా రుఁ డ గు చు | UIIIIIUUIIII | vikalpa@-"
+   ],
+   "verse": [
+    "ధరణీశ! బలుఁడునుసరసిజోదరుఁడు న-",
+    "వోన్నతసుఖలీలనుండునంతఁ",
+    "జటులోగ్రకల్పాంతసమయమందునుఁ బో-",
+    "దృగసహ్యమై సముద్దీప్త మగుచు",
+    "రాజిల్లు సూర్యోపరాగంబు సనుదెంచు-",
+    "టెఱిఁగి భూజను లెల్లవరుసఁ గదలి",
+    "మును జమదగ్ని రాముఁడు పూని ముయ్యేడు-",
+    "మాఱులు ఘనబలోదారుఁ డగుచు"
+   ],
+   "failures": [
+    {
+     "meter": "seesamu",
+     "line_no": 2,
+     "akshara": 17,
+     "reason": "line 2 breaks at akshara 17 for slot all",
+     "lines_survived": 1
+    },
+    {
+     "meter": "dvipada",
+     "line_no": 1,
+     "akshara": 16,
+     "reason": "line 1 breaks at akshara 16 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "madhuragati_ragada",
+     "line_no": 1,
+     "akshara": 15,
+     "reason": "line 1 breaks at akshara 15 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "hayapracara_ragada",
+     "line_no": 1,
+     "akshara": 3,
+     "reason": "line 1 breaks at akshara 3 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "sarvalaghu_seesamu",
+     "line_no": 1,
+     "akshara": 3,
+     "reason": "line 1 breaks at akshara 3 for slot all",
+     "lines_survived": 0
+    },
+    {
+     "meter": "turagagati_ragada",
+     "line_no": 1,
+     "akshara": 3,
+     "reason": "line 1 breaks at akshara 3 for slot all",
+     "lines_survived": 0
+    }
+   ]
+  }
+ ]
+}

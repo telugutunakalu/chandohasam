@@ -1,0 +1,32 @@
+{
+  "source": "/home/samvaran/phd_workspace/anlp_project/bhagavatam.txt",
+  "total_poems": 3214,
+  "excluded_blocks": {
+    "వ.": 1537,
+    "incomplete": 1030,
+    "గ.": 9,
+    "దం.": 1,
+    "శ్లో.": 1
+  },
+  "meter_counts": {
+    "క. (Kandamu)": 1017,
+    "తే. (Tetagiti)": 661,
+    "సీ. (Seesamu)": 464,
+    "ఆ. (Ataveladi)": 313,
+    "మ. (Mattebhamu)": 224,
+    "చ. (Champakamala)": 215,
+    "ఉ. (Utpalamala)": 182,
+    "శా. (Sardulamu)": 100,
+    "త. (Taralamu)": 11,
+    "మత్త. (Mattakokila)": 10,
+    "మాలి. (Malini)": 8,
+    "ఇం. (Indravajra)": 2,
+    "మం (Manigananikaramu)": 1,
+    "స్రగ్ద. (Sragdhara)": 1,
+    "వన. (Vanamayuramu)": 1,
+    "ఉత్సా. (Utsahamu)": 1,
+    "మస్ర. (Mahasragdhara)": 1,
+    "స్రగ్వి. (Sragvini)": 1,
+    "తో. (Totakamu)": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "10": {
+    "accuracy": 0.8333333333333334,
+    "per_poet": {
+      "pothana": 10,
+      "kuchimanchi": 10,
+      "vemana": 10
+    },
+    "trials": 12
+  },
+  "25": {
+    "accuracy": 0.9722222222222222,
+    "per_poet": {
+      "pothana": 11,
+      "kuchimanchi": 12,
+      "vemana": 12
+    },
+    "trials": 12
+  },
+  "50": {
+    "accuracy": 1.0,
+    "per_poet": {
+      "pothana": 12,
+      "kuchimanchi": 12,
+      "vemana": 12
+    },
+    "trials": 12
+  },
+  "100": {
+    "accuracy": 1.0,
+    "per_poet": {
+      "pothana": 12,
+      "kuchimanchi": 12,
+      "vemana": 12
+    },
+    "trials": 12
+  }
+}
