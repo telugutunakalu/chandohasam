@@ -1,10 +1,10 @@
-# EXP-33 — Scaling sufficiency analysis
+# Scaling sufficiency analysis (formerly EXP-33)
 
 | | |
 |---|---|
 | **Category** | J. Data |
 | **Origin** | ours (E18) |
-| **Depends on** | EXP-29,32 |
+| **Depends on** | [throughput benchmark](training-throughput-benchmark.md), EXP-32 |
 | **Status** | done |
 | **Cost** | seconds |
 
@@ -21,7 +21,7 @@ Prevents both over- and under-building. For diffusion LMs the data-repetition to
 4. The largest supported model is where required epochs still fall below tolerated epochs.
 
 ## Inputs
-Unique token count; published scaling coefficients; measured throughput from EXP-29.
+Unique token count; published scaling coefficients; measured throughput from the [throughput benchmark](training-throughput-benchmark.md).
 
 ## Metrics
 Data required, epochs required, epochs tolerated, wall-clock — per candidate size.

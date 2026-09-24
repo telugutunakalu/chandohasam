@@ -1,4 +1,4 @@
-# EXP-29 — Training throughput benchmark
+# Training throughput benchmark (formerly EXP-29)
 
 | | |
 |---|---|

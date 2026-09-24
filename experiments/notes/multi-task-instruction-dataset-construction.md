@@ -1,4 +1,4 @@
-# EXP-34 — Multi-task instruction dataset construction
+# Multi-task instruction dataset construction (formerly EXP-34)
 
 | | |
 |---|---|

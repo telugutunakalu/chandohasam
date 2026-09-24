@@ -40,15 +40,9 @@ A model that represents syllables should preserve length near 100% and beat the 
 | 25% | **0.0%** | — (n=0) | 55.8% |
 | 50% | **0.0%** | — (n=0) | 51.2% |
 
-**padyam-50m (39M params, 20 min training):**
+On the identical protocol, a 39M-parameter akshara-aligned realiser restores 96–99% of weights at every rate; see **EXP-26** for its table. A model ~600× smaller solves what the larger cannot attempt.
 
-| blanked | weight correct | exact recovery |
-|---|---|---|
-| 10% | **99.0%** | 94.8% |
-| 25% | **97.9%** | 90.3% |
-| 50% | **96.2%** | 78.7% |
-
-A model ~600× smaller solves what the larger cannot attempt.
+This also settles the teacher-forced vs free-running question (formerly EXP-10) for this model family: Gemma fails even when given the true context, so its metrical failure is not mainly exposure bias.
 
 ## Replication notes
 Report the frequency baseline alongside — at ~57% it is high, and a naive reading of 60% as 'above chance' is wrong. Report n at each rate; when alignment fails, n collapses to zero and the weight column is vacuous.

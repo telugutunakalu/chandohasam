@@ -4,7 +4,7 @@
 |---|---|
 | **Category** | E. Iteration and alphabet |
 | **Origin** | ours (E10) |
-| **Depends on** | EXP-15 |
+| **Depends on** | EXP-14 |
 | **Status** | done (saturates) |
 | **Cost** | ~1 h, 5 iterations × 4 topics |
 
