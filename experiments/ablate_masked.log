@@ -1,0 +1,24 @@
+padyam-50m: 40.9M params | obj=masked | mode=pretrain | packed examples | 3000 steps
+W0922 18:48:19.294000 45919 torch/_inductor/utils.py:1953] [0/0_1] Not enough SMs to use max_autotune_gemm mode
+  step      1/3000  ce=9.691  ppl= 16173.1  lr=4.00e-06  1,135 tok/s  0.2m
+  step    375/3000  ce=5.757  ppl=   316.5  lr=5.92e-04  77,308 tok/s  1.3m
+  EVAL step    500  val_ce=5.623 acc=8.2% nelbo=5.606 ppl_bound=272
+        CE by mask rate  0-20%:5.44  20-40%:5.53  40-60%:5.54  60-80%:5.64  80-100%:5.73
+  step    750/3000  ce=5.378  ppl=   216.5  lr=5.43e-04  78,855 tok/s  2.6m
+  EVAL step   1000  val_ce=5.013 acc=13.8% nelbo=4.803 ppl_bound=122
+        CE by mask rate  0-20%:4.06  20-40%:4.39  40-60%:4.70  60-80%:5.10  80-100%:5.55
+  step   1125/3000  ce=5.077  ppl=   160.3  lr=4.59e-04  81,425 tok/s  3.8m
+  step   1500/3000  ce=4.920  ppl=   137.0  lr=3.52e-04  82,899 tok/s  4.9m
+  EVAL step   1500  val_ce=4.823 acc=16.1% nelbo=4.486 ppl_bound=89
+        CE by mask rate  0-20%:3.64  20-40%:4.01  40-60%:4.42  60-80%:4.94  80-100%:5.49
+  step   1875/3000  ce=4.809  ppl=   122.6  lr=2.42e-04  83,707 tok/s  6.1m
+  EVAL step   2000  val_ce=4.700 acc=17.4% nelbo=4.309 ppl_bound=74
+        CE by mask rate  0-20%:3.46  20-40%:3.80  40-60%:4.25  60-80%:4.87  80-100%:5.41
+  step   2250/3000  ce=4.765  ppl=   117.3  lr=1.47e-04  84,316 tok/s  7.3m
+  EVAL step   2500  val_ce=4.655 acc=18.0% nelbo=4.237 ppl_bound=69
+        CE by mask rate  0-20%:3.31  20-40%:3.76  40-60%:4.18  60-80%:4.80  80-100%:5.41
+  step   2625/3000  ce=4.720  ppl=   112.2  lr=8.27e-05  84,693 tok/s  8.5m
+  step   3000/3000  ce=4.707  ppl=   110.7  lr=6.00e-05  85,140 tok/s  9.6m
+  EVAL step   3000  val_ce=4.655 acc=18.1% nelbo=4.238 ppl_bound=69
+        CE by mask rate  0-20%:3.25  20-40%:3.70  40-60%:4.19  60-80%:4.82  80-100%:5.41
+done in 9.6 min

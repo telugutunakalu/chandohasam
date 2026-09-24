@@ -1,0 +1,11 @@
+padyam-50m: 40.9M params | obj=continuous | mode=pretrain | packed examples | 3000 steps
+  step      1/3000  ce=8.892  ppl=  7271.6  lr=4.00e-06  14,428 tok/s  0.0m
+  step    375/3000  ce=3.777  ppl=    43.7  lr=5.92e-04  36,936 tok/s  2.8m
+  step    750/3000  ce=4.706  ppl=   110.7  lr=5.43e-04  36,990 tok/s  5.5m
+  step   1125/3000  ce=4.663  ppl=   106.0  lr=4.59e-04  37,005 tok/s  8.3m
+  step   1500/3000  ce=4.631  ppl=   102.6  lr=3.52e-04  37,000 tok/s  11.1m
+  step   1875/3000  ce=4.610  ppl=   100.5  lr=2.42e-04  37,004 tok/s  13.8m
+  step   2250/3000  ce=4.618  ppl=   101.3  lr=1.47e-04  37,006 tok/s  16.6m
+  step   2625/3000  ce=4.585  ppl=    98.0  lr=8.27e-05  37,006 tok/s  19.4m
+  step   3000/3000  ce=4.569  ppl=    96.5  lr=6.00e-05  37,007 tok/s  22.1m
+done in 22.1 min

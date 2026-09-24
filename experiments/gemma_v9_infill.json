@@ -1,0 +1,32 @@
+{
+ "0.1": {
+  "lines": 48,
+  "aligned": 5,
+  "holes": 10,
+  "w_ok": 6,
+  "exact": 1,
+  "b_uni": 47,
+  "b_freq": 55,
+  "b_holes": 96
+ },
+ "0.25": {
+  "lines": 48,
+  "aligned": 0,
+  "holes": 0,
+  "w_ok": 0,
+  "exact": 0,
+  "b_uni": 126,
+  "b_freq": 134,
+  "b_holes": 240
+ },
+ "0.5": {
+  "lines": 48,
+  "aligned": 0,
+  "holes": 0,
+  "w_ok": 0,
+  "exact": 0,
+  "b_uni": 232,
+  "b_freq": 246,
+  "b_holes": 480
+ }
+}

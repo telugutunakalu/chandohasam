@@ -1,0 +1,12 @@
+padyam-50m: 40.9M params | obj=uniform | mode=pretrain | packed examples | 3000 steps
+W0922 18:58:00.262000 47426 torch/_inductor/utils.py:1953] [1/0] Not enough SMs to use max_autotune_gemm mode
+  step      1/3000  ce=9.432  ppl= 12485.3  lr=4.00e-06  5,910 tok/s  0.0m
+  step    375/3000  ce=2.196  ppl=     9.0  lr=5.92e-04  74,964 tok/s  1.4m
+  step    750/3000  ce=2.773  ppl=    16.0  lr=5.43e-04  76,925 tok/s  2.7m
+  step   1125/3000  ce=2.607  ppl=    13.6  lr=4.59e-04  77,447 tok/s  4.0m
+  step   1500/3000  ce=2.565  ppl=    13.0  lr=3.52e-04  77,786 tok/s  5.3m
+  step   1875/3000  ce=2.474  ppl=    11.9  lr=2.42e-04  77,977 tok/s  6.6m
+  step   2250/3000  ce=2.451  ppl=    11.6  lr=1.47e-04  78,128 tok/s  7.9m
+  step   2625/3000  ce=2.424  ppl=    11.3  lr=8.27e-05  78,230 tok/s  9.2m
+  step   3000/3000  ce=2.406  ppl=    11.1  lr=6.00e-05  78,328 tok/s  10.5m
+done in 10.5 min

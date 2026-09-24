@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/samvaran/workspace/diffusion_from_scratch/scripts/eval_realiser.py", line 219, in <module>
+    main()
+  File "/home/samvaran/workspace/diffusion_from_scratch/scripts/eval_realiser.py", line 201, in main
+    out = run(model, vocab, prompt_ids, canvas,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/samvaran/workspace/diffusion_gemma/venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/samvaran/workspace/diffusion_from_scratch/scripts/eval_realiser.py", line 95, in run
+    out = denoise(model, x, mask_id, cfg, constraint=constraint, protect=protect)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/samvaran/workspace/diffusion_gemma/venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/samvaran/workspace/diffusion_from_scratch/padyam/sampler.py", line 106, in denoise
+    dead = masked & ~allow.any(-1)
+           ~~~~~~~^~~~~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+720 usable gold padyams; evaluating on 60 held out
+
+TASK 1 — infill a correct padyam (round-7 benchmark)
+ masked  weight acc   exact  freq baseline
+    10%       99.0%   94.8%          57.3%
+    25%       97.9%   90.3%          57.3%
+    50%       96.2%   78.7%          57.3%
+
+TASK 2 — realise: word bag -> metrical padyam
+  (constraint alphabet: 10334 placeable tokens)
+  gold words           valid 0/30  real-words 47.5%
+    [valid=False rw=63%]
+      మల లలమేలుమంగకును మీరును మీ వలమేకును నగ
+      రును డలమేలుమంగకును వేడుకనున్దలమేకునుగును
+      రును భీనులులుమంగకును మాటలకు దలమేకున జిగి
+      రునును మీరును నిట్ల నిట్ల మిగిలిరులుకమ్ములుమంగకు
+    [valid=False rw=61%]
+      ప్రాణముదేకమంగ యిది ప్రాణము నీసతి నేకమంగ నీ
+      మం జగదేకమా గడమ ప్రాణము నీ జగదేక కాయముం
+      గడమపోకమాయె యిది నీసతి మెత్తురున్నక వేంసుటన్
+      ప్రాణము గలరున్న బల్మఱున్నెఱు తురు పొమ్మత్తురుల్మలు
