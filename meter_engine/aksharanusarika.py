@@ -13,11 +13,10 @@ implementing new features such as:
 """
 
 import re
-import hashlib
 import datetime
-import pytz
 import json
-from itertools import combinations
+from functools import lru_cache
+from zoneinfo import ZoneInfo
 
 ###############################################################################
 # 1) LINGUISTIC DATA AND CONSTANTS (v0.0.7a)
@@ -43,6 +42,10 @@ independent_long_vowels = {"ఆ", "ఈ", "ఊ", "ౠ", "ఏ", "ఓ"}
 diacritics = {"ం", "ః"}
 dependent_vowels = set(dependent_to_independent.keys())
 ignorable_chars = {' ', '\n', 'ఁ', '​'} # Includes space, newline, arasunna, zero-width space
+
+# Strips anything outside the Telugu block, keeping whitespace (\s covers newlines),
+# arasunna (ఁ) and zero-width space (​). Compiled once and shared.
+SANITIZE_RE = re.compile(r'[^ఀ-౿\sఁ​]+')
 
 PLUTAMULU     = {"ఐ", "ఔ"}
 SARALAMULU    = {"గ", "జ", "డ", "ద", "బ"}
@@ -124,9 +127,15 @@ def add_letter_categories(ch, categories):
     if ch in KANTHOSH_TYAMULU: categories.add("కంఠోష్ఠ్యములు")
     if ch in DANTOSH_TYAMULU: categories.add("దంత్యోష్ఠ్యములు")
 
+@lru_cache(maxsize=4096)
 def categorize_aksharam(aksharam):
     """
     REFACTORED: Logic updated to match v0.0.7a JS logic exactly.
+
+    Memoized: the akshara vocabulary of any text is tiny relative to its length,
+    and the same aksharas are categorized repeatedly across passes. Callers must
+    not mutate the returned list (a cache hit returns the same object) — current
+    callers either wrap it in set(...) or store it read-only.
     """
     categories = set()
 
@@ -135,7 +144,8 @@ def categorize_aksharam(aksharam):
 
     if any(c in telugu_consonants for c in aksharam): categories.add("హల్లు")
 
-    if any(dv in aksharam for dv in long_vowels) or aksharam in independent_long_vowels:
+    # rstrip: an attached arasunna (ఆఁ) doesn't change the vowel's length
+    if any(dv in aksharam for dv in long_vowels) or aksharam.rstrip("ఁ") in independent_long_vowels:
         categories.add("దీర్ఘ")
 
     if "ః" in aksharam: categories.add("విసర్గ అక్షరం")
@@ -167,7 +177,7 @@ def categorize_aksharam(aksharam):
             found_dependent_vowel = True
             add_letter_categories(dv_vowel, categories)
 
-    if any(c in telugu_consonants for c in aksharam) and not found_dependent_vowel and not aksharam.endswith(halant):
+    if any(c in telugu_consonants for c in aksharam) and not found_dependent_vowel and not aksharam.rstrip("ఁ").endswith(halant):
          add_letter_categories("అ", categories)
 
     return sorted(list(categories))
@@ -176,6 +186,7 @@ def split_aksharalu(word):
     """
     REFACTORED: Logic updated to match v0.0.7a JS logic (two-pass coarse split + pollu merge).
     """
+    word = word.replace("‌", "")  # ZWNJ is stripped, never split on: ఫ్రాన్‌క్స్ -> ఫ్రాన్క్స్
     coarse_split = []
     i, n = 0, len(word)
 
@@ -211,11 +222,20 @@ def split_aksharalu(word):
     if not coarse_split:
         return []
 
-    # Second pass: merge pollu hallu (e.g., "న్") with the previous aksharam
+    # Second pass: merge pollu hallu and arasunna (ఁ) into the previous aksharam.
+    # A pollu chunk is any vowel-less consonant cluster that ends in a halant,
+    # whether a single dead consonant (e.g. "న్") or a multi-consonant cluster
+    # (e.g. "ర్క్స్య్స్"). Distinguished from a real syllable like "ర్వే",
+    # which contains a halant but ends in a vowel sign.
+    # Both merge only into a preceding Telugu aksharam (one that starts with a
+    # consonant or an independent vowel): తెలుఁగు -> ["తె", "లుఁ", "గు"]. After a
+    # space, punctuation, digit or Latin letter they stay their own chunk: ".ట్" -> [".", "ట్"].
     final_aksharalu = []
     for chunk in coarse_split:
-        is_pollu_hallu = len(chunk) == 2 and chunk[0] in telugu_consonants and chunk[1] == halant
-        if is_pollu_hallu and final_aksharalu and final_aksharalu[-1] not in ignorable_chars:
+        is_pollu_hallu = chunk.endswith(halant) and chunk[0] in telugu_consonants
+        prev = final_aksharalu[-1] if final_aksharalu else ""
+        follows_aksharam = bool(prev) and (prev[0] in telugu_consonants or prev[0] in independent_vowels)
+        if (is_pollu_hallu or chunk == "ఁ") and follows_aksharam:
             final_aksharalu[-1] += chunk
         else:
             final_aksharalu.append(chunk)
@@ -230,82 +250,74 @@ def akshara_ganavibhajana(aksharalu_list):
     if not aksharalu_list:
         return []
 
-    ganam_markers = [None] * len(aksharalu_list)
+    n = len(aksharalu_list)
+    ganam_markers = [""] * n
+    tags_per_pos = [None] * n
 
-    # First Pass: Identify Gurus based on their own properties
+    # First pass: identify Gurus based on each aksharam's own properties.
+    # Tags are computed once here and reused by the contextual pass below.
     for i, aksharam in enumerate(aksharalu_list):
         if aksharam in ignorable_chars:
-            ganam_markers[i] = ""
             continue
 
-        ganam_markers[i] = "I" # Default to Laghu
         tags = set(categorize_aksharam(aksharam))
+        tags_per_pos[i] = tags
 
-        is_guru = False
-        if 'దీర్ఘ' in tags: is_guru = True
-        if 'ఐ' in aksharam or 'ఔ' in aksharam or 'ై' in aksharam or 'ౌ' in aksharam: is_guru = True
-        if 'అనుస్వారం' in tags or 'విసర్గ అక్షరం' in tags: is_guru = True
-        if aksharam.endswith(halant): is_guru = True
-        if is_guru: ganam_markers[i] = "U"
+        is_guru = (
+            'దీర్ఘ' in tags
+            or 'అనుస్వారం' in tags or 'విసర్గ అక్షరం' in tags
+            or any(c in aksharam for c in ('ఐ', 'ఔ', 'ై', 'ౌ'))
+            or aksharam.rstrip("ఁ").endswith(halant)  # pollu closes the syllable, ఁ or not
+        )
+        ganam_markers[i] = "U" if is_guru else "I"
 
-    # Second pass: Handle the contextual rule (syllable before conjunct/double)
-    for i in range(len(aksharalu_list)):
-        if ganam_markers[i] == "": continue
-
-        # Find the next non-ignorable syllable
-        next_syllable_index = -1
-        for j in range(i + 1, len(aksharalu_list)):
-            if aksharalu_list[j] not in ignorable_chars:
-                next_syllable_index = j
-                break
-
-        if next_syllable_index != -1:
-            next_aksharam_tags = set(categorize_aksharam(aksharalu_list[next_syllable_index]))
-            if 'సంయుక్తాక్షరం' in next_aksharam_tags or 'ద్విత్వాక్షరం' in next_aksharam_tags:
-                ganam_markers[i] = "U"
+    # Second pass: the contextual rule (a syllable is Guru if the next real
+    # syllable is a conjunct/doubled aksharam), done in one reverse sweep.
+    next_makes_guru = False
+    for i in range(n - 1, -1, -1):
+        if ganam_markers[i] == "":  # ignorable: skip, keep prior next-syllable state
+            continue
+        if next_makes_guru:
+            ganam_markers[i] = "U"
+        tags = tags_per_pos[i]
+        next_makes_guru = 'సంయుక్తాక్షరం' in tags or 'ద్విత్వాక్షరం' in tags
 
     return ganam_markers
 
 class GanaAnalyzer:
     """
-    NEW: Port of the GanaAnalyzer class from v0.0.7a JS.
-    Finds all possible sequential Gana combinations in a prosody string.
+    Port of the GanaAnalyzer class from v0.0.7a JS.
+    Finds sequential Gana combinations in a prosody string via iterative
+    backtracking. Unlike the original memoized recursion (which materialized the
+    full, exponentially-large set of partitions before any limit was applied),
+    this stops as soon as `limit` partitions are found and bounds the inner scan
+    by the longest gana pattern.
     """
     def __init__(self, definitions):
-        self.definitions = definitions
-        self.flat_ganas = self._flatten_definitions(definitions)
-        self.memo = {}
+        self.flat_ganas = {pattern: name
+                           for ganas in definitions.values()
+                           for pattern, name in ganas.items()}
+        self.max_len = max(len(p) for p in self.flat_ganas)
 
-    def _flatten_definitions(self, definitions):
-        flat_map = {}
-        for category, ganas in definitions.items():
-            for pattern, name in ganas.items():
-                flat_map[pattern] = name
-        return flat_map
+    def find_sequential_combinations(self, syllables, limit=None):
+        s = "".join(syllables)
+        results = []
 
-    def find_sequential_combinations(self, syllables):
-        self.memo = {}  # Reset memo for each new analysis
-        return self._find_combinations_recursive_memoized(tuple(syllables))
+        def walk(start, acc):
+            if limit is not None and len(results) >= limit:
+                return
+            if start == len(s):
+                results.append(acc[:])
+                return
+            for end in range(start + 1, min(start + self.max_len, len(s)) + 1):
+                name = self.flat_ganas.get(s[start:end])
+                if name is not None:
+                    acc.append({"name": name, "pattern": s[start:end]})
+                    walk(end, acc)
+                    acc.pop()
 
-    def _find_combinations_recursive_memoized(self, remaining_syllables):
-        key = remaining_syllables
-        if key in self.memo:
-            return self.memo[key]
-        if not remaining_syllables:
-            return [[]]
-
-        all_possible_partitions = []
-        for i in range(1, len(remaining_syllables) + 1):
-            prefix = "".join(remaining_syllables[:i])
-            if prefix in self.flat_ganas:
-                gana_info = {"name": self.flat_ganas[prefix], "pattern": prefix}
-                suffix = remaining_syllables[i:]
-                suffix_combinations = self._find_combinations_recursive_memoized(suffix)
-                for combo in suffix_combinations:
-                    all_possible_partitions.append([gana_info] + combo)
-
-        self.memo[key] = all_possible_partitions
-        return all_possible_partitions
+        walk(0, [])
+        return results
 
 def map_syllables_to_partition(partition, syllables):
     """
@@ -513,7 +525,7 @@ def generate_comprehensive_json(text, output_file=None, skip_gana_combinations =
     import time
     start_time = time.time()
     # Sanitize input
-    sanitized = re.sub(r'[^\u0C00-\u0C7F\s\u0C01\u200B\n]+', '', text)
+    sanitized = SANITIZE_RE.sub('', text)
 
     # Generate unique hash
     text_hash = simple_hash(sanitized)
@@ -570,20 +582,20 @@ def generate_comprehensive_json(text, output_file=None, skip_gana_combinations =
     gana_combinations_list = []
     pure_ganas = [m for m in gana_markers if m]
     combinations_limited = False
-    print("skip_gana_combinations:", skip_gana_combinations)
     if not skip_gana_combinations:
         gana_analyzer = GanaAnalyzer(GANA_DEFINITIONS)
         gana_combinations_list = []
         combinations_limited = False
 
         if pure_ganas:
-            combinations = gana_analyzer.find_sequential_combinations(pure_ganas)
-
-            # Limit output to prevent huge JSON files
+            # Limit output to prevent huge JSON files. The search itself stops at
+            # MAX_COMBINATIONS + 1 so it never materializes the full (exponential)
+            # partition set; the extra one lets us detect that truncation occurred.
             MAX_COMBINATIONS = 50
-            if len(combinations) > MAX_COMBINATIONS:
-                combinations = combinations[:MAX_COMBINATIONS]
-                combinations_limited = True
+            combinations = gana_analyzer.find_sequential_combinations(
+                pure_ganas, limit=MAX_COMBINATIONS + 1)
+            combinations_limited = len(combinations) > MAX_COMBINATIONS
+            combinations = combinations[:MAX_COMBINATIONS]
 
             for combo in combinations:
                 mapped = map_syllables_to_partition(combo, pure_aksharalu)
@@ -611,7 +623,7 @@ def generate_comprehensive_json(text, output_file=None, skip_gana_combinations =
     result = {
         "metadata": {
             "schemaVersion": "1.0.0",
-            "analysisTimestamp": datetime.datetime.now(pytz.timezone('Asia/Kolkata')).isoformat(),
+            "analysisTimestamp": datetime.datetime.now(ZoneInfo('Asia/Kolkata')).isoformat(),
             "analyzerVersion": "0.0.7a+",
             "inputHash": text_hash,
             "processingTimeMs": round((time.time() - start_time) * 1000, 2)
@@ -676,7 +688,7 @@ def analyze_telugu_word(word):
     """
     REFACTORED: Returns a structured dict matching the v0.0.7a JS version.
     """
-    sanitized = re.sub(r'[^\u0C00-\u0C7F\s\u0C01\u200B]+', '', word)
+    sanitized = SANITIZE_RE.sub('', word)
     aksharalu_list = split_aksharalu(sanitized)
     analysis = {}
     category_counts = {}
@@ -760,7 +772,7 @@ def compare_telugu_words(word1, word2):
 ###############################################################################
 if __name__ == "__main__":
     print(f"Aksharanusarika v0.0.7a (Python Port)")
-    print(f"Analysis performed at: {datetime.datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    print(f"Analysis performed at: {datetime.datetime.now(ZoneInfo('Asia/Kolkata')).strftime('%Y-%m-%d %H:%M:%S %Z')}")
     print(f"Location: Hyderabad, Telangana, India\n")
     print("="*60 + "\n")
 

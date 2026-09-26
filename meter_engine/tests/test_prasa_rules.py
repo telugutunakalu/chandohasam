@@ -338,6 +338,14 @@ class TestAksharaFeatures(unittest.TestCase):
         self.assertFalse(ln.ardhabindu_before)
         self.assertTrue(ln.ardhabindu_after)
 
+    def test_arasunna_is_ignored_in_the_akshara(self):
+        # ఁ has no metrical significance: రుఁ is the same akshara as రు.
+        ln = pe.extract_line("వాఁడు", 1, RS)
+        self.assertEqual((ln.purva, ln.prasa), ("వా", "డు"))
+        self.assertEqual(ln.purva_parts["text"], "వా")
+        ln = pe.extract_line("ఇందుఁగలఁడందు", 1, RS)
+        self.assertEqual((ln.purva, ln.prasa, ln.third), ("ఇం", "దు", "గ"))
+
     def test_extract_weights(self):
         ln = pe.extract_line("కుక్షిని", 1, RS)
         self.assertEqual((ln.purva_weight_positional, ln.purva_weight_intrinsic), ("U", "I"))

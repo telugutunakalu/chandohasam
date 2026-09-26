@@ -56,6 +56,11 @@ class LineFeatures:
         return render_onset(self.onset)
 
 
+def _bare(akshara: str) -> str:
+    """ఁ has no metrical significance: an akshara with ఁ is the same akshara (రుఁ ≡ రు)."""
+    return akshara.replace(ARDHABINDU, "")
+
+
 def _word_around(tokens: list[str], idx: int) -> str:
     lo = idx
     while lo > 0 and tokens[lo - 1] != " ":
@@ -63,7 +68,7 @@ def _word_around(tokens: list[str], idx: int) -> str:
     hi = idx
     while hi + 1 < len(tokens) and tokens[hi + 1] != " ":
         hi += 1
-    return "".join(t for t in tokens[lo:hi + 1] if t != ARDHABINDU)
+    return _bare("".join(tokens[lo:hi + 1]))
 
 
 def _too_short(text: str, index: int, clean: str, tokens: list[str], weights: list[str], core: list[int]) -> LineFeatures:
@@ -72,7 +77,7 @@ def _too_short(text: str, index: int, clean: str, tokens: list[str], weights: li
                  visarga=False, trailing_pollu=[], dantya=[])
     return LineFeatures(
         index=index, raw=text, sanitized=clean, tokens=tokens, weights=weights,
-        purva=tokens[core[0]] if core else "", prasa="", third=None, space_between=False,
+        purva=_bare(tokens[core[0]]) if core else "", prasa="", third=None, space_between=False,
         ardhabindu_before=False, ardhabindu_after=False, purva_parts=blank, prasa_parts=blank,
         purva_purnabindu=False, purva_visarga=False, fused_from_purva=[], onset=[], onset_written=[],
         vowel="", bare_vowel=False, trailing_anusvara=False, trailing_visarga=False, trailing_pollu=[],
@@ -114,9 +119,11 @@ def extract_line(text: str, index: int, ruleset: Ruleset, ak=None) -> LineFeatur
     i3 = core[2] if len(core) > 2 else None
     between = tokens[i1 + 1:i2]
     after = tokens[i2 + 1:i3] if i3 is not None else tokens[i2 + 1:]
-    purva_p = parse_akshara(tokens[i1])
-    prasa_p = parse_akshara(tokens[i2])
-    third_p = parse_akshara(tokens[i3]) if i3 is not None else None
+    purva, prasa = _bare(tokens[i1]), _bare(tokens[i2])
+    third = _bare(tokens[i3]) if i3 is not None else None
+    purva_p = parse_akshara(purva)
+    prasa_p = parse_akshara(prasa)
+    third_p = parse_akshara(third) if third is not None else None
     fused = list(purva_p.trailing_pollu)             # a dead consonant on the pre-prāsa akshara joins the onset
     onset = [DANTYA_MAP.get(c, c) for c in fused] + list(prasa_p.onset)
     onset_written = list(fused) + list(prasa_p.onset_raw)
@@ -127,10 +134,10 @@ def extract_line(text: str, index: int, ruleset: Ruleset, ak=None) -> LineFeatur
                 and not (purva_p.anusvara or purva_p.visarga or purva_p.trailing_pollu))
     return LineFeatures(
         index=index, raw=text, sanitized=clean, tokens=tokens, weights=weights,
-        purva=tokens[i1], prasa=tokens[i2], third=tokens[i3] if i3 is not None else None,
+        purva=purva, prasa=prasa, third=third,
         space_between=space_between,
-        ardhabindu_before=ARDHABINDU in between,
-        ardhabindu_after=ARDHABINDU in after,
+        ardhabindu_before=ARDHABINDU in tokens[i1] or ARDHABINDU in between,   # ఁ is attached to its akshara
+        ardhabindu_after=ARDHABINDU in tokens[i2] or ARDHABINDU in after,
         purva_parts=asdict(purva_p), prasa_parts=asdict(prasa_p),
         purva_purnabindu=purva_p.anusvara, purva_visarga=purva_p.visarga,
         fused_from_purva=fused, onset=onset, onset_written=onset_written,

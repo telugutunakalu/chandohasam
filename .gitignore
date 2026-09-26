@@ -40,6 +40,8 @@ npm-debug.log*
 # ---- derived / regenerable artifacts ----
 metrics/MauveOnPothana/embeddings_cache/
 dataset/backup/
+pretraining_datasets/
+diffusion_pretraining/runs/
 
 # ---- os / editor ----
 .DS_Store

@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Loader for ``aksharanusarika`` (the akshara splitter), shipped as ``meter_engine/aksharanusarika.py``
-(v0.0.7a, the Python port of the JS version; its split_aksharalu / akshara_ganavibhajana agree with
-v0.0.6a on every pāda of the three corpora).
+(v0.0.7a, the Python port of the JS version, synced on 2026-09-26 with the aksharanusarika repo:
+ఁ attaches to the akshara before it, ZWNJ is stripped, and a dead-consonant cluster such as స్ట్
+merges into the akshara before it).
 
 The module is imported by file path and its character tables are EXTENDED (never altered)
 so that ౘ/ౙ and ౢ/ౣ form aksharas.
@@ -46,7 +47,7 @@ def load_aksharanusarika(path: Optional[str] = None):
     for cand in candidates:
         if not cand.is_file():
             continue
-        if "pytz" not in sys.modules:           # aksharanusarika imports pytz only for its demo banner
+        if "pytz" not in sys.modules:           # older aksharanusarika copies import pytz only for their demo banner
             try:
                 import pytz  # noqa: F401
             except ImportError:                 # pragma: no cover
