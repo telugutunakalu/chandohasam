@@ -28,6 +28,11 @@ LABELS = {
     "ఆ.": ("ఆటవెలది", "aataveladi", 4),
     "సీ.": ("సీసము", "seesamu", 8),
     "క.": ("కందము", "kandamu", 4),
+    "తే.": ("తేటగీతి", "tetagiti", 4),
+    "ఉ.": ("ఉత్పలమాల", "utpalamala", 4),
+    "చ.": ("చంపకమాల", "champakamala", 4),
+    "శా.": ("శార్దూలవిక్రీడితము", "shardulavikriditamu", 4),
+    "మ.": ("మత్తేభవిక్రీడితము", "mattebhavikriditamu", 4),
 }
 
 
@@ -53,6 +58,7 @@ def record(prefix: str, n: int, lines: list[str], label: str | None, source: str
         "verse": lines, "teeka": None, "teeka_pairs": [], "bhavam": None,
         "source": source, "author": author, "child_id": None,
         "label_source": label_source,      # "corpus" = the source carries the label; "heuristic" = assigned by line count
+                                           # (label_with_engine.py adds "engine", "chandassu", "engine-partial")
     }
 
 
