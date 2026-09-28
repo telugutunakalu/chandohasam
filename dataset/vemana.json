@@ -2536,9 +2536,9 @@
   "poem_number": 22,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -2560,7 +2560,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -2649,6 +2649,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -6154,9 +6163,9 @@
   "poem_number": 51,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -6178,7 +6187,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -6221,6 +6230,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -6229,9 +6247,9 @@
   "poem_number": 52,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -6253,7 +6271,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -6330,6 +6348,15 @@
      "rule": "translit"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -6877,9 +6904,9 @@
   "poem_number": 58,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -6901,7 +6928,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -6994,6 +7021,15 @@
      "meaning": "వేమనా! (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -7328,9 +7364,9 @@
   "poem_number": 62,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -7352,7 +7388,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -7395,6 +7431,15 @@
      "meaning": "శివుడే దేవుడు, వేమన!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -7403,9 +7448,9 @@
   "poem_number": 63,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -7427,7 +7472,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -7516,6 +7561,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -8662,9 +8716,9 @@
   "poem_number": 75,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -8686,7 +8740,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -8754,6 +8808,15 @@
      "meaning": "వేమన యోగీంద్రుడా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -9857,7 +9920,7 @@
   "complete": true,
   "verse": [
    "దాన మొసఁగుకన్నఁ దేజంబు మఱిహెచ్చు",
-   "తేజ మొసఁగుకన్నแ దెలివి హెచ్చు",
+   "తేజ మొసఁగుకన్నఁ దెలివి హెచ్చు",
    "తెలివికన్న నాసఁ దెగ వేయునది హెచ్చు",
    "విశ్వదాభిరామ వినర వేమ."
   ],
@@ -9960,6 +10023,19 @@
      "rule": "verse"
     }
    ]
+  },
+  "verse_corrected": {
+   "from_verse": [
+    "దాన మొసఁగుకన్నఁ దేజంబు మఱిహెచ్చు",
+    "తేజ మొసఁగుకన్నแ దెలివి హెచ్చు",
+    "తెలివికన్న నాసఁ దెగ వేయునది హెచ్చు",
+    "విశ్వదాభిరామ వినర వేమ."
+   ],
+   "date": "2026-09-28",
+   "reasons": [
+    "typo మొసఁగుకన్నแ → మొసఁగుకన్నఁ: Thai แ typed for ఁ; line 1 has the same word మొసఁగుకన్నఁ"
+   ],
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -10907,9 +10983,9 @@
   "poem_number": 96,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -10931,7 +11007,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -11025,6 +11101,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -17631,9 +17716,9 @@
   "poem_number": 159,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -17655,7 +17740,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -17737,6 +17822,15 @@
      "meaning": "వేమన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -18617,9 +18711,9 @@
   "poem_number": 168,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -18641,7 +18735,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -18719,6 +18813,15 @@
      "meaning": "వేమన అను కవి"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -18727,9 +18830,9 @@
   "poem_number": 169,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -18751,7 +18854,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -18830,6 +18933,15 @@
      "meaning": "వేమన అను సంబోధన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -21077,9 +21189,9 @@
   "poem_number": 191,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -21101,7 +21213,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -21180,6 +21292,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -21852,9 +21973,9 @@
   "poem_number": 198,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -21876,7 +21997,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -21969,6 +22090,15 @@
      "meaning": "వేమన శతక కర్త అయిన ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -22973,9 +23103,9 @@
   "poem_number": 208,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -22997,7 +23127,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -23080,6 +23210,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -28795,9 +28934,9 @@
   "poem_number": 262,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -28819,7 +28958,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -28897,6 +29036,15 @@
      "meaning": "వేమన అయ్యా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -32499,9 +32647,9 @@
   "poem_number": 296,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -32523,7 +32671,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -32593,6 +32741,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -32601,9 +32758,9 @@
   "poem_number": 297,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -32625,7 +32782,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -32703,6 +32860,15 @@
      "meaning": "ఓ వేమన!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -33373,9 +33539,9 @@
   "poem_number": 304,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -33397,7 +33563,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -33482,6 +33648,15 @@
      "meaning": "వేమన యోగీంద్ర (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -35584,9 +35759,9 @@
   "poem_number": 325,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -35608,7 +35783,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -35694,6 +35869,15 @@
      "rule": "manual"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -35798,13 +35982,14 @@
   "poem_number": 327,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "తే",
+  "metre": "తేటగీతి",
+  "metre_roman": "tetagiti",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
-   4
+   4,
+   5
   ],
   "metre_variant": null,
   "line_count": 4,
@@ -35822,7 +36007,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -35890,6 +36075,15 @@
      "meaning": "వేమన / వేమయోగి"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as తేటగీతి (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -36218,9 +36412,9 @@
   "poem_number": 331,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -36242,7 +36436,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -36334,6 +36528,15 @@
      "meaning": "వేమన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -38520,9 +38723,9 @@
   "poem_number": 352,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -38544,7 +38747,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -38607,6 +38810,15 @@
      "meaning": "వేమన యోగీ!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -38720,9 +38932,9 @@
   "poem_number": 354,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -38744,7 +38956,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -38817,6 +39029,15 @@
      "meaning": "వేమన అను సంబోధన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -39226,13 +39447,14 @@
   "poem_number": 359,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "తే",
+  "metre": "తేటగీతి",
+  "metre_roman": "tetagiti",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
-   4
+   4,
+   5
   ],
   "metre_variant": null,
   "line_count": 4,
@@ -39250,7 +39472,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -39308,6 +39530,15 @@
      "meaning": "వేమన యోగీంద్రుడా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as తేటగీతి (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -43027,9 +43258,9 @@
   "poem_number": 396,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -43051,7 +43282,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -43120,6 +43351,15 @@
      "meaning": "వేమన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -43422,9 +43662,9 @@
   "poem_number": 400,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -43446,7 +43686,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -43515,6 +43755,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -43523,9 +43772,9 @@
   "poem_number": 401,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -43547,7 +43796,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -43610,6 +43859,15 @@
      "meaning": "వేమన అను సంబోధన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -45015,9 +45273,9 @@
   "poem_number": 416,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -45039,7 +45297,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -45097,6 +45355,15 @@
      "meaning": "వేమన అనబడు ఓ అయ్యా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -48807,9 +49074,9 @@
   "poem_number": 452,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -48831,7 +49098,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -48911,6 +49178,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -49126,9 +49402,9 @@
   "poem_number": 455,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -49150,7 +49426,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -49198,6 +49474,15 @@
      "meaning": "వేమన యోగీంద్రుడా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -49206,9 +49491,9 @@
   "poem_number": 456,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -49230,7 +49515,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -49308,6 +49593,15 @@
      "meaning": "వేమన యోగీంద్ర"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -51416,9 +51710,9 @@
   "poem_number": 477,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -51440,7 +51734,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -51518,6 +51812,15 @@
      "meaning": "ఓ వేమనా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -51860,9 +52163,9 @@
   "poem_number": 481,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -51884,7 +52187,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -51962,6 +52265,15 @@
      "meaning": "వేమన యోగీంద్రుడా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -52575,9 +52887,9 @@
   "poem_number": 488,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "ఉ",
+  "metre": "ఉత్పలమాల",
+  "metre_roman": "utpalamala",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -52599,7 +52911,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -52720,6 +53032,15 @@
      "meaning": "ఓ వెఱ్ఱి వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as ఉత్పలమాల (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -52933,9 +53254,9 @@
   "poem_number": 491,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -52957,7 +53278,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -53035,6 +53356,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -54047,9 +54377,9 @@
   "poem_number": 502,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -54071,7 +54401,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -54139,6 +54469,15 @@
      "meaning": "వేమన అను కవి (లేదా సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -57137,13 +57476,14 @@
   "poem_number": 531,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "తే",
+  "metre": "తేటగీతి",
+  "metre_roman": "tetagiti",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
-   4
+   4,
+   5
   ],
   "metre_variant": null,
   "line_count": 4,
@@ -57161,7 +57501,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -57244,6 +57584,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as తేటగీతి (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -57542,9 +57891,9 @@
   "poem_number": 535,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -57566,7 +57915,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -57642,6 +57991,15 @@
      "meaning": "వేమనా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -58983,9 +59341,9 @@
   "poem_number": 549,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -59007,7 +59365,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -59082,6 +59440,15 @@
      "meaning": "వేమన ఓ నాయకా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -60380,9 +60747,9 @@
   "poem_number": 562,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -60404,7 +60771,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -60478,6 +60845,15 @@
      "meaning": "వేమన యోగీంద్ర!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -60577,9 +60953,9 @@
   "poem_number": 564,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -60601,7 +60977,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -60669,6 +61045,15 @@
      "meaning": "వేమన యోగీ!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -61949,9 +62334,9 @@
   "poem_number": 577,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -61973,7 +62358,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -62032,6 +62417,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -62281,9 +62675,9 @@
   "poem_number": 580,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -62305,7 +62699,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -62378,6 +62772,15 @@
      "meaning": "వేమన (మకుటము)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -62386,9 +62789,9 @@
   "poem_number": 581,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -62410,7 +62813,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -62473,6 +62876,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -63619,9 +64031,9 @@
   "poem_number": 592,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -63643,7 +64055,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -63717,6 +64129,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -64284,9 +64705,9 @@
   "poem_number": 598,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -64308,7 +64729,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -64379,6 +64800,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -65485,9 +65915,9 @@
   "poem_number": 609,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -65509,7 +65939,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -65607,6 +66037,15 @@
      "meaning": "ఇది ఎంతటి ఆశ్చర్యము!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -65615,9 +66054,9 @@
   "poem_number": 610,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -65639,7 +66078,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -65717,6 +66156,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -66595,9 +67043,9 @@
   "poem_number": 619,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -66619,7 +67067,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -66702,6 +67150,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -67047,9 +67504,9 @@
   "poem_number": 623,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -67071,7 +67528,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -67159,6 +67616,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -68135,9 +68601,9 @@
   "poem_number": 633,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -68159,7 +68625,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -68247,6 +68713,15 @@
      "meaning": "వేమన యోగీంద్రుని వాక్కు"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -69423,9 +69898,9 @@
   "poem_number": 645,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -69447,7 +69922,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -69521,6 +69996,15 @@
      "meaning": "వేమనాఖ్యుడగు యోగి మాత్రమే సమర్థుడగును"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -70893,9 +71377,9 @@
   "poem_number": 658,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -70917,7 +71401,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -71005,6 +71489,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -72859,9 +73352,9 @@
   "poem_number": 676,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -72883,7 +73376,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -72962,6 +73455,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -73535,9 +74037,9 @@
   "poem_number": 682,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -73559,7 +74061,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -73651,6 +74153,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -75153,9 +75664,9 @@
   "poem_number": 697,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -75177,7 +75688,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -75272,6 +75783,15 @@
      "meaning": "వేమన (ఓ వేమనా!)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -75376,9 +75896,9 @@
   "poem_number": 699,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -75400,7 +75920,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -75473,6 +75993,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -76732,9 +77261,9 @@
   "poem_number": 713,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -76756,7 +77285,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -76824,6 +77353,15 @@
      "meaning": "వేమనా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -77903,9 +78441,9 @@
   "poem_number": 724,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -77927,7 +78465,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -77996,6 +78534,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -78004,9 +78551,9 @@
   "poem_number": 725,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -78028,7 +78575,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -78096,6 +78643,15 @@
      "meaning": "వేమన యోగీంద్రుడా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -78104,9 +78660,9 @@
   "poem_number": 726,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -78128,7 +78684,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -78206,6 +78762,15 @@
      "meaning": "వేమన నాయకా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -78214,9 +78779,9 @@
   "poem_number": 727,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -78238,7 +78803,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -78302,6 +78867,15 @@
      "meaning": "వేమన / ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -78417,9 +78991,9 @@
   "poem_number": 729,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -78441,7 +79015,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -78534,6 +79108,15 @@
      "meaning": "వేమణా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -79743,9 +80326,9 @@
   "poem_number": 742,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -79767,7 +80350,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -79859,6 +80442,15 @@
      "meaning": "వేమన ఓ కవీ! (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -80179,9 +80771,9 @@
   "poem_number": 746,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -80203,7 +80795,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -80266,6 +80858,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -80380,9 +80981,9 @@
   "poem_number": 748,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -80404,7 +81005,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -80472,6 +81073,15 @@
      "meaning": "వేమన కవీ!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -80710,9 +81320,9 @@
   "poem_number": 751,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -80734,7 +81344,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -80813,6 +81423,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -81213,9 +81832,9 @@
   "poem_number": 756,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -81237,7 +81856,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -81300,6 +81919,15 @@
      "meaning": "వేమన యోగీంద్ర"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -81834,9 +82462,9 @@
   "poem_number": 762,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -81858,7 +82486,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -81923,6 +82551,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -81931,9 +82568,9 @@
   "poem_number": 763,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -81955,7 +82592,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -82034,6 +82671,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -82502,9 +83148,9 @@
   "poem_number": 768,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -82526,7 +83172,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -82594,6 +83240,15 @@
      "meaning": "హే వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -84500,9 +85155,9 @@
   "poem_number": 785,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -84524,7 +85179,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -84587,6 +85242,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -84886,9 +85550,9 @@
   "poem_number": 789,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -84910,7 +85574,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -84983,6 +85647,15 @@
      "meaning": "వేమన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -84991,9 +85664,9 @@
   "poem_number": 790,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -85015,7 +85688,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -85093,6 +85766,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -86198,9 +86880,9 @@
   "poem_number": 801,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -86222,7 +86904,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -86305,6 +86987,15 @@
      "meaning": "వేమన యోగీ!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -86313,9 +87004,9 @@
   "poem_number": 802,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -86337,7 +87028,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -86411,6 +87102,15 @@
      "meaning": "వేమన యను సంబోధన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -88035,9 +88735,9 @@
   "poem_number": 818,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -88059,7 +88759,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -88122,6 +88822,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -89045,9 +89754,9 @@
   "poem_number": 828,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -89069,7 +89778,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -89147,6 +89856,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -89155,9 +89873,9 @@
   "poem_number": 829,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -89179,7 +89897,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -89262,6 +89980,15 @@
      "meaning": "వేమన యోగీంద్ర!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -89370,9 +90097,9 @@
   "poem_number": 831,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -89394,7 +90121,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -89448,6 +90175,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -89744,9 +90480,9 @@
   "poem_number": 835,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -89768,7 +90504,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -89846,6 +90582,15 @@
      "meaning": "వేమన అను సంబోధన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -89972,9 +90717,9 @@
   "poem_number": 837,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -89996,7 +90741,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -90070,6 +90815,15 @@
      "meaning": "వేమన యోగీంద్ర!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -90390,9 +91144,9 @@
   "poem_number": 841,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -90414,7 +91168,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -90479,6 +91233,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -90598,9 +91361,9 @@
   "poem_number": 843,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -90622,7 +91385,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -90691,6 +91454,15 @@
      "meaning": "వేమన (ఓ వేమా!)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -90699,9 +91471,9 @@
   "poem_number": 844,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -90723,7 +91495,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -90801,6 +91573,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -90809,9 +91590,9 @@
   "poem_number": 845,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -90833,7 +91614,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -90912,6 +91693,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -91129,9 +91919,9 @@
   "poem_number": 848,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -91153,7 +91943,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -91221,6 +92011,15 @@
      "meaning": "వేమన యోగీంద్ర (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -91904,9 +92703,9 @@
   "poem_number": 855,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -91928,7 +92727,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -91986,6 +92785,15 @@
      "meaning": "తెలుసుకొని ప్రవర్తించగలడు (నిగ్రహించుకోగలడు)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -91994,9 +92802,9 @@
   "poem_number": 856,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -92018,7 +92826,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -92105,6 +92913,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -92223,9 +93040,9 @@
   "poem_number": 858,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -92247,7 +93064,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -92310,6 +93127,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -92673,9 +93499,9 @@
   "poem_number": 861,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -92697,7 +93523,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -92760,6 +93586,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -92768,9 +93603,9 @@
   "poem_number": 862,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -92792,7 +93627,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -92877,6 +93712,15 @@
      "meaning": "ఓ వేమనా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -93537,9 +94381,9 @@
   "poem_number": 869,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -93561,7 +94405,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -93619,6 +94463,15 @@
      "meaning": "వేమన / ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -93919,9 +94772,9 @@
   "poem_number": 873,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -93943,7 +94796,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -94006,6 +94859,15 @@
      "meaning": "వేమన యోగీంద్రుడా (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -95369,9 +96231,9 @@
   "poem_number": 886,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -95393,7 +96255,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -95447,6 +96309,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -95670,9 +96541,9 @@
   "poem_number": 889,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -95694,7 +96565,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -95769,6 +96640,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -96263,9 +97143,9 @@
   "poem_number": 895,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -96276,7 +97156,7 @@
   "complete": true,
   "verse": [
    "ఘంటారావము మదిలో",
-   "వింటిన్నే కంటఁగంటి విమలపుకాంతి\\న్",
+   "వింటిన్నే కంటఁగంటి విమలపుకాంతిన్",
    "వెంటాడక బ్రహ్మంబును",
    "గంటిని వగ కాదు నన్నుఁ గనుగొన వేమా."
   ],
@@ -96287,7 +97167,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -96315,7 +97195,7 @@
      "meaning": "కనులారా చూచాను"
     },
     {
-     "word": "విమలపుకాంతి\\న్",
+     "word": "విమలపుకాంతిన్",
      "split": "విమలపు + కాంతి + న్",
      "meaning": "నిర్మలమైన కాంతిని"
     },
@@ -96360,6 +97240,29 @@
      "meaning": "మా యొక్క / సంబోధన"
     }
    ]
+  },
+  "verse_corrected": {
+   "from_verse": [
+    "ఘంటారావము మదిలో",
+    "వింటిన్నే కంటఁగంటి విమలపుకాంతి\\న్",
+    "వెంటాడక బ్రహ్మంబును",
+    "గంటిని వగ కాదు నన్నుఁ గనుగొన వేమా."
+   ],
+   "date": "2026-09-28",
+   "reasons": [
+    "removed 1 backslash(es) inside a word, a conversion artifact of the source (…కు\\న్‌ → …కున్‌)",
+    "the same backslash removed from 1 field(s) of generated.prathipadartham"
+   ],
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -96905,9 +97808,9 @@
   "poem_number": 901,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -96929,7 +97832,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -96998,6 +97901,15 @@
      "meaning": "వేమన యోగీంద్ర!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -97006,9 +97918,9 @@
   "poem_number": 902,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -97030,7 +97942,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -97110,6 +98022,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -97118,9 +98039,9 @@
   "poem_number": 903,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -97142,7 +98063,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -97231,6 +98152,15 @@
      "meaning": "వేమన యోగీంద్రా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -97239,9 +98169,9 @@
   "poem_number": 904,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -97263,7 +98193,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -97336,6 +98266,15 @@
      "meaning": "వేమన సుమతీ!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -97344,9 +98283,9 @@
   "poem_number": 905,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "చ",
+  "metre": "చంపకమాల",
+  "metre_roman": "champakamala",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -97368,7 +98307,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -97488,6 +98427,15 @@
      "meaning": "పూజను (లేదా మనఃకల్పనను)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as చంపకమాల (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -97598,9 +98546,9 @@
   "poem_number": 907,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "చ",
+  "metre": "చంపకమాల",
+  "metre_roman": "champakamala",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -97622,7 +98570,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -97762,6 +98710,15 @@
      "meaning": "అన్ని ప్రదేశములయందును వెలుగొందుచుండును"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as చంపకమాల (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -97931,9 +98888,9 @@
   "poem_number": 909,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -97955,7 +98912,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -98033,6 +98990,15 @@
      "meaning": "సమర్థుడగును"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -98041,9 +99007,9 @@
   "poem_number": 910,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -98065,7 +99031,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -98133,6 +99099,15 @@
      "meaning": "అభ్యసించును లేదా తెలిసికొనును"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -98803,9 +99778,9 @@
   "poem_number": 917,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -98827,7 +99802,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.8-flash",
@@ -98910,6 +99885,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -99036,9 +100020,9 @@
   "poem_number": 919,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -99060,7 +100044,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -99123,6 +100107,15 @@
      "meaning": "వేమన ఓ కవీ / వేమన యోగీ"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -99378,9 +100371,9 @@
   "poem_number": 922,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -99402,7 +100395,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -99486,6 +100479,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -100030,9 +101032,9 @@
   "poem_number": 928,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -100054,7 +101056,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -100130,6 +101132,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -100248,9 +101259,9 @@
   "poem_number": 930,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -100272,7 +101283,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -100331,6 +101342,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -100530,9 +101550,9 @@
   "poem_number": 933,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -100554,7 +101574,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -100622,6 +101642,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -100740,9 +101769,9 @@
   "poem_number": 935,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -100764,7 +101793,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -100839,6 +101868,15 @@
      "meaning": "ఓ వేమా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -102080,9 +103118,9 @@
   "poem_number": 948,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -102104,7 +103142,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.8-flash",
@@ -102177,6 +103215,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -102495,9 +103542,9 @@
   "poem_number": 952,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -102519,7 +103566,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -102599,6 +103646,15 @@
      "meaning": "వేమన ఓయీ!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -102927,9 +103983,9 @@
   "poem_number": 956,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -102951,7 +104007,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -103032,6 +104088,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -103310,9 +104375,9 @@
   "poem_number": 960,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -103334,7 +104399,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.8-flash",
@@ -103412,6 +104477,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -103770,9 +104844,9 @@
   "poem_number": 963,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -103794,7 +104868,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -103875,6 +104949,15 @@
      "rule": "translit"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -104442,9 +105525,9 @@
   "poem_number": 969,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -104466,7 +105549,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -104540,6 +105623,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -105082,9 +106174,9 @@
   "poem_number": 975,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -105106,7 +106198,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -105189,6 +106281,15 @@
      "meaning": "వేమన యోగీంద్రా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -106073,9 +107174,9 @@
   "poem_number": 983,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -106097,7 +107198,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -106155,6 +107256,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -106270,9 +107380,9 @@
   "poem_number": 985,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -106294,7 +107404,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -106368,6 +107478,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -106376,9 +107495,9 @@
   "poem_number": 986,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "ఉ",
+  "metre": "ఉత్పలమాల",
+  "metre_roman": "utpalamala",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -106400,7 +107519,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -106548,6 +107667,15 @@
      "meaning": "పద్ధతి అంతయును"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as ఉత్పలమాల (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -106872,9 +108000,9 @@
   "poem_number": 990,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -106896,7 +108024,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -106976,6 +108104,15 @@
      "meaning": "వేమన యోగీంద్ర!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -108366,9 +109503,9 @@
   "poem_number": 1004,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -108390,7 +109527,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -108460,6 +109597,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -108468,9 +109614,9 @@
   "poem_number": 1005,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -108492,7 +109638,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -108570,6 +109716,15 @@
      "meaning": "తెలిసినవాడవు కదా"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -108578,9 +109733,9 @@
   "poem_number": 1006,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "ఉ",
+  "metre": "ఉత్పలమాల",
+  "metre_roman": "utpalamala",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -108602,7 +109757,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -108718,6 +109873,15 @@
      "rule": "manual"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as ఉత్పలమాల (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -108836,9 +110000,9 @@
   "poem_number": 1008,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -108860,7 +110024,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -108938,6 +110102,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -109695,9 +110868,9 @@
   "poem_number": 1016,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -109719,7 +110892,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -109802,6 +110975,15 @@
      "meaning": "వేమన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -109810,9 +110992,9 @@
   "poem_number": 1017,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -109834,7 +111016,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -109907,6 +111089,15 @@
      "meaning": "వేమన కవి!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -113460,9 +114651,9 @@
   "poem_number": 1051,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -113484,7 +114675,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -113577,6 +114768,15 @@
      "meaning": "వేమన అనెడి సంబోధన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -114610,9 +115810,9 @@
   "poem_number": 1062,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -114634,7 +115834,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -114713,6 +115913,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -114806,9 +116015,9 @@
   "poem_number": 1064,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -114830,7 +116039,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -114894,6 +116103,15 @@
      "meaning": "వేమన యోగీ!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -115217,9 +116435,9 @@
   "poem_number": 1068,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -115241,7 +116459,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -115305,6 +116523,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -115751,9 +116978,9 @@
   "poem_number": 1073,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -115775,7 +117002,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -115903,6 +117130,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -116223,13 +117459,14 @@
   "poem_number": 1077,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "తే",
+  "metre": "తేటగీతి",
+  "metre_roman": "tetagiti",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
-   4
+   4,
+   5
   ],
   "metre_variant": null,
   "line_count": 4,
@@ -116247,7 +117484,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -116335,6 +117572,15 @@
      "meaning": "వేమన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as తేటగీతి (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -117551,9 +118797,9 @@
   "poem_number": 1089,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -117575,7 +118821,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -117643,6 +118889,15 @@
      "meaning": "హే వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -118095,9 +119350,9 @@
   "poem_number": 1094,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -118119,7 +119374,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -118162,6 +119417,15 @@
      "meaning": "వేమారెడ్డి (సంబోధన)."
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -121641,9 +122905,9 @@
   "poem_number": 1128,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -121665,7 +122929,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -121738,6 +123002,15 @@
      "meaning": "ఓ వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -122061,9 +123334,9 @@
   "poem_number": 1132,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -122085,7 +123358,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -122153,6 +123426,15 @@
      "meaning": "వేమన"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -123459,13 +124741,14 @@
   "poem_number": 1145,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "తే",
+  "metre": "తేటగీతి",
+  "metre_roman": "tetagiti",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
-   4
+   4,
+   5
   ],
   "metre_variant": null,
   "line_count": 4,
@@ -123483,7 +124766,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -123561,6 +124844,15 @@
      "meaning": "వేమన (సంబోధన)"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as తేటగీతి (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -124320,9 +125612,9 @@
   "poem_number": 1153,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -124344,7 +125636,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -124420,6 +125712,15 @@
      "meaning": "వేమన యోగీంద్ర!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -125231,9 +126532,9 @@
   "poem_number": 1161,
   "sub_number": 0,
   "parent_id": null,
-  "metre_code": "ఆ",
-  "metre": "ఆటవెలది",
-  "metre_roman": "aataveladi",
+  "metre_code": "క",
+  "metre": "కందము",
+  "metre_roman": "kandamu",
   "form": "verse",
   "expected_lines": 4,
   "allowed_lines": [
@@ -125255,7 +126556,7 @@
   "source": "vemana_poems.txt",
   "author": "Vemana",
   "child_id": null,
-  "label_source": "heuristic",
+  "label_source": "engine",
   "generated": {
    "run": "run5",
    "model": "gemini-3.5-flash-lite",
@@ -125334,6 +126635,15 @@
      "meaning": "వేమనా!"
     }
    ]
+  },
+  "metre_corrected": {
+   "from_metre_code": "ఆ",
+   "from_metre": "ఆటవెలది",
+   "from_metre_roman": "aataveladi",
+   "from_label_source": "heuristic",
+   "date": "2026-09-28",
+   "reason": "the lines scan as కందము (meter_engine identify_text); ఆటవెలది does not fit",
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {
@@ -125356,7 +126666,7 @@
   "verse": [
    "లింగ మంగమునను లీలఁ దెలియువెన్క",
    "మనసు లింగమందు మరులుకొనును",
-   "మనసు నిల్పనందె మఱiలింగ ముండురా",
+   "మనసు నిల్పనందె మఱిలింగ ముండురా",
    "విశ్వదాభిరామ వినర వేమ."
   ],
   "teeka": null,
@@ -125439,6 +126749,19 @@
      "meaning": "ఓ వేమనా! వినుము"
     }
    ]
+  },
+  "verse_corrected": {
+   "from_verse": [
+    "లింగ మంగమునను లీలఁ దెలియువెన్క",
+    "మనసు లింగమందు మరులుకొనును",
+    "మనసు నిల్పనందె మఱiలింగ ముండురా",
+    "విశ్వదాభిరామ వినర వేమ."
+   ],
+   "date": "2026-09-28",
+   "reasons": [
+    "typo మఱiలింగ → మఱిలింగ: Latin i typed for the vowel sign ి"
+   ],
+   "corrected_by": "meter_engine/scripts/fix_verse.py"
   }
  },
  {

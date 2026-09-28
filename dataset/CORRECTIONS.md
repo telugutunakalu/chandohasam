@@ -151,3 +151,115 @@ whole poem.
 
 The field was added as one line per record: with those lines removed, each file is byte-identical
 to the previous commit.
+
+## 2026-09-28 — letters of other scripts removed from the machine annotation
+
+The `generated` gloss and bhavam of some poems had letters of other scripts inside Telugu words
+(`సాధಿಸಿ`, `ఒక్కటாகி`, `విतानములు`), stray characters of unrelated scripts (`ఎ红నని`) and English
+glosses. Fixed by `meter_engine/scripts/fix_script_mixing.py`, in this order: the manual table
+`dataset/script_fixes.tsv`; for `word`/`split`, the one poem word the token matches; otherwise the
+Telugu letter of the same Unicode name, kept only when the resulting word is attested elsewhere in the
+corpora. Only the fixed strings changed; every change (field, from, to, rule) is kept in the record's
+`generated.script_fixes`. Backups: `dataset/backup/<file>.pre-script-fix-2026-09-28`.
+
+The manual rows were decided one by one, in context, by Claude (AI assistant): words of another
+language translated into Telugu, glitch characters read from context, English glosses dropped, leaked
+`<bos>`/`<br>` markup removed, headwords set to the poem's own spelling. Nobody has reviewed them yet;
+`rule: "manual"` in `script_fixes` marks them.
+
+| file | records fixed | manual | verse | translit |
+|---|---|---|---|---|
+| `vemana.json` | 151 | 61 | 67 | 40 |
+| `kuchimanchi_timmakavi.json` | 180 | 122 | 8 | 80 |
+| `chandassu.json` | 333 | 227 | 5 | 158 |
+
+## 2026-09-28 — Latin letters in the Bhāgavatam teeka and bhavam
+
+Typos where a Latin letter sat inside a Telugu word, fixed textually in `bhagavatam.json` and
+`bhagavatam.txt` (every other byte unchanged; backups `dataset/backup/bhagavatam.{json,txt}.pre-script-fix-2026-09-28`):
+
+| from | to | occurrences (json / txt) | records |
+|---|---|---|---|
+| `సోzహ` | `సోఽహ` (`z` typed for the avagraha) | 6 / 3 | 4-359.1-తే. |
+| `వినుముa` | `వినుము` | 2 / 1 | 4-672-క. |
+| `కాయనd` | `కాయన` | 2 / 1 | 9-309-ఆ. |
+| `స్వభాaవము` | `స్వభావము` | 2 / 1 | 9-730-క. |
+| `3.6X6`, `14x30`, `60x8` | `3.6×6`, `14×30`, `60×8` (multiplication sign) | 7 / 4 | 10.1-230.1-తే., 7-405-వ., 10.2-1220-వ. |
+
+Left as they are, being deliberate: `X` for "versus" (`{జడము X చైతన్యము}`), the English gloss `space`
+(2-16-వ.), and source reference codes (`-I465`, `.H2560`, `X.i_537`).
+
+## 2026-09-28 — verse, layout and labels fixed after the data-sanity run
+
+Problems found by `data_sanity_metrics/` and fixed by `meter_engine/scripts/fix_verse.py`. Backups:
+`dataset/backup/<file>.pre-verse-fix-2026-09-28`. Running the script again changes nothing.
+
+How the changes are recorded:
+- **Verse.** A record whose verse changed keeps its original lines and the reasons in a new `verse_corrected`
+  object (`from_verse`, `date`, `reasons`, `corrected_by`). `line_count` follows the new lines.
+- **Labels.** A relabelled record keeps its old label in `metre_corrected` (`from_metre_code`, `from_metre`,
+  `from_metre_roman`, `from_label_source`, `date`, `reason`, `corrected_by`), as for the Bhāgavatam relabels above.
+
+Besides those fields, only these changed: `complete`, `expected_lines`/`allowed_lines`, `label_source`, and, for the
+backslash, `generated.prathipadartham`.
+
+| fix | file | records |
+|---|---|---|
+| a backslash inside a word removed: `నల్పునకు\న్‌` → `నల్పునకున్‌`. It stands before న్ all 409 times, a conversion artifact of the Kaggle source; also removed from 42 gloss fields | `chandassu.json`, `vemana.json` | 236, 1 |
+| seesa separator written `X‌- Y` (a ZWNJ before the dash, which the importer's `seesa_line()` misses) set to ` - ` | `chandassu.json` | 4 |
+| ettugeeti lines holding two pādas joined by ` - ` split into one pāda per line (the importer's `split_padas()` does not split at ` - `) | `chandassu.json` (Narasimha) | 99 |
+| seesa records re-segmented by scansion (below): pāda breaks lost in the source (Madanagopala 66, Taadimallaraajagopaala 37), or a pāda printed without its separator (Aandhranaayaka 3, Narasimha 1) | `chandassu.json` | 107 |
+| a variant reading printed inside the verse, in parentheses, removed (sumathi-53, a కందము printed on five lines) | `chandassu.json` | 1 |
+| relabelled from the heuristic ఆటవెలది to the metre the engine identifies: కందము 132, తేటగీతి 5, ఉత్పలమాల 3, చంపకమాల 2 | `vemana.json` | 142 |
+| typos (table below) | all four | 6 |
+| `allowed_lines` [8] → [4, 8]: this లయగ్రాహి is printed as four whole pādas, which the engine reads as well as the eight half-lines of `bhagavatam.json` | `kuchimanchi_timmakavi.json` (kuchimanchi-1220) | 1 |
+
+**Relabels keep their ids.** For example, `vemana-22-ఆ.` is now a కందము. `human_evals/` and `meter_engine/reports/`
+cite Vemana ids, so renaming them would break those references. `label_source` is now `engine` for these 142.
+
+**Re-segmentation by scansion.**
+- **Search.** For each record, every segmentation into four seesa pādas and four geeti pādas that keeps the printed
+  line breaks and separators was tried.
+- **Half-lines.** A seesa pāda's halves break after its fourth gaṇa, as the gaṇa parse places it.
+- **Acceptance.** A record was changed only when exactly one segmentation scans. That held for all 107 records
+  changed, and their yati also holds in 77.
+- **Printing.** A word running across the halves is printed `X- - Y`, as elsewhere in the file, for example
+  `సాష్టాంగ- - దండము`. Pāda breaks lost in the source had glued the words together (`…శరణుసురయక్ష…` →
+  `…శరణు` / `సురయక్ష…`).
+- **Flags.** Re-segmented records get `complete: true`.
+
+| typo | from | to | evidence |
+|---|---|---|---|
+| vemana-86-ఆ. | `మొసఁగుకన్నแ` | `మొసఁగుకన్నఁ` | Thai แ typed for ఁ; line 1 has the same word |
+| vemana-1162-ఆ. | `మఱiలింగ` | `మఱిలింగ` | Latin i typed for the vowel sign ి |
+| kuchimanchi-11 | `త్క్రరు` | `త్క్రతు` | prāsa: the other three pādas have త; స\|త్క్రతు is సత్క్రతు |
+| kuchimanchi-56 | `మినునొక్కప్పుడుఁ` | `మిమునొక్కప్పుడుఁ` | prāsa: the other three pādas have మ; మిము నొక్కప్పుడుఁ గొల్వనేరక, not worshipping you even once |
+| chandassu-naarayana-94-మ. | `నవలం బారిన` | `ననలం బారిన` | prāsa: the other three pādas have న; ననలం బారిన భూతి, ash where the fire (అనలము) went out |
+| bhagavatam 6-523-క. | `వా డేర్వు` | `వా డేడ్వు` | the edition's own teeka reads ఏడ్వురు (seven). Fixed textually in `bhagavatam.json` and `bhagavatam.txt` |
+
+The prāsa of 6-523 still does not hold, since its line 1 has డే where the others have ర. `వా రేడ్వు` (వారు ఏడ్వురు) would
+hold, but only the printed edition can settle it.
+
+The other 29 poems that scan but fail prāsa under the relaxed profile were left unchanged:
+- **Pairs the relaxed profile rejects** (25):
+  - ద~ధ: 7;
+  - spellings త్ర~త్త్ర, త్వ~త్త్వ, న్య~న్న్య, ద్జ్ఞ~జ్ఞ: 5;
+  - a geminate against a cluster (ప్ప~ర్ప, ల్ల~ర్ల): 3;
+  - ర~ల: 2;
+  - ద~థ, ట~ఠ, డ~ఢ, ప~బ: 4;
+  - a pūrṇabindu before the prāsa in some pādas only: 2;
+  - an extra య in a cluster (ర~ర్య): 1;
+  - pre-prāsa aksharas mixing guru and laghu: 1.
+- **Possible typos with no certain correction** (4): kuchimanchi-255 `వెకవరి`, chandassu-bhaktamandaara-99 `జయమొప్పార`,
+  chandassu-vrushadhipa-55 `అస్తగణ` and chandassu-vrushadhipa-87 `దీవ్రము`.
+
+**Left as printed.** These are not conversion errors, or the repo cannot decide them:
+- **Gaps in the source** (`... ...`): 9 seesa records, Madanagopala 8 and Taadimallaraajagopaala 1.
+- **Lost pāda breaks that cannot be recovered:** 53 seesa records, Madanagopala 26 and Taadimallaraajagopaala 27. No
+  segmentation of them scans, so their text has other errors as well.
+- **Five-line ettugeeti:** 31 Venugopaala seesa records. The ettugeeti's own lines are followed by the two-line makuta
+  (మదరిపువిఫాల… / వేణుగోపాల…).
+- **Five seesa pādas:** 3 Laavanya seesa records.
+- **Five pādas (పంచపాది):** 21 vruttams, Dāśarathi 7, Maaruthi 13 and Venkateswara 1. Each line has the metre's full
+  length and the five lines share the prāsa, as in భండనభీముఁ డార్తజనబాంధవుఁ… (daasarathi-34). `meter_engine` does not
+  accept five pādas, so these fail level 1 of the data-sanity metrics.
