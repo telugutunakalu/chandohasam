@@ -117,3 +117,37 @@ the pipeline's automatic checks found:
 - **Splits for long compounds.** 197 rows glossed a compound of more than 8 aksharas without
   splitting it. They got their `split` from a follow-up batch, one request per word
   (gemini-3.8-flash), and are marked `split_source: "word_batch"`.
+
+## 2026-09-28 — English meanings added as `bhavam_en` (all four files)
+
+Every record that has a Telugu bhavam now also has its meaning in English, in a new field
+`bhavam_en` on the line after `bhavam`. The meanings were written by Gemini through the batch
+pipeline in `gcloud_agent_platform/prompts/` (run6). Each request gave the poem and its Telugu
+bhavam and asked for the meaning in English and nothing else: no notes, labels, markdown or
+transliteration, following the bhavam faithfully.
+
+| file | records with `bhavam_en` | Telugu bhavam translated |
+|---|---|---|
+| `bhagavatam.json` | 9,018 of 10,066 | the edition's `bhavam` |
+| `vemana.json` | 1,164 of 1,164 | run5's `generated.bhavam` |
+| `kuchimanchi_timmakavi.json` | 1,642 of 1,653 | run5's `generated.bhavam` |
+| `chandassu.json` | 2,532 of 2,532 | run5's `generated.bhavam` |
+
+Records without a Telugu bhavam have `"bhavam_en": null`. These are the 11 Kuchimanchi prose
+records and the 1,048 Bhagavatam seesa parents, whose bhavam sits on the child record (the
+ettugeeti or kanda that closes the poem). For those poems the English meaning is on the child too.
+It was made from the parent's lines followed by the child's, because the child's bhavam covers the
+whole poem.
+
+- **Model.** gemini-3.5-flash-lite wrote every answer except two.
+- **Checks.** Every answer finished normally. Two answers contained a word in Indic script
+  ("दक्षिणा"); they were regenerated on gemini-3.8-flash.
+- **Short meanings are real.** Very short prose connectives get a short English meaning:
+  `అంత.` → "Then.", `మఱియును.` → "Furthermore."
+- **Commentary is dropped.** Some of the edition's Telugu bhavams continue past the meaning into
+  commentary (notes on prāsa and alankāra, a vyākhya). The English keeps only the meaning, as the
+  prompt asks.
+- **Unreviewed.** This is machine output that nobody has reviewed.
+
+The field was added as one line per record: with those lines removed, each file is byte-identical
+to the previous commit.
