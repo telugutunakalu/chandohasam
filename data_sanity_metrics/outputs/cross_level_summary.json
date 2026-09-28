@@ -1,0 +1,54 @@
+{
+  "bhagavatam": {
+    "labelled": 7366,
+    "with_bhavam": 6318,
+    "labelled_with_bhavam": 6318,
+    "L1_valid_relaxed_pct": 91.21639967417866,
+    "L1_valid_strict_pct": 88.71843605756177,
+    "L2_pass_pct": 96.16967394745173,
+    "L3_pass_pct": 90.23425134536245,
+    "L4_poem_ttr_mean": 0.9920185836065983,
+    "L4_poem_subword_ttr_mean": 0.7050267380580556,
+    "L1_to_L3_pass_pct": 80.43684710351377,
+    "L2_and_L3_pass_pct": 87.41690408357076
+  },
+  "vemana": {
+    "labelled": 1164,
+    "with_bhavam": 1164,
+    "labelled_with_bhavam": 1164,
+    "L1_valid_relaxed_pct": 83.50515463917526,
+    "L1_valid_strict_pct": 82.64604810996563,
+    "L2_pass_pct": 84.5360824742268,
+    "L3_pass_pct": 98.36769759450172,
+    "L4_poem_ttr_mean": 0.9773089748991506,
+    "L4_poem_subword_ttr_mean": 0.7331796285505853,
+    "L1_to_L3_pass_pct": 69.7594501718213,
+    "L2_and_L3_pass_pct": 83.16151202749141
+  },
+  "kuchimanchi_timmakavi": {
+    "labelled": 1611,
+    "with_bhavam": 1642,
+    "labelled_with_bhavam": 1611,
+    "L1_valid_relaxed_pct": 90.56486654252018,
+    "L1_valid_strict_pct": 88.70266914959653,
+    "L2_pass_pct": 98.11205846528624,
+    "L3_pass_pct": 97.74665042630937,
+    "L4_poem_ttr_mean": 0.9926032663934631,
+    "L4_poem_subword_ttr_mean": 0.6594705869700509,
+    "L1_to_L3_pass_pct": 86.7163252638113,
+    "L2_and_L3_pass_pct": 95.7790192427064
+  },
+  "chandassu": {
+    "labelled": 2532,
+    "with_bhavam": 2532,
+    "labelled_with_bhavam": 2532,
+    "L1_valid_relaxed_pct": 74.01263823064771,
+    "L1_valid_strict_pct": 69.94470774091627,
+    "L2_pass_pct": 97.59083728278041,
+    "L3_pass_pct": 96.40600315955766,
+    "L4_poem_ttr_mean": 0.9761468755373415,
+    "L4_poem_subword_ttr_mean": 0.6894509231445768,
+    "L1_to_L3_pass_pct": 69.39178515007899,
+    "L2_and_L3_pass_pct": 94.15481832543443
+  }
+}

@@ -1,0 +1,1569 @@
+{
+  "profiles": [
+    "strict",
+    "relaxed"
+  ],
+  "yati_sandhi": "hypothesis",
+  "corpora": {
+    "bhagavatam": {
+      "poems": 7366,
+      "identified_pct": 99.86424110779257,
+      "scans_as_label_pct": 99.85066521857182,
+      "best_is_label_pct": 99.85066521857182,
+      "strict": {
+        "prasa_pct": 96.67766776677668,
+        "prasa_applicable": 4545,
+        "yati_pct": 90.67301155676411,
+        "valid_pct": 88.71843605756177
+      },
+      "relaxed": {
+        "prasa_pct": 99.8019801980198,
+        "prasa_applicable": 4545,
+        "yati_pct": 91.44799456152278,
+        "valid_pct": 91.21639967417866
+      },
+      "seesa_split_into_half_lines": 0
+    },
+    "vemana": {
+      "poems": 1164,
+      "identified_pct": 87.19931271477664,
+      "scans_as_label_pct": 87.19931271477664,
+      "best_is_label_pct": 87.19931271477664,
+      "strict": {
+        "prasa_pct": 93.43065693430657,
+        "prasa_applicable": 137,
+        "yati_pct": 95.66502463054188,
+        "valid_pct": 82.64604810996563
+      },
+      "relaxed": {
+        "prasa_pct": 95.62043795620438,
+        "prasa_applicable": 137,
+        "yati_pct": 96.35467980295566,
+        "valid_pct": 83.50515463917526
+      },
+      "seesa_split_into_half_lines": 3
+    },
+    "kuchimanchi_timmakavi": {
+      "poems": 1611,
+      "identified_pct": 96.52389819987586,
+      "scans_as_label_pct": 96.52389819987586,
+      "best_is_label_pct": 96.52389819987586,
+      "strict": {
+        "prasa_pct": 97.71573604060913,
+        "prasa_applicable": 788,
+        "yati_pct": 92.92604501607717,
+        "valid_pct": 88.70266914959653
+      },
+      "relaxed": {
+        "prasa_pct": 99.8730964467005,
+        "prasa_applicable": 788,
+        "yati_pct": 93.89067524115755,
+        "valid_pct": 90.56486654252018
+      },
+      "seesa_split_into_half_lines": 0
+    },
+    "chandassu": {
+      "poems": 2532,
+      "identified_pct": 85.50552922590838,
+      "scans_as_label_pct": 85.03159557661927,
+      "best_is_label_pct": 85.03159557661927,
+      "strict": {
+        "prasa_pct": 93.68541905855339,
+        "prasa_applicable": 1742,
+        "yati_pct": 86.62331630283326,
+        "valid_pct": 69.94470774091627
+      },
+      "relaxed": {
+        "prasa_pct": 98.79448909299656,
+        "prasa_applicable": 1742,
+        "yati_pct": 87.87738039944264,
+        "valid_pct": 74.01263823064771
+      },
+      "seesa_split_into_half_lines": 518
+    }
+  },
+  "per_metre": {
+    "bhagavatam": {
+      "kandamu": {
+        "poems": 2608,
+        "identified_pct": 99.80828220858896,
+        "scans_as_label_pct": 99.80828220858896,
+        "best_is_label_pct": 99.80828220858896,
+        "strict": {
+          "prasa_pct": 96.92662312716097,
+          "prasa_applicable": 2603,
+          "yati_pct": 94.66000768344219,
+          "valid_pct": 91.64110429447852
+        },
+        "relaxed": {
+          "prasa_pct": 99.73107952362659,
+          "prasa_applicable": 2603,
+          "yati_pct": 95.12101421436803,
+          "valid_pct": 94.70858895705521
+        }
+      },
+      "tetagiti": {
+        "poems": 1051,
+        "identified_pct": 99.90485252140819,
+        "scans_as_label_pct": 99.90485252140819,
+        "best_is_label_pct": 99.90485252140819,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 88.85714285714286,
+          "valid_pct": 88.77259752616555
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 89.71428571428571,
+          "valid_pct": 89.62892483349191
+        }
+      },
+      "seesamu": {
+        "poems": 1048,
+        "identified_pct": 99.61832061068702,
+        "scans_as_label_pct": 99.61832061068702,
+        "best_is_label_pct": 99.61832061068702,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 84.19540229885058,
+          "valid_pct": 83.87404580152672
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 85.44061302681992,
+          "valid_pct": 85.1145038167939
+        }
+      },
+      "aataveladi": {
+        "poems": 716,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 90.22346368715084,
+          "valid_pct": 90.22346368715084
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 91.75977653631286,
+          "valid_pct": 91.75977653631286
+        }
+      },
+      "mattebhavikriditamu": {
+        "poems": 586,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 98.12286689419795,
+          "prasa_applicable": 586,
+          "yati_pct": 94.7098976109215,
+          "valid_pct": 93.00341296928327
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 586,
+          "yati_pct": 95.22184300341297,
+          "valid_pct": 95.22184300341297
+        }
+      },
+      "champakamala": {
+        "poems": 490,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 93.46938775510205,
+          "prasa_applicable": 490,
+          "yati_pct": 89.59183673469387,
+          "valid_pct": 83.87755102040816
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 490,
+          "yati_pct": 90.0,
+          "valid_pct": 90.0
+        }
+      },
+      "utpalamala": {
+        "poems": 471,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 97.45222929936305,
+          "prasa_applicable": 471,
+          "yati_pct": 85.77494692144374,
+          "valid_pct": 83.86411889596603
+        },
+        "relaxed": {
+          "prasa_pct": 99.78768577494692,
+          "prasa_applicable": 471,
+          "yati_pct": 86.83651804670913,
+          "valid_pct": 86.62420382165605
+        }
+      },
+      "shardulavikriditamu": {
+        "poems": 289,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 96.19377162629758,
+          "prasa_applicable": 289,
+          "yati_pct": 88.58131487889273,
+          "valid_pct": 85.46712802768167
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 289,
+          "yati_pct": 88.92733564013841,
+          "valid_pct": 88.92733564013841
+        }
+      },
+      "mattakokila": {
+        "poems": 41,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 97.5609756097561,
+          "prasa_applicable": 41,
+          "yati_pct": 85.36585365853658,
+          "valid_pct": 82.92682926829268
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 41,
+          "yati_pct": 87.8048780487805,
+          "valid_pct": 87.8048780487805
+        }
+      },
+      "taralamu": {
+        "poems": 23,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 95.65217391304348,
+          "prasa_applicable": 23,
+          "yati_pct": 91.30434782608695,
+          "valid_pct": 86.95652173913044
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 23,
+          "yati_pct": 91.30434782608695,
+          "valid_pct": 91.30434782608695
+        }
+      },
+      "malini": {
+        "poems": 12,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 12,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 12,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "indravajramu": {
+        "poems": 4,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 75.0,
+          "prasa_applicable": 4,
+          "yati_pct": 50.0,
+          "valid_pct": 50.0
+        },
+        "relaxed": {
+          "prasa_pct": 75.0,
+          "prasa_applicable": 4,
+          "yati_pct": 50.0,
+          "valid_pct": 50.0
+        }
+      },
+      "layagrahi": {
+        "poems": 4,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 75.0,
+          "prasa_applicable": 4,
+          "yati_pct": 100.0,
+          "valid_pct": 75.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 4,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "kavirajavirajitamu": {
+        "poems": 3,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 0.0,
+          "valid_pct": 0.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 0.0,
+          "valid_pct": 0.0
+        }
+      },
+      "sragdhara": {
+        "poems": 3,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "utsahamu": {
+        "poems": 3,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "layavibhati": {
+        "poems": 3,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 66.66666666666667,
+          "prasa_applicable": 3,
+          "yati_pct": 100.0,
+          "valid_pct": 66.66666666666667
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "mahasragdhara": {
+        "poems": 2,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "bhujangaprayatamu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "slokamu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 0.0,
+        "best_is_label_pct": 0.0,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": null,
+          "valid_pct": 0.0
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": null,
+          "valid_pct": 0.0
+        }
+      },
+      "mangalamahasri": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "vanamayuramu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "sragvini": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "totakamu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "manini": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "upendravajramu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "panchachamaramu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      }
+    },
+    "vemana": {
+      "aataveladi": {
+        "poems": 1018,
+        "identified_pct": 85.6581532416503,
+        "scans_as_label_pct": 85.6581532416503,
+        "best_is_label_pct": 85.6581532416503,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 95.9862385321101,
+          "valid_pct": 82.22003929273085
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 96.6743119266055,
+          "valid_pct": 82.80943025540275
+        }
+      },
+      "kandamu": {
+        "poems": 132,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 93.18181818181819,
+          "prasa_applicable": 132,
+          "yati_pct": 96.21212121212122,
+          "valid_pct": 89.39393939393939
+        },
+        "relaxed": {
+          "prasa_pct": 95.45454545454545,
+          "prasa_applicable": 132,
+          "yati_pct": 96.21212121212122,
+          "valid_pct": 91.66666666666667
+        }
+      },
+      "tetagiti": {
+        "poems": 5,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 80.0,
+          "valid_pct": 80.0
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 80.0,
+          "valid_pct": 80.0
+        }
+      },
+      "seesamu": {
+        "poems": 4,
+        "identified_pct": 25.0,
+        "scans_as_label_pct": 25.0,
+        "best_is_label_pct": 25.0,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 0.0,
+          "valid_pct": 0.0
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 0.0,
+          "valid_pct": 0.0
+        }
+      },
+      "utpalamala": {
+        "poems": 3,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 33.333333333333336,
+          "valid_pct": 33.333333333333336
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 3,
+          "yati_pct": 66.66666666666667,
+          "valid_pct": 66.66666666666667
+        }
+      },
+      "champakamala": {
+        "poems": 2,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      }
+    },
+    "kuchimanchi_timmakavi": {
+      "kandamu": {
+        "poems": 513,
+        "identified_pct": 99.80506822612085,
+        "scans_as_label_pct": 99.80506822612085,
+        "best_is_label_pct": 99.80506822612085,
+        "strict": {
+          "prasa_pct": 98.046875,
+          "prasa_applicable": 512,
+          "yati_pct": 95.3125,
+          "valid_pct": 93.37231968810916
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 512,
+          "yati_pct": 96.09375,
+          "valid_pct": 95.90643274853801
+        }
+      },
+      "tetagiti": {
+        "poems": 370,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 95.13513513513513,
+          "valid_pct": 95.13513513513513
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 96.21621621621621,
+          "valid_pct": 96.21621621621621
+        }
+      },
+      "seesamu": {
+        "poems": 235,
+        "identified_pct": 96.17021276595744,
+        "scans_as_label_pct": 96.17021276595744,
+        "best_is_label_pct": 96.17021276595744,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 85.39823008849558,
+          "valid_pct": 82.12765957446808
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 86.72566371681415,
+          "valid_pct": 83.40425531914893
+        }
+      },
+      "aataveladi": {
+        "poems": 173,
+        "identified_pct": 98.84393063583815,
+        "scans_as_label_pct": 98.84393063583815,
+        "best_is_label_pct": 98.84393063583815,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 92.39766081871345,
+          "valid_pct": 91.32947976878613
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 93.5672514619883,
+          "valid_pct": 92.48554913294798
+        }
+      },
+      "champakamala": {
+        "poems": 148,
+        "identified_pct": 95.94594594594595,
+        "scans_as_label_pct": 95.94594594594595,
+        "best_is_label_pct": 95.94594594594595,
+        "strict": {
+          "prasa_pct": 96.47887323943662,
+          "prasa_applicable": 142,
+          "yati_pct": 95.07042253521126,
+          "valid_pct": 87.83783783783784
+        },
+        "relaxed": {
+          "prasa_pct": 99.29577464788733,
+          "prasa_applicable": 142,
+          "yati_pct": 95.07042253521126,
+          "valid_pct": 90.54054054054055
+        }
+      },
+      "mattebhavikriditamu": {
+        "poems": 82,
+        "identified_pct": 69.51219512195122,
+        "scans_as_label_pct": 69.51219512195122,
+        "best_is_label_pct": 69.51219512195122,
+        "strict": {
+          "prasa_pct": 98.24561403508773,
+          "prasa_applicable": 57,
+          "yati_pct": 87.71929824561404,
+          "valid_pct": 59.75609756097561
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 57,
+          "yati_pct": 87.71929824561404,
+          "valid_pct": 60.97560975609756
+        }
+      },
+      "utpalamala": {
+        "poems": 38,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 94.73684210526316,
+          "prasa_applicable": 38,
+          "yati_pct": 86.84210526315789,
+          "valid_pct": 84.21052631578948
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 38,
+          "yati_pct": 92.10526315789474,
+          "valid_pct": 92.10526315789474
+        }
+      },
+      "shardulavikriditamu": {
+        "poems": 34,
+        "identified_pct": 61.76470588235294,
+        "scans_as_label_pct": 61.76470588235294,
+        "best_is_label_pct": 61.76470588235294,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 21,
+          "yati_pct": 95.23809523809524,
+          "valid_pct": 58.8235294117647
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 21,
+          "yati_pct": 95.23809523809524,
+          "valid_pct": 58.8235294117647
+        }
+      },
+      "madhuragati_ragada": {
+        "poems": 5,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 5,
+          "yati_pct": 80.0,
+          "valid_pct": 80.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 5,
+          "yati_pct": 80.0,
+          "valid_pct": 80.0
+        }
+      },
+      "taralamu": {
+        "poems": 2,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "utsahamu": {
+        "poems": 2,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 50.0,
+          "valid_pct": 50.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 50.0,
+          "valid_pct": 50.0
+        }
+      },
+      "bhujangaprayatamu": {
+        "poems": 2,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 2,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "layavibhati": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "totakamu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "malini": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "mattakokila": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "panchachamaramu": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "sragvini": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      },
+      "layagrahi": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": 100.0,
+          "prasa_applicable": 1,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      }
+    },
+    "chandassu": {
+      "seesamu": {
+        "poems": 576,
+        "identified_pct": 71.18055555555556,
+        "scans_as_label_pct": 71.18055555555556,
+        "best_is_label_pct": 71.18055555555556,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 76.82926829268293,
+          "valid_pct": 54.6875
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 77.8048780487805,
+          "valid_pct": 55.38194444444444
+        }
+      },
+      "mattebhavikriditamu": {
+        "poems": 547,
+        "identified_pct": 87.75137111517367,
+        "scans_as_label_pct": 86.83729433272394,
+        "best_is_label_pct": 86.83729433272394,
+        "strict": {
+          "prasa_pct": 94.94736842105263,
+          "prasa_applicable": 475,
+          "yati_pct": 87.36842105263158,
+          "valid_pct": 72.39488117001828
+        },
+        "relaxed": {
+          "prasa_pct": 99.57894736842105,
+          "prasa_applicable": 475,
+          "yati_pct": 88.42105263157895,
+          "valid_pct": 76.41681901279708
+        }
+      },
+      "kandamu": {
+        "poems": 534,
+        "identified_pct": 93.63295880149813,
+        "scans_as_label_pct": 93.63295880149813,
+        "best_is_label_pct": 93.63295880149813,
+        "strict": {
+          "prasa_pct": 92.8,
+          "prasa_applicable": 500,
+          "yati_pct": 95.6,
+          "valid_pct": 82.95880149812734
+        },
+        "relaxed": {
+          "prasa_pct": 98.2,
+          "prasa_applicable": 500,
+          "yati_pct": 96.0,
+          "valid_pct": 88.20224719101124
+        }
+      },
+      "utpalamala": {
+        "poems": 326,
+        "identified_pct": 86.80981595092024,
+        "scans_as_label_pct": 85.58282208588957,
+        "best_is_label_pct": 85.58282208588957,
+        "strict": {
+          "prasa_pct": 96.415770609319,
+          "prasa_applicable": 279,
+          "yati_pct": 84.58781362007169,
+          "valid_pct": 69.93865030674847
+        },
+        "relaxed": {
+          "prasa_pct": 97.84946236559139,
+          "prasa_applicable": 279,
+          "yati_pct": 86.02150537634408,
+          "valid_pct": 72.39263803680981
+        }
+      },
+      "champakamala": {
+        "poems": 290,
+        "identified_pct": 91.03448275862068,
+        "scans_as_label_pct": 90.0,
+        "best_is_label_pct": 90.0,
+        "strict": {
+          "prasa_pct": 90.80459770114942,
+          "prasa_applicable": 261,
+          "yati_pct": 89.65517241379311,
+          "valid_pct": 73.79310344827586
+        },
+        "relaxed": {
+          "prasa_pct": 99.61685823754789,
+          "prasa_applicable": 261,
+          "yati_pct": 90.80459770114942,
+          "valid_pct": 81.37931034482759
+        }
+      },
+      "shardulavikriditamu": {
+        "poems": 258,
+        "identified_pct": 87.98449612403101,
+        "scans_as_label_pct": 87.98449612403101,
+        "best_is_label_pct": 87.98449612403101,
+        "strict": {
+          "prasa_pct": 92.95154185022027,
+          "prasa_applicable": 227,
+          "yati_pct": 81.93832599118943,
+          "valid_pct": 67.44186046511628
+        },
+        "relaxed": {
+          "prasa_pct": 98.6784140969163,
+          "prasa_applicable": 227,
+          "yati_pct": 85.90308370044053,
+          "valid_pct": 74.8062015503876
+        }
+      },
+      "aataveladi": {
+        "poems": 1,
+        "identified_pct": 100.0,
+        "scans_as_label_pct": 100.0,
+        "best_is_label_pct": 100.0,
+        "strict": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        },
+        "relaxed": {
+          "prasa_pct": null,
+          "prasa_applicable": 0,
+          "yati_pct": 100.0,
+          "valid_pct": 100.0
+        }
+      }
+    }
+  },
+  "by_label_source": {
+    "bhagavatam/edition": {
+      "poems": 7366,
+      "identified_pct": 99.86424110779257,
+      "scans_as_label_pct": 99.85066521857182,
+      "best_is_label_pct": 99.85066521857182,
+      "strict": {
+        "prasa_pct": 96.67766776677668,
+        "prasa_applicable": 4545,
+        "yati_pct": 90.67301155676411,
+        "valid_pct": 88.71843605756177
+      },
+      "relaxed": {
+        "prasa_pct": 99.8019801980198,
+        "prasa_applicable": 4545,
+        "yati_pct": 91.44799456152278,
+        "valid_pct": 91.21639967417866
+      }
+    },
+    "vemana/heuristic": {
+      "poems": 1022,
+      "identified_pct": 85.42074363992172,
+      "scans_as_label_pct": 85.42074363992172,
+      "best_is_label_pct": 85.42074363992172,
+      "strict": {
+        "prasa_pct": null,
+        "prasa_applicable": 0,
+        "yati_pct": 95.87628865979381,
+        "valid_pct": 81.89823874755382
+      },
+      "relaxed": {
+        "prasa_pct": null,
+        "prasa_applicable": 0,
+        "yati_pct": 96.56357388316151,
+        "valid_pct": 82.4853228962818
+      }
+    },
+    "vemana/engine": {
+      "poems": 142,
+      "identified_pct": 100.0,
+      "scans_as_label_pct": 100.0,
+      "best_is_label_pct": 100.0,
+      "strict": {
+        "prasa_pct": 93.43065693430657,
+        "prasa_applicable": 137,
+        "yati_pct": 94.36619718309859,
+        "valid_pct": 88.02816901408451
+      },
+      "relaxed": {
+        "prasa_pct": 95.62043795620438,
+        "prasa_applicable": 137,
+        "yati_pct": 95.07042253521126,
+        "valid_pct": 90.84507042253522
+      }
+    },
+    "kuchimanchi_timmakavi/chandassu": {
+      "poems": 53,
+      "identified_pct": 0.0,
+      "scans_as_label_pct": 0.0,
+      "best_is_label_pct": 0.0,
+      "strict": {
+        "prasa_pct": null,
+        "prasa_applicable": 0,
+        "yati_pct": null,
+        "valid_pct": 0.0
+      },
+      "relaxed": {
+        "prasa_pct": null,
+        "prasa_applicable": 0,
+        "yati_pct": null,
+        "valid_pct": 0.0
+      }
+    },
+    "kuchimanchi_timmakavi/engine": {
+      "poems": 1555,
+      "identified_pct": 100.0,
+      "scans_as_label_pct": 100.0,
+      "best_is_label_pct": 100.0,
+      "strict": {
+        "prasa_pct": 97.71573604060913,
+        "prasa_applicable": 788,
+        "yati_pct": 92.92604501607717,
+        "valid_pct": 91.89710610932475
+      },
+      "relaxed": {
+        "prasa_pct": 99.8730964467005,
+        "prasa_applicable": 788,
+        "yati_pct": 93.89067524115755,
+        "valid_pct": 93.82636655948554
+      }
+    },
+    "kuchimanchi_timmakavi/engine-partial": {
+      "poems": 3,
+      "identified_pct": 0.0,
+      "scans_as_label_pct": 0.0,
+      "best_is_label_pct": 0.0,
+      "strict": {
+        "prasa_pct": null,
+        "prasa_applicable": 0,
+        "yati_pct": null,
+        "valid_pct": 0.0
+      },
+      "relaxed": {
+        "prasa_pct": null,
+        "prasa_applicable": 0,
+        "yati_pct": null,
+        "valid_pct": 0.0
+      }
+    },
+    "chandassu/corpus": {
+      "poems": 2532,
+      "identified_pct": 85.50552922590838,
+      "scans_as_label_pct": 85.03159557661927,
+      "best_is_label_pct": 85.03159557661927,
+      "strict": {
+        "prasa_pct": 93.68541905855339,
+        "prasa_applicable": 1742,
+        "yati_pct": 86.62331630283326,
+        "valid_pct": 69.94470774091627
+      },
+      "relaxed": {
+        "prasa_pct": 98.79448909299656,
+        "prasa_applicable": 1742,
+        "yati_pct": 87.87738039944264,
+        "valid_pct": 74.01263823064771
+      }
+    }
+  },
+  "yati_usage": {
+    "bhagavatam": {
+      "seats": 28450,
+      "matched_pct": 97.63444639718804,
+      "matched_needing_sandhi_hypothesis_pct": 11.070309968679123,
+      "matched_by_prasa_yati_pct": 4.708931850091803,
+      "matched_by_rule": {
+        "YATI-VY-01": 12087,
+        "YATI-VY-02.1": 6273,
+        "YATI-VY-12": 1760,
+        "YATI-VY-09": 1755,
+        "YATI-SV-02": 1676,
+        "YATI-PY-01": 1308,
+        "YATI-VY-10": 697,
+        "YATI-SP-07": 636,
+        "YATI-VY-11": 594,
+        "YATI-SV-02.2": 169
+      }
+    },
+    "vemana": {
+      "seats": 3804,
+      "matched_pct": 99.00105152471083,
+      "matched_needing_sandhi_hypothesis_pct": 4.514073287307488,
+      "matched_by_prasa_yati_pct": 4.567180031864047,
+      "matched_by_rule": {
+        "YATI-VY-01": 2293,
+        "YATI-VY-02.1": 662,
+        "YATI-PY-01": 172,
+        "YATI-VY-09": 161,
+        "YATI-SV-02": 134,
+        "YATI-VY-12": 117,
+        "YATI-SV-02.2": 94,
+        "YATI-SP-07": 36,
+        "YATI-VY-11": 25,
+        "YATI-VY-10": 25
+      }
+    },
+    "kuchimanchi_timmakavi": {
+      "seats": 7020,
+      "matched_pct": 98.56125356125357,
+      "matched_needing_sandhi_hypothesis_pct": 9.466685937274173,
+      "matched_by_prasa_yati_pct": 19.265789854025147,
+      "matched_by_rule": {
+        "YATI-VY-01": 2685,
+        "YATI-PY-01": 1333,
+        "YATI-VY-02.1": 1282,
+        "YATI-SV-02": 448,
+        "YATI-VY-09": 422,
+        "YATI-VY-12": 227,
+        "YATI-SP-07": 145,
+        "YATI-SV-02.2": 113,
+        "YATI-VY-11": 46,
+        "YATI-VY-10": 39
+      }
+    },
+    "chandassu": {
+      "seats": 10892,
+      "matched_pct": 97.30995225853837,
+      "matched_needing_sandhi_hypothesis_pct": 8.557411076516653,
+      "matched_by_prasa_yati_pct": 6.878007359184829,
+      "matched_by_rule": {
+        "YATI-VY-01": 4661,
+        "YATI-VY-02.1": 2221,
+        "YATI-VY-12": 770,
+        "YATI-PY-01": 729,
+        "YATI-VY-09": 507,
+        "YATI-SV-02": 454,
+        "YATI-SP-07": 423,
+        "YATI-VY-11": 230,
+        "YATI-VY-10": 220,
+        "YATI-SV-02.2": 65
+      }
+    }
+  },
+  "failures": {
+    "bhagavatam": [
+      {
+        "key": "bhagavatam:1-10-ఉ.",
+        "metre": "utpalamala",
+        "reason": "yati",
+        "verse": "అమ్మలఁ గన్నయమ్మ, ముగురమ్మలమూలపుటమ్మ, చాలఁ బె\nద్దమ్మ, సురారులమ్మ కడు పాఱడి పుచ్చిన యమ్మ, తన్ను లో\nనమ్మిన వేల్పుటమ్మల మనమ్ముల నుండెడి యమ్మ, దుర్గ, మా\nయమ్మ, కృపాబ్ధి యిచ్చుత మహత్త్వకవిత్వ పటుత్వ సంపదల్."
+      },
+      {
+        "key": "bhagavatam:1-27-క.",
+        "metre": "kandamu",
+        "reason": "yati",
+        "verse": "ఆమానినికిం బుట్టితి\nమేమిరువుర, మగ్రజాతుఁడీశ్వరసేవా\nకాముఁడు తిప్పన, పోతన\nనామవ్యక్తుండ సాధునయ యుక్తుండన్."
+      },
+      {
+        "key": "bhagavatam:1-62-సీ.",
+        "metre": "seesamu",
+        "reason": "yati",
+        "verse": "మహదహంకార తన్మాత్ర సంయుక్తుఁడై-\nచారు షోడశ కళాసహితుఁ డగుచుఁ,\nబంచమహాభూతభాసితుండై శుద్ధ-\nసత్త్వుఁడై సర్వాతిశాయి యగుచుఁ,\nజరణోరు భుజ ముఖశ్రవణాక్షి నాసా శి-\nరములు నానాసహస్రములు వెలుఁగ,\nనంబర కేయూరహార కుండల కిరీ-\nటాదులు పెక్కువేలమరుచుండఁ,"
+      },
+      {
+        "key": "bhagavatam:1-195-క.",
+        "metre": "kandamu",
+        "reason": "yati",
+        "verse": "వసుదేవదేవకులు తా\nపసగతి గతభవమునందుఁ బ్రార్థించిన సం\nతసమునఁ బుత్త్రత నొందితి\nవసురుల మృతి కంచుఁ గొంద ఱండ్రు, మహాత్మా!"
+      },
+      {
+        "key": "bhagavatam:1-209-ఆ.",
+        "metre": "aataveladi",
+        "reason": "yati",
+        "verse": "\"ధరణిసురులు, హరియు, ధర్మంబు దిక్కుగా\nబ్రదుకఁ దలఁచి మీరు బహువిధముల\nనన్నలార! పడితి రాపత్పరంపర\nలిట్టి చిత్రకర్మ మెందుఁ గలదు?"
+      },
+      {
+        "key": "bhagavatam:1-288-మ.",
+        "metre": "mattebhavikriditamu",
+        "reason": "yati",
+        "verse": "\"గదఁ జేఁబట్టి పరిభ్రమించుచు గదాఘాతంబులం దుర్భయ\nప్రదమై వచ్చు శరాగ్నిఁ దుత్తుమురుగా భంజించి రక్షించు నీ\nసదయుం డెవ్వఁడొకో?\"\" యటంచు మదిలోఁ జర్చించుచున్ శాబకుం\nడెదురై చూడ నదృశ్యుఁ డయ్యె హరి సర్వేశుండు విప్రోత్తమా!"
+      },
+      {
+        "key": "bhagavatam:1-300-క.",
+        "metre": "kandamu",
+        "reason": "yati",
+        "verse": "బంధుఁడు వచ్చె నటంచును\nగాంధారీవిభుఁడు మొదలుగా నందఱు సం\nబంధములు నెఱపి ప్రీతిం\nబంధురగతిఁ జేసి రపుడు మన్నన లనఘా!"
+      },
+      {
+        "key": "bhagavatam:1-333-సీ.",
+        "metre": "seesamu",
+        "reason": "yati",
+        "verse": "\"\"ఒక కాలమునఁ బండు నోషధిచయము వే-\nఱొక కాలమునఁ బండకుండు నండ్రు;\nక్రోధంబు లోభంబుఁ గ్రూరత బొంకును-\nదీపింప నరులు వర్తింతు రండ్రు;\nవ్యవహారములు మహావ్యాజయుక్తము లండ్రు-\nసఖ్యంబు వంచనా సహిత మండ్రు;\nమగలతో నిల్లాండ్రు మచ్చరించెద రండ్రు-\nసుతులు దండ్రులఁ దెగఁ జూతు రండ్రు;"
+      }
+    ],
+    "vemana": [
+      {
+        "key": "vemana:vemana-47-ఆ.",
+        "metre": "aataveladi",
+        "reason": "yati",
+        "verse": "వెళ్లి వచ్చు నాఁడు మళ్లి పోయెడు నాఁడు\nవెంట రాదు; ధనము కొంచఁ బోఁడు;\nతానదేడఁ బోనొ ధన మేడఁ బోవునో?\nవిశ్వదాభిరామ వినర వేమ."
+      },
+      {
+        "key": "vemana:vemana-71-ఆ.",
+        "metre": "aataveladi",
+        "reason": "yati",
+        "verse": "గుణవతి యగు యువతి గృహము చక్కగనుండు\nచీకటింట దివ్వె చెలఁగురీతి\nదేవియున్న యిల్లు దేవార్చన గృహంబు\nవిశ్వదాభిరామ వినర వేమ."
+      },
+      {
+        "key": "vemana:vemana-83-ఆ.",
+        "metre": "aataveladi",
+        "reason": "does not scan as aataveladi (engine: nothing)",
+        "verse": "సతము బాహ్యపూజ చాలఁ జేసినపిదప\nకపటము విడలేక కష్టనరులు\nముక్తి నొందలేక మునిగిరి తమమున\nవిశ్వదాభిరామ వినర వేమ."
+      },
+      {
+        "key": "vemana:vemana-86-ఆ.",
+        "metre": "aataveladi",
+        "reason": "yati",
+        "verse": "దాన మొసఁగుకన్నఁ దేజంబు మఱిహెచ్చు\nతేజ మొసఁగుకన్నఁ దెలివి హెచ్చు\nతెలివికన్న నాసఁ దెగ వేయునది హెచ్చు\nవిశ్వదాభిరామ వినర వేమ."
+      },
+      {
+        "key": "vemana:vemana-101-ఆ.",
+        "metre": "aataveladi",
+        "reason": "does not scan as aataveladi (engine: nothing)",
+        "verse": "పలుకుమన్న నేల పలుకక యున్నావు\nపలుకుమయ్య నాతో ప్రబలముగను\nపలుకుమయ్య! నీదు పలుకు నేనెఱిఁగెద\nవిశ్వదాభిరామ వినర వేమ."
+      },
+      {
+        "key": "vemana:vemana-102-ఆ.",
+        "metre": "aataveladi",
+        "reason": "does not scan as aataveladi (engine: nothing)",
+        "verse": "నీళ్ళ లోన మొసలి నిగిడి యేనుఁగుఁ బట్టు\nబైట కుక్క చేత భంగ పడును\nస్థాన బలిమి గాని తన బలిమి కాదయా\nవిశ్వదాభిరామ వినర వేమ."
+      },
+      {
+        "key": "vemana:vemana-105-ఆ.",
+        "metre": "aataveladi",
+        "reason": "does not scan as aataveladi (engine: nothing)",
+        "verse": "అజ్ఞానమె శూద్రత్వము\nసుజ్ఞానము బ్రహ్మమౌట శ్రుతులను వినరా\nయజ్ఞాన ముడిగి వాల్మీకి\nసుజ్ఞానపు బ్రహ్మమొందెఁ జూడర వేమా."
+      },
+      {
+        "key": "vemana:vemana-106-ఆ.",
+        "metre": "aataveladi",
+        "reason": "does not scan as aataveladi (engine: nothing)",
+        "verse": "ఇంద్రియ పరవశుఁ డధముం\nడింద్రియ పరవశుఁడు భక్తియెడ మధ్యముంఁడౌ\nనింద్రియజయుఁ డుత్తముఁ జి\nతేంద్రియసుతుఁడు విన మహేశుఁడు వేమా."
+      }
+    ],
+    "kuchimanchi_timmakavi": [
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-1",
+        "metre": "shardulavikriditamu",
+        "reason": "does not scan as shardulavikriditamu (engine: nothing)",
+        "verse": "శ్రీకైలాస మహీధర శిరఃశృంగాట కాంచన్మణి\nప్రాకారాంతర చంద్రకాంత రజతప్రాసాద శుద్ధంత సిం\nహాకారోన్నత హేమ పీఠమునఁగొల్వైయుండు నిన్నెన్నెదన్\nరాకాచంద్ర నిభప్రభాకలిత! భర్గా! పార్వతీవల్లభా!"
+      },
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-2",
+        "metre": "mattebhavikriditamu",
+        "reason": "does not scan as mattebhavikriditamu (engine: nothing)",
+        "verse": "క్షితినంభోనిధి కర్ఘ్యమిచ్చుక్రియ భక్తి న్బద్మినీ భర్తకా\nరతి యర్పించుతెఱంగున న్బహుతర బ్రహ్మండ సంత్రాతకున్\nశతకంబొక్కటి గూర్చి నీ కొసగెద న్సంరూఢిఁగైకొమ్ము నా\nకృతి సంస్తుత్యలసద్గుణాభరణ! భర్గా పార్వతివల్లభా!"
+      },
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-6",
+        "metre": "shardulavikriditamu",
+        "reason": "does not scan as shardulavikriditamu (engine: nothing)",
+        "verse": "మేమాఱున్ భవదీయ పావనకళావిఖ్యాత కావ్యక్రియా\nసామీచీన్యహృదంతరాళ కవిరాట్సంక్రదన శ్రేణికిన్\nసామర్థ్యం బొనగూర్చి మంచినుడువుల్ సంప్రీతి నొందించు వా\nగ్భామారత్నము లీలమై నిలిచి భర్గా! పార్వతీవల్లభా!"
+      },
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-7",
+        "metre": "mattebhavikriditamu",
+        "reason": "does not scan as mattebhavikriditamu (engine: nothing)",
+        "verse": "చిరభక్తిన్మదిలో భవద్వ్రతముగాఁజింతింటు నశ్రాంతమున్\nబరవాది ప్రమథద్విపేంద్రపదవీ పంచానన శ్రేష్ఠు బం\nధుర తేజోనిధి దెందులూరి కులపథోరాశిరాకానిశా\nకరునిన్ లింగయ సద్గురూత్తముని భర్గా! పార్వతీవల్లభా!"
+      },
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-9",
+        "metre": "mattebhavikriditamu",
+        "reason": "does not scan as mattebhavikriditamu (engine: nothing)",
+        "verse": "హర! మృత్యుంజయ! చంద్రశేఖర! విరూపాక్షా! మహాదేవ! శం\nకర! భూతేశ! మహేశ! రుద్ర! మృడ! గంగాజూట! గౌరీమనో\nహర! సర్వజ్ఞ! బిలేశయాభరణ! శర్వా! నీలకంఠా! శివా!\nకరిచర్మాంబర! యంచు నెంతు భర్గా! పార్వతీవల్లభా!"
+      },
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-10",
+        "metre": "mattebhavikriditamu",
+        "reason": "does not scan as mattebhavikriditamu (engine: nothing)",
+        "verse": "జగదీశాయ మనోస్తుతే భగవతె చంద్రావతంసాయ ప\nన్నగహారాయ శివాయలోకగురవే నానామరు ద్రూపిణే\nనిగమాంత ప్రతిపాదితాయ విలసన్నిర్వాణనాథాయధీ\nరగుణాఢ్యాయ యటంచు మ్రొక్కిడుదు భర్గా! పార్వతీవల్లభా!"
+      },
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-12",
+        "metre": "mattebhavikriditamu",
+        "reason": "does not scan as mattebhavikriditamu (engine: nothing)",
+        "verse": "మరుదర్కేందు కృశాను యజ్వగగనాంభకుంభినీమూర్తి నం\nబరకేశున్ శరణాగతార్తిహరణున్బాలేందు చూడామణిన్\nభరణీభృత్తానయాస్తనద్వయ మిళిత్కస్తూరికాపంకసం\nకరదోరంతరు నిన్ భజించెదను భర్గా! పార్వతీవల్లభా!"
+      },
+      {
+        "key": "kuchimanchi_timmakavi:kuchimanchi-13",
+        "metre": "mattebhavikriditamu",
+        "reason": "yati",
+        "verse": "మిహిరప్రోద్భవ ఘోరకింకరసమున్మేషోరగశ్రేణికా\nవిహగోత్తంస మశేషదోషపటలీ వేదండ కంఠీరవం\nబహిత క్రూరగణాటవీహుత వహంబైనట్టి పంచాక్షరం\nబహహా! కల్గెను నాకు భాగ్యమున భర్గా! పార్వతీవల్లభా!"
+      }
+    ],
+    "chandassu": [
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-6-సీ.",
+        "metre": "seesamu",
+        "reason": "does not scan as seesamu (engine: nothing)",
+        "verse": "ఇంద్రనీలచ్ఛాయ లీను నెమ్మేనిపైఁ - గనకాంబరప్రభ గ్రందుకొనఁగఁ\nబర్వసుధాంశు శోభసముజ్జ్వలవక్త్ర - మున నూర్ధ్వపుండ్రము ముద్దు గుల్క\nనెగుభుజంబుల ధగద్ధగితాంగద ద్యుతుల్‌ - మూర్ధరత్నకిరీటమునఁ జరింప\nవర్ణితోరస్థలి వైయంతిక కౌస్తు - భాంతర శ్రీదేవియంద మమర\nరమ్ము దర్శన మిమ్ము ఘోరములఁ జిమ్ము\nమభయ మిమ్ము భవత్తత్త్వ మానతిమ్ము\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      },
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-7-సీ.",
+        "metre": "seesamu",
+        "reason": "yati",
+        "verse": "కలిగినప్పుడె కన్న తలిదండ్రు లెన్న నే - నిసువు మాటాడంగ నేర్చె జగతి\nజయలిజగంబు లంబకు నిజోదరమునం - దేబిడ్డ చూపించె నిద్ధరిత్రిఁ\nదొడలపై ముద్దుగా నిడుకొన్న జనని కే - పసిపిల్ల కొండంతబరువు దోఁచెఁ\nదల్లిచెంగటనుండి యిల్లిల్లుఁ జొచ్చి యే - కుఱ్ఱఁ డింతుల బల్మిఁ గూడ నేర్చె\nనాబుడత వీవెరా యబ్బ! యబ్బురంపు\nకతలమారివి నీ వెఱుంగనివి గలవె?\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      },
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-10-సీ.",
+        "metre": "seesamu",
+        "reason": "yati",
+        "verse": "అంచితాఖండ దీపారాధనల చేత - దీపించు నెప్పుడు దేవళంబు\nఅగరుసాంబ్రాణి ధూపార్పణంబులచేత - భవనం బ దెప్పుడుఁ బరిమళించు\nనతినృత్యగీత వాద్యస్వనంబులచేత - నెప్పుడుఁ గోవెల యెసక మెసఁగు\nనఖిలోపచార సమర్పణంబులచేత - మెఱయు నెప్పుడుఁ దిరుమేను కళల\nనిపు డొకించుక లోభిత్వ మెనసి నట్లు\nదోఁచుచున్నాఁడ విట్టియద్భుతము గలదె\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      },
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-11-సీ.",
+        "metre": "seesamu",
+        "reason": "does not scan as seesamu (engine: nothing)",
+        "verse": "భక్తిఁజేసిన శిలాప్రతిమ మాత్రమే కాని - హరి యిందుఁ గలుగునా యనెడువారు\nస్వామి యిం దుండిన సత్యంబుఁ జూపక - యుండునే యని పల్కుచుండువారు\nబుద్ధావతారంబుఁ బూనినాఁ డఖిలంబుఁ - గని కనన ట్లుండు ననెడువారు\nదేవతామహిమంబు దెలియునో యేమేమి - నడువ నున్నదో యని నుడువువారు\nనీకు నిత్యోపచారముల్‌ లేకయున్న\nలోకు లి ట్లాడుకొండ్రు పరాకిదేమి\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      },
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-13-సీ.",
+        "metre": "seesamu",
+        "reason": "yati",
+        "verse": "మానితంబుగ గరుత్మద్ధ్వజారోహణం - బెప్పుడొనర్తువో చెప్పుమయ్య!\nగరిమతో నీ తిరుక్కల్యాణసంభ్రమం - బెప్పు డెప్పుడొ వేగ చెప్పు మయ్య\nరమతో మహోన్నతరథ మెక్కి తిరువీథు - లెప్పు డేతెంతువో చెప్పు మయ్య\nధరణి నభ్యాగతదాన ప్రజాబృంద - మెప్పుడు బలియునో చెప్పు మయ్య\nవత్సరోత్సవ వీక్షణవాంఛ జనుల\nకెపుడు ఫలియించునో యానతీయు మయ్య\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      },
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-14-సీ.",
+        "metre": "seesamu",
+        "reason": "yati",
+        "verse": "తగునట్లు తిరుమేను తా నామతింపుచు - మిన్న పీతాంబరం బున్న దనుచుఁ\nగమలతోఁ బుట్టిన కౌస్తుభం బది పోవఁ - దక్కు సొమ్మది నీకు తక్కె ననుచు\nలలితరత్న ద్యుతి మొలచినట్లు కిరీట - ముత్తమాంగముఁ బాయ కున్న దనుచు\nమండితమాణిక్యకుండలంబులు కర్ణ - యుగళితోఁ బుట్టిన ట్లున్న వనుచు\nనిండుకొన్నావు గడియించు నేరుపరివె\nప్రావలువ బ్రారువాణముల్‌ బ్రాఁతి యేమి?\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      },
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-17-సీ.",
+        "metre": "seesamu",
+        "reason": "does not scan as seesamu (engine: nothing)",
+        "verse": "చెల్లింపఁ దగునె వ్రేపల్లెలోఁ గల వెఱ్ఱి - గొల్లయిల్లాండ్రను గొల్లగొనఁగ?\nమెక్కంగఁ దగునె ము న్పెక్కిండ్లలో నుట్ల - కెక్కి పాల్వెన్నలు డొక్క నిండ?\nమ్రుచ్చిలఁ దగునె మళ్ళుచ్చి జలక మ్మాడు - మచ్చెకంటుల కోక లిచ్చకముగ?\nమ్రొక్కంగఁ దగునె ముం దొక్కపువ్వునకుఁ దాఁ - గక్కసించినయాలి కక్కజముగ\nనిట్టీ నగుబాటుపనులు నీ వెన్ని కలుగఁ\nజేసినాఁడవు మంచిప్రసిద్ధకుఁడవె\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      },
+      {
+        "key": "chandassu:chandassu-aandhranaayaka-19-సీ.",
+        "metre": "seesamu",
+        "reason": "yati",
+        "verse": "తలను బించెపుదండ ధరియించవలె గాని - మణికిరీటము బెట్ట మనుజపతివె?\nగళమున వనమాలికలు పూనవలెఁ గాని - హారము న్వేయ దేశాధిపతివె?\nకరమున మురళి చక్కఁగఁ బూనవలెఁ గాని - శాతాసిఁ బూనంగ క్షత్రియుఁడవె?\nతనువు గోక్షీరవాసన గుప్పవలెఁ గాని - చందనం బలఁద రాజవె తలంప?\nనెల్లలోక మెఱింగిన గొల్లవాఁడ\nవేది కుల మింత రాజస మేమి నీకు\nచిత్ర చిత్ర ప్రభావ దాక్షిణ్యభావ\nహత విమతజీవ శ్రీకాకుళాంధ్రదేవ!"
+      }
+    ]
+  },
+  "errors": 0,
+  "unlabelled": {
+    "poems": 31,
+    "identified": 0,
+    "identified_as": {
+      "None": 31
+    }
+  }
+}

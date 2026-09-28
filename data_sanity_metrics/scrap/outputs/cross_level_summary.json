@@ -1,0 +1,70 @@
+{
+  "n": 27881,
+  "pass_all_1_3_pct": 76.3207919371615,
+  "pass_all_1_3_prefix_stripped_pct": 92.32452207596572,
+  "pass_all_1_3_chandohasam_pct": 68.89279437609842,
+  "l2_and_l3_pct": 76.3207919371615,
+  "l3_pct": 76.93769950862594,
+  "rows": [
+    {
+      "level": "1",
+      "check": "prosodic integrity (paper analyser)",
+      "paper": 100.0,
+      "ours": 100.0
+    },
+    {
+      "level": "1'",
+      "check": "prosodic integrity (chandohasam, relaxed)",
+      "paper": null,
+      "ours": 90.20838563896561
+    },
+    {
+      "level": "2",
+      "check": "length ratio [0.8, 2.5)",
+      "paper": 99.1,
+      "ours": 99.11050536207453
+    },
+    {
+      "level": "3",
+      "check": "LaBSE Te–En >= 0.65",
+      "paper": 77.1,
+      "ours": 76.93769950862594
+    },
+    {
+      "level": "3*",
+      "check": "LaBSE Te–En >= 0.65, prompt prefix stripped",
+      "paper": null,
+      "ours": 93.15662996305728
+    },
+    {
+      "level": "4",
+      "check": "per-poem subword TTR (the '0.90 avg')",
+      "paper": 0.9,
+      "ours": 0.897237596363724
+    },
+    {
+      "level": "4",
+      "check": "per-poem word TTR",
+      "paper": 0.993,
+      "ours": 0.9927527580239104
+    },
+    {
+      "level": "1–3",
+      "check": "pass all levels 1–3 (paper L1)",
+      "paper": 68.9,
+      "ours": 76.3207919371615
+    },
+    {
+      "level": "1–3*",
+      "check": "pass all levels 1–3, prefix stripped for L3",
+      "paper": null,
+      "ours": 92.32452207596572
+    },
+    {
+      "level": "1'–3",
+      "check": "pass all levels 1–3 (chandohasam L1)",
+      "paper": null,
+      "ours": 68.89279437609842
+    }
+  ]
+}

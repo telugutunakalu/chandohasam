@@ -1,0 +1,103 @@
+{
+  "tokenizer": "google/gemma-4-E2B-it",
+  "vocab_any_telugu": 1784,
+  "vocab_pure_telugu": 1784,
+  "corpora": {
+    "bhagavatam": {
+      "coverage": {
+        "used_any_telugu": 1246,
+        "used_pure_telugu": 1246,
+        "coverage_any_pct": 69.84304932735427,
+        "coverage_pure_pct": 69.84304932735427
+      },
+      "verse": {
+        "texts": 7366,
+        "subword_tokens": 645457,
+        "tokens_per_word": 5.225653148959252,
+        "tokens_per_akshara": 1.3311630458544552,
+        "akshara_split_rate_pct": 21.779652118584966,
+        "per_text_subword_ttr_mean": 0.7050267380580556
+      },
+      "telugu_bhavam": {
+        "texts": 6318,
+        "subword_tokens": 646948,
+        "tokens_per_word": 3.427121463344864,
+        "tokens_per_akshara": 0.9638906767741782,
+        "akshara_split_rate_pct": 19.60788598723132,
+        "per_text_subword_ttr_mean": 0.7977961475353665
+      }
+    },
+    "vemana": {
+      "coverage": {
+        "used_any_telugu": 1011,
+        "used_pure_telugu": 1011,
+        "coverage_any_pct": 56.67040358744394,
+        "coverage_pure_pct": 56.67040358744394
+      },
+      "verse": {
+        "texts": 1164,
+        "subword_tokens": 73046,
+        "tokens_per_word": 4.53786419829782,
+        "tokens_per_akshara": 1.2347194050033807,
+        "akshara_split_rate_pct": 15.478144737208202,
+        "per_text_subword_ttr_mean": 0.7331796285505853
+      },
+      "telugu_bhavam": {
+        "texts": 1164,
+        "subword_tokens": 109640,
+        "tokens_per_word": 3.2609600856582,
+        "tokens_per_akshara": 0.9301299670840544,
+        "akshara_split_rate_pct": 14.380139385670564,
+        "per_text_subword_ttr_mean": 0.7783793991029552
+      }
+    },
+    "kuchimanchi_timmakavi": {
+      "coverage": {
+        "used_any_telugu": 1085,
+        "used_pure_telugu": 1085,
+        "coverage_any_pct": 60.818385650224215,
+        "coverage_pure_pct": 60.818385650224215
+      },
+      "verse": {
+        "texts": 1642,
+        "subword_tokens": 166266,
+        "tokens_per_word": 4.505731551990461,
+        "tokens_per_akshara": 1.3596264555802695,
+        "akshara_split_rate_pct": 20.0596510836816,
+        "per_text_subword_ttr_mean": 0.6594705869700509
+      },
+      "telugu_bhavam": {
+        "texts": 1642,
+        "subword_tokens": 196476,
+        "tokens_per_word": 3.5890616151836765,
+        "tokens_per_akshara": 0.9777795472302815,
+        "akshara_split_rate_pct": 15.577876551320612,
+        "per_text_subword_ttr_mean": 0.7572224906537562
+      }
+    },
+    "chandassu": {
+      "coverage": {
+        "used_any_telugu": 1246,
+        "used_pure_telugu": 1246,
+        "coverage_any_pct": 69.84304932735427,
+        "coverage_pure_pct": 69.84304932735427
+      },
+      "verse": {
+        "texts": 2532,
+        "subword_tokens": 290186,
+        "tokens_per_word": 4.706075054328435,
+        "tokens_per_akshara": 1.2554935902705369,
+        "akshara_split_rate_pct": 21.05202778337864,
+        "per_text_subword_ttr_mean": 0.6894509231445768
+      },
+      "telugu_bhavam": {
+        "texts": 2532,
+        "subword_tokens": 371608,
+        "tokens_per_word": 3.526495596720316,
+        "tokens_per_akshara": 0.9716588180845973,
+        "akshara_split_rate_pct": 15.576195688692843,
+        "per_text_subword_ttr_mean": 0.7251101778917379
+      }
+    }
+  }
+}

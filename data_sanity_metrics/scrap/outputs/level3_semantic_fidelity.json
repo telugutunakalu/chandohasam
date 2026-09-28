@@ -1,0 +1,317 @@
+{
+  "subset": "master",
+  "n": 27881,
+  "threshold": 0.65,
+  "paper_reported": {
+    "n": 29343,
+    "labse": {
+      "te_en": {
+        "pass_pct": 77.1,
+        "mean": 0.721
+      }
+    },
+    "msbert": {
+      "poem_te": {
+        "pass_pct": 63.7,
+        "mean": 0.685,
+        "median": 0.701
+      },
+      "poem_en": {
+        "pass_pct": 4.4,
+        "mean": 0.424,
+        "median": 0.422
+      },
+      "te_en": {
+        "pass_pct": 23.7,
+        "mean": 0.501,
+        "median": 0.515
+      }
+    },
+    "indicsbert": {
+      "poem_te": {
+        "pass_pct": 40.1,
+        "mean": 0.614,
+        "median": 0.618
+      },
+      "poem_en": {
+        "pass_pct": 0.0,
+        "mean": 0.255,
+        "median": 0.251
+      },
+      "te_en": {
+        "pass_pct": 21.0,
+        "mean": 0.579,
+        "median": 0.585
+      }
+    },
+    "labse_te_en_bins": {
+      "0.00-0.30": 3,
+      "0.30-0.50": 592,
+      "0.50-0.70": 10620,
+      "0.70-0.85": 16294,
+      "0.85-1.00": 1834
+    }
+  },
+  "models": {
+    "labse": {
+      "poem_te": {
+        "true": {
+          "mean": 0.28118598461151123,
+          "median": 0.2706987261772156,
+          "pass_pct": 1.4167354112119364
+        },
+        "shuffled": {
+          "mean": 0.051241397857666016,
+          "median": 0.0454377755522728,
+          "pass_pct": 0.0
+        },
+        "neighbour": {
+          "mean": 0.058997683227062225,
+          "median": 0.050546795129776,
+          "pass_pct": 0.0
+        },
+        "auc_vs_shuffled": 0.9101135389100409,
+        "auc_vs_neighbour": 0.8968085912043273,
+        "retrieval_2000": {
+          "recall@1": 0.305,
+          "recall@10": 0.537,
+          "mrr": 0.3826149480057333,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.2687287926673889,
+        "calibrated_pass_pct": 50.46447401456189
+      },
+      "poem_en": {
+        "true": {
+          "mean": 0.27689501643180847,
+          "median": 0.27014830708503723,
+          "pass_pct": 0.7173343854237653
+        },
+        "shuffled": {
+          "mean": 0.05022681504487991,
+          "median": 0.044622376561164856,
+          "pass_pct": 0.0
+        },
+        "neighbour": {
+          "mean": 0.05830474942922592,
+          "median": 0.05004510655999184,
+          "pass_pct": 0.0
+        },
+        "auc_vs_shuffled": 0.9110816553879894,
+        "auc_vs_neighbour": 0.8979261877777553,
+        "retrieval_2000": {
+          "recall@1": 0.3015,
+          "recall@10": 0.5095,
+          "mrr": 0.37476080657877675,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.2698156237602234,
+        "calibrated_pass_pct": 50.066353430651695
+      },
+      "te_en": {
+        "true": {
+          "mean": 0.7207022905349731,
+          "median": 0.7332479953765869,
+          "pass_pct": 76.93769950862594
+        },
+        "shuffled": {
+          "mean": 0.1596832573413849,
+          "median": 0.1549195945262909,
+          "pass_pct": 0.0
+        },
+        "neighbour": {
+          "mean": 0.17531102895736694,
+          "median": 0.16558243334293365,
+          "pass_pct": 0.007174887892376682
+        },
+        "auc_vs_shuffled": 0.9999109384631619,
+        "auc_vs_neighbour": 0.9995714513462969,
+        "retrieval_2000": {
+          "recall@1": 0.994,
+          "recall@10": 0.999,
+          "mrr": 0.9964291666666666,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.38894614577293396,
+        "calibrated_pass_pct": 99.83142641942541,
+        "bins": {
+          "0.00-0.30": 3,
+          "0.30-0.50": 569,
+          "0.50-0.70": 10154,
+          "0.70-0.85": 15426,
+          "0.85-1.00": 1729
+        },
+        "pass_pct_by_source": {
+          "basava_puranam": 72.24314147391071,
+          "dwipada_bhagavatam": 73.97602397602398,
+          "palanati_veera_charitra": 69.23076923076923,
+          "ranganatha_ramayanam": 76.24152464724207,
+          "srirama_parinayamu": 77.27272727272727,
+          "synthetic": 94.18140330861381
+        },
+        "pass_pct_by_prefix": {
+          "with_prefix": 47.17628075837031,
+          "without_prefix": 93.36487614806569,
+          "n_with_prefix": 9916
+        }
+      },
+      "te_clean_en": {
+        "true": {
+          "mean": 0.7653319239616394,
+          "median": 0.7749018669128418,
+          "pass_pct": 93.15662996305728
+        },
+        "shuffled": {
+          "mean": 0.16553695499897003,
+          "median": 0.1599777340888977,
+          "pass_pct": 0.0
+        },
+        "neighbour": {
+          "mean": 0.18139144778251648,
+          "median": 0.17224958539009094,
+          "pass_pct": 0.007174887892376682
+        },
+        "auc_vs_shuffled": 0.9999895568298466,
+        "auc_vs_neighbour": 0.9999306037121197,
+        "retrieval_2000": {
+          "recall@1": 0.997,
+          "recall@10": 1.0,
+          "mrr": 0.9983125,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.40176427364349365,
+        "calibrated_pass_pct": 99.98923998421864
+      }
+    },
+    "minilm_en_control": {
+      "poem_te": {
+        "true": {
+          "mean": 0.7638721466064453,
+          "median": 0.7780016660690308,
+          "pass_pct": 89.69549155338761
+        },
+        "shuffled": {
+          "mean": 0.7625508308410645,
+          "median": 0.7733021378517151,
+          "pass_pct": 89.39421111150963
+        },
+        "neighbour": {
+          "mean": 0.7626767158508301,
+          "median": 0.7759336233139038,
+          "pass_pct": 89.28789237668161
+        },
+        "auc_vs_shuffled": 0.505995396584217,
+        "auc_vs_neighbour": 0.5041117171871544,
+        "retrieval_2000": {
+          "recall@1": 0.0025,
+          "recall@10": 0.0075,
+          "mrr": 0.0065026986253661915,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.9288800358772278,
+        "calibrated_pass_pct": 0.516480757505111
+      },
+      "poem_en": {
+        "true": {
+          "mean": 0.08166412264108658,
+          "median": 0.08122610300779343,
+          "pass_pct": 0.0
+        },
+        "shuffled": {
+          "mean": 0.08256857097148895,
+          "median": 0.0824849009513855,
+          "pass_pct": 0.0
+        },
+        "neighbour": {
+          "mean": 0.08186803758144379,
+          "median": 0.08156801760196686,
+          "pass_pct": 0.0
+        },
+        "auc_vs_shuffled": 0.4941156820574711,
+        "auc_vs_neighbour": 0.4986582695811297,
+        "retrieval_2000": {
+          "recall@1": 0.0005,
+          "recall@10": 0.004,
+          "mrr": 0.004033464354832066,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.20201976597309113,
+        "calibrated_pass_pct": 1.1011082816254798
+      },
+      "te_en": {
+        "true": {
+          "mean": 0.10095388442277908,
+          "median": 0.09754876792430878,
+          "pass_pct": 0.18650694021017897
+        },
+        "shuffled": {
+          "mean": 0.09522964060306549,
+          "median": 0.09405972063541412,
+          "pass_pct": 0.0
+        },
+        "neighbour": {
+          "mean": 0.09494480490684509,
+          "median": 0.09380822628736496,
+          "pass_pct": 0.0
+        },
+        "auc_vs_shuffled": 0.5192605556043617,
+        "auc_vs_neighbour": 0.5210610610307869,
+        "retrieval_2000": {
+          "recall@1": 0.0035,
+          "recall@10": 0.012,
+          "mrr": 0.008708743483431427,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.23317232728004456,
+        "calibrated_pass_pct": 1.8865894336645026,
+        "bins": {
+          "0.00-0.30": 26699,
+          "0.30-0.50": 43,
+          "0.50-0.70": 21,
+          "0.70-0.85": 38,
+          "0.85-1.00": 2
+        },
+        "pass_pct_by_source": {
+          "basava_puranam": 0.0,
+          "dwipada_bhagavatam": 0.04995004995004995,
+          "palanati_veera_charitra": 0.0,
+          "ranganatha_ramayanam": 0.22906358805204324,
+          "srirama_parinayamu": 0.26737967914438504,
+          "synthetic": 0.0
+        },
+        "pass_pct_by_prefix": {
+          "with_prefix": 0.5244050020169423,
+          "without_prefix": 0.0,
+          "n_with_prefix": 9916
+        }
+      },
+      "te_clean_en": {
+        "true": {
+          "mean": 0.10351143032312393,
+          "median": 0.09974584728479385,
+          "pass_pct": 0.21520031562712957
+        },
+        "shuffled": {
+          "mean": 0.09794548898935318,
+          "median": 0.09618613123893738,
+          "pass_pct": 0.0
+        },
+        "neighbour": {
+          "mean": 0.09763431549072266,
+          "median": 0.09604737162590027,
+          "pass_pct": 0.0
+        },
+        "auc_vs_shuffled": 0.5178645251480175,
+        "auc_vs_neighbour": 0.5197122702648354,
+        "retrieval_2000": {
+          "recall@1": 0.0045,
+          "recall@10": 0.013,
+          "mrr": 0.00959131581564737,
+          "pool": 2000
+        },
+        "calibrated_threshold": 0.23672440648078918,
+        "calibrated_pass_pct": 1.9116961371543344
+      }
+    }
+  }
+}

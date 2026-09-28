@@ -1,0 +1,182 @@
+{
+  "poems": 12704,
+  "criteria": {
+    "exact verse": {
+      "groups": 0,
+      "poems": 0,
+      "redundant": 0,
+      "largest": 0,
+      "groups_spanning_corpora": 0,
+      "redundant_by_corpus": {}
+    },
+    "normalised (light)": {
+      "groups": 2,
+      "poems": 4,
+      "redundant": 2,
+      "largest": 2,
+      "groups_spanning_corpora": 0,
+      "redundant_by_corpus": {
+        "vemana": 1,
+        "kuchimanchi_timmakavi": 1
+      }
+    },
+    "normalised (strong)": {
+      "groups": 2,
+      "poems": 4,
+      "redundant": 2,
+      "largest": 2,
+      "groups_spanning_corpora": 0,
+      "redundant_by_corpus": {
+        "vemana": 1,
+        "kuchimanchi_timmakavi": 1
+      }
+    },
+    "3-gram Jaccard >= 0.9": {
+      "groups": 6,
+      "poems": 12,
+      "redundant": 6,
+      "largest": 2,
+      "groups_spanning_corpora": 0,
+      "redundant_by_corpus": {
+        "bhagavatam": 2,
+        "vemana": 3,
+        "kuchimanchi_timmakavi": 1
+      }
+    },
+    "3-gram Jaccard >= 0.8": {
+      "groups": 8,
+      "poems": 16,
+      "redundant": 8,
+      "largest": 2,
+      "groups_spanning_corpora": 0,
+      "redundant_by_corpus": {
+        "bhagavatam": 3,
+        "vemana": 4,
+        "kuchimanchi_timmakavi": 1
+      }
+    },
+    "3-gram Jaccard >= 0.7": {
+      "groups": 13,
+      "poems": 26,
+      "redundant": 13,
+      "largest": 2,
+      "groups_spanning_corpora": 0,
+      "redundant_by_corpus": {
+        "bhagavatam": 4,
+        "vemana": 7,
+        "kuchimanchi_timmakavi": 1,
+        "chandassu": 1
+      }
+    }
+  },
+  "examples": {
+    "normalised_strong": [
+      [
+        {
+          "key": "vemana:vemana-41-ఆ.",
+          "verse": "తాను గుడువలేఁడు, తగ వేది యాప్తుల\nజేర నివ్వఁడట్టి చెనటి గోవు\nచేని లోన బొమ్మఁ జేసి కట్టిన యట్లు\nవిశ్వదాభిరామ వినర వేమ."
+        },
+        {
+          "key": "vemana:vemana-104-ఆ.",
+          "verse": "తాను గుడువలేఁడు, తగ వేది యాప్తుల\nజేర నివ్వఁడ ట్టి చెనటి గోవు\nచేని లోన బొమ్మఁ జేసి కట్టిన యట్లు\nవిశ్వదాభిరామ వినర వేమ."
+        }
+      ],
+      [
+        {
+          "key": "kuchimanchi_timmakavi:kuchimanchi-1200",
+          "verse": "నిగుడ్పం జొరన్లేక నేర్పేది యవ్వా\nల్మగల్‌ గ్రమ్మఱన్వాలి మన్ఱేని మెట్టున్‌\nజిగుళ్ళూఁతఁగా నిల్చి చేడ్పాటులన్బి\nట్టుగాఁ గుందుచో సోఁకుడున్దుల్వ యాలోన్‌"
+        },
+        {
+          "key": "kuchimanchi_timmakavi:kuchimanchi-1653",
+          "verse": "నిగుడ్పం జొరన్లేక నేర్పేది యవ్వా\nల్మగల్‌ గ్రమ్మఱ న్వాలి మన్ఱేని మెట్టున్‌\nజిగుళ్ళూఁతఁగా నిల్చి చేడ్పాటుల న్బి\nట్టుగాఁ గుందుచో సోఁకుడున్దుల్వ యాలోన్‌"
+        }
+      ]
+    ],
+    "near_0.8_spanning_corpora": []
+  },
+  "pada_reuse": {
+    "distinct_reused_padas": 139,
+    "reused_across_corpora": 4,
+    "poems_with_a_reused_pada": 1815,
+    "poems_with_a_reused_pada_pct": 14.28683879093199,
+    "by_corpus_pct": {
+      "bhagavatam": 1.1267988053217486,
+      "vemana": 77.14776632302406,
+      "kuchimanchi_timmakavi": 11.753958587088915,
+      "chandassu": 25.315955766192733
+    },
+    "most_reused": [
+      {
+        "pada": "విశ్వదాభిరామవినరవేమ",
+        "poems": 893
+      },
+      {
+        "pada": "హతవిమతజీవశ్రీకాకుళాంధ్రదేవ",
+        "poems": 106
+      },
+      {
+        "pada": "చిత్రచిత్రప్రభావదాక్షిణ్యభావ",
+        "poems": 105
+      },
+      {
+        "pada": "మదరిపువిఫాలమునిజనహృదయలోల",
+        "poems": 105
+      },
+      {
+        "pada": "వేణుగోపాలభక్తసంత్రాణశీల",
+        "poems": 105
+      },
+      {
+        "pada": "భూషణవికాసశ్రీధర్మపురనివాస",
+        "poems": 100
+      },
+      {
+        "pada": "దుష్టసంహారనరసింహదురితదూర",
+        "poems": 100
+      },
+      {
+        "pada": "మదనగోపాలసత్యభామావిలోల",
+        "poems": 98
+      },
+      {
+        "pada": "భూనుతవిలాసపీఠికాపురనివాస",
+        "poems": 92
+      },
+      {
+        "pada": "కుముదహితకోటిసంకాశకుక్కుటేశ",
+        "poems": 92
+      }
+    ]
+  },
+  "telugu_bhavam_reuse": {
+    "groups": 1,
+    "poems": 2,
+    "redundant": 1,
+    "largest": 2,
+    "groups_spanning_corpora": 0,
+    "redundant_by_corpus": {
+      "bhagavatam": 1
+    },
+    "examples": [
+      [
+        {
+          "key": "bhagavatam:8-194-క.",
+          "verse": "హరియును దేవానీకము\nనురగేంద్రుని తలలు పట్టనుద్యోగింపన్\nహరిమాయా పరవశులై\nసురవిమతులు కూడి పలుకఁ జొచ్చిరి కడిమిన్."
+        },
+        {
+          "key": "bhagavatam:8-197-క.",
+          "verse": "విస్మయముఁ బొంది దానవ\nఘస్మరుఁ డహిఫణము విడువఁ గైకొని యసురుల్\nవిస్మితముఖులై యార్చి ర\nవిస్మితముగఁ గొనిరి సురలు వీఁకం దోఁకన్."
+        }
+      ]
+    ]
+  },
+  "english_bhavam_reuse": {
+    "groups": 0,
+    "poems": 0,
+    "redundant": 0,
+    "largest": 0,
+    "groups_spanning_corpora": 0,
+    "redundant_by_corpus": {},
+    "examples": []
+  }
+}

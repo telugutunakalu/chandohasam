@@ -1,0 +1,268 @@
+{
+  "bhagavatam": {
+    "structure": {
+      "records": 10066,
+      "verse": 7366,
+      "prose": 2700,
+      "duplicate_ids": 0,
+      "empty_verse": 0,
+      "line_count_mismatch": 0,
+      "lines_outside_allowed": 0,
+      "seesa_pada_on_one_line": 0,
+      "seesa_parents": 1051,
+      "seesa_children": 1055,
+      "broken_parent_links": 0,
+      "broken_child_links": 0
+    },
+    "labels": {
+      "labelled_verse": 7366,
+      "unlabelled_verse": 0,
+      "label_source": {
+        "edition": 7366
+      },
+      "metres": {
+        "kandamu": 2608,
+        "tetagiti": 1051,
+        "seesamu": 1048,
+        "aataveladi": 716,
+        "mattebhavikriditamu": 586,
+        "champakamala": 490,
+        "utpalamala": 471,
+        "shardulavikriditamu": 289,
+        "mattakokila": 41,
+        "taralamu": 23,
+        "malini": 12,
+        "indravajramu": 4,
+        "layagrahi": 4,
+        "kavirajavirajitamu": 3,
+        "sragdhara": 3,
+        "utsahamu": 3,
+        "layavibhati": 3,
+        "mahasragdhara": 2,
+        "bhujangaprayatamu": 1,
+        "slokamu": 1,
+        "mangalamahasri": 1,
+        "vanamayuramu": 1,
+        "sragvini": 1,
+        "totakamu": 1,
+        "manini": 1,
+        "upendravajramu": 1,
+        "panchachamaramu": 1
+      }
+    },
+    "annotation": {
+      "bhavam_edition": 6318,
+      "bhavam_machine": 0,
+      "bhavam_en": 6318,
+      "with_gloss": 6318,
+      "gloss_rows": 174407,
+      "gloss_rows_per_glossed_poem": 27.60477999366888,
+      "bhavam_without_bhavam_en": 0
+    },
+    "machine_runs": {
+      "annotated": 0,
+      "runs": {},
+      "models": {},
+      "rescued": 0,
+      "with_problems": 0,
+      "with_script_fixes": 0
+    },
+    "purity": {
+      "records_foreign_letters_in_telugu": 2,
+      "records_foreign_letters_in_verse": 0,
+      "records_indic_letters_in_bhavam_en": 0
+    }
+  },
+  "vemana": {
+    "structure": {
+      "records": 1164,
+      "verse": 1164,
+      "prose": 0,
+      "duplicate_ids": 0,
+      "empty_verse": 0,
+      "line_count_mismatch": 0,
+      "lines_outside_allowed": 0,
+      "seesa_pada_on_one_line": 3,
+      "seesa_parents": 0,
+      "seesa_children": 0,
+      "broken_parent_links": 0,
+      "broken_child_links": 0
+    },
+    "labels": {
+      "labelled_verse": 1164,
+      "unlabelled_verse": 0,
+      "label_source": {
+        "heuristic": 1022,
+        "engine": 142
+      },
+      "metres": {
+        "aataveladi": 1018,
+        "kandamu": 132,
+        "tetagiti": 5,
+        "seesamu": 4,
+        "utpalamala": 3,
+        "champakamala": 2
+      }
+    },
+    "annotation": {
+      "bhavam_edition": 0,
+      "bhavam_machine": 1164,
+      "bhavam_en": 1164,
+      "with_gloss": 1164,
+      "gloss_rows": 15381,
+      "gloss_rows_per_glossed_poem": 13.213917525773196,
+      "bhavam_without_bhavam_en": 0
+    },
+    "machine_runs": {
+      "annotated": 1164,
+      "runs": {
+        "run5": 1164
+      },
+      "models": {
+        "gemini-3.5-flash-lite": 1153,
+        "gemini-3.8-flash": 11
+      },
+      "rescued": 11,
+      "with_problems": 0,
+      "with_script_fixes": 151
+    },
+    "purity": {
+      "records_foreign_letters_in_telugu": 0,
+      "records_foreign_letters_in_verse": 0,
+      "records_indic_letters_in_bhavam_en": 0
+    }
+  },
+  "kuchimanchi_timmakavi": {
+    "structure": {
+      "records": 1653,
+      "verse": 1642,
+      "prose": 11,
+      "duplicate_ids": 0,
+      "empty_verse": 0,
+      "line_count_mismatch": 0,
+      "lines_outside_allowed": 0,
+      "seesa_pada_on_one_line": 0,
+      "seesa_parents": 0,
+      "seesa_children": 0,
+      "broken_parent_links": 0,
+      "broken_child_links": 0
+    },
+    "labels": {
+      "labelled_verse": 1611,
+      "unlabelled_verse": 31,
+      "label_source": {
+        "chandassu": 53,
+        "engine": 1555,
+        "none": 31,
+        "engine-partial": 3
+      },
+      "metres": {
+        "kandamu": 513,
+        "tetagiti": 370,
+        "seesamu": 235,
+        "aataveladi": 173,
+        "champakamala": 148,
+        "mattebhavikriditamu": 82,
+        "utpalamala": 38,
+        "shardulavikriditamu": 34,
+        "madhuragati_ragada": 5,
+        "taralamu": 2,
+        "utsahamu": 2,
+        "bhujangaprayatamu": 2,
+        "layavibhati": 1,
+        "totakamu": 1,
+        "malini": 1,
+        "mattakokila": 1,
+        "panchachamaramu": 1,
+        "sragvini": 1,
+        "layagrahi": 1
+      }
+    },
+    "annotation": {
+      "bhavam_edition": 0,
+      "bhavam_machine": 1642,
+      "bhavam_en": 1642,
+      "with_gloss": 1642,
+      "gloss_rows": 33419,
+      "gloss_rows_per_glossed_poem": 20.352618757612667,
+      "bhavam_without_bhavam_en": 0
+    },
+    "machine_runs": {
+      "annotated": 1642,
+      "runs": {
+        "run5": 1642
+      },
+      "models": {
+        "gemini-3.5-flash-lite": 1618,
+        "gemini-3.8-flash": 24
+      },
+      "rescued": 24,
+      "with_problems": 4,
+      "with_script_fixes": 180
+    },
+    "purity": {
+      "records_foreign_letters_in_telugu": 0,
+      "records_foreign_letters_in_verse": 0,
+      "records_indic_letters_in_bhavam_en": 0
+    }
+  },
+  "chandassu": {
+    "structure": {
+      "records": 2532,
+      "verse": 2532,
+      "prose": 0,
+      "duplicate_ids": 0,
+      "empty_verse": 0,
+      "line_count_mismatch": 0,
+      "lines_outside_allowed": 117,
+      "seesa_pada_on_one_line": 518,
+      "seesa_parents": 0,
+      "seesa_children": 0,
+      "broken_parent_links": 0,
+      "broken_child_links": 0
+    },
+    "labels": {
+      "labelled_verse": 2532,
+      "unlabelled_verse": 0,
+      "label_source": {
+        "corpus": 2532
+      },
+      "metres": {
+        "seesamu": 576,
+        "mattebhavikriditamu": 547,
+        "kandamu": 534,
+        "utpalamala": 326,
+        "champakamala": 290,
+        "shardulavikriditamu": 258,
+        "aataveladi": 1
+      }
+    },
+    "annotation": {
+      "bhavam_edition": 0,
+      "bhavam_machine": 2532,
+      "bhavam_en": 2532,
+      "with_gloss": 2532,
+      "gloss_rows": 57222,
+      "gloss_rows_per_glossed_poem": 22.599526066350712,
+      "bhavam_without_bhavam_en": 0
+    },
+    "machine_runs": {
+      "annotated": 2532,
+      "runs": {
+        "run5": 2532
+      },
+      "models": {
+        "gemini-3.5-flash-lite": 2508,
+        "gemini-3.8-flash": 24
+      },
+      "rescued": 24,
+      "with_problems": 1,
+      "with_script_fixes": 333
+    },
+    "purity": {
+      "records_foreign_letters_in_telugu": 0,
+      "records_foreign_letters_in_verse": 0,
+      "records_indic_letters_in_bhavam_en": 0
+    }
+  }
+}

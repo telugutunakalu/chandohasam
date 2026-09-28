@@ -1,0 +1,339 @@
+{
+  "n": 27881,
+  "shingle_k": 3,
+  "paper_reported": {
+    "exact": 0,
+    "near_poems": 160,
+    "near_groups": 79
+  },
+  "criteria": {
+    "exact poem string": {
+      "groups": 0,
+      "poems": 0,
+      "largest": 0,
+      "groups_spanning_sources": 0,
+      "redundant_records": 0
+    },
+    "normalised (paper: space+punct)": {
+      "groups": 79,
+      "poems": 160,
+      "largest": 3,
+      "groups_spanning_sources": 0,
+      "redundant_records": 81
+    },
+    "normalised (strong)": {
+      "groups": 80,
+      "poems": 162,
+      "largest": 3,
+      "groups_spanning_sources": 0,
+      "redundant_records": 82
+    },
+    "3-gram Jaccard >= 0.9": {
+      "groups": 95,
+      "poems": 193,
+      "largest": 3,
+      "groups_spanning_sources": 0,
+      "redundant_records": 98
+    },
+    "3-gram Jaccard >= 0.8": {
+      "groups": 141,
+      "poems": 285,
+      "largest": 3,
+      "groups_spanning_sources": 0,
+      "redundant_records": 144
+    },
+    "3-gram Jaccard >= 0.7": {
+      "groups": 182,
+      "poems": 374,
+      "largest": 4,
+      "groups_spanning_sources": 0,
+      "redundant_records": 192
+    }
+  },
+  "paper_normalised_examples": [
+    [
+      {
+        "id": 6670,
+        "source": "basava_puranam",
+        "poem": "ఇది యసంఖ్యాతమాహేశ్వర దివ్య \nపదపద్మసౌరభ భ్రమరాయమాణ"
+      },
+      {
+        "id": 10554,
+        "source": "basava_puranam",
+        "poem": "ఇదియ సంఖ్యాత మాహేశ్వరదివ్య \nపదపద్మ సౌరభభ్రమరాయమాణ"
+      },
+      {
+        "id": 13452,
+        "source": "basava_puranam",
+        "poem": "ఇది యసంఖ్యాతమాహేశ్వరదివ్య \nపదపద్మసౌరభభ్రమరాయమాణ"
+      }
+    ],
+    [
+      {
+        "id": 14303,
+        "source": "basava_puranam",
+        "poem": "జంగమలింగ ప్రసాదోపభోగ \nసంగత సుఖసుధాశరధినిమగ్న"
+      },
+      {
+        "id": 17984,
+        "source": "basava_puranam",
+        "poem": "జంగమలింగప్రసాదోపభోగ \nసంగత సుఖసుధాశరధినిమగ్న"
+      },
+      {
+        "id": 20616,
+        "source": "basava_puranam",
+        "poem": "జంగమలింగప్రసాదోపభోగ \nసంగతసుఖసుధాశరధినిమగ్న"
+      }
+    ],
+    [
+      {
+        "id": 133,
+        "source": "ranganatha_ramayanam",
+        "poem": "గలదిచ్చటికి రెండుగడియలలోన \nనిలువక చనుదెమ్ము నీ వాహవమున"
+      },
+      {
+        "id": 12339,
+        "source": "ranganatha_ramayanam",
+        "poem": "గల దిచ్చటికి రెండు గడియలలోన \nనిలువక చనుదెమ్ము నీ వాహవమున"
+      }
+    ],
+    [
+      {
+        "id": 374,
+        "source": "ranganatha_ramayanam",
+        "poem": "గనియెద వొక పుత్త్రుగాంత నా వలన \nనని పల్కి దితిమేను హస్తాంబుజమున"
+      },
+      {
+        "id": 5944,
+        "source": "ranganatha_ramayanam",
+        "poem": "గనియెద వొకపుత్త్రుగాంత నా వలన \nనని పల్కి దితిమేను హస్తాంబుజమున"
+      }
+    ],
+    [
+      {
+        "id": 503,
+        "source": "ranganatha_ramayanam",
+        "poem": "యెనయబ్రతిష్ఠింతు నిసుకచేననుచు \nజననాథుడపుడు సుస్థలమున కరిగి"
+      },
+      {
+        "id": 9946,
+        "source": "ranganatha_ramayanam",
+        "poem": "యెనయబ్రతిష్ఠింతు నిసుకచే ననుచు \nజననాథుడపుడు సుస్థలమున కరిగి"
+      }
+    ],
+    [
+      {
+        "id": 556,
+        "source": "ranganatha_ramayanam",
+        "poem": "బురుషముఖ్యున కబ్బు బుణ్యసంఘంబు \nనరుదార నాయువు నారోగ్య మెపుడు"
+      },
+      {
+        "id": 19198,
+        "source": "ranganatha_ramayanam",
+        "poem": "బురుషముఖ్యున కబ్బుబుణ్యసంఘంబు \nనరుదార నాయువు నారోగ్య మెపుడు"
+      }
+    ],
+    [
+      {
+        "id": 673,
+        "source": "ranganatha_ramayanam",
+        "poem": "లరయుచు నతులదోషాచరుండైన \nగురుదూషకుండైనగులశిక్షుడైన"
+      },
+      {
+        "id": 18053,
+        "source": "ranganatha_ramayanam",
+        "poem": "లరయుచు నతులదోషాచరుండైన \nగురుదూషకుండైన గులశిక్షుడైన"
+      }
+    ],
+    [
+      {
+        "id": 685,
+        "source": "ranganatha_ramayanam",
+        "poem": "తెచ్చి నీ తెచ్చినదేవున కర్థి \nజెచ్చెర నిట యభిషేకంబు సేయ"
+      },
+      {
+        "id": 25564,
+        "source": "ranganatha_ramayanam",
+        "poem": "తెచ్చి నీ తెచ్చిన దేవున కర్థి \nజెచ్చెర నిట యభిషేకంబు సేయ"
+      }
+    ]
+  ],
+  "near_0.8_examples": [
+    [
+      {
+        "id": 3855,
+        "source": "ranganatha_ramayanam",
+        "poem": "డతడెవ్వడిటు చూపు డతనిపైగాని \nయతులితంబైన నా యస్త్రంబు విడువ"
+      },
+      {
+        "id": 7599,
+        "source": "ranganatha_ramayanam",
+        "poem": "యతడెవ్వడిటు చూపుడతనిపైగాని \nయతులితంబైన నా యస్త్రంబు విడువ"
+      },
+      {
+        "id": 25022,
+        "source": "ranganatha_ramayanam",
+        "poem": "డతడెవ్వడిటు చూపుడతనిపైగాని \nయతులితంబైన నా యస్త్రంబు విడువ"
+      }
+    ],
+    [
+      {
+        "id": 6670,
+        "source": "basava_puranam",
+        "poem": "ఇది యసంఖ్యాతమాహేశ్వర దివ్య \nపదపద్మసౌరభ భ్రమరాయమాణ"
+      },
+      {
+        "id": 10554,
+        "source": "basava_puranam",
+        "poem": "ఇదియ సంఖ్యాత మాహేశ్వరదివ్య \nపదపద్మ సౌరభభ్రమరాయమాణ"
+      },
+      {
+        "id": 13452,
+        "source": "basava_puranam",
+        "poem": "ఇది యసంఖ్యాతమాహేశ్వరదివ్య \nపదపద్మసౌరభభ్రమరాయమాణ"
+      }
+    ],
+    [
+      {
+        "id": 14303,
+        "source": "basava_puranam",
+        "poem": "జంగమలింగ ప్రసాదోపభోగ \nసంగత సుఖసుధాశరధినిమగ్న"
+      },
+      {
+        "id": 17984,
+        "source": "basava_puranam",
+        "poem": "జంగమలింగప్రసాదోపభోగ \nసంగత సుఖసుధాశరధినిమగ్న"
+      },
+      {
+        "id": 20616,
+        "source": "basava_puranam",
+        "poem": "జంగమలింగప్రసాదోపభోగ \nసంగతసుఖసుధాశరధినిమగ్న"
+      }
+    ],
+    [
+      {
+        "id": 96,
+        "source": "ranganatha_ramayanam",
+        "poem": "గరమొప్ప మునుమున్ను గాశికావాసు \nదరణివంశ్యుడు సొంపుదనరారబూజ"
+      },
+      {
+        "id": 8635,
+        "source": "ranganatha_ramayanam",
+        "poem": "గరమొప్ప మునుమున్ను గాశికావాసు \nధరణివంశ్యుడు సొంపుదనరారబూజ"
+      }
+    ],
+    [
+      {
+        "id": 133,
+        "source": "ranganatha_ramayanam",
+        "poem": "గలదిచ్చటికి రెండుగడియలలోన \nనిలువక చనుదెమ్ము నీ వాహవమున"
+      },
+      {
+        "id": 12339,
+        "source": "ranganatha_ramayanam",
+        "poem": "గల దిచ్చటికి రెండు గడియలలోన \nనిలువక చనుదెమ్ము నీ వాహవమున"
+      }
+    ],
+    [
+      {
+        "id": 374,
+        "source": "ranganatha_ramayanam",
+        "poem": "గనియెద వొక పుత్త్రుగాంత నా వలన \nనని పల్కి దితిమేను హస్తాంబుజమున"
+      },
+      {
+        "id": 5944,
+        "source": "ranganatha_ramayanam",
+        "poem": "గనియెద వొకపుత్త్రుగాంత నా వలన \nనని పల్కి దితిమేను హస్తాంబుజమున"
+      }
+    ],
+    [
+      {
+        "id": 503,
+        "source": "ranganatha_ramayanam",
+        "poem": "యెనయబ్రతిష్ఠింతు నిసుకచేననుచు \nజననాథుడపుడు సుస్థలమున కరిగి"
+      },
+      {
+        "id": 9946,
+        "source": "ranganatha_ramayanam",
+        "poem": "యెనయబ్రతిష్ఠింతు నిసుకచే ననుచు \nజననాథుడపుడు సుస్థలమున కరిగి"
+      }
+    ],
+    [
+      {
+        "id": 556,
+        "source": "ranganatha_ramayanam",
+        "poem": "బురుషముఖ్యున కబ్బు బుణ్యసంఘంబు \nనరుదార నాయువు నారోగ్య మెపుడు"
+      },
+      {
+        "id": 19198,
+        "source": "ranganatha_ramayanam",
+        "poem": "బురుషముఖ్యున కబ్బుబుణ్యసంఘంబు \nనరుదార నాయువు నారోగ్య మెపుడు"
+      }
+    ]
+  ],
+  "line_reuse": {
+    "distinct_reused_lines": 510,
+    "couplets_with_reused_line": 897,
+    "couplets_with_reused_line_pct": 3.2172447186255875,
+    "top": [
+      {
+        "line_normalised": "విన్ననైవదనారవిందంబువాంచి",
+        "couplets": 5
+      },
+      {
+        "line_normalised": "ఘనతరభీషణాకారంబుతోడ",
+        "couplets": 5
+      },
+      {
+        "line_normalised": "నీవెవ్వడవుమఱినీకుబేరేమి",
+        "couplets": 4
+      },
+      {
+        "line_normalised": "సొలవకచొచ్చినజొత్తుగాకేమి",
+        "couplets": 4
+      },
+      {
+        "line_normalised": "లెందాకరవిచంద్రులెందాకదార",
+        "couplets": 4
+      },
+      {
+        "line_normalised": "నారూఢినార్షేయమైయాదికావ్య",
+        "couplets": 4
+      },
+      {
+        "line_normalised": "నందాకనీకథయక్షరానంద",
+        "couplets": 4
+      },
+      {
+        "line_normalised": "గనుగొనిపల్కెనుత్కంఠదీపింప",
+        "couplets": 4
+      },
+      {
+        "line_normalised": "గనుగొనిపలికెనుత్కటకోపుడగుచు",
+        "couplets": 4
+      },
+      {
+        "line_normalised": "నిర్మలకీర్తులునిత్యసౌఖ్యములు",
+        "couplets": 4
+      }
+    ]
+  },
+  "gloss_reuse": {
+    "telugu": {
+      "groups": 1,
+      "poems": 2,
+      "largest": 2
+    },
+    "english": {
+      "groups": 1,
+      "poems": 2,
+      "largest": 2
+    },
+    "telugu_examples": [
+      [
+        "నిది తప్ప నా మది నేమియు నెఱుగ \nసదయాంతరంగ నీ చరణంబులాన",
+        "ఇది తప్ప నా మది నేమియు నెఱుగ \nసదయాంతరంగ మీ చరణంబులాన"
+      ]
+    ]
+  }
+}

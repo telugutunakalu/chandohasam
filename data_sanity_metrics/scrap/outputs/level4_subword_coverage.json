@@ -1,0 +1,35 @@
+{
+  "tokenizer": "unsloth/gemma-3-1b-it",
+  "paper_reported": {
+    "gemma_telugu_vocab": 1784,
+    "gemma_telugu_used": 1328,
+    "gemma_coverage_pct": 74.4,
+    "gemma_corpus_tokens": 804671,
+    "poem_subword_ttr_mean": 0.897
+  },
+  "coverage": {
+    "vocab_any_telugu": 1784,
+    "vocab_pure_telugu": 1784,
+    "used_any_telugu": 1319,
+    "used_pure_telugu": 1319,
+    "coverage_any_pct": 73.93497757847534,
+    "coverage_pure_pct": 73.93497757847534,
+    "distinct_ids_used": 1328
+  },
+  "verse": {
+    "texts": 27881,
+    "subword_tokens": 804671,
+    "tokens_per_word": 4.475068404778324,
+    "tokens_per_akshara": 1.1164263634295102,
+    "akshara_split_rate_pct": 18.5265000836777,
+    "per_text_subword_ttr_mean": 0.897237596363724
+  },
+  "telugu_prose": {
+    "texts": 27881,
+    "subword_tokens": 979622,
+    "tokens_per_word": 3.1869959431454773,
+    "tokens_per_akshara": 0.9173229304981487,
+    "akshara_split_rate_pct": 16.939062202847204,
+    "per_text_subword_ttr_mean": 0.9277624636830798
+  }
+}

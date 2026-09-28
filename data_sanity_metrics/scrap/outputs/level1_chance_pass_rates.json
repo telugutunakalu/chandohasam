@@ -1,0 +1,54 @@
+{
+  "yati": {
+    "real_full": {
+      "n": 55762,
+      "pass_pct": 100.0,
+      "by_rule_pct": {
+        "exact": 50.18650694021018,
+        "varga_match": 26.28313188192676,
+        "svara_yati": 23.510634482263907,
+        "samyukta_yati": 0.017933359635594132,
+        "bindu_yati": 0.0017933359635594133
+      }
+    },
+    "chance_full": {
+      "n": 55760,
+      "pass_pct": 55.342539454806314,
+      "by_rule_pct": {
+        "no_match": 44.657460545193686,
+        "svara_yati": 40.794476327116215,
+        "exact": 7.449784791965567,
+        "varga_match": 6.406025824964132,
+        "samyukta_yati": 0.5308464849354376,
+        "bindu_yati": 0.16140602582496413
+      }
+    },
+    "real_no_svara": {
+      "n": 55762,
+      "pass_pct": 79.01976256231842,
+      "by_rule_pct": {
+        "exact": 50.18650694021018,
+        "varga_match": 26.28313188192676,
+        "no_match": 20.980237437681577,
+        "samyukta_yati": 2.4568702700763962,
+        "bindu_yati": 0.09325347010508948
+      }
+    },
+    "chance_no_svara": {
+      "n": 55760,
+      "pass_pct": 15.172166427546628,
+      "by_rule_pct": {
+        "no_match": 84.82783357245337,
+        "exact": 7.449784791965567,
+        "varga_match": 6.406025824964132,
+        "samyukta_yati": 1.0078909612625537,
+        "bindu_yati": 0.3084648493543759
+      }
+    }
+  },
+  "prasa": {
+    "real_pass_pct": 100.0,
+    "chance_pass_pct": 9.328933682436068
+  },
+  "chance_couplet_prasa_and_yati_pct": 2.8572627048064883
+}

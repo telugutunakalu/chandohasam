@@ -1,0 +1,106 @@
+{
+  "bhagavatam": {
+    "strict": {
+      "yati": {
+        "seats": 28450,
+        "real_pct": 88.23198594024605,
+        "chance_pct": 16.979133566359497
+      },
+      "prasa": {
+        "stanzas": 4519,
+        "real_pct": 96.70281035627352,
+        "chance_pct": 0.265545474662536
+      }
+    },
+    "relaxed": {
+      "yati": {
+        "seats": 28450,
+        "real_pct": 88.51318101933217,
+        "chance_pct": 17.258901160944284
+      },
+      "prasa": {
+        "stanzas": 4519,
+        "real_pct": 99.8008408940031,
+        "chance_pct": 0.24341668510732464
+      }
+    }
+  },
+  "vemana": {
+    "strict": {
+      "yati": {
+        "seats": 3804,
+        "real_pct": 92.27129337539432,
+        "chance_pct": 17.68599417527138
+      },
+      "prasa": {
+        "stanzas": 132,
+        "real_pct": 93.18181818181819,
+        "chance_pct": 0.0
+      }
+    },
+    "relaxed": {
+      "yati": {
+        "seats": 3804,
+        "real_pct": 92.48159831756047,
+        "chance_pct": 16.649020645844363
+      },
+      "prasa": {
+        "stanzas": 132,
+        "real_pct": 95.45454545454545,
+        "chance_pct": 0.0
+      }
+    }
+  },
+  "kuchimanchi_timmakavi": {
+    "strict": {
+      "yati": {
+        "seats": 7020,
+        "real_pct": 73.19088319088318,
+        "chance_pct": 14.004914004914005
+      },
+      "prasa": {
+        "stanzas": 775,
+        "real_pct": 97.6774193548387,
+        "chance_pct": 3.7419354838709675
+      }
+    },
+    "relaxed": {
+      "yati": {
+        "seats": 7020,
+        "real_pct": 73.53276353276354,
+        "chance_pct": 14.07311082213553
+      },
+      "prasa": {
+        "stanzas": 775,
+        "real_pct": 99.87096774193549,
+        "chance_pct": 3.7419354838709675
+      }
+    }
+  },
+  "chandassu": {
+    "strict": {
+      "yati": {
+        "seats": 10892,
+        "real_pct": 87.10980536173338,
+        "chance_pct": 15.483098461821866
+      },
+      "prasa": {
+        "stanzas": 1742,
+        "real_pct": 93.68541905855339,
+        "chance_pct": 0.17221584385763491
+      }
+    },
+    "relaxed": {
+      "yati": {
+        "seats": 10892,
+        "real_pct": 87.43114212265883,
+        "chance_pct": 16.377880184331797
+      },
+      "prasa": {
+        "stanzas": 1742,
+        "real_pct": 98.79448909299656,
+        "chance_pct": 0.0574052812858783
+      }
+    }
+  }
+}

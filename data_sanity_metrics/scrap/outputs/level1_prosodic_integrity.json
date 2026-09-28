@@ -1,0 +1,727 @@
+{
+  "n_master": 27881,
+  "n_rejected": 181,
+  "paper_pass_pct": 100.0,
+  "chandohasam_errors": 0,
+  "chandohasam": {
+    "strict": {
+      "master_pass_pct": {
+        "gana": 100.0,
+        "prasa": 98.37165094508805,
+        "yati_l1": 92.9127362720132,
+        "yati_l2": 97.37814282127614,
+        "valid": 89.06423729421469
+      },
+      "rejected_pass_pct": {
+        "gana": 23.756906077348066,
+        "prasa": 22.099447513812155,
+        "yati_l1": 20.441988950276244,
+        "yati_l2": 23.204419889502763,
+        "valid": 18.784530386740332
+      }
+    },
+    "relaxed": {
+      "master_pass_pct": {
+        "gana": 100.0,
+        "prasa": 99.24679889530505,
+        "yati_l1": 93.00240307019116,
+        "yati_l2": 97.6184498403931,
+        "valid": 90.20838563896561
+      },
+      "rejected_pass_pct": {
+        "gana": 23.756906077348066,
+        "prasa": 23.204419889502763,
+        "yati_l1": 20.441988950276244,
+        "yati_l2": 23.204419889502763,
+        "valid": 19.88950276243094
+      }
+    }
+  },
+  "agreement_schema_a_relaxed": {
+    "gana": {
+      "both_pass": 27881,
+      "paper_only": 0,
+      "chandohasam_only": 43,
+      "both_fail": 138,
+      "agreement_pct": 99.84676787114248
+    },
+    "prasa": {
+      "both_pass": 27713,
+      "paper_only": 349,
+      "chandohasam_only": 0,
+      "both_fail": 0,
+      "agreement_pct": 98.75632527973772
+    },
+    "yati_l1": {
+      "both_pass": 25967,
+      "paper_only": 2095,
+      "chandohasam_only": 0,
+      "both_fail": 0,
+      "agreement_pct": 92.53438814054593
+    },
+    "yati_l2": {
+      "both_pass": 27259,
+      "paper_only": 802,
+      "chandohasam_only": 0,
+      "both_fail": 1,
+      "agreement_pct": 97.14204261991306
+    },
+    "valid": {
+      "both_pass": 25151,
+      "paper_only": 2730,
+      "chandohasam_only": 36,
+      "both_fail": 145,
+      "agreement_pct": 90.1432542227924
+    }
+  },
+  "paper_yati_rule_usage_master_lines": {
+    "svara_yati": 13110,
+    "exact": 27985,
+    "varga_match": 14656,
+    "samyukta_yati": 10,
+    "bindu_yati": 1
+  },
+  "yati_rejects_by_paper_rule": {
+    "svara_yati": {
+      "lines": 13110,
+      "chandohasam_rejects": 2346,
+      "reject_pct": 17.894736842105264
+    },
+    "exact": {
+      "lines": 27985,
+      "chandohasam_rejects": 181,
+      "reject_pct": 0.6467750580668216
+    },
+    "varga_match": {
+      "lines": 14656,
+      "chandohasam_rejects": 78,
+      "reject_pct": 0.5322052401746725
+    },
+    "samyukta_yati": {
+      "lines": 10,
+      "chandohasam_rejects": 9,
+      "reject_pct": 90.0
+    },
+    "bindu_yati": {
+      "lines": 1,
+      "chandohasam_rejects": 1,
+      "reject_pct": 100.0
+    }
+  },
+  "syllables_per_line": {
+    "11": 4201,
+    "12": 14790,
+    "13": 20702,
+    "14": 13096,
+    "15": 2973
+  },
+  "disagreement_count_master_relaxed": 2730,
+  "disagreement_by_rule": {
+    "yati_l2": 664,
+    "yati_l1": 1951,
+    "prasa": 210
+  },
+  "disagreement_examples": [
+    {
+      "id": 0,
+      "source": "ranganatha_ramayanam",
+      "poem": "మా రాముబాణనిర్మథితమాంసముల \nకీ రాదె నీ నాక మేల యిచ్చెదవు",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 8,
+      "source": "basava_puranam",
+      "poem": "నొక్కొక్క నియమంబు నిక్కంబుగాగ \nజక్కన దర్శింప జనుదెంచువారు",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 21,
+      "source": "dwipada_bhagavatam2",
+      "poem": "నప్పుడు గోవిందు డఖలసైనికులు \nనుప్పొంగ నిజశంఖ మొత్తె నొత్తుటయు",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 29,
+      "source": "ranganatha_ramayanam",
+      "poem": "ననిన రాఘవుడుదశాననుచంద \nమనఘ నీవెఱుగుదేయనిన వాడనియె",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 74,
+      "source": "ranganatha_ramayanam",
+      "poem": "నరసి చూచిన నిప్పుడయ్యెడి దేమి \nదురమున నీ రాముదోర్బలంబణచి",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 84,
+      "source": "ranganatha_ramayanam",
+      "poem": "నష్ట మేనేనున్న నళినసంభవుని \nసృష్టిలో రాత్రులు శూన్యమైయుండు",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "varga_match"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 87,
+      "source": "ranganatha_ramayanam",
+      "poem": "నవిరళగతి గాము డమరించు కోలు \nదివిరి యాకెంగెలు దీప్తి రాగిల్ల",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 100,
+      "source": "ranganatha_ramayanam",
+      "poem": "నట పుష్పకారూఢుడై విజృంభించి \nయిటునిటుగా భూమియెల్ల గ్రుమ్మరుచు",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 137,
+      "source": "ranganatha_ramayanam",
+      "poem": "మనవుడుబ్రణయశోకార్తయై రాము \nగనుగొని సీత నిక్కము దోప బలికె",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "varga_match"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 142,
+      "source": "palanati_veera_charitra",
+      "poem": "వన్నెతెచ్చితివౌర వంశమంతకును \nననుజేరరావయ్య నమ్మినవాడ",
+      "chandohasam_failed": [
+        "prasa"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 169,
+      "source": "basava_puranam",
+      "poem": "యెక్కంగ వాహనం బీశుకు బసవ \nడెక్క సింహాసనం బీశుభక్తులకు",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 180,
+      "source": "ranganatha_ramayanam",
+      "poem": "నిలువంద గాదులు నిండింప మేను \nలులుకంగ నోర్వలే కొరలెడువారు",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 190,
+      "source": "ranganatha_ramayanam",
+      "poem": "బనిగొని పతికళేబరము రథమ్ము \nపై నుంచి యెంతయుబవనవేగమున",
+      "chandohasam_failed": [
+        "prasa"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "varga_match"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 193,
+      "source": "ranganatha_ramayanam",
+      "poem": "కొందల మందుచు గొడుకుచందంబు \nమది నుగ్గడించుచు మౌనతనుండె",
+      "chandohasam_failed": [
+        "prasa"
+      ],
+      "paper_yati_rule": [
+        "varga_match",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 209,
+      "source": "ranganatha_ramayanam",
+      "poem": "నొనర లంకాదుర్గ ముత్తరద్వార \nమున బయల్వెళ్లి యా ముమ్మరంబైన",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 222,
+      "source": "ranganatha_ramayanam",
+      "poem": "నతికాయుడును ఘనుడా యింద్రజిత్తు \nమృతులౌట దలపోసి మిగులజిత్తమున",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 247,
+      "source": "ranganatha_ramayanam",
+      "poem": "వారును దానును వరదర్భశయను \nలై రాక వృథయౌట కాత్మజింతించి",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 253,
+      "source": "palanati_veera_charitra",
+      "poem": "పులినిదండంబుతో పొడిచినయట్లు \nకొల్వులోపలినుండి గొబ్బునలేచి",
+      "chandohasam_failed": [
+        "prasa"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "varga_match"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 254,
+      "source": "basava_puranam",
+      "poem": "నద్దంబులోన ఫాలాక్షంబు గాంచి \nయద్దేవదేవుండు దద్ద లజ్జించి",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 268,
+      "source": "basava_puranam",
+      "poem": "నచ్చుగా దా జౌదళాబ్జంబు గడచి \nవచ్చి త్రికూటంబు వసుధపై నిలిచి",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 276,
+      "source": "ranganatha_ramayanam",
+      "poem": "నన విని నవ్వి నరాంతకుం డోరి \nవనచర నీ వెంతవాడవు నాకు",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 288,
+      "source": "ranganatha_ramayanam",
+      "poem": "నిఱికి యాకసమున కెగయంగ జూచి \nవెఱగంది పోనీక విడిపింతమనుచు",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 302,
+      "source": "ranganatha_ramayanam",
+      "poem": "నని రామసౌమిత్రు లధికసంతోష \nమును బొంది సుఖగోష్ఠి ముదమందుచుండ",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 304,
+      "source": "ranganatha_ramayanam",
+      "poem": "ఉభయవంశములు నీకుత్తమోత్తమము \nలభిమానవతివి నీవతిశుద్ధమతివి",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 305,
+      "source": "ranganatha_ramayanam",
+      "poem": "నమర విద్యాభ్యాసమంతయుజేసి \nవిమలైకమతి యొక్క విప్రునిచేత",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 316,
+      "source": "ranganatha_ramayanam",
+      "poem": "నొప్పార నాతిథ్య మొసగు మీవనుచు \nజెప్పిపొమ్మనుటయు శ్రీఘ్రంబ యెగసి",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "varga_match"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 337,
+      "source": "ranganatha_ramayanam",
+      "poem": "నారసి రక్షింపు డఖిలంబునందు \nతిరముగా రాజులే దిక్కు నాథులకు",
+      "chandohasam_failed": [
+        "prasa",
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "varga_match"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 340,
+      "source": "ranganatha_ramayanam",
+      "poem": "వెఱుగక పిన్నవాడెంత చేసినను \nనెఱి బుద్ధిసెప్పుట నీతి పెద్దలకు",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 348,
+      "source": "ranganatha_ramayanam",
+      "poem": "నంగారసదృశంబులై కొన్ని ఘోర \nభంగుల ధూమ నిభంబులై కొన్ని",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 352,
+      "source": "ranganatha_ramayanam",
+      "poem": "రంత సూర్యోదయంబయ్యె నౌటయును \nనెంతయు గడకతో నే పగ్గలించి",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 354,
+      "source": "ranganatha_ramayanam",
+      "poem": "ననఘ మాయొడయరాల గృహీతహస్త \nవనితలతో నాడవచ్చి నానలరి",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 362,
+      "source": "ranganatha_ramayanam",
+      "poem": "ననునయోక్తుల శోక మార్చి యర్ఘ్యంబు \nగొనుమంచు నిప్పించి గురుదయాబుద్ధి",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 367,
+      "source": "ranganatha_ramayanam",
+      "poem": "నశ్వులు నొగిజాను లాత్మలోజూడ \nవిశ్వంబు నీ రోమవితతి చింతింప",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 376,
+      "source": "ranganatha_ramayanam",
+      "poem": "నైన మండూకమై యమరగా నీయు \nమనవుడు శివుడంత నట్ల కావింప",
+      "chandohasam_failed": [
+        "prasa"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 400,
+      "source": "ranganatha_ramayanam",
+      "poem": "ననిలతనూజ నీ వంబుధి దాటి \nజనకజగని రాగ సంతోష మొదవె",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "varga_match"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 410,
+      "source": "ranganatha_ramayanam",
+      "poem": "ననవుడు నీమాట లాడంగ నీకు \nజనుగాక యొరులకు జనునె లోకముల",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 412,
+      "source": "basava_puranam",
+      "poem": "ఏకాకినైతి నింకేక్రియ బ్రోతు \nలోకంబులని ధృతిలేక యేడ్చెదవొ",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "exact"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 424,
+      "source": "ranganatha_ramayanam",
+      "poem": "నంతకాలము రాఘవాధీశుకీర్తి \nయంతంత కెక్కుచు నానంద మొసగు",
+      "chandohasam_failed": [
+        "yati_l1"
+      ],
+      "paper_yati_rule": [
+        "svara_yati",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 427,
+      "source": "ranganatha_ramayanam",
+      "poem": "నీ కష్టతనువులో నే మేల నిలుతు \nమో కుంభకర్ణ రణోర్వర దీని",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "exact",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    },
+    {
+      "id": 435,
+      "source": "basava_puranam",
+      "poem": "బొరిబొరి దెచ్చి విభూతివీడ్యంబు \nలరుదొంద బసవయ్య కర్పించువారు",
+      "chandohasam_failed": [
+        "yati_l2"
+      ],
+      "paper_yati_rule": [
+        "varga_match",
+        "svara_yati"
+      ],
+      "chandohasam_candidates": [
+        "dvipada"
+      ]
+    }
+  ]
+}
