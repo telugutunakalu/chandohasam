@@ -1,0 +1,8 @@
+2026-09-26 09:06:57 control passed: 555/555 complete and in meter
+2026-09-26 09:06:57 default: rerun started (pid 644931, 1242 rows kept)
+2026-09-26 12:12:29 default: rerun done, 1665/1665 rows
+experiments/scripts/rerun_vowel_chain.sh: line 30: $1: unbound variable
+2026-09-26 12:13:12 (chain script stopped here on an unset $1 in its log line — fixed in the script since; the E4B rerun had been launched, pid 767795, and is watched separately)
+2026-09-26 13:20:30 2026-09-24_e4b_constrained: rerun exited, 1665/1665 rows
+run pid 812620, log /home/samvaran/phd_workspace/chandohasam/experiments/runs/2026-09-26_g26b_trial/run.log
+2026-09-26 13:20:44 26B BF16 trial started (E4B rerun complete: 1665/1665, all in meter)

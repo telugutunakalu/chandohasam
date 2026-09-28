@@ -1,0 +1,55 @@
+{
+ "model": "random-logits/google/gemma-4-E4B-it",
+ "meters": [
+  "bhujangaprayatamu",
+  "mattakokilamu",
+  "pamcacamaramu",
+  "vasamtatilakamu",
+  "indravajra",
+  "upendravajra",
+  "salini",
+  "rathoddhata"
+ ],
+ "modes": [
+  "masking_only",
+  "masking_backtrack",
+  "hybrid"
+ ],
+ "topics": {
+  "T1": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది"
+ },
+ "seeds": [
+  42,
+  49,
+  56,
+  63,
+  70
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": null,
+  "baseline_max_tokens": null,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict"
+ },
+ "started": "2026-09-24 18:14:10"
+}

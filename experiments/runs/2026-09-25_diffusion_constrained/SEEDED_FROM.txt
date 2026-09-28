@@ -1,0 +1,1 @@
+The 111 rows for topic T1 / seed 42 come from /home/samvaran/phd_workspace/chandohasam/experiments/runs/2026-09-25_diffusion_trial_noeos (identical code; the runner resumes by key).

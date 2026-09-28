@@ -1,0 +1,8 @@
+traces.jsonl is over GitHub's 50 MiB limit, so git carries it in two parts, split at a line boundary:
+traces.part1.jsonl + traces.part2.jsonl (traces.jsonl itself is gitignored).
+Rebuild it before running any script that reads traces.jsonl:
+
+    cat traces.part1.jsonl traces.part2.jsonl > traces.jsonl
+
+sha256 of traces.jsonl: faeb4170330fcfd9af3e02e67248e7b20b5e27cd0401002019617f3125364304
+If this run is resumed and traces.jsonl grows, split it again.

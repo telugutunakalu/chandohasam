@@ -1,0 +1,5 @@
+2026-09-26: the enforcer gained the rule "a word may not be dead consonants alone" (orthography.py;
+plan §15). experiments/scripts/audit_rule_change.py replayed every poem through the fixed enforcer;
+the 423 poems it could have changed (rule_audit.json, with the reason for each) were moved to
+superseded_vowel_{results,traces}.jsonl and generated again by the same launcher (same prompts,
+seeds and settings). run_before_vowel_rerun.json is run.json as it was before.

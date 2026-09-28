@@ -1,0 +1,2 @@
+2026-09-26 19:17:30 /home/samvaran/phd_workspace/chandohasam/experiments/runs/2026-09-26_g26b finished (2220 rows, all constrained in meter); starting: experiments/scripts/run_diffusion_constrained.sh /home/samvaran/phd_workspace/chandohasam/experiments/runs/2026-09-26_diffusion_baseline default 42,49,56,63,70 baseline
+diffusion run pid 1064569, log /home/samvaran/phd_workspace/chandohasam/experiments/runs/2026-09-26_diffusion_baseline/run.log

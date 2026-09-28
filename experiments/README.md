@@ -8,7 +8,9 @@ each file states what must be held fixed and what legitimately varies.
 Numbering is sequential and stable: a retired number is never reused (see
 [Retired numbers](#retired-numbers)). Result artifacts (`*.json`, `*.log`) live
 in this directory alongside the specs. Engineering and planning records that
-are not model experiments live in [`notes/`](notes/).
+are not model experiments live in [`notes/`](notes/). The constrained-decoding
+runs of `meter_engine/metrical_decoder` live in [`runs/`](runs/): each run, its
+method and its results are described in [`runs/README.md`](runs/README.md).
 
 ## Sources consolidated
 

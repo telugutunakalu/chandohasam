@@ -49,3 +49,9 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# ---- run traces over GitHub's 50 MiB limit: committed as traces.part1/2.jsonl
+#      (see TRACES_SPLIT.txt in each run folder for how to rebuild traces.jsonl)
+experiments/runs/2026-09-24_e4b_constrained/traces.jsonl
+experiments/runs/2026-09-25_diffusion_constrained/traces.jsonl
+experiments/runs/2026-09-26_g26b/traces.jsonl

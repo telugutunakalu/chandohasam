@@ -1,0 +1,1 @@
+The 148 rows for topic T1 / seed 42 (baseline + 3 strategies × 37 meters) come from /home/samvaran/phd_workspace/chandohasam/experiments/runs/2026-09-26_g26b_trial (identical code and settings; the runner resumes by key).

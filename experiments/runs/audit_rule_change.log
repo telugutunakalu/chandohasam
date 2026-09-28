@@ -1,0 +1,880 @@
+3330 poems from 2 runs; 16 workers
+CHANGED 2026-09-24_e4b_constrained ataveladi|T1|hybrid|70: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained ataveladi|T2|hybrid|49: n_valid (pos 12): 919 -> 606
+CHANGED 2026-09-24_e4b_constrained ataveladi|T2|hybrid|56: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained ataveladi|T2|hybrid|63: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained ataveladi|T3|hybrid|42: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained ataveladi|T3|hybrid|63: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T1|hybrid|49: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T1|hybrid|42: rerank (pos 44): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T1|hybrid|56: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T1|hybrid|70: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T1|hybrid|63: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T2|hybrid|56: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T2|hybrid|42: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T2|hybrid|63: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T2|hybrid|49: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T2|hybrid|70: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T2|masking_only|56: n_valid (pos 58): 890 -> 583
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T3|hybrid|70: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T3|hybrid|56: rerank (pos 48): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T3|hybrid|63: rerank (pos 49): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained ataveladi|T3|hybrid|49: rerank (pos 49): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained bhujangaprayatamu|T1|hybrid|56: rerank (pos 47): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained bhujangaprayatamu|T1|hybrid|70: rerank (pos 44): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained bhujangaprayatamu|T2|hybrid|56: rerank (pos 46): ' స్' ended a line before the rule
+[100/3330] 24 changed, 41s
+CHANGED 2026-09-24_e4b_constrained bhujangaprayatamu|T2|hybrid|70: rerank (pos 46): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained bhujangaprayatamu|T3|hybrid|49: rerank (pos 70): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained bhujangaprayatamu|T3|hybrid|70: rerank (pos 41): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained bhujangaprayatamu|T3|hybrid|63: rerank (pos 42): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained bhujangaprayatamu|T1|hybrid|56: rerank (pos 39): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained bhujangaprayatamu|T1|hybrid|49: rerank (pos 62): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained bhujangaprayatamu|T3|hybrid|49: rerank (pos 49): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained bhujangaprayatamu|T2|hybrid|70: rerank (pos 83): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained bhujangaprayatamu|T3|hybrid|56: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained bhujangaprayatamu|T3|hybrid|70: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained bhujangaprayatamu|T2|hybrid|63: rerank (pos 64): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T1|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T1|hybrid|70: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T1|hybrid|56: rerank (pos 73): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T1|hybrid|42: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T1|hybrid|63: rerank (pos 60): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T2|hybrid|42: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T2|hybrid|56: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T2|hybrid|63: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T2|hybrid|70: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T2|hybrid|49: rerank (pos 61): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T3|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T3|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+[200/3330] 47 changed, 79s
+CHANGED 2026-09-24_e4b_constrained champakamala|T3|hybrid|56: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T3|hybrid|70: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained champakamala|T3|hybrid|63: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T1|hybrid|42: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T1|hybrid|49: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T1|hybrid|56: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T1|hybrid|63: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T1|hybrid|70: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T2|hybrid|56: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T2|hybrid|42: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T2|hybrid|70: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T2|hybrid|63: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T2|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T2|masking_backtrack|70: n_valid (pos 55): 808 -> 539
+CHANGED 2026-09-25_diffusion_constrained champakamala|T3|hybrid|49: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T3|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T3|hybrid|42: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T3|hybrid|70: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained champakamala|T3|hybrid|63: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained dvipada|T2|masking_backtrack|63: n_valid (pos 33): 681 -> 577
+[300/3330] 67 changed, 119s
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T1|hybrid|42: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T1|hybrid|49: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T1|hybrid|56: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T1|masking_backtrack|63: n_valid (pos 15): 877 -> 604
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T2|hybrid|49: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T2|hybrid|70: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T2|hybrid|63: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T2|hybrid|56: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T2|masking_backtrack|49: n_valid (pos 6): 500 -> 496
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T3|hybrid|56: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T3|hybrid|63: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T3|hybrid|42: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained hayapracara_ragada|T2|hybrid|42: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T1|hybrid|56: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T1|hybrid|42: rerank (pos 8): ' స్' ended a line before the rule
+[400/3330] 82 changed, 142s
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T1|hybrid|49: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T1|hybrid|63: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T2|hybrid|42: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T2|hybrid|63: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T2|hybrid|49: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T2|hybrid|56: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T2|hybrid|70: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T3|hybrid|42: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T3|hybrid|56: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T3|hybrid|70: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T3|hybrid|49: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T3|hybrid|63: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T2|masking_only|56: incomplete now
+CHANGED 2026-09-25_diffusion_constrained hayapracara_ragada|T2|masking_backtrack|56: incomplete now
+CHANGED 2026-09-24_e4b_constrained indravajra|T1|hybrid|63: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained indravajra|T2|hybrid|70: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained indravajra|T2|hybrid|63: rerank (pos 39): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained indravajra|T3|hybrid|49: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained indravajra|T3|hybrid|42: rerank (pos 60): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained indravajra|T3|hybrid|56: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained indravajra|T3|hybrid|70: rerank (pos 62): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T1|hybrid|42: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained indravajra|T3|hybrid|63: rerank (pos 61): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T1|hybrid|49: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T1|hybrid|70: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T1|hybrid|63: rerank (pos 57): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T1|masking_backtrack|56: n_valid (pos 17): 474 -> 472
+CHANGED 2026-09-25_diffusion_constrained indravajra|T2|hybrid|49: rerank (pos 57): ' స్' ended a line before the rule
+[500/3330] 110 changed, 169s
+CHANGED 2026-09-25_diffusion_constrained indravajra|T2|hybrid|63: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T2|hybrid|70: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T3|hybrid|56: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T3|hybrid|63: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T3|hybrid|70: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T1|hybrid|42: rerank (pos 6): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T1|hybrid|49: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T1|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T1|hybrid|70: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained indravajra|T2|masking_only|63: n_valid (pos 67): 403 -> 355
+CHANGED 2026-09-24_e4b_constrained kandamu|T1|hybrid|63: rerank (pos 39): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T2|hybrid|42: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T2|hybrid|56: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T2|hybrid|49: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T2|hybrid|63: rerank (pos 7): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T2|hybrid|70: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T3|hybrid|42: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T3|hybrid|56: rerank (pos 6): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T3|hybrid|63: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T3|hybrid|49: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kandamu|T3|hybrid|70: rerank (pos 7): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T1|hybrid|42: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T1|hybrid|56: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T1|hybrid|49: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T1|hybrid|63: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T1|hybrid|70: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|hybrid|42: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|hybrid|56: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|hybrid|63: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|hybrid|49: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|hybrid|70: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T1|masking_backtrack|56: n_valid (pos 29): 474 -> 472
+[600/3330] 142 changed, 202s
+CHANGED 2026-09-25_diffusion_constrained kandamu|T3|hybrid|42: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T3|hybrid|49: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|masking_backtrack|49: n_valid (pos 32): 474 -> 472
+CHANGED 2026-09-25_diffusion_constrained kandamu|T3|hybrid|56: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T3|hybrid|63: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T3|hybrid|70: rerank (pos 9): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|masking_only|70: n_valid (pos 55): 1373 -> 613
+CHANGED 2026-09-25_diffusion_constrained kandamu|T2|masking_backtrack|70: n_valid (pos 28): 1320 -> 613
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T1|hybrid|49: rerank (pos 43): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T1|hybrid|63: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T1|hybrid|70: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T1|hybrid|56: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T2|hybrid|49: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T2|hybrid|42: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T2|hybrid|63: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T2|hybrid|56: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T3|hybrid|42: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T3|hybrid|56: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T3|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T3|hybrid|70: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T3|hybrid|63: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T2|hybrid|70: rerank (pos 113): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T1|hybrid|42: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T1|hybrid|49: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T1|hybrid|56: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T1|hybrid|63: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T1|hybrid|70: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained kavirajavirajitamu|T3|masking_only|49: n_valid (pos 151): 774 -> 538
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T2|hybrid|42: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T2|hybrid|56: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T2|hybrid|49: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T2|hybrid|63: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T2|hybrid|70: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T3|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T3|hybrid|49: rerank (pos 40): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T3|hybrid|63: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T3|hybrid|56: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T3|hybrid|70: rerank (pos 37): ' స్' ended a line before the rule
+[700/3330] 180 changed, 255s
+CHANGED 2026-09-24_e4b_constrained lalita|T1|hybrid|42: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T1|hybrid|63: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T1|hybrid|56: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T1|hybrid|70: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T1|hybrid|49: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T2|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T2|hybrid|42: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T2|hybrid|70: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T2|hybrid|49: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T2|hybrid|63: rerank (pos 39): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained kavirajavirajitamu|T3|masking_backtrack|70: n_valid (pos 131): 474 -> 472
+CHANGED 2026-09-24_e4b_constrained lalita|T3|hybrid|42: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T3|hybrid|56: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T3|hybrid|63: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T3|hybrid|70: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained lalita|T3|hybrid|49: rerank (pos 86): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T1|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T1|hybrid|56: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T1|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T1|hybrid|70: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T1|hybrid|49: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T2|hybrid|42: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T2|hybrid|49: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T2|hybrid|56: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T2|hybrid|70: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T2|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T3|hybrid|42: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T3|hybrid|49: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T3|hybrid|63: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T3|hybrid|56: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained lalita|T3|hybrid|70: rerank (pos 19): ' స్' ended a line before the rule
+[800/3330] 211 changed, 301s
+CHANGED 2026-09-24_e4b_constrained layagrahi|T1|masking_backtrack|49: n_valid (pos 11): 481 -> 479
+CHANGED 2026-09-24_e4b_constrained layagrahi|T1|hybrid|63: rerank (pos 42): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layagrahi|T2|hybrid|49: rerank (pos 44): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layagrahi|T2|hybrid|56: rerank (pos 53): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layagrahi|T2|masking_backtrack|56: rejected (pos 62): '\n'
+CHANGED 2026-09-24_e4b_constrained layagrahi|T2|hybrid|42: rerank (pos 100): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layagrahi|T3|hybrid|42: rerank (pos 78): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layagrahi|T3|masking_backtrack|70: n_valid (pos 150): 791 -> 538
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T1|hybrid|63: rerank (pos 192): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T2|hybrid|56: rerank (pos 99): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T1|hybrid|42: rerank (pos 175): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T2|hybrid|49: n_valid (pos 162): 791 -> 538
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T2|masking_only|56: n_valid (pos 36): 478 -> 476
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T3|hybrid|42: rerank (pos 47): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T2|masking_backtrack|42: n_valid (pos 175): 791 -> 538
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T3|hybrid|49: rerank (pos 129): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T3|hybrid|63: rerank (pos 88): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T3|masking_backtrack|63: n_valid (pos 53): 791 -> 538
+CHANGED 2026-09-24_e4b_constrained layavibhati|T1|hybrid|63: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layagrahi|T3|masking_backtrack|56: n_valid (pos 52): 791 -> 538
+[900/3330] 231 changed, 371s
+CHANGED 2026-09-24_e4b_constrained layavibhati|T1|hybrid|56: rerank (pos 109): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layavibhati|T2|hybrid|56: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layavibhati|T2|hybrid|42: rerank (pos 39): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layavibhati|T2|hybrid|70: rerank (pos 48): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layavibhati|T3|masking_backtrack|49: n_valid (pos 63): 791 -> 538
+CHANGED 2026-09-24_e4b_constrained layavibhati|T3|hybrid|49: rerank (pos 77): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layavibhati|T3|hybrid|63: rerank (pos 173): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained layavibhati|T3|masking_only|56: rejected (pos 119): '\n'
+CHANGED 2026-09-25_diffusion_constrained layavibhati|T2|hybrid|56: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layavibhati|T2|hybrid|63: rerank (pos 79): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layavibhati|T3|hybrid|42: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained layavibhati|T1|masking_only|56: n_valid (pos 156): 791 -> 538
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T1|hybrid|42: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T1|hybrid|56: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T1|hybrid|63: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T1|hybrid|49: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T1|hybrid|70: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T2|hybrid|49: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T2|hybrid|42: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T2|hybrid|63: rerank (pos 14): ' స్' ended a line before the rule
+[1000/3330] 251 changed, 441s
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T3|hybrid|42: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T3|hybrid|49: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T3|hybrid|56: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T3|hybrid|70: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhuragati_ragada|T3|hybrid|63: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T1|hybrid|42: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T1|hybrid|63: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T1|hybrid|70: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T1|hybrid|49: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T1|hybrid|56: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T2|hybrid|49: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T2|hybrid|63: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T2|hybrid|56: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T2|hybrid|42: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T2|hybrid|70: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T3|hybrid|56: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T3|hybrid|42: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T3|hybrid|63: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T3|hybrid|49: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained madhuragati_ragada|T3|hybrid|70: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained madhyakkara|T1|masking_backtrack|56: n_valid (pos 30): 1360 -> 614
+CHANGED 2026-09-24_e4b_constrained madhyakkara|T2|hybrid|70: n_valid (pos 84): 681 -> 577
+[1100/3330] 273 changed, 474s
+CHANGED 2026-09-25_diffusion_constrained madhyakkara|T3|hybrid|49: n_valid (pos 104): 919 -> 606
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T1|hybrid|56: n_valid (pos 38): 1152 -> 563
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T1|masking_backtrack|42: n_valid (pos 4): 1210 -> 563
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T1|hybrid|63: rerank (pos 42): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T1|masking_backtrack|56: n_valid (pos 15): 538 -> 484
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T1|hybrid|49: rerank (pos 105): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T2|hybrid|56: rerank (pos 62): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T2|hybrid|63: rerank (pos 128): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T3|hybrid|49: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T3|hybrid|63: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T3|hybrid|70: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T3|hybrid|42: rerank (pos 123): ' స్' ended a line before the rule
+[1200/3330] 285 changed, 549s
+CHANGED 2026-09-24_e4b_constrained mahasragdhara|T3|hybrid|56: rerank (pos 169): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T1|hybrid|42: rerank (pos 67): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T1|hybrid|49: rerank (pos 150): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T2|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T2|hybrid|63: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T1|hybrid|56: n_valid (pos 148): 1152 -> 563
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T2|hybrid|49: rerank (pos 133): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T2|hybrid|42: rerank (pos 108): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T3|hybrid|42: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T3|hybrid|56: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T2|masking_backtrack|42: n_valid (pos 140): 1152 -> 563
+CHANGED 2026-09-25_diffusion_constrained mahasragdhara|T2|masking_backtrack|56: n_valid (pos 85): 829 -> 539
+CHANGED 2026-09-24_e4b_constrained malini|T1|masking_backtrack|70: n_valid (pos 16): 942 -> 556
+CHANGED 2026-09-24_e4b_constrained malini|T2|hybrid|49: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained malini|T2|hybrid|63: rerank (pos 79): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained malini|T2|hybrid|70: rerank (pos 46): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained malini|T2|hybrid|42: rerank (pos 96): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained malini|T3|hybrid|49: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained malini|T3|hybrid|56: rerank (pos 24): ' స్' ended a line before the rule
+[1300/3330] 304 changed, 633s
+CHANGED 2026-09-25_diffusion_constrained malini|T1|hybrid|63: rerank (pos 93): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained malini|T1|masking_backtrack|70: n_valid (pos 102): 829 -> 539
+CHANGED 2026-09-25_diffusion_constrained malini|T2|hybrid|56: rerank (pos 67): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained malini|T2|hybrid|49: rerank (pos 44): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained malini|T3|hybrid|42: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T1|hybrid|63: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T2|hybrid|63: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T2|hybrid|42: rerank (pos 81): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T2|masking_only|49: n_valid (pos 38): 942 -> 556
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T2|hybrid|49: rerank (pos 151): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T3|hybrid|42: rerank (pos 64): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T3|hybrid|49: n_valid (pos 66): 942 -> 556
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T3|hybrid|63: rerank (pos 73): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T1|masking_backtrack|49: n_valid (pos 33): 371 -> 362
+CHANGED 2026-09-24_e4b_constrained mangalamahasri|T3|masking_only|70: incomplete now
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T1|hybrid|63: rerank (pos 142): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T2|hybrid|56: rerank (pos 70): ' స్' ended a line before the rule
+[1400/3330] 321 changed, 700s
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T2|hybrid|42: rerank (pos 161): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T2|hybrid|70: rerank (pos 74): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T3|hybrid|42: rerank (pos 70): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T3|hybrid|56: rerank (pos 173): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mangalamahasri|T3|masking_backtrack|56: n_valid (pos 85): 788 -> 538
+CHANGED 2026-09-24_e4b_constrained manini|T1|hybrid|42: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T1|hybrid|49: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T1|hybrid|63: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T1|hybrid|70: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T1|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T2|hybrid|42: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T2|hybrid|49: n_valid (pos 15): 751 -> 538
+CHANGED 2026-09-24_e4b_constrained manini|T2|hybrid|63: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T2|hybrid|56: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T2|hybrid|70: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T2|masking_only|70: rejected (pos 32): '\n'
+CHANGED 2026-09-24_e4b_constrained manini|T3|hybrid|42: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T3|hybrid|49: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T3|hybrid|70: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T3|hybrid|63: rerank (pos 52): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T3|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T3|masking_backtrack|56: rejected (pos 32): '\n'
+CHANGED 2026-09-25_diffusion_constrained manini|T1|hybrid|56: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T1|hybrid|63: rerank (pos 39): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T1|hybrid|42: rerank (pos 42): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T1|hybrid|49: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T1|hybrid|70: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained manini|T3|masking_only|63: n_valid (pos 97): 750 -> 538
+CHANGED 2026-09-25_diffusion_constrained manini|T2|hybrid|56: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T2|hybrid|49: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T2|hybrid|42: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T2|hybrid|63: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T2|hybrid|70: rerank (pos 27): ' స్' ended a line before the rule
+[1500/3330] 354 changed, 768s
+CHANGED 2026-09-25_diffusion_constrained manini|T3|hybrid|42: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T3|hybrid|49: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T3|hybrid|56: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T3|hybrid|63: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T3|hybrid|70: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T1|hybrid|42: rerank (pos 53): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T1|hybrid|49: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T1|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T1|hybrid|70: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T1|hybrid|63: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained manini|T3|masking_only|49: n_valid (pos 110): 750 -> 538
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T2|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T2|hybrid|56: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T2|hybrid|70: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T2|hybrid|42: rerank (pos 59): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T2|hybrid|63: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T3|hybrid|70: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T3|hybrid|56: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T3|hybrid|49: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T3|hybrid|63: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T1|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T1|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattakokilamu|T3|hybrid|42: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T1|hybrid|63: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T1|hybrid|56: rerank (pos 49): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T1|hybrid|70: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T1|masking_backtrack|70: n_valid (pos 23): 350 -> 347
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T2|hybrid|42: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T2|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T2|hybrid|70: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T2|hybrid|56: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T2|hybrid|63: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T3|hybrid|42: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T3|hybrid|56: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T3|hybrid|49: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T3|hybrid|63: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattakokilamu|T3|hybrid|70: rerank (pos 26): ' స్' ended a line before the rule
+[1600/3330] 391 changed, 824s
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T1|hybrid|49: n_valid (pos 4): 1137 -> 563
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T1|hybrid|56: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T1|hybrid|42: rerank (pos 44): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T1|hybrid|70: rerank (pos 58): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T1|hybrid|63: rerank (pos 43): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T2|hybrid|42: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T2|hybrid|56: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T2|hybrid|49: rerank (pos 76): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T2|hybrid|70: rerank (pos 69): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T2|hybrid|63: rerank (pos 61): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T3|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T3|hybrid|42: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T3|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T3|hybrid|63: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T1|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained mattebhavikriditamu|T3|hybrid|70: rerank (pos 66): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T1|hybrid|42: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T1|hybrid|63: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T1|hybrid|56: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T1|hybrid|70: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T2|hybrid|42: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T2|hybrid|56: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T2|hybrid|63: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T2|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T2|hybrid|70: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T1|masking_backtrack|42: n_valid (pos 73): 823 -> 539
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T3|hybrid|42: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T3|hybrid|63: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T3|hybrid|49: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T3|hybrid|56: rerank (pos 56): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T3|masking_only|42: n_valid (pos 108): 791 -> 538
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T3|hybrid|70: rerank (pos 58): ' స్' ended a line before the rule
+[1700/3330] 423 changed, 881s
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T1|hybrid|42: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T1|hybrid|49: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T1|hybrid|56: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T1|hybrid|63: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained mattebhavikriditamu|T3|masking_only|49: n_valid (pos 95): 808 -> 539
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T1|hybrid|70: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T2|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T2|hybrid|49: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T2|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T2|hybrid|63: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T2|hybrid|70: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T3|hybrid|42: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T3|hybrid|49: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T3|hybrid|63: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T3|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained pamcacamaramu|T3|hybrid|70: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T1|hybrid|42: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T1|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T1|hybrid|63: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T1|hybrid|56: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T1|hybrid|70: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T2|hybrid|56: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T2|hybrid|49: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T2|hybrid|42: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T2|hybrid|70: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T2|hybrid|63: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T3|hybrid|42: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T3|hybrid|49: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T3|hybrid|70: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T3|hybrid|56: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained pamcacamaramu|T3|hybrid|63: rerank (pos 56): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T1|hybrid|42: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T1|hybrid|56: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T1|hybrid|49: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T1|hybrid|70: rerank (pos 8): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T1|hybrid|63: rerank (pos 8): ' స్' ended a line before the rule
+[1800/3330] 459 changed, 924s
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T2|hybrid|49: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T2|hybrid|63: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T2|hybrid|56: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T2|hybrid|70: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T2|masking_backtrack|63: rejected (pos 22): '\n'
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T3|hybrid|42: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T3|hybrid|56: rerank (pos 17): '్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T3|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T3|hybrid|49: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T3|hybrid|70: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained rathoddhata|T2|hybrid|42: rerank (pos 58): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T1|hybrid|56: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T1|hybrid|49: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T1|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T1|hybrid|70: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T1|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T2|hybrid|42: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T2|hybrid|56: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T2|hybrid|49: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T2|hybrid|70: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T2|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T3|hybrid|56: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T3|hybrid|70: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T3|hybrid|42: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T3|hybrid|63: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained rathoddhata|T3|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T1|hybrid|56: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T1|hybrid|49: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T1|hybrid|42: rerank (pos 40): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T2|hybrid|49: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T2|hybrid|56: rerank (pos 48): ' స్' ended a line before the rule
+[1900/3330] 490 changed, 953s
+CHANGED 2026-09-24_e4b_constrained salini|T2|hybrid|70: rerank (pos 50): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T3|hybrid|56: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T3|hybrid|63: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T3|hybrid|70: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained salini|T1|hybrid|63: n_valid (pos 13): 942 -> 556
+CHANGED 2026-09-25_diffusion_constrained salini|T1|hybrid|42: rerank (pos 53): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained salini|T3|masking_only|70: n_valid (pos 97): 942 -> 556
+CHANGED 2026-09-25_diffusion_constrained salini|T1|hybrid|70: rerank (pos 74): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained salini|T2|hybrid|49: rerank (pos 70): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained salini|T2|hybrid|56: rerank (pos 50): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained salini|T3|hybrid|49: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained salini|T2|masking_only|63: n_valid (pos 67): 414 -> 355
+CHANGED 2026-09-25_diffusion_constrained salini|T2|masking_backtrack|63: n_valid (pos 73): 414 -> 355
+CHANGED 2026-09-25_diffusion_constrained salini|T3|hybrid|63: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained salini|T2|masking_only|70: n_valid (pos 85): 942 -> 556
+CHANGED 2026-09-25_diffusion_constrained salini|T3|hybrid|56: rerank (pos 62): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained salini|T3|hybrid|42: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T1|hybrid|42: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T1|hybrid|56: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T1|hybrid|63: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T1|hybrid|70: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T2|hybrid|42: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T2|hybrid|49: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T2|hybrid|63: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T1|hybrid|49: rerank (pos 60): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T2|hybrid|56: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T2|hybrid|70: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T3|hybrid|42: rerank (pos 62): ' స్' ended a line before the rule
+[2000/3330] 518 changed, 996s
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T3|hybrid|49: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T3|hybrid|63: rerank (pos 68): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T3|hybrid|56: rerank (pos 73): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sardulavikriditamu|T3|hybrid|70: rerank (pos 66): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T1|hybrid|49: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T1|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T1|hybrid|56: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T1|hybrid|63: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T1|hybrid|70: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T2|hybrid|42: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T2|hybrid|49: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T2|hybrid|56: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T2|hybrid|70: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T2|hybrid|63: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T3|hybrid|42: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T3|hybrid|63: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T3|hybrid|56: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T3|hybrid|70: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sardulavikriditamu|T3|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained seesamu|T1|masking_backtrack|49: n_valid (pos 6): 484 -> 482
+CHANGED 2026-09-24_e4b_constrained seesamu|T2|masking_backtrack|42: n_valid (pos 67): 508 -> 498
+[2100/3330] 539 changed, 1069s
+CHANGED 2026-09-24_e4b_constrained seesamu|T3|masking_backtrack|42: n_valid (pos 91): 1322 -> 614
+CHANGED 2026-09-25_diffusion_constrained seesamu|T1|masking_backtrack|56: n_valid (pos 124): 681 -> 577
+CHANGED 2026-09-25_diffusion_constrained seesamu|T3|hybrid|49: n_valid (pos 65): 1368 -> 614
+CHANGED 2026-09-24_e4b_constrained sragdhara|T1|hybrid|70: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T1|hybrid|42: rerank (pos 135): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T1|hybrid|63: rerank (pos 159): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T2|hybrid|56: rerank (pos 42): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T2|hybrid|70: rerank (pos 41): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T2|hybrid|63: rerank (pos 77): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T2|hybrid|49: rerank (pos 72): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T3|hybrid|56: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T3|hybrid|49: rerank (pos 68): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T3|hybrid|63: rerank (pos 52): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T3|hybrid|70: rerank (pos 42): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T3|hybrid|42: rerank (pos 126): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragdhara|T3|masking_backtrack|56: n_valid (pos 15): 534 -> 483
+[2200/3330] 555 changed, 1162s
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T1|hybrid|70: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T1|hybrid|63: rerank (pos 150): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T2|hybrid|63: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T2|hybrid|70: rerank (pos 97): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T3|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T2|masking_backtrack|70: n_valid (pos 103): 561 -> 488
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T3|hybrid|70: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T1|hybrid|42: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T1|hybrid|49: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T1|hybrid|56: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T1|hybrid|70: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T1|hybrid|63: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragdhara|T3|masking_backtrack|63: n_valid (pos 122): 829 -> 539
+CHANGED 2026-09-24_e4b_constrained sragvini|T2|hybrid|70: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T2|hybrid|63: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T2|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T2|hybrid|49: rerank (pos 69): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T3|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T3|hybrid|49: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T2|hybrid|42: rerank (pos 67): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T3|hybrid|56: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T3|hybrid|63: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained sragvini|T3|hybrid|70: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T1|hybrid|63: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T1|hybrid|49: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T1|hybrid|70: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T1|hybrid|56: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T1|hybrid|42: rerank (pos 77): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T2|hybrid|56: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T2|hybrid|42: rerank (pos 16): ' స్' ended a line before the rule
+[2300/3330] 585 changed, 1237s
+CHANGED 2026-09-25_diffusion_constrained sragvini|T2|hybrid|63: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T2|hybrid|70: rerank (pos 52): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T2|hybrid|49: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T2|masking_backtrack|56: n_valid (pos 15): 1150 -> 563
+CHANGED 2026-09-25_diffusion_constrained sragvini|T3|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T3|hybrid|49: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T3|hybrid|63: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T3|hybrid|70: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained sragvini|T3|hybrid|56: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T1|hybrid|42: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T1|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T1|hybrid|56: n_valid (pos 5): 807 -> 538
+CHANGED 2026-09-24_e4b_constrained taralamu|T1|hybrid|63: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T1|masking_backtrack|56: n_valid (pos 5): 807 -> 538
+CHANGED 2026-09-25_diffusion_constrained sragvini|T3|masking_backtrack|70: n_valid (pos 81): 808 -> 539
+CHANGED 2026-09-24_e4b_constrained taralamu|T1|masking_only|56: n_valid (pos 5): 807 -> 538
+CHANGED 2026-09-24_e4b_constrained taralamu|T1|hybrid|70: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T2|hybrid|42: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T2|hybrid|49: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T2|hybrid|70: rerank (pos 51): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T2|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T3|hybrid|49: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T2|hybrid|63: rerank (pos 82): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T3|hybrid|56: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T3|hybrid|42: rerank (pos 58): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T3|hybrid|70: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taralamu|T3|hybrid|63: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T1|hybrid|42: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T1|hybrid|63: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T1|hybrid|70: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T1|hybrid|56: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T1|hybrid|49: rerank (pos 55): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T2|hybrid|49: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T2|hybrid|63: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T2|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T2|hybrid|70: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T2|hybrid|42: rerank (pos 59): ' స్' ended a line before the rule
+[2400/3330] 622 changed, 1279s
+CHANGED 2026-09-25_diffusion_constrained taralamu|T3|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T3|hybrid|56: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T3|hybrid|49: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T3|hybrid|70: rerank (pos 53): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained taralamu|T3|hybrid|63: rerank (pos 54): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained taruvoja|T1|masking_only|42: n_valid (pos 106): 560 -> 485
+CHANGED 2026-09-24_e4b_constrained taruvoja|T2|hybrid|56: n_valid (pos 74): 919 -> 606
+CHANGED 2026-09-24_e4b_constrained taruvoja|T2|masking_backtrack|42: n_valid (pos 26): 625 -> 486
+CHANGED 2026-09-24_e4b_constrained taruvoja|T3|hybrid|70: n_valid (pos 58): 768 -> 578
+CHANGED 2026-09-24_e4b_constrained taruvoja|T3|masking_backtrack|70: n_valid (pos 14): 693 -> 577
+CHANGED 2026-09-25_diffusion_constrained taruvoja|T1|hybrid|49: n_valid (pos 87): 693 -> 577
+CHANGED 2026-09-25_diffusion_constrained taruvoja|T2|masking_backtrack|42: n_valid (pos 30): 708 -> 594
+CHANGED 2026-09-25_diffusion_constrained taruvoja|T2|masking_backtrack|56: n_valid (pos 64): 1270 -> 614
+CHANGED 2026-09-25_diffusion_constrained taruvoja|T2|masking_backtrack|70: n_valid (pos 140): 1262 -> 632
+[2500/3330] 636 changed, 1375s
+CHANGED 2026-09-25_diffusion_constrained taruvoja|T3|masking_backtrack|56: n_valid (pos 46): 1270 -> 614
+CHANGED 2026-09-25_diffusion_constrained tetagiti|T1|hybrid|42: n_valid (pos 36): 681 -> 577
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|hybrid|42: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|hybrid|49: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|hybrid|56: rerank (pos 11): ' స్' ended a line before the rule
+[2600/3330] 641 changed, 1426s
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|hybrid|70: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|masking_backtrack|56: n_valid (pos 4): 807 -> 538
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|masking_only|56: n_valid (pos 4): 807 -> 538
+CHANGED 2026-09-24_e4b_constrained totakamu|T2|hybrid|42: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T2|hybrid|56: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T1|masking_only|42: n_valid (pos 44): 747 -> 538
+CHANGED 2026-09-24_e4b_constrained totakamu|T2|hybrid|63: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T2|hybrid|70: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T2|hybrid|49: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T3|hybrid|49: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T3|hybrid|56: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T3|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T3|hybrid|70: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained totakamu|T3|hybrid|63: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T1|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T1|hybrid|49: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T1|hybrid|63: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T1|hybrid|56: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T1|hybrid|70: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T2|hybrid|42: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T2|hybrid|49: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T2|hybrid|56: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T2|hybrid|63: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T2|hybrid|70: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T3|hybrid|49: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T3|hybrid|42: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T3|hybrid|63: rerank (pos 10): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T3|hybrid|56: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained totakamu|T3|hybrid|70: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T1|hybrid|42: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T1|hybrid|49: rerank (pos 35): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T1|hybrid|70: rerank (pos 20): ' స్' ended a line before the rule
+[2700/3330] 674 changed, 1455s
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T2|hybrid|42: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T2|hybrid|56: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T2|hybrid|63: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T2|hybrid|49: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T2|hybrid|70: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T3|hybrid|42: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T1|hybrid|63: rerank (pos 62): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T3|hybrid|63: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T3|hybrid|56: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T1|hybrid|56: rerank (pos 103): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T3|hybrid|49: rerank (pos 64): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T2|masking_backtrack|49: n_valid (pos 25): 931 -> 604
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T3|hybrid|70: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T1|hybrid|42: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T1|hybrid|49: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T1|hybrid|63: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T1|hybrid|56: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T1|hybrid|70: rerank (pos 42): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T2|hybrid|42: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T2|hybrid|49: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained turagagati_ragada|T2|masking_backtrack|56: n_valid (pos 57): 931 -> 604
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T2|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T2|hybrid|63: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T2|hybrid|70: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T3|hybrid|49: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T3|hybrid|42: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T3|hybrid|56: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T3|hybrid|63: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained turagagati_ragada|T3|hybrid|70: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained upendravajra|T1|hybrid|56: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained upendravajra|T2|hybrid|70: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained upendravajra|T2|hybrid|63: rerank (pos 31): ' స్' ended a line before the rule
+[2800/3330] 706 changed, 1503s
+CHANGED 2026-09-24_e4b_constrained upendravajra|T2|hybrid|56: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained upendravajra|T2|hybrid|42: rerank (pos 75): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained upendravajra|T3|hybrid|49: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained upendravajra|T3|hybrid|63: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T1|hybrid|56: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T1|hybrid|63: rerank (pos 55): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T2|hybrid|42: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T2|hybrid|56: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T2|hybrid|70: rerank (pos 52): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T3|hybrid|49: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T3|hybrid|56: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T3|hybrid|63: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T1|hybrid|49: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T3|hybrid|70: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T1|hybrid|70: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T1|hybrid|63: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained upendravajra|T3|masking_backtrack|49: n_valid (pos 58): 474 -> 472
+CHANGED 2026-09-24_e4b_constrained utpalamala|T1|hybrid|42: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T2|hybrid|56: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T2|hybrid|42: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T2|hybrid|70: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T2|hybrid|49: rerank (pos 73): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T1|hybrid|56: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T2|hybrid|63: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T3|hybrid|42: rerank (pos 31): ' స్' ended a line before the rule
+[2900/3330] 731 changed, 1540s
+CHANGED 2026-09-24_e4b_constrained utpalamala|T3|hybrid|49: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T3|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T3|hybrid|63: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utpalamala|T3|hybrid|70: rerank (pos 62): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T1|hybrid|42: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T1|hybrid|56: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T1|hybrid|49: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T1|hybrid|70: rerank (pos 29): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T1|hybrid|63: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T2|hybrid|49: rerank (pos 30): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T2|hybrid|63: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T2|hybrid|42: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T2|hybrid|56: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T2|hybrid|70: rerank (pos 32): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T3|hybrid|42: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T3|hybrid|49: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T3|hybrid|56: rerank (pos 26): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T3|hybrid|63: rerank (pos 31): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utpalamala|T3|hybrid|70: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T1|hybrid|42: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T1|hybrid|49: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T1|hybrid|63: n_valid (pos 11): 890 -> 583
+CHANGED 2026-09-24_e4b_constrained utsahamu|T1|hybrid|70: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T1|hybrid|56: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T2|hybrid|42: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T2|hybrid|49: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T2|hybrid|63: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T2|hybrid|70: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T2|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T3|hybrid|42: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T3|hybrid|56: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T3|hybrid|49: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T3|hybrid|63: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained utsahamu|T3|hybrid|70: rerank (pos 22): ' స్' ended a line before the rule
+[3000/3330] 765 changed, 1590s
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T1|hybrid|42: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T1|hybrid|63: rerank (pos 19): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T1|hybrid|49: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T1|hybrid|56: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T1|hybrid|70: rerank (pos 27): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T2|hybrid|49: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T2|hybrid|56: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T2|hybrid|63: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T2|hybrid|70: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T2|hybrid|42: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T3|hybrid|42: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T3|hybrid|49: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T3|hybrid|56: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T3|hybrid|63: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained utsahamu|T3|hybrid|70: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T1|hybrid|42: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T1|hybrid|63: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T1|hybrid|70: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T1|hybrid|56: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T2|hybrid|42: rerank (pos 34): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T2|hybrid|63: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T2|hybrid|70: rerank (pos 38): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T3|hybrid|56: rerank (pos 37): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T2|masking_only|70: n_valid (pos 59): 788 -> 538
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T3|hybrid|70: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T2|hybrid|56: rerank (pos 82): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T1|hybrid|49: rerank (pos 41): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T1|hybrid|42: rerank (pos 74): ' స్' ended a line before the rule
+[3100/3330] 793 changed, 1632s
+CHANGED 2026-09-24_e4b_constrained vanamayuramu|T3|hybrid|63: rerank (pos 77): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T1|hybrid|56: rerank (pos 55): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T2|hybrid|49: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T2|hybrid|70: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T1|masking_backtrack|56: n_valid (pos 16): 942 -> 556
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T2|hybrid|42: rerank (pos 74): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T1|hybrid|70: rerank (pos 83): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T3|hybrid|49: rerank (pos 43): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T3|hybrid|42: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vanamayuramu|T3|hybrid|70: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T1|hybrid|63: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T1|hybrid|56: rerank (pos 25): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T1|masking_backtrack|42: n_valid (pos 11): 942 -> 556
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T2|hybrid|49: rerank (pos 23): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T2|hybrid|42: rerank (pos 24): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T2|hybrid|56: rerank (pos 46): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T3|hybrid|42: rerank (pos 21): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T3|hybrid|63: rerank (pos 20): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T3|hybrid|56: rerank (pos 46): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vasamtatilakamu|T2|masking_backtrack|70: n_valid (pos 18): 942 -> 556
+CHANGED 2026-09-25_diffusion_constrained vasamtatilakamu|T1|hybrid|63: rerank (pos 42): ' స్' ended a line before the rule
+[3200/3330] 814 changed, 1672s
+CHANGED 2026-09-25_diffusion_constrained vasamtatilakamu|T3|hybrid|70: rerank (pos 17): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vasamtatilakamu|T3|hybrid|49: rerank (pos 36): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vasamtatilakamu|T3|hybrid|42: rerank (pos 61): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vasamtatilakamu|T3|hybrid|56: rerank (pos 67): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T1|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vasamtatilakamu|T3|masking_only|56: n_valid (pos 81): 789 -> 538
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T1|hybrid|63: rerank (pos 68): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T1|hybrid|56: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T2|hybrid|42: rerank (pos 15): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T2|hybrid|49: rerank (pos 16): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T2|hybrid|70: rerank (pos 14): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T2|hybrid|56: rerank (pos 22): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T2|masking_backtrack|56: n_valid (pos 15): 1176 -> 563
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T2|hybrid|63: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T3|hybrid|70: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T3|hybrid|42: rerank (pos 44): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T3|hybrid|49: rerank (pos 33): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T3|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-24_e4b_constrained vidyunmala|T3|hybrid|56: rerank (pos 28): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T1|hybrid|56: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T1|hybrid|42: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T1|hybrid|49: rerank (pos 47): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T2|hybrid|42: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T2|hybrid|63: rerank (pos 18): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T1|hybrid|63: rerank (pos 60): ' స్' ended a line before the rule
+[3300/3330] 839 changed, 1708s
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T3|hybrid|42: rerank (pos 13): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T3|hybrid|49: rerank (pos 11): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T3|hybrid|63: rerank (pos 12): ' స్' ended a line before the rule
+CHANGED 2026-09-25_diffusion_constrained vidyunmala|T3|hybrid|56: rerank (pos 40): ' స్' ended a line before the rule
+[3330/3330] 843 changed, 1719s
+2026-09-24_e4b_constrained: 420 changed, 1245 unchanged
+2026-09-25_diffusion_constrained: 423 changed, 1242 unchanged
