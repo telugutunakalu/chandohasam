@@ -10,7 +10,7 @@ verification, plus evaluation metrics for machine-generated verse.
 |---|---|
 | [meter_engine/](meter_engine/) | The core engines. `chandohasam` (end-to-end poem → analysis), `indic_meter_dawg` (scansion + metre ID via a DAWG), `prasa` (ప్రాస), `yati` (యతి). Rules live in YAML next to the code. |
 | [webapp/](webapp/) | Flask front-end over `chandohasam` — paste a poem, get the full analysis. |
-| [dataset/](dataset/) | Source corpora: Pothana's Andhra Mahabhagavatamu, Vemana, Kuchimanchi Timmakavi. |
+| [dataset/](dataset/) | Source corpora: Pothana's Andhra Mahabhagavatamu, Vemana, Kuchimanchi Timmakavi (metre labels added by the engine, see `dataset/CORRECTIONS.md`), and `chandassu.json`: 2,532 padyams from 25 satakams imported from the Kaggle Chandassu dataset (MIT, arXiv 2510.01233; raw CSV and import report in `dataset/raw/chandassu/`, built by `meter_engine/scripts/import_chandassu.py`, duplicates of the other corpora removed). Vemana, Kuchimanchi and Chandassu poems carry a machine-generated prathipadartham + bhavam in a `generated` field (Gemini batch run5, see `dataset/CORRECTIONS.md`); Bhagavatam has the edition's own. |
 | [metrics/](metrics/) | Evaluation experiments, chiefly the MAUVE sanity gate on Pothana. |
 | [human_evals/](human_evals/) | Sampling scripts and poem sets for human rating. |
 | [Notes/](Notes/) | Working notes on metres and ప్రాస. |
