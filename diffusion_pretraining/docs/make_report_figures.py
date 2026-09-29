@@ -3,7 +3,8 @@
     uv run --with matplotlib python docs/make_report_figures.py
 
 Writes docs/figures/: the architecture diagram, loss curves, masked-token accuracy,
-sample quality, and the learning-rate schedule with the gradient norm. Reference
+sample quality, the learning-rate schedule with the gradient norm, and (once mdlm.final_eval
+has run) validation vs test loss and the sampling study. Reference
 values for real Telugu come from mdlm.judge --calibrate on 30 validation canvases
 (CPU, float32, the setting the run's judge uses) and from sample_metrics on real
 validation text.
@@ -173,8 +174,49 @@ def results():
     fig.tight_layout(); fig.savefig(OUT / "pilot120m_schedule_gradnorm.png", dpi=150); plt.close(fig)
 
 
+def final_evaluation():
+    """Validation vs test NELBO and the sampling study, from runs/pilot120m/final_eval/ (mdlm.final_eval)."""
+    ev_path, st_path = RUN / "final_eval" / "eval.json", RUN / "final_eval" / "sampling_study.json"
+    if ev_path.exists():
+        e = json.load(open(ev_path))
+        srcs = ["sangraha", "indiccorp", "wikipedia"]
+        fig, ax = plt.subplots(figsize=(6.4, 3.6))
+        for off, split, color in ((-0.18, "val", "#8faacc"), (0.18, "test", "#1f4e79")):
+            vals = [e[split][f"nelbo/{s}"] for s in srcs]
+            bars = ax.bar([i + off for i in range(len(srcs))], vals, width=0.36, color=color,
+                          label="validation" if split == "val" else "test")
+            for b, v in zip(bars, vals):
+                ax.text(b.get_x() + b.get_width() / 2, v + 0.02, f"{v:.3f}", ha="center", fontsize=8)
+        ax.set_xticks(range(len(srcs)), ["Sangraha", "IndicCorp", "Wikipedia"])
+        ax.set_ylabel("NELBO (nats per token)"); ax.set_ylim(0, 2.3)
+        ax.set_title(f"final model (step {e['step']:,}): {e['canvases_per_source']} canvases per source")
+        ax.legend(fontsize=8)
+        fig.tight_layout(); fig.savefig(OUT / "pilot120m_val_test.png", dpi=150); plt.close(fig)
+    if st_path.exists():
+        s = json.load(open(st_path))
+        names = list(s["settings"])
+        vals = [s["settings"][n]["gen_ppl"] for n in names]
+        fig, ax = plt.subplots(figsize=(8.5, 4.3))
+        bars = ax.barh(names[::-1], vals[::-1], color="#1f4e79")
+        for b, v, n in zip(bars, vals[::-1], names[::-1]):
+            r = s["settings"][n]
+            note = (f"collapsed: entropy {r['token_entropy']:.2f}, {100 * r['repeated_4gram_share']:.0f}% repeated 4-grams"
+                    if r["repeated_4gram_share"] > 0.5 else
+                    f"{100 * r['known_word_share']:.0f}% real words, entropy {r['token_entropy']:.2f}")
+            ax.text(v + 1, b.get_y() + b.get_height() / 2, f"{v:.1f}   ({note})", va="center", fontsize=8)
+        ref = s["reference"]
+        ax.axvline(ref["real_telugu"], color="#4f8a3c", ls="--", lw=1, label=f"real Telugu ({ref['real_telugu']:.1f})")
+        ax.axvline(ref["word_shuffled"], color="#c0504d", ls="--", lw=1, label=f"real, words shuffled ({ref['word_shuffled']:.1f})")
+        ax.set_xlabel("generative perplexity under gemma-3-1b-pt (lower is better)")
+        ax.set_xlim(0, max(vals + [ref["word_shuffled"]]) * 1.6)
+        ax.set_title(f"sampling study: {s['samples_per_setting']} samples per setting, final model")
+        ax.legend(fontsize=8, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2, frameon=False)
+        fig.tight_layout(); fig.savefig(OUT / "pilot120m_sampling_study.png", dpi=150); plt.close(fig)
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     architecture()
     results()
+    final_evaluation()
     print(f"figures written to {OUT}")

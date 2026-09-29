@@ -1,9 +1,8 @@
 # Telugu MDLM pretraining: `pilot120m` training report
 
-**Status: training in progress.** These are interim numbers as of **2026-09-28 14:45 IST**, at
-step 55,700 of 76,000 (73%) with 3.65B of 4.98B tokens seen. The run is expected to finish
-around 08:30–09:00 IST on 2026-09-29, after which this report will be updated with final
-numbers.
+**Status: training complete.** The run finished at 08:42 IST on 2026-09-29, after 76,000 steps
+and 4.98B tokens in 2 days 19 hours. This report gives the final numbers, an evaluation on the
+held-out test split, and a study of sampler settings on the final model.
 
 The code is in this folder (`mdlm/`, `data_prep/`, `tokenizer/`). The run writes its outputs to
 `runs/pilot120m/`, which is not tracked by git. All figures are drawn from the run's logs by
@@ -20,7 +19,7 @@ The code is in this folder (`mdlm/`, `data_prep/`, `tokenizer/`). The run writes
 7. [Training hyperparameters](#7-training-hyperparameters)
 8. [Infrastructure and fault tolerance](#8-infrastructure-and-fault-tolerance)
 9. [Evaluation protocol](#9-evaluation-protocol)
-10. [Results so far](#10-results-so-far)
+10. [Results](#10-results)
 11. [Findings and open questions](#11-findings-and-open-questions)
 12. [Next steps](#12-next-steps)
 13. [Reproducing the run](#13-reproducing-the-run)
@@ -29,26 +28,31 @@ The code is in this folder (`mdlm/`, `data_prep/`, `tokenizer/`). The run writes
 ## 1. Summary
 
 - **What.** The model is a 120M-parameter masked diffusion language model (MDLM) for Telugu. It
-  is being trained from scratch on about 5B tokens of web, news and encyclopedic text, on a single
-  8 GB laptop GPU (RTX 5050).
+  was trained from scratch on 4.98B tokens of web, news and encyclopedic text, on a single 8 GB
+  laptop GPU (RTX 5050), in 2 days 19 hours.
 - **Why.** This is stage 1 of a two-stage plan. Stage 1 teaches general Telugu fluency; stage 2
   specialises the model to metrical poetry (padyams) that must satisfy chandassu constraints. The
   model's dimensions are chosen so that it can later be grown to about 0.5B and 1B parameters
   without starting over.
-- **Where it stands at step 55k (3.6B tokens).**
-  - Validation loss (NELBO) is **1.784** nats per token, a perplexity bound of 5.96 per token.
-    It was 2.921 at step 1k and is still falling.
-  - Masked-token accuracy is 88.4%, 67.7% and 31.7% when 15%, 50% and 85% of the tokens are
+- **Final model (step 76,000).**
+  - On the held-out **test** split (512 canvases per source), NELBO is 1.846 nats per token on
+    Sangraha, 1.729 on IndicCorp and 1.053 on Wikipedia, or **1.783** weighted like the
+    training mix. The validation split gives 1.818 on the same measure, so the test split is no harder.
+  - The per-step validation loss used for the training curves (128 canvases per source) fell from
+    2.921 at step 1k to **1.747**. It was still falling slowly at the end.
+  - Masked-token accuracy is 89.4%, 68.8% and 32.3% when 15%, 50% and 85% of the tokens are
     masked.
-  - Generated text scores a perplexity of **67.6** under the Gemma-3-1B judge. For reference,
-    real Telugu scores 16.9 and real Telugu with its words shuffled scores 64.9.
-  - 79% of generated words are real words, against 88.7% in real text. There is no repetition or
-    collapse.
-- **Stability.** The run has not diverged, run out of memory or skipped an update. It rode
-  through two mains-power cuts on battery without losing work.
-- **Open question.** Sample quality stopped improving around step 15k while the loss kept
-  falling ([section 11](#11-findings-and-open-questions)). A sampling study to find out why is
-  planned for the end of the run.
+  - Generated text scores a perplexity of 63–72 under the Gemma-3-1B judge over the last 20k
+    steps (72.2 at the end). For reference, real Telugu scores 16.9 and real Telugu with its words
+    shuffled scores 64.9. About 79% of generated words are real words, against 88.7% in real
+    text, and there is no repetition or collapse.
+- **Stability.** The run never diverged, ran out of memory or skipped an update. It rode through
+  two mains-power cuts on battery without losing work.
+- **Main finding.** Sample quality stopped improving around step 15k while the loss kept falling
+  ([section 11](#11-findings-and-open-questions)). A study of sampler settings on the final model shows the limit
+  is the model, not the sampler. Four times as many denoising steps only reach the level of
+  word-shuffled text (64.9). The best samples come from a lower temperature (0.9): judge
+  perplexity 45.8 and 86% real words ([section 10.6](#106-sampling-study)).
 
 ## 2. Training strategy
 
@@ -338,7 +342,7 @@ exactly the data it would have seen without the interruption.
   snapshot every 5k steps costs about 1.5 minutes.
 - **GPU.** Memory holds steady at 5.7 GB, with an allocated peak of 6.7 GB during evaluation and
   sampling. The GPU draws about 60 W and runs at 67–73 °C.
-- **Wall clock so far.** 49 h 15 min for 55,700 steps, from 13:29 on 26 Sep to 14:45 on 28 Sep.
+- **Wall clock.** 2 days 19 hours for 76,000 steps, from 13:29 on 26 Sep to 08:42 on 29 Sep.
 
 ### 8.3 Fault tolerance
 
@@ -359,8 +363,10 @@ exactly the data it would have seen without the interruption.
 | 26 Sep 13:43 | ~260 | Deliberate `kill -9` of the trainer, to test recovery | systemd restarted it 60 s later and it resumed from the step-219 checkpoint |
 | 26 Sep 19:07–19:14 | 6,332–6,440 | Mains power lost | Checkpointed at once, trained on battery at about 15k tokens/s, checkpointed again 5 minutes later and returned to full speed when power came back. Nothing was lost |
 | 27 Sep 14:45–14:52 | 28,549–28,650 | Mains power lost | Same as above |
+| 29 Sep 08:42 | 76,000 | End of run | Final checkpoint written; the service exited normally and was then disabled so it does not start again at boot |
 
-So far there have been no out-of-memory retries, no skipped updates and no failed checkpoints.
+Over the whole run there were no out-of-memory retries, no skipped updates and no failed
+checkpoints.
 
 ## 9. Evaluation protocol
 
@@ -394,7 +400,7 @@ raises its perplexity nearly fourfold.
 | Real-word share | 88.7% | |
 | Distinct-1 | 0.73 | |
 
-## 10. Results so far
+## 10. Results
 
 ### 10.1 Loss
 
@@ -414,15 +420,20 @@ raises its perplexity nearly fourfold.
 | 40,000 | 2.62B | 1.832 | 6.25 | 1.924 | 1.719 | 1.853 | 87.8% | 66.3% | 31.7% |
 | 45,000 | 2.95B | 1.814 | 6.14 | 1.905 | 1.703 | 1.835 | 88.3% | 67.2% | 31.7% |
 | 50,000 | 3.28B | 1.799 | 6.04 | 1.889 | 1.687 | 1.819 | 88.3% | 67.2% | 31.6% |
-| **55,000** | **3.60B** | **1.784** | **5.96** | **1.875** | **1.673** | **1.804** | **88.4%** | **67.7%** | **31.7%** |
+| 55,000 | 3.60B | 1.784 | 5.96 | 1.875 | 1.673 | 1.804 | 88.4% | 67.7% | 31.7% |
+| 60,000 | 3.93B | 1.772 | 5.88 | 1.862 | 1.663 | 1.791 | 88.9% | 68.1% | 32.0% |
+| 65,000 | 4.26B | 1.762 | 5.82 | 1.853 | 1.653 | 1.780 | 89.1% | 68.5% | 32.0% |
+| 70,000 | 4.59B | 1.754 | 5.78 | 1.843 | 1.645 | 1.774 | 88.9% | 68.6% | 32.2% |
+| 75,000 | 4.92B | 1.748 | 5.74 | 1.836 | 1.639 | 1.768 | 89.0% | 68.7% | 32.2% |
+| **76,000** | **4.98B** | **1.747** | **5.73** | **1.835** | **1.638** | **1.767** | **89.4%** | **68.8%** | **32.3%** |
 
 The training loss runs above the validation curve for two reasons:
 
 - Validation uses the EMA weights, while the training loss comes from the raw weights at a
   random mask rate.
 - Validation weights the three sources equally, while training draws 75% of its windows from
-  Sangraha, the hardest source. Weighted by the training mix, validation at step 55k would be
-  1.831, close to the training loss of about 1.87–1.89.
+  Sangraha, the hardest source. Weighted by the training mix, validation at step 76k would be
+  1.792, close to the training loss of about 1.80 over the last 1,000 steps.
 
 The gap is expected and does not indicate overfitting: every source is seen less than once,
 except Wikipedia at 2.4 passes by the end.
@@ -439,6 +450,7 @@ Cross-entropy per masked token (nats), by mask-rate bin:
 | 5,000 | 0.800 | 1.142 | 1.284 | 1.673 | 2.116 | 2.745 | 3.629 | 4.483 |
 | 25,000 | 0.536 | 0.764 | 0.882 | 1.256 | 1.694 | 2.345 | 3.361 | 4.388 |
 | 55,000 | 0.458 | 0.648 | 0.764 | 1.102 | 1.541 | 2.182 | 3.232 | 4.353 |
+| 76,000 | 0.439 | 0.614 | 0.729 | 1.050 | 1.491 | 2.127 | 3.190 | 4.338 |
 
 The fixed validation mask rates fall in these eight bins; bins 0.2–0.3 and 0.7–0.8 are empty.
 
@@ -458,7 +470,12 @@ The fixed validation mask rates fall in these eight bins; bins 0.2–0.3 and 0.7
 | 40,000 | 79.7 | 71.9% | 4.36 | 0.867 | 0.999 | 0.000 | 98.6% | 0.86 |
 | 45,000 | 68.3 | 74.3% | 4.35 | 0.868 | 0.998 | 0.000 | 99.9% | 0.00 |
 | 50,000 | 69.5 | 76.6% | 4.35 | 0.859 | 0.997 | 0.000 | 98.4% | 0.49 |
-| **55,000** | **67.6** | **79.4%** | **4.40** | **0.825** | **0.998** | **0.000** | **98.3%** | **0.24** |
+| 55,000 | 67.6 | 79.4% | 4.40 | 0.825 | 0.998 | 0.000 | 98.3% | 0.24 |
+| 60,000 | 63.1 | 79.5% | 4.36 | 0.843 | 0.997 | 0.000 | 99.4% | 0.12 |
+| 65,000 | 66.0 | 80.6% | 4.35 | 0.830 | 0.995 | 0.000 | 98.3% | 0.37 |
+| 70,000 | 68.7 | 77.3% | 4.32 | 0.858 | 0.996 | 0.000 | 99.6% | 0.12 |
+| 75,000 | 68.3 | 79.2% | 4.33 | 0.830 | 0.998 | 0.000 | 98.5% | 0.49 |
+| **76,000** | **72.2** | **78.0%** | **4.32** | **0.838** | **0.998** | **0.000** | **99.4%** | **0.61** |
 | *Real Telugu* | *16.9* | *88.7%* | *4.32* | *0.73* | | | | |
 
 Excerpts from generated samples at four checkpoints (unedited model output):
@@ -480,52 +497,123 @@ Excerpts from generated samples at four checkpoints (unedited model output):
 
   > రీజనల్ స్టేషన్కు 1387, 14, 43000 పట్టణభాగాలను తరలించి. . బెంగళూరుకు ఎదురు థారియాకు తరలించారు.
 
+- **Step 76,000 (final)**: fluent phrases in a web or blog register, still without a coherent
+  thread.
+
+  > వంతెన, వేలం సీజన్ లో వారి నిర్ణయాలు తీసుకుంటుంటారు. వారు పర్యావరణ నిర్మాణం లేదని చేయాలి, ఇది ప్రైవేట్ గదులు, చాలా గది వాతావరణం ఒక సౌకర్యం ఆస్వాదించడం
+
 ### 10.4 Optimisation dynamics
 
-- **Gradient norm.** It averaged 2.7 over the first 1,000 steps and 0.61 over the last 5,000.
-  132 of the 2,781 logged steps went above the clip threshold of 1.0, and only 42 of those came
+- **Gradient norm.** It averaged 2.7 over the first 1,000 steps and 0.71 over the last 5,000.
+  150 of the 3,800 logged steps went above the clip threshold of 1.0, and only 60 of those came
   after warm-up.
-- **No loss spikes.** The training loss has had none, and no update has been skipped.
-- **Steady throughput.** It has held at 20.2–21.1k tokens/s for the whole run, apart from the
+- **No loss spikes.** The training loss had none, and no update was skipped.
+- **Steady throughput.** It held at 20.2–21.1k tokens/s for the whole run, apart from the
   scheduled sampling pauses and the two battery periods.
+
+### 10.5 Final evaluation: validation and test
+
+`mdlm.final_eval` scores the final EMA weights with the same protocol as the per-step validation
+(fixed mask rates and masks), on 512 canvases per source instead of 128, and on both the
+validation split and the untouched test split.
+
+![final validation and test loss](figures/pilot120m_val_test.png)
+
+| Split | Sangraha | IndicCorp | Wikipedia | Mean of the three | Weighted like the training mix | Accuracy, 15% / 50% / 85% masked |
+|---|---|---|---|---|---|---|
+| Validation | 1.899 | 1.719 | 0.994 | 1.537 | 1.818 | 89.4% / 68.8% / 32.3% |
+| **Test** | **1.846** | **1.729** | **1.053** | **1.543** | **1.783** | 87.9% / 69.1% / 31.4% |
+
+- **Test is no harder than validation** (1.783 against 1.818, weighted like the training mix), so
+  nothing in the run was tuned to the validation split.
+- **Why these differ from the per-step curve.** The 128 canvases behind the training curves are
+  the first 65k tokens of each source's validation split. Evaluating the final weights on those
+  128 canvases reproduces the logged value exactly (1.747), so the difference comes only from
+  which text is scored.
+  - Sangraha and IndicCorp are a little harder on 512 canvases (1.899 and 1.719
+    against 1.835 and 1.638).
+  - Wikipedia is much easier: 0.994 against 1.767. Beyond its first 128 canvases, the
+    Wikipedia split is dominated by templated village articles ("… is 48 km from the nearest town,
+    Hyderabad", "the village has a post office"), which are nearly predictable.
+- **Treat the unweighted mean with care.** It gives these templated pages a third of the weight,
+  so the per-source and mix-weighted values are the ones to compare. The per-step curves remain
+  valid for comparing steps with each other.
+
+### 10.6 Sampling study
+
+`mdlm.final_eval` generated 64 samples of 512 tokens with the final EMA weights under six sampler
+settings and scored them with the same judge. The judge ran on the GPU in float32, and its
+reference values match the CPU ones exactly (real Telugu 16.9, word-shuffled 64.9).
+
+![sampling study](figures/pilot120m_sampling_study.png)
+
+| Setting | Unmasking order | Steps | Temperature | Judge perplexity | Real-word share | Token entropy | Distinct-1 | Repeated 4-grams | Time for 64 samples |
+|---|---|---|---|---|---|---|---|---|---|
+| Training default | ancestral | 256 | 1.0 | 71.5 | 77.5% | 4.35 | 0.734 | 0.0% | 6.5 min |
+| More steps | ancestral | 512 | 1.0 | 65.8 | 77.8% | 4.32 | 0.729 | 0.0% | 12 min |
+| Even more steps | ancestral | 1,024 | 1.0 | 64.9 | 78.8% | 4.33 | 0.725 | 0.1% | 30 min |
+| Confidence order | confidence | 256 | 1.0 | 1.7 | 99.7% | 0.75 | 0.006 | 94.0% | 6 min |
+| Confidence order, more steps | confidence | 512 | 1.0 | 1.4 | 99.7% | 0.72 | 0.004 | 95.9% | 12 min |
+| Lower temperature | ancestral | 512 | 0.9 | 45.8 | 86.4% | 4.18 | 0.629 | 0.0% | 12 min |
+| *Real Telugu* | | | | *16.9* | *88.7%* | *4.32* | *0.73* | | |
+
+- **More steps help only a little.** Doubling from 256 to 512 steps lowers judge perplexity from
+  71.5 to 65.8. Doubling again to 1,024 steps, about half a new token per step, gives only
+  64.9: the level of word-shuffled real text, at 4.7 times the time. The error from unmasking
+  several tokens in parallel is not what holds the samples back; the model is.
+- **Confidence-ordered unmasking collapses.** Unmasking the most confident tokens first fills the
+  canvas with a few tokens repeated (`. . .`, `1 1 1`, `అండ్ అండ్`). The judge scores this as nearly
+  perfect (1.4–1.7), because repetition is easy to predict. Token entropy (0.72–0.75, against
+  4.32 for real text) and repeated 4-grams (94–96%) expose it, which is why this report never reads
+  the judge's perplexity on its own. For unconditional generation this order is unusable. With a
+  prompt or with fixed positions, as in stage 2, it may behave differently.
+- **Temperature 0.9 is the best practical setting.** It brings judge perplexity to 45.8 and the
+  real-word share to 86.4% (real text: 88.7%), with no repetition. The cost is some diversity
+  (distinct-1 0.63 against 0.73). A lower temperature trades diversity for fluency, so
+  treat it as a setting to use, not as a sign of a better model.
 
 ## 11. Findings and open questions
 
-1. **The loss is still improving.** Validation NELBO is falling by about 0.003 nats per 1k steps
-   at step 55k, and the learning rate is only now entering the tail of its cosine decay (7.7e-5 of
-   the 3e-4 peak). Sources keep the same order throughout: IndicCorp is easiest (short, formulaic
+1. **The loss was still improving at the end.** Over the last 21k steps (1.4B tokens) the
+   validation NELBO fell by 0.037, about half of what the 20k steps before them gave, as the learning
+   rate decayed to its floor of 3e-5. Sources keep the same order throughout: IndicCorp is easiest (short, formulaic
    news paragraphs), then Wikipedia, then Sangraha (the most varied web text).
-2. **The gains come from lightly masked text.** Between steps 25k and 55k:
-   - accuracy with 15% of tokens masked rose from 86.6% to 88.4%;
-   - with 85% masked it moved only from 31.4% to 31.7%;
-   - cross-entropy at mask rates 0.9–1.0 fell by just 0.035 nats.
+2. **The gains come from lightly masked text.** Between steps 25k and 76k:
+   - accuracy with 15% of tokens masked rose from 86.6% to 89.4%;
+   - with 85% masked it moved only from 31.4% to 32.3%;
+   - cross-entropy at mask rates 0.9–1.0 fell by just 0.050 nats.
 
    Predicting a token when almost nothing is visible is close to unconditional language modelling
    and improves slowly at this model size.
 3. **Sample quality plateaued at about step 15k.** Judge perplexity went from 123.5 at step 5k to
-   77.4 at step 15k. Since then it has moved between 67 and 80 (67.6 at step 55k), while the
-   validation loss fell from 1.989 to 1.784. Three likely contributors:
+   77.4 at step 15k. After that it moved between 63 and 80 (72.2 at the end), while the validation
+   loss fell from 1.989 to 1.747. Three candidate causes:
    - **Sampler.** 256 steps for 512 positions means about two tokens are unmasked per step, drawn
      independently of each other. That caps coherence however good the model is.
    - **Heavily masked regime.** Generation starts from a fully masked canvas, so its first,
      plan-setting steps run in the heavily masked regime that has barely improved (finding 2).
    - **Noise.** With 16 samples per point, readings move by about ±10 on their own.
 
-   Test planned for the end of the run: compare 256, 512 and 1,024 steps, ancestral against
-   confidence-ordered unmasking, and temperature 1.0 against 0.9, with 64 samples each. If more
-   steps or confidence ordering close much of the gap, the limit is the sampler. If not, it is the
-   model's capacity in the heavily masked regime, which argues for growing the model.
-4. **No degeneracy.** Token entropy (4.35–4.40) matches real text (4.32). There are no repeated
-   4-grams, distinct-2 is at least 0.997, and 98–100% of the output is Telugu.
+   The sampling study ([section 10.6](#106-sampling-study)) settles it. Four times as many steps
+   move judge perplexity only from 71.5 to 64.9, so the sampler is not the main limit; the
+   model's weakness in the heavily masked regime is. That argues for a larger model
+   ([section 12](#12-next-steps)). Meanwhile a temperature of 0.9 gives the best samples (45.8).
+4. **No degeneracy with the training sampler.** Token entropy (4.32–4.40) matches real text
+   (4.32). There are no repeated 4-grams, distinct-2 is at least 0.995, and 98–100% of the output is
+   Telugu. Confidence-ordered unmasking does collapse (section 10.6).
+5. **Part of the Wikipedia data is templated.** Beyond its first 65k tokens, the Wikipedia
+   validation split is dominated by bot-style village articles (section 10.5). The training split
+   presumably has the same mix. It is harmless for fluency, but it makes Wikipedia's loss look
+   better than the model's grasp of encyclopedic prose, and it is a candidate for filtering in a
+   later corpus build.
 
 ## 12. Next steps
 
-1. **Finish the run** (about 20,000 more steps, ending around 29 Sep, 08:30–09:00 IST). Then
-   evaluate on the untouched test split and update this report.
-2. **Run the sampling study** in finding 3 on the final weights, about one hour on the laptop GPU.
-3. **Grow the model** to `grow-1536x16` (523M) with `mdlm.grow` and continue pretraining on a
+1. **Grow the model** to `grow-1536x16` (523M) with `mdlm.grow` and continue pretraining on a
    larger GPU. This size does not fit in 8 GB.
-4. **Stage 2.** Specialise to metrical poems on the project's poem corpora, using metre-engine
+2. **Sampling defaults for later stages:** ancestral unmasking, 512 steps, temperature 0.9
+   (section 10.6). Evaluate samples with entropy and repetition alongside the judge.
+3. **Stage 2.** Specialise to metrical poems on the project's poem corpora, using metre-engine
    checks for evaluation and metre-constrained decoding. The poems were decontaminated from stage
    1.
 
@@ -542,6 +630,7 @@ uv run python -m mdlm.train --run pilot120m --preset small-768 --total-steps 760
     --weights '{"sangraha": 0.75, "indiccorp": 0.20, "wikipedia": 0.05}'
 # or supervised, as this run was: deploy/telugu-mdlm-pilot.service and deploy/telugu-mdlm-judge.service
 uv run python -m mdlm.judge --device cpu --calibrate --token-dir ../pretraining_datasets/tokens --n 30
+uv run python -m mdlm.final_eval --run pilot120m                 # section 10.5 and 10.6, ~1.5 h on the laptop GPU
 uv run --with matplotlib python docs/make_report_figures.py   # the figures in this report
 ```
 
