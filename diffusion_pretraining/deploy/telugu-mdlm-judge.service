@@ -1,0 +1,29 @@
+# Scores each new sample file of the pilot with the CPU judge (gemma-3-1b-pt) -> runs/pilot120m/judge.jsonl.
+# The watcher is a small loop; each scoring round runs in a child process that exits afterwards, so the
+# ~4 GB float32 judge is resident only while it scores. OOMScoreAdjust makes the kernel's OOM killer take
+# the judge before the trainer if memory ever runs out (Restart=always brings the judge back).
+#
+# Install:   cp deploy/telugu-mdlm-judge.service ~/.config/systemd/user/
+#            systemctl --user daemon-reload && systemctl --user enable --now telugu-mdlm-judge
+# Remove:    systemctl --user disable --now telugu-mdlm-judge && rm ~/.config/systemd/user/telugu-mdlm-judge.service
+
+[Unit]
+Description=Telugu MDLM pilot: generative perplexity of new samples (CPU judge)
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining
+Environment=HF_HUB_OFFLINE=1
+Environment=CUDA_VISIBLE_DEVICES=
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining/.venv/bin/python -m mdlm.judge_watch --run pilot120m
+Nice=10
+OOMScoreAdjust=500
+Restart=always
+RestartSec=300
+StandardOutput=append:/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining/runs/pilot120m/judge.log
+StandardError=append:/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining/runs/pilot120m/judge.log
+
+[Install]
+WantedBy=default.target

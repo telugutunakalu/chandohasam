@@ -1,0 +1,32 @@
+# Supervisor for the 120M pilot (systemd user service).
+#
+# Install:   cp deploy/telugu-mdlm-pilot.service ~/.config/systemd/user/
+#            systemctl --user daemon-reload && systemctl --user enable --now telugu-mdlm-pilot
+# Status:    systemctl --user status telugu-mdlm-pilot     (log: runs/pilot120m/train.log)
+# Pause:     systemctl --user stop telugu-mdlm-pilot       (saves a checkpoint first)
+# Resume:    systemctl --user start telugu-mdlm-pilot
+# Remove:    systemctl --user disable --now telugu-mdlm-pilot && rm ~/.config/systemd/user/telugu-mdlm-pilot.service
+#
+# Restarts after any crash (exit codes other than 0 and 3), starts at boot (user lingering is on),
+# and holds sleep/idle/lid-switch inhibitors so the laptop does not suspend while training.
+# Exit codes (mdlm/train.py): 0 finished or stopped, 75 low battery (restart; waits for mains), 3 diverged.
+
+[Unit]
+Description=Telugu MDLM pilot pretraining (120M, small-768)
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining
+Environment=PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/systemd-inhibit --what=sleep:idle:handle-lid-switch --who=telugu-mdlm --why="MDLM pretraining" --mode=block /home/samvaran/phd_workspace/anlp_project/diffusion_pretraining/.venv/bin/python -m mdlm.train --run pilot120m --preset small-768 --total-steps 76000 --micro-batch 8 --weights '{"sangraha": 0.75, "indiccorp": 0.20, "wikipedia": 0.05}'
+Restart=on-failure
+RestartSec=60
+RestartPreventExitStatus=3
+TimeoutStopSec=300
+StandardOutput=append:/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining/runs/pilot120m/train.log
+StandardError=append:/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining/runs/pilot120m/train.log
+
+[Install]
+WantedBy=default.target

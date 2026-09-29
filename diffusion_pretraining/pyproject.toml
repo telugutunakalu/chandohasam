@@ -1,0 +1,35 @@
+[project]
+name = "telugu-mdlm"
+version = "0.1.0"
+description = "Telugu masked-diffusion language model (MDLM): general pretraining, then metrical-poetry specialisation"
+requires-python = "==3.12.*"
+dependencies = [
+    "torch==2.14.0",
+    "numpy",
+    "pyarrow",
+    "zstandard",
+    "datasketch",
+    "huggingface_hub",
+    "tensorboard",
+    "pyyaml",
+    "tqdm",
+    "transformers>=5.17.0",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

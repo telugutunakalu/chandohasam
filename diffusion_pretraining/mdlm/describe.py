@@ -140,7 +140,7 @@ def model_card(mcfg: ModelConfig, tcfg: TrainConfig, corpus_meta: dict | None = 
           f"- Every {tcfg.sample_every:,} steps: {tcfg.n_samples} samples of {tcfg.seq_len} tokens with the ancestral sampler "
           f"({tcfg.sample_steps} steps, float64 Gumbel draws); logged: token entropy, distinct-1/2/3, repeated 4-grams, "
           "rare-akshara share, dangling viramas, Telugu share, share of words attested in validation text.",
-          "- Offline: generative perplexity with `mdlm.judge` (google/gemma-3-1b-pt; real Telugu 17.6, word-shuffled 70.6).",
+          "- Offline: generative perplexity with `mdlm.judge` (google/gemma-3-1b-pt, float32; real Telugu 16.9, word-shuffled 64.9 on 30 validation canvases).",
           "", "## Checkpoints and recovery", "",
           f"- Two alternating fsync'ed slots `ckpt_a.pt` / `ckpt_b.pt` (model, EMA, optimizer, step); saved every "
           f"{tcfg.ckpt_every_min:g} min, on Ctrl-C/SIGTERM, at once when mains power is lost, every {tcfg.battery_ckpt_min:g} min "
