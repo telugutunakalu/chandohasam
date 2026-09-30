@@ -1,0 +1,1536 @@
+{
+ "version": "1.0",
+ "seed": 42,
+ "baseline_corpora": [
+  "bhagavatam",
+  "vemana",
+  "kuchimanchi_timmakavi",
+  "chandassu"
+ ],
+ "corpora": {
+  "bhagavatam": {
+   "n_poems": 7366,
+   "n_lines": 33693,
+   "varga": {
+    "real": {
+     "poem_z_median": 0.177,
+     "poem_z_mean": 0.306,
+     "poem_score_mean": 0.1377,
+     "line_z_median": -0.036,
+     "lines_at_or_above_pct": {
+      "weak": 8.27,
+      "marked": 3.77,
+      "strong": 1.62
+     },
+     "poems_at_or_above_pct": {
+      "weak": 12.19,
+      "marked": 5.13,
+      "strong": 1.75
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.064,
+     "poem_z_mean": 0.182,
+     "poem_score_mean": 0.1283,
+     "line_z_median": -0.092,
+     "lines_at_or_above_pct": {
+      "weak": 7.67,
+      "marked": 3.41,
+      "strong": 1.48
+     },
+     "poems_at_or_above_pct": {
+      "weak": 9.8,
+      "marked": 4.11,
+      "strong": 1.53
+     },
+     "real_poem_beats_control_pct": 54.97
+    },
+    "word_salad": {
+     "poem_z_median": -0.266,
+     "poem_z_mean": -0.182,
+     "poem_score_mean": 0.0829,
+     "line_z_median": -0.23,
+     "lines_at_or_above_pct": {
+      "weak": 5.31,
+      "marked": 2.14,
+      "strong": 0.83
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.99,
+      "marked": 1.17,
+      "strong": 0.22
+     },
+     "real_poem_beats_control_pct": 62.53
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.275,
+     "poem_z_mean": 0.4,
+     "poem_score_mean": 0.1666,
+     "line_z_median": -0.029,
+     "lines_at_or_above_pct": {
+      "weak": 9.61,
+      "marked": 4.58,
+      "strong": 2.05
+     },
+     "poems_at_or_above_pct": {
+      "weak": 13.89,
+      "marked": 6.11,
+      "strong": 2.57
+     },
+     "real_poem_beats_control_pct": 44.33
+    }
+   },
+   "top_lines": [
+    {
+     "z": 10.11,
+     "poem": "bhagavatam:4-345-క.",
+     "line": "మనుమనుమని మను మను మని"
+    },
+    {
+     "z": 8.95,
+     "poem": "bhagavatam:4-482-క.",
+     "line": "టెనునన్యుని నెవ్వని నే"
+    },
+    {
+     "z": 8.61,
+     "poem": "bhagavatam:6-33-క.",
+     "line": "కరికిఁ గరాగ్రస్థగిరికిఘనతరకిరికిన్."
+    },
+    {
+     "z": 8.59,
+     "poem": "bhagavatam:10.1-1292-ఆ.",
+     "line": "కళలు గలుగుఁ గాక; కమల తోడగుగాక;"
+    },
+    {
+     "z": 8.18,
+     "poem": "bhagavatam:1-89-ఉ.",
+     "line": "\"ధాతవు, భారతశ్రుతివిధాతవు, వేదపదార్థజాతవి"
+    },
+    {
+     "z": 7.61,
+     "poem": "bhagavatam:10.2-273-చ.",
+     "line": "గొలఁకుల లేఁగెలంకులనుగోరిక లీరిక లొత్తఁ గ్రొత్తలై."
+    },
+    {
+     "z": 7.27,
+     "poem": "bhagavatam:3-420-మ.",
+     "line": "స్తృత సంధ్యాంబుద ధాతుచిత్రిత సముద్ధీప్తక్షమాభృద్గతిన్"
+    },
+    {
+     "z": 7.25,
+     "poem": "bhagavatam:8-88-క.",
+     "line": "విశ్వాత్ముని విశ్వవేద్యు విశ్వు నవిశ్వున్"
+    },
+    {
+     "z": 7.0,
+     "poem": "bhagavatam:6-188.1-ఆ.",
+     "line": "వారి వారివారివారిఁ జేరినవారిఁ"
+    },
+    {
+     "z": 7.0,
+     "poem": "bhagavatam:6-191-ఆ.",
+     "line": "వారి వారివారివారిఁ జేరినవారి"
+    },
+    {
+     "z": 6.95,
+     "poem": "bhagavatam:10.1-225-సీ.",
+     "line": "గ్రుక్క గ్రుక్కకు గుటుగుటుకు మనుచు,"
+    },
+    {
+     "z": 6.95,
+     "poem": "bhagavatam:10.2-529-క.",
+     "line": "నిచ్చెద నను వేఁడు\" మనిన \"నీశ్వర! నన్నున్"
+    },
+    {
+     "z": 6.94,
+     "poem": "bhagavatam:10.2-471-సీ.",
+     "line": "నైన ని న్నేమందు?నవనినాథ! \""
+    },
+    {
+     "z": 6.84,
+     "poem": "bhagavatam:8-54-క.",
+     "line": "గరికి మకరి మకరికిఁ గరి"
+    },
+    {
+     "z": 6.64,
+     "poem": "bhagavatam:10.2-469-చ.",
+     "line": "అనవుడు నాతఁ డిట్లనియెనాతనితో \"నిపు డేను దీని నీ"
+    }
+   ],
+   "varna": {
+    "real": {
+     "poem_z_median": 0.174,
+     "poem_z_mean": 0.321,
+     "poem_score_mean": 0.1474,
+     "line_z_median": -0.029,
+     "lines_at_or_above_pct": {
+      "weak": 8.51,
+      "marked": 4.13,
+      "strong": 1.87
+     },
+     "poems_at_or_above_pct": {
+      "weak": 12.14,
+      "marked": 5.35,
+      "strong": 2.34
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.104,
+     "poem_z_mean": 0.23,
+     "poem_score_mean": 0.1423,
+     "line_z_median": -0.087,
+     "lines_at_or_above_pct": {
+      "weak": 8.07,
+      "marked": 3.88,
+      "strong": 1.81
+     },
+     "poems_at_or_above_pct": {
+      "weak": 10.81,
+      "marked": 4.64,
+      "strong": 1.87
+     },
+     "real_poem_beats_control_pct": 53.6
+    },
+    "word_salad": {
+     "poem_z_median": -0.259,
+     "poem_z_mean": -0.176,
+     "poem_score_mean": 0.0877,
+     "line_z_median": -0.236,
+     "lines_at_or_above_pct": {
+      "weak": 5.34,
+      "marked": 2.34,
+      "strong": 1.07
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.62,
+      "marked": 1.26,
+      "strong": 0.23
+     },
+     "real_poem_beats_control_pct": 63.3
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.28,
+     "poem_z_mean": 0.429,
+     "poem_score_mean": 0.1683,
+     "line_z_median": 0.004,
+     "lines_at_or_above_pct": {
+      "weak": 9.6,
+      "marked": 4.68,
+      "strong": 2.03
+     },
+     "poems_at_or_above_pct": {
+      "weak": 14.65,
+      "marked": 6.75,
+      "strong": 2.91
+     },
+     "real_poem_beats_control_pct": 42.59
+    }
+   },
+   "ablation_sthana": {
+    "real": {
+     "poem_z_median": -0.036,
+     "poem_z_mean": 0.098,
+     "poem_score_mean": 0.114,
+     "line_z_median": -0.144,
+     "lines_at_or_above_pct": {
+      "weak": 6.92,
+      "marked": 3.15,
+      "strong": 1.28
+     },
+     "poems_at_or_above_pct": {
+      "weak": 8.34,
+      "marked": 3.6,
+      "strong": 1.15
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.084,
+     "poem_z_mean": 0.054,
+     "poem_score_mean": 0.1167,
+     "line_z_median": -0.16,
+     "lines_at_or_above_pct": {
+      "weak": 7.04,
+      "marked": 3.21,
+      "strong": 1.27
+     },
+     "poems_at_or_above_pct": {
+      "weak": 7.96,
+      "marked": 3.45,
+      "strong": 1.14
+     },
+     "real_poem_beats_control_pct": 53.05
+    },
+    "word_salad": {
+     "poem_z_median": -0.187,
+     "poem_z_mean": -0.089,
+     "poem_score_mean": 0.0957,
+     "line_z_median": -0.203,
+     "lines_at_or_above_pct": {
+      "weak": 5.96,
+      "marked": 2.58,
+      "strong": 0.96
+     },
+     "poems_at_or_above_pct": {
+      "weak": 4.62,
+      "marked": 1.59,
+      "strong": 0.37
+     },
+     "real_poem_beats_control_pct": 54.68
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.029,
+     "poem_z_mean": 0.159,
+     "poem_score_mean": 0.1381,
+     "line_z_median": -0.143,
+     "lines_at_or_above_pct": {
+      "weak": 7.92,
+      "marked": 3.89,
+      "strong": 1.72
+     },
+     "poems_at_or_above_pct": {
+      "weak": 9.92,
+      "marked": 4.05,
+      "strong": 1.29
+     },
+     "real_poem_beats_control_pct": 43.74
+    }
+   },
+   "ablation_blain_varga": {
+    "real": {
+     "poem_z_median": -0.573,
+     "poem_z_mean": -0.49,
+     "poem_score_mean": 0.0541,
+     "line_z_median": -0.355,
+     "lines_at_or_above_pct": {
+      "weak": 3.55,
+      "marked": 1.41,
+      "strong": 0.5
+     },
+     "poems_at_or_above_pct": {
+      "weak": 2.48,
+      "marked": 0.73,
+      "strong": 0.2
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.498,
+     "poem_z_mean": -0.405,
+     "poem_score_mean": 0.065,
+     "line_z_median": -0.331,
+     "lines_at_or_above_pct": {
+      "weak": 4.16,
+      "marked": 1.66,
+      "strong": 0.63
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.01,
+      "marked": 0.96,
+      "strong": 0.29
+     },
+     "real_poem_beats_control_pct": 44.79
+    },
+    "word_salad": {
+     "poem_z_median": -0.599,
+     "poem_z_mean": -0.552,
+     "poem_score_mean": 0.0504,
+     "line_z_median": -0.388,
+     "lines_at_or_above_pct": {
+      "weak": 3.37,
+      "marked": 1.21,
+      "strong": 0.51
+     },
+     "poems_at_or_above_pct": {
+      "weak": 1.3,
+      "marked": 0.26,
+      "strong": 0.05
+     },
+     "real_poem_beats_control_pct": 51.62
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.215,
+     "poem_z_mean": 0.302,
+     "poem_score_mean": 0.1444,
+     "line_z_median": -0.021,
+     "lines_at_or_above_pct": {
+      "weak": 8.8,
+      "marked": 3.96,
+      "strong": 1.42
+     },
+     "poems_at_or_above_pct": {
+      "weak": 11.19,
+      "marked": 4.77,
+      "strong": 1.48
+     },
+     "real_poem_beats_control_pct": 24.68
+    }
+   }
+  },
+  "vemana": {
+   "n_poems": 1164,
+   "n_lines": 4684,
+   "varga": {
+    "real": {
+     "poem_z_median": 0.75,
+     "poem_z_mean": 0.889,
+     "poem_score_mean": 0.1611,
+     "line_z_median": 0.377,
+     "lines_at_or_above_pct": {
+      "weak": 9.29,
+      "marked": 4.68,
+      "strong": 2.11
+     },
+     "poems_at_or_above_pct": {
+      "weak": 22.51,
+      "marked": 10.74,
+      "strong": 4.12
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.011,
+     "poem_z_mean": 0.153,
+     "poem_score_mean": 0.1283,
+     "line_z_median": -0.09,
+     "lines_at_or_above_pct": {
+      "weak": 8.07,
+      "marked": 3.35,
+      "strong": 1.45
+     },
+     "poems_at_or_above_pct": {
+      "weak": 10.57,
+      "marked": 4.04,
+      "strong": 1.37
+     },
+     "real_poem_beats_control_pct": 77.06
+    },
+    "word_salad": {
+     "poem_z_median": -0.242,
+     "poem_z_mean": -0.159,
+     "poem_score_mean": 0.0774,
+     "line_z_median": -0.168,
+     "lines_at_or_above_pct": {
+      "weak": 5.15,
+      "marked": 1.84,
+      "strong": 0.77
+     },
+     "poems_at_or_above_pct": {
+      "weak": 4.64,
+      "marked": 1.29,
+      "strong": 0.34
+     },
+     "real_poem_beats_control_pct": 78.44
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.269,
+     "poem_z_mean": 0.405,
+     "poem_score_mean": 0.1518,
+     "line_z_median": -0.041,
+     "lines_at_or_above_pct": {
+      "weak": 9.31,
+      "marked": 4.14,
+      "strong": 1.67
+     },
+     "poems_at_or_above_pct": {
+      "weak": 14.26,
+      "marked": 6.1,
+      "strong": 2.84
+     },
+     "real_poem_beats_control_pct": 64.69
+    }
+   },
+   "top_lines": [
+    {
+     "z": 7.13,
+     "poem": "vemana:vemana-834-ఆ.",
+     "line": "తనువుఁ దా ననుకొనుఁ దనకుఁదా ననఁదగి"
+    },
+    {
+     "z": 6.84,
+     "poem": "vemana:vemana-391-ఆ.",
+     "line": "నటననైన సాహసముననైన"
+    },
+    {
+     "z": 6.48,
+     "poem": "vemana:vemana-1012-ఆ.",
+     "line": "కాకు లున్నగూడు కోకిల కగునట్లు"
+    },
+    {
+     "z": 6.27,
+     "poem": "vemana:vemana-876-ఆ.",
+     "line": "వాఁడు వాఁడు వాఁడు వాఁడుగాఁడు"
+    },
+    {
+     "z": 6.27,
+     "poem": "vemana:vemana-594-ఆ.",
+     "line": "కామిగాక మోక్షకామి గాఁడు"
+    },
+    {
+     "z": 5.96,
+     "poem": "vemana:vemana-490-ఆ.",
+     "line": "నెమ్మదిని నభవుని నిల్పెనేని"
+    },
+    {
+     "z": 5.88,
+     "poem": "vemana:vemana-266-ఆ.",
+     "line": "లేఁడు లేఁడనినను లేఁడు లేనేలేఁడు"
+    },
+    {
+     "z": 5.88,
+     "poem": "vemana:vemana-266-ఆ.",
+     "line": "తోడు తోడనినను తోడనే తోడౌను"
+    },
+    {
+     "z": 5.72,
+     "poem": "vemana:vemana-769-ఆ.",
+     "line": "చచ్చెఁ చచ్చె ననుచుఁ జావుకు వగచెడు"
+    },
+    {
+     "z": 5.68,
+     "poem": "vemana:vemana-5-ఆ.",
+     "line": "నే విధమున జనుఁడు నెఱుగు, నిన్నును దన్ను?"
+    },
+    {
+     "z": 5.26,
+     "poem": "vemana:vemana-996-ఆ.",
+     "line": "జూచి చూచి మఱియు చూచెనేని"
+    },
+    {
+     "z": 5.24,
+     "poem": "vemana:vemana-280-ఆ.",
+     "line": "రానిధనమునకును దానును కొడుకును"
+    },
+    {
+     "z": 4.93,
+     "poem": "vemana:vemana-942-ఆ.",
+     "line": "మ్రాకెదుగును ననలమునకు మనుజునిలోనన్‌"
+    },
+    {
+     "z": 4.93,
+     "poem": "vemana:vemana-694-ఆ.",
+     "line": "నిన్ను నెఱిఁగినపుడె తన్నుఁదా నెఱుఁగును"
+    },
+    {
+     "z": 4.93,
+     "poem": "vemana:vemana-822-ఆ.",
+     "line": "కాయముఁదగఁ గూడి కడఁగి యోగిగనున్న"
+    }
+   ],
+   "varna": {
+    "real": {
+     "poem_z_median": 1.065,
+     "poem_z_mean": 1.217,
+     "poem_score_mean": 0.3657,
+     "line_z_median": 0.418,
+     "lines_at_or_above_pct": {
+      "weak": 29.01,
+      "marked": 4.97,
+      "strong": 2.48
+     },
+     "poems_at_or_above_pct": {
+      "weak": 31.27,
+      "marked": 16.41,
+      "strong": 7.39
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.289,
+     "poem_z_mean": 0.477,
+     "poem_score_mean": 0.1723,
+     "line_z_median": 0.045,
+     "lines_at_or_above_pct": {
+      "weak": 9.59,
+      "marked": 5.29,
+      "strong": 2.33
+     },
+     "poems_at_or_above_pct": {
+      "weak": 15.81,
+      "marked": 7.73,
+      "strong": 3.26
+     },
+     "real_poem_beats_control_pct": 76.12
+    },
+    "word_salad": {
+     "poem_z_median": 0.092,
+     "poem_z_mean": 0.189,
+     "poem_score_mean": 0.1182,
+     "line_z_median": -0.048,
+     "lines_at_or_above_pct": {
+      "weak": 7.3,
+      "marked": 3.35,
+      "strong": 1.15
+     },
+     "poems_at_or_above_pct": {
+      "weak": 7.65,
+      "marked": 3.01,
+      "strong": 0.95
+     },
+     "real_poem_beats_control_pct": 76.55
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.616,
+     "poem_z_mean": 0.731,
+     "poem_score_mean": 0.2092,
+     "line_z_median": 0.119,
+     "lines_at_or_above_pct": {
+      "weak": 12.19,
+      "marked": 6.19,
+      "strong": 2.5
+     },
+     "poems_at_or_above_pct": {
+      "weak": 19.59,
+      "marked": 9.45,
+      "strong": 5.24
+     },
+     "real_poem_beats_control_pct": 63.66
+    }
+   },
+   "ablation_sthana": {
+    "real": {
+     "poem_z_median": -0.023,
+     "poem_z_mean": 0.166,
+     "poem_score_mean": 0.1306,
+     "line_z_median": -0.341,
+     "lines_at_or_above_pct": {
+      "weak": 7.47,
+      "marked": 3.84,
+      "strong": 1.77
+     },
+     "poems_at_or_above_pct": {
+      "weak": 9.97,
+      "marked": 4.12,
+      "strong": 1.8
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.452,
+     "poem_z_mean": -0.26,
+     "poem_score_mean": 0.0927,
+     "line_z_median": -0.348,
+     "lines_at_or_above_pct": {
+      "weak": 5.49,
+      "marked": 2.67,
+      "strong": 1.2
+     },
+     "poems_at_or_above_pct": {
+      "weak": 6.01,
+      "marked": 2.41,
+      "strong": 0.77
+     },
+     "real_poem_beats_control_pct": 76.37
+    },
+    "word_salad": {
+     "poem_z_median": -0.507,
+     "poem_z_mean": -0.393,
+     "poem_score_mean": 0.0683,
+     "line_z_median": -0.392,
+     "lines_at_or_above_pct": {
+      "weak": 4.23,
+      "marked": 1.88,
+      "strong": 0.68
+     },
+     "poems_at_or_above_pct": {
+      "weak": 2.41,
+      "marked": 0.26,
+      "strong": 0.0
+     },
+     "real_poem_beats_control_pct": 65.21
+    },
+    "consonant_shuffle": {
+     "poem_z_median": -0.333,
+     "poem_z_mean": -0.134,
+     "poem_score_mean": 0.0936,
+     "line_z_median": -0.256,
+     "lines_at_or_above_pct": {
+      "weak": 5.96,
+      "marked": 2.28,
+      "strong": 1.22
+     },
+     "poems_at_or_above_pct": {
+      "weak": 6.27,
+      "marked": 3.01,
+      "strong": 1.63
+     },
+     "real_poem_beats_control_pct": 64.6
+    }
+   },
+   "ablation_blain_varga": {
+    "real": {
+     "poem_z_median": -0.28,
+     "poem_z_mean": -0.165,
+     "poem_score_mean": 0.0608,
+     "line_z_median": -0.041,
+     "lines_at_or_above_pct": {
+      "weak": 3.67,
+      "marked": 1.69,
+      "strong": 0.73
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.87,
+      "marked": 1.37,
+      "strong": 0.43
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.437,
+     "poem_z_mean": -0.333,
+     "poem_score_mean": 0.0581,
+     "line_z_median": -0.302,
+     "lines_at_or_above_pct": {
+      "weak": 3.82,
+      "marked": 1.47,
+      "strong": 0.62
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.18,
+      "marked": 1.29,
+      "strong": 0.43
+     },
+     "real_poem_beats_control_pct": 62.37
+    },
+    "word_salad": {
+     "poem_z_median": -0.549,
+     "poem_z_mean": -0.493,
+     "poem_score_mean": 0.0359,
+     "line_z_median": -0.363,
+     "lines_at_or_above_pct": {
+      "weak": 2.58,
+      "marked": 0.77,
+      "strong": 0.23
+     },
+     "poems_at_or_above_pct": {
+      "weak": 1.03,
+      "marked": 0.43,
+      "strong": 0.09
+     },
+     "real_poem_beats_control_pct": 59.88
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.17,
+     "poem_z_mean": 0.311,
+     "poem_score_mean": 0.1377,
+     "line_z_median": -0.001,
+     "lines_at_or_above_pct": {
+      "weak": 8.65,
+      "marked": 3.59,
+      "strong": 1.49
+     },
+     "poems_at_or_above_pct": {
+      "weak": 12.2,
+      "marked": 4.73,
+      "strong": 1.63
+     },
+     "real_poem_beats_control_pct": 34.28
+    }
+   }
+  },
+  "kuchimanchi_timmakavi": {
+   "n_poems": 1642,
+   "n_lines": 8548,
+   "varga": {
+    "real": {
+     "poem_z_median": 0.673,
+     "poem_z_mean": 0.819,
+     "poem_score_mean": 0.224,
+     "line_z_median": 0.177,
+     "lines_at_or_above_pct": {
+      "weak": 11.87,
+      "marked": 6.33,
+      "strong": 3.18
+     },
+     "poems_at_or_above_pct": {
+      "weak": 21.38,
+      "marked": 11.14,
+      "strong": 4.87
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.373,
+     "poem_z_mean": 0.52,
+     "poem_score_mean": 0.1606,
+     "line_z_median": 0.0,
+     "lines_at_or_above_pct": {
+      "weak": 9.62,
+      "marked": 4.22,
+      "strong": 1.86
+     },
+     "poems_at_or_above_pct": {
+      "weak": 15.29,
+      "marked": 7.37,
+      "strong": 2.62
+     },
+     "real_poem_beats_control_pct": 59.44
+    },
+    "word_salad": {
+     "poem_z_median": -0.004,
+     "poem_z_mean": 0.07,
+     "poem_score_mean": 0.0922,
+     "line_z_median": -0.094,
+     "lines_at_or_above_pct": {
+      "weak": 6.23,
+      "marked": 2.23,
+      "strong": 0.8
+     },
+     "poems_at_or_above_pct": {
+      "weak": 5.54,
+      "marked": 2.07,
+      "strong": 0.37
+     },
+     "real_poem_beats_control_pct": 69.24
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.626,
+     "poem_z_mean": 0.77,
+     "poem_score_mean": 0.2024,
+     "line_z_median": 0.177,
+     "lines_at_or_above_pct": {
+      "weak": 11.79,
+      "marked": 5.65,
+      "strong": 2.4
+     },
+     "poems_at_or_above_pct": {
+      "weak": 21.38,
+      "marked": 10.29,
+      "strong": 4.51
+     },
+     "real_poem_beats_control_pct": 47.32
+    }
+   },
+   "top_lines": [
+    {
+     "z": 9.01,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-435",
+     "line": "నేను నెనలేని నెమ్మది నెనయు నెడల"
+    },
+    {
+     "z": 8.25,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-354",
+     "line": "గనుగొను బల్లిదునకైనఁ గనరాని నినున్‌"
+    },
+    {
+     "z": 7.71,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-106",
+     "line": "నతి శతక్రతుముఖాదితిసుతాతతకృత-"
+    },
+    {
+     "z": 7.51,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1033",
+     "line": "కనుఁగుఁ గొడుకగు కోఁతి కన్నాకునందు"
+    },
+    {
+     "z": 7.49,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-619",
+     "line": "అక్కైక కొడుకుఁ గనుఁగొని"
+    },
+    {
+     "z": 7.08,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1487",
+     "line": "అది నిండెనేని? నిన్ననిఁ"
+    },
+    {
+     "z": 6.27,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-154",
+     "line": "కక్కుచుఁ బల్లకీ కుక్కులెక్కి"
+    },
+    {
+     "z": 6.25,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-425",
+     "line": "నాఁగఁ దగు నెన్న నన్న! యన్నాతి మిన్న"
+    },
+    {
+     "z": 6.08,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-571",
+     "line": "కడుగుకొనియెఁ గాక కైక యహహ! నినుం గా"
+    },
+    {
+     "z": 6.01,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-595",
+     "line": "రా! యను గన్నవారు నగరా! యను నిప్పని మానురా! యనున్‌"
+    },
+    {
+     "z": 5.93,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-303",
+     "line": "క్కొనఁ గన్గొని నాతో ని"
+    },
+    {
+     "z": 5.72,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1613",
+     "line": "అనుచు నానతిడిన నాతఁ డాతనిఁదోడు"
+    },
+    {
+     "z": 5.63,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-650",
+     "line": "నెంచి మును నల్వ మొనలను నినుప మొనల"
+    },
+    {
+     "z": 5.62,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-610",
+     "line": "దనిపె నెదనెన్న నమ్మన్ను తాల్పు మిన్న"
+    },
+    {
+     "z": 5.58,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-957",
+     "line": "అనిన నన్నెలంత యన్న! నీ నిక్కపు"
+    }
+   ],
+   "varna": {
+    "real": {
+     "poem_z_median": 0.794,
+     "poem_z_mean": 0.99,
+     "poem_score_mean": 0.2551,
+     "line_z_median": 0.234,
+     "lines_at_or_above_pct": {
+      "weak": 14.33,
+      "marked": 7.11,
+      "strong": 3.66
+     },
+     "poems_at_or_above_pct": {
+      "weak": 26.07,
+      "marked": 14.25,
+      "strong": 6.82
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.518,
+     "poem_z_mean": 0.649,
+     "poem_score_mean": 0.1874,
+     "line_z_median": 0.07,
+     "lines_at_or_above_pct": {
+      "weak": 10.47,
+      "marked": 5.04,
+      "strong": 2.22
+     },
+     "poems_at_or_above_pct": {
+      "weak": 17.9,
+      "marked": 8.04,
+      "strong": 3.59
+     },
+     "real_poem_beats_control_pct": 60.96
+    },
+    "word_salad": {
+     "poem_z_median": 0.056,
+     "poem_z_mean": 0.152,
+     "poem_score_mean": 0.1055,
+     "line_z_median": -0.07,
+     "lines_at_or_above_pct": {
+      "weak": 6.53,
+      "marked": 2.97,
+      "strong": 1.1
+     },
+     "poems_at_or_above_pct": {
+      "weak": 7.13,
+      "marked": 2.07,
+      "strong": 0.3
+     },
+     "real_poem_beats_control_pct": 69.79
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.688,
+     "poem_z_mean": 0.843,
+     "poem_score_mean": 0.2145,
+     "line_z_median": 0.142,
+     "lines_at_or_above_pct": {
+      "weak": 11.99,
+      "marked": 5.94,
+      "strong": 2.78
+     },
+     "poems_at_or_above_pct": {
+      "weak": 23.57,
+      "marked": 11.63,
+      "strong": 4.81
+     },
+     "real_poem_beats_control_pct": 49.76
+    }
+   },
+   "ablation_sthana": {
+    "real": {
+     "poem_z_median": 0.039,
+     "poem_z_mean": 0.146,
+     "poem_score_mean": 0.1105,
+     "line_z_median": -0.074,
+     "lines_at_or_above_pct": {
+      "weak": 6.79,
+      "marked": 2.92,
+      "strong": 1.19
+     },
+     "poems_at_or_above_pct": {
+      "weak": 8.83,
+      "marked": 3.17,
+      "strong": 1.1
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.111,
+     "poem_z_mean": 0.007,
+     "poem_score_mean": 0.0976,
+     "line_z_median": -0.164,
+     "lines_at_or_above_pct": {
+      "weak": 6.05,
+      "marked": 2.62,
+      "strong": 0.98
+     },
+     "poems_at_or_above_pct": {
+      "weak": 6.82,
+      "marked": 2.56,
+      "strong": 0.91
+     },
+     "real_poem_beats_control_pct": 57.13
+    },
+    "word_salad": {
+     "poem_z_median": -0.232,
+     "poem_z_mean": -0.155,
+     "poem_score_mean": 0.0813,
+     "line_z_median": -0.219,
+     "lines_at_or_above_pct": {
+      "weak": 5.13,
+      "marked": 2.2,
+      "strong": 0.83
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.11,
+      "marked": 0.97,
+      "strong": 0.24
+     },
+     "real_poem_beats_control_pct": 58.89
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.042,
+     "poem_z_mean": 0.156,
+     "poem_score_mean": 0.1236,
+     "line_z_median": -0.123,
+     "lines_at_or_above_pct": {
+      "weak": 7.15,
+      "marked": 3.51,
+      "strong": 1.5
+     },
+     "poems_at_or_above_pct": {
+      "weak": 9.81,
+      "marked": 3.59,
+      "strong": 1.34
+     },
+     "real_poem_beats_control_pct": 46.95
+    }
+   },
+   "ablation_blain_varga": {
+    "real": {
+     "poem_z_median": -0.413,
+     "poem_z_mean": -0.318,
+     "poem_score_mean": 0.0664,
+     "line_z_median": -0.294,
+     "lines_at_or_above_pct": {
+      "weak": 4.19,
+      "marked": 1.72,
+      "strong": 0.66
+     },
+     "poems_at_or_above_pct": {
+      "weak": 4.02,
+      "marked": 1.04,
+      "strong": 0.55
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.376,
+     "poem_z_mean": -0.282,
+     "poem_score_mean": 0.0717,
+     "line_z_median": -0.275,
+     "lines_at_or_above_pct": {
+      "weak": 4.6,
+      "marked": 1.78,
+      "strong": 0.71
+     },
+     "poems_at_or_above_pct": {
+      "weak": 4.38,
+      "marked": 1.52,
+      "strong": 0.18
+     },
+     "real_poem_beats_control_pct": 47.93
+    },
+    "word_salad": {
+     "poem_z_median": -0.561,
+     "poem_z_mean": -0.482,
+     "poem_score_mean": 0.0527,
+     "line_z_median": -0.353,
+     "lines_at_or_above_pct": {
+      "weak": 3.57,
+      "marked": 1.25,
+      "strong": 0.4
+     },
+     "poems_at_or_above_pct": {
+      "weak": 1.89,
+      "marked": 0.55,
+      "strong": 0.06
+     },
+     "real_poem_beats_control_pct": 55.18
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.453,
+     "poem_z_mean": 0.577,
+     "poem_score_mean": 0.1674,
+     "line_z_median": 0.099,
+     "lines_at_or_above_pct": {
+      "weak": 10.47,
+      "marked": 4.45,
+      "strong": 1.72
+     },
+     "poems_at_or_above_pct": {
+      "weak": 17.17,
+      "marked": 7.37,
+      "strong": 2.56
+     },
+     "real_poem_beats_control_pct": 23.02
+    }
+   }
+  },
+  "chandassu": {
+   "n_poems": 2532,
+   "n_lines": 14302,
+   "varga": {
+    "real": {
+     "poem_z_median": 0.413,
+     "poem_z_mean": 0.531,
+     "poem_score_mean": 0.1722,
+     "line_z_median": 0.05,
+     "lines_at_or_above_pct": {
+      "weak": 9.78,
+      "marked": 4.64,
+      "strong": 1.89
+     },
+     "poems_at_or_above_pct": {
+      "weak": 16.75,
+      "marked": 8.53,
+      "strong": 3.44
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.185,
+     "poem_z_mean": 0.311,
+     "poem_score_mean": 0.158,
+     "line_z_median": -0.062,
+     "lines_at_or_above_pct": {
+      "weak": 8.64,
+      "marked": 4.11,
+      "strong": 1.69
+     },
+     "poems_at_or_above_pct": {
+      "weak": 12.36,
+      "marked": 5.65,
+      "strong": 1.9
+     },
+     "real_poem_beats_control_pct": 58.41
+    },
+    "word_salad": {
+     "poem_z_median": -0.257,
+     "poem_z_mean": -0.175,
+     "poem_score_mean": 0.0847,
+     "line_z_median": -0.2,
+     "lines_at_or_above_pct": {
+      "weak": 5.69,
+      "marked": 2.38,
+      "strong": 0.79
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.52,
+      "marked": 1.22,
+      "strong": 0.28
+     },
+     "real_poem_beats_control_pct": 66.75
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.406,
+     "poem_z_mean": 0.542,
+     "poem_score_mean": 0.1861,
+     "line_z_median": -0.015,
+     "lines_at_or_above_pct": {
+      "weak": 10.14,
+      "marked": 4.68,
+      "strong": 2.01
+     },
+     "poems_at_or_above_pct": {
+      "weak": 16.55,
+      "marked": 7.94,
+      "strong": 3.12
+     },
+     "real_poem_beats_control_pct": 47.99
+    }
+   },
+   "top_lines": [
+    {
+     "z": 10.31,
+     "poem": "chandassu:chandassu-ontimittaraguveera-110-శా.",
+     "line": "త్రేతా ద్వాపరసంధి నుద్ధతమదాంధీభూత ధాత్రీధవ"
+    },
+    {
+     "z": 9.86,
+     "poem": "chandassu:chandassu-srikaalahasteeswara-24-శా.",
+     "line": "నిన్ను న్నమ్మినరీతినమ్మనొరులన్‌, నీకన్న నాకెన్నలే"
+    },
+    {
+     "z": 9.4,
+     "poem": "chandassu:chandassu-narasimha-43-సీ.",
+     "line": "నళినదళనేత్ర! నిన్ను నే నమ్మినాను"
+    },
+    {
+     "z": 9.4,
+     "poem": "chandassu:chandassu-narasimha-61-సీ.",
+     "line": "నళినదళనేత్ర! నిన్ను నే నమ్మినాను"
+    },
+    {
+     "z": 7.19,
+     "poem": "chandassu:chandassu-laavanya-82-సీ.",
+     "line": "కలవి గ్రక్కకురె కోకిలలార మీ కూక"
+    },
+    {
+     "z": 6.92,
+     "poem": "chandassu:chandassu-sampangimanna-3-క.",
+     "line": "నినుఁజెప్పనేర నైనను"
+    },
+    {
+     "z": 6.53,
+     "poem": "chandassu:chandassu-taadimallaraajagopaala-59-సీ.",
+     "line": "పనిబూని నన్నిటు బంపెనన్న"
+    },
+    {
+     "z": 6.5,
+     "poem": "chandassu:chandassu-laavanya-97-సీ.",
+     "line": "నను నీవు నిను నేను గనువేళ యెట్టిదో"
+    },
+    {
+     "z": 6.44,
+     "poem": "chandassu:chandassu-taadimallaraajagopaala-8-సీ.",
+     "line": "నెన్ని సొమ్ములునైన నేనిత్తు నీకు"
+    },
+    {
+     "z": 6.32,
+     "poem": "chandassu:chandassu-ontimittaraguveera-36-మ.",
+     "line": "గొనసాగున్; జననంబు లుక్కడఁగు నీకున్ మ్రొక్కెనేనిన్ బున"
+    },
+    {
+     "z": 6.27,
+     "poem": "chandassu:chandassu-kumaarii-12-క.",
+     "line": "పతి పాపపుఁ బనిఁజెప్పినఁ"
+    },
+    {
+     "z": 6.27,
+     "poem": "chandassu:chandassu-vrushadhipa-31-ఉ.",
+     "line": "ఉద్ధతభక్తవృద్ధ! వినుతోత్తమ సిద్ధపరీత జంగమ"
+    },
+    {
+     "z": 6.06,
+     "poem": "chandassu:chandassu-daasarathi-8-ఉ.",
+     "line": "ద్ధార దురంతపాతకవితానవిదూర ఖరాదిదైత్యకాం"
+    },
+    {
+     "z": 6.03,
+     "poem": "chandassu:chandassu-bhaskara-49-చ.",
+     "line": "కనుగవ లెస్సఁగా దెలివి గల్గిన వారికి గాక గ్రుడ్డికిన్‌"
+    },
+    {
+     "z": 5.98,
+     "poem": "chandassu:chandassu-devakinandana-20-మ.",
+     "line": "కలనైనన్‌ నగియైనఁ గోప మెసఁగంగా నైన మీనామ ని"
+    }
+   ],
+   "varna": {
+    "real": {
+     "poem_z_median": 0.391,
+     "poem_z_mean": 0.552,
+     "poem_score_mean": 0.1758,
+     "line_z_median": 0.029,
+     "lines_at_or_above_pct": {
+      "weak": 9.92,
+      "marked": 4.96,
+      "strong": 2.01
+     },
+     "poems_at_or_above_pct": {
+      "weak": 18.68,
+      "marked": 9.91,
+      "strong": 4.3
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": 0.254,
+     "poem_z_mean": 0.377,
+     "poem_score_mean": 0.1711,
+     "line_z_median": -0.029,
+     "lines_at_or_above_pct": {
+      "weak": 8.92,
+      "marked": 4.52,
+      "strong": 2.2
+     },
+     "poems_at_or_above_pct": {
+      "weak": 14.02,
+      "marked": 6.91,
+      "strong": 2.37
+     },
+     "real_poem_beats_control_pct": 56.04
+    },
+    "word_salad": {
+     "poem_z_median": -0.225,
+     "poem_z_mean": -0.155,
+     "poem_score_mean": 0.089,
+     "line_z_median": -0.204,
+     "lines_at_or_above_pct": {
+      "weak": 5.62,
+      "marked": 2.44,
+      "strong": 1.1
+     },
+     "poems_at_or_above_pct": {
+      "weak": 4.66,
+      "marked": 1.18,
+      "strong": 0.28
+     },
+     "real_poem_beats_control_pct": 67.26
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.427,
+     "poem_z_mean": 0.58,
+     "poem_score_mean": 0.1877,
+     "line_z_median": 0.048,
+     "lines_at_or_above_pct": {
+      "weak": 9.95,
+      "marked": 4.71,
+      "strong": 2.09
+     },
+     "poems_at_or_above_pct": {
+      "weak": 18.56,
+      "marked": 8.37,
+      "strong": 3.91
+     },
+     "real_poem_beats_control_pct": 46.13
+    }
+   },
+   "ablation_sthana": {
+    "real": {
+     "poem_z_median": -0.069,
+     "poem_z_mean": 0.099,
+     "poem_score_mean": 0.1128,
+     "line_z_median": -0.145,
+     "lines_at_or_above_pct": {
+      "weak": 6.87,
+      "marked": 2.95,
+      "strong": 1.24
+     },
+     "poems_at_or_above_pct": {
+      "weak": 9.83,
+      "marked": 3.87,
+      "strong": 1.54
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.132,
+     "poem_z_mean": 0.032,
+     "poem_score_mean": 0.1224,
+     "line_z_median": -0.166,
+     "lines_at_or_above_pct": {
+      "weak": 7.22,
+      "marked": 3.19,
+      "strong": 1.29
+     },
+     "poems_at_or_above_pct": {
+      "weak": 8.73,
+      "marked": 3.59,
+      "strong": 1.46
+     },
+     "real_poem_beats_control_pct": 54.82
+    },
+    "word_salad": {
+     "poem_z_median": -0.23,
+     "poem_z_mean": -0.129,
+     "poem_score_mean": 0.0945,
+     "line_z_median": -0.226,
+     "lines_at_or_above_pct": {
+      "weak": 5.95,
+      "marked": 2.56,
+      "strong": 1.06
+     },
+     "poems_at_or_above_pct": {
+      "weak": 4.3,
+      "marked": 1.46,
+      "strong": 0.51
+     },
+     "real_poem_beats_control_pct": 55.21
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.057,
+     "poem_z_mean": 0.16,
+     "poem_score_mean": 0.1364,
+     "line_z_median": -0.144,
+     "lines_at_or_above_pct": {
+      "weak": 7.92,
+      "marked": 3.64,
+      "strong": 1.58
+     },
+     "poems_at_or_above_pct": {
+      "weak": 10.31,
+      "marked": 4.19,
+      "strong": 1.7
+     },
+     "real_poem_beats_control_pct": 44.15
+    }
+   },
+   "ablation_blain_varga": {
+    "real": {
+     "poem_z_median": -0.528,
+     "poem_z_mean": -0.452,
+     "poem_score_mean": 0.0568,
+     "line_z_median": -0.334,
+     "lines_at_or_above_pct": {
+      "weak": 3.69,
+      "marked": 1.41,
+      "strong": 0.58
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.24,
+      "marked": 1.11,
+      "strong": 0.39
+     }
+    },
+    "word_shuffle": {
+     "poem_z_median": -0.461,
+     "poem_z_mean": -0.402,
+     "poem_score_mean": 0.0761,
+     "line_z_median": -0.318,
+     "lines_at_or_above_pct": {
+      "weak": 4.55,
+      "marked": 1.97,
+      "strong": 0.85
+     },
+     "poems_at_or_above_pct": {
+      "weak": 3.44,
+      "marked": 1.22,
+      "strong": 0.24
+     },
+     "real_poem_beats_control_pct": 46.96
+    },
+    "word_salad": {
+     "poem_z_median": -0.642,
+     "poem_z_mean": -0.597,
+     "poem_score_mean": 0.0527,
+     "line_z_median": -0.378,
+     "lines_at_or_above_pct": {
+      "weak": 3.73,
+      "marked": 1.39,
+      "strong": 0.51
+     },
+     "poems_at_or_above_pct": {
+      "weak": 1.22,
+      "marked": 0.28,
+      "strong": 0.08
+     },
+     "real_poem_beats_control_pct": 53.52
+    },
+    "consonant_shuffle": {
+     "poem_z_median": 0.343,
+     "poem_z_mean": 0.398,
+     "poem_score_mean": 0.1538,
+     "line_z_median": -0.0,
+     "lines_at_or_above_pct": {
+      "weak": 9.08,
+      "marked": 3.87,
+      "strong": 1.48
+     },
+     "poems_at_or_above_pct": {
+      "weak": 12.95,
+      "marked": 5.06,
+      "strong": 1.62
+     },
+     "real_poem_beats_control_pct": 24.21
+    }
+   }
+  }
+ },
+ "lift_by_distance": {
+  "varga": {
+   "1": 0.659,
+   "2": 1.102,
+   "3": 1.067,
+   "4": 1.046,
+   "5": 1.074,
+   "6": 1.149,
+   "7": 1.224,
+   "8": 1.204
+  },
+  "varna": {
+   "1": 0.667,
+   "2": 1.122,
+   "3": 1.093,
+   "4": 1.061,
+   "5": 1.099,
+   "6": 1.182,
+   "7": 1.262,
+   "8": 1.239
+  }
+ },
+ "known_groups": {
+  "source": "metrics/initial_evals/Outputs/chandas_dataset.json",
+  "groups": {
+   "antyanuprasa": {
+    "n": 12,
+    "median_z_varga": 3.19,
+    "median_z_varna": 3.411,
+    "median_z_ablation_sthana": 2.815,
+    "median_z_ablation_blain_varga": 1.19
+   },
+   "atishayokti": {
+    "n": 12,
+    "median_z_varga": 1.896,
+    "median_z_varna": 1.953,
+    "median_z_ablation_sthana": 1.522,
+    "median_z_ablation_blain_varga": 0.859
+   },
+   "chekanuprasa": {
+    "n": 12,
+    "median_z_varga": 3.069,
+    "median_z_varna": 3.434,
+    "median_z_ablation_sthana": 2.838,
+    "median_z_ablation_blain_varga": 1.001
+   },
+   "muktapadagrasta": {
+    "n": 12,
+    "median_z_varga": 3.164,
+    "median_z_varna": 3.667,
+    "median_z_ablation_sthana": 2.158,
+    "median_z_ablation_blain_varga": 0.822
+   },
+   "rupaka": {
+    "n": 12,
+    "median_z_varga": 2.178,
+    "median_z_varna": 1.623,
+    "median_z_ablation_sthana": 1.583,
+    "median_z_ablation_blain_varga": 1.413
+   },
+   "shlesha": {
+    "n": 12,
+    "median_z_varga": 1.904,
+    "median_z_varna": 1.812,
+    "median_z_ablation_sthana": 1.96,
+    "median_z_ablation_blain_varga": 0.777
+   },
+   "upama": {
+    "n": 12,
+    "median_z_varga": 2.147,
+    "median_z_varna": 1.82,
+    "median_z_ablation_sthana": 1.702,
+    "median_z_ablation_blain_varga": 1.118
+   },
+   "vrittyanuprasa": {
+    "n": 12,
+    "median_z_varga": 3.076,
+    "median_z_varna": 3.375,
+    "median_z_ablation_sthana": 2.313,
+    "median_z_ablation_blain_varga": 1.364
+   },
+   "yamaka": {
+    "n": 12,
+    "median_z_varga": 2.824,
+    "median_z_varna": 3.187,
+    "median_z_ablation_sthana": 3.156,
+    "median_z_ablation_blain_varga": 0.861
+   }
+  },
+  "auc_sabda_vs_artha_varga": 0.7757,
+  "auc_sabda_vs_artha_varna": 0.808,
+  "auc_sabda_vs_artha_ablation_sthana": 0.709,
+  "auc_sabda_vs_artha_ablation_blain_varga": 0.5184,
+  "n_sabda": 60,
+  "n_artha": 48
+ }
+}

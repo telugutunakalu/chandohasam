@@ -1,0 +1,748 @@
+{
+ "version": "1.0",
+ "seed": 42,
+ "cuts": {
+  "line": [
+   4.592,
+   5.2567,
+   6.4893,
+   7.6211
+  ],
+  "poem": [
+   5.1211,
+   5.539,
+   6.3311,
+   7.0623
+  ]
+ },
+ "reference": {
+  "reference_corpus": "train.jsonl",
+  "reference_poems": 362247,
+  "akshara_tokens": 21165312,
+  "akshara_types": 9828,
+  "bigrams_kept": 209769,
+  "trigrams_kept": 920179,
+  "min_counts": {
+   "bigram": 2,
+   "trigram": 3,
+   "word": 2
+  },
+  "word_tokens": 5711615,
+  "word_types": 1700762,
+  "words_kept": 356831
+ },
+ "contrasts": {
+  "contrasts": [
+   {
+    "clearer": "kas_4_59_prasada",
+    "obscurer": "kas_4_5_aprayukta",
+    "basis": "The treatise: well-known words (4.57) against a word poets do not use (4.5).",
+    "surprisal_clearer": 5.307,
+    "surprisal_obscurer": 8.816,
+    "in_order": true
+   },
+   {
+    "clearer": "kas_4_59_prasada",
+    "obscurer": "kas_4_8_asamartha",
+    "basis": "The treatise: well-known words against an unestablished usage (4.8).",
+    "surprisal_clearer": 5.307,
+    "surprisal_obscurer": 5.681,
+    "in_order": true
+   },
+   {
+    "clearer": "kas_4_59_prasada",
+    "obscurer": "kas_4_15_apratita",
+    "basis": "The treatise: well-known words against words found only in śāstras (4.15).",
+    "surprisal_clearer": 5.307,
+    "surprisal_obscurer": 6.562,
+    "in_order": true
+   },
+   {
+    "clearer": "kas_4_59_prasada",
+    "obscurer": "kas_4_17_klishta",
+    "basis": "The treatise: well-known words against a far-fetched expression (4.17).",
+    "surprisal_clearer": 5.307,
+    "surprisal_obscurer": 6.042,
+    "in_order": true
+   },
+   {
+    "clearer": "kd_1_45_prasada",
+    "obscurer": "kd_1_46_vyutpanna",
+    "basis": "Daṇḍin: of well-known meaning (1.45) against the learned but not current (1.46). Sanskrit, scored with the Telugu model.",
+    "surprisal_clearer": 9.468,
+    "surprisal_obscurer": 13.249,
+    "in_order": true
+   }
+  ],
+  "in_order": "5/5",
+  "exemplars": {
+   "kas_4_59_prasada": {
+    "surprisal": 5.307,
+    "label": "leaning_clear",
+    "percentile": 82.4,
+    "zipf": 2.635,
+    "known_word_share": 0.467
+   },
+   "kas_4_5_aprayukta": {
+    "surprisal": 8.816,
+    "label": "obscure",
+    "percentile": 0.9,
+    "zipf": 2.805,
+    "known_word_share": 0.333
+   },
+   "kas_4_8_asamartha": {
+    "surprisal": 5.681,
+    "label": "ordinary",
+    "percentile": 62.1,
+    "zipf": 2.848,
+    "known_word_share": 0.333
+   },
+   "kas_4_15_apratita": {
+    "surprisal": 6.562,
+    "label": "leaning_obscure",
+    "percentile": 22.1,
+    "zipf": 3.629,
+    "known_word_share": 0.857
+   },
+   "kas_4_17_klishta": {
+    "surprisal": 6.042,
+    "label": "ordinary",
+    "percentile": 42.6,
+    "zipf": 2.13,
+    "known_word_share": 0.0
+   },
+   "kd_1_45_prasada": {
+    "surprisal": 9.468,
+    "label": "obscure",
+    "percentile": 0.7,
+    "zipf": 2.65,
+    "known_word_share": 0.5
+   },
+   "kd_1_46_vyutpanna": {
+    "surprisal": 13.249,
+    "label": "obscure",
+    "percentile": 0.0,
+    "zipf": 2.13,
+    "known_word_share": 0.0
+   }
+  }
+ },
+ "corpora": {
+  "bhagavatam": {
+   "n_poems": 7366,
+   "surprisal": {
+    "n": 7366,
+    "mean": 5.8976,
+    "sd": 0.7635,
+    "p10": 5.0497,
+    "median": 5.7706,
+    "p90": 6.9428
+   },
+   "perplexity_of_mean": 59.6,
+   "zipf": {
+    "n": 7366,
+    "mean": 3.4,
+    "sd": 0.3815,
+    "p10": 2.9033,
+    "median": 3.4086,
+    "p90": 3.8823
+   },
+   "known_word_share": {
+    "n": 7366,
+    "mean": 0.6207,
+    "sd": 0.1509,
+    "p10": 0.4211,
+    "median": 0.6364,
+    "p90": 0.8
+   },
+   "poem_levels_pct": {
+    "obscure": 8.42,
+    "leaning_obscure": 15.14,
+    "ordinary": 40.62,
+    "leaning_clear": 23.07,
+    "clear": 12.76
+   },
+   "word_shuffle": {
+    "mean_real": 5.898,
+    "mean_shuffled": 6.457,
+    "real_clearer_pct": 96.17
+   },
+   "akshara_shuffle": {
+    "mean_real": 5.898,
+    "mean_shuffled": 11.496,
+    "real_clearer_pct": 100.0
+   },
+   "by_order": {
+    "1": {
+     "mean_surprisal": 7.94,
+     "real_clearer_than_word_shuffled_pct": 0.0
+    },
+    "2": {
+     "mean_surprisal": 6.458,
+     "real_clearer_than_word_shuffled_pct": 90.4
+    },
+    "3": {
+     "mean_surprisal": 5.898,
+     "real_clearer_than_word_shuffled_pct": 96.4
+    }
+   },
+   "spearman_of_surprisal_with": {
+    "zipf": -0.2906,
+    "known_word_share": -0.2752,
+    "ojas": 0.1008,
+    "word_length": -0.1695,
+    "conjunct_rate": 0.2987,
+    "madhurya": -0.1985,
+    "anuprasa_z": 0.0227,
+    "poem_length": 0.0188
+   },
+   "clearest_lines": [
+    {
+     "surprisal": 2.9,
+     "poem": "bhagavatam:3-395-సీ.",
+     "line": "హస్తముల్ మొగిచి యిట్లనియె బ్రీతి"
+    },
+    {
+     "surprisal": 3.06,
+     "poem": "bhagavatam:10.2-822-సీ.",
+     "line": "గంకణ ఝణఝణత్కారంబు శోభిల్ల-"
+    },
+    {
+     "surprisal": 3.06,
+     "poem": "bhagavatam:3-858-క.",
+     "line": "అనియిట్లు విన్నవించిన"
+    },
+    {
+     "surprisal": 3.08,
+     "poem": "bhagavatam:9-488-క.",
+     "line": "సప్తర్షిమండలంబున"
+    },
+    {
+     "surprisal": 3.11,
+     "poem": "bhagavatam:10.2-698-తే.",
+     "line": "\"అనఘచారిత్ర! రాజసూయాధ్వరంబుఁ"
+    },
+    {
+     "surprisal": 3.13,
+     "poem": "bhagavatam:10.2-965-సీ.",
+     "line": "తనయునిఁ జూచి యిట్లనియెఁ బ్రీతి"
+    },
+    {
+     "surprisal": 3.13,
+     "poem": "bhagavatam:4-392-సీ.",
+     "line": "గనుఁగొని పలికె నోయనఘచరిత!"
+    },
+    {
+     "surprisal": 3.18,
+     "poem": "bhagavatam:5.2-141-సీ.",
+     "line": "తల్లిదండ్రులకునుధరణిసురులకును-"
+    }
+   ],
+   "hardest_lines": [
+    {
+     "surprisal": 13.12,
+     "poem": "bhagavatam:9-273-క.",
+     "line": "మాలిన్వాలిన్ దశాస్యమానోన్మూలిన్."
+    },
+    {
+     "surprisal": 12.54,
+     "poem": "bhagavatam:10.2-385-క.",
+     "line": "న్నద్ధున్,శరవిద్ధు, న్నని"
+    },
+    {
+     "surprisal": 12.51,
+     "poem": "bhagavatam:2-94-సీ.",
+     "line": "స్నేహౌషధీ బహులోహచాతుర్హోత్ర-"
+    },
+    {
+     "surprisal": 12.37,
+     "poem": "bhagavatam:10.1-282-క.",
+     "line": "దూరితషడ్వర్గుఁ గుజనదుర్గున్ గర్గున్."
+    },
+    {
+     "surprisal": 12.23,
+     "poem": "bhagavatam:10.1-799-క.",
+     "line": "శామంతికా స్రగంచిత"
+    },
+    {
+     "surprisal": 12.01,
+     "poem": "bhagavatam:2-158-సీ.",
+     "line": "జంపకేందుస్వర్ణశఫర ధనుర్నీల-"
+    },
+    {
+     "surprisal": 11.9,
+     "poem": "bhagavatam:9-601-క.",
+     "line": "కల్లోలోత్ఫుల్ల యూథికాగిరిమల్లీ"
+    },
+    {
+     "surprisal": 11.71,
+     "poem": "bhagavatam:10.1-685-క.",
+     "line": "లీశా!యీ మూఢజాతులీసజ్జాతుల్"
+    }
+   ]
+  },
+  "vemana": {
+   "n_poems": 1164,
+   "surprisal": {
+    "n": 1164,
+    "mean": 5.6383,
+    "sd": 0.54,
+    "p10": 4.9819,
+    "median": 5.5927,
+    "p90": 6.3733
+   },
+   "perplexity_of_mean": 49.8,
+   "zipf": {
+    "n": 1164,
+    "mean": 3.4727,
+    "sd": 0.3243,
+    "p10": 3.0646,
+    "median": 3.4548,
+    "p90": 3.8857
+   },
+   "known_word_share": {
+    "n": 1164,
+    "mean": 0.692,
+    "sd": 0.1303,
+    "p10": 0.5333,
+    "median": 0.6923,
+    "p90": 0.8667
+   },
+   "poem_levels_pct": {
+    "obscure": 1.03,
+    "leaning_obscure": 9.97,
+    "ordinary": 42.27,
+    "leaning_clear": 29.73,
+    "clear": 17.01
+   },
+   "word_shuffle": {
+    "mean_real": 5.638,
+    "mean_shuffled": 6.062,
+    "real_clearer_pct": 91.75
+   },
+   "akshara_shuffle": {
+    "mean_real": 5.638,
+    "mean_shuffled": 10.774,
+    "real_clearer_pct": 100.0
+   },
+   "by_order": {
+    "1": {
+     "mean_surprisal": 7.587,
+     "real_clearer_than_word_shuffled_pct": 0.0
+    },
+    "2": {
+     "mean_surprisal": 6.284,
+     "real_clearer_than_word_shuffled_pct": 79.9
+    },
+    "3": {
+     "mean_surprisal": 5.638,
+     "real_clearer_than_word_shuffled_pct": 93.73
+    }
+   },
+   "spearman_of_surprisal_with": {
+    "zipf": -0.2418,
+    "known_word_share": -0.2257,
+    "ojas": 0.0951,
+    "word_length": -0.2029,
+    "conjunct_rate": 0.2467,
+    "madhurya": -0.2209,
+    "anuprasa_z": -0.0282,
+    "poem_length": -0.3385
+   },
+   "clearest_lines": [
+    {
+     "surprisal": 3.52,
+     "poem": "vemana:vemana-983-ఆ.",
+     "line": "అరిషడ్వర్గంబులచే"
+    },
+    {
+     "surprisal": 3.72,
+     "poem": "vemana:vemana-700-ఆ.",
+     "line": "ఉర్విజనులు పరమయోగీశ్వరునిఁ జూచి"
+    },
+    {
+     "surprisal": 3.78,
+     "poem": "vemana:vemana-738-ఆ.",
+     "line": "బహుళ దుఃఖములను బాధపడును"
+    },
+    {
+     "surprisal": 3.78,
+     "poem": "vemana:vemana-317-ఆ.",
+     "line": "సాధుసజ్జనులను సంతరించినవాఁడు"
+    },
+    {
+     "surprisal": 3.82,
+     "poem": "vemana:vemana-1158-ఆ.",
+     "line": "ప్రమథగణము లఖిలబాంధవులు"
+    },
+    {
+     "surprisal": 3.83,
+     "poem": "vemana:vemana-66-ఆ.",
+     "line": "భూమిలోనఁ పుణ్యపురుషులు లేకున్న"
+    },
+    {
+     "surprisal": 3.86,
+     "poem": "vemana:vemana-801-ఆ.",
+     "line": "తానును సమస్తభువనము"
+    },
+    {
+     "surprisal": 3.88,
+     "poem": "vemana:vemana-714-ఆ.",
+     "line": "సాధుసజ్జనముల సాంగత్యములచేత"
+    }
+   ],
+   "hardest_lines": [
+    {
+     "surprisal": 10.82,
+     "poem": "vemana:vemana-448-ఆ.",
+     "line": "ఒడల బూడ్దెపూత యొంటిరోఁత"
+    },
+    {
+     "surprisal": 10.53,
+     "poem": "vemana:vemana-712-ఆ.",
+     "line": "తేనె నీఁగె కూర్చి తెరువర్ల కియ్యదా"
+    },
+    {
+     "surprisal": 10.47,
+     "poem": "vemana:vemana-203-ఆ.",
+     "line": "దొబ్బ నేర్చుకుక్క దుత్తల మోచునా"
+    },
+    {
+     "surprisal": 10.29,
+     "poem": "vemana:vemana-367-ఆ.",
+     "line": "పొట్టుఁదినెడులండి బువ్వలు పెట్టునా"
+    },
+    {
+     "surprisal": 10.24,
+     "poem": "vemana:vemana-369-ఆ.",
+     "line": "జెయ్యిసాచి కాసు లియ్యఁలేడు"
+    },
+    {
+     "surprisal": 10.13,
+     "poem": "vemana:vemana-593-ఆ.",
+     "line": "తుమ్మచెట్ల ముండ్లు తోడనెపుట్టును"
+    },
+    {
+     "surprisal": 10.06,
+     "poem": "vemana:vemana-502-ఆ.",
+     "line": "దూలాలు టెంకినుండిన"
+    },
+    {
+     "surprisal": 10.01,
+     "poem": "vemana:vemana-335-ఆ.",
+     "line": "జంప నొంప బువ్వ చాలదా వెయ్యేల"
+    }
+   ]
+  },
+  "kuchimanchi_timmakavi": {
+   "n_poems": 1642,
+   "surprisal": {
+    "n": 1642,
+    "mean": 6.4739,
+    "sd": 0.7741,
+    "p10": 5.5797,
+    "median": 6.3915,
+    "p90": 7.3883
+   },
+   "perplexity_of_mean": 88.9,
+   "zipf": {
+    "n": 1642,
+    "mean": 3.5362,
+    "sd": 0.4114,
+    "p10": 2.9706,
+    "median": 3.5779,
+    "p90": 4.0262
+   },
+   "known_word_share": {
+    "n": 1642,
+    "mean": 0.7274,
+    "sd": 0.1593,
+    "p10": 0.5,
+    "median": 0.7593,
+    "p90": 0.9
+   },
+   "poem_levels_pct": {
+    "obscure": 18.09,
+    "leaning_obscure": 35.87,
+    "ordinary": 37.03,
+    "leaning_clear": 7.49,
+    "clear": 1.52
+   },
+   "word_shuffle": {
+    "mean_real": 6.474,
+    "mean_shuffled": 7.066,
+    "real_clearer_pct": 96.1
+   },
+   "akshara_shuffle": {
+    "mean_real": 6.474,
+    "mean_shuffled": 11.274,
+    "real_clearer_pct": 100.0
+   },
+   "by_order": {
+    "1": {
+     "mean_surprisal": 7.914,
+     "real_clearer_than_word_shuffled_pct": 0.0
+    },
+    "2": {
+     "mean_surprisal": 6.869,
+     "real_clearer_than_word_shuffled_pct": 90.93
+    },
+    "3": {
+     "mean_surprisal": 6.474,
+     "real_clearer_than_word_shuffled_pct": 96.35
+    }
+   },
+   "spearman_of_surprisal_with": {
+    "zipf": -0.3408,
+    "known_word_share": -0.3099,
+    "ojas": 0.1447,
+    "word_length": -0.1549,
+    "conjunct_rate": 0.3202,
+    "madhurya": -0.1058,
+    "anuprasa_z": -0.058,
+    "poem_length": -0.086
+   },
+   "clearest_lines": [
+    {
+     "surprisal": 3.21,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1449",
+     "line": "అని పలికి యంతకంతకుఁ"
+    },
+    {
+     "surprisal": 3.3,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-104",
+     "line": "గురుతరకౌండిన్యగోత్ర పవిత్రుండ"
+    },
+    {
+     "surprisal": 3.34,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-173",
+     "line": "సద్గురుకృపాకటాక్షవీక్షణము వలన"
+    },
+    {
+     "surprisal": 3.4,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1372",
+     "line": "అని పలికి నెయ్యమున న"
+    },
+    {
+     "surprisal": 3.46,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1439",
+     "line": "అప్పుడు రావణుఁ డెంతయు"
+    },
+    {
+     "surprisal": 3.7,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1034",
+     "line": "అనుచు వేడుకొనిన హనుమంతునకుఁ గడు"
+    },
+    {
+     "surprisal": 3.71,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-720",
+     "line": "వచ్చి నిలిచిన చోటికి వచ్చి కొనుచుఁ"
+    },
+    {
+     "surprisal": 3.72,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-763",
+     "line": "నతఁడు రాముఁడు లక్ష్మణుఁడండ్రు నన్ను"
+    }
+   ],
+   "hardest_lines": [
+    {
+     "surprisal": 14.44,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1653",
+     "line": "ల్మగల్‌ గ్రమ్మఱ న్వాలి మన్ఱేని మెట్టున్‌"
+    },
+    {
+     "surprisal": 14.44,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1200",
+     "line": "ల్మగల్‌ గ్రమ్మఱన్వాలి మన్ఱేని మెట్టున్‌"
+    },
+    {
+     "surprisal": 13.28,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1473",
+     "line": "డక్కూళ గ్రద్ద గ్రుద్దియు"
+    },
+    {
+     "surprisal": 13.22,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-129",
+     "line": "మెంటెఁ డీబూడిద ఒంట బామి"
+    },
+    {
+     "surprisal": 12.87,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1653",
+     "line": "నిగుడ్పం జొరన్లేక నేర్పేది యవ్వా"
+    },
+    {
+     "surprisal": 12.87,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1200",
+     "line": "నిగుడ్పం జొరన్లేక నేర్పేది యవ్వా"
+    },
+    {
+     "surprisal": 12.54,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1653",
+     "line": "ట్టుగాఁ గుందుచో సోఁకుడున్దుల్వ యాలోన్‌"
+    },
+    {
+     "surprisal": 12.54,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1200",
+     "line": "ట్టుగాఁ గుందుచో సోఁకుడున్దుల్వ యాలోన్‌"
+    }
+   ]
+  },
+  "chandassu": {
+   "n_poems": 2532,
+   "surprisal": {
+    "n": 2532,
+    "mean": 6.2196,
+    "sd": 0.7313,
+    "p10": 5.3192,
+    "median": 6.1578,
+    "p90": 7.2108
+   },
+   "perplexity_of_mean": 74.5,
+   "zipf": {
+    "n": 2532,
+    "mean": 3.3809,
+    "sd": 0.3496,
+    "p10": 2.9195,
+    "median": 3.3927,
+    "p90": 3.8153
+   },
+   "known_word_share": {
+    "n": 2532,
+    "mean": 0.6414,
+    "sd": 0.1409,
+    "p10": 0.4545,
+    "median": 0.6486,
+    "p90": 0.8125
+   },
+   "poem_levels_pct": {
+    "obscure": 13.51,
+    "leaning_obscure": 28.48,
+    "ordinary": 39.02,
+    "leaning_clear": 14.77,
+    "clear": 4.23
+   },
+   "word_shuffle": {
+    "mean_real": 6.22,
+    "mean_shuffled": 6.774,
+    "real_clearer_pct": 98.03
+   },
+   "akshara_shuffle": {
+    "mean_real": 6.22,
+    "mean_shuffled": 11.67,
+    "real_clearer_pct": 100.0
+   },
+   "by_order": {
+    "1": {
+     "mean_surprisal": 8.083,
+     "real_clearer_than_word_shuffled_pct": 0.0
+    },
+    "2": {
+     "mean_surprisal": 6.706,
+     "real_clearer_than_word_shuffled_pct": 89.69
+    },
+    "3": {
+     "mean_surprisal": 6.22,
+     "real_clearer_than_word_shuffled_pct": 97.71
+    }
+   },
+   "spearman_of_surprisal_with": {
+    "zipf": -0.3741,
+    "known_word_share": -0.4339,
+    "ojas": 0.2766,
+    "word_length": -0.0723,
+    "conjunct_rate": 0.4231,
+    "madhurya": -0.1945,
+    "anuprasa_z": 0.0353,
+    "poem_length": -0.1396
+   },
+   "clearest_lines": [
+    {
+     "surprisal": 3.31,
+     "poem": "chandassu:chandassu-kumaarii-23-క.",
+     "line": "తలిదండ్రు లన్నదమ్ములు"
+    },
+    {
+     "surprisal": 3.42,
+     "poem": "chandassu:chandassu-krishna-47-క.",
+     "line": "వనజాక్ష భక్తవత్సల"
+    },
+    {
+     "surprisal": 3.45,
+     "poem": "chandassu:chandassu-sumathi-26-క.",
+     "line": "కనకపు సింహాసనమున"
+    },
+    {
+     "surprisal": 3.55,
+     "poem": "chandassu:chandassu-krishna-3-క.",
+     "line": "నారాయణ పరమేశ్వర"
+    },
+    {
+     "surprisal": 3.58,
+     "poem": "chandassu:chandassu-aandhranaayaka-67-సీ.",
+     "line": "జానకీపరిణయోత్సవము గలిగె"
+    },
+    {
+     "surprisal": 3.61,
+     "poem": "chandassu:chandassu-taadimallaraajagopaala-22-సీ.",
+     "line": "మా తల్లిదండ్రుల మాటలాలింపక"
+    },
+    {
+     "surprisal": 3.64,
+     "poem": "chandassu:chandassu-kumaarii-26-క.",
+     "line": "హిత మాచరింపవలయును"
+    },
+    {
+     "surprisal": 3.67,
+     "poem": "chandassu:chandassu-krishna-36-క.",
+     "line": "జగదీశ్వర శరణు శరణు శరణము కృష్ణా."
+    }
+   ],
+   "hardest_lines": [
+    {
+     "surprisal": 13.15,
+     "poem": "chandassu:chandassu-laavanya-90-సీ.",
+     "line": "తీపైన బేషక్ మఠా పఠాన్ తురకి క"
+    },
+    {
+     "surprisal": 13.02,
+     "poem": "chandassu:chandassu-venugopaala-22-సీ.",
+     "line": "యేదగాండ్లంటరో యీండ్లింట పొగవెల్ల"
+    },
+    {
+     "surprisal": 12.57,
+     "poem": "chandassu:chandassu-srikaalahasteeswara-15-శా.",
+     "line": "చన్నో, కుంచమొ, మేఁకపెంట్రికయొ, యీసందేహముల్మాన్పి నా"
+    },
+    {
+     "surprisal": 12.48,
+     "poem": "chandassu:chandassu-venugopaala-22-సీ.",
+     "line": "గొర్లాల బిగ్గెన గొసుగుతారు"
+    },
+    {
+     "surprisal": 12.14,
+     "poem": "chandassu:chandassu-laavanya-23-సీ.",
+     "line": "పై మొఖమల్ గలీబా వదల్చి"
+    },
+    {
+     "surprisal": 12.08,
+     "poem": "chandassu:chandassu-venugopaala-22-సీ.",
+     "line": "ఈనెగాండ్లంటరో యీండ్లను బగిసార"
+    },
+    {
+     "surprisal": 11.98,
+     "poem": "chandassu:chandassu-laavanya-90-సీ.",
+     "line": "దిట్టంపు మేల్ జుల్ఫ తీపిల్ల చిగురుఖాం"
+    },
+    {
+     "surprisal": 11.93,
+     "poem": "chandassu:chandassu-aandhranaayaka-36-సీ.",
+     "line": "జున్ను బాల్‌ పెరుఁ గీవు జుఱ్ఱినావు"
+    }
+   ]
+  }
+ },
+ "versions": {
+  "madhurya": "1.1",
+  "ojas": "1.0"
+ }
+}

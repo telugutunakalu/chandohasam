@@ -1,0 +1,738 @@
+{
+ "metric": "chandas_distance",
+ "version": "1.1",
+ "seed": 42,
+ "reading": {
+  "padanta": "conjunct",
+  "profile": "relaxed",
+  "yati_sandhi": "acchu"
+ },
+ "engine_agreement_on_weights": {
+  "bhagavatam": {
+   "engine_padanta_agrees": 7365,
+   "nonzero_rejected": 10,
+   "zero_accepted": 7355
+  },
+  "vemana": {
+   "engine_padanta_agrees": 1164,
+   "nonzero_accepted": 11,
+   "nonzero_rejected": 149,
+   "zero_accepted": 1004
+  },
+  "kuchimanchi_timmakavi": {
+   "engine_padanta_agrees": 1611,
+   "nonzero_rejected": 56,
+   "zero_accepted": 1555
+  },
+  "chandassu": {
+   "engine_padanta_agrees": 2532,
+   "nonzero_accepted": 11,
+   "nonzero_rejected": 379,
+   "zero_accepted": 2142
+  }
+ },
+ "closing_laghu_read_as_guru": {
+  "bhagavatam": {
+   "before_a_conjunct": 1847
+  },
+  "vemana": {
+   "before_a_conjunct": 3,
+   "not_before_a_conjunct": 11
+  },
+  "kuchimanchi_timmakavi": {
+   "before_a_conjunct": 332
+  },
+  "chandassu": {
+   "before_a_conjunct": 808,
+   "not_before_a_conjunct": 11
+  }
+ },
+ "engine_agreement_on_yati_and_prasa": {
+  "prasa_agree": 300,
+  "yati_agree": 300
+ },
+ "yati_and_prasa_by_profile": {
+  "strict/hypothesis": {
+   "n": 500,
+   "with_yati_edits_pct": 7.8,
+   "with_prasa_edits_pct": 1.8
+  },
+  "relaxed/hypothesis": {
+   "n": 500,
+   "with_yati_edits_pct": 6.6,
+   "with_prasa_edits_pct": 0.4
+  },
+  "relaxed/acchu": {
+   "n": 500,
+   "with_yati_edits_pct": 0.6,
+   "with_prasa_edits_pct": 0.4
+  }
+ },
+ "broken_meter_exemplars": [
+  {
+   "id": "kasc_4_36_chandobhanga",
+   "meter": "kandamu",
+   "pada_the_text_names": 2,
+   "yati_pada_the_text_names": 4,
+   "distance": 2,
+   "weight_edits": 1,
+   "yati_edits": 1,
+   "prasa_edits": 0,
+   "label": "slip",
+   "padas_with_weight_edits": [
+    2
+   ],
+   "padas_with_yati_edits": [
+    4
+   ],
+   "edits": [
+    {
+     "op": "substitute",
+     "position": 15,
+     "akshara": "డు",
+     "needs": "U"
+    },
+    {
+     "op": "yati",
+     "position": 9,
+     "akshara": "న",
+     "needs": "",
+     "why": "no yati with ముం"
+    }
+   ],
+   "weight_edits_with_engine_padanta": 0,
+   "engine_accepts": true,
+   "located": true
+  },
+  {
+   "id": "kasc_rangacharya_chandobhanga",
+   "meter": "tetagiti",
+   "pada_the_text_names": 3,
+   "yati_pada_the_text_names": null,
+   "distance": 1,
+   "weight_edits": 1,
+   "yati_edits": 0,
+   "prasa_edits": 0,
+   "label": "slip",
+   "padas_with_weight_edits": [
+    3
+   ],
+   "padas_with_yati_edits": [],
+   "edits": [
+    {
+     "op": "substitute",
+     "position": 7,
+     "akshara": "న",
+     "needs": "U"
+    }
+   ],
+   "weight_edits_with_engine_padanta": 1,
+   "engine_accepts": false,
+   "located": true
+  }
+ ],
+ "corpora": {
+  "bhagavatam": {
+   "n": 7365,
+   "levels_pct": {
+    "exact": 99.57,
+    "slip": 0.39,
+    "partial": 0.01,
+    "weak": 0.0,
+    "unmetered": 0.03
+   },
+   "distance_counts": {
+    "0": 7333,
+    "1": 27,
+    "2": 1,
+    "3-5": 2,
+    "6+": 2
+   },
+   "weight_edit_counts": {
+    "0": 7355,
+    "1": 8,
+    "2": 0,
+    "3-5": 0,
+    "6+": 2
+   },
+   "in_meter_by_weights": 7355,
+   "in_meter_with_yati_edits": 13,
+   "in_meter_with_prasa_edits": 9,
+   "six_or_more_weight_edits_by_meter": {
+    "tetagiti": 1,
+    "kandamu": 1
+   },
+   "six_or_more_weight_edits_by_layout": {
+    "a_line_longer_than_any_pada": 1,
+    "unexpected_line_count": 1
+   },
+   "mean_distance": 0.008,
+   "mean_weight_edits": 0.004,
+   "mean_yati_edits": 0.003,
+   "mean_prasa_edits": 0.001,
+   "mean_skill": 0.9994
+  },
+  "vemana": {
+   "n": 1164,
+   "levels_pct": {
+    "exact": 84.36,
+    "slip": 14.18,
+    "partial": 0.0,
+    "weak": 0.0,
+    "unmetered": 1.46
+   },
+   "distance_counts": {
+    "0": 982,
+    "1": 135,
+    "2": 26,
+    "3-5": 4,
+    "6+": 17
+   },
+   "weight_edit_counts": {
+    "0": 1004,
+    "1": 128,
+    "2": 11,
+    "3-5": 4,
+    "6+": 17
+   },
+   "in_meter_by_weights": 1004,
+   "in_meter_with_yati_edits": 17,
+   "in_meter_with_prasa_edits": 5,
+   "six_or_more_weight_edits_by_meter": {
+    "ataveladi": 17
+   },
+   "six_or_more_weight_edits_by_layout": {
+    "a_line_longer_than_any_pada": 2,
+    "other": 15
+   },
+   "mean_distance": 0.364,
+   "mean_weight_edits": 0.318,
+   "mean_yati_edits": 0.04,
+   "mean_prasa_edits": 0.007,
+   "mean_skill": 0.9638
+  },
+  "kuchimanchi_timmakavi": {
+   "n": 1611,
+   "levels_pct": {
+    "exact": 94.91,
+    "slip": 5.03,
+    "partial": 0.06,
+    "weak": 0.0,
+    "unmetered": 0.0
+   },
+   "distance_counts": {
+    "0": 1529,
+    "1": 61,
+    "2": 18,
+    "3-5": 2,
+    "6+": 1
+   },
+   "weight_edit_counts": {
+    "0": 1555,
+    "1": 39,
+    "2": 15,
+    "3-5": 1,
+    "6+": 1
+   },
+   "in_meter_by_weights": 1555,
+   "in_meter_with_yati_edits": 25,
+   "in_meter_with_prasa_edits": 1,
+   "six_or_more_weight_edits_by_meter": {
+    "sardulavikriditamu": 1
+   },
+   "six_or_more_weight_edits_by_layout": {
+    "a_line_longer_than_any_pada": 1
+   },
+   "mean_distance": 0.068,
+   "mean_weight_edits": 0.048,
+   "mean_yati_edits": 0.019,
+   "mean_prasa_edits": 0.001,
+   "mean_skill": 0.9967
+  },
+  "chandassu": {
+   "n": 2532,
+   "levels_pct": {
+    "exact": 81.4,
+    "slip": 13.03,
+    "partial": 0.67,
+    "weak": 1.82,
+    "unmetered": 3.08
+   },
+   "distance_counts": {
+    "0": 2061,
+    "1": 248,
+    "2": 54,
+    "3-5": 30,
+    "6+": 139
+   },
+   "weight_edit_counts": {
+    "0": 2142,
+    "1": 193,
+    "2": 34,
+    "3-5": 25,
+    "6+": 138
+   },
+   "in_meter_by_weights": 2142,
+   "in_meter_with_yati_edits": 60,
+   "in_meter_with_prasa_edits": 21,
+   "six_or_more_weight_edits_by_meter": {
+    "seesamu": 96,
+    "utpalamala": 16,
+    "mattebhavikriditamu": 12,
+    "champakamala": 7,
+    "sardulavikriditamu": 7
+   },
+   "six_or_more_weight_edits_by_layout": {
+    "a_line_longer_than_any_pada": 68,
+    "other": 16,
+    "unexpected_line_count": 54
+   },
+   "mean_distance": 2.969,
+   "mean_weight_edits": 2.862,
+   "mean_yati_edits": 0.096,
+   "mean_prasa_edits": 0.012,
+   "mean_skill": 0.8429
+  }
+ },
+ "edit_ladder": {
+  "1": {
+   "n": 1000,
+   "mean": 0.892,
+   "within_k": 1.0,
+   "equal_k": 0.892,
+   "detected": 0.892,
+   "jati": {
+    "n": 335,
+    "mean": 0.878,
+    "detected": 0.8776
+   },
+   "upajati": {
+    "n": 402,
+    "mean": 0.833,
+    "detected": 0.8333
+   },
+   "vrutta": {
+    "n": 263,
+    "mean": 1.0,
+    "detected": 1.0
+   }
+  },
+  "2": {
+   "n": 1000,
+   "mean": 1.683,
+   "within_k": 1.0,
+   "equal_k": 0.721,
+   "detected": 0.962,
+   "jati": {
+    "n": 335,
+    "mean": 1.624,
+    "detected": 0.9433
+   },
+   "upajati": {
+    "n": 402,
+    "mean": 1.565,
+    "detected": 0.9577
+   },
+   "vrutta": {
+    "n": 263,
+    "mean": 1.939,
+    "detected": 0.9924
+   }
+  },
+  "3": {
+   "n": 1000,
+   "mean": 2.462,
+   "within_k": 1.0,
+   "equal_k": 0.585,
+   "detected": 0.994,
+   "jati": {
+    "n": 335,
+    "mean": 2.337,
+    "detected": 0.997
+   },
+   "upajati": {
+    "n": 402,
+    "mean": 2.281,
+    "detected": 0.9876
+   },
+   "vrutta": {
+    "n": 263,
+    "mean": 2.897,
+    "detected": 1.0
+   }
+  },
+  "5": {
+   "n": 1000,
+   "mean": 3.726,
+   "within_k": 1.0,
+   "equal_k": 0.309,
+   "detected": 0.998,
+   "jati": {
+    "n": 335,
+    "mean": 3.418,
+    "detected": 1.0
+   },
+   "upajati": {
+    "n": 402,
+    "mean": 3.346,
+    "detected": 0.995
+   },
+   "vrutta": {
+    "n": 263,
+    "mean": 4.7,
+    "detected": 1.0
+   }
+  },
+  "8": {
+   "n": 1000,
+   "mean": 5.182,
+   "within_k": 1.0,
+   "equal_k": 0.107,
+   "detected": 0.999,
+   "jati": {
+    "n": 335,
+    "mean": 4.439,
+    "detected": 0.997
+   },
+   "upajati": {
+    "n": 402,
+    "mean": 4.614,
+    "detected": 1.0
+   },
+   "vrutta": {
+    "n": 263,
+    "mean": 6.996,
+    "detected": 1.0
+   }
+  },
+  "13": {
+   "n": 1000,
+   "mean": 7.337,
+   "within_k": 1.0,
+   "equal_k": 0.018,
+   "detected": 1.0,
+   "jati": {
+    "n": 335,
+    "mean": 5.901,
+    "detected": 1.0
+   },
+   "upajati": {
+    "n": 402,
+    "mean": 6.413,
+    "detected": 1.0
+   },
+   "vrutta": {
+    "n": 263,
+    "mean": 10.578,
+    "detected": 1.0
+   }
+  },
+  "21": {
+   "n": 1000,
+   "mean": 9.723,
+   "within_k": 1.0,
+   "equal_k": 0.0,
+   "detected": 1.0,
+   "jati": {
+    "n": 335,
+    "mean": 7.409,
+    "detected": 1.0
+   },
+   "upajati": {
+    "n": 402,
+    "mean": 8.408,
+    "detected": 1.0
+   },
+   "vrutta": {
+    "n": 263,
+    "mean": 14.681,
+    "detected": 1.0
+   }
+  }
+ },
+ "sound_ladder": {
+  "1": {
+   "n": 500,
+   "mean_prasa_edits": 0.996,
+   "mean_distance": 0.996,
+   "detected": 0.996,
+   "within_k": 1.0
+  },
+  "2": {
+   "n": 500,
+   "mean_prasa_edits": 1.988,
+   "mean_distance": 1.988,
+   "detected": 1.0,
+   "within_k": 1.0
+  },
+  "3": {
+   "n": 500,
+   "mean_prasa_edits": 2.856,
+   "mean_distance": 2.856,
+   "detected": 1.0,
+   "within_k": 1.0
+  }
+ },
+ "nearest_meter_under_error": {
+  "0": {
+   "n": 300,
+   "nearest_by_skill": 1.0,
+   "nearest_by_distance": 1.0
+  },
+  "1": {
+   "n": 300,
+   "nearest_by_skill": 0.9967,
+   "nearest_by_distance": 0.9933
+  },
+  "2": {
+   "n": 300,
+   "nearest_by_skill": 1.0,
+   "nearest_by_distance": 0.98
+  },
+  "3": {
+   "n": 300,
+   "nearest_by_skill": 1.0,
+   "nearest_by_distance": 0.9733
+  },
+  "5": {
+   "n": 300,
+   "nearest_by_skill": 0.98,
+   "nearest_by_distance": 0.8967
+  }
+ },
+ "meter_against_meter_weight_rate": {
+  "ataveladi": {
+   "ataveladi": 0.0,
+   "champakamala": 40.22,
+   "kandamu": 25.42,
+   "mattebhavikriditamu": 41.93,
+   "sardulavikriditamu": 41.99,
+   "seesamu": 41.99,
+   "tetagiti": 11.14,
+   "utpalamala": 37.52
+  },
+  "champakamala": {
+   "ataveladi": 24.75,
+   "champakamala": 0.0,
+   "kandamu": 29.65,
+   "mattebhavikriditamu": 28.36,
+   "sardulavikriditamu": 33.13,
+   "seesamu": 12.48,
+   "tetagiti": 20.29,
+   "utpalamala": 9.52
+  },
+  "kandamu": {
+   "ataveladi": 23.07,
+   "champakamala": 43.78,
+   "kandamu": 0.0,
+   "mattebhavikriditamu": 44.74,
+   "sardulavikriditamu": 45.83,
+   "seesamu": 44.97,
+   "tetagiti": 20.39,
+   "utpalamala": 41.76
+  },
+  "mattebhavikriditamu": {
+   "ataveladi": 28.71,
+   "champakamala": 26.18,
+   "kandamu": 31.46,
+   "mattebhavikriditamu": 0.0,
+   "sardulavikriditamu": 9.97,
+   "seesamu": 17.45,
+   "tetagiti": 24.94,
+   "utpalamala": 30.5
+  },
+  "sardulavikriditamu": {
+   "ataveladi": 30.07,
+   "champakamala": 28.36,
+   "kandamu": 32.65,
+   "mattebhavikriditamu": 8.97,
+   "sardulavikriditamu": 0.0,
+   "seesamu": 17.65,
+   "tetagiti": 25.72,
+   "utpalamala": 27.78
+  },
+  "seesamu": {
+   "ataveladi": 55.82,
+   "champakamala": 77.37,
+   "kandamu": 59.55,
+   "mattebhavikriditamu": 77.33,
+   "sardulavikriditamu": 77.29,
+   "seesamu": 0.0,
+   "tetagiti": 55.58,
+   "utpalamala": 74.35
+  },
+  "tetagiti": {
+   "ataveladi": 10.18,
+   "champakamala": 35.52,
+   "kandamu": 19.98,
+   "mattebhavikriditamu": 39.93,
+   "sardulavikriditamu": 42.38,
+   "seesamu": 36.74,
+   "tetagiti": 0.0,
+   "utpalamala": 33.28
+  },
+  "utpalamala": {
+   "ataveladi": 24.93,
+   "champakamala": 8.29,
+   "kandamu": 28.59,
+   "mattebhavikriditamu": 33.11,
+   "sardulavikriditamu": 29.8,
+   "seesamu": 13.03,
+   "tetagiti": 20.62,
+   "utpalamala": 0.0
+  }
+ },
+ "chance_by_family": {
+  "jati": {
+   "meters": 8,
+   "all_rate_mean_min": 13.739,
+   "all_rate_mean_max": 22.986,
+   "all_rate_cut_min": 8.333,
+   "all_rate_cut_max": 16.667,
+   "weights_rate_mean_min": 8.481,
+   "weights_rate_mean_max": 18.798,
+   "weights_rate_cut_min": 4.082,
+   "weights_rate_cut_max": 13.699,
+   "yati_edits_mean": 1.9,
+   "prasa_edits_mean": 1.69,
+   "chance_poems_exact": 0,
+   "chance_poems_exact_on_weights": 10
+  },
+  "upajati": {
+   "meters": 3,
+   "all_rate_mean_min": 11.604,
+   "all_rate_mean_max": 18.766,
+   "all_rate_cut_min": 7.692,
+   "all_rate_cut_max": 11.538,
+   "weights_rate_mean_min": 8.542,
+   "weights_rate_mean_max": 16.267,
+   "weights_rate_cut_min": 5.714,
+   "weights_rate_cut_max": 9.615,
+   "yati_edits_mean": 1.93,
+   "prasa_edits_mean": 0.0,
+   "chance_poems_exact": 0,
+   "chance_poems_exact_on_weights": 0
+  },
+  "vrutta": {
+   "meters": 26,
+   "all_rate_mean_min": 28.772,
+   "all_rate_mean_max": 58.709,
+   "all_rate_cut_min": 23.75,
+   "all_rate_cut_max": 46.875,
+   "weights_rate_mean_min": 27.221,
+   "weights_rate_mean_max": 57.378,
+   "weights_rate_cut_min": 22.368,
+   "weights_rate_cut_max": 43.75,
+   "yati_edits_mean": 0.89,
+   "prasa_edits_mean": 0.36,
+   "chance_poems_exact": 0,
+   "chance_poems_exact_on_weights": 0
+  }
+ },
+ "one_edit_examples": [
+  {
+   "poem": "bhagavatam:1-445-సీ.",
+   "meter": "seesamu",
+   "line": "బొగలచేఁ బొగిలి యబుద్దచిత్తులమైన- మము హరి పదపద్మ మధుర రసమున్",
+   "pattern": "IIIUIIIIUIUIIUIIIIIIIUIIIIIIU",
+   "target": "IIIUIIIIUIIIIUIIIIIIIUIIIIIII",
+   "edit": {
+    "op": "substitute",
+    "position": 29,
+    "akshara": "మున్",
+    "needs": "I"
+   }
+  },
+  {
+   "poem": "bhagavatam:2-91.1-క.",
+   "meter": "kandamu",
+   "line": "ప్రాదుర్భావ మగు లోక పాలన కే",
+   "pattern": "UUUIIIUIUIIU",
+   "target": "UUUIIIUIUUIIU",
+   "edit": {
+    "op": "insert",
+    "position": 9,
+    "akshara": "",
+    "needs": "U"
+   }
+  },
+  {
+   "poem": "bhagavatam:3-800-క.",
+   "meter": "kandamu",
+   "line": "డగునతనికి స్వాంతరంగము",
+   "pattern": "IIIIIIUIUII",
+   "target": "IIIIIUIUII",
+   "edit": {
+    "op": "delete",
+    "position": 1,
+    "akshara": "డ",
+    "needs": ""
+   }
+  },
+  {
+   "poem": "bhagavatam:10.1-1509-క.",
+   "meter": "kandamu",
+   "line": "నంధుండవుగావు ప్రోవనర్హుండ వెందున్.",
+   "pattern": "UUIIUIUIUUIUU",
+   "target": "UUIIUIUIUIIUU",
+   "edit": {
+    "op": "substitute",
+    "position": 10,
+    "akshara": "ర్హుం",
+    "needs": "I"
+   }
+  },
+  {
+   "poem": "bhagavatam:10.2-574-సీ.",
+   "meter": "seesamu",
+   "line": "నరారు కానికల్‌గొనిచని యర్ఘ్యపా- ద్యాదిసత్కృతులు నెయ్యమునఁ జేసి",
+   "pattern": "IUIUIUIIIIUIUUIUIIIUIIIUI",
+   "target": "UUIUIUIIIIUIUUIIIIIIIIIUI",
+   "edit": {
+    "op": "substitute",
+    "position": 1,
+    "akshara": "న",
+    "needs": "U"
+   }
+  },
+  {
+   "poem": "bhagavatam:10.2-621-సీ.",
+   "meter": "seesamu",
+   "line": "సకలార్థసంవేదియొయింటిలోపలఁ- జెలితోడ ముచ్చటల్‌సెప్పుచుండు",
+   "pattern": "IIUIUUIIUIUIIIIUIUIUUIUI",
+   "target": "IIUIUUIUUIUIIIIUIUIUUIUI",
+   "edit": {
+    "op": "substitute",
+    "position": 8,
+    "akshara": "యొ",
+    "needs": "U"
+   }
+  },
+  {
+   "poem": "bhagavatam:10.2-825-క.",
+   "meter": "kandamu",
+   "line": "బులుగల చోటనుం జేలం",
+   "pattern": "IIIIUIUUU",
+   "target": "IIIIIIUUU",
+   "edit": {
+    "op": "substitute",
+    "position": 5,
+    "akshara": "చో",
+    "needs": "I"
+   }
+  },
+  {
+   "poem": "bhagavatam:10.2-1037-సీ.",
+   "meter": "seesamu",
+   "line": "జటులోగ్రకల్పాంతసమయమందునుఁ బో- దృగసహ్యమై సముద్దీప్త మగుచు",
+   "pattern": "IIUIUUIIIIUIIUIIUIUIUUIIII",
+   "target": "IIUIUUIIIIUIIUIUUIUIIUIIII",
+   "edit": {
+    "op": "substitute",
+    "position": 16,
+    "akshara": "గ",
+    "needs": "U"
+   }
+  }
+ ]
+}

@@ -1,0 +1,934 @@
+{
+ "seed": 42,
+ "poems": 1600,
+ "poems_per_corpus": 400,
+ "levels": {
+  "word_shuffle": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "meter_break": [
+   0.02,
+   0.05,
+   0.1,
+   0.25
+  ],
+  "filler": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "synonym_swap": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ]
+ },
+ "z_cut": 3.09,
+ "degradations": {
+  "word_shuffle": {
+   "anuprasa": {
+    "original_mean": 0.6899,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": 0.649,
+      "mean_change": -0.0409,
+      "lower_pct": 24.6,
+      "higher_pct": 18.7,
+      "sign_z": -3.61
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": 0.5569,
+      "mean_change": -0.1331,
+      "lower_pct": 50.5,
+      "higher_pct": 36.9,
+      "sign_z": -5.83
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": 0.4214,
+      "mean_change": -0.2685,
+      "lower_pct": 61.8,
+      "higher_pct": 37.1,
+      "sign_z": -9.91
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": 0.331,
+      "mean_change": -0.3589,
+      "lower_pct": 63.8,
+      "higher_pct": 36.2,
+      "sign_z": -11.0
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "madhurya": {
+    "original_mean": -0.0424,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -0.0426,
+      "mean_change": -0.0002,
+      "lower_pct": 12.5,
+      "higher_pct": 12.4,
+      "sign_z": -0.05
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -0.0417,
+      "mean_change": 0.0007,
+      "lower_pct": 28.4,
+      "higher_pct": 29.4,
+      "sign_z": 0.53
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": -0.0409,
+      "mean_change": 0.0015,
+      "lower_pct": 37.5,
+      "higher_pct": 40.7,
+      "sign_z": 1.44
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": -0.0401,
+      "mean_change": 0.0023,
+      "lower_pct": 39.8,
+      "higher_pct": 43.8,
+      "sign_z": 1.78
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "no response"
+   },
+   "ojas": {
+    "original_mean": -0.1122,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -0.1122,
+      "mean_change": 0.0,
+      "lower_pct": 0.0,
+      "higher_pct": 0.0,
+      "sign_z": 0.0
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -0.1122,
+      "mean_change": 0.0,
+      "lower_pct": 0.0,
+      "higher_pct": 0.0,
+      "sign_z": 0.0
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": -0.1122,
+      "mean_change": 0.0,
+      "lower_pct": 0.0,
+      "higher_pct": 0.0,
+      "sign_z": 0.0
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": -0.1122,
+      "mean_change": 0.0,
+      "lower_pct": 0.0,
+      "higher_pct": 0.0,
+      "sign_z": 0.0
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "no response"
+   },
+   "prasada": {
+    "original_mean": -6.0568,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -6.1186,
+      "mean_change": -0.0618,
+      "lower_pct": 43.8,
+      "higher_pct": 9.4,
+      "sign_z": -18.84
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -6.242,
+      "mean_change": -0.1852,
+      "lower_pct": 82.0,
+      "higher_pct": 12.5,
+      "sign_z": -28.6
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": -6.4255,
+      "mean_change": -0.3687,
+      "lower_pct": 93.0,
+      "higher_pct": 6.8,
+      "sign_z": -34.54
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": -6.5907,
+      "mean_change": -0.5339,
+      "lower_pct": 96.6,
+      "higher_pct": 3.4,
+      "sign_z": -37.3
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "chandas": {
+    "original_mean": 0.9527,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": 0.8262,
+      "mean_change": -0.1265,
+      "lower_pct": 46.6,
+      "higher_pct": 0.4,
+      "sign_z": -26.93
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": 0.5804,
+      "mean_change": -0.3723,
+      "lower_pct": 89.2,
+      "higher_pct": 0.2,
+      "sign_z": -37.66
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": 0.232,
+      "mean_change": -0.7207,
+      "lower_pct": 99.2,
+      "higher_pct": 0.4,
+      "sign_z": -39.61
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": -0.1357,
+      "mean_change": -1.0884,
+      "lower_pct": 99.7,
+      "higher_pct": 0.2,
+      "sign_z": -39.79
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   }
+  },
+  "meter_break": {
+   "anuprasa": {
+    "original_mean": 0.6899,
+    "steps": [
+     {
+      "strength": 0.02,
+      "n": 1600,
+      "mean": 0.7008,
+      "mean_change": 0.0109,
+      "lower_pct": 35.1,
+      "higher_pct": 40.8,
+      "sign_z": 2.64
+     },
+     {
+      "strength": 0.05,
+      "n": 1600,
+      "mean": 0.7172,
+      "mean_change": 0.0273,
+      "lower_pct": 44.4,
+      "higher_pct": 49.2,
+      "sign_z": 2.02
+     },
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": 0.7471,
+      "mean_change": 0.0572,
+      "lower_pct": 43.7,
+      "higher_pct": 55.6,
+      "sign_z": 4.77
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": 0.8233,
+      "mean_change": 0.1333,
+      "lower_pct": 40.9,
+      "higher_pct": 59.1,
+      "sign_z": 7.25
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "rises"
+   },
+   "madhurya": {
+    "original_mean": -0.0424,
+    "steps": [
+     {
+      "strength": 0.02,
+      "n": 1600,
+      "mean": -0.0439,
+      "mean_change": -0.0015,
+      "lower_pct": 41.9,
+      "higher_pct": 35.2,
+      "sign_z": -3.07
+     },
+     {
+      "strength": 0.05,
+      "n": 1600,
+      "mean": -0.0446,
+      "mean_change": -0.0022,
+      "lower_pct": 48.4,
+      "higher_pct": 43.1,
+      "sign_z": -2.22
+     },
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -0.0452,
+      "mean_change": -0.0028,
+      "lower_pct": 51.9,
+      "higher_pct": 45.6,
+      "sign_z": -2.58
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -0.052,
+      "mean_change": -0.0096,
+      "lower_pct": 55.7,
+      "higher_pct": 43.5,
+      "sign_z": -4.89
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "ojas": {
+    "original_mean": -0.1122,
+    "steps": [
+     {
+      "strength": 0.02,
+      "n": 1600,
+      "mean": -0.1111,
+      "mean_change": 0.0011,
+      "lower_pct": 34.8,
+      "higher_pct": 34.2,
+      "sign_z": -0.27
+     },
+     {
+      "strength": 0.05,
+      "n": 1600,
+      "mean": -0.1078,
+      "mean_change": 0.0044,
+      "lower_pct": 37.6,
+      "higher_pct": 40.8,
+      "sign_z": 1.44
+     },
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -0.1068,
+      "mean_change": 0.0054,
+      "lower_pct": 42.8,
+      "higher_pct": 45.7,
+      "sign_z": 1.22
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -0.0905,
+      "mean_change": 0.0217,
+      "lower_pct": 43.5,
+      "higher_pct": 51.0,
+      "sign_z": 3.09
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "no response"
+   },
+   "prasada": {
+    "original_mean": -6.0568,
+    "steps": [
+     {
+      "strength": 0.02,
+      "n": 1600,
+      "mean": -6.2902,
+      "mean_change": -0.2334,
+      "lower_pct": 93.8,
+      "higher_pct": 6.2,
+      "sign_z": -35.05
+     },
+     {
+      "strength": 0.05,
+      "n": 1600,
+      "mean": -6.6042,
+      "mean_change": -0.5474,
+      "lower_pct": 98.6,
+      "higher_pct": 1.4,
+      "sign_z": -38.89
+     },
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -7.1212,
+      "mean_change": -1.0644,
+      "lower_pct": 99.8,
+      "higher_pct": 0.2,
+      "sign_z": -39.85
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -8.5349,
+      "mean_change": -2.4781,
+      "lower_pct": 100.0,
+      "higher_pct": 0.0,
+      "sign_z": -40.0
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "chandas": {
+    "original_mean": 0.9527,
+    "steps": [
+     {
+      "strength": 0.02,
+      "n": 1600,
+      "mean": 0.861,
+      "mean_change": -0.0916,
+      "lower_pct": 86.8,
+      "higher_pct": 0.9,
+      "sign_z": -36.7
+     },
+     {
+      "strength": 0.05,
+      "n": 1600,
+      "mean": 0.7467,
+      "mean_change": -0.206,
+      "lower_pct": 97.6,
+      "higher_pct": 0.4,
+      "sign_z": -39.26
+     },
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": 0.5835,
+      "mean_change": -0.3691,
+      "lower_pct": 99.4,
+      "higher_pct": 0.4,
+      "sign_z": -39.66
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": 0.2639,
+      "mean_change": -0.6887,
+      "lower_pct": 99.6,
+      "higher_pct": 0.4,
+      "sign_z": -39.7
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   }
+  },
+  "filler": {
+   "anuprasa": {
+    "original_mean": 0.6899,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": 2.2415,
+      "mean_change": 1.5516,
+      "lower_pct": 12.5,
+      "higher_pct": 85.4,
+      "sign_z": 29.48
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": 6.4847,
+      "mean_change": 5.7948,
+      "lower_pct": 1.2,
+      "higher_pct": 98.6,
+      "sign_z": 38.97
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": 18.6019,
+      "mean_change": 17.912,
+      "lower_pct": 0.0,
+      "higher_pct": 100.0,
+      "sign_z": 40.0
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": 64.4957,
+      "mean_change": 63.8057,
+      "lower_pct": 0.0,
+      "higher_pct": 100.0,
+      "sign_z": 40.0
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "rises"
+   },
+   "madhurya": {
+    "original_mean": -0.0424,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -0.0227,
+      "mean_change": 0.0197,
+      "lower_pct": 22.1,
+      "higher_pct": 73.9,
+      "sign_z": 21.16
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -0.0135,
+      "mean_change": 0.0289,
+      "lower_pct": 20.2,
+      "higher_pct": 79.6,
+      "sign_z": 23.76
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": -0.098,
+      "mean_change": -0.0556,
+      "lower_pct": 20.1,
+      "higher_pct": 79.9,
+      "sign_z": 23.95
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": -3.2119,
+      "mean_change": -3.1695,
+      "lower_pct": 21.4,
+      "higher_pct": 78.6,
+      "sign_z": 22.9
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "rises"
+   },
+   "ojas": {
+    "original_mean": -0.1122,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -0.2242,
+      "mean_change": -0.112,
+      "lower_pct": 54.9,
+      "higher_pct": 0.1,
+      "sign_z": -29.53
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -0.409,
+      "mean_change": -0.2968,
+      "lower_pct": 84.4,
+      "higher_pct": 0.2,
+      "sign_z": -36.62
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": -0.6887,
+      "mean_change": -0.5766,
+      "lower_pct": 95.5,
+      "higher_pct": 0.2,
+      "sign_z": -38.94
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": -1.2608,
+      "mean_change": -1.1486,
+      "lower_pct": 99.5,
+      "higher_pct": 0.1,
+      "sign_z": -39.86
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "prasada": {
+    "original_mean": -6.0568,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": -6.1909,
+      "mean_change": -0.134,
+      "lower_pct": 73.2,
+      "higher_pct": 26.8,
+      "sign_z": -18.55
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": -6.3578,
+      "mean_change": -0.301,
+      "lower_pct": 77.0,
+      "higher_pct": 23.0,
+      "sign_z": -21.6
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": -6.5447,
+      "mean_change": -0.4879,
+      "lower_pct": 78.1,
+      "higher_pct": 21.9,
+      "sign_z": -22.45
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": -6.6114,
+      "mean_change": -0.5546,
+      "lower_pct": 73.1,
+      "higher_pct": 26.9,
+      "sign_z": -18.45
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "chandas": {
+    "original_mean": 0.9527,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 1600,
+      "mean": 0.8096,
+      "mean_change": -0.1431,
+      "lower_pct": 89.3,
+      "higher_pct": 0.9,
+      "sign_z": -37.21
+     },
+     {
+      "strength": 0.25,
+      "n": 1600,
+      "mean": 0.6209,
+      "mean_change": -0.3318,
+      "lower_pct": 99.1,
+      "higher_pct": 0.5,
+      "sign_z": -39.51
+     },
+     {
+      "strength": 0.5,
+      "n": 1600,
+      "mean": 0.3824,
+      "mean_change": -0.5702,
+      "lower_pct": 99.3,
+      "higher_pct": 0.4,
+      "sign_z": -39.6
+     },
+     {
+      "strength": 1.0,
+      "n": 1600,
+      "mean": 0.0645,
+      "mean_change": -0.8882,
+      "lower_pct": 99.1,
+      "higher_pct": 0.8,
+      "sign_z": -39.37
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   }
+  },
+  "synonym_swap": {
+   "anuprasa": {
+    "original_mean": 1.1234,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 343,
+      "mean": 0.8629,
+      "mean_change": -0.2605,
+      "lower_pct": 66.8,
+      "higher_pct": 32.7,
+      "sign_z": -6.34
+     },
+     {
+      "strength": 0.25,
+      "n": 343,
+      "mean": 0.5799,
+      "mean_change": -0.5435,
+      "lower_pct": 73.2,
+      "higher_pct": 26.5,
+      "sign_z": -8.65
+     },
+     {
+      "strength": 0.5,
+      "n": 343,
+      "mean": 0.3037,
+      "mean_change": -0.8197,
+      "lower_pct": 76.4,
+      "higher_pct": 23.6,
+      "sign_z": -9.77
+     },
+     {
+      "strength": 1.0,
+      "n": 343,
+      "mean": 0.0839,
+      "mean_change": -1.0395,
+      "lower_pct": 75.5,
+      "higher_pct": 24.5,
+      "sign_z": -9.45
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "madhurya": {
+    "original_mean": -0.0468,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 343,
+      "mean": -0.0507,
+      "mean_change": -0.0039,
+      "lower_pct": 50.1,
+      "higher_pct": 49.6,
+      "sign_z": -0.11
+     },
+     {
+      "strength": 0.25,
+      "n": 343,
+      "mean": -0.0586,
+      "mean_change": -0.0118,
+      "lower_pct": 55.1,
+      "higher_pct": 44.9,
+      "sign_z": -1.89
+     },
+     {
+      "strength": 0.5,
+      "n": 343,
+      "mean": -0.0714,
+      "mean_change": -0.0246,
+      "lower_pct": 59.8,
+      "higher_pct": 40.2,
+      "sign_z": -3.62
+     },
+     {
+      "strength": 1.0,
+      "n": 343,
+      "mean": -0.1299,
+      "mean_change": -0.0831,
+      "lower_pct": 61.5,
+      "higher_pct": 38.5,
+      "sign_z": -4.27
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   },
+   "ojas": {
+    "original_mean": -0.7592,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 343,
+      "mean": -0.693,
+      "mean_change": 0.0662,
+      "lower_pct": 30.6,
+      "higher_pct": 65.6,
+      "sign_z": 6.61
+     },
+     {
+      "strength": 0.25,
+      "n": 343,
+      "mean": -0.5821,
+      "mean_change": 0.1771,
+      "lower_pct": 20.4,
+      "higher_pct": 78.7,
+      "sign_z": 10.85
+     },
+     {
+      "strength": 0.5,
+      "n": 343,
+      "mean": -0.4371,
+      "mean_change": 0.3221,
+      "lower_pct": 16.3,
+      "higher_pct": 83.7,
+      "sign_z": 12.47
+     },
+     {
+      "strength": 1.0,
+      "n": 343,
+      "mean": -0.147,
+      "mean_change": 0.6121,
+      "lower_pct": 11.7,
+      "higher_pct": 88.3,
+      "sign_z": 14.2
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "rises"
+   },
+   "prasada": {
+    "original_mean": -7.7063,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 343,
+      "mean": -7.475,
+      "mean_change": 0.2313,
+      "lower_pct": 17.5,
+      "higher_pct": 82.5,
+      "sign_z": 12.04
+     },
+     {
+      "strength": 0.25,
+      "n": 343,
+      "mean": -7.2056,
+      "mean_change": 0.5007,
+      "lower_pct": 10.5,
+      "higher_pct": 89.5,
+      "sign_z": 14.63
+     },
+     {
+      "strength": 0.5,
+      "n": 343,
+      "mean": -6.7335,
+      "mean_change": 0.9728,
+      "lower_pct": 6.1,
+      "higher_pct": 93.9,
+      "sign_z": 16.25
+     },
+     {
+      "strength": 1.0,
+      "n": 343,
+      "mean": -5.9799,
+      "mean_change": 1.7264,
+      "lower_pct": 2.0,
+      "higher_pct": 98.0,
+      "sign_z": 17.76
+     }
+    ],
+    "monotone_decline": false,
+    "verdict": "rises"
+   },
+   "chandas": {
+    "original_mean": -0.6076,
+    "steps": [
+     {
+      "strength": 0.1,
+      "n": 343,
+      "mean": -0.661,
+      "mean_change": -0.0533,
+      "lower_pct": 66.2,
+      "higher_pct": 29.4,
+      "sign_z": -6.96
+     },
+     {
+      "strength": 0.25,
+      "n": 343,
+      "mean": -0.7269,
+      "mean_change": -0.1192,
+      "lower_pct": 76.7,
+      "higher_pct": 23.0,
+      "sign_z": -9.95
+     },
+     {
+      "strength": 0.5,
+      "n": 343,
+      "mean": -0.856,
+      "mean_change": -0.2484,
+      "lower_pct": 80.5,
+      "higher_pct": 19.5,
+      "sign_z": -11.28
+     },
+     {
+      "strength": 1.0,
+      "n": 343,
+      "mean": -1.0736,
+      "mean_change": -0.466,
+      "lower_pct": 88.9,
+      "higher_pct": 10.8,
+      "sign_z": -14.49
+     }
+    ],
+    "monotone_decline": true,
+    "verdict": "declines"
+   }
+  }
+ },
+ "synonym_swap_poems": 343,
+ "synonym_swap_printed_verse_mean": {
+  "anuprasa": 0.3331,
+  "madhurya": -0.047,
+  "ojas": 0.0577,
+  "prasada": -6.0002,
+  "chandas": 0.9999
+ },
+ "nonsense_control": {
+  "cells": 9,
+  "poems": 4995,
+  "anuprasa": {
+   "p_nonsense_scores_above_real_min": 0.6844,
+   "p_nonsense_scores_above_real_max": 0.9472
+  },
+  "madhurya": {
+   "p_nonsense_scores_above_real_min": 0.2534,
+   "p_nonsense_scores_above_real_max": 0.5333
+  },
+  "ojas": {
+   "p_nonsense_scores_above_real_min": 0.6543,
+   "p_nonsense_scores_above_real_max": 0.7497
+  },
+  "prasada": {
+   "p_nonsense_scores_above_real_min": 0.005,
+   "p_nonsense_scores_above_real_max": 0.0817
+  },
+  "chandas": {
+   "p_nonsense_scores_above_real_min": 0.5303,
+   "p_nonsense_scores_above_real_max": 0.5303
+  }
+ }
+}

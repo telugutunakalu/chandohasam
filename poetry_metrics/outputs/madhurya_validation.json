@@ -1,0 +1,2086 @@
+{
+ "version": "1.1",
+ "seed": 42,
+ "baseline_corpora": [
+  "bhagavatam",
+  "vemana",
+  "kuchimanchi_timmakavi",
+  "chandassu"
+ ],
+ "weights": {
+  "madhura": 1.0,
+  "sonorant": 0.5,
+  "voiced": 0.0,
+  "voiceless": -0.5,
+  "conjunct": -0.5,
+  "parusha": -1.0
+ },
+ "cuts": {
+  "line": [
+   -0.4643,
+   -0.1579,
+   0.125,
+   0.3
+  ],
+  "poem": [
+   -0.2829,
+   -0.1226,
+   0.049,
+   0.1562
+  ]
+ },
+ "corpora": {
+  "bhagavatam": {
+   "poem_index": {
+    "n": 7366,
+    "mean": -0.0568,
+    "sd": 0.1812,
+    "p10": -0.2857,
+    "median": -0.0364,
+    "p90": 0.15
+   },
+   "poem_inventory": {
+    "n": 7366,
+    "mean": 0.0719,
+    "sd": 0.1006,
+    "p10": -0.0588,
+    "median": 0.0741,
+    "p90": 0.2
+   },
+   "poem_pileup": {
+    "n": 7366,
+    "mean": 0.1288,
+    "sd": 0.097,
+    "p10": 0.0333,
+    "median": 0.1078,
+    "p90": 0.25
+   },
+   "poem_sonority": {
+    "n": 7366,
+    "mean": 10.4849,
+    "sd": 0.3202,
+    "p10": 10.0755,
+    "median": 10.4812,
+    "p90": 10.8931
+   },
+   "poem_levels_pct": {
+    "harsh": 10.24,
+    "leaning_harsh": 20.38,
+    "balanced": 40.25,
+    "leaning_soft": 19.82,
+    "soft": 9.31
+   },
+   "class_shares": {
+    "madhura": 0.1223,
+    "sonorant": 0.3842,
+    "voiced": 0.1413,
+    "voiceless": 0.1817,
+    "conjunct": 0.0328,
+    "parusha": 0.1377
+   },
+   "rules_per_100_aksharas": {
+    "M1": 7.11,
+    "M2": 5.12,
+    "P1": 0.23,
+    "P2": 3.92,
+    "P3": 2.02,
+    "P4": 5.88,
+    "P5": 2.68
+   },
+   "tender_vs_fierce": {
+    "headline": {
+     "auc": 0.6147,
+     "z": 7.5,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": -0.0329,
+     "mean_fierce": -0.1036
+    },
+    "inventory_only": {
+     "auc": 0.6167,
+     "z": 7.63,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": 0.0883,
+     "mean_fierce": 0.047
+    },
+    "cusum_soft_sounds_drain": {
+     "auc": 0.6204,
+     "z": 7.87,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": 0.0059,
+     "mean_fierce": -0.0732
+    },
+    "adjacent_pairs_only": {
+     "auc": 0.6167,
+     "z": 7.63,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": 0.0083,
+     "mean_fierce": -0.0476
+    },
+    "runs_of_parusha_only": {
+     "auc": 0.6246,
+     "z": 8.15,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": 0.0739,
+     "mean_fierce": 0.0251
+    },
+    "middle_weights_quarter": {
+     "auc": 0.6282,
+     "z": 8.38,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": -0.0448,
+     "mean_fierce": -0.1094
+    },
+    "middle_weights_three_quarters": {
+     "auc": 0.6019,
+     "z": 6.66,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": -0.021,
+     "mean_fierce": -0.0977
+    },
+    "classical_only": {
+     "auc": 0.6226,
+     "z": 8.01,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": -0.0087,
+     "mean_fierce": -0.0485
+    },
+    "conjunct_neutral": {
+     "auc": 0.6291,
+     "z": 8.44,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": 0.0103,
+     "mean_fierce": -0.0628
+    },
+    "every_geminate_harsh": {
+     "auc": 0.5981,
+     "z": 6.41,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": -0.0824,
+     "mean_fierce": -0.1458
+    },
+    "visarga_harsh": {
+     "auc": 0.6151,
+     "z": 7.52,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": -0.034,
+     "mean_fierce": -0.1053
+    },
+    "sonority_score": {
+     "auc": 0.5588,
+     "z": 3.84,
+     "n_pos": 845,
+     "n_neg": 616,
+     "mean_tender": 10.4932,
+     "mean_fierce": 10.4262
+    }
+   },
+   "order": {
+    "runs_test_mean_z": 0.036,
+    "poems_clumped_pct": 5.01,
+    "poems_alternating_pct": 5.73,
+    "pileup_real": 0.1288,
+    "pileup_classes_shuffled": 0.1339,
+    "real_above_shuffled_pct": 44.46
+   },
+   "akshara_shuffle": {
+    "mean_real": -0.0568,
+    "mean_shuffled": -0.1098,
+    "real_above_shuffled_pct": 71.83,
+    "mean_abs_change": 0.0865
+   },
+   "word_shuffle": {
+    "mean_real": -0.0568,
+    "mean_shuffled": -0.0579,
+    "real_above_shuffled_pct": 44.26,
+    "mean_abs_change": 0.0344
+   },
+   "spearman_with": {
+    "inventory": 0.9374,
+    "pileup": -0.9018,
+    "sonority_score": 0.5795,
+    "harsh_share": -0.8936,
+    "n_aksharas": -0.1166,
+    "anuprasa_z": 0.0658
+   },
+   "harshest_lines": [
+    {
+     "madhurya": -4.455,
+     "poem": "bhagavatam:1-62-సీ.",
+     "line": "సత్త్వుఁడై సర్వాతిశాయి యగుచుఁ,"
+    },
+    {
+     "madhurya": -4.25,
+     "poem": "bhagavatam:7-39-సీ.",
+     "line": "సర్వజ్ఞుఁ డీశుండుసర్వాత్ముఁ డవ్యయుం-"
+    },
+    {
+     "madhurya": -3.625,
+     "poem": "bhagavatam:6-220-క.",
+     "line": "సర్వేశుఁడు సర్వాత్ముఁడు"
+    },
+    {
+     "madhurya": -3.269,
+     "poem": "bhagavatam:10.2-900-తే.",
+     "line": "హోగ్రుఁడై పట్టితెచ్చె సాల్వుండు గడఁగి."
+    },
+    {
+     "madhurya": -3.25,
+     "poem": "bhagavatam:1-187-క.",
+     "line": "\"పురుషుం, డాఢ్యుఁడు, ప్రకృతికిఁ"
+    },
+    {
+     "madhurya": -3.25,
+     "poem": "bhagavatam:3-991-సీ.",
+     "line": "శశ్వత్ప్రకాశకుండీశ్వరుండు"
+    },
+    {
+     "madhurya": -3.25,
+     "poem": "bhagavatam:10.1-382-ఆ.",
+     "line": "పట్టికడుపు పెక్కుబ్రహ్మాండములు పట్టు"
+    },
+    {
+     "madhurya": -3.214,
+     "poem": "bhagavatam:11-116-క.",
+     "line": "సొప్పడ శ్రీకృష్ణుకథలుచోద్యము గాఁగం"
+    },
+    {
+     "madhurya": -3.0,
+     "poem": "bhagavatam:1-500-క.",
+     "line": "నమ్మనుజేంద్రుండు మ్రొక్కి హర్షాశ్రుతతుల్"
+    },
+    {
+     "madhurya": -2.964,
+     "poem": "bhagavatam:7-214-సీ.",
+     "line": "దన్నెఱుంగఁడు కర్మతంత్రుఁడై కడపట-"
+    }
+   ],
+   "softest_lines": [
+    {
+     "madhurya": 0.7,
+     "poem": "bhagavatam:10.1-863-క.",
+     "line": "మ్మనములఁ బరిరంభించిరి"
+    },
+    {
+     "madhurya": 0.692,
+     "poem": "bhagavatam:6-191-ఆ.",
+     "line": "వారి వారివారివారిఁ జేరినవారి"
+    },
+    {
+     "madhurya": 0.692,
+     "poem": "bhagavatam:6-188.1-ఆ.",
+     "line": "వారి వారివారివారిఁ జేరినవారిఁ"
+    },
+    {
+     "madhurya": 0.65,
+     "poem": "bhagavatam:10.2-574-సీ.",
+     "line": "నందంద వందనంబాచరించి"
+    },
+    {
+     "madhurya": 0.65,
+     "poem": "bhagavatam:4-521-క.",
+     "line": "లినిధరియించి రయంబునఁ"
+    },
+    {
+     "madhurya": 0.65,
+     "poem": "bhagavatam:2-181-క.",
+     "line": "నందుని వరుణుని బంధన"
+    },
+    {
+     "madhurya": 0.636,
+     "poem": "bhagavatam:10.2-790-సీ.",
+     "line": "నంబులం దరయ మానంబు లేదు,"
+    },
+    {
+     "madhurya": 0.636,
+     "poem": "bhagavatam:10.1-327-సీ.",
+     "line": "యున్న చందంబున నున్న వరయ;"
+    },
+    {
+     "madhurya": 0.636,
+     "poem": "bhagavatam:6-468-సీ.",
+     "line": "రమణీయ నీలాంబరంబువాని;"
+    },
+    {
+     "madhurya": 0.636,
+     "poem": "bhagavatam:5.2-133-ఆ.",
+     "line": "యందొ? యంతరాళమందొ? వెలినొ?"
+    }
+   ],
+   "heaviest_runs": [
+    {
+     "aksharas": "సితుండైశుద్ధసత్త్వుడైసర్వాతిశా",
+     "length": 12,
+     "load": 9.5,
+     "poem": "bhagavatam:1-62-సీ."
+    },
+    {
+     "aksharas": "ద్రుండుమ్రొక్కిహర్షాశ్రుతతుల్గ్ర",
+     "length": 10,
+     "load": 8.5,
+     "poem": "bhagavatam:1-500-క."
+    },
+    {
+     "aksharas": "సర్వజ్ఞుడీశుండుసర్వాత్ముడవ్య",
+     "length": 11,
+     "load": 8.5,
+     "poem": "bhagavatam:7-39-సీ."
+    },
+    {
+     "aksharas": "డిక్కడకీడ్చితెచ్చుటసహిం",
+     "length": 10,
+     "load": 8.0,
+     "poem": "bhagavatam:1-164-ఉ."
+    },
+    {
+     "aksharas": "సర్వేశుడుసర్వాత్ముడుసర్వ",
+     "length": 10,
+     "load": 8.0,
+     "poem": "bhagavatam:6-220-క."
+    },
+    {
+     "aksharas": "డుకర్మతంత్రుడైకడపట",
+     "length": 10,
+     "load": 8.0,
+     "poem": "bhagavatam:7-214-సీ."
+    },
+    {
+     "aksharas": "చతుర్వింశతితత్త్వశాసకత్రి",
+     "length": 11,
+     "load": 8.0,
+     "poem": "bhagavatam:7-330-ఉ."
+    },
+    {
+     "aksharas": "కపట్టికడుపుపెక్కుబ్రహ్మాండ",
+     "length": 11,
+     "load": 8.0,
+     "poem": "bhagavatam:10.1-382-ఆ."
+    },
+    {
+     "aksharas": "గ్రుడైశతశతకోటికోటి",
+     "length": 10,
+     "load": 8.0,
+     "poem": "bhagavatam:10.2-853-చ."
+    },
+    {
+     "aksharas": "ద్రుడుసొప్పడశ్రీకృష్ణుకథ",
+     "length": 10,
+     "load": 8.0,
+     "poem": "bhagavatam:11-116-క."
+    }
+   ],
+   "prose": {
+    "poem_index": {
+     "n": 2700,
+     "mean": 0.012,
+     "sd": 0.2703,
+     "p10": -0.25,
+     "median": 0.0063,
+     "p90": 0.3333
+    },
+    "verse_above_prose": {
+     "auc": 0.412,
+     "z": -13.55,
+     "n_pos": 7366,
+     "n_neg": 2700
+    }
+   }
+  },
+  "vemana": {
+   "poem_index": {
+    "n": 1164,
+    "mean": -0.0015,
+    "sd": 0.186,
+    "p10": -0.2407,
+    "median": 0.03,
+    "p90": 0.202
+   },
+   "poem_inventory": {
+    "n": 1164,
+    "mean": 0.1086,
+    "sd": 0.0988,
+    "p10": -0.0192,
+    "median": 0.11,
+    "p90": 0.23
+   },
+   "poem_pileup": {
+    "n": 1164,
+    "mean": 0.1101,
+    "sd": 0.1036,
+    "p10": 0.0187,
+    "median": 0.0808,
+    "p90": 0.2367
+   },
+   "poem_sonority": {
+    "n": 1164,
+    "mean": 10.7929,
+    "sd": 0.3447,
+    "p10": 10.3206,
+    "median": 10.7911,
+    "p90": 11.2212
+   },
+   "poem_levels_pct": {
+    "harsh": 7.13,
+    "leaning_harsh": 15.03,
+    "balanced": 32.47,
+    "leaning_soft": 27.06,
+    "soft": 18.3
+   },
+   "class_shares": {
+    "madhura": 0.0938,
+    "sonorant": 0.4581,
+    "voiced": 0.1467,
+    "voiceless": 0.156,
+    "conjunct": 0.0188,
+    "parusha": 0.1266
+   },
+   "rules_per_100_aksharas": {
+    "M1": 4.42,
+    "M2": 4.96,
+    "P1": 0.13,
+    "P2": 1.89,
+    "P3": 2.46,
+    "P4": 6.78,
+    "P5": 2.64
+   },
+   "tender_vs_fierce": {
+    "skipped": "fewer than 50 poems in a group",
+    "n_tender": 35,
+    "n_fierce": 22
+   },
+   "order": {
+    "runs_test_mean_z": -0.251,
+    "poems_clumped_pct": 10.74,
+    "poems_alternating_pct": 3.35,
+    "pileup_real": 0.1101,
+    "pileup_classes_shuffled": 0.0921,
+    "real_above_shuffled_pct": 53.61
+   },
+   "akshara_shuffle": {
+    "mean_real": -0.0015,
+    "mean_shuffled": -0.0052,
+    "real_above_shuffled_pct": 55.15,
+    "mean_abs_change": 0.068
+   },
+   "word_shuffle": {
+    "mean_real": -0.0015,
+    "mean_shuffled": 0.0091,
+    "real_above_shuffled_pct": 26.63,
+    "mean_abs_change": 0.034
+   },
+   "spearman_with": {
+    "inventory": 0.9481,
+    "pileup": -0.9062,
+    "sonority_score": 0.627,
+    "harsh_share": -0.9089,
+    "n_aksharas": 0.0767,
+    "anuprasa_z": 0.0626
+   },
+   "harshest_lines": [
+    {
+     "madhurya": -2.708,
+     "poem": "vemana:vemana-932-ఆ.",
+     "line": "చచ్చిపుట్టుచుండు సహజముగను"
+    },
+    {
+     "madhurya": -2.458,
+     "poem": "vemana:vemana-378-ఆ.",
+     "line": "పెట్టి పుట్టి కట్టి పృథివి బ్రతికి"
+    },
+    {
+     "madhurya": -2.227,
+     "poem": "vemana:vemana-123-ఆ.",
+     "line": "పోటికెడలుబంటు కూటి చేటు"
+    },
+    {
+     "madhurya": -2.143,
+     "poem": "vemana:vemana-378-ఆ.",
+     "line": "చచ్చి సిద్ధుఁడగుచు సర్వజ్ఞుఁడయినిల్చు"
+    },
+    {
+     "madhurya": -2.143,
+     "poem": "vemana:vemana-404-ఆ.",
+     "line": "దుండగీడు కొడుకు కొండీడు చెలికాఁడు"
+    },
+    {
+     "madhurya": -2.083,
+     "poem": "vemana:vemana-923-ఆ.",
+     "line": "చచ్చిపుట్టుచుండు సహజమనుచు"
+    },
+    {
+     "madhurya": -2.045,
+     "poem": "vemana:vemana-1075-ఆ.",
+     "line": "సుద్దిసాక్షి తగనిబుద్ధి వేమా."
+    },
+    {
+     "madhurya": -2.0,
+     "poem": "vemana:vemana-170-ఆ.",
+     "line": "కోఁతిఁ బట్టితెచ్చి క్రొత్తపుట్టముగట్టి"
+    },
+    {
+     "madhurya": -1.923,
+     "poem": "vemana:vemana-849-ఆ.",
+     "line": "బ్రకృతి పెండ్లిచేసి పరముఁ జెడిచి"
+    },
+    {
+     "madhurya": -1.917,
+     "poem": "vemana:vemana-1020-ఆ.",
+     "line": "తట్టుపడక మదిని తన్నుకోక"
+    }
+   ],
+   "softest_lines": [
+    {
+     "madhurya": 0.7,
+     "poem": "vemana:vemana-869-ఆ.",
+     "line": "జరయందు మరణమందును"
+    },
+    {
+     "madhurya": 0.65,
+     "poem": "vemana:vemana-1151-ఆ.",
+     "line": "వారి వారి నేల గారవింప"
+    },
+    {
+     "madhurya": 0.577,
+     "poem": "vemana:vemana-1152-ఆ.",
+     "line": "మాలవాని నేల మఱిమఱి నిందింప"
+    },
+    {
+     "madhurya": 0.577,
+     "poem": "vemana:vemana-1002-ఆ.",
+     "line": "మారణ మేమందు నింక మహిలో వేమా."
+    },
+    {
+     "madhurya": 0.571,
+     "poem": "vemana:vemana-983-ఆ.",
+     "line": "నరయంగను లేరు నించుకైనను వేమా."
+    },
+    {
+     "madhurya": 0.571,
+     "poem": "vemana:vemana-673-ఆ.",
+     "line": "ఎంతకరువు నయిన నెంగిలి యన్నము"
+    },
+    {
+     "madhurya": 0.571,
+     "poem": "vemana:vemana-14-ఆ.",
+     "line": "ఎవ్వరి గుణములును యేమన్న మానవు"
+    },
+    {
+     "madhurya": 0.562,
+     "poem": "vemana:vemana-63-ఆ.",
+     "line": "నెనయంగా నొరునిగుణము నెంచును మదిలో"
+    },
+    {
+     "madhurya": 0.55,
+     "poem": "vemana:vemana-1065-ఆ.",
+     "line": "విఱ్ఱవీఁగువారు వెఱ్ఱివారు"
+    },
+    {
+     "madhurya": 0.55,
+     "poem": "vemana:vemana-858-ఆ.",
+     "line": "అనలంబున జనియించియు"
+    }
+   ],
+   "heaviest_runs": [
+    {
+     "aksharas": "కపొర్లాడుచుండెడిభ్రాం",
+     "length": 8,
+     "load": 6.5,
+     "poem": "vemana:vemana-834-ఆ."
+    },
+    {
+     "aksharas": "డిచచ్చిపుట్టుచుండుసహ",
+     "length": 9,
+     "load": 6.5,
+     "poem": "vemana:vemana-932-ఆ."
+    },
+    {
+     "aksharas": "ట్టితెచ్చిక్రొత్తపుట్ట",
+     "length": 7,
+     "load": 6.0,
+     "poem": "vemana:vemana-170-ఆ."
+    },
+    {
+     "aksharas": "బ్రతికిచచ్చిసిద్ధుడ",
+     "length": 8,
+     "load": 6.0,
+     "poem": "vemana:vemana-378-ఆ."
+    },
+    {
+     "aksharas": "డుకొడుకుకొండీడుచె",
+     "length": 8,
+     "load": 6.0,
+     "poem": "vemana:vemana-404-ఆ."
+    },
+    {
+     "aksharas": "టాడకతట్టుపడక",
+     "length": 8,
+     "load": 6.0,
+     "poem": "vemana:vemana-1020-ఆ."
+    },
+    {
+     "aksharas": "కప్పుడుసుద్దిసాక్షిత",
+     "length": 8,
+     "load": 6.0,
+     "poem": "vemana:vemana-1075-ఆ."
+    },
+    {
+     "aksharas": "తిండికుక్కతిండిప్రి",
+     "length": 7,
+     "load": 5.5,
+     "poem": "vemana:vemana-249-ఆ."
+    },
+    {
+     "aksharas": "పెట్టిపుట్టికట్టిపృథి",
+     "length": 8,
+     "load": 5.5,
+     "poem": "vemana:vemana-378-ఆ."
+    },
+    {
+     "aksharas": "పెట్టుచెడిపెకొడుకు",
+     "length": 8,
+     "load": 5.5,
+     "poem": "vemana:vemana-408-ఆ."
+    }
+   ]
+  },
+  "kuchimanchi_timmakavi": {
+   "poem_index": {
+    "n": 1642,
+    "mean": -0.0592,
+    "sd": 0.184,
+    "p10": -0.2938,
+    "median": -0.0385,
+    "p90": 0.1557
+   },
+   "poem_inventory": {
+    "n": 1642,
+    "mean": 0.0675,
+    "sd": 0.1005,
+    "p10": -0.0622,
+    "median": 0.0675,
+    "p90": 0.2
+   },
+   "poem_pileup": {
+    "n": 1642,
+    "mean": 0.1267,
+    "sd": 0.0989,
+    "p10": 0.0298,
+    "median": 0.1036,
+    "p90": 0.25
+   },
+   "poem_sonority": {
+    "n": 1642,
+    "mean": 10.4823,
+    "sd": 0.3075,
+    "p10": 10.0958,
+    "median": 10.4778,
+    "p90": 10.876
+   },
+   "poem_levels_pct": {
+    "harsh": 10.78,
+    "leaning_harsh": 21.32,
+    "balanced": 39.71,
+    "leaning_soft": 18.27,
+    "soft": 9.93
+   },
+   "class_shares": {
+    "madhura": 0.1077,
+    "sonorant": 0.3974,
+    "voiced": 0.1474,
+    "voiceless": 0.182,
+    "conjunct": 0.018,
+    "parusha": 0.1474
+   },
+   "rules_per_100_aksharas": {
+    "M1": 6.36,
+    "M2": 4.41,
+    "P1": 0.03,
+    "P2": 2.3,
+    "P3": 3.86,
+    "P4": 8.87,
+    "P5": 0.78
+   },
+   "tender_vs_fierce": {
+    "headline": {
+     "auc": 0.6132,
+     "z": 4.09,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": -0.0191,
+     "mean_fierce": -0.0785
+    },
+    "inventory_only": {
+     "auc": 0.6324,
+     "z": 4.79,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": 0.0905,
+     "mean_fierce": 0.0488
+    },
+    "cusum_soft_sounds_drain": {
+     "auc": 0.6226,
+     "z": 4.43,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": 0.0138,
+     "mean_fierce": -0.0474
+    },
+    "adjacent_pairs_only": {
+     "auc": 0.6239,
+     "z": 4.48,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": 0.0182,
+     "mean_fierce": -0.034
+    },
+    "runs_of_parusha_only": {
+     "auc": 0.6381,
+     "z": 4.99,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": 0.0785,
+     "mean_fierce": 0.0305
+    },
+    "middle_weights_quarter": {
+     "auc": 0.6346,
+     "z": 4.87,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": -0.046,
+     "mean_fierce": -0.1064
+    },
+    "middle_weights_three_quarters": {
+     "auc": 0.5979,
+     "z": 3.54,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": 0.0077,
+     "mean_fierce": -0.0507
+    },
+    "classical_only": {
+     "auc": 0.6716,
+     "z": 6.2,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": -0.0249,
+     "mean_fierce": -0.0746
+    },
+    "conjunct_neutral": {
+     "auc": 0.6277,
+     "z": 4.62,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": 0.0033,
+     "mean_fierce": -0.0622
+    },
+    "every_geminate_harsh": {
+     "auc": 0.5656,
+     "z": 2.37,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": -0.1127,
+     "mean_fierce": -0.1547
+    },
+    "visarga_harsh": {
+     "auc": 0.6127,
+     "z": 4.07,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": -0.0193,
+     "mean_fierce": -0.0785
+    },
+    "sonority_score": {
+     "auc": 0.5779,
+     "z": 2.82,
+     "n_pos": 154,
+     "n_neg": 374,
+     "mean_tender": 10.5114,
+     "mean_fierce": 10.4285
+    }
+   },
+   "order": {
+    "runs_test_mean_z": 0.024,
+    "poems_clumped_pct": 6.46,
+    "poems_alternating_pct": 5.6,
+    "pileup_real": 0.1267,
+    "pileup_classes_shuffled": 0.1296,
+    "real_above_shuffled_pct": 45.37
+   },
+   "akshara_shuffle": {
+    "mean_real": -0.0592,
+    "mean_shuffled": -0.105,
+    "real_above_shuffled_pct": 69.79,
+    "mean_abs_change": 0.0813
+   },
+   "word_shuffle": {
+    "mean_real": -0.0592,
+    "mean_shuffled": -0.054,
+    "real_above_shuffled_pct": 42.27,
+    "mean_abs_change": 0.0364
+   },
+   "spearman_with": {
+    "inventory": 0.9376,
+    "pileup": -0.9113,
+    "sonority_score": 0.6201,
+    "harsh_share": -0.9113,
+    "n_aksharas": -0.1795,
+    "anuprasa_z": -0.0427
+   },
+   "harshest_lines": [
+    {
+     "madhurya": -3.429,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-131",
+     "line": "పాతపొత్తపుకట్ట సేత పట్టుకవచ్చి"
+    },
+    {
+     "madhurya": -2.615,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-711",
+     "line": "కటకట! సైదోడ! క్రాల్గంటి కార్మెకం"
+    },
+    {
+     "madhurya": -2.438,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-779",
+     "line": "ఆ కొండసూడు పట్టికి"
+    },
+    {
+     "madhurya": -2.375,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1261",
+     "line": "జ్యోతిర్ముఖుఁడు సుదంష్ట్రుడు నలుండు"
+    },
+    {
+     "madhurya": -2.321,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-105",
+     "line": "కౌశిక కౌండిన్య కపిల కశ్యప కణ్వ"
+    },
+    {
+     "madhurya": -2.318,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1362",
+     "line": "జెండాడి చీకాకుచేసి కలఁచి"
+    },
+    {
+     "madhurya": -2.308,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1638",
+     "line": "తోడి కోడండ్ర సంగడి చేడియలను"
+    },
+    {
+     "madhurya": -2.233,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-840",
+     "line": "కొడుకు కొడుకుఁ బుట్ట కూడు మేపరి ఱేఁడు"
+    },
+    {
+     "madhurya": -2.231,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-106",
+     "line": "స్తుతికృతామితహిత కుతుక, నీకు!"
+    },
+    {
+     "madhurya": -2.182,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1599",
+     "line": "ప్పుడె కడు కడిఁదిగ వెండియుఁ"
+    }
+   ],
+   "softest_lines": [
+    {
+     "madhurya": 0.692,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1092",
+     "line": "నరయనేరవు నిన్నేమి యందునింక?"
+    },
+    {
+     "madhurya": 0.667,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-568",
+     "line": "గలవార లెందఱేనియుఁ"
+    },
+    {
+     "madhurya": 0.667,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-381",
+     "line": "వారువము లందలంబులు"
+    },
+    {
+     "madhurya": 0.625,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-484",
+     "line": "నెయ్యంబున వియ్యంబుల"
+    },
+    {
+     "madhurya": 0.625,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-467",
+     "line": "బూనని నెయ్యంబున న"
+    },
+    {
+     "madhurya": 0.6,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-665",
+     "line": "బన్నము వొందించె మరలఁ బఱవం జనునే?"
+    },
+    {
+     "madhurya": 0.591,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1317",
+     "line": "మఱియుఁ జలంబున నిరువురు"
+    },
+    {
+     "madhurya": 0.583,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-483",
+     "line": "లందలంబులుఁ జందువా ల్గుందనంపు"
+    },
+    {
+     "madhurya": 0.577,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1561",
+     "line": "అందు వెలుఁగొందు విల్లును బొందలంబు"
+    },
+    {
+     "madhurya": 0.577,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-714",
+     "line": "నుంగొనరె? మీరు కమ్మ గేదంగులార!"
+    }
+   ],
+   "heaviest_runs": [
+    {
+     "aksharas": "పాతపొత్తపుకట్టసేతపట్టుక",
+     "length": 12,
+     "load": 7.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-131"
+    },
+    {
+     "aksharas": "బ్రహ్మండసంత్రాతకున్శతకం",
+     "length": 10,
+     "load": 7.0,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-2"
+    },
+    {
+     "aksharas": "టకటపడిప్రెగ్గడ",
+     "length": 8,
+     "load": 7.0,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-338"
+    },
+    {
+     "aksharas": "టద్ఘోటీహాటకపేటికా",
+     "length": 9,
+     "load": 6.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-23"
+    },
+    {
+     "aksharas": "వ్యాకీర్ణేచ్చబ్రతిష్ఠచేసె",
+     "length": 9,
+     "load": 6.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-39"
+    },
+    {
+     "aksharas": "ట్లసూడుకొడుకుకొడుకు",
+     "length": 9,
+     "load": 6.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-840"
+    },
+    {
+     "aksharas": "తాల్పుతొల్బిడ్డడచెట్టుద్రి",
+     "length": 9,
+     "load": 6.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1130"
+    },
+    {
+     "aksharas": "మ్రొక్కితోడికోడండ్రసం",
+     "length": 8,
+     "load": 6.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-1638"
+    },
+    {
+     "aksharas": "చిద్వేషికిశాశ్వతస్థిత",
+     "length": 9,
+     "load": 6.0,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-61"
+    },
+    {
+     "aksharas": "డచుచుండుకటకటా",
+     "length": 8,
+     "load": 6.0,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-170"
+    }
+   ]
+  },
+  "chandassu": {
+   "poem_index": {
+    "n": 2532,
+    "mean": -0.059,
+    "sd": 0.1775,
+    "p10": -0.2812,
+    "median": -0.0382,
+    "p90": 0.1481
+   },
+   "poem_inventory": {
+    "n": 2532,
+    "mean": 0.0735,
+    "sd": 0.0985,
+    "p10": -0.0526,
+    "median": 0.075,
+    "p90": 0.1981
+   },
+   "poem_pileup": {
+    "n": 2532,
+    "mean": 0.1325,
+    "sd": 0.0938,
+    "p10": 0.0395,
+    "median": 0.1125,
+    "p90": 0.2404
+   },
+   "poem_sonority": {
+    "n": 2532,
+    "mean": 10.4476,
+    "sd": 0.3058,
+    "p10": 10.0482,
+    "median": 10.4472,
+    "p90": 10.8282
+   },
+   "poem_levels_pct": {
+    "harsh": 9.95,
+    "leaning_harsh": 20.54,
+    "balanced": 42.14,
+    "leaning_soft": 18.48,
+    "soft": 8.89
+   },
+   "class_shares": {
+    "madhura": 0.1233,
+    "sonorant": 0.3831,
+    "voiced": 0.1404,
+    "voiceless": 0.187,
+    "conjunct": 0.0336,
+    "parusha": 0.1327
+   },
+   "rules_per_100_aksharas": {
+    "M1": 7.49,
+    "M2": 4.84,
+    "P1": 0.14,
+    "P2": 3.62,
+    "P3": 2.42,
+    "P4": 5.7,
+    "P5": 2.53
+   },
+   "tender_vs_fierce": {
+    "headline": {
+     "auc": 0.6789,
+     "z": 6.73,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": -0.0135,
+     "mean_fierce": -0.1139
+    },
+    "inventory_only": {
+     "auc": 0.6873,
+     "z": 7.05,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": 0.1031,
+     "mean_fierce": 0.0442
+    },
+    "cusum_soft_sounds_drain": {
+     "auc": 0.6929,
+     "z": 7.26,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": 0.0272,
+     "mean_fierce": -0.0996
+    },
+    "adjacent_pairs_only": {
+     "auc": 0.6843,
+     "z": 6.93,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": 0.027,
+     "mean_fierce": -0.0535
+    },
+    "runs_of_parusha_only": {
+     "auc": 0.6946,
+     "z": 7.32,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": 0.0916,
+     "mean_fierce": 0.0234
+    },
+    "middle_weights_quarter": {
+     "auc": 0.6912,
+     "z": 7.19,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": -0.0306,
+     "mean_fierce": -0.1185
+    },
+    "middle_weights_three_quarters": {
+     "auc": 0.6684,
+     "z": 6.33,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": 0.0036,
+     "mean_fierce": -0.1093
+    },
+    "classical_only": {
+     "auc": 0.6787,
+     "z": 6.72,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": -0.0001,
+     "mean_fierce": -0.0488
+    },
+    "conjunct_neutral": {
+     "auc": 0.6778,
+     "z": 6.69,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": 0.0298,
+     "mean_fierce": -0.0623
+    },
+    "every_geminate_harsh": {
+     "auc": 0.6348,
+     "z": 5.07,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": -0.0831,
+     "mean_fierce": -0.1553
+    },
+    "visarga_harsh": {
+     "auc": 0.681,
+     "z": 6.81,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": -0.0137,
+     "mean_fierce": -0.1172
+    },
+    "sonority_score": {
+     "auc": 0.6096,
+     "z": 4.12,
+     "n_pos": 600,
+     "n_neg": 147,
+     "mean_tender": 10.4926,
+     "mean_fierce": 10.3908
+    }
+   },
+   "order": {
+    "runs_test_mean_z": 0.09,
+    "poems_clumped_pct": 5.21,
+    "poems_alternating_pct": 6.95,
+    "pileup_real": 0.1325,
+    "pileup_classes_shuffled": 0.1366,
+    "real_above_shuffled_pct": 44.94
+   },
+   "akshara_shuffle": {
+    "mean_real": -0.059,
+    "mean_shuffled": -0.1193,
+    "real_above_shuffled_pct": 76.38,
+    "mean_abs_change": 0.0863
+   },
+   "word_shuffle": {
+    "mean_real": -0.059,
+    "mean_shuffled": -0.0584,
+    "real_above_shuffled_pct": 46.33,
+    "mean_abs_change": 0.0308
+   },
+   "spearman_with": {
+    "inventory": 0.9433,
+    "pileup": -0.9088,
+    "sonority_score": 0.5635,
+    "harsh_share": -0.9087,
+    "n_aksharas": -0.0444,
+    "anuprasa_z": 0.0625
+   },
+   "harshest_lines": [
+    {
+     "madhurya": -3.684,
+     "poem": "chandassu:chandassu-devakinandana-47-శా.",
+     "line": "వ్యాళాధీశ్వర శర్వ షణ్ముఖ శుకాద్యస్తోత్ర సత్పాత్ర గో"
+    },
+    {
+     "madhurya": -3.312,
+     "poem": "chandassu:chandassu-kumaara-9-క.",
+     "line": "పతి పూర్వపర్వతాగ్రా"
+    },
+    {
+     "madhurya": -2.375,
+     "poem": "chandassu:chandassu-laavanya-88-సీ.",
+     "line": "కాటుకపై మిన్కుకాటుకతో కాళ్ల"
+    },
+    {
+     "madhurya": -2.333,
+     "poem": "chandassu:chandassu-kumaara-83-క.",
+     "line": "విను హెచ్చుట తగ్గుటకే"
+    },
+    {
+     "madhurya": -2.225,
+     "poem": "chandassu:chandassu-maaruthi-9-మ.",
+     "line": "మనుజగ్రామణి సత్కృపాత్త కపిసామ్రాజ్య స్థితుండయ్యు భూ"
+    },
+    {
+     "madhurya": -2.154,
+     "poem": "chandassu:chandassu-laavanya-88-సీ.",
+     "line": "పసపుపై నలచిన పసపుతోడ"
+    },
+    {
+     "madhurya": -2.15,
+     "poem": "chandassu:chandassu-sumathi-69-క.",
+     "line": "సుతుకడకు రిత్తచేతుల"
+    },
+    {
+     "madhurya": -2.115,
+     "poem": "chandassu:chandassu-venugopaala-102-సీ.",
+     "line": "పడుపుతొత్తుకు మేలుపౌజు కమ్మలు"
+    },
+    {
+     "madhurya": -2.056,
+     "poem": "chandassu:chandassu-kumaarii-29-క.",
+     "line": "బ్రతు కొక బ్రతుకా! జీవ"
+    },
+    {
+     "madhurya": -2.042,
+     "poem": "chandassu:chandassu-venugopaala-104-సీ.",
+     "line": "కోటి నేర్చుట పొట్టకూటి కొరకె"
+    }
+   ],
+   "softest_lines": [
+    {
+     "madhurya": 0.75,
+     "poem": "chandassu:chandassu-sampangimanna-58-క.",
+     "line": "నందం బనంగ నందలి"
+    },
+    {
+     "madhurya": 0.722,
+     "poem": "chandassu:chandassu-kumaarii-92-క.",
+     "line": "గని యెందు నిందు నందును"
+    },
+    {
+     "madhurya": 0.667,
+     "poem": "chandassu:chandassu-narasimha-39-సీ.",
+     "line": "నెనరు నాయందుంచు నెమ్మనమున"
+    },
+    {
+     "madhurya": 0.654,
+     "poem": "chandassu:chandassu-taadimallaraajagopaala-33-సీ.",
+     "line": "వంచించి మరి గొల్లవారల నందఱ"
+    },
+    {
+     "madhurya": 0.633,
+     "poem": "chandassu:chandassu-madanagopala-20-సీ.",
+     "line": "యరవిరిబంతులు మరువంబు కురువేరు"
+    },
+    {
+     "madhurya": 0.625,
+     "poem": "chandassu:chandassu-madanagopala-6-సీ.",
+     "line": "వెన్నెలగుమ్మరా యన్నులమిన్నరా"
+    },
+    {
+     "madhurya": 0.625,
+     "poem": "chandassu:chandassu-kumaara-24-క.",
+     "line": "దమ్ముల నన్నయు సమ్మో"
+    },
+    {
+     "madhurya": 0.611,
+     "poem": "chandassu:chandassu-sampangimanna-25-క.",
+     "line": "బింతింతనఁ దరమా ఘన"
+    },
+    {
+     "madhurya": 0.611,
+     "poem": "chandassu:chandassu-krishna-50-క.",
+     "line": "అరయంగనె మోహింతురు"
+    },
+    {
+     "madhurya": 0.605,
+     "poem": "chandassu:chandassu-ontimittaraguveera-49-శా.",
+     "line": "నేమా నిన్ను నుతించువార మయినన్ నిన్నెంతు నోరారఁగా"
+    }
+   ],
+   "heaviest_runs": [
+    {
+     "aksharas": "శర్వషణ్ముఖశుకాద్యస్తోత్రసత్పాత్ర",
+     "length": 13,
+     "load": 9.5,
+     "poem": "chandassu:chandassu-devakinandana-47-శా."
+    },
+    {
+     "aksharas": "తోద్దండప్రతాపోత్కటస్ఫుటకోపా",
+     "length": 12,
+     "load": 8.5,
+     "poem": "chandassu:chandassu-sarveswara-121-మ."
+    },
+    {
+     "aksharas": "కాడాండడడాండడాండ",
+     "length": 8,
+     "load": 7.5,
+     "poem": "chandassu:chandassu-daasarathi-34-ఉ."
+    },
+    {
+     "aksharas": "సత్కృపాత్తకపిసామ్రాజ్యస్థితుండ",
+     "length": 12,
+     "load": 7.5,
+     "poem": "chandassu:chandassu-maaruthi-9-మ."
+    },
+    {
+     "aksharas": "ర్మికుడొక్కడొక్కడేక",
+     "length": 8,
+     "load": 7.0,
+     "poem": "chandassu:chandassu-bhaskara-34-చ."
+    },
+    {
+     "aksharas": "త్యహర్యక్షుండక్షుడుడా",
+     "length": 8,
+     "load": 7.0,
+     "poem": "chandassu:chandassu-maaruthi-57-శా."
+    },
+    {
+     "aksharas": "తడుతత్త్వజ్ఞుండుసర్వేశ్వ",
+     "length": 9,
+     "load": 7.0,
+     "poem": "chandassu:chandassu-sarveswara-127-మ."
+    },
+    {
+     "aksharas": "శకోటిసూర్యప్రకాశ",
+     "length": 8,
+     "load": 6.5,
+     "poem": "chandassu:chandassu-aandhranaayaka-4-సీ."
+    },
+    {
+     "aksharas": "ల్భ్యసంసిద్ధికైప్రకటప్రే",
+     "length": 9,
+     "load": 6.5,
+     "poem": "chandassu:chandassu-bhaktamandaara-8-మ."
+    },
+    {
+     "aksharas": "కొంటెతొత్తుకొడుకుల్కొండీ",
+     "length": 9,
+     "load": 6.5,
+     "poem": "chandassu:chandassu-bhaktamandaara-54-మ."
+    }
+   ]
+  }
+ },
+ "exemplars": {
+  "exemplars": [
+   {
+    "id": "kas_4_62_saukumarya",
+    "source": "KAS",
+    "locus": "4.62",
+    "pole": "soft",
+    "tier": "primary",
+    "madhurya": 0.3937,
+    "percentile": 99.7,
+    "label": "soft",
+    "inventory": 0.4188,
+    "pileup": 0.025,
+    "sonority": 10.074,
+    "sonority_percentile": 9.3,
+    "classes": {
+     "madhura": 26,
+     "sonorant": 33,
+     "voiced": 7,
+     "voiceless": 10,
+     "conjunct": 0,
+     "parusha": 4
+    },
+    "harshest_run": {
+     "aksharas": "సింహకౌ",
+     "length": 3,
+     "load": 1.5
+    }
+   },
+   {
+    "id": "kp_8_74_madhurya",
+    "source": "KP",
+    "locus": "8.74, example 347",
+    "pole": "soft",
+    "tier": "primary",
+    "madhurya": 0.0227,
+    "percentile": 63.5,
+    "label": "balanced",
+    "inventory": 0.1932,
+    "pileup": 0.1705,
+    "sonority": 9.953,
+    "sonority_percentile": 4.6,
+    "classes": {
+     "madhura": 12,
+     "sonorant": 13,
+     "voiced": 2,
+     "voiceless": 12,
+     "conjunct": 2,
+     "parusha": 3
+    },
+    "harshest_run": {
+     "aksharas": "తాంగ్యాఃకుర్వం",
+     "length": 4,
+     "load": 2.5
+    }
+   },
+   {
+    "id": "kas_4_21_parusha",
+    "source": "KAS",
+    "locus": "4.21",
+    "pole": "harsh",
+    "tier": "primary",
+    "madhurya": -1.25,
+    "percentile": 1.0,
+    "label": "harsh",
+    "inventory": -0.5357,
+    "pileup": 0.7143,
+    "sonority": 9.364,
+    "sonority_percentile": 2.8,
+    "classes": {
+     "madhura": 0,
+     "sonorant": 1,
+     "voiced": 2,
+     "voiceless": 6,
+     "conjunct": 0,
+     "parusha": 5
+    },
+    "harshest_run": {
+     "aksharas": "కుధ్రేడ్జాపతి",
+     "length": 5,
+     "load": 3.5
+    }
+   },
+   {
+    "id": "kp_8_75_ojas",
+    "source": "KP",
+    "locus": "8.75, example 348",
+    "pole": "harsh",
+    "tier": "primary",
+    "madhurya": -0.4762,
+    "percentile": 2.5,
+    "label": "harsh",
+    "inventory": -0.1369,
+    "pileup": 0.3393,
+    "sonority": 9.935,
+    "sonority_percentile": 4.0,
+    "classes": {
+     "madhura": 6,
+     "sonorant": 25,
+     "voiced": 10,
+     "voiceless": 19,
+     "conjunct": 7,
+     "parusha": 17
+    },
+    "harshest_run": {
+     "aksharas": "తేశాంఘ్రిప్రసా",
+     "length": 5,
+     "load": 4.0
+    }
+   },
+   {
+    "id": "kp_8_77_bhima",
+    "source": "KP",
+    "locus": "8.77, example 350 (Veṇīsaṃhāra 1.22)",
+    "pole": "harsh",
+    "tier": "primary",
+    "madhurya": -0.5476,
+    "percentile": 1.5,
+    "label": "harsh",
+    "inventory": -0.1488,
+    "pileup": 0.3988,
+    "sonority": 9.77,
+    "sonority_percentile": 1.3,
+    "classes": {
+     "madhura": 9,
+     "sonorant": 17,
+     "voiced": 11,
+     "voiceless": 24,
+     "conjunct": 10,
+     "parusha": 13
+    },
+    "harshest_run": {
+     "aksharas": "ట్టచండఃకృష్ణాక్రో",
+     "length": 6,
+     "load": 5.0
+    }
+   },
+   {
+    "id": "kp_8_77_kumbhakarna",
+    "source": "KP",
+    "locus": "8.77, example 351",
+    "pole": "harsh",
+    "tier": "primary",
+    "madhurya": -0.5536,
+    "percentile": 1.5,
+    "label": "harsh",
+    "inventory": -0.0357,
+    "pileup": 0.5179,
+    "sonority": 10.09,
+    "sonority_percentile": 10.0,
+    "classes": {
+     "madhura": 12,
+     "sonorant": 26,
+     "voiced": 5,
+     "voiceless": 22,
+     "conjunct": 4,
+     "parusha": 15
+    },
+    "harshest_run": {
+     "aksharas": "తత్రాసాకృష్టాశ్వతిర్యగ్వ",
+     "length": 9,
+     "load": 6.5
+    }
+   },
+   {
+    "id": "kd_1_70_sukumara",
+    "source": "KD",
+    "locus": "1.70",
+    "pole": "soft",
+    "tier": "primary",
+    "madhurya": -0.0312,
+    "percentile": 50.0,
+    "label": "balanced",
+    "inventory": 0.0,
+    "pileup": 0.0312,
+    "sonority": 9.959,
+    "sonority_percentile": 4.9,
+    "classes": {
+     "madhura": 3,
+     "sonorant": 11,
+     "voiced": 5,
+     "voiceless": 7,
+     "conjunct": 2,
+     "parusha": 4
+    },
+    "harshest_run": {
+     "aksharas": "కంఠైర్",
+     "length": 2,
+     "load": 1.5
+    }
+   },
+   {
+    "id": "kd_1_72_krcchrodya",
+    "source": "KD",
+    "locus": "1.72",
+    "pole": "harsh",
+    "tier": "primary",
+    "madhurya": -1.5,
+    "percentile": 0.9,
+    "label": "harsh",
+    "inventory": -0.3929,
+    "pileup": 1.1071,
+    "sonority": 8.538,
+    "sonority_percentile": 0.6,
+    "classes": {
+     "madhura": 1,
+     "sonorant": 3,
+     "voiced": 0,
+     "voiceless": 3,
+     "conjunct": 1,
+     "parusha": 6
+    },
+    "harshest_run": {
+     "aksharas": "క్షపితఃపక్షఃక్షత్రి",
+     "length": 7,
+     "load": 5.5
+    }
+   },
+   {
+    "id": "kasc_tikkana_gadha",
+    "source": "KAS-C",
+    "locus": "commentary on 4.69-70 (ojas)",
+    "pole": "harsh",
+    "tier": "commentary",
+    "madhurya": -0.25,
+    "percentile": 13.0,
+    "label": "leaning_harsh",
+    "inventory": 0.0,
+    "pileup": 0.25,
+    "sonority": 10.33,
+    "sonority_percentile": 29.4,
+    "classes": {
+     "madhura": 13,
+     "sonorant": 22,
+     "voiced": 6,
+     "voiceless": 15,
+     "conjunct": 7,
+     "parusha": 13
+    },
+    "harshest_run": {
+     "aksharas": "సాస్తోకప్రతాపస్ఫు",
+     "length": 7,
+     "load": 4.0
+    }
+   },
+   {
+    "id": "kasc_peddana_ekkadi",
+    "source": "KAS-C",
+    "locus": "commentary on 4.62 (saukumārya)",
+    "pole": "soft",
+    "tier": "commentary",
+    "madhurya": -0.0875,
+    "percentile": 37.1,
+    "label": "balanced",
+    "inventory": 0.0625,
+    "pileup": 0.15,
+    "sonority": 10.128,
+    "sonority_percentile": 12.3,
+    "classes": {
+     "madhura": 13,
+     "sonorant": 30,
+     "voiced": 5,
+     "voiceless": 14,
+     "conjunct": 4,
+     "parusha": 14
+    },
+    "harshest_run": {
+     "aksharas": "క్కడి",
+     "length": 2,
+     "load": 2.0
+    }
+   },
+   {
+    "id": "kas_4_61_madhurya",
+    "source": "KAS",
+    "locus": "4.61",
+    "pole": "info",
+    "tier": "primary",
+    "madhurya": 0.0893,
+    "percentile": 78.5,
+    "label": "leaning_soft",
+    "inventory": 0.131,
+    "pileup": 0.0417,
+    "sonority": 10.503,
+    "sonority_percentile": 50.6,
+    "classes": {
+     "madhura": 9,
+     "sonorant": 39,
+     "voiced": 10,
+     "voiceless": 14,
+     "conjunct": 3,
+     "parusha": 9
+    },
+    "harshest_run": {
+     "aksharas": "సింహుడే",
+     "length": 3,
+     "load": 2.0
+    }
+   },
+   {
+    "id": "kas_4_70_ojas",
+    "source": "KAS",
+    "locus": "4.70",
+    "pole": "info",
+    "tier": "primary",
+    "madhurya": 0.015,
+    "percentile": 61.4,
+    "label": "balanced",
+    "inventory": 0.11,
+    "pileup": 0.095,
+    "sonority": 10.456,
+    "sonority_percentile": 44.7,
+    "classes": {
+     "madhura": 15,
+     "sonorant": 32,
+     "voiced": 22,
+     "voiceless": 20,
+     "conjunct": 2,
+     "parusha": 9
+    },
+    "harshest_run": {
+     "aksharas": "శుండుహే",
+     "length": 3,
+     "load": 2.5
+    }
+   },
+   {
+    "id": "kp_8_76_prasada",
+    "source": "KP",
+    "locus": "8.76, example 349",
+    "pole": "info",
+    "tier": "primary",
+    "madhurya": -0.3676,
+    "percentile": 5.4,
+    "label": "harsh",
+    "inventory": -0.0515,
+    "pileup": 0.3162,
+    "sonority": 10.129,
+    "sonority_percentile": 12.3,
+    "classes": {
+     "madhura": 7,
+     "sonorant": 19,
+     "voiced": 9,
+     "voiceless": 17,
+     "conjunct": 9,
+     "parusha": 7
+    },
+    "harshest_run": {
+     "aksharas": "వ్యస్తన్యాసంశ్లథ",
+     "length": 6,
+     "load": 3.5
+    }
+   },
+   {
+    "id": "kd_1_59_first_half",
+    "source": "KD",
+    "locus": "1.59ab",
+    "pole": "info",
+    "tier": "primary",
+    "madhurya": -0.25,
+    "percentile": 22.0,
+    "label": "leaning_harsh",
+    "inventory": -0.125,
+    "pileup": 0.125,
+    "sonority": 8.833,
+    "sonority_percentile": 0.8,
+    "classes": {
+     "madhura": 1,
+     "sonorant": 5,
+     "voiced": 0,
+     "voiceless": 8,
+     "conjunct": 1,
+     "parusha": 1
+    },
+    "harshest_run": {
+     "aksharas": "కోపశ్చ",
+     "length": 3,
+     "load": 1.5
+    }
+   },
+   {
+    "id": "kd_1_59_second_half",
+    "source": "KD",
+    "locus": "1.59cd",
+    "pole": "info",
+    "tier": "primary",
+    "madhurya": -0.125,
+    "percentile": 34.0,
+    "label": "balanced",
+    "inventory": -0.0625,
+    "pileup": 0.0625,
+    "sonority": 10.206,
+    "sonority_percentile": 30.7,
+    "classes": {
+     "madhura": 0,
+     "sonorant": 5,
+     "voiced": 4,
+     "voiceless": 6,
+     "conjunct": 1,
+     "parusha": 0
+    },
+    "harshest_run": {
+     "aksharas": "చ్యుతో",
+     "length": 2,
+     "load": 1.0
+    }
+   },
+   {
+    "id": "kd_1_43_sithila",
+    "source": "KD",
+    "locus": "1.43",
+    "pole": "info",
+    "tier": "primary",
+    "madhurya": 0.3182,
+    "percentile": 92.0,
+    "label": "soft",
+    "inventory": 0.3182,
+    "pileup": 0.0,
+    "sonority": 11.773,
+    "sonority_percentile": 97.0,
+    "classes": {
+     "madhura": 0,
+     "sonorant": 9,
+     "voiced": 0,
+     "voiceless": 2,
+     "conjunct": 0,
+     "parusha": 0
+    },
+    "harshest_run": null
+   }
+  ],
+  "pairs_ordered_madhurya_primary": "15/15",
+  "pairs_ordered_inventory_primary": "15/15",
+  "pairs_ordered_sonority_primary": "12/15",
+  "pairs_ordered_madhurya_all": "24/24",
+  "pairs_ordered_inventory_all": "23/24",
+  "pairs_ordered_sonority_all": "17/24"
+ },
+ "sensitivity": {
+  "headline": {
+   "spearman_with_headline": 1.0,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6147
+  },
+  "inventory_only": {
+   "spearman_with_headline": 0.9396,
+   "exemplar_pairs_ordered": "23/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6167
+  },
+  "cusum_soft_sounds_drain": {
+   "spearman_with_headline": 0.9786,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6204
+  },
+  "adjacent_pairs_only": {
+   "spearman_with_headline": 0.9764,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6167
+  },
+  "runs_of_parusha_only": {
+   "spearman_with_headline": 0.9431,
+   "exemplar_pairs_ordered": "22/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6246
+  },
+  "middle_weights_quarter": {
+   "spearman_with_headline": 0.9714,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6282
+  },
+  "middle_weights_three_quarters": {
+   "spearman_with_headline": 0.9876,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6019
+  },
+  "classical_only": {
+   "spearman_with_headline": 0.6942,
+   "exemplar_pairs_ordered": "21/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6226
+  },
+  "conjunct_neutral": {
+   "spearman_with_headline": 0.9679,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6291
+  },
+  "every_geminate_harsh": {
+   "spearman_with_headline": 0.9271,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.5981
+  },
+  "visarga_harsh": {
+   "spearman_with_headline": 0.9982,
+   "exemplar_pairs_ordered": "24/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.6151
+  },
+  "sonority_score": {
+   "spearman_with_headline": 0.5874,
+   "exemplar_pairs_ordered": "17/24",
+   "tender_vs_fierce_auc_bhagavatam": 0.5588
+  }
+ },
+ "ordering_check": {
+  "n_consonants": 25,
+  "spearman_with_sonority": 0.0137,
+  "consonants": [
+   {
+    "consonant": "ణ",
+    "n": 2309,
+    "balance_of_line": 0.0389,
+    "sonority": 7
+   },
+   {
+    "consonant": "ఫ",
+    "n": 592,
+    "balance_of_line": 0.0261,
+    "sonority": 1
+   },
+   {
+    "consonant": "హ",
+    "n": 9700,
+    "balance_of_line": 0.0236,
+    "sonority": 3
+   },
+   {
+    "consonant": "థ",
+    "n": 1370,
+    "balance_of_line": 0.0167,
+    "sonority": 1
+   },
+   {
+    "consonant": "స",
+    "n": 26762,
+    "balance_of_line": 0.0145,
+    "sonority": 3
+   },
+   {
+    "consonant": "ర",
+    "n": 16151,
+    "balance_of_line": 0.0128,
+    "sonority": 10
+   },
+   {
+    "consonant": "ళ",
+    "n": 2565,
+    "balance_of_line": 0.0105,
+    "sonority": 9
+   },
+   {
+    "consonant": "ధ",
+    "n": 6482,
+    "balance_of_line": 0.0072,
+    "sonority": 4
+   },
+   {
+    "consonant": "ల",
+    "n": 62221,
+    "balance_of_line": 0.0053,
+    "sonority": 9
+   },
+   {
+    "consonant": "మ",
+    "n": 63410,
+    "balance_of_line": 0.0038,
+    "sonority": 7
+   },
+   {
+    "consonant": "ద",
+    "n": 35738,
+    "balance_of_line": 0.0028,
+    "sonority": 4
+   },
+   {
+    "consonant": "ఘ",
+    "n": 1836,
+    "balance_of_line": 0.0024,
+    "sonority": 4
+   },
+   {
+    "consonant": "ఖ",
+    "n": 2167,
+    "balance_of_line": 0.002,
+    "sonority": 1
+   },
+   {
+    "consonant": "జ",
+    "n": 17333,
+    "balance_of_line": 0.0012,
+    "sonority": 5
+   },
+   {
+    "consonant": "భ",
+    "n": 12573,
+    "balance_of_line": 0.0006,
+    "sonority": 4
+   },
+   {
+    "consonant": "గ",
+    "n": 39848,
+    "balance_of_line": 0.0004,
+    "sonority": 4
+   },
+   {
+    "consonant": "ఱ",
+    "n": 6685,
+    "balance_of_line": 0.0003,
+    "sonority": 8
+   },
+   {
+    "consonant": "న",
+    "n": 101730,
+    "balance_of_line": -0.0012,
+    "sonority": 7
+   },
+   {
+    "consonant": "త",
+    "n": 32390,
+    "balance_of_line": -0.0033,
+    "sonority": 1
+   },
+   {
+    "consonant": "య",
+    "n": 31126,
+    "balance_of_line": -0.0053,
+    "sonority": 12
+   },
+   {
+    "consonant": "ప",
+    "n": 26737,
+    "balance_of_line": -0.0066,
+    "sonority": 1
+   },
+   {
+    "consonant": "వ",
+    "n": 52850,
+    "balance_of_line": -0.0072,
+    "sonority": 12
+   },
+   {
+    "consonant": "క",
+    "n": 43226,
+    "balance_of_line": -0.0086,
+    "sonority": 1
+   },
+   {
+    "consonant": "చ",
+    "n": 19487,
+    "balance_of_line": -0.0117,
+    "sonority": 2
+   },
+   {
+    "consonant": "బ",
+    "n": 13716,
+    "balance_of_line": -0.0153,
+    "sonority": 4
+   }
+  ]
+ },
+ "known_group_keywords": {
+  "fierce": [
+   "battle",
+   "fight",
+   "fought",
+   "war",
+   "warrior",
+   "warriors",
+   "arrow",
+   "arrows",
+   "weapon",
+   "weapons",
+   "sword",
+   "mace",
+   "kill",
+   "killed",
+   "slay",
+   "slew",
+   "slain",
+   "destroy",
+   "destroyed",
+   "demon",
+   "demons",
+   "fierce",
+   "terrible",
+   "furious",
+   "fury",
+   "wrath",
+   "anger",
+   "angry",
+   "rage",
+   "roar",
+   "roared",
+   "blood",
+   "army",
+   "armies",
+   "enemy",
+   "enemies",
+   "attack",
+   "attacked",
+   "struck",
+   "thunderbolt"
+  ],
+  "tender": [
+   "love",
+   "beloved",
+   "loving",
+   "affection",
+   "tender",
+   "gentle",
+   "sweet",
+   "soft",
+   "beautiful",
+   "beauty",
+   "lotus",
+   "moon",
+   "smile",
+   "smiling",
+   "child",
+   "mother",
+   "compassion",
+   "mercy",
+   "devotion",
+   "bliss",
+   "joy",
+   "delight",
+   "fragrance",
+   "flower",
+   "flowers",
+   "embrace"
+  ],
+  "rule": "fierce: >= 2 fierce words and no tender word; tender: the reverse"
+ }
+}

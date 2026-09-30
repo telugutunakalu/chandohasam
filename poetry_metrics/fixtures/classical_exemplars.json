@@ -1,0 +1,502 @@
+{
+ "description": "Verses the classical texts themselves give as examples of a quality. pole (for mādhurya): soft | harsh | info (scored for information only) | null (not used for mādhurya). tier: primary (the root text's own example) | commentary (an example added by a commentator). script: telugu | iast (converted with common/translit.py). contrasts: pairs that a text itself sets against each other, for ojas (more / less) and prasāda (clearer / obscurer). broken_meter: verses a text gives as examples of a broken meter (ఛందోభంగము), with the pāda it says is broken in meter (broken_pada) and, where it says so, in yati (yati_broken_pada); for the chandas distance.",
+ "sources": {
+  "KAS": "Rāmarājabhūṣaṇuḍu (Bhaṭṭumūrti), Kāvyālaṅkārasaṅgrahamu (Narasabhūpālīyamu), āśvāsa 4, 1920 edition, https://te.wikisource.org/wiki/నరసభూపాలీయము/చతుర్థాశ్వాసము",
+  "KAS-C": "The same, 1945 edition with the commentary of Sannidhānam Sūryanārāyaṇaśāstri, https://te.wikisource.org/wiki/కావ్యాలంకారసంగ్రహము/చతుర్థాశ్వాసము (OCR text; obvious OCR errors corrected)",
+  "KP": "Mammaṭa, Kāvyaprakāśa, ullāsa 8, GRETIL e-text, https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mammaTa-kAvyaprakAza.htm",
+  "KD": "Daṇḍin, Kāvyādarśa, pariccheda 1, GRETIL e-text (after the edition of Rangacharya Raddi Shastri, BORI 1938), https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/plaintext/sa_daNDin-kAvyAdarza-1-2.txt",
+  "VK": "Vāmana, Kāvyālaṅkārasūtra with the author's gloss, GRETIL e-text, https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/plaintext/sa_vAmana-kAvyAlaMkArasUtra.txt"
+ },
+ "exemplars": [
+  {
+   "id": "kas_4_62_saukumarya",
+   "source": "KAS",
+   "locus": "4.62",
+   "pole": "soft",
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The treatise's example of saukumārya, the quality of letters with a bindu before them (4.60).",
+   "lines": [
+    "చెందొవవిందుమంచువలెఁ జిందురుచిం దగఁ జందనంబు వె",
+    "చ్చందన మొందు నిందుముఖిచందము డెందమునం దలంప నీ",
+    "యందమునందె నందనమునందు మిళిందము పొందుపొందికం",
+    "జెందె నృసింహ కౌఁగిటను జేర్పుము ముందుగ మందగామినిన్."
+   ]
+  },
+  {
+   "id": "kp_8_74_madhurya",
+   "source": "KP",
+   "locus": "8.74, example 347",
+   "pole": "soft",
+   "tier": "primary",
+   "script": "iast",
+   "note": "Mammaṭa's example of the letters, compounds and arrangement that manifest mādhurya. GRETIL prints 'pratiaṃ' and 'bhaṅgībhraṅgīkṛtam'; read here as 'pratimaṃ' and 'bhaṅgībhiraṅgīkṛtam', the reading of the printed editions.",
+   "lines": [
+    "anaṅgaraṅgapratimaṃ tadaṅgaṃ",
+    "bhaṅgībhiraṅgīkṛtamānatāṅgyāḥ",
+    "kurvanti yūnāṃ sahasā yathaitāḥ",
+    "svāntāni śāntāparacintanāni"
+   ]
+  },
+  {
+   "id": "kas_4_21_parusha",
+   "source": "KAS",
+   "locus": "4.21",
+   "pole": "harsh",
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The phrase the treatise gives as an example of the paruṣa (śrutikaṭu) word defect.",
+   "lines": [
+    "కుధ్రేడ్జాపతిమూర్ధధృతార్థోడ్వధిపతి"
+   ]
+  },
+  {
+   "id": "kp_8_75_ojas",
+   "source": "KP",
+   "locus": "8.75, example 348",
+   "pole": "harsh",
+   "tier": "primary",
+   "script": "iast",
+   "note": "Mammaṭa's example of the letters, long compounds and arrangement that manifest ojas.",
+   "lines": [
+    "mūrdhnāmudvṛttakṛttāviralagalagaladraktasaṃsaktadhārā-",
+    "dhauteśāṅghriprasādopanatajayajagajjātamithyāmahimnām",
+    "kailāsollāsanecchāvyatikarapiśunotsarpidarpoddhurāṇāṃ",
+    "doṣṇāṃ caiṣāṃ kimetat phalamiha nagarīrakṣaṇe yat prayāsaḥ"
+   ]
+  },
+  {
+   "id": "kp_8_77_bhima",
+   "source": "KP",
+   "locus": "8.77, example 350 (Veṇīsaṃhāra 1.22)",
+   "pole": "harsh",
+   "tier": "primary",
+   "script": "iast",
+   "note": "Quoted for its 'uddhata' (vehement) arrangement and letters, chosen to suit the speaker, Bhīma.",
+   "lines": [
+    "manthāyastārṇavāmbhaḥplutakuharacalanmandaradhvānadhīraḥ",
+    "koṇāghāteṣu garjatpralayaghanaghaṭānyonyasaṃghaṭṭacaṇḍaḥ",
+    "kṛṣṇākrodhāgradūtaḥ kurukulanidhanotpātanirghātavātaḥ",
+    "kenāsmatsiṃhanādapratirasitasakho dundubhistāḍito'sau"
+   ]
+  },
+  {
+   "id": "kp_8_77_kumbhakarna",
+   "source": "KP",
+   "locus": "8.77, example 351",
+   "pole": "harsh",
+   "tier": "primary",
+   "script": "iast",
+   "note": "Quoted for a vehement arrangement chosen to suit the matter described.",
+   "lines": [
+    "prauḍhacchedānurūpocchalanarayabhavatsaiṃhikeyopaghāta-",
+    "trāsākṛṣṭāśvatiryagvalitaravirathenāruṇenekṣyamāṇam",
+    "kurvat kākutsthavīryastutimiva marutāṃ kandharārandhrabhājāṃ",
+    "bhāṅkārairbhīmametannipatati viyataḥ kumbhakarṇottamāṅgam"
+   ]
+  },
+  {
+   "id": "kd_1_70_sukumara",
+   "source": "KD",
+   "locus": "1.70",
+   "pole": "soft",
+   "tier": "primary",
+   "script": "iast",
+   "note": "Daṇḍin's example of sukumāratā, a texture made mostly of non-harsh letters (aniṣṭhurākṣaraprāyam, 1.69). Its few harsh letters are scattered.",
+   "lines": [
+    "maṇḍalīkṛtya barhāṇi kaṇṭhair madhuragītibhiḥ",
+    "kalāpinaḥ pranṛtyanti kāle jīmūtamālini"
+   ]
+  },
+  {
+   "id": "kd_1_72_krcchrodya",
+   "source": "KD",
+   "locus": "1.72",
+   "pole": "harsh",
+   "tier": "primary",
+   "script": "iast",
+   "note": "What the other school composes 'though it is hard to utter' (kṛcchrodyam api), calling it brilliant.",
+   "lines": [
+    "nyakṣeṇa kṣapitaḥ pakṣaḥ kṣatriyāṇāṃ kṣaṇāt"
+   ]
+  },
+  {
+   "id": "kasc_tikkana_gadha",
+   "source": "KAS-C",
+   "locus": "commentary on 4.69-70 (ojas)",
+   "pole": "harsh",
+   "tier": "commentary",
+   "script": "telugu",
+   "note": "The commentator's example of a gāḍha (dense) texture, from Tikkana.",
+   "lines": [
+    "దుర్వారోద్యమ బాహువిక్రమ రసాస్తోక ప్రతాపస్ఫుర",
+    "ద్గర్వాంధప్రతివీర నిర్మథన విద్యాపారగుల్ మత్పతుల్",
+    "గీర్వాణాకృతు లేవురిప్డు నిను దోర్లీలన్ వెసం గిట్టి గం",
+    "ధర్వుల్ మానముఁ బ్రాణముం గొనుట తథ్యం బెమ్మెయిం గీచకా!"
+   ]
+  },
+  {
+   "id": "kasc_peddana_ekkadi",
+   "source": "KAS-C",
+   "locus": "commentary on 4.62 (saukumārya)",
+   "pole": "soft",
+   "tier": "commentary",
+   "script": "telugu",
+   "note": "The commentator's example of saukumārya in Vāmana's wider sense, 'absence of harshness', from Peddana.",
+   "lines": [
+    "ఎక్కడి యూరు కాల్నిలువ కింటికిఁ బోయెదనంచుఁ బల్కె దీ",
+    "వక్కట! మీ కుటీర నిలయంబులకున్ సరి రాకపోయెనే?",
+    "ఇక్కడి రత్నకందరము లిక్కడి నందన చందనోత్కరం",
+    "బిక్కడి గాంగ సైకతము లిక్కడి యీ లవలీనికుంజముల్"
+   ]
+  },
+  {
+   "id": "kas_4_61_madhurya",
+   "source": "KAS",
+   "locus": "4.61",
+   "pole": "info",
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The treatise's example of its own mādhurya, which it defines by words standing apart (no long compounds), not by sounds (4.60).",
+   "lines": [
+    "అనయము యంత్రమత్స్యము నొకమ్మున శ్రీనరసింహుఁ డేయఁగా",
+    "వెనుకఁకు బాఱి పుల్గఱచి వేషము మార్చి బిలంబు దూఱ కా",
+    "ననమున కేఁగి సిగ్గున నణంగి భరంపడి వీఁగి తావిషం",
+    "బెనసి నతి న్భజించి నదు లీఁది భ్రమించెను రాసు లన్నియున్."
+   ]
+  },
+  {
+   "id": "kas_4_70_ojas",
+   "source": "KAS",
+   "locus": "4.70",
+   "pole": "info",
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The treatise's example of ojas, which it defines by compounds (4.69). The 1945 commentator remarks that it is full of compounds but not dense in texture.",
+   "lines": [
+    "మందారబిసకుందకుందాదినిధిబృంద,",
+    "బృందారకాప్తశోభితయశుండు",
+    "హేలావిజితహాలహాలాశనోత్తాల,",
+    "తాలాంకభుజదండతాండవుండు",
+    "దీనాపననిదానదానాంబుజనదీన,",
+    "దీనాథపరిణయస్థితివిధాయి",
+    "భీమాసురవిరామరామాతిశయధామ,",
+    "ధామాంబకనిభాసిదారితారి"
+   ]
+  },
+  {
+   "id": "kp_8_76_prasada",
+   "source": "KP",
+   "locus": "8.76, example 349",
+   "pole": "info",
+   "tier": "primary",
+   "script": "iast",
+   "note": "Mammaṭa's example of prasāda, the quality common to every rasa and texture.",
+   "lines": [
+    "parimlānaṃ pīnastanajaghanasaṃgādubhayatas-",
+    "tanormadhyasyāntaḥ parimilanamaprāpya haritam",
+    "idaṃ vyastanyāsaṃ ślathabhujalatākṣepavalanaiḥ",
+    "kṛśāṅgyāḥ saṃtāpaṃ vadati bisinīpatraśayanam"
+   ]
+  },
+  {
+   "id": "kd_1_59_first_half",
+   "source": "KD",
+   "locus": "1.59ab",
+   "pole": "info",
+   "tier": "primary",
+   "script": "iast",
+   "note": "1.60 says alliteration of this kind 'brings harshness of texture and slackness' (bandhapāruṣyaṃ śaithilyaṃ ca). The verse does not say which half shows which; the first half, with its k, kh and visargas, is usually read as the harsh one.",
+   "lines": [
+    "smaraḥ kharaḥ khalaḥ kāntaḥ kāyaḥ kopaś ca naḥ kṛśaḥ"
+   ]
+  },
+  {
+   "id": "kd_1_59_second_half",
+   "source": "KD",
+   "locus": "1.59cd",
+   "pole": "info",
+   "tier": "primary",
+   "script": "iast",
+   "note": "The other half of the same verse, usually read as the slack one.",
+   "lines": [
+    "cyuto māno'dhiko rāgo moho jāto'savo gatāḥ"
+   ]
+  },
+  {
+   "id": "kd_1_43_sithila",
+   "source": "KD",
+   "locus": "1.43",
+   "pole": "info",
+   "tier": "primary",
+   "script": "iast",
+   "note": "Daṇḍin's example of a slack (śithila) texture, all unaspirated soft letters. He counts slackness a fault (1.43, 1.69), so the softest texture is not the best.",
+   "lines": [
+    "mālatīmālā lolālikalilā"
+   ]
+  },
+  {
+   "id": "kd_1_82_ojas",
+   "source": "KD",
+   "locus": "1.82",
+   "pole": null,
+   "tier": "primary",
+   "script": "iast",
+   "note": "Daṇḍin's example of the ojas the easterners compose even in verse: one compound after another (1.80: ojas is abundance of compounds).",
+   "lines": [
+    "astamastakaparyastasamastārkāṃśusaṃstarā",
+    "pīnastanasthitātāmrakamravastreva vāruṇī"
+   ]
+  },
+  {
+   "id": "kd_1_84_ojas",
+   "source": "KD",
+   "locus": "1.84",
+   "pole": null,
+   "tier": "primary",
+   "script": "iast",
+   "note": "The ojas 'others want': unconfused and pleasing (anākulaṃ hṛdyam, 1.83). One compound, then plain words.",
+   "lines": [
+    "payodharataṭotsaṅgalagnasaṃdhyātapāṃśukā",
+    "kasya kāmāturaṃ ceto vāruṇī na kariṣyati"
+   ]
+  },
+  {
+   "id": "vamana_3_1_5_gadha",
+   "source": "VK",
+   "locus": "3.1.5",
+   "pole": null,
+   "tier": "primary",
+   "script": "iast",
+   "note": "Vāmana's example of ojas as a tight texture (gāḍhabandhatvam).",
+   "lines": [
+    "vilulitamakarandā mañjarīrnartayanti"
+   ]
+  },
+  {
+   "id": "vamana_3_1_5_not",
+   "source": "VK",
+   "locus": "3.1.5",
+   "pole": null,
+   "tier": "primary",
+   "script": "iast",
+   "note": "The same line reworded, which Vāmana gives as not tight ('na punaḥ').",
+   "lines": [
+    "vilulitamadhudhārā mañjarīrlolayanti"
+   ]
+  },
+  {
+   "id": "kas_4_59_prasada",
+   "source": "KAS",
+   "locus": "4.59",
+   "pole": null,
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The treatise's example of prasāda, which it defines by well-known words (4.57).",
+   "lines": [
+    "ముంగిటిపెన్నిధాన మిలుముందటికల్పక మర్థికోటిముం",
+    "గొంగుపసిండి చెంగటన కూడినబంగరుకొండ దొడ్డిలో",
+    "నం గలకామధేనువదనం బెర యీఁగలు లేనిచొక్కపు",
+    "న్దంగెటిజున్ను నీవితరణంబు నృసింహనృపాలశేఖరా."
+   ]
+  },
+  {
+   "id": "kas_4_5_aprayukta",
+   "source": "KAS",
+   "locus": "4.5",
+   "pole": null,
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The example phrase of the defect aprayukta, a word poets do not use. The closing 'అనఁగన్' of the verse is left out.",
+   "lines": [
+    "ద్రవిణైలబిలుం డల దుశ్చ్యవనమహాభోగిఖేటసంస్తుతుఁడు"
+   ]
+  },
+  {
+   "id": "kas_4_8_asamartha",
+   "source": "KAS",
+   "locus": "4.8",
+   "pole": null,
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The example phrase of the defect asamartha, a word used in a sense that is not established ('అప్రసిద్ధయోగంబు'). The closing 'అటన్నన్' is left out.",
+   "lines": [
+    "శరధరరాజనికేతను గురుపంకజచక్రహస్తుఁ గొలుతు"
+   ]
+  },
+  {
+   "id": "kas_4_15_apratita",
+   "source": "KAS",
+   "locus": "4.15",
+   "pole": null,
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The example phrase of the defect apratīta, words found only in śāstras and purāṇas. The closing 'అనఁగన్' is left out.",
+   "lines": [
+    "తలఁతు వృషాకపిఁ ద్రిజగము నెలమి నజావృతముఁ జేయు నీశ్వరు"
+   ]
+  },
+  {
+   "id": "kas_4_17_klishta",
+   "source": "KAS",
+   "locus": "4.17",
+   "pole": null,
+   "tier": "primary",
+   "script": "telugu",
+   "note": "The example phrase of the defect kliṣṭa, a far-fetched meaning. The closing 'అనఁగన్' is left out.",
+   "lines": [
+    "పవనాశనేంద్రధరమకుటాలంకారమణిజనకవరపుత్త్రీరమణకుమారరూపదీపితుఁడు"
+   ]
+  },
+  {
+   "id": "kd_1_45_prasada",
+   "source": "KD",
+   "locus": "1.45",
+   "pole": null,
+   "tier": "primary",
+   "script": "iast",
+   "note": "Daṇḍin's example of prasāda: of well-known meaning, pleasing because understood at once (prasiddhārtham, pratītisubhagam).",
+   "lines": [
+    "indorindīvaradyuti lakṣma lakṣmīṃ tanoti"
+   ]
+  },
+  {
+   "id": "kd_1_46_vyutpanna",
+   "source": "KD",
+   "locus": "1.46",
+   "pole": null,
+   "tier": "primary",
+   "script": "iast",
+   "note": "What the other school accepts as 'learned' though it is not current (nātirūḍham).",
+   "lines": [
+    "anatyarjunābjanmasadṛkṣāṅko valakṣaguḥ"
+   ]
+  }
+ ],
+ "contrasts": [
+  {
+   "metric": "ojas",
+   "more": "kas_4_70_ojas",
+   "less": "kas_4_61_madhurya",
+   "on": "index",
+   "basis": "The treatise: ojas is a texture full of compounds (4.69); its mādhurya is words standing apart (4.60)."
+  },
+  {
+   "metric": "ojas",
+   "more": "kp_8_75_ojas",
+   "less": "kp_8_74_madhurya",
+   "on": "index",
+   "basis": "Mammaṭa: long compounds for ojas (8.75), none or middling for mādhurya (8.74)."
+  },
+  {
+   "metric": "ojas",
+   "more": "kp_8_77_bhima",
+   "less": "kp_8_74_madhurya",
+   "on": "index",
+   "basis": "Mammaṭa: a vehement arrangement (8.77) against his mādhurya example."
+  },
+  {
+   "metric": "ojas",
+   "more": "kp_8_77_kumbhakarna",
+   "less": "kp_8_74_madhurya",
+   "on": "index",
+   "basis": "Mammaṭa: a vehement arrangement (8.77) against his mādhurya example."
+  },
+  {
+   "metric": "ojas",
+   "more": "vamana_3_1_5_gadha",
+   "less": "vamana_3_1_5_not",
+   "on": "index",
+   "basis": "Vāmana's own pair for a tight texture (3.1.5)."
+  },
+  {
+   "metric": "ojas",
+   "more": "kd_1_82_ojas",
+   "less": "kd_1_84_ojas",
+   "on": "index",
+   "basis": "Daṇḍin: the easterners' ojas against the unconfused ojas others want (1.82-84)."
+  },
+  {
+   "metric": "ojas",
+   "more": "kd_1_84_ojas",
+   "less": "kd_1_70_sukumara",
+   "on": "index",
+   "basis": "Daṇḍin: an ojas example against the verse he calls not forceful (anūrjita, 1.71)."
+  },
+  {
+   "metric": "ojas",
+   "more": "kasc_tikkana_gadha",
+   "less": "kas_4_70_ojas",
+   "on": "conjuncts",
+   "basis": "The 1945 commentary: 4.70 is full of compounds but not dense; Tikkana's verse is dense."
+  },
+  {
+   "metric": "prasada",
+   "more": "kas_4_59_prasada",
+   "less": "kas_4_5_aprayukta",
+   "on": "index",
+   "basis": "The treatise: well-known words (4.57) against a word poets do not use (4.5)."
+  },
+  {
+   "metric": "prasada",
+   "more": "kas_4_59_prasada",
+   "less": "kas_4_8_asamartha",
+   "on": "index",
+   "basis": "The treatise: well-known words against an unestablished usage (4.8)."
+  },
+  {
+   "metric": "prasada",
+   "more": "kas_4_59_prasada",
+   "less": "kas_4_15_apratita",
+   "on": "index",
+   "basis": "The treatise: well-known words against words found only in śāstras (4.15)."
+  },
+  {
+   "metric": "prasada",
+   "more": "kas_4_59_prasada",
+   "less": "kas_4_17_klishta",
+   "on": "index",
+   "basis": "The treatise: well-known words against a far-fetched expression (4.17)."
+  },
+  {
+   "metric": "prasada",
+   "more": "kd_1_45_prasada",
+   "less": "kd_1_46_vyutpanna",
+   "on": "index",
+   "basis": "Daṇḍin: of well-known meaning (1.45) against the learned but not current (1.46). Sanskrit, scored with the Telugu model."
+  }
+ ],
+ "broken_meter": [
+  {
+   "id": "kasc_4_36_chandobhanga",
+   "source": "KAS-C",
+   "locus": "4.36",
+   "meter": "kandamu",
+   "broken_pada": 2,
+   "basis": "The treatise's own example of ఛందోభంగము. The commentary: 'ఇట రెండవపాదమున ఛందోభంగము. కందమున ద్వితీయ పాదాంత వర్ణము గురువై యుండవలెను. ఇట లఘువుగానే యున్నది.' (the last akshara of a kandamu's second pāda must be guru; here it is laghu). The commentary adds: 'నాల్గవ పాదమున యతిభంగము' (the yati is broken in the fourth pāda).",
+   "note": "Lines 1-3 as the 1945 commentary reads them. Line 4 is from the 1920 edition, because the OCR of the 1945 text is damaged there. The 1920 edition prints line 2 with నితఁడున్, which mends the meter.",
+   "lines": [
+    "ఛందము యతియుం దప్పిన",
+    "ఛందోయతి భంగములగు సంగతి నితఁడు",
+    "కుందేందువిశద యశుఁడై",
+    "ముందుగఁ బూజించినాఁడు నరహరి ననఁగన్."
+   ],
+   "yati_broken_pada": 4
+  },
+  {
+   "id": "kasc_rangacharya_chandobhanga",
+   "source": "KAS-C",
+   "locus": "commentary on 4.36",
+   "meter": "tetagiti",
+   "broken_pada": 3,
+   "basis": "The commentator's example from Chalamacharla Raṅgācārya's Āndhra Pratāparudra Yaśobhūṣaṇamu: 'ఇట మూఁడవపాదమున ఛందోభంగమయినది' (here the meter is broken in the third pāda).",
+   "note": "As printed in the 1945 commentary (OCR text).",
+   "lines": [
+    "విశ్వవిఖ్యాత కాకతి వీర రుద్రు",
+    "నిరతిశయ మైన భూమి పాణిగ్రహోత్స",
+    "వంబు విని బొటనవేళ్ళఁ బాదపీఠి",
+    "ధరణిపతులెల్ల గీఱిరి కలలు వాల్చి,"
+   ]
+  }
+ ]
+}

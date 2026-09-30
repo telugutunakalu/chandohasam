@@ -1,0 +1,1164 @@
+{
+ "metric": "chandas_distance",
+ "version": "1.1",
+ "reading_level": "compound",
+ "reading": {
+  "padanta": "conjunct",
+  "profile": "relaxed",
+  "yati_sandhi": "acchu"
+ },
+ "chance_text": "bhagavatam prose",
+ "prose_passages": 2700,
+ "chance_poems_per_meter": 1000,
+ "chance_percentile": 5,
+ "rate_unit": "edits per 100 aksharas",
+ "meters": {
+  "utpalamala": {
+   "family": "vrutta",
+   "line_aksharas": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 28.984,
+    "rate_cut": 23.75,
+    "distance_mean": 23.187,
+    "distance_sd": 2.38,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 27.891,
+    "rate_cut": 22.5,
+    "distance_mean": 22.313,
+    "distance_sd": 2.39,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.62,
+   "prasa_edits_mean": 0.254,
+   "weight_edits_pct": {
+    "delete": 21.1,
+    "insert": 21.1,
+    "substitute": 57.7
+   }
+  },
+  "champakamala": {
+   "family": "vrutta",
+   "line_aksharas": [
+    21,
+    21,
+    21,
+    21
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 29.794,
+    "rate_cut": 25.0,
+    "distance_mean": 25.027,
+    "distance_sd": 2.646,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 27.865,
+    "rate_cut": 22.619,
+    "distance_mean": 23.407,
+    "distance_sd": 2.654,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.994,
+   "prasa_edits_mean": 0.626,
+   "weight_edits_pct": {
+    "delete": 19.5,
+    "insert": 19.5,
+    "substitute": 61.0
+   }
+  },
+  "mattebhavikriditamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 33.733,
+    "rate_cut": 27.5,
+    "distance_mean": 26.986,
+    "distance_sd": 2.898,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 31.955,
+    "rate_cut": 25.0,
+    "distance_mean": 25.564,
+    "distance_sd": 2.9,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.705,
+   "prasa_edits_mean": 0.717,
+   "weight_edits_pct": {
+    "delete": 18.9,
+    "insert": 18.9,
+    "substitute": 62.2
+   }
+  },
+  "sardulavikriditamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    19,
+    19,
+    19,
+    19
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 35.207,
+    "rate_cut": 28.947,
+    "distance_mean": 26.757,
+    "distance_sd": 2.799,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 34.725,
+    "rate_cut": 28.947,
+    "distance_mean": 26.391,
+    "distance_sd": 2.884,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.33,
+   "prasa_edits_mean": 0.036,
+   "weight_edits_pct": {
+    "delete": 17.5,
+    "insert": 17.5,
+    "substitute": 65.1
+   }
+  },
+  "sragdhara": {
+   "family": "vrutta",
+   "line_aksharas": [
+    21,
+    21,
+    21,
+    21
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 38.05,
+    "rate_cut": 32.143,
+    "distance_mean": 31.962,
+    "distance_sd": 3.391,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 37.035,
+    "rate_cut": 29.762,
+    "distance_mean": 31.109,
+    "distance_sd": 3.465,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.771,
+   "prasa_edits_mean": 0.082,
+   "weight_edits_pct": {
+    "delete": 14.0,
+    "insert": 14.0,
+    "substitute": 71.9
+   }
+  },
+  "mahasragdhara": {
+   "family": "vrutta",
+   "line_aksharas": [
+    22,
+    22,
+    22,
+    22
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 36.985,
+    "rate_cut": 30.682,
+    "distance_mean": 32.547,
+    "distance_sd": 3.504,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 34.4,
+    "rate_cut": 28.409,
+    "distance_mean": 30.272,
+    "distance_sd": 3.38,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.477,
+   "prasa_edits_mean": 0.798,
+   "weight_edits_pct": {
+    "delete": 15.6,
+    "insert": 15.6,
+    "substitute": 68.7
+   }
+  },
+  "totakamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 33.173,
+    "rate_cut": 27.083,
+    "distance_mean": 15.923,
+    "distance_sd": 2.004,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 29.76,
+    "rate_cut": 22.917,
+    "distance_mean": 14.285,
+    "distance_sd": 2.042,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.971,
+   "prasa_edits_mean": 0.667,
+   "weight_edits_pct": {
+    "delete": 19.9,
+    "insert": 19.9,
+    "substitute": 60.1
+   }
+  },
+  "bhujangaprayatamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 39.798,
+    "rate_cut": 31.25,
+    "distance_mean": 19.103,
+    "distance_sd": 3.024,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 37.41,
+    "rate_cut": 27.083,
+    "distance_mean": 17.957,
+    "distance_sd": 3.035,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.859,
+   "prasa_edits_mean": 0.287,
+   "weight_edits_pct": {
+    "delete": 15.1,
+    "insert": 15.1,
+    "substitute": 69.7
+   }
+  },
+  "mattakokilamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 29.747,
+    "rate_cut": 25.0,
+    "distance_mean": 21.418,
+    "distance_sd": 2.207,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 28.608,
+    "rate_cut": 23.611,
+    "distance_mean": 20.598,
+    "distance_sd": 2.239,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.53,
+   "prasa_edits_mean": 0.29,
+   "weight_edits_pct": {
+    "delete": 22.3,
+    "insert": 22.3,
+    "substitute": 55.5
+   }
+  },
+  "pamcacamaramu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 33.806,
+    "rate_cut": 28.125,
+    "distance_mean": 21.636,
+    "distance_sd": 2.35,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 31.697,
+    "rate_cut": 25.0,
+    "distance_mean": 20.286,
+    "distance_sd": 2.377,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.859,
+   "prasa_edits_mean": 0.491,
+   "weight_edits_pct": {
+    "delete": 17.2,
+    "insert": 17.2,
+    "substitute": 65.7
+   }
+  },
+  "vasamtatilakamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 34.673,
+    "rate_cut": 28.571,
+    "distance_mean": 19.417,
+    "distance_sd": 2.324,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 33.627,
+    "rate_cut": 26.786,
+    "distance_mean": 18.831,
+    "distance_sd": 2.414,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.476,
+   "prasa_edits_mean": 0.11,
+   "weight_edits_pct": {
+    "delete": 17.6,
+    "insert": 17.6,
+    "substitute": 64.8
+   }
+  },
+  "indravajra": {
+   "family": "vrutta",
+   "line_aksharas": [
+    11,
+    11,
+    11,
+    11
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 38.302,
+    "rate_cut": 29.545,
+    "distance_mean": 16.853,
+    "distance_sd": 2.415,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 37.086,
+    "rate_cut": 27.273,
+    "distance_mean": 16.318,
+    "distance_sd": 2.582,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.426,
+   "prasa_edits_mean": 0.109,
+   "weight_edits_pct": {
+    "delete": 16.3,
+    "insert": 16.3,
+    "substitute": 67.4
+   }
+  },
+  "upendravajra": {
+   "family": "vrutta",
+   "line_aksharas": [
+    11,
+    11,
+    11,
+    11
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 37.114,
+    "rate_cut": 29.545,
+    "distance_mean": 16.33,
+    "distance_sd": 2.312,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 33.998,
+    "rate_cut": 25.0,
+    "distance_mean": 14.959,
+    "distance_sd": 2.294,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.973,
+   "prasa_edits_mean": 0.398,
+   "weight_edits_pct": {
+    "delete": 18.0,
+    "insert": 18.0,
+    "substitute": 64.1
+   }
+  },
+  "salini": {
+   "family": "vrutta",
+   "line_aksharas": [
+    11,
+    11,
+    11,
+    11
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 46.468,
+    "rate_cut": 36.364,
+    "distance_mean": 20.446,
+    "distance_sd": 3.137,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 45.611,
+    "rate_cut": 34.091,
+    "distance_mean": 20.069,
+    "distance_sd": 3.338,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.299,
+   "prasa_edits_mean": 0.078,
+   "weight_edits_pct": {
+    "delete": 9.7,
+    "insert": 9.7,
+    "substitute": 80.5
+   }
+  },
+  "rathoddhata": {
+   "family": "vrutta",
+   "line_aksharas": [
+    11,
+    11,
+    11,
+    11
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 33.807,
+    "rate_cut": 27.273,
+    "distance_mean": 14.875,
+    "distance_sd": 1.975,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 31.895,
+    "rate_cut": 25.0,
+    "distance_mean": 14.034,
+    "distance_sd": 1.983,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.516,
+   "prasa_edits_mean": 0.325,
+   "weight_edits_pct": {
+    "delete": 18.6,
+    "insert": 18.6,
+    "substitute": 62.7
+   }
+  },
+  "sragvini": {
+   "family": "vrutta",
+   "line_aksharas": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 37.792,
+    "rate_cut": 29.167,
+    "distance_mean": 18.14,
+    "distance_sd": 2.768,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 36.256,
+    "rate_cut": 27.083,
+    "distance_mean": 17.403,
+    "distance_sd": 2.945,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.447,
+   "prasa_edits_mean": 0.29,
+   "weight_edits_pct": {
+    "delete": 16.8,
+    "insert": 16.8,
+    "substitute": 66.5
+   }
+  },
+  "vidyunmala": {
+   "family": "vrutta",
+   "line_aksharas": [
+    8,
+    8,
+    8,
+    8
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 58.709,
+    "rate_cut": 46.875,
+    "distance_mean": 18.787,
+    "distance_sd": 2.419,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 57.378,
+    "rate_cut": 43.75,
+    "distance_mean": 18.361,
+    "distance_sd": 2.523,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.295,
+   "prasa_edits_mean": 0.131,
+   "weight_edits_pct": {
+    "delete": 0.0,
+    "insert": 0.0,
+    "substitute": 100.0
+   }
+  },
+  "lalita": {
+   "family": "vrutta",
+   "line_aksharas": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 34.994,
+    "rate_cut": 27.083,
+    "distance_mean": 16.797,
+    "distance_sd": 2.15,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 33.115,
+    "rate_cut": 25.0,
+    "distance_mean": 15.895,
+    "distance_sd": 2.253,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.72,
+   "prasa_edits_mean": 0.182,
+   "weight_edits_pct": {
+    "delete": 17.3,
+    "insert": 17.3,
+    "substitute": 65.5
+   }
+  },
+  "kandamu": {
+   "family": "jati",
+   "line_aksharas": [
+    9,
+    15,
+    9,
+    15
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 20.253,
+    "rate_cut": 14.583,
+    "distance_mean": 9.738,
+    "distance_sd": 1.838,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 14.522,
+    "rate_cut": 8.333,
+    "distance_mean": 6.982,
+    "distance_sd": 1.73,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.759,
+   "prasa_edits_mean": 1.997,
+   "weight_edits_pct": {
+    "delete": 29.8,
+    "insert": 6.7,
+    "substitute": 63.5
+   }
+  },
+  "utsahamu": {
+   "family": "jati",
+   "line_aksharas": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 22.986,
+    "rate_cut": 16.667,
+    "distance_mean": 16.573,
+    "distance_sd": 2.774,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 18.798,
+    "rate_cut": 13.699,
+    "distance_mean": 13.553,
+    "distance_sd": 2.73,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.416,
+   "prasa_edits_mean": 1.604,
+   "weight_edits_pct": {
+    "delete": 26.3,
+    "insert": 10.7,
+    "substitute": 63.0
+   }
+  },
+  "taruvoja": {
+   "family": "jati",
+   "line_aksharas": [
+    26,
+    26,
+    26,
+    26
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 15.169,
+    "rate_cut": 10.577,
+    "distance_mean": 15.787,
+    "distance_sd": 2.996,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 8.524,
+    "rate_cut": 5.769,
+    "distance_mean": 8.871,
+    "distance_sd": 2.027,
+    "exact": 0
+   },
+   "yati_edits_mean": 4.781,
+   "prasa_edits_mean": 2.135,
+   "weight_edits_pct": {
+    "delete": 36.2,
+    "insert": 10.9,
+    "substitute": 52.9
+   }
+  },
+  "dvipada": {
+   "family": "jati",
+   "line_aksharas": [
+    13,
+    13,
+    13,
+    13
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 16.259,
+    "rate_cut": 11.321,
+    "distance_mean": 8.468,
+    "distance_sd": 1.864,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 10.904,
+    "rate_cut": 5.769,
+    "distance_mean": 5.678,
+    "distance_sd": 1.588,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.542,
+   "prasa_edits_mean": 1.248,
+   "weight_edits_pct": {
+    "delete": 32.1,
+    "insert": 8.5,
+    "substitute": 59.5
+   }
+  },
+  "madhyakkara": {
+   "family": "jati",
+   "line_aksharas": [
+    19,
+    19,
+    19,
+    19
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 14.972,
+    "rate_cut": 10.526,
+    "distance_mean": 11.39,
+    "distance_sd": 2.142,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 10.052,
+    "rate_cut": 6.579,
+    "distance_mean": 7.647,
+    "distance_sd": 1.854,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.571,
+   "prasa_edits_mean": 2.172,
+   "weight_edits_pct": {
+    "delete": 34.2,
+    "insert": 9.6,
+    "substitute": 56.2
+   }
+  },
+  "madhuragati_ragada": {
+   "family": "jati",
+   "line_aksharas": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 14.531,
+    "rate_cut": 8.333,
+    "distance_mean": 6.987,
+    "distance_sd": 1.756,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 8.481,
+    "rate_cut": 4.082,
+    "distance_mean": 4.078,
+    "distance_sd": 1.477,
+    "exact": 3
+   },
+   "yati_edits_mean": 1.628,
+   "prasa_edits_mean": 1.281,
+   "weight_edits_pct": {
+    "delete": 35.9,
+    "insert": 5.5,
+    "substitute": 58.6
+   }
+  },
+  "turagagati_ragada": {
+   "family": "jati",
+   "line_aksharas": [
+    19,
+    19,
+    19,
+    19
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 13.739,
+    "rate_cut": 9.211,
+    "distance_mean": 10.444,
+    "distance_sd": 2.273,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 8.867,
+    "rate_cut": 5.263,
+    "distance_mean": 6.74,
+    "distance_sd": 2.051,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.842,
+   "prasa_edits_mean": 1.862,
+   "weight_edits_pct": {
+    "delete": 47.5,
+    "insert": 1.6,
+    "substitute": 50.9
+   }
+  },
+  "hayapracara_ragada": {
+   "family": "jati",
+   "line_aksharas": [
+    9,
+    9,
+    9,
+    9
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 18.633,
+    "rate_cut": 11.111,
+    "distance_mean": 6.727,
+    "distance_sd": 1.617,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 10.568,
+    "rate_cut": 5.405,
+    "distance_mean": 3.816,
+    "distance_sd": 1.432,
+    "exact": 7
+   },
+   "yati_edits_mean": 1.678,
+   "prasa_edits_mean": 1.233,
+   "weight_edits_pct": {
+    "delete": 25.8,
+    "insert": 5.9,
+    "substitute": 68.3
+   }
+  },
+  "seesamu": {
+   "family": "upajati",
+   "line_aksharas": [
+    26,
+    26,
+    26,
+    26
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 11.604,
+    "rate_cut": 7.692,
+    "distance_mean": 12.076,
+    "distance_sd": 2.339,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 8.542,
+    "rate_cut": 5.714,
+    "distance_mean": 8.889,
+    "distance_sd": 2.023,
+    "exact": 0
+   },
+   "yati_edits_mean": 3.187,
+   "prasa_edits_mean": 0.0,
+   "weight_edits_pct": {
+    "delete": 35.6,
+    "insert": 10.7,
+    "substitute": 53.8
+   }
+  },
+  "ataveladi": {
+   "family": "upajati",
+   "line_aksharas": [
+    14,
+    12,
+    14,
+    12
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 18.766,
+    "rate_cut": 11.538,
+    "distance_mean": 9.782,
+    "distance_sd": 2.155,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 16.267,
+    "rate_cut": 9.615,
+    "distance_mean": 8.479,
+    "distance_sd": 2.076,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.303,
+   "prasa_edits_mean": 0.0,
+   "weight_edits_pct": {
+    "delete": 26.9,
+    "insert": 12.0,
+    "substitute": 61.1
+   }
+  },
+  "tetagiti": {
+   "family": "upajati",
+   "line_aksharas": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 15.9,
+    "rate_cut": 10.714,
+    "distance_mean": 8.932,
+    "distance_sd": 1.936,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 13.59,
+    "rate_cut": 8.929,
+    "distance_mean": 7.634,
+    "distance_sd": 1.773,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.298,
+   "prasa_edits_mean": 0.0,
+   "weight_edits_pct": {
+    "delete": 26.7,
+    "insert": 14.2,
+    "substitute": 59.1
+   }
+  },
+  "taralamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    19,
+    19,
+    19,
+    19
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 29.638,
+    "rate_cut": 25.0,
+    "distance_mean": 22.525,
+    "distance_sd": 2.309,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 27.721,
+    "rate_cut": 22.368,
+    "distance_mean": 21.068,
+    "distance_sd": 2.395,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.942,
+   "prasa_edits_mean": 0.515,
+   "weight_edits_pct": {
+    "delete": 21.3,
+    "insert": 21.3,
+    "substitute": 57.4
+   }
+  },
+  "malini": {
+   "family": "vrutta",
+   "line_aksharas": [
+    15,
+    15,
+    15,
+    15
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 39.842,
+    "rate_cut": 31.667,
+    "distance_mean": 23.905,
+    "distance_sd": 2.877,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 37.143,
+    "rate_cut": 28.333,
+    "distance_mean": 22.286,
+    "distance_sd": 2.997,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.871,
+   "prasa_edits_mean": 0.748,
+   "weight_edits_pct": {
+    "delete": 11.1,
+    "insert": 11.1,
+    "substitute": 77.8
+   }
+  },
+  "manini": {
+   "family": "vrutta",
+   "line_aksharas": [
+    22,
+    22,
+    22,
+    22
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 28.772,
+    "rate_cut": 23.864,
+    "distance_mean": 25.319,
+    "distance_sd": 2.636,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 27.351,
+    "rate_cut": 22.727,
+    "distance_mean": 24.069,
+    "distance_sd": 2.437,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.022,
+   "prasa_edits_mean": 0.228,
+   "weight_edits_pct": {
+    "delete": 20.4,
+    "insert": 20.4,
+    "substitute": 59.2
+   }
+  },
+  "kavirajavirajitamu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    23,
+    23,
+    23,
+    23
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 29.574,
+    "rate_cut": 23.913,
+    "distance_mean": 27.208,
+    "distance_sd": 2.996,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 27.221,
+    "rate_cut": 22.826,
+    "distance_mean": 25.043,
+    "distance_sd": 2.708,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.553,
+   "prasa_edits_mean": 0.612,
+   "weight_edits_pct": {
+    "delete": 18.7,
+    "insert": 18.7,
+    "substitute": 62.6
+   }
+  },
+  "vanamayuramu": {
+   "family": "vrutta",
+   "line_aksharas": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 33.527,
+    "rate_cut": 26.786,
+    "distance_mean": 18.775,
+    "distance_sd": 2.419,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 31.918,
+    "rate_cut": 25.0,
+    "distance_mean": 17.874,
+    "distance_sd": 2.379,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.637,
+   "prasa_edits_mean": 0.264,
+   "weight_edits_pct": {
+    "delete": 18.1,
+    "insert": 18.1,
+    "substitute": 63.8
+   }
+  },
+  "mangalamahasri": {
+   "family": "vrutta",
+   "line_aksharas": [
+    26,
+    26,
+    26,
+    26
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 29.297,
+    "rate_cut": 24.038,
+    "distance_mean": 30.469,
+    "distance_sd": 3.414,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 28.171,
+    "rate_cut": 23.077,
+    "distance_mean": 29.298,
+    "distance_sd": 3.199,
+    "exact": 0
+   },
+   "yati_edits_mean": 0.971,
+   "prasa_edits_mean": 0.2,
+   "weight_edits_pct": {
+    "delete": 19.4,
+    "insert": 19.4,
+    "substitute": 61.2
+   }
+  },
+  "layagrahi": {
+   "family": "vrutta",
+   "line_aksharas": [
+    30,
+    30,
+    30,
+    30
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 29.304,
+    "rate_cut": 24.167,
+    "distance_mean": 35.165,
+    "distance_sd": 3.769,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 27.527,
+    "rate_cut": 23.333,
+    "distance_mean": 33.032,
+    "distance_sd": 3.443,
+    "exact": 0
+   },
+   "yati_edits_mean": 1.872,
+   "prasa_edits_mean": 0.261,
+   "weight_edits_pct": {
+    "delete": 19.3,
+    "insert": 19.3,
+    "substitute": 61.5
+   }
+  },
+  "layavibhati": {
+   "family": "vrutta",
+   "line_aksharas": [
+    34,
+    34,
+    34,
+    34
+   ],
+   "n": 1000,
+   "all": {
+    "rate_mean": 32.801,
+    "rate_cut": 26.471,
+    "distance_mean": 44.609,
+    "distance_sd": 5.429,
+    "exact": 0
+   },
+   "weights": {
+    "rate_mean": 30.229,
+    "rate_cut": 23.529,
+    "distance_mean": 41.111,
+    "distance_sd": 5.462,
+    "exact": 0
+   },
+   "yati_edits_mean": 2.9,
+   "prasa_edits_mean": 0.598,
+   "weight_edits_pct": {
+    "delete": 11.5,
+    "insert": 11.5,
+    "substitute": 77.0
+   }
+  }
+ }
+}
