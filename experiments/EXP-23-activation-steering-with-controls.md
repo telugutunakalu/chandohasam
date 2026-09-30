@@ -5,7 +5,7 @@
 | **Category** | G. Steering |
 | **Origin** | chandohasam (G5 / NH15) |
 | **Depends on** | EXP-22 (including its all-pairs coherence step) |
-| **Status** | TBD |
+| **Status** | **blocked** (2026-09-29): no coherent metre direction exists (EXP-22 all pairs, EXP-38) |
 | **Cost** | hours (alpha × layer sweep) |
 
 ## Question
@@ -57,7 +57,21 @@ semantic similarity metric.
 - EXP-22's coherence gap predicts that chandas-vs-chandas outperforms coarse.
 
 ## Observed
-Not yet run.
+Not run. **Blocked on 2026-09-29 by its inputs.**
+- **Primary run: no direction qualifies.** It needs a chandas-vs-chandas
+  direction that EXP-22's all-pairs step flags as coherent. With `<bos>`, all
+  28 pairs fall below the 0.322 threshold (max 0.158). The existing
+  kandamu/mattakokila pair gives 0.03–0.07, not the 0.5–0.65 the design relied
+  on.
+- **Tight contrast: no fallback.** EXP-38 gives no metre-specific direction:
+  `d_metre` has coherence ≤ 0.011, and `d_break` runs parallel to
+  `d_preserve`.
+- **Only the secondary arm remains.** The coarse (poem vs bhavam) direction is
+  still available, but the design revision already identifies it as
+  register-dominated, and EXP-07 shows register separates from L1.
+- **Unblock when** a direction passes the coherence check. One route is a
+  checkpoint that complies with the metre (the EXP-26 realiser or a fine-tuned
+  model); rerun EXP-22 and EXP-38 on it.
 
 ## Replication notes
 - **The random-direction control at matched norm is essential.** Any

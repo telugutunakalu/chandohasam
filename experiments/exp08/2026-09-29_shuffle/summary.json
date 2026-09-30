@@ -1,0 +1,161 @@
+{
+ "conditions": {
+  "bos": {
+   "poems": 200,
+   "nll_genuine_mean": 6.3994,
+   "nll_shuffle_mean": 6.5107,
+   "delta_mean": -0.1114,
+   "delta_median": -0.1032,
+   "delta_mean_ci95": [
+    -0.1641,
+    -0.0587
+   ],
+   "wilcoxon_p": 0.0002553336561511465,
+   "shuffle_preferred": 78,
+   "genuine_preferred": 122,
+   "ties": 0,
+   "delta_total_nll_mean": -11.692,
+   "total_nll_shuffle_preferred": 70,
+   "token_count_difference": {
+    "mean": -0.35,
+    "min": -5,
+    "max": 5
+   },
+   "pearson": {
+    "r": 0.7656,
+    "p": 8.471900270960218e-40
+   },
+   "spearman": {
+    "rho": 0.7581,
+    "p": 1.3059757680089265e-38
+   },
+   "by_metre": {
+    "aataveladi": {
+     "poems": 25,
+     "delta_mean": -0.0323,
+     "shuffle_preferred": 11
+    },
+    "champakamala": {
+     "poems": 25,
+     "delta_mean": -0.1912,
+     "shuffle_preferred": 10
+    },
+    "kandamu": {
+     "poems": 25,
+     "delta_mean": -0.204,
+     "shuffle_preferred": 6
+    },
+    "mattakokila": {
+     "poems": 25,
+     "delta_mean": 0.0105,
+     "shuffle_preferred": 14
+    },
+    "mattebhavikriditamu": {
+     "poems": 25,
+     "delta_mean": -0.0016,
+     "shuffle_preferred": 15
+    },
+    "shardulavikriditamu": {
+     "poems": 25,
+     "delta_mean": -0.0544,
+     "shuffle_preferred": 7
+    },
+    "tetagiti": {
+     "poems": 25,
+     "delta_mean": -0.2451,
+     "shuffle_preferred": 8
+    },
+    "utpalamala": {
+     "poems": 25,
+     "delta_mean": -0.1729,
+     "shuffle_preferred": 7
+    }
+   }
+  },
+  "nobos": {
+   "poems": 200,
+   "nll_genuine_mean": 13.4528,
+   "nll_shuffle_mean": 13.3423,
+   "delta_mean": 0.1105,
+   "delta_median": 0.0538,
+   "delta_mean_ci95": [
+    -0.0307,
+    0.26
+   ],
+   "wilcoxon_p": 0.2539285531873964,
+   "shuffle_preferred": 105,
+   "genuine_preferred": 95,
+   "ties": 0,
+   "delta_total_nll_mean": 9.556,
+   "total_nll_shuffle_preferred": 105,
+   "token_count_difference": {
+    "mean": -0.35,
+    "min": -5,
+    "max": 5
+   },
+   "pearson": {
+    "r": 0.5065,
+    "p": 1.9850546644142313e-14
+   },
+   "spearman": {
+    "rho": 0.4847,
+    "p": 3.54589195772368e-13
+   },
+   "by_metre": {
+    "aataveladi": {
+     "poems": 25,
+     "delta_mean": -0.1122,
+     "shuffle_preferred": 11
+    },
+    "champakamala": {
+     "poems": 25,
+     "delta_mean": -0.0318,
+     "shuffle_preferred": 13
+    },
+    "kandamu": {
+     "poems": 25,
+     "delta_mean": -0.1473,
+     "shuffle_preferred": 8
+    },
+    "mattakokila": {
+     "poems": 25,
+     "delta_mean": 0.4753,
+     "shuffle_preferred": 17
+    },
+    "mattebhavikriditamu": {
+     "poems": 25,
+     "delta_mean": 0.6109,
+     "shuffle_preferred": 17
+    },
+    "shardulavikriditamu": {
+     "poems": 25,
+     "delta_mean": 0.2843,
+     "shuffle_preferred": 15
+    },
+    "tetagiti": {
+     "poems": 25,
+     "delta_mean": -0.2576,
+     "shuffle_preferred": 10
+    },
+    "utpalamala": {
+     "poems": 25,
+     "delta_mean": 0.0623,
+     "shuffle_preferred": 14
+    }
+   }
+  }
+ },
+ "exp35_gate6_cross_check": {
+  "poems_compared": 20,
+  "max_abs_difference": 0.0,
+  "note": "EXP-35 gate 6: per-poem mean s_true of the EXP-35 gates run vs this run's NLL(genuine)"
+ },
+ "pipeline_2026_09_24": {
+  "poems": 200,
+  "delta_mean": 0.571,
+  "shuffle_preferred": 144,
+  "pearson": 0.556,
+  "spearman": 0.503,
+  "note": "EXP-08 'Observed' (suspect input, presumed no <bos>)"
+ }
+}

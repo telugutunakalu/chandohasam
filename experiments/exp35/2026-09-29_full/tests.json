@@ -1,0 +1,266 @@
+{
+ "condition": "bos",
+ "poems": 200,
+ "engine": {
+  "identified": 200,
+  "matched_relaxed": 188,
+  "grid_from_engine": 200,
+  "engine_meter_equals_label": 175,
+  "prasa_source_counts": {
+   "engine": 200,
+   "corpus label": 0
+  }
+ },
+ "NH26": {
+  "d_poem": {
+   "n": 200,
+   "mean": -0.312,
+   "median": -0.205,
+   "ci95": [
+    -0.566,
+    -0.0638
+   ],
+   "share_in_predicted_direction": 0.405,
+   "wilcoxon_p_one_sided": 0.9903023826417806,
+   "alternative": "greater"
+  },
+  "delta_vs_prose": {
+   "n": 200,
+   "mean": -3.5943,
+   "median": -3.145,
+   "ci95": [
+    -4.1065,
+    -3.0979
+   ],
+   "share_in_predicted_direction": 0.155,
+   "wilcoxon_p_one_sided": 1.0,
+   "alternative": "greater"
+  }
+ },
+ "NH26_without_lowest_decile": {
+  "d_poem": {
+   "n": 180,
+   "mean": -0.3281,
+   "median": -0.2417,
+   "ci95": [
+    -0.5934,
+    -0.0674
+   ],
+   "share_in_predicted_direction": 0.4,
+   "wilcoxon_p_one_sided": 0.9915068192214097,
+   "alternative": "greater"
+  },
+  "delta_vs_prose": {
+   "n": 180,
+   "mean": -3.7623,
+   "median": -3.4027,
+   "ci95": [
+    -4.302,
+    -3.2383
+   ],
+   "share_in_predicted_direction": 0.1556,
+   "wilcoxon_p_one_sided": 1.0,
+   "alternative": "greater"
+  }
+ },
+ "NH26_sensitivity_without_text_initial_token": {
+  "note": "not in the spec: the first token after <bos> is left out of the pāda-first and sentence-first sets",
+  "d_poem": {
+   "n": 200,
+   "mean": -2.2011,
+   "median": -2.421,
+   "ci95": [
+    -2.5301,
+    -1.8769
+   ],
+   "share_in_predicted_direction": 0.18,
+   "wilcoxon_p_one_sided": 1.0,
+   "alternative": "greater"
+  },
+  "delta_vs_prose": {
+   "n": 167,
+   "mean": -3.3286,
+   "median": -3.2926,
+   "ci95": [
+    -3.947,
+    -2.7461
+   ],
+   "share_in_predicted_direction": 0.2036,
+   "wilcoxon_p_one_sided": 1.0,
+   "alternative": "greater"
+  }
+ },
+ "yati_seats": {
+  "total": 750,
+  "word_initial": 128,
+  "poems_with_a_word_initial_seat": 61
+ },
+ "NH21_gap_poem_minus_bhavam": {
+  "n": 200,
+  "mean": 0.5027,
+  "median": 0.4963,
+  "ci95": [
+   0.3945,
+   0.6127
+  ],
+  "share_in_predicted_direction": 0.745,
+  "wilcoxon_p_one_sided": 5.43858384621308e-15,
+  "alternative": "greater"
+ },
+ "NH21_without_quoting_bhavams": {
+  "n": 200,
+  "mean": 0.5027,
+  "median": 0.4963,
+  "ci95": [
+   0.3945,
+   0.6127
+  ],
+  "share_in_predicted_direction": 0.745,
+  "wilcoxon_p_one_sided": 5.43858384621308e-15,
+  "alternative": "greater",
+  "quoting_pairs": 0
+ },
+ "NH27": {
+  "prasa_did": {
+   "n": 150,
+   "mean": 0.3873,
+   "median": 0.2396,
+   "ci95": [
+    -1.0977,
+    1.9013
+   ],
+   "share_in_predicted_direction": 0.4867,
+   "wilcoxon_p_one_sided": 0.6908078728895933,
+   "alternative": "less"
+  },
+  "prasa_placebo": {
+   "n": 50,
+   "mean": -3.0226,
+   "median": -1.465,
+   "ci95": [
+    -5.7768,
+    -0.4262
+   ],
+   "share_in_predicted_direction": 0.52,
+   "wilcoxon_p_one_sided": 0.07885790741956278,
+   "alternative": "two-sided"
+  },
+  "yati_contrast": {
+   "n": 61,
+   "mean": 1.0543,
+   "median": 0.4282,
+   "ci95": [
+    0.2423,
+    1.9217
+   ],
+   "share_in_predicted_direction": 0.4262,
+   "wilcoxon_p_one_sided": 0.9739883453545602,
+   "alternative": "less"
+  }
+ },
+ "NH27_without_lowest_decile": {
+  "prasa_did": {
+   "n": 137,
+   "mean": 0.8248,
+   "median": 0.7696,
+   "ci95": [
+    -0.6995,
+    2.3686
+   ],
+   "share_in_predicted_direction": 0.4672,
+   "wilcoxon_p_one_sided": 0.8329178165850956,
+   "alternative": "less"
+  },
+  "prasa_placebo": {
+   "n": 43,
+   "mean": -1.998,
+   "median": 0.0816,
+   "ci95": [
+    -5.0062,
+    0.7538
+   ],
+   "share_in_predicted_direction": 0.4651,
+   "wilcoxon_p_one_sided": 0.41885688329375625,
+   "alternative": "two-sided"
+  },
+  "yati_contrast": {
+   "n": 54,
+   "mean": 1.3354,
+   "median": 0.7932,
+   "ci95": [
+    0.4593,
+    2.2688
+   ],
+   "share_in_predicted_direction": 0.3889,
+   "wilcoxon_p_one_sided": 0.9919481310192502,
+   "alternative": "less"
+  }
+ },
+ "NH18": "not computed: needs EXP-19's free-running traces",
+ "lowest_decile": [
+  "1-325-ఉ.",
+  "1-36.1-తే.",
+  "1-99-చ.",
+  "10.1-1104-మత్త.",
+  "10.1-1449-మ.",
+  "10.1-1732.1-ఆ.",
+  "10.1-213-మత్త.",
+  "10.2-1177.1-తే.",
+  "10.2-58-మ.",
+  "3-611-చ.",
+  "4-117-తే.",
+  "4-273-చ.",
+  "4-505-తే.",
+  "4-854.1-తే.",
+  "4-924-చ.",
+  "7-225-మత్త.",
+  "7-282-శా.",
+  "8-622-శా.",
+  "8-725-ఉ.",
+  "9-365-తే."
+ ],
+ "fig6b_poem_level": {
+  "pearson": [
+   0.2499,
+   0.0003594195801192292
+  ],
+  "spearman": [
+   0.2838,
+   4.6391712758875464e-05
+  ]
+ },
+ "gltr_tiers": {
+  "poem": {
+   "1-1": 0.1632,
+   "2-10": 0.1978,
+   "11-100": 0.34,
+   "101-1000": 0.2303,
+   ">1000": 0.0686,
+   "pct_quartiles": [
+    0.99946,
+    0.999897,
+    0.999989
+   ]
+  },
+  "bhavam": {
+   "1-1": 0.3231,
+   "2-10": 0.2922,
+   "11-100": 0.2316,
+   "101-1000": 0.1199,
+   ">1000": 0.0331,
+   "pct_quartiles": [
+    0.999866,
+    0.999989,
+    1.0
+   ]
+  }
+ },
+ "tokens": {
+  "mid_akshara": 4228,
+  "byte_cont": 1468
+ },
+ "gate6_vs_exp08": {
+  "comparisons": 400,
+  "max_abs_difference": 4.999999999810711e-06
+ }
+}

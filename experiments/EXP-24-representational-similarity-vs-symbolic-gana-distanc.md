@@ -5,7 +5,7 @@
 | **Category** | G. Steering |
 | **Origin** | chandohasam (G7 / NH20, §7) |
 | **Depends on** | EXP-22's diff-in-means construction only (its per-metre vectors also feed EXP-22's all-pairs step) |
-| **Status** | done (base model); NH20 holds |
+| **Status** | done (base model); NH20 holds; **rerun with `<bos>`** (2026-09-29): NH20 holds more strongly |
 | **Cost** | minutes |
 
 ## Question
@@ -80,6 +80,38 @@ holds only for the early-to-mid layers.
 | L15 | 0.485 | 0.007 | 0.433 | 0.031 |
 | L33 | 0.500 | 0.007 | 0.123 (n.s.) | 0.517 |
 
+
+**Rerun with `<bos>` (2026-09-29).** `experiments/scripts/exp24_rsa.py`, on EXP-22's
+last-token states (25 poems per metre).
+- `D_struct` is the Levenshtein distance between canonical U/I strings. The
+  canonical string of every metre is the plurality-mode whole-poem pattern
+  over all its eligible corpus poems.
+- For the five vṛttas, this mode covers 43–56% of poems. For kandamu,
+  aataveladi and tetagiti it covers only 0.10–0.35%, so it is nearly
+  arbitrary. A sensitivity variant therefore concatenates the mode of each pāda
+  position.
+- Mantel tests: one-sided, 999 permutations.
+
+| layer | r, raw | p, raw | r, centred | p, centred |
+|---|---|---|---|---|
+| L0 | 0.217 | 0.149 | 0.160 | 0.190 |
+| L7 | 0.584 | 0.008 | 0.711 | 0.001 |
+| **L8** | **0.630** | **0.006** | **0.728** | **0.002** |
+| L10 (centred peak) | 0.601 | 0.006 | **0.745** | **0.001** |
+| L16 (raw peak) | **0.773** | **0.002** | 0.677 | 0.007 |
+| L33 | 0.609 | 0.008 | 0.578 | 0.007 |
+
+- **NH20 holds, more strongly than before.** The raw correlation is
+  significant at **34 of 36** layers (the pipeline found 26), and the centred
+  one at 33. L8 reproduces the pipeline's peak (0.630 / 0.728, against
+  0.617 / 0.702). L0 again shows no relationship.
+- **The late-layer centred collapse does not replicate.** At L33 the centred
+  r is 0.578 (p = 0.007), against the pipeline's 0.123. That pattern was
+  probably an effect of the missing `<bos>`.
+- **Sensitivity.** With per-pāda modes, 31 of 36 layers are significant raw
+  and centred, and L8 gives 0.618 / 0.723. The conclusion does not depend on
+  the choice of canonical pattern.
+
 ## Replication notes
 - **Needs a metre-balanced sample** with enough examples per metre. With
   unequal counts, the distances are dominated by sample size.
@@ -94,3 +126,5 @@ holds only for the early-to-mid layers.
 - `pipeline/data/phase7_rsa.json`, `pipeline/common/phase7_rsa.py` and
   `pipeline/scripts/run_phase7.py` (chandohasam repo)
 - Figure 5 in `Chandohasam_Gemma_Experiments.docx`
+- Rerun with `<bos>` (2026-09-29): `experiments/exp24/2026-09-29_bos/summary.json` (both variants, every layer);
+  script `experiments/scripts/exp24_rsa.py`

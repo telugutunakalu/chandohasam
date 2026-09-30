@@ -1,0 +1,174 @@
+{
+ "conditions": {
+  "bos/bhavam": {
+   "texts": 10,
+   "tokens": 1319,
+   "s_true_mean": 5.391,
+   "s_true_median": 5.539,
+   "s_model_mean": 0.5052,
+   "gap_mean": 4.8858,
+   "top1_mean": 0.3052,
+   "entropy_mean": 1.2417,
+   "offby1_mean": 15.5819
+  },
+  "bos/poem": {
+   "texts": 10,
+   "tokens": 959,
+   "s_true_mean": 6.2633,
+   "s_true_median": 6.3391,
+   "s_model_mean": 0.9164,
+   "gap_mean": 5.3468,
+   "top1_mean": 0.1733,
+   "entropy_mean": 2.4131,
+   "offby1_mean": 9.7737
+  },
+  "nobos/bhavam": {
+   "texts": 10,
+   "tokens": 1309,
+   "s_true_mean": 11.7898,
+   "s_true_median": 11.7849,
+   "s_model_mean": 0.5882,
+   "gap_mean": 11.2016,
+   "top1_mean": 0.0736,
+   "entropy_mean": 2.0822,
+   "offby1_mean": 12.7762
+  },
+  "nobos/poem": {
+   "texts": 10,
+   "tokens": 949,
+   "s_true_mean": 13.2117,
+   "s_true_median": 13.4749,
+   "s_model_mean": 0.4956,
+   "gap_mean": 12.7161,
+   "top1_mean": 0.0926,
+   "entropy_mean": 1.8382,
+   "offby1_mean": 12.5775
+  },
+  "random/bhavam": {
+   "texts": 10,
+   "tokens": 1319,
+   "s_true_mean": 12.7938,
+   "s_true_median": 12.781,
+   "s_model_mean": 9.1827,
+   "gap_mean": 3.6111,
+   "top1_mean": 0.0,
+   "entropy_mean": 12.1694,
+   "offby1_mean": 10.4048
+  },
+  "random/poem": {
+   "texts": 10,
+   "tokens": 959,
+   "s_true_mean": 12.782,
+   "s_true_median": 12.7562,
+   "s_model_mean": 9.1643,
+   "gap_mean": 3.6177,
+   "top1_mean": 0.0,
+   "entropy_mean": 12.1695,
+   "offby1_mean": 10.4146
+  }
+ },
+ "gates": {
+  "1_invariant": {
+   "positions": 6814,
+   "violations": 0,
+   "largest_excess": 0.0,
+   "pass": true
+  },
+  "2_uniform_bound": {
+   "ln_V": 12.4766,
+   "bos_poem": 6.2633,
+   "bos_bhavam": 5.391,
+   "pass": true
+  },
+  "3_prose_control": {
+   "bos_bhavam": 5.391,
+   "bos_poem": 6.2633,
+   "pairs_bhavam_lower": "10/10",
+   "pass": true
+  },
+  "4_bos_alignment": {
+   "s_true_mean": {
+    "poem": {
+     "bos": 6.2633,
+     "nobos": 13.2117
+    },
+    "bhavam": {
+     "bos": 5.391,
+     "nobos": 11.7898
+    }
+   },
+   "aligned_vs_offby1": {
+    "bos/poem": {
+     "aligned": 6.2633,
+     "offby1": 9.7737
+    },
+    "bos/bhavam": {
+     "aligned": 5.391,
+     "offby1": 15.5819
+    },
+    "nobos/poem": {
+     "aligned": 13.2117,
+     "offby1": 12.5775
+    },
+    "nobos/bhavam": {
+     "aligned": 11.7898,
+     "offby1": 12.7762
+    }
+   },
+   "alignment_ok_under_bos": true,
+   "nobos_poem_above_ln_V": true,
+   "nobos_poem_vs_pipeline": {
+    "this_run": {
+     "s_true": 13.2117,
+     "s_model": 0.4956,
+     "gap": 12.7161
+    },
+    "pipeline": {
+     "s_true": 13.15,
+     "s_model": 0.41,
+     "gap": 12.74
+    }
+   },
+   "diagnosis": "missing <bos>: without it the poem mean exceeds ln V, with it the mean is far below, and under <bos> the aligned surprisal is below the off-by-one value",
+   "pass": true
+  },
+  "5_random_reference": {
+   "measured": {
+    "poem": {
+     "s_true": 12.782,
+     "entropy": 12.1695,
+     "gap": 3.6177,
+     "s_model": 9.1643
+    },
+    "bhavam": {
+     "s_true": 12.7938,
+     "entropy": 12.1694,
+     "gap": 3.6111,
+     "s_model": 9.1827
+    }
+   },
+   "spec_criterion": "mean s_true within 1.0 nat of ln V and mean gap below 1.0 nat (an exactly uniform output)",
+   "spec_criterion_met": false,
+   "analytic_floor": {
+    "s_true": 12.7838,
+    "entropy": 12.1694,
+    "gap": 3.598,
+    "logit_sd": 0.7838,
+    "basis": "the final RMSNorm gives |h| = sqrt(hidden_size) and lm_head rows are N(0, initializer_range^2), so logits are ~N(0, sd^2) with sd = initializer_range * sqrt(hidden_size): s_true = ln V + sd^2/2, entropy = ln V - sd^2/2, gap = sd * E[max of V standard normals]"
+   },
+   "analytic_tolerance_nats": 0.1,
+   "pass": true
+  },
+  "6_nll_cross_check": {
+   "pass": null,
+   "note": "needs EXP-08's per-poem nll_true under the same condition; EXP-08 has not been rerun"
+  }
+ },
+ "pipeline_2026_09_24": {
+  "poems": 102,
+  "s_true_mean": 13.15,
+  "s_model_mean": 0.41,
+  "gap_mean": 12.74,
+  "note": "poem side, presumed no <bos>; EXP-35 'Observed'"
+ }
+}

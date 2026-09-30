@@ -5,7 +5,7 @@
 | **Category** | G. Steering |
 | **Origin** | chandohasam (G4 / NH13, NH14; G4c, formerly EXP-39) |
 | **Depends on** | EXP-07; EXP-24's per-metre vectors for the all-pairs step |
-| **Status** | partial: coarse contrast and 1 of 28 chandas-vs-chandas pairs done (base model); tight contrast in EXP-38 |
+| **Status** | coarse contrast and **all 28 pairs rerun with `<bos>`** (2026-09-29): no pair is coherent enough to steer; tight contrast in EXP-38 |
 | **Cost** | minutes |
 
 ## Question
@@ -74,6 +74,42 @@ Base `gemma-4-E2B-it`, 200-poem balanced sample.
 The direction vectors are saved with the per-layer data. There is no
 fine-tuned comparison, because no checkpoint exists.
 
+
+**Rerun with `<bos>`, all 28 pairs (2026-09-29).** `experiments/scripts/exp22_directions.py`,
+EXP-35's 200-poem sample (25 poems per metre), last-token states at all 36
+hidden-state indices. L0 is the embedding output, and transformers returns the
+final-norm output as L35; both were checked. The pipeline's
+`phase4_direction.py` is not available here, so pair coherence uses the spec's
+fallback: a seeded random matching of the two metres' poems, then the mean
+pairwise cosine of `c_k = diff_a,k − diff_b,k`. The flag threshold was fixed
+before the run at 0.322. A null comes from 20 random 25/25 splits of each
+pair's 50 poems (560 splits).
+
+| | result |
+|---|---|
+| coarse (poem vs bhavam, n = 200) | peak **0.475 at L35** (final norm); intermediate peak 0.411 at L6; 0.332 at L4 |
+| chandas-vs-chandas peaks | **all 28 below 0.322** (range 0.003–0.158, median 0.064) |
+| null peak (random splits) | 95th percentile 0.068, 99th 0.128 |
+| pairs above the null's 95th percentile | 13 of 28; the strongest are kandamu vs tetagiti 0.158, champakamala vs tetagiti 0.125, aataveladi vs kandamu 0.113 (all at L1) |
+| peak layers | 17 of 28 at L0–L3 (10 at L1) |
+| kandamu vs mattakokila, L8–L35 | **0.025–0.068** (pipeline: 0.5–0.65) |
+| stability over 20 matchings | peak sd ≤ 0.013 for every pair |
+
+- **No chandas-vs-chandas direction is coherent enough to steer.** Every pair
+  is flagged under the spec's rule. Most peaks sit at L0–L3, where a
+  last-token state is close to the embedding of that token. At L0, 106 of the
+  200 poem−bhavam differences are exactly zero, because the poem and its
+  bhavam end in the same token. These early peaks therefore cannot be read as
+  metre.
+- **The pipeline's 0.5–0.65 is not reproduced.** Without `<bos>`, the coarse
+  contrast matches the pipeline (0.310 at L4, against 0.322), but kandamu vs
+  mattakokila stays at 0.016–0.055. Two other plausible definitions fall short
+  too: poem states without bhavam subtraction give 0.03–0.11, and each `c_k`'s
+  cosine to the pair direction gives 0.25–0.32. The pipeline must have
+  computed pair coherence another way, which its code would settle.
+- **Consequence for EXP-23.** With this definition, its primary run (steering
+  with a chandas-vs-chandas direction) has no coherent direction to use.
+
 ## Replication notes
 - **The poem-vs-bhavam contrast confounds metre with register.** EXP-07 shows
   register is trivially separable by L7, so this contrast recovers register,
@@ -86,3 +122,8 @@ fine-tuned comparison, because no checkpoint exists.
 
 ## Artifacts
 `pipeline/data/phase4_chandas_direction.json` (chandohasam repo)
+- Rerun with `<bos>` (2026-09-29): `experiments/exp22/2026-09-29_pairs/` (`directions.npz`,
+  `coherence_by_layer.csv`, `summary.json`, `fig_coherence.png`); no-`<bos>` diagnostic:
+  `experiments/exp22/2026-09-29_pairs_nobos/`; script `experiments/scripts/exp22_directions.py`.
+  The pooled activations (`pooled_*.npy`, 42 MB each) are not committed; `exp22_directions.py extract`
+  rebuilds them

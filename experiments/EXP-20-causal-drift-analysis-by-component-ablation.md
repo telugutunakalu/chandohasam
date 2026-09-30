@@ -24,6 +24,12 @@ worse.
   lower than L0's. Ablating L0 tests a lookup, not a prosodic representation.
 - **No compliance to lose.** Base-model compliance is 0/189 (EXP-19).
 
+**Checked 2026-09-29: still parked.**
+- EXP-05's lookup control, now run with `<bos>`, finds no layer that beats the
+  lookup baseline on context-determined weights (best 0.847 at L0, against
+  0.887).
+- EXP-19's rerun keeps base compliance at 0/200.
+
 **Unpark when either holds:**
 - EXP-05's lookup control shows a layer that beats the lookup baseline on
   context-determined weights;

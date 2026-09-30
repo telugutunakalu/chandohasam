@@ -1,0 +1,119 @@
+{
+ "model": {
+  "run": "diffusion_pretraining/runs/pilot120m",
+  "provenance": {
+   "from": "/home/samvaran/phd_workspace/anlp_project/diffusion_pretraining/runs/pilot120m",
+   "weights": "ema",
+   "step": 76000
+  }
+ },
+ "grid": {
+  "meters": [
+   "ataveladi",
+   "bhujangaprayatamu",
+   "champakamala",
+   "dvipada",
+   "hayapracara_ragada",
+   "indravajra",
+   "kandamu",
+   "kavirajavirajitamu",
+   "lalita",
+   "layagrahi",
+   "layavibhati",
+   "madhuragati_ragada",
+   "madhyakkara",
+   "mahasragdhara",
+   "malini",
+   "mangalamahasri",
+   "manini",
+   "mattakokilamu",
+   "mattebhavikriditamu",
+   "pamcacamaramu",
+   "rathoddhata",
+   "salini",
+   "sardulavikriditamu",
+   "seesamu",
+   "sragdhara",
+   "sragvini",
+   "taralamu",
+   "taruvoja",
+   "tetagiti",
+   "totakamu",
+   "turagagati_ragada",
+   "upendravajra",
+   "utpalamala",
+   "utsahamu",
+   "vanamayuramu",
+   "vasamtatilakamu",
+   "vidyunmala"
+  ],
+  "topics": {
+   "T1": "తల్లి ప్రేమ అన్నింటికంటే గొప్పది",
+   "T2": "హనుమంతుడు సముద్రమును దాటి లంకను చేరెను",
+   "T3": "శ్రీరాముడు సీతాదేవిని రక్షించుటకు లంకకు వెళ్ళెను"
+  },
+  "seeds": [
+   42,
+   49,
+   56,
+   63,
+   70
+  ]
+ },
+ "modes": {
+  "free": {
+   "particles": 1,
+   "temperature": 0.7,
+   "guidance": 0.0,
+   "lexicon_lam": 0.0,
+   "lexicon_lam2": 0.5,
+   "yati_weight": 0.0,
+   "yati_profile": "relaxed",
+   "yati_sandhi": "hypothesis",
+   "prasa_relaxed": true,
+   "vikalpa": true,
+   "ess_threshold": 0.5,
+   "canvas": 512,
+   "rerank": false,
+   "constrained": false,
+   "seed": 0
+  },
+  "masking": {
+   "particles": 1,
+   "temperature": 0.7,
+   "guidance": 0.0,
+   "lexicon_lam": 0.0,
+   "lexicon_lam2": 0.5,
+   "yati_weight": 10000.0,
+   "yati_profile": "strict",
+   "yati_sandhi": "off",
+   "prasa_relaxed": false,
+   "vikalpa": false,
+   "ess_threshold": 0.5,
+   "canvas": 512,
+   "rerank": false,
+   "constrained": true,
+   "seed": 0
+  },
+  "own": {
+   "particles": 16,
+   "temperature": 1.0,
+   "guidance": 0.0,
+   "lexicon_lam": 2.0,
+   "lexicon_lam2": 0.5,
+   "yati_weight": 3.0,
+   "yati_profile": "relaxed",
+   "yati_sandhi": "hypothesis",
+   "prasa_relaxed": true,
+   "vikalpa": true,
+   "ess_threshold": 0.5,
+   "canvas": 512,
+   "rerank": true,
+   "constrained": true,
+   "seed": 0
+  }
+ },
+ "masking_rule_set": "DecodeConfig(yati_profile=strict, yati_sandhi=off, prasa_relaxed=False, vikalpa=False, yati_weight=1e4): canonical weights, strict prāsa, hard yati from ft.yati_oracle",
+ "decoder": "diffusion_finetuning/ft/decode.py (TracingDecoder: same sampler, plus per-step statistics)",
+ "torch": "2.14.0+cu130"
+}

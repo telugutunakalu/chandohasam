@@ -1,0 +1,44 @@
+{
+ "experiment": "EXP-19 (generation)",
+ "date": "2026-09-29",
+ "model": {
+  "id": "google/gemma-4-E2B-it",
+  "snapshot": "905e84b50c4d2a365ebde34e685027578e6728db",
+  "dtype": "bfloat16",
+  "load": {
+   "tensors_loaded": 540,
+   "lm_head_tied_to_embed_tokens": true,
+   "buffers_not_in_checkpoint": [],
+   "unused_text_tensors": 60,
+   "unused_examples": [
+    "model.language_model.layers.15.self_attn.k_norm.weight",
+    "model.language_model.layers.15.self_attn.k_proj.weight",
+    "model.language_model.layers.15.self_attn.v_proj.weight",
+    "model.language_model.layers.16.self_attn.k_norm.weight",
+    "model.language_model.layers.16.self_attn.k_proj.weight",
+    "model.language_model.layers.16.self_attn.v_proj.weight"
+   ]
+  }
+ },
+ "device": {
+  "torch": "2.14.0+cu130",
+  "transformers": "5.17.0"
+ },
+ "prompt": "system + metre rules from experiments/runs/2026-09-24_e4b_baseline/prompts.jsonl (topic replaced by the bhavam, first 2,000 chars), chat template",
+ "decoding": {
+  "type": "manual greedy loop, argmax of raw logits, KV cache",
+  "max_new_tokens": 1000,
+  "eos": [
+   1,
+   106,
+   50
+  ]
+ },
+ "direction": "EXP-22 coarse direction, experiments/exp22/2026-09-29_pairs/directions.npz",
+ "seed": 42,
+ "sample": {
+  "rule": "EXP-35 Inputs 1",
+  "size": 200
+ },
+ "seconds": 805.3
+}

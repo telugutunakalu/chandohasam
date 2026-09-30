@@ -11,6 +11,8 @@ in this directory alongside the specs. Engineering and planning records that
 are not model experiments live in [`notes/`](notes/). The constrained-decoding
 runs of `meter_engine/metrical_decoder` live in [`runs/`](runs/): each run, its
 method and its results are described in [`runs/README.md`](runs/README.md).
+The base pilot120m on the same decoding grid, with its own decoder, is in
+[`pilot_grid/`](pilot_grid/README.md) (2026-09-29).
 
 ## Sources consolidated
 
@@ -75,6 +77,30 @@ exception, since it involves no attention. Until reruns exist:
 
 EXP-35 specifies sanity gates that catch this class of fault.
 
+**Confirmed 2026-09-29** (EXP-35 replication gates, 10 poems). Scored without
+`<bos>`, the poems give a mean surprisal of 13.21 nats, reproducing the
+pipeline's 13.15. With `<bos>` prepended, the same poems give 6.26 and their
+bhavams 5.39, and EXP-35's gates 1–5 pass. The tokenizer under transformers 5.17
+still does not add `<bos>`. The EXP-08 and EXP-35 pipeline numbers should be
+replaced by `<bos>` reruns.
+
+EXP-08's shuffle contrast has been rerun with `<bos>` (2026-09-29, 200 poems). The
+conclusion reverses: the genuine order is preferred in 122 of 200 poems (mean
+delta −0.11 nats, p = 2.6×10⁻⁴), not the shuffle in 72%.
+
+**All affected experiments rerun with `<bos>` (2026-09-29).** Each one's spec
+records the details.
+- **EXP-35:** gates pass on 200 poems.
+- **EXP-08:** the shuffle conclusion reverses.
+- **EXP-05:** the curve's shape holds, and the lookup control shows weight is
+  looked up.
+- **EXP-07:** holds.
+- **EXP-24:** holds more strongly. The late-layer centred collapse was an
+  artifact.
+- **EXP-22:** the coarse contrast is reproduced, but the kandamu/mattakokila
+  pair coherence (0.5–0.65) is not, under either input.
+- **EXP-21:** not rerun (closed).
+
 ## Index
 
 | # | Experiment | Category | Origin | Status |
@@ -83,9 +109,9 @@ EXP-35 specifies sanity gates that catch this class of fault.
 | [02](EXP-02-meter-table-validation-and-the-padanta-guru-rule.md) | Meter table + padanta-guru | A. Ground truth | ours | done |
 | [03](EXP-03-yati-rule-selection-with-a-false-positive-control.md) | Yati rule selection | A. Ground truth | ours | done |
 | [04](EXP-04-end-to-end-validator-accept-reject.md) | End-to-end validator | A. Ground truth | ours | done |
-| [05](EXP-05-per-layer-linear-probe-for-guru-laghu.md) | Per-layer guru/laghu probe + lookup control | B. Probes | chandohasam | probe done (base) ⚠ no `<bos>`; lookup control TBD |
-| [07](EXP-07-poem-vs-bhavam-register-probe.md) | Register probe | B. Probes | chandohasam | done (base) |
-| [08](EXP-08-metrical-order-nll-contrast-against-shuffle-and-pros.md) | Metrical-order NLL contrast + shared difficulty | B. Probes | chandohasam | partial (shuffle only) ⚠ input |
+| [05](EXP-05-per-layer-linear-probe-for-guru-laghu.md) | Per-layer guru/laghu probe + lookup control | B. Probes | chandohasam | rerun with `<bos>` + lookup control: **no layer beats the lookup** |
+| [07](EXP-07-poem-vs-bhavam-register-probe.md) | Register probe | B. Probes | chandohasam | done (base); `<bos>` rerun: holds (0.98 from L1) |
+| [08](EXP-08-metrical-order-nll-contrast-against-shuffle-and-pros.md) | Metrical-order NLL contrast + shared difficulty | B. Probes | chandohasam | shuffle rerun with `<bos>`: genuine preferred (122/200); prose control: E2B cannot reorder (0/200), needs a stronger model |
 | [09](EXP-09-infill-diagnostic-can-the-model-restore-blanked-syll.md) | **Infill diagnostic ★** | C. Capability | ours | done |
 | [11](EXP-11-tokenizer-syllable-coverage-audit.md) | **Tokenizer coverage audit ★** | C. Capability | ours | done |
 | [12](EXP-12-metrical-constraint-on-an-untrained-model.md) | Constraint, untrained model | D. Decoding | ours | done |
@@ -94,12 +120,12 @@ EXP-35 specifies sanity gates that catch this class of fault.
 | [16](EXP-16-constraint-annealing-canvas-warm-start-and-prompt-ri.md) | Annealing / warm-start / prompts | D. Decoding | ours | done (negative) |
 | [17](EXP-17-recursive-context-expansion-across-iterations.md) | Recursive context expansion | E. Iteration | ours | done (saturates) |
 | [18](EXP-18-multi-akshara-span-placement.md) | Multi-akshara spans | E. Iteration | ours | done (negative) |
-| [19](EXP-19-generation-time-tracking.md) | Generation-time tracking, decay + regression | F. Mechanics | chandohasam | generated (base); regression + decay TBD |
-| [20](EXP-20-causal-drift-analysis-by-component-ablation.md) | Causal drift ablation | F. Mechanics | chandohasam | **parked** |
+| [19](EXP-19-generation-time-tracking.md) | Generation-time tracking, decay + regression | F. Mechanics | chandohasam | rerun: 0/200 in metre; regression + decay done; NH12 not supported |
+| [20](EXP-20-causal-drift-analysis-by-component-ablation.md) | Causal drift ablation | F. Mechanics | chandohasam | **parked** (preconditions re-checked 2026-09-29: unmet) |
 | [21](EXP-21-poem-bhavam-layer-alignment-heatmap.md) | Poem–bhavam heatmap | F. Mechanics | chandohasam | **closed** (full-token only) |
-| [22](EXP-22-chandas-direction-extraction-diff-in-means-caa.md) | Chandas direction extraction, all pairs | G. Steering | chandohasam | partial (coarse + 1/28 pairs) |
-| [23](EXP-23-activation-steering-with-controls.md) | Activation steering | G. Steering | chandohasam | TBD (redesigned) |
-| [24](EXP-24-representational-similarity-vs-symbolic-gana-distanc.md) | RSA vs gana distance | G. Steering | chandohasam | done (base) — NH20 holds |
+| [22](EXP-22-chandas-direction-extraction-diff-in-means-caa.md) | Chandas direction extraction, all pairs | G. Steering | chandohasam | all 28 pairs with `<bos>`: **none coherent** (max 0.158 < 0.322) |
+| [23](EXP-23-activation-steering-with-controls.md) | Activation steering | G. Steering | chandohasam | **blocked**: no coherent metre direction (EXP-22, EXP-38) |
+| [24](EXP-24-representational-similarity-vs-symbolic-gana-distanc.md) | RSA vs gana distance | G. Steering | chandohasam | done (base) — NH20 holds; `<bos>` rerun: 34/36 layers significant |
 | [25](EXP-25-akshara-aligned-tokenizer-construction-and-round-tri.md) | **Akshara tokenizer ★** | H. Training | ours | done |
 | [26](EXP-26-realiser-training-and-the-infill-benchmark.md) | **Realiser training ★** | H. Training | ours | done |
 | [27](EXP-27-realise-a-padyam-from-a-bag-of-words.md) | Realise from word bag | H. Training | ours | partial |
@@ -107,8 +133,8 @@ EXP-35 specifies sanity gates that catch this class of fault.
 | [30](EXP-30-word-lattice-composition.md) | Word-lattice composition | I. Composition | ours | done |
 | [31](EXP-31-bigram-prior-and-in-beam-neural-rescoring.md) | Bigram + in-beam rescoring | I. Composition | ours | partial |
 | [32](EXP-32-corpus-ingestion-and-quality-audit.md) | Corpus ingestion + audit | J. Data | ours | done |
-| [35](EXP-35-teacher-forced-surprisal-gap-corpus-token-vs-top-choice.md) | **Teacher-forced surprisal gap** | C. Capability | chandohasam | run once, **fails gate 2** — respecified |
-| [38](EXP-38-synthetic-tight-contrast-set-for-a-metre-specific-direction.md) | Synthetic tight contrast | G. Steering | chandohasam | TBD |
+| [35](EXP-35-teacher-forced-surprisal-gap-corpus-token-vs-top-choice.md) | **Teacher-forced surprisal gap** | C. Capability | chandohasam | replicated (200 poems): gates pass; NH21 holds; NH26, NH27 not supported |
+| [38](EXP-38-synthetic-tight-contrast-set-for-a-metre-specific-direction.md) | Synthetic tight contrast | G. Steering | chandohasam | done: 357 triples; no metre direction (break ∥ preserve) |
 | [41](EXP-41-targeted-threshold-triggered-steering.md) | Targeted steering | G. Steering | chandohasam | **parked** (future arm of EXP-23) |
 
 ## Retired numbers

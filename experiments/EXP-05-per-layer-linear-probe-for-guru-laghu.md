@@ -5,7 +5,7 @@
 | **Category** | B. Representation probes |
 | **Origin** | chandohasam (G1 / NH11; G1b / NH22, formerly EXP-06) |
 | **Depends on** | EXP-01 |
-| **Status** | probe done (base model), input caveat: run without `<bos>`; lookup control TBD |
+| **Status** | probe **rerun with `<bos>`** and **lookup control done** (2026-09-29): no layer beats the lookup |
 | **Cost** | minutes, 1 forward pass per example; the lookup control needs no forward pass |
 
 ## Question
@@ -104,6 +104,38 @@ integration.
 
 The lookup control (steps 5–7) has not been run.
 
+
+**Rerun with `<bos>`, and the lookup control (2026-09-29).**
+`experiments/scripts/exp05_probe.py`.
+- **Sample.** The first 10 poems of each metre in EXP-35's balanced sample:
+  80 poems, 320 pādas, one forward pass per pāda.
+- **Tokens.** 7,172 tokens; **6,102** have a clean span inside a single
+  akshara. 839 cover several aksharas and 231 cover none; both are left out.
+- **Labels.** Scanner weights, canonical reading: 42.8% guru, majority-class
+  rate 57.2%.
+- **Probes.** scikit-learn 1.9, default settings, `max_iter=1000`. Some layers
+  hit the iteration cap (up to 5 warnings over the 5 folds).
+
+| | all | self-determined (2,164) | context-determined (3,938) |
+|---|---|---|---|
+| guru share | 42.8% | 100% | 11.4% |
+| baseline A (lookup) | **0.927** | 1.000 | **0.887** |
+| baseline B (A + next akshara's conjunct) | 0.994 | 1.000 | 0.991 |
+| probe L0 (best layer) | **0.777** | 0.648 | **0.847** |
+| probe L18 (trough) | 0.655 | 0.619 | 0.675 |
+| probe L25 (late plateau) | 0.749 | 0.748 | 0.750 |
+
+- **The curve's shape survives `<bos>`.** L0 is highest (0.777, against the
+  pipeline's 0.796), accuracy dips through the middle layers (0.655 at L18)
+  and partly recovers late (about 0.73). The trough is not an input artifact.
+- **The lookup control is decisive.** No layer beats baseline A on the
+  context-determined subset. The best is 0.847 at L0, below the subset's own
+  majority rate of 0.887, while the next-akshara oracle reaches 0.991. No
+  layer reaches baseline A overall either.
+- By the spec's criterion, weight is looked up, not computed, which matches
+  EXP-09's behavioural failure. EXP-20's unpark condition (a layer that beats
+  the lookup on context-determined weights) is not met.
+
 ## Replication notes
 - **Balanced sampling matters.** A sequential prefix of the skandha-ordered
   corpus covers only 9 of about 27 metres and confounds metre with era.
@@ -123,3 +155,6 @@ The lookup control (steps 5–7) has not been run.
 
 ## Artifacts
 `pipeline/data/phase1_guru_laghu_probe.json` (chandohasam repo)
+- Rerun with `<bos>` + lookup control (2026-09-29): `experiments/exp05/2026-09-29_probe/` (`labels.jsonl`,
+  `summary.json`, `run.json`; `states.npy` is 675 MB and is not committed; `exp05_probe.py` rebuilds it); script
+  `experiments/scripts/exp05_probe.py`

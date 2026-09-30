@@ -1,0 +1,28 @@
+{
+ "reorderings": {
+  "poems": 200,
+  "accepted": 83,
+  "accepted_but_unchanged": 83,
+  "usable": 0,
+  "by_metre": {
+   "aataveladi": 0,
+   "champakamala": 0,
+   "kandamu": 0,
+   "mattakokila": 0,
+   "mattebhavikriditamu": 0,
+   "shardulavikriditamu": 0,
+   "tetagiti": 0,
+   "utpalamala": 0
+  }
+ },
+ "scored_poems": 0,
+ "nll_mean": {
+  "genuine": NaN,
+  "shuffle": NaN,
+  "prose": NaN
+ },
+ "genuine_vs_prose": null,
+ "genuine_vs_shuffle_same_poems": null,
+ "prose_vs_shuffle": null,
+ "note": "delta = NLL(first) - NLL(second); 'first_preferred' counts poems where the first order has the lower NLL"
+}

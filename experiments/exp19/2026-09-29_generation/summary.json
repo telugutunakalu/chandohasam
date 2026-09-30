@@ -1,0 +1,210 @@
+{
+ "validator": {
+  "generations": 200,
+  "truncated": 0,
+  "clean_4_lines": 172,
+  "line_counts": {
+   "1": 1,
+   "4": 172,
+   "16": 1,
+   "5": 20,
+   "8": 3,
+   "2": 2,
+   "6": 1
+  },
+  "identified_any_metre": 0,
+  "identified_any_metre_clean": 0,
+  "identified_as_target": 0,
+  "valid_target_strict": 0,
+  "valid_target_relaxed": 0,
+  "mean_tokens": 70.1
+ },
+ "regression": {
+  "steps": 6542,
+  "poems": 99,
+  "violation_rate": 0.5825,
+  "null_deviance_position_only": 8645.65,
+  "full_deviance": 8132.63,
+  "deviance_drop_over_null": 513.03,
+  "coefficients_standardised": {
+   "intercept": {
+    "coef": 0.488,
+    "cluster_se": 0.0398,
+    "z": 12.252,
+    "p": 1.6383571603337197e-34
+   },
+   "abs_pos": {
+    "coef": 0.0344,
+    "cluster_se": 0.0366,
+    "z": 0.939,
+    "p": 0.34771070932118137
+   },
+   "pos_in_pada": {
+    "coef": 1.237,
+    "cluster_se": 0.1208,
+    "z": 10.237,
+    "p": 1.3482043903674637e-24
+   },
+   "since_junction": {
+    "coef": -0.0776,
+    "cluster_se": 0.0307,
+    "z": -2.53,
+    "p": 0.011413140502771792
+   },
+   "entropy": {
+    "coef": 0.0109,
+    "cluster_se": 0.0271,
+    "z": 0.401,
+    "p": 0.6881747695299418
+   },
+   "rare": {
+    "coef": 0.4829,
+    "cluster_se": 0.1287,
+    "z": 3.753,
+    "p": 0.00017476565561192267
+   }
+  },
+  "deviance_increase_when_dropped": {
+   "abs_pos": 0.55,
+   "pos_in_pada": 479.93,
+   "since_junction": 7.89,
+   "entropy": 0.18,
+   "rare": 17.42
+  },
+  "within_template_only": {
+   "steps": 5550,
+   "poems": 99,
+   "violation_rate": 0.5079,
+   "null_deviance_position_only": 7692.53,
+   "full_deviance": 7656.09,
+   "deviance_drop_over_null": 36.44,
+   "coefficients_standardised": {
+    "intercept": {
+     "coef": -0.0006,
+     "cluster_se": 0.0297,
+     "z": -0.022,
+     "p": 0.9827471000375756
+    },
+    "abs_pos": {
+     "coef": -0.0218,
+     "cluster_se": 0.0245,
+     "z": -0.888,
+     "p": 0.37468018844413487
+    },
+    "pos_in_pada": {
+     "coef": 0.0749,
+     "cluster_se": 0.0332,
+     "z": 2.253,
+     "p": 0.024260835759368153
+    },
+    "since_junction": {
+     "coef": -0.027,
+     "cluster_se": 0.0303,
+     "z": -0.89,
+     "p": 0.3735878195961342
+    },
+    "entropy": {
+     "coef": 0.0362,
+     "cluster_se": 0.0275,
+     "z": 1.316,
+     "p": 0.18808704711188573
+    },
+    "rare": {
+     "coef": 0.5699,
+     "cluster_se": 0.1093,
+     "z": 5.215,
+     "p": 1.8366527639044917e-07
+    }
+   },
+   "deviance_increase_when_dropped": {
+    "abs_pos": 0.61,
+    "pos_in_pada": 6.92,
+    "since_junction": 0.92,
+    "entropy": 1.79,
+    "rare": 22.82
+   }
+  },
+  "rare_threshold": 10,
+  "note": "continuous predictors standardised; p from cluster-robust z; within_template_only drops tokens that write an akshara beyond the template's length"
+ },
+ "decay": {
+  "L6": {
+   "slope_per_100_steps": {
+    "mean": 0.017,
+    "median": 0.0106,
+    "n": 200,
+    "wilcoxon_p": 8.201074520577132e-08
+   },
+   "pada_initial_minus_other_step_change": {
+    "mean": -0.0491,
+    "median": -0.0474,
+    "n": 199,
+    "wilcoxon_p": 1.188530619490919e-31
+   }
+  },
+  "L35": {
+   "slope_per_100_steps": {
+    "mean": -0.0009,
+    "median": -0.002,
+    "n": 200,
+    "wilcoxon_p": 0.9367852079046812
+   },
+   "pada_initial_minus_other_step_change": {
+    "mean": 0.2749,
+    "median": 0.2771,
+    "n": 199,
+    "wilcoxon_p": 2.12669594303155e-34
+   }
+  }
+ },
+ "nh18": {
+  "slots": 93,
+  "teacher_forced_rate": 0.6836,
+  "free_running_rate": 0.5104,
+  "tf_aksharas": 4273,
+  "fr_aksharas": 6152,
+  "mean_slot_gap_tf_minus_fr": 0.1789,
+  "slots_tf_higher": 69,
+  "wilcoxon_p_slot_gaps": 1.1268683034816614e-09
+ },
+ "per_step_skipped_not_nfc": 0,
+ "per_step_skipped_offsets": 0,
+ "templates": {
+  "champakamala": [
+   "IIIIUIUIIIUIIUIIUIUIU",
+   "IIIIUIUIIIUIIUIIUIUIU",
+   "IIIIUIUIIIUIIUIIUIUIU",
+   "IIIIUIUIIIUIIUIIUIUIU"
+  ],
+  "mattakokila": [
+   "UIUIIUIUIIUIUIIUIU",
+   "UIUIIUIUIIUIUIIUIU",
+   "UIUIIUIUIIUIUIIUIU",
+   "UIUIIUIUIIUIUIIUIU"
+  ],
+  "mattebhavikriditamu": [
+   "IIUUIIUIUIIIUUUIUUIU",
+   "IIUUIIUIUIIIUUUIUUIU",
+   "IIUUIIUIUIIIUUUIUUIU",
+   "IIUUIIUIUIIIUUUIUUIU"
+  ],
+  "shardulavikriditamu": [
+   "UUUIIUIUIIIUUUIUUIU",
+   "UUUIIUIUIIIUUUIUUIU",
+   "UUUIIUIUIIIUUUIUUIU",
+   "UUUIIUIUIIIUUUIUUIU"
+  ],
+  "utpalamala": [
+   "UIIUIUIIIUIIUIIUIUIU",
+   "UIIUIUIIIUIIUIIUIUIU",
+   "UIIUIUIIIUIIUIIUIUIU",
+   "UIIUIUIIIUIIUIIUIUIU"
+  ]
+ },
+ "pipeline": {
+  "truncated": "5% (10/200)",
+  "clean": "94% (189/200)",
+  "compliant": "0/189",
+  "note": "JSON prompt, 1,000 tokens"
+ }
+}

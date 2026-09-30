@@ -1,0 +1,36 @@
+{
+ "experiment": "EXP-08 prose control",
+ "date": "2026-09-29",
+ "model": {
+  "id": "google/gemma-4-E2B-it",
+  "snapshot": "905e84b50c4d2a365ebde34e685027578e6728db",
+  "dtype": "bfloat16",
+  "load": {
+   "tensors_loaded": 540,
+   "lm_head_tied_to_embed_tokens": true,
+   "buffers_not_in_checkpoint": [],
+   "unused_text_tensors": 60,
+   "unused_examples": [
+    "model.language_model.layers.15.self_attn.k_norm.weight",
+    "model.language_model.layers.15.self_attn.k_proj.weight",
+    "model.language_model.layers.15.self_attn.v_proj.weight",
+    "model.language_model.layers.16.self_attn.k_norm.weight",
+    "model.language_model.layers.16.self_attn.k_proj.weight",
+    "model.language_model.layers.16.self_attn.v_proj.weight"
+   ]
+  }
+ },
+ "device": {
+  "torch": "2.14.0+cu130",
+  "transformers": "5.17.0"
+ },
+ "reordering_prompt": {
+  "system": "You are an expert in Telugu grammar and classical Telugu poetry.",
+  "user": "Rewrite the following Telugu poem as a single prose sentence by putting its words into natural prose word order. Change nothing else: use exactly the same words, each written exactly as it appears (including any punctuation attached to it), and do not add, remove, split, join or change any word. Output only the reordered words on one line, with no explanation.\n\n<poem>"
+ },
+ "decoding": "greedy, at most 400 new tokens",
+ "verification": "exact multiset of whitespace-separated words; rejected replies are not repaired",
+ "layout": "accepted order put back into the poem's lines (same word count per line)",
+ "scoring": "<bos> + text, EXP-35 scorer",
+ "seconds": 1042.0
+}

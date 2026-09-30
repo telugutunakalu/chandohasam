@@ -5,7 +5,7 @@
 | **Category** | B. Representation probes |
 | **Origin** | chandohasam (G1 NLL contrast, G1c / NH23, G1d formerly EXP-36) |
 | **Depends on** | EXP-07; gated by EXP-35's sanity gates |
-| **Status** | partial: shuffle contrast and shared-difficulty check run (suspect input); prose control TBD |
+| **Status** | partial: shuffle contrast and shared-difficulty check **rerun with `<bos>`** (2026-09-29, 200 poems); prose control TBD |
 | **Cost** | minutes |
 
 ## Question
@@ -76,6 +76,71 @@ re-derivation in EXP-35 averages 13.15 nats, above the uniform bound ln V =
 12.48, most likely because `<bos>` was missing. Do not interpret the 72%, or
 the correlation, until the run is repeated behind EXP-35's gates.
 
+**Rerun with `<bos>`, 2026-09-29.** `experiments/scripts/exp08_order_contrast.py`,
+EXP-35's scorer and inputs, and EXP-35's 200-poem balanced sample (seed 42). The
+EXP-35 gates had passed on this scorer. The shuffle permutes the poem's own
+words across the whole poem and puts them back into the lines, so each line
+keeps its word count; only the order changes. The word multiset is checked.
+NLL is the mean surprisal per scored token.
+
+| | with `<bos>` (primary) | without `<bos>` (diagnostic) | pipeline |
+|---|---|---|---|
+| mean NLL, genuine / shuffle | 6.40 / 6.51 | 13.45 / 13.34 | — |
+| mean `NLL(genuine) − NLL(shuffle)` | **−0.111** (95% CI −0.164 to −0.059) | +0.111 (CI −0.031 to +0.260) | +0.571 |
+| median delta | −0.103 | +0.054 | — |
+| shuffle preferred | **78 / 200** (39%) | 105 / 200 | 144 / 200 |
+| Wilcoxon signed-rank p | **2.6×10⁻⁴** | 0.25 | — |
+| Pearson r, genuine vs shuffle NLL | **0.766** (p = 8.5×10⁻⁴⁰) | 0.507 | 0.556 |
+| Spearman ρ | 0.758 (p = 1.3×10⁻³⁸) | 0.485 | 0.503 |
+
+- **With a valid input, the model prefers the genuine order.** It gives the
+  genuine order a lower NLL in 122 of 200 poems, by 0.11 nats per token on
+  average (about 1.7% of the mean NLL). The effect is significant but small.
+  The pipeline's result (shuffle preferred in 72% of poems, +0.571) does not
+  hold.
+  - The same holds for total NLL per poem (mean difference −11.7 nats; shuffle
+    lower in 70 of 200). Token counts differ between orders by −0.35 on average
+    (range −5 to +5), because a word at a line start has no leading-space
+    marker.
+- **Without `<bos>`, the pipeline's numbers are not reproduced either** (105 of
+  200, +0.11, not significant). The pipeline's sample ids and shuffle procedure
+  are in the chandohasam repo, which is not available here, so the remaining
+  difference cannot be traced.
+- **Shared difficulty dominates.** Genuine and shuffled NLL correlate at
+  r = 0.77, and the spread between poems (genuine NLL from 4.9 to 8.2) is much
+  larger than the order effect. Deltas are reported together with this
+  correlation, as step 4 asks.
+- **The "extremes versus middle" pattern is a sorting artefact.** Sorted by
+  genuine NLL, the shuffle is preferred in 14 of 67 poems in the lowest third
+  and in 36 of 66 in the highest third. But the delta contains the genuine NLL
+  itself, so sorting on it builds in this correlation (regression to the mean).
+  Against the average of the two NLLs, the delta shows no trend (Spearman
+  ρ = 0.007, p = 0.93; shuffle preferred in 21, 29 and 28 poems per third).
+- **Per metre** (25 poems each; descriptive only), the genuine order is
+  preferred most in tetagiti (−0.245), kandamu (−0.204), champakamala (−0.191)
+  and utpalamala (−0.173), and hardly at all in mattebhavikriditamu (−0.002),
+  mattakokila (+0.011) and aataveladi (−0.032).
+- **Cross-check (EXP-35 gate 6).** For the 10 poems scored in EXP-35's gates
+  run, `NLL(genuine)` equals EXP-35's mean `s_true` exactly, under both
+  conditions (largest difference 0.0).
+
+**NH23 is not supported by the shuffle contrast:** genuine order scores better,
+not worse. The prose-reordering control, the load-bearing one, is still to run.
+
+**Prose control, attempted with `gemma-4-E2B-it` (2026-09-29).**
+`experiments/scripts/exp08_prose_control.py`.
+- **Method.** The model was asked, with greedy decoding, to put each poem's
+  words into natural prose order without changing any word. A reply was
+  accepted only if its words were exactly the poem's words as a multiset.
+- **Yield: 0 of 200 usable.** 83 replies repeated the poem in its original
+  order, which passes the multiset check but is no reordering. The other 117
+  changed, dropped or added words.
+- **Consequence.** E2B cannot produce this control, and a stronger reorderer is
+  needed: a larger model or a rule-based SOV reordering. The control is still
+  outstanding. Artifacts: `experiments/exp08/2026-09-29_prose/`
+  (`reorderings.jsonl`, `summary.json`).
+A model that beats only a shuffle has shown fluency, not metrical sensitivity.
+
 ## Replication notes
 - **Include the prose-reordering control.** A shuffle alone is too weak a
   baseline to support any conclusion.
@@ -88,3 +153,5 @@ the correlation, until the run is repeated behind EXP-35's gates.
 ## Artifacts
 - `pipeline/data/phase1_nll_contrast.jsonl` (chandohasam repo)
 - Figures 2 and 2b in `Chandohasam_Gemma_Experiments.docx`
+- Rerun with `<bos>` (2026-09-29): `experiments/exp08/2026-09-29_shuffle/` (`run.json`, `traces.jsonl`,
+  `per_poem.csv`, `summary.json`, `fig_shared_difficulty.png`); script `experiments/scripts/exp08_order_contrast.py`

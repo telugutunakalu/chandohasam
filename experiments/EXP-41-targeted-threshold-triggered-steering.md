@@ -5,7 +5,7 @@
 | **Category** | G. Steering |
 | **Origin** | chandohasam (G6d / NH19, §6.1 item 2) |
 | **Depends on** | EXP-22 (direction), EXP-19 (decay curve and threshold), EXP-23 (constant-steering baseline) |
-| **Status** | **parked**: run as an extra arm of EXP-23, and only once EXP-23 shows an effect |
+| **Status** | **parked**: run as an extra arm of EXP-23, and only once EXP-23 shows an effect (EXP-23 blocked, 2026-09-29) |
 | **Cost** | hours (threshold × alpha sweep) |
 
 ## Question

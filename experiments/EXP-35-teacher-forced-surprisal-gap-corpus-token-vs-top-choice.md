@@ -5,7 +5,7 @@
 | **Category** | C. Behavioural capability |
 | **Origin** | chandohasam (G8 / NH26, NH21; G6b / NH18, formerly EXP-10); NH27 proposed here |
 | **Depends on** | EXP-01 (akshara grid, yati and prāsa seats), EXP-08 (shares the NLL quantity), EXP-19 (free-running traces, for NH18) |
-| **Status** | run once in the pipeline, **fails sanity gate 2**; replication spec below |
+| **Status** | pipeline run fails gate 2 (missing `<bos>`); **replication done** (2026-09-29, 200 poems): gates 1–6 pass; NH21 supported; NH26 and NH27 not supported |
 | **Cost** | minutes; one forward pass per text × condition, no generation |
 
 ## Question
@@ -220,8 +220,15 @@ All six must pass before any result is interpreted.
 | 2 | **uniform bound** | mean `s_true` < `ln V` = ln 262,144 = **12.48** nats | the model does worse than a uniform guess, so the input is out of distribution (missing `<bos>`) or targets are misaligned; this says nothing about verse |
 | 3 | prose control | mean `s_true`(bhavam) < mean `s_true`(poem) under `bos` | if modern prose is no easier than archaic verse, the pipeline, not the register, is setting the numbers |
 | 4 | BOS / alignment | report `bos` vs `nobos`, and the off-by-one diagnostic vs the aligned mean | tells the bug class apart if gate 2 fails |
-| 5 | random-weights reference | `s_true` ≈ 12.48 and `gap` ≈ 0 | an untrained model misses the floor, so the harness is broken (the EXP-12 logic) |
+| 5 | random-weights reference | `s_true` ≈ ln V + σ²/2, entropy ≈ ln V − σ²/2 and `gap` ≈ σ·E[max of V standard normals], with σ = initializer_range·√hidden_size (for gemma-4-E2B-it: 12.78, 12.17 and 3.60 nats)¹ | an untrained model misses the floor, so the harness is broken (the EXP-12 logic) |
 | 6 | NLL cross-check | per-poem mean `s_true` equals EXP-08's `nll_true` for the same poem and condition | the two experiments are not measuring the same thing |
+
+¹ Amended 2026-09-29. The original condition was `s_true` ≈ 12.48 and `gap` ≈ 0,
+an exactly uniform output. A randomly initialised model does not produce one:
+the final RMSNorm gives the last hidden state norm √hidden_size, and the output
+rows are drawn from N(0, initializer_range²), so the logits are approximately
+N(0, σ²). The expected values above follow from that; the replication run
+matches them to within 0.02 nats.
 
 ## Output record
 - `run.json`: model id and snapshot commit, dtype, device, seed, sampled ids,
@@ -280,6 +287,107 @@ separates the two. The same `_nll()` path produced EXP-08's numbers, so they
 inherit the problem (see EXP-08). The negative correlation and the "≈ 3×10⁵×
 more probable" reading are therefore artifacts until this is rerun.
 
+**Replication, sanity gates (2026-09-29).** `experiments/scripts/exp35_surprisal.py`,
+`gemma-4-E2B-it` (snapshot `905e84b5`, bf16, transformers 5.17), seed 42. The
+sample rule reproduces the eligible counts above exactly. The first 10 poems of
+the shuffled 200-poem sample were scored with their bhavams, under three
+conditions: 6,814 scored positions in all. The tokenizer still does not add
+`<bos>` (`tokenizer(text)` starts `[237897, 42665, …]`).
+
+| condition | text | mean `s_true` | mean `s_model` | mean gap | top-1 | off-by-one |
+|---|---|---|---|---|---|---|
+| `bos` | poem | **6.26** | 0.92 | 5.35 | 17.3% | 9.77 |
+| `bos` | bhavam | **5.39** | 0.51 | 4.89 | 30.5% | 15.58 |
+| `nobos` | poem | **13.21** | 0.50 | 12.72 | 9.3% | 12.58 |
+| `nobos` | bhavam | 11.79 | 0.59 | 11.20 | 7.4% | 12.78 |
+| random weights | poem | 12.78 | 9.16 | 3.62 | 0.0% | 10.42 |
+| random weights | bhavam | 12.79 | 9.18 | 3.61 | 0.0% | 10.41 |
+
+| gate | result |
+|---|---|
+| 1 invariant | **pass**: 0 violations in 6,814 positions |
+| 2 uniform bound | **pass**: 6.26 (poem) and 5.39 (bhavam), against ln V = 12.48 |
+| 3 prose control | **pass**: bhavam below poem in 10 of 10 pairs |
+| 4 BOS / alignment | **pass**: under `bos` the aligned surprisal is far below the off-by-one value (6.26 vs 9.77; 5.39 vs 15.58), so targets are not shifted |
+| 5 random weights | **pass** against the amended condition: 12.78 / 12.17 / 3.61 measured, 12.78 / 12.17 / 3.60 expected |
+| 6 NLL cross-check | **pass** (added after the EXP-08 rerun, 2026-09-29): EXP-08's `NLL(genuine)` equals the mean `s_true` here for all 10 poems, under `bos` and `nobos` |
+
+**The missing `<bos>` is confirmed as the cause of the pipeline result.**
+Without `<bos>`, the poem side gives mean `s_true` 13.21, `s_model` 0.50 and gap
+12.72. This reproduces the pipeline's 13.15, 0.41 and 12.74 on a different
+sample. With `<bos>`, the same poems give 6.26, and gates 1–5 pass. The
+pipeline's poem-side numbers, and EXP-08's, should be replaced by `bos` reruns.
+
+The harness splits the model across devices to fit an 8 GB GPU. The per-layer
+embedding table (4.7 GB) stays in CPU RAM and is passed to the model as
+`per_layer_inputs`. As a smoke test, English text scores mean `s_true` 2.95
+(top-1 71%), and greedy decoding completes "The capital of France is" with
+"Paris.".
+
+The akshara grid is not computed yet, and none of NH26, NH21, NH27 or NH18 has
+been tested; the next step is the full 200-poem run.
+
+
+**Replication, full run (2026-09-29).** `experiments/scripts/exp35_surprisal.py --n 200`
+(scoring), then `experiments/scripts/exp35_tests.py` (akshara grid, alignment,
+aggregations, tests); all 200 poems and bhavams, `bos` for every test.
+- **Engine.** It identifies all 200 poems. 188 are `matched` under the relaxed
+  profile, and 175 are identified as their corpus label.
+- **Gates 1–6 pass.** Gate 6: EXP-08's `NLL(genuine)` equals the mean `s_true`
+  here for all 200 poems under both conditions (largest difference 5×10⁻⁶).
+
+| | poem | bhavam |
+|---|---|---|
+| mean `s_true` (`bos`) | **6.40** | **5.35** |
+| mean `s_model` / gap | 0.92 / 5.48 | 0.49 / 4.86 |
+| true token at rank 1 / rank > 1,000 | 16.3% / 6.9% | 32.3% / 3.3% |
+| mean `s_true` (`nobos`) | 13.45 (pipeline: 13.15) | 11.80 |
+| bhavam below poem (gate 3) | | 186 of 200 pairs |
+
+| test | statistic (mean, 95% CI) | share in predicted direction | one-sided Wilcoxon p | verdict |
+|---|---|---|---|---|
+| NH26 `d` (pāda-first − other word-initial gap) | −0.31 (−0.57 to −0.06) | 40.5% | 0.99 | **not supported** (opposite sign) |
+| NH26 Δ vs prose (sentence-first) | −3.59 (−4.11 to −3.10) | 15.5% | 1.00 | not supported |
+| NH21 gap, poem − bhavam, matched indices | **+0.50 (0.39 to 0.61)** | 74.5% | **5×10⁻¹⁵** | **supported** |
+| NH27a prāsa difference-in-differences (150 poems) | +0.39 (−1.10 to 1.90) | 48.7% | 0.69 | not supported |
+| NH27a placebo, aataveladi + tetagiti (50) | −3.02 (−5.78 to −0.43); median −1.47 | — | two-sided 0.079 | not clean |
+| NH27b yati seat − other word-initial aksharas (61 poems) | +1.05 (0.24 to 1.92) | 42.6% | 0.97 | **not supported** (opposite sign) |
+
+- **NH26.** Pāda starts are *less* surprising than other word starts, not
+  more. The first token after `<bos>` is unusually hard; left out, `d` becomes
+  −2.20 (−2.53 to −1.88). This check is not in the spec.
+- **NH21 holds.** Verse sits further from the model's prior than its own prose
+  paraphrase. No bhavam in this sample shares a 3-word n-gram with its poem.
+- **NH27 is not supported.**
+  - Prāsa seats are not easier once pāda 1 has fixed them.
+  - The placebo is not about 0, so this difference-in-differences has an offset
+    of its own. The pāda-1 terms fall at akshara 2 and 3 right after `<bos>`,
+    where tokens straddle aksharas.
+  - Word-initial yati seats are *more* surprising than other word-initial
+    aksharas. Only 128 of 750 yati seats (17%) start a word, because Pōtana
+    puts most of them inside compounds, so this test rests on 61 poems.
+- **Memorisation check.** Without the lowest decile by mean `s_true` (20
+  poems), none of the NH26 or NH27 verdicts changes.
+- **Figure 6b.** At poem level, mean `s_true` and mean `s_model` correlate
+  *positively* (Pearson 0.250, p = 3.6×10⁻⁴; Spearman 0.284). The pipeline's
+  negative correlation (−0.29) came from the broken input.
+- **Tokens.** 4,228 poem tokens split an akshara (`mid_akshara`), and 1,468 are
+  byte-fallback continuations.
+- **NH18** (after the EXP-19 rerun; `experiments/exp19/2026-09-29_generation/nh18_by_slot.csv`).
+  The measure is per-slot agreement with the template weight, over the 5
+  fixed-pattern metres.
+  - **Teacher-forced: 68.4%** (4,273 aksharas). The weight is that of the
+    argmax token's first akshara, resolved inside the token or else from the
+    true next akshara.
+  - **Free-running: 51.0%** (6,152 aksharas of EXP-19's clean poems), about
+    chance.
+  - Free-running is lower in 69 of 93 slots (Wilcoxon over slots,
+    p = 1.1×10⁻⁹).
+  - Caveat: the two sides differ in context (Pōtana's text vs the model's own
+    poem from a bhavam), so the 17-point gap bounds exposure bias from above
+    rather than measuring it. Even with the true prefix, the argmax misses the
+    template weight in about a third of slots.
+
 ## Replication notes
 - **Order matters.** Run the gates first on 5–10 poems (`bos`, `nobos`, random
   weights), then the full sample.
@@ -303,4 +411,7 @@ more probable" reading are therefore artifacts until this is rerun.
 ## Artifacts
 - Pipeline run (fails gate 2): `pipeline/data/phase8_surprisal_traces.jsonl`
   (chandohasam repo).
-- Replication: not yet run.
+- Replication, sanity gates on 10 poems (2026-09-29): `experiments/exp35/2026-09-29_gates/`
+  (`run.json`, `traces.jsonl`, `summary.json`); script `experiments/scripts/exp35_surprisal.py`.
+- Replication, full run (2026-09-29): `experiments/exp35/2026-09-29_full/` (`traces.jsonl`, `summary.json`,
+  `akshara_grid.jsonl`, `tests.json`, `fig6_*.csv`, `fig6_surprisal.png`); script `experiments/scripts/exp35_tests.py`.

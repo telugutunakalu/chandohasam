@@ -1,0 +1,306 @@
+{
+ "tokens": 6102,
+ "subset_sizes": {
+  "all": 6102,
+  "self": 2164,
+  "context": 3938
+ },
+ "guru_share": {
+  "all": 0.4279,
+  "self": 1.0,
+  "context": 0.1135
+ },
+ "majority_class_rate": {
+  "all": 0.5721,
+  "self": 1.0,
+  "context": 0.8865
+ },
+ "baseline_A_lookup": {
+  "all": 0.9267,
+  "self": 1.0,
+  "context": 0.8865
+ },
+ "baseline_B_next_akshara": {
+  "all": 0.9939,
+  "self": 1.0,
+  "context": 0.9906
+ },
+ "peak_layer_all": {
+  "layer": 0,
+  "all": 0.7765,
+  "self": 0.6483,
+  "context": 0.8469,
+  "convergence_warnings": 0
+ },
+ "peak_layer_context": {
+  "layer": 0,
+  "all": 0.7765,
+  "self": 0.6483,
+  "context": 0.8469,
+  "convergence_warnings": 0
+ },
+ "layers_beating_baseline_A_on_context": [],
+ "by_layer": [
+  {
+   "layer": 0,
+   "all": 0.7765,
+   "self": 0.6483,
+   "context": 0.8469,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 1,
+   "all": 0.7714,
+   "self": 0.7213,
+   "context": 0.7989,
+   "convergence_warnings": 2
+  },
+  {
+   "layer": 2,
+   "all": 0.7506,
+   "self": 0.6978,
+   "context": 0.7796,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 3,
+   "all": 0.7144,
+   "self": 0.6733,
+   "context": 0.7369,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 4,
+   "all": 0.7093,
+   "self": 0.6728,
+   "context": 0.7293,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 5,
+   "all": 0.7047,
+   "self": 0.6862,
+   "context": 0.7148,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 6,
+   "all": 0.6922,
+   "self": 0.6659,
+   "context": 0.7067,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 7,
+   "all": 0.6785,
+   "self": 0.6562,
+   "context": 0.6907,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 8,
+   "all": 0.6706,
+   "self": 0.6483,
+   "context": 0.6828,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 9,
+   "all": 0.6621,
+   "self": 0.6349,
+   "context": 0.677,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 10,
+   "all": 0.6853,
+   "self": 0.664,
+   "context": 0.6971,
+   "convergence_warnings": 4
+  },
+  {
+   "layer": 11,
+   "all": 0.6952,
+   "self": 0.6719,
+   "context": 0.708,
+   "convergence_warnings": 1
+  },
+  {
+   "layer": 12,
+   "all": 0.7135,
+   "self": 0.7052,
+   "context": 0.7181,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 13,
+   "all": 0.7401,
+   "self": 0.7482,
+   "context": 0.7357,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 14,
+   "all": 0.7509,
+   "self": 0.7629,
+   "context": 0.7443,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 15,
+   "all": 0.7122,
+   "self": 0.6922,
+   "context": 0.7232,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 16,
+   "all": 0.6786,
+   "self": 0.658,
+   "context": 0.6899,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 17,
+   "all": 0.6577,
+   "self": 0.6151,
+   "context": 0.6811,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 18,
+   "all": 0.655,
+   "self": 0.6188,
+   "context": 0.675,
+   "convergence_warnings": 4
+  },
+  {
+   "layer": 19,
+   "all": 0.6629,
+   "self": 0.6326,
+   "context": 0.6795,
+   "convergence_warnings": 4
+  },
+  {
+   "layer": 20,
+   "all": 0.676,
+   "self": 0.6405,
+   "context": 0.6955,
+   "convergence_warnings": 4
+  },
+  {
+   "layer": 21,
+   "all": 0.688,
+   "self": 0.6516,
+   "context": 0.708,
+   "convergence_warnings": 2
+  },
+  {
+   "layer": 22,
+   "all": 0.6988,
+   "self": 0.6728,
+   "context": 0.7131,
+   "convergence_warnings": 2
+  },
+  {
+   "layer": 23,
+   "all": 0.7142,
+   "self": 0.7029,
+   "context": 0.7204,
+   "convergence_warnings": 2
+  },
+  {
+   "layer": 24,
+   "all": 0.7332,
+   "self": 0.7292,
+   "context": 0.7354,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 25,
+   "all": 0.7493,
+   "self": 0.7482,
+   "context": 0.7499,
+   "convergence_warnings": 4
+  },
+  {
+   "layer": 26,
+   "all": 0.7348,
+   "self": 0.7421,
+   "context": 0.7308,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 27,
+   "all": 0.7258,
+   "self": 0.7204,
+   "context": 0.7288,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 28,
+   "all": 0.7307,
+   "self": 0.7338,
+   "context": 0.7291,
+   "convergence_warnings": 3
+  },
+  {
+   "layer": 29,
+   "all": 0.7332,
+   "self": 0.7343,
+   "context": 0.7326,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 30,
+   "all": 0.7322,
+   "self": 0.7306,
+   "context": 0.7331,
+   "convergence_warnings": 5
+  },
+  {
+   "layer": 31,
+   "all": 0.7271,
+   "self": 0.7274,
+   "context": 0.727,
+   "convergence_warnings": 4
+  },
+  {
+   "layer": 32,
+   "all": 0.7245,
+   "self": 0.7218,
+   "context": 0.726,
+   "convergence_warnings": 3
+  },
+  {
+   "layer": 33,
+   "all": 0.7189,
+   "self": 0.726,
+   "context": 0.7151,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 34,
+   "all": 0.7363,
+   "self": 0.7361,
+   "context": 0.7364,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 35,
+   "all": 0.7144,
+   "self": 0.7477,
+   "context": 0.696,
+   "convergence_warnings": 5
+  }
+ ],
+ "sklearn": "1.9.0",
+ "pipeline": {
+  "L0": 0.796,
+  "L7": 0.667,
+  "L10": 0.644,
+  "L27": 0.735,
+  "tokens": 6696,
+  "note": "no <bos>, first 300 pādas"
+ }
+}

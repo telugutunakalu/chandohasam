@@ -1,0 +1,266 @@
+{
+ "pilot120m (base)": {
+  "free": {
+   "poems": 555,
+   "status": {
+    "max_tokens": 459,
+    "complete": 96
+   },
+   "in_meter": 0,
+   "in_meter_licensed": 0,
+   "in_meter_relaxed": 0,
+   "yati_relaxed": 0,
+   "prasa_relaxed": 0,
+   "gana": 0,
+   "gana_canonical": 0,
+   "prasa_strict": 0,
+   "yati_strict": 0,
+   "reading": {
+    "null": 555
+   },
+   "words": 13188,
+   "attested_share": 0.2057173187746436,
+   "single_akshara_share": 0.05861389141643919,
+   "poems_repeating_a_line": 212,
+   "mean_logp": -0.5487364157423931,
+   "rank1_share": 0.8737317495669389,
+   "overridden_share": null,
+   "mean_valid_mass": null,
+   "mean_seconds": 0.5566306306306307,
+   "judge_ppl": 3.5498645507130715
+  },
+  "masking": {
+   "poems": 555,
+   "status": {
+    "complete": 555
+   },
+   "in_meter": 555,
+   "in_meter_licensed": 555,
+   "in_meter_relaxed": 555,
+   "yati_relaxed": 555,
+   "prasa_relaxed": 555,
+   "gana": 555,
+   "gana_canonical": 555,
+   "prasa_strict": 555,
+   "yati_strict": 555,
+   "reading": {
+    "canonical": 555
+   },
+   "words": 13444,
+   "attested_share": 0.31114251710800356,
+   "single_akshara_share": 0.19726271942874143,
+   "poems_repeating_a_line": 248,
+   "mean_logp": -1.7552110040335027,
+   "rank1_share": 0.6243433483524014,
+   "overridden_share": 0.21986669712007642,
+   "mean_valid_mass": 0.7279481166516475,
+   "mean_seconds": 0.6262882882882883,
+   "judge_ppl": 28.665046171643173
+  },
+  "own": {
+   "poems": 555,
+   "status": {
+    "complete": 555
+   },
+   "in_meter": 35,
+   "in_meter_licensed": 75,
+   "in_meter_relaxed": 313,
+   "yati_relaxed": 314,
+   "prasa_relaxed": 548,
+   "gana": 549,
+   "gana_canonical": 222,
+   "prasa_strict": 539,
+   "yati_strict": 78,
+   "reading": {
+    "vikalpa": 327,
+    "canonical": 222,
+    "null": 6
+   },
+   "words": 14947,
+   "attested_share": 0.38562922325550275,
+   "single_akshara_share": 0.17756071452465377,
+   "poems_repeating_a_line": 173,
+   "mean_logp": -2.3759180168012346,
+   "rank1_share": 0.5057447710301131,
+   "overridden_share": 0.23724688832857518,
+   "mean_valid_mass": 0.7071856557276517,
+   "mean_seconds": 6.96972972972973,
+   "judge_ppl": 27.065709334984767
+  }
+ },
+ "gemma-4-E4B-it": {
+  "baseline": {
+   "poems": 555,
+   "in_meter": 0,
+   "all_relaxed": 0,
+   "words": 9541,
+   "attested_share": 0.37868147992872864,
+   "single_akshara_share": 0.004087621842574153,
+   "poems_repeating_a_line": 4,
+   "judge_ppl": 30.015752655649216,
+   "mean_logp": -0.8385452460284556,
+   "overridden_share": 0.22001557632398755,
+   "mean_valid_mass": 0.7781729984423663
+  },
+  "masking_only": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 9410,
+   "attested_share": 0.12444208289054198,
+   "single_akshara_share": 0.09171094580233793,
+   "poems_repeating_a_line": 111,
+   "judge_ppl": 24.031303229215148,
+   "mean_logp": -2.1805841114356834,
+   "overridden_share": 0.31424566854672564,
+   "mean_valid_mass": 0.6656998643317955
+  },
+  "masking_backtrack": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 9543,
+   "attested_share": 0.1381117049145971,
+   "single_akshara_share": 0.09263334381221838,
+   "poems_repeating_a_line": 119,
+   "judge_ppl": 25.124195892458495,
+   "mean_logp": -2.2905390454697443,
+   "overridden_share": 0.3539861642823561,
+   "mean_valid_mass": 0.626572540499694
+  },
+  "hybrid": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 9277,
+   "attested_share": 0.12999892206532285,
+   "single_akshara_share": 0.07858143796485934,
+   "poems_repeating_a_line": 96,
+   "judge_ppl": 29.161183026550518,
+   "mean_logp": -2.337961454364174,
+   "overridden_share": 0.31919249461485055,
+   "mean_valid_mass": 0.6575504452851019
+  }
+ },
+ "gemma-4-26B-A4B-it": {
+  "baseline": {
+   "poems": 555,
+   "in_meter": 0,
+   "all_relaxed": 0,
+   "words": 9812,
+   "attested_share": 0.3839176518548716,
+   "single_akshara_share": 0.019975540154912354,
+   "poems_repeating_a_line": 60,
+   "judge_ppl": 19.181454397980087,
+   "mean_logp": -0.48180471351449816,
+   "overridden_share": 0.23998276604911675,
+   "mean_valid_mass": 0.7455595217578636
+  },
+  "masking_only": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 11390,
+   "attested_share": 0.1662862159789289,
+   "single_akshara_share": 0.16093064091308165,
+   "poems_repeating_a_line": 231,
+   "judge_ppl": 12.71140031919453,
+   "mean_logp": -1.6829032235761163,
+   "overridden_share": 0.2185645804699809,
+   "mean_valid_mass": 0.7680117780831683
+  },
+  "masking_backtrack": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 11475,
+   "attested_share": 0.20278867102396514,
+   "single_akshara_share": 0.11982570806100218,
+   "poems_repeating_a_line": 168,
+   "judge_ppl": 15.821884152282303,
+   "mean_logp": -1.9396225629174262,
+   "overridden_share": 0.27757075117966706,
+   "mean_valid_mass": 0.7058543878652679
+  },
+  "hybrid": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 11146,
+   "attested_share": 0.16570967163107841,
+   "single_akshara_share": 0.14067827023147317,
+   "poems_repeating_a_line": 158,
+   "judge_ppl": 16.53090464571868,
+   "mean_logp": -1.865723327662511,
+   "overridden_share": 0.2277482237852119,
+   "mean_valid_mass": 0.7580883826626875
+  }
+ },
+ "diffusiongemma-26B-A4B-it": {
+  "baseline": {
+   "poems": 555,
+   "in_meter": 0,
+   "all_relaxed": 1,
+   "words": 9255,
+   "attested_share": 0.34543490005402483,
+   "single_akshara_share": 0.04430037817396002,
+   "poems_repeating_a_line": 14,
+   "judge_ppl": 48.305429532397284,
+   "mean_logp": -0.4677847582567421,
+   "overridden_share": 0.18795888399412627,
+   "mean_valid_mass": 0.7706049430983833
+  },
+  "masking_only": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 11760,
+   "attested_share": 0.08316326530612245,
+   "single_akshara_share": 0.2869897959183674,
+   "poems_repeating_a_line": 21,
+   "judge_ppl": 104.31219454199324,
+   "mean_logp": -3.836542753872951,
+   "overridden_share": 0.4717449475389057,
+   "mean_valid_mass": 0.4931940064256083
+  },
+  "masking_backtrack": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 11601,
+   "attested_share": 0.08947504525471942,
+   "single_akshara_share": 0.25049564692698906,
+   "poems_repeating_a_line": 12,
+   "judge_ppl": 159.7652893455044,
+   "mean_logp": -3.128161624408603,
+   "overridden_share": 0.35892939975879024,
+   "mean_valid_mass": 0.6057117150292208
+  },
+  "hybrid": {
+   "poems": 555,
+   "in_meter": 555,
+   "all_relaxed": 555,
+   "words": 11203,
+   "attested_share": 0.09684905828795859,
+   "single_akshara_share": 0.2645719896456306,
+   "poems_repeating_a_line": 16,
+   "judge_ppl": 84.32459316118569,
+   "mean_logp": -3.494862934187092,
+   "overridden_share": 0.47160416704944236,
+   "mean_valid_mass": 0.49940109717603554
+  }
+ },
+ "reference": {
+  "chandassu_555": {
+   "words": 13656,
+   "attested_share": 0.3333333333333333,
+   "single_akshara_share": 0.056239015817223195,
+   "judge_ppl": 113.3263204683607
+  },
+  "chandassu_555_word_shuffled": {
+   "judge_ppl": 149.6702135980167
+  },
+  "judge": "google/gemma-3-1b-pt (mdlm.judge)",
+  "lexicon_word_types": 101773
+ }
+}

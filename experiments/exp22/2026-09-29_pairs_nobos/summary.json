@@ -1,0 +1,451 @@
+{
+ "n_per_metre": {
+  "aataveladi": 25,
+  "champakamala": 25,
+  "kandamu": 25,
+  "mattakokila": 25,
+  "mattebhavikriditamu": 25,
+  "shardulavikriditamu": 25,
+  "tetagiti": 25,
+  "utpalamala": 25
+ },
+ "zero_diff_vectors_by_layer": {
+  "L0": 106
+ },
+ "coarse": {
+  "n": 200,
+  "peak": 0.3113,
+  "peak_layer": 35,
+  "coherence_by_layer": [
+   0.0852,
+   0.2086,
+   0.2469,
+   0.2246,
+   0.31,
+   0.2731,
+   0.3028,
+   0.2423,
+   0.2156,
+   0.1763,
+   0.1399,
+   0.1409,
+   0.1531,
+   0.1822,
+   0.1594,
+   0.2175,
+   0.2118,
+   0.1832,
+   0.1567,
+   0.1326,
+   0.1345,
+   0.172,
+   0.1953,
+   0.2054,
+   0.1966,
+   0.1926,
+   0.1776,
+   0.1784,
+   0.1787,
+   0.1699,
+   0.1622,
+   0.162,
+   0.1673,
+   0.1902,
+   0.203,
+   0.3113
+  ],
+  "direction_norm_by_layer": [
+   7.46,
+   4.26,
+   4.53,
+   11.62,
+   17.86,
+   18.61,
+   19.49,
+   15.23,
+   16.84,
+   13.11,
+   16.75,
+   14.29,
+   15.55,
+   16.6,
+   14.66,
+   15.88,
+   17.79,
+   13.41,
+   10.38,
+   9.55,
+   15.51,
+   13.08,
+   12.84,
+   12.41,
+   12.94,
+   17.82,
+   15.72,
+   13.67,
+   12.54,
+   11.85,
+   13.77,
+   12.82,
+   11.67,
+   12.29,
+   10.24,
+   80.75
+  ],
+  "pipeline": {
+   "peak": 0.322,
+   "peak_layer": 4,
+   "n_pairs": 100
+  }
+ },
+ "threshold": {
+  "value": 0.322,
+  "source": "pipeline coarse peak, fixed before this run"
+ },
+ "null": {
+  "splits": 560,
+  "peak_p95": 0.0677,
+  "peak_p99": 0.1277,
+  "peak_max": 0.2243
+ },
+ "pairs": {
+  "kandamu|tetagiti": {
+   "peak": 0.1324,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.1223,
+    "sd": 0.0104
+   },
+   "direction_norm_at_peak": 4.952,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "champakamala|tetagiti": {
+   "peak": 0.1095,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.1091,
+    "sd": 0.0074
+   },
+   "direction_norm_at_peak": 4.535,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "aataveladi|kandamu": {
+   "peak": 0.1032,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.11,
+    "sd": 0.0071
+   },
+   "direction_norm_at_peak": 4.8,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "aataveladi|champakamala": {
+   "peak": 0.1006,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.0993,
+    "sd": 0.0062
+   },
+   "direction_norm_at_peak": 4.621,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "shardulavikriditamu|tetagiti": {
+   "peak": 0.0835,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.0825,
+    "sd": 0.0067
+   },
+   "direction_norm_at_peak": 4.406,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "kandamu|mattakokila": {
+   "peak": 0.0811,
+   "peak_layer": 2,
+   "peak_over_matchings": {
+    "mean": 0.0763,
+    "sd": 0.0072
+   },
+   "direction_norm_at_peak": 4.063,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "kandamu|mattebhavikriditamu": {
+   "peak": 0.0808,
+   "peak_layer": 15,
+   "peak_over_matchings": {
+    "mean": 0.0744,
+    "sd": 0.0031
+   },
+   "direction_norm_at_peak": 14.457,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "mattebhavikriditamu|tetagiti": {
+   "peak": 0.0718,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.0683,
+    "sd": 0.0085
+   },
+   "direction_norm_at_peak": 4.02,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "tetagiti|utpalamala": {
+   "peak": 0.0678,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.0717,
+    "sd": 0.0071
+   },
+   "direction_norm_at_peak": 4.075,
+   "flagged_unfit": true,
+   "above_null95": true
+  },
+  "aataveladi|utpalamala": {
+   "peak": 0.0654,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.066,
+    "sd": 0.0063
+   },
+   "direction_norm_at_peak": 4.132,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "mattakokila|tetagiti": {
+   "peak": 0.064,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.0548,
+    "sd": 0.0064
+   },
+   "direction_norm_at_peak": 3.763,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "champakamala|shardulavikriditamu": {
+   "peak": 0.0635,
+   "peak_layer": 0,
+   "peak_over_matchings": {
+    "mean": 0.0493,
+    "sd": 0.0134
+   },
+   "direction_norm_at_peak": 13.091,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "aataveladi|mattebhavikriditamu": {
+   "peak": 0.0632,
+   "peak_layer": 16,
+   "peak_over_matchings": {
+    "mean": 0.0697,
+    "sd": 0.0065
+   },
+   "direction_norm_at_peak": 15.175,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "aataveladi|shardulavikriditamu": {
+   "peak": 0.0556,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.0613,
+    "sd": 0.0058
+   },
+   "direction_norm_at_peak": 3.966,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "mattebhavikriditamu|shardulavikriditamu": {
+   "peak": 0.0553,
+   "peak_layer": 0,
+   "peak_over_matchings": {
+    "mean": 0.0421,
+    "sd": 0.0084
+   },
+   "direction_norm_at_peak": 14.547,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "kandamu|shardulavikriditamu": {
+   "peak": 0.0535,
+   "peak_layer": 8,
+   "peak_over_matchings": {
+    "mean": 0.0506,
+    "sd": 0.0032
+   },
+   "direction_norm_at_peak": 13.702,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "champakamala|kandamu": {
+   "peak": 0.053,
+   "peak_layer": 2,
+   "peak_over_matchings": {
+    "mean": 0.0492,
+    "sd": 0.0028
+   },
+   "direction_norm_at_peak": 3.254,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "aataveladi|mattakokila": {
+   "peak": 0.0499,
+   "peak_layer": 1,
+   "peak_over_matchings": {
+    "mean": 0.0499,
+    "sd": 0.0069
+   },
+   "direction_norm_at_peak": 3.817,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "champakamala|mattebhavikriditamu": {
+   "peak": 0.049,
+   "peak_layer": 24,
+   "peak_over_matchings": {
+    "mean": 0.0443,
+    "sd": 0.005
+   },
+   "direction_norm_at_peak": 11.326,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "mattebhavikriditamu|utpalamala": {
+   "peak": 0.0391,
+   "peak_layer": 24,
+   "peak_over_matchings": {
+    "mean": 0.0432,
+    "sd": 0.0062
+   },
+   "direction_norm_at_peak": 11.002,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "kandamu|utpalamala": {
+   "peak": 0.0314,
+   "peak_layer": 2,
+   "peak_over_matchings": {
+    "mean": 0.0334,
+    "sd": 0.0042
+   },
+   "direction_norm_at_peak": 2.983,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "shardulavikriditamu|utpalamala": {
+   "peak": 0.0214,
+   "peak_layer": 0,
+   "peak_over_matchings": {
+    "mean": 0.0237,
+    "sd": 0.0095
+   },
+   "direction_norm_at_peak": 12.527,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "aataveladi|tetagiti": {
+   "peak": 0.0142,
+   "peak_layer": 6,
+   "peak_over_matchings": {
+    "mean": 0.0155,
+    "sd": 0.0036
+   },
+   "direction_norm_at_peak": 10.2,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "mattakokila|mattebhavikriditamu": {
+   "peak": 0.0138,
+   "peak_layer": 8,
+   "peak_over_matchings": {
+    "mean": 0.0167,
+    "sd": 0.0066
+   },
+   "direction_norm_at_peak": 10.673,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "champakamala|mattakokila": {
+   "peak": 0.0094,
+   "peak_layer": 2,
+   "peak_over_matchings": {
+    "mean": 0.0097,
+    "sd": 0.0043
+   },
+   "direction_norm_at_peak": 2.481,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "mattakokila|utpalamala": {
+   "peak": 0.0056,
+   "peak_layer": 10,
+   "peak_over_matchings": {
+    "mean": 0.0073,
+    "sd": 0.0015
+   },
+   "direction_norm_at_peak": 12.381,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "champakamala|utpalamala": {
+   "peak": 0.005,
+   "peak_layer": 10,
+   "peak_over_matchings": {
+    "mean": 0.0065,
+    "sd": 0.001
+   },
+   "direction_norm_at_peak": 12.007,
+   "flagged_unfit": true,
+   "above_null95": false
+  },
+  "mattakokila|shardulavikriditamu": {
+   "peak": 0.0048,
+   "peak_layer": 16,
+   "peak_over_matchings": {
+    "mean": 0.0044,
+    "sd": 0.0045
+   },
+   "direction_norm_at_peak": 9.854,
+   "flagged_unfit": true,
+   "above_null95": false
+  }
+ },
+ "pairs_flagged_unfit": 28,
+ "pairs_above_null95": 9,
+ "peak_distribution": {
+  "min": 0.0048,
+  "median": 0.05545,
+  "max": 0.1324
+ },
+ "peak_layer_counts": {
+  "0": 3,
+  "1": 11,
+  "2": 4,
+  "6": 1,
+  "8": 2,
+  "10": 2,
+  "15": 1,
+  "16": 2,
+  "24": 2
+ },
+ "kandamu_vs_mattakokila": {
+  "range_L8_L35": [
+   0.016,
+   0.055
+  ],
+  "peak": 0.0811,
+  "peak_layer": 2,
+  "pipeline_range": [
+   0.5,
+   0.65
+  ]
+ }
+}

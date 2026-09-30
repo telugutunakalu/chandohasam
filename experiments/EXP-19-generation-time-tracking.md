@@ -5,7 +5,7 @@
 | **Category** | F. Generation mechanics |
 | **Origin** | chandohasam (G2 / NH12; G2b / NH25, formerly EXP-37; G6a / NH16, formerly EXP-40) |
 | **Depends on** | EXP-09; EXP-22 for the decay curve |
-| **Status** | generation and boilerplate re-aggregation done (base model); regression and decay curve TBD |
+| **Status** | **rerun 2026-09-29** (`<bos>` via chat template, plain-text output): generation, regression and decay curve done; NH12 not supported |
 | **Cost** | minutes per sample; the analyses are seconds on the existing traces |
 
 ## Question
@@ -125,6 +125,67 @@ position. The per-field segmentation (step 5) has not been done yet.
 - **NH12 and NH16:** the regression (step 6) can run on the existing traces.
 - **The decay curve** (step 7) needs a rerun that logs hidden states.
 
+
+**Rerun, 2026-09-29.** `experiments/scripts/exp19_generate.py`, then
+`experiments/scripts/exp19_analyse.py`: `gemma-4-E2B-it`, EXP-35's 200-poem
+sample.
+- **Prompt.** The project's own rule-bearing prompt for each metre
+  (`runs/2026-09-24_e4b_baseline/prompts.jsonl`), with the bhavam in place of
+  the topic, in the chat template. Output is plain text (the four pādas), as
+  the notes above recommend; the earlier run asked for JSON.
+- **Decoding.** A manual greedy loop over the raw logits, with a KV cache and
+  at most 1,000 tokens.
+- **Operational choices the spec leaves open** (all recorded in
+  `summary.json`):
+  - per-step outcome: the 5 fixed-pattern metres only, clean poems;
+  - template: the corpus's plurality pattern per pāda, i.e. the catalogue
+    pattern;
+  - pāda-final slot: free;
+  - sandhi junction: a word boundary in the scanner's word index;
+  - rare word: seen fewer than 10 times in the tokenised corpus;
+  - standard errors: cluster-robust, by generation.
+
+**Run health and compliance.** 0 of 200 generations are truncated (mean 70
+tokens), and 172 give exactly 4 lines. **0 of 200 match any known metre**, and
+0 are valid in their target metre under either profile, as in the earlier run
+(0 of 189).
+
+**Regression** (99 clean poems of the fixed metres, 6,542 steps). Continuous
+predictors are standardised; p values come from cluster-robust z.
+
+| predictor | all steps: coef (p) | within the template: coef (p) | deviance gain when added, within the template |
+|---|---|---|---|
+| absolute position (null) | +0.03 (0.35) | −0.02 (0.37) | 0.6 |
+| position in the pāda | **+1.24 (10⁻²⁴)** | +0.08 (0.024) | 6.9 |
+| aksharas since the last junction | −0.08 (0.011) | −0.03 (0.37) | 0.9 |
+| next-token entropy | +0.01 (0.69) | +0.04 (0.19) | 1.8 |
+| rare word | +0.48 (1.7×10⁻⁴) | **+0.57 (1.8×10⁻⁷)** | **22.8** |
+
+- **All steps.** The violation rate is 58%. Position in the pāda dominates,
+  but mostly by construction: an akshara beyond the template's length counts
+  as a violation, and those come late in the line.
+- **Within the template** (5,550 steps). The violation rate is **50.8%**, about
+  what a coin toss would give. The full model gains only 36.4 deviance over the
+  position-only null.
+- **NH12 is not supported.** Neither entropy nor distance from a sandhi
+  junction predicts a violation; the only clear predictor is a rare word.
+
+**Decay curve (step 7).** Cosine of each step's state with EXP-22's coarse
+direction (poem − bhavam) (`fig_exp19.png`):
+- **No smooth decay.** The per-poem slope over steps is +0.017 per 100 steps at
+  L6 and −0.001 at L35.
+- **Sharp change at pāda starts.** At a pāda-initial step, the cosine drops by
+  0.049 at L6 relative to other steps (p = 10⁻³¹), and rises by 0.275 at L35
+  (p = 10⁻³⁴).
+- **Caveat.** These steps are produced by the state that reads the newline, so
+  the effect cannot be separated from the token type.
+- **Orientation.** At L35 the generation states point *against* the poem side
+  of the direction (cosine about −0.55), towards prose.
+
+The NH16 classification is therefore "localised changes at pāda boundaries, no
+smooth decay", with the token-type caveat. The direction used is the coarse
+one, because EXP-22 found no coherent chandas-vs-chandas direction.
+
 ## Replication notes
 - **Include raw position as an explicit competing predictor.** Otherwise any
   correlation with "later in the line" will pass for a linguistic finding.
@@ -145,3 +206,6 @@ position. The per-field segmentation (step 5) has not been done yet.
 ## Artifacts
 - `pipeline/data/phase2_generation_traces.jsonl` (chandohasam repo)
 - Figures 3 and 3b in `Chandohasam_Gemma_Experiments.docx`
+- Rerun (2026-09-29): `experiments/exp19/2026-09-29_generation/` (`generations.jsonl` with per-step logs,
+  `validation.jsonl`, `summary.json`, `decay_by_step.csv`, `nh18_by_slot.csv`, `fig_exp19.png`); scripts
+  `experiments/scripts/exp19_generate.py`, `experiments/scripts/exp19_analyse.py`

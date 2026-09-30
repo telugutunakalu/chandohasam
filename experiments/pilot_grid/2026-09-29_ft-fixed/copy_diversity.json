@@ -1,0 +1,20 @@
+{
+ "free": {
+  "topic_copy_share": 0.07984531392174704,
+  "attested_excl_topic_2plus": 0.17892976588628762,
+  "mean_type_token_ratio": 0.4021610381382584,
+  "distinct_attested_types": 183
+ },
+ "masking": {
+  "topic_copy_share": 0.027521570961023506,
+  "attested_excl_topic_2plus": 0.36931491076568795,
+  "mean_type_token_ratio": 0.5487983938553637,
+  "distinct_attested_types": 757
+ },
+ "own": {
+  "topic_copy_share": 0.026627416872951094,
+  "attested_excl_topic_2plus": 0.45582177385456074,
+  "mean_type_token_ratio": 0.5866651704251418,
+  "distinct_attested_types": 1451
+ }
+}

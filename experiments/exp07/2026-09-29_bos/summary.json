@@ -1,0 +1,200 @@
+{
+ "examples_per_layer": 400,
+ "chance": 0.5,
+ "length_only_baseline": 0.565,
+ "peak": {
+  "layer": 24,
+  "accuracy": 1.0,
+  "convergence_warnings": 0
+ },
+ "first_layer_at_1.0": 24,
+ "by_layer": [
+  {
+   "layer": 0,
+   "accuracy": 0.5875,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 1,
+   "accuracy": 0.9775,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 2,
+   "accuracy": 0.985,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 3,
+   "accuracy": 0.985,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 4,
+   "accuracy": 0.985,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 5,
+   "accuracy": 0.9925,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 6,
+   "accuracy": 0.99,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 7,
+   "accuracy": 0.9875,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 8,
+   "accuracy": 0.9875,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 9,
+   "accuracy": 0.9875,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 10,
+   "accuracy": 0.9825,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 11,
+   "accuracy": 0.9875,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 12,
+   "accuracy": 0.98,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 13,
+   "accuracy": 0.985,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 14,
+   "accuracy": 0.9825,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 15,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 16,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 17,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 18,
+   "accuracy": 0.9925,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 19,
+   "accuracy": 0.99,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 20,
+   "accuracy": 0.9925,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 21,
+   "accuracy": 0.99,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 22,
+   "accuracy": 0.995,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 23,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 24,
+   "accuracy": 1.0,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 25,
+   "accuracy": 1.0,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 26,
+   "accuracy": 1.0,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 27,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 28,
+   "accuracy": 0.995,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 29,
+   "accuracy": 0.995,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 30,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 31,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 32,
+   "accuracy": 1.0,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 33,
+   "accuracy": 0.9975,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 34,
+   "accuracy": 0.995,
+   "convergence_warnings": 0
+  },
+  {
+   "layer": 35,
+   "accuracy": 0.995,
+   "convergence_warnings": 0
+  }
+ ],
+ "sklearn": "1.9.0",
+ "input": "experiments/exp22/2026-09-29_pairs (last-token states, <bos> prepended)",
+ "pipeline": {
+  "peak_layer": 7,
+  "accuracy": 1.0,
+  "note": "no <bos>"
+ }
+}

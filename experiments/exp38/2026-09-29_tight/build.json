@@ -1,0 +1,73 @@
+{
+ "date": "2026-09-29",
+ "seed": 42,
+ "target_per_kind": 25,
+ "cap": 60,
+ "yield": {
+  "aataveladi": {
+   "no_triple": 98,
+   "source_not_accepted": 38,
+   "triple": 408,
+   "triples_synonym": 25,
+   "triples_swap": 25,
+   "pool": 715
+  },
+  "champakamala": {
+   "no_triple": 93,
+   "triple": 192,
+   "source_not_accepted": 35,
+   "triples_synonym": 25,
+   "triples_swap": 25,
+   "pool": 490
+  },
+  "kandamu": {
+   "no_triple": 73,
+   "source_not_accepted": 29,
+   "triple": 378,
+   "triples_synonym": 25,
+   "triples_swap": 25,
+   "pool": 2607
+  },
+  "mattakokila": {
+   "triple": 19,
+   "no_triple": 17,
+   "source_not_accepted": 5,
+   "triples_synonym": 4,
+   "triples_swap": 15,
+   "pool": 41
+  },
+  "mattebhavikriditamu": {
+   "triple": 144,
+   "no_triple": 192,
+   "source_not_accepted": 16,
+   "triples_synonym": 25,
+   "triples_swap": 25,
+   "pool": 586
+  },
+  "shardulavikriditamu": {
+   "no_triple": 126,
+   "triple": 131,
+   "source_not_accepted": 32,
+   "triples_synonym": 17,
+   "triples_swap": 25,
+   "pool": 289
+  },
+  "tetagiti": {
+   "no_triple": 92,
+   "triple": 229,
+   "source_not_accepted": 31,
+   "triples_synonym": 25,
+   "triples_swap": 25,
+   "pool": 1050
+  },
+  "utpalamala": {
+   "source_not_accepted": 63,
+   "triple": 287,
+   "no_triple": 121,
+   "triples_synonym": 25,
+   "triples_swap": 25,
+   "pool": 471
+  }
+ },
+ "seconds": 644.9
+}

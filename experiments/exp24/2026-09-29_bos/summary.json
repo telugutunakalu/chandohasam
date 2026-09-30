@@ -1,0 +1,794 @@
+{
+ "metres": [
+  "aataveladi",
+  "champakamala",
+  "kandamu",
+  "mattakokila",
+  "mattebhavikriditamu",
+  "shardulavikriditamu",
+  "tetagiti",
+  "utpalamala"
+ ],
+ "canonical": {
+  "aataveladi": {
+   "poems_scanned": 716,
+   "mode_whole": "UIUIIIIUIUIIUIIIIIIIUIIIIUIUIUIUIUIUIIIUUIIIIIIIUIIII",
+   "mode_whole_share": 0.0014,
+   "mode_per_pada": "UIUIUIUUIUUIUIUIUIUIUIUIUIUIUIIUIIUIUIUIUIUI"
+  },
+  "champakamala": {
+   "poems_scanned": 490,
+   "mode_whole": "IIIIUIUIIIUIIUIIUIUIUIIIIUIUIIIUIIUIIUIUIUIIIIUIUIIIUIIUIIUIUIUIIIIUIUIIIUIIUIIUIUIU",
+   "mode_whole_share": 0.4898,
+   "mode_per_pada": "IIIIUIUIIIUIIUIIUIUIUIIIIUIUIIIUIIUIIUIUIUIIIIUIUIIIUIIUIIUIUIUIIIIUIUIIIUIIUIIUIUIU"
+  },
+  "kandamu": {
+   "poems_scanned": 2608,
+   "mode_whole": "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIU",
+   "mode_whole_share": 0.0035,
+   "mode_per_pada": "UIIUIIUIIUIIIIUIUIUIIUUUIIUIIUIIUUIIUIUIUIIUU"
+  },
+  "mattakokila": {
+   "poems_scanned": 41,
+   "mode_whole": "UIUIIUIUIIUIUIIUIUUIUIIUIUIIUIUIIUIUUIUIIUIUIIUIUIIUIUUIUIIUIUIIUIUIIUIU",
+   "mode_whole_share": 0.561,
+   "mode_per_pada": "UIUIIUIUIIUIUIIUIUUIUIIUIUIIUIUIIUIUUIUIIUIUIIUIUIIUIUUIUIIUIUIIUIUIIUIU"
+  },
+  "mattebhavikriditamu": {
+   "poems_scanned": 586,
+   "mode_whole": "IIUUIIUIUIIIUUUIUUIUIIUUIIUIUIIIUUUIUUIUIIUUIIUIUIIIUUUIUUIUIIUUIIUIUIIIUUUIUUIU",
+   "mode_whole_share": 0.4317,
+   "mode_per_pada": "IIUUIIUIUIIIUUUIUUIUIIUUIIUIUIIIUUUIUUIUIIUUIIUIUIIIUUUIUUIUIIUUIIUIUIIIUUUIUUIU"
+  },
+  "shardulavikriditamu": {
+   "poems_scanned": 289,
+   "mode_whole": "UUUIIUIUIIIUUUIUUIUUUUIIUIUIIIUUUIUUIUUUUIIUIUIIIUUUIUUIUUUUIIUIUIIIUUUIUUIU",
+   "mode_whole_share": 0.5087,
+   "mode_per_pada": "UUUIIUIUIIIUUUIUUIUUUUIIUIUIIIUUUIUUIUUUUIIUIUIIIUUUIUUIUUUUIIUIUIIIUUUIUUIU"
+  },
+  "tetagiti": {
+   "poems_scanned": 1050,
+   "mode_whole": "UIUUIIIIUUIUIUIUUIIIUIIIIUIIIIUUIUIUIIIUIIIIUIIUIIIIIUI",
+   "mode_whole_share": 0.001,
+   "mode_per_pada": "UIUUIUUIUIUIIIIUIIUIUIIIUIIIIUUIUIUIIIUIIIIUUIUIUIIIUI"
+  },
+  "utpalamala": {
+   "poems_scanned": 471,
+   "mode_whole": "UIIUIUIIIUIIUIIUIUIUUIIUIUIIIUIIUIIUIUIUUIIUIUIIIUIIUIIUIUIUUIIUIUIIIUIIUIIUIUIU",
+   "mode_whole_share": 0.4989,
+   "mode_per_pada": "UIIUIUIIIUIIUIIUIUIUUIIUIUIIIUIIUIIUIUIUUIIUIUIIIUIIUIIUIUIUUIIUIUIIIUIIUIIUIUIU"
+  }
+ },
+ "variants": {
+  "mode_whole": {
+   "D_struct": [
+    [
+     0,
+     31,
+     23,
+     20,
+     31,
+     32,
+     12,
+     27
+    ],
+    [
+     31,
+     0,
+     26,
+     18,
+     24,
+     25,
+     30,
+     8
+    ],
+    [
+     23,
+     26,
+     0,
+     30,
+     38,
+     42,
+     25,
+     30
+    ],
+    [
+     20,
+     18,
+     30,
+     0,
+     20,
+     16,
+     21,
+     18
+    ],
+    [
+     31,
+     24,
+     38,
+     20,
+     0,
+     8,
+     27,
+     19
+    ],
+    [
+     32,
+     25,
+     42,
+     16,
+     8,
+     0,
+     28,
+     18
+    ],
+    [
+     12,
+     30,
+     25,
+     21,
+     27,
+     28,
+     0,
+     25
+    ],
+    [
+     27,
+     8,
+     30,
+     18,
+     19,
+     18,
+     25,
+     0
+    ]
+   ],
+   "significant_layers_raw": 34,
+   "significant_layers_centred": 33,
+   "peak_raw": {
+    "layer": 16,
+    "r_raw": 0.773,
+    "p_raw": 0.002,
+    "r_centred": 0.677,
+    "p_centred": 0.007
+   },
+   "peak_centred": {
+    "layer": 10,
+    "r_raw": 0.601,
+    "p_raw": 0.006,
+    "r_centred": 0.745,
+    "p_centred": 0.001
+   },
+   "by_layer": [
+    {
+     "layer": 0,
+     "r_raw": 0.217,
+     "p_raw": 0.149,
+     "r_centred": 0.16,
+     "p_centred": 0.19
+    },
+    {
+     "layer": 1,
+     "r_raw": 0.378,
+     "p_raw": 0.059,
+     "r_centred": 0.385,
+     "p_centred": 0.067
+    },
+    {
+     "layer": 2,
+     "r_raw": 0.421,
+     "p_raw": 0.027,
+     "r_centred": 0.457,
+     "p_centred": 0.024
+    },
+    {
+     "layer": 3,
+     "r_raw": 0.472,
+     "p_raw": 0.016,
+     "r_centred": 0.412,
+     "p_centred": 0.016
+    },
+    {
+     "layer": 4,
+     "r_raw": 0.409,
+     "p_raw": 0.049,
+     "r_centred": 0.455,
+     "p_centred": 0.024
+    },
+    {
+     "layer": 5,
+     "r_raw": 0.496,
+     "p_raw": 0.024,
+     "r_centred": 0.493,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 6,
+     "r_raw": 0.568,
+     "p_raw": 0.011,
+     "r_centred": 0.499,
+     "p_centred": 0.005
+    },
+    {
+     "layer": 7,
+     "r_raw": 0.584,
+     "p_raw": 0.008,
+     "r_centred": 0.711,
+     "p_centred": 0.001
+    },
+    {
+     "layer": 8,
+     "r_raw": 0.63,
+     "p_raw": 0.006,
+     "r_centred": 0.728,
+     "p_centred": 0.002
+    },
+    {
+     "layer": 9,
+     "r_raw": 0.624,
+     "p_raw": 0.012,
+     "r_centred": 0.734,
+     "p_centred": 0.002
+    },
+    {
+     "layer": 10,
+     "r_raw": 0.601,
+     "p_raw": 0.006,
+     "r_centred": 0.745,
+     "p_centred": 0.001
+    },
+    {
+     "layer": 11,
+     "r_raw": 0.564,
+     "p_raw": 0.02,
+     "r_centred": 0.675,
+     "p_centred": 0.003
+    },
+    {
+     "layer": 12,
+     "r_raw": 0.512,
+     "p_raw": 0.01,
+     "r_centred": 0.638,
+     "p_centred": 0.008
+    },
+    {
+     "layer": 13,
+     "r_raw": 0.541,
+     "p_raw": 0.007,
+     "r_centred": 0.587,
+     "p_centred": 0.004
+    },
+    {
+     "layer": 14,
+     "r_raw": 0.536,
+     "p_raw": 0.009,
+     "r_centred": 0.523,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 15,
+     "r_raw": 0.765,
+     "p_raw": 0.001,
+     "r_centred": 0.722,
+     "p_centred": 0.004
+    },
+    {
+     "layer": 16,
+     "r_raw": 0.773,
+     "p_raw": 0.002,
+     "r_centred": 0.677,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 17,
+     "r_raw": 0.677,
+     "p_raw": 0.008,
+     "r_centred": 0.643,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 18,
+     "r_raw": 0.573,
+     "p_raw": 0.016,
+     "r_centred": 0.589,
+     "p_centred": 0.001
+    },
+    {
+     "layer": 19,
+     "r_raw": 0.579,
+     "p_raw": 0.01,
+     "r_centred": 0.645,
+     "p_centred": 0.005
+    },
+    {
+     "layer": 20,
+     "r_raw": 0.662,
+     "p_raw": 0.013,
+     "r_centred": 0.669,
+     "p_centred": 0.006
+    },
+    {
+     "layer": 21,
+     "r_raw": 0.656,
+     "p_raw": 0.003,
+     "r_centred": 0.666,
+     "p_centred": 0.001
+    },
+    {
+     "layer": 22,
+     "r_raw": 0.597,
+     "p_raw": 0.009,
+     "r_centred": 0.595,
+     "p_centred": 0.01
+    },
+    {
+     "layer": 23,
+     "r_raw": 0.688,
+     "p_raw": 0.008,
+     "r_centred": 0.639,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 24,
+     "r_raw": 0.703,
+     "p_raw": 0.007,
+     "r_centred": 0.702,
+     "p_centred": 0.004
+    },
+    {
+     "layer": 25,
+     "r_raw": 0.693,
+     "p_raw": 0.005,
+     "r_centred": 0.634,
+     "p_centred": 0.011
+    },
+    {
+     "layer": 26,
+     "r_raw": 0.685,
+     "p_raw": 0.007,
+     "r_centred": 0.589,
+     "p_centred": 0.008
+    },
+    {
+     "layer": 27,
+     "r_raw": 0.641,
+     "p_raw": 0.01,
+     "r_centred": 0.539,
+     "p_centred": 0.019
+    },
+    {
+     "layer": 28,
+     "r_raw": 0.627,
+     "p_raw": 0.007,
+     "r_centred": 0.553,
+     "p_centred": 0.015
+    },
+    {
+     "layer": 29,
+     "r_raw": 0.6,
+     "p_raw": 0.011,
+     "r_centred": 0.536,
+     "p_centred": 0.008
+    },
+    {
+     "layer": 30,
+     "r_raw": 0.652,
+     "p_raw": 0.006,
+     "r_centred": 0.594,
+     "p_centred": 0.011
+    },
+    {
+     "layer": 31,
+     "r_raw": 0.646,
+     "p_raw": 0.01,
+     "r_centred": 0.578,
+     "p_centred": 0.012
+    },
+    {
+     "layer": 32,
+     "r_raw": 0.645,
+     "p_raw": 0.008,
+     "r_centred": 0.572,
+     "p_centred": 0.021
+    },
+    {
+     "layer": 33,
+     "r_raw": 0.609,
+     "p_raw": 0.008,
+     "r_centred": 0.578,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 34,
+     "r_raw": 0.617,
+     "p_raw": 0.013,
+     "r_centred": 0.508,
+     "p_centred": 0.019
+    },
+    {
+     "layer": 35,
+     "r_raw": 0.457,
+     "p_raw": 0.018,
+     "r_centred": 0.2,
+     "p_centred": 0.108
+    }
+   ]
+  },
+  "mode_per_pada": {
+   "D_struct": [
+    [
+     0,
+     40,
+     12,
+     28,
+     36,
+     33,
+     15,
+     36
+    ],
+    [
+     40,
+     0,
+     39,
+     18,
+     24,
+     25,
+     30,
+     8
+    ],
+    [
+     12,
+     39,
+     0,
+     27,
+     36,
+     34,
+     15,
+     35
+    ],
+    [
+     28,
+     18,
+     27,
+     0,
+     20,
+     16,
+     20,
+     18
+    ],
+    [
+     36,
+     24,
+     36,
+     20,
+     0,
+     8,
+     28,
+     19
+    ],
+    [
+     33,
+     25,
+     34,
+     16,
+     8,
+     0,
+     31,
+     18
+    ],
+    [
+     15,
+     30,
+     15,
+     20,
+     28,
+     31,
+     0,
+     28
+    ],
+    [
+     36,
+     8,
+     35,
+     18,
+     19,
+     18,
+     28,
+     0
+    ]
+   ],
+   "significant_layers_raw": 31,
+   "significant_layers_centred": 31,
+   "peak_raw": {
+    "layer": 26,
+    "r_raw": 0.776,
+    "p_raw": 0.003,
+    "r_centred": 0.731,
+    "p_centred": 0.007
+   },
+   "peak_centred": {
+    "layer": 24,
+    "r_raw": 0.752,
+    "p_raw": 0.006,
+    "r_centred": 0.804,
+    "p_centred": 0.001
+   },
+   "by_layer": [
+    {
+     "layer": 0,
+     "r_raw": 0.386,
+     "p_raw": 0.047,
+     "r_centred": 0.298,
+     "p_centred": 0.114
+    },
+    {
+     "layer": 1,
+     "r_raw": 0.314,
+     "p_raw": 0.059,
+     "r_centred": 0.298,
+     "p_centred": 0.093
+    },
+    {
+     "layer": 2,
+     "r_raw": 0.298,
+     "p_raw": 0.06,
+     "r_centred": 0.468,
+     "p_centred": 0.022
+    },
+    {
+     "layer": 3,
+     "r_raw": 0.214,
+     "p_raw": 0.113,
+     "r_centred": 0.336,
+     "p_centred": 0.055
+    },
+    {
+     "layer": 4,
+     "r_raw": 0.228,
+     "p_raw": 0.107,
+     "r_centred": 0.355,
+     "p_centred": 0.058
+    },
+    {
+     "layer": 5,
+     "r_raw": 0.332,
+     "p_raw": 0.048,
+     "r_centred": 0.405,
+     "p_centred": 0.03
+    },
+    {
+     "layer": 6,
+     "r_raw": 0.455,
+     "p_raw": 0.014,
+     "r_centred": 0.451,
+     "p_centred": 0.02
+    },
+    {
+     "layer": 7,
+     "r_raw": 0.525,
+     "p_raw": 0.013,
+     "r_centred": 0.658,
+     "p_centred": 0.009
+    },
+    {
+     "layer": 8,
+     "r_raw": 0.618,
+     "p_raw": 0.006,
+     "r_centred": 0.723,
+     "p_centred": 0.011
+    },
+    {
+     "layer": 9,
+     "r_raw": 0.569,
+     "p_raw": 0.012,
+     "r_centred": 0.725,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 10,
+     "r_raw": 0.626,
+     "p_raw": 0.011,
+     "r_centred": 0.744,
+     "p_centred": 0.006
+    },
+    {
+     "layer": 11,
+     "r_raw": 0.531,
+     "p_raw": 0.025,
+     "r_centred": 0.684,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 12,
+     "r_raw": 0.414,
+     "p_raw": 0.018,
+     "r_centred": 0.667,
+     "p_centred": 0.006
+    },
+    {
+     "layer": 13,
+     "r_raw": 0.266,
+     "p_raw": 0.067,
+     "r_centred": 0.444,
+     "p_centred": 0.025
+    },
+    {
+     "layer": 14,
+     "r_raw": 0.462,
+     "p_raw": 0.023,
+     "r_centred": 0.548,
+     "p_centred": 0.01
+    },
+    {
+     "layer": 15,
+     "r_raw": 0.683,
+     "p_raw": 0.007,
+     "r_centred": 0.729,
+     "p_centred": 0.012
+    },
+    {
+     "layer": 16,
+     "r_raw": 0.709,
+     "p_raw": 0.002,
+     "r_centred": 0.694,
+     "p_centred": 0.013
+    },
+    {
+     "layer": 17,
+     "r_raw": 0.666,
+     "p_raw": 0.007,
+     "r_centred": 0.69,
+     "p_centred": 0.006
+    },
+    {
+     "layer": 18,
+     "r_raw": 0.555,
+     "p_raw": 0.012,
+     "r_centred": 0.605,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 19,
+     "r_raw": 0.511,
+     "p_raw": 0.007,
+     "r_centred": 0.639,
+     "p_centred": 0.015
+    },
+    {
+     "layer": 20,
+     "r_raw": 0.627,
+     "p_raw": 0.016,
+     "r_centred": 0.695,
+     "p_centred": 0.012
+    },
+    {
+     "layer": 21,
+     "r_raw": 0.619,
+     "p_raw": 0.002,
+     "r_centred": 0.687,
+     "p_centred": 0.002
+    },
+    {
+     "layer": 22,
+     "r_raw": 0.601,
+     "p_raw": 0.012,
+     "r_centred": 0.677,
+     "p_centred": 0.009
+    },
+    {
+     "layer": 23,
+     "r_raw": 0.717,
+     "p_raw": 0.007,
+     "r_centred": 0.723,
+     "p_centred": 0.008
+    },
+    {
+     "layer": 24,
+     "r_raw": 0.752,
+     "p_raw": 0.006,
+     "r_centred": 0.804,
+     "p_centred": 0.001
+    },
+    {
+     "layer": 25,
+     "r_raw": 0.767,
+     "p_raw": 0.005,
+     "r_centred": 0.742,
+     "p_centred": 0.006
+    },
+    {
+     "layer": 26,
+     "r_raw": 0.776,
+     "p_raw": 0.003,
+     "r_centred": 0.731,
+     "p_centred": 0.007
+    },
+    {
+     "layer": 27,
+     "r_raw": 0.746,
+     "p_raw": 0.005,
+     "r_centred": 0.702,
+     "p_centred": 0.005
+    },
+    {
+     "layer": 28,
+     "r_raw": 0.725,
+     "p_raw": 0.002,
+     "r_centred": 0.713,
+     "p_centred": 0.005
+    },
+    {
+     "layer": 29,
+     "r_raw": 0.693,
+     "p_raw": 0.009,
+     "r_centred": 0.698,
+     "p_centred": 0.004
+    },
+    {
+     "layer": 30,
+     "r_raw": 0.714,
+     "p_raw": 0.003,
+     "r_centred": 0.751,
+     "p_centred": 0.009
+    },
+    {
+     "layer": 31,
+     "r_raw": 0.708,
+     "p_raw": 0.011,
+     "r_centred": 0.739,
+     "p_centred": 0.008
+    },
+    {
+     "layer": 32,
+     "r_raw": 0.717,
+     "p_raw": 0.005,
+     "r_centred": 0.723,
+     "p_centred": 0.012
+    },
+    {
+     "layer": 33,
+     "r_raw": 0.68,
+     "p_raw": 0.009,
+     "r_centred": 0.711,
+     "p_centred": 0.005
+    },
+    {
+     "layer": 34,
+     "r_raw": 0.698,
+     "p_raw": 0.011,
+     "r_centred": 0.661,
+     "p_centred": 0.013
+    },
+    {
+     "layer": 35,
+     "r_raw": 0.415,
+     "p_raw": 0.016,
+     "r_centred": 0.273,
+     "p_centred": 0.076
+    }
+   ]
+  }
+ },
+ "pipeline": {
+  "significant_layers_raw": 26,
+  "peak_raw": {
+   "layer": 8,
+   "r": 0.617,
+   "p": 0.005
+  },
+  "peak_centred": {
+   "layer": 8,
+   "r": 0.702,
+   "p": 0.004
+  },
+  "L0": {
+   "r": -0.071,
+   "p": 0.733
+  },
+  "L33": {
+   "r_raw": 0.5,
+   "r_centred": 0.123
+  },
+  "note": "no <bos>"
+ }
+}

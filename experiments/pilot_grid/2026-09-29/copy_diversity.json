@@ -1,0 +1,93 @@
+{
+ "pilot120m (base)|free": {
+  "topic_copy_share": 0.07984531392174704,
+  "attested_excl_topic_2plus": 0.17892976588628762,
+  "mean_type_token_ratio": 0.4021610381382584,
+  "distinct_attested_types": 183
+ },
+ "pilot120m (base)|masking": {
+  "topic_copy_share": 0.029214285714285713,
+  "attested_excl_topic_2plus": 0.378626098459794,
+  "mean_type_token_ratio": 0.5022906614749986,
+  "distinct_attested_types": 773
+ },
+ "pilot120m (base)|own": {
+  "topic_copy_share": 0.029625110162022912,
+  "attested_excl_topic_2plus": 0.42198347107438017,
+  "mean_type_token_ratio": 0.576696752184524,
+  "distinct_attested_types": 1404
+ },
+ "gemma-4-E4B-it|baseline": {
+  "topic_copy_share": 0.12895122461796107,
+  "attested_excl_topic_2plus": 0.3373639661426844,
+  "mean_type_token_ratio": 0.915389347295773,
+  "distinct_attested_types": 490
+ },
+ "gemma-4-E4B-it|masking_only": {
+  "topic_copy_share": 0.03963868225292242,
+  "attested_excl_topic_2plus": 0.1066797161732322,
+  "mean_type_token_ratio": 0.7759718748569449,
+  "distinct_attested_types": 323
+ },
+ "gemma-4-E4B-it|masking_backtrack": {
+  "topic_copy_share": 0.0373048307660065,
+  "attested_excl_topic_2plus": 0.12236541009273756,
+  "mean_type_token_ratio": 0.773644698330574,
+  "distinct_attested_types": 394
+ },
+ "gemma-4-E4B-it|hybrid": {
+  "topic_copy_share": 0.0319068664438935,
+  "attested_excl_topic_2plus": 0.11742607852641784,
+  "mean_type_token_ratio": 0.8026378845706187,
+  "distinct_attested_types": 355
+ },
+ "gemma-4-26B-A4B-it|baseline": {
+  "topic_copy_share": 0.10295029680163019,
+  "attested_excl_topic_2plus": 0.3715400993612491,
+  "mean_type_token_ratio": 0.8334470734081549,
+  "distinct_attested_types": 545
+ },
+ "gemma-4-26B-A4B-it|masking_only": {
+  "topic_copy_share": 0.033099209833187,
+  "attested_excl_topic_2plus": 0.1687363834422658,
+  "mean_type_token_ratio": 0.6195350254357754,
+  "distinct_attested_types": 375
+ },
+ "gemma-4-26B-A4B-it|masking_backtrack": {
+  "topic_copy_share": 0.029193899782135078,
+  "attested_excl_topic_2plus": 0.2083973374295955,
+  "mean_type_token_ratio": 0.6635097377196656,
+  "distinct_attested_types": 525
+ },
+ "gemma-4-26B-A4B-it|hybrid": {
+  "topic_copy_share": 0.03158083617441235,
+  "attested_excl_topic_2plus": 0.16670279644482983,
+  "mean_type_token_ratio": 0.6756996365784022,
+  "distinct_attested_types": 436
+ },
+ "diffusiongemma-26B-A4B-it|baseline": {
+  "topic_copy_share": 0.10048622366288493,
+  "attested_excl_topic_2plus": 0.3439039797852179,
+  "mean_type_token_ratio": 0.8259608507794752,
+  "distinct_attested_types": 485
+ },
+ "diffusiongemma-26B-A4B-it|masking_only": {
+  "topic_copy_share": 0.0016156462585034013,
+  "attested_excl_topic_2plus": 0.11486971073392302,
+  "mean_type_token_ratio": 0.8695001827442033,
+  "distinct_attested_types": 333
+ },
+ "diffusiongemma-26B-A4B-it|masking_backtrack": {
+  "topic_copy_share": 0.005085768468235497,
+  "attested_excl_topic_2plus": 0.1157943492357573,
+  "mean_type_token_ratio": 0.9099078889792073,
+  "distinct_attested_types": 432
+ },
+ "diffusiongemma-26B-A4B-it|hybrid": {
+  "topic_copy_share": 0.0036597339998214766,
+  "attested_excl_topic_2plus": 0.12856794340082947,
+  "mean_type_token_ratio": 0.8679846441575876,
+  "distinct_attested_types": 330
+ },
+ "chandassu_555_type_token": 0.9745288559523245
+}
