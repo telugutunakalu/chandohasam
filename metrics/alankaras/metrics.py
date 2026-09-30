@@ -170,49 +170,37 @@ class PoemMetrics:
             "per_line": per_line,
         }
 
-    # ------------------------------------------------ 1. alliteration density
-
-    # Phonetic equivalents folded together before counting repeats.
-    # Aspirates -> unaspirated, all sibilants -> s, ళ -> l, ఱ -> r.
-    # Retroflex vs dental stops are kept distinct. Override through `fold=`.
-    DEFAULT_FOLD = {
-        'kh': 'k', 'gh': 'g', 'ch': 'c', 'jh': 'j',
-        'th': 't', 'dh': 'd', 'ph': 'p', 'bh': 'b',
-        'Th': 'T', 'Dh': 'D',
-        'z': 's', 'S': 's',
-        'L': 'l', 'R': 'r',
-    }
-    NON_CONSONANTS = {'M', 'H'}   # anusvāra / visarga
-
-    # ------------------------------------------------ 1. alliteration density
-    def alliteration_density(self, lines, max_n=3, fold=None):
+        # ------------------------------------------------ 1. alliteration density
+    def alliteration_density(self, lines, max_n=3, equivalences=None):
         """
         Character-weighted repetition density over the poem's consonants.
 
-        Every consonant sequence of length n (1..max_n) that occurs c > 1
-        times adds n * (c - 1). The total is divided by the number of
-        consonants, so longer repeated sequences weigh more. Sequences are
-        built inside a single pAda (they never span a line break) and are
-        counted across the whole poem. Vowels are skipped, so a sequence is a
-        run of consecutive consonants in the pAda.
+        Each consonant sequence of length n (1..max_n) that occurs c > 1
+        times adds n * (c - 1); the total is divided by the number of
+        consonants, so longer repeated sequences weigh more.
+
+        The consonant stream comes from AlankaramChecker.consonant_skeleton
+        (vowel-free, as in vRttyanuprAsa). Sequences are built inside one
+        pAda, so they never span a line break, and counted across the whole
+        poem. `equivalences` folds sounds through a class map before
+        counting; default is the checker's DEFAULT_EQUIVALENCES (the same
+        classes as the vRttyanuprAsa "Equivalent" check). Pass {} for exact
+        identity only.
 
         Returns None if there are no consonants.
         """
-        fold_map = {**self.DEFAULT_FOLD, **(fold or {})}
+        eq = self.checker.DEFAULT_EQUIVALENCES if equivalences is None else equivalences
         counts = {n: Counter() for n in range(1, max_n + 1)}
         per_line, total = [], 0
 
         for label, pada in self.checker._flatten_padas(lines):
-            cons = []
-            for ak in self.checker.parse_aksharas(pada):
-                for c in list(ak['onset']) + list(ak['coda']):
-                    if c not in self.NON_CONSONANTS:
-                        cons.append(fold_map.get(c, c))
-            total += len(cons)
-            per_line.append({"position": label, "consonants": len(cons)})
-            for n in counts:
-                counts[n].update(tuple(cons[i:i + n])
-                                 for i in range(len(cons) - n + 1))
+            stream = [eq.get(c, c)
+                      for g in self.checker.consonant_skeleton(pada) for c in g]
+            total += len(stream)
+            per_line.append({"position": label, "consonants": len(stream)})
+            for n, cnt in counts.items():
+                cnt.update(tuple(stream[i:i + n])
+                           for i in range(len(stream) - n + 1))
 
         if not total:
             return None
@@ -225,7 +213,7 @@ class PoemMetrics:
         return {
             "alliteration_density": sum(by_length.values()) / total,
             "by_length": {n: v / total for n, v in by_length.items()},
-            "top_repeats": [("".join(s), c) for s, c in top],
+            "top_repeats": [("+".join(s), c) for s, c in top],
             "consonants": total,
             "per_line": per_line,
         }

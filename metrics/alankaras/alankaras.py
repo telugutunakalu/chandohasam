@@ -78,6 +78,8 @@ class AlankaramChecker:
 
     # ---- Phonetic equivalence classes for the "Equivalent" check
     DEFAULT_EQUIVALENCES = {
+        'k': 'kh', 'g': 'gh', 'c': 'ch', 'j': 'jh', 'T': 'Th', 'D': 'Dh', 't': 'th', 'd': 'dh', 'p': 'ph', 'b': 'bh',  # aspirated vs unaspirated
+        'm': 'M', 'h': 'H',                     # nasals / aspiration
         'z': 's', 'S': 's', 's': 's',   # sibilants (z = sh, S = retroflex sh)
         'N': 'n', 'n': 'n',             # retroflex / dental nasal
         'L': 'l', 'l': 'l',             # ళ / ల
