@@ -142,7 +142,8 @@ sample.
     pattern;
   - pāda-final slot: free;
   - sandhi junction: a word boundary in the scanner's word index;
-  - rare word: seen fewer than 10 times in the tokenised corpus;
+  - rare word: the step's token occurs fewer than 10 times in the tokenised
+    Bhāgavatam verses (a token-level count);
   - standard errors: cluster-robust, by generation.
 
 **Run health and compliance.** 0 of 200 generations are truncated (mean 70
@@ -159,7 +160,7 @@ predictors are standardised; p values come from cluster-robust z.
 | position in the pāda | **+1.24 (10⁻²⁴)** | +0.08 (0.024) | 6.9 |
 | aksharas since the last junction | −0.08 (0.011) | −0.03 (0.37) | 0.9 |
 | next-token entropy | +0.01 (0.69) | +0.04 (0.19) | 1.8 |
-| rare word | +0.48 (1.7×10⁻⁴) | **+0.57 (1.8×10⁻⁷)** | **22.8** |
+| rare token | +0.48 (1.7×10⁻⁴) | **+0.57 (1.8×10⁻⁷)** | **22.8** |
 
 - **All steps.** The violation rate is 58%. Position in the pāda dominates,
   but mostly by construction: an akshara beyond the template's length counts
@@ -168,7 +169,7 @@ predictors are standardised; p values come from cluster-robust z.
   what a coin toss would give. The full model gains only 36.4 deviance over the
   position-only null.
 - **NH12 is not supported.** Neither entropy nor distance from a sandhi
-  junction predicts a violation; the only clear predictor is a rare word.
+  junction predicts a violation; the only clear predictor is a rare token.
 
 **Decay curve (step 7).** Cosine of each step's state with EXP-22's coarse
 direction (poem − bhavam) (`fig_exp19.png`):

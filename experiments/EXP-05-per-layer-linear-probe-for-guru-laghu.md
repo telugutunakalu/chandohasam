@@ -126,8 +126,9 @@ The lookup control (steps 5–7) has not been run.
 | probe L25 (late plateau) | 0.749 | 0.748 | 0.750 |
 
 - **The curve's shape survives `<bos>`.** L0 is highest (0.777, against the
-  pipeline's 0.796), accuracy dips through the middle layers (0.655 at L18)
-  and partly recovers late (about 0.73). The trough is not an input artifact.
+  pipeline's 0.796). Accuracy then dips twice: to 0.662 at L9, back up to
+  0.751 at L14, and down to 0.655 at L18. From L24 on it stays at
+  0.71–0.75. The mid-layer dip is not an input artifact.
 - **The lookup control is decisive.** No layer beats baseline A on the
   context-determined subset. The best is 0.847 at L0, below the subset's own
   majority rate of 0.887, while the next-akshara oracle reaches 0.991. No

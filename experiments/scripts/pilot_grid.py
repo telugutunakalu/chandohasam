@@ -12,7 +12,7 @@ Grid: the 37 metres of experiments/runs/2026-09-24_e4b_baseline/prompts.jsonl x 
 poem-free text), so the topic is given as the meaning of the decoder's T1 canvas; it is not a prompt.
 
 Modes (diffusion_finetuning/ft/decode.py, the pilot's own decoder; `metrical_decoder`, which drove the
-Gemma grids, is not in this repository):
+Gemma grids, is in meter_engine/metrical_decoder/):
   free     one sample, temperature 0.7, no constraint           ~ the grids' `baseline`
   masking  one sample, temperature 0.7, no lexicon, with the grids' strict rule set: canonical weights
            (vikalpa=False), strict prāsa (prasa_relaxed=False), hard yati (weight 1e4) under the yati

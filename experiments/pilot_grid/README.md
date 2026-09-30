@@ -17,7 +17,7 @@ fine-tuning? Its one-token-per-akshara tokenizer lets the constraint act on sing
 |---|---|---|
 | grid | 37 metres × T1–T3 × seeds 42, 49, 56, 63, 70 = 555 per mode | same |
 | task input | chat prompt: the metre's rules + the topic | the topic as the meaning line of the decoder's canvas. The base pilot cannot read instructions: it is pretrained on poem-free prose. |
-| decoder | `metrical_decoder` (not in this repository) | `diffusion_finetuning/ft/decode.py`, with a tracing subclass |
+| decoder | `metrical_decoder` (`meter_engine/metrical_decoder/`) | `diffusion_finetuning/ft/decode.py`, with a tracing subclass |
 | evaluation | engines, metre forced, strict profile, yati sandhi off; "in meter" = canonical gaṇa ∧ prāsa ∧ yati | same definitions (`evaluate`) |
 | word-level measures | attested words (Chandassu-held-out lexicon), single-akshara words, poems repeating a line | same code (`writeups/scripts/compute_generation_metrics.py`) |
 | step-level measures | chosen-token log-prob, first choice not allowed, allowed mass, per subword token | same definitions, per akshara (or space) token: comparable across modes, **not** in magnitude across models |
