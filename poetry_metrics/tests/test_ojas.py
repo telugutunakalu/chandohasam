@@ -18,7 +18,6 @@ import ojas as oj                     # noqa: E402
 import validation_ojas as vo          # noqa: E402
 
 BASELINE = oj.load_baseline()
-SCALE = BASELINE["scale"]
 
 
 class Counts(unittest.TestCase):
@@ -46,37 +45,54 @@ class Counts(unittest.TestCase):
 
 
 class Index(unittest.TestCase):
-    def test_zero_at_the_reference_mean(self):
-        c = oj.Counts(words=1000, word_aksharas=round(1000 * SCALE["word_length"]["mean"]),
-                      aksharas=10000, conjuncts=round(100 * SCALE["conjunct_rate"]["mean"]))
-        self.assertAlmostEqual(oj.index(c, SCALE), 0.0, places=2)
+    def test_the_mean_of_two_shares(self):
+        c = oj.Counts(words=10, word_aksharas=40, aksharas=40, conjuncts=8)
+        self.assertAlmostEqual(c.bound_share, 75.0)               # 30 of the 40 aksharas continue a word
+        self.assertAlmostEqual(oj.index(c), (75.0 + 20.0) / 2)
+
+    def test_bounds(self):
+        loose = oj.Counts(words=5, word_aksharas=5, aksharas=5, conjuncts=0)     # one-akshara words, no conjunct
+        self.assertEqual(oj.index(loose), 0.0)
 
     def test_each_term_raises_it(self):
         base = oj.Counts(words=10, word_aksharas=40, aksharas=40, conjuncts=5)
         longer = oj.Counts(words=10, word_aksharas=60, aksharas=40, conjuncts=5)
         tighter = oj.Counts(words=10, word_aksharas=40, aksharas=40, conjuncts=15)
-        self.assertGreater(oj.index(longer, SCALE), oj.index(base, SCALE))
-        self.assertGreater(oj.index(tighter, SCALE), oj.index(base, SCALE))
-
-    def test_one_standard_deviation_on_both_is_one(self):
-        m, s = SCALE["word_length"], SCALE["conjunct_rate"]
-        c = oj.Counts(words=1, word_aksharas=m["mean"] + m["sd"], aksharas=100, conjuncts=s["mean"] + s["sd"])
-        self.assertAlmostEqual(oj.index(c, SCALE), 1.0)
+        self.assertGreater(oj.index(longer), oj.index(base))
+        self.assertGreater(oj.index(tighter), oj.index(base))
 
     def test_empty(self):
-        self.assertIsNone(oj.index(oj.Counts(), SCALE))
+        self.assertIsNone(oj.index(oj.Counts()))
 
     def test_levels(self):
         cuts = [-1.0, -0.5, 0.5, 1.0]
         self.assertEqual([oj.level_of(v, cuts) for v in (-2, -1.0, 0, 0.5, 3)], [0, 1, 2, 3, 4])
 
+    def test_no_corpus_statistic_enters_the_score(self):
+        # another reference corpus moves the percentile only: O and the level stay
+        other = json.loads(json.dumps(BASELINE))
+        other["reference"]["poem_index"] = [v + 5 for v in other["reference"]["poem_index"]]
+        lines = ["రామ రావణ యుద్ధము", "అణిమాద్యష్టగుణప్రసిద్ధులు త్రిలోకారాధ్యు"]
+        a, b = oj.score_poem(lines, BASELINE), oj.score_poem(lines, other)
+        self.assertEqual((a["ojas"], a["level"]), (b["ojas"], b["level"]))
+        self.assertNotEqual(a["percentile"], b["percentile"])
+
+
+class Rubric(unittest.TestCase):
+    def test_cuts_are_anchored_to_the_treatise(self):
+        cuts, anchors = oj.anchored_cuts()
+        self.assertEqual((cuts[0], cuts[-1]), (anchors["light"]["ojas"], anchors["dense"]["ojas"]))
+        self.assertEqual((anchors["light"]["locus"], anchors["dense"]["locus"]), ("4.61", "4.70"))
+        step = (cuts[-1] - cuts[0]) / 3
+        self.assertAlmostEqual(cuts[1] - cuts[0], step, places=3)
+        self.assertEqual(BASELINE["cuts"]["poem"], cuts)
+        self.assertEqual(BASELINE["cuts"]["line"], cuts)
+
 
 class Classical(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        mean = lambda t: sum(t) / len(t)
-        cls.report = vo.contrasts_report(BASELINE, {"aspirate_rate": {
-            "mean": mean(BASELINE["reference"]["poem_aspirate_rate"]), "sd": 3.0}})
+        cls.report = vo.contrasts_report(BASELINE)
 
     def test_every_contrast_is_in_the_texts_order(self):
         self.assertEqual(self.report["in_order"], "8/8")
@@ -90,7 +106,7 @@ class Classical(unittest.TestCase):
     def test_aspirates_would_reverse_vamanas_pair(self):
         tight, slack = (oj.pooled(oj.count_poem(e["lines"])) for e in vo.vm.load_exemplars()
                         if e["id"] in ("vamana_3_1_5_gadha", "vamana_3_1_5_not"))
-        self.assertGreater(oj.index(tight, SCALE), oj.index(slack, SCALE))
+        self.assertGreater(oj.index(tight), oj.index(slack))
         self.assertLess(tight.aspirate_rate, slack.aspirate_rate)
 
 
@@ -105,7 +121,7 @@ class Output(unittest.TestCase):
         for unit in ("line", "poem"):
             self.assertEqual(BASELINE["cuts"][unit], sorted(BASELINE["cuts"][unit]))
             self.assertEqual(len(BASELINE["reference"][f"{unit}_index"]), 101)
-        self.assertAlmostEqual(BASELINE["reference"]["poem_index"][50], 0.0, delta=0.1)
+        self.assertEqual(BASELINE["version"], oj.VERSION)
 
     def test_cli(self):
         out = io.StringIO()

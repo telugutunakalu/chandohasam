@@ -1,7 +1,7 @@
 {
  "anuprasa_version": "1.0",
  "madhurya_version": "1.1",
- "ojas_version": "1.0",
+ "ojas_version": "2.0",
  "prasada_version": "1.0",
  "chandas_distance_version": "1.1",
  "shared_meters": [
@@ -29,7 +29,7 @@
    "parusha_share": 0.1362,
    "madhura_share": 0.1178,
    "sonorant_share": 0.395,
-   "ojas": -0.0,
+   "ojas": 42.5862,
    "word_length": 3.8436,
    "conjunct_rate": 12.0379,
    "aspirate_rate": 3.936,
@@ -60,11 +60,11 @@
     "soft": 10.1
    },
    "ojas_levels_pct": {
-    "light": 10.0,
-    "leaning_light": 19.8,
-    "moderate": 40.1,
-    "leaning_dense": 20.0,
-    "dense": 10.0
+    "light": 17.0,
+    "leaning_light": 26.9,
+    "moderate": 30.9,
+    "leaning_dense": 16.7,
+    "dense": 8.5
    },
    "prasada_levels_pct": {
     "obscure": 10.0,
@@ -81,7 +81,7 @@
     "exact": 93.7
    },
    "median_surprisal": 5.8937,
-   "median_ojas": -0.0511,
+   "median_ojas": 42.5,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 15.2,
     "marked": 7.1,
@@ -126,7 +126,7 @@
    "parusha_share": 0.1361,
    "madhura_share": 0.1178,
    "sonorant_share": 0.3953,
-   "ojas": -0.0009,
+   "ojas": 42.5878,
    "word_length": 3.8443,
    "conjunct_rate": 12.0244,
    "aspirate_rate": 3.9443,
@@ -157,11 +157,11 @@
     "soft": 10.2
    },
    "ojas_levels_pct": {
-    "light": 9.9,
-    "leaning_light": 19.8,
-    "moderate": 40.3,
-    "leaning_dense": 20.1,
-    "dense": 9.9
+    "light": 16.9,
+    "leaning_light": 27.0,
+    "moderate": 31.0,
+    "leaning_dense": 16.8,
+    "dense": 8.4
    },
    "prasada_levels_pct": {
     "obscure": 9.8,
@@ -178,7 +178,7 @@
     "exact": 93.9
    },
    "median_surprisal": 5.8862,
-   "median_ojas": -0.0511,
+   "median_ojas": 42.5,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 15.1,
     "marked": 7.0,
@@ -239,7 +239,7 @@
     "anuprasa_varga_z": 0.7144,
     "madhurya": -0.0348,
     "pileup": 0.1195,
-    "ojas": -0.1344,
+    "ojas": 41.9276,
     "surprisal": 5.659
    },
    "champakamala": {
@@ -247,7 +247,7 @@
     "anuprasa_varga_z": 0.6073,
     "madhurya": -0.0391,
     "pileup": 0.1225,
-    "ojas": 0.0052,
+    "ojas": 42.6891,
     "surprisal": 5.912
    },
    "kandamu": {
@@ -255,7 +255,7 @@
     "anuprasa_varga_z": 0.3277,
     "madhurya": -0.0204,
     "pileup": 0.1096,
-    "ojas": -0.2678,
+    "ojas": 41.2097,
     "surprisal": 5.9248
    },
    "mattebhavikriditamu": {
@@ -263,7 +263,7 @@
     "anuprasa_varga_z": 0.4037,
     "madhurya": -0.1035,
     "pileup": 0.1618,
-    "ojas": 0.5422,
+    "ojas": 45.3351,
     "surprisal": 6.8756
    },
    "sardulavikriditamu": {
@@ -271,7 +271,7 @@
     "anuprasa_varga_z": 0.3626,
     "madhurya": -0.1124,
     "pileup": 0.1676,
-    "ojas": 0.5818,
+    "ojas": 45.5875,
     "surprisal": 7.1736
    },
    "seesamu": {
@@ -279,7 +279,7 @@
     "anuprasa_varga_z": 0.5482,
     "madhurya": -0.0811,
     "pileup": 0.1412,
-    "ojas": 0.1291,
+    "ojas": 43.2609,
     "surprisal": 5.8217
    },
    "tetagiti": {
@@ -287,7 +287,7 @@
     "anuprasa_varga_z": 0.3428,
     "madhurya": -0.0427,
     "pileup": 0.1191,
-    "ojas": -0.0181,
+    "ojas": 42.4094,
     "surprisal": 5.6724
    },
    "utpalamala": {
@@ -295,7 +295,7 @@
     "anuprasa_varga_z": 0.5434,
     "madhurya": -0.0837,
     "pileup": 0.1366,
-    "ojas": 0.0516,
+    "ojas": 42.9498,
     "surprisal": 6.1396
    }
   }
@@ -315,7 +315,7 @@
    "parusha_share": 0.1146,
    "madhura_share": 0.1083,
    "sonorant_share": 0.4296,
-   "ojas": -0.2819,
+   "ojas": 41.3394,
    "word_length": 3.5983,
    "conjunct_rate": 10.872,
    "aspirate_rate": 3.2961,
@@ -346,11 +346,11 @@
     "soft": 7.6
    },
    "ojas_levels_pct": {
-    "light": 9.4,
-    "leaning_light": 31.2,
-    "moderate": 50.1,
-    "leaning_dense": 8.6,
-    "dense": 0.7
+    "light": 18.4,
+    "leaning_light": 44.7,
+    "moderate": 29.4,
+    "leaning_dense": 7.0,
+    "dense": 0.5
    },
    "prasada_levels_pct": {
     "obscure": 2.2,
@@ -367,7 +367,7 @@
     "exact": 0.0
    },
    "median_surprisal": 5.5591,
-   "median_ojas": -0.2893,
+   "median_ojas": 41.3793,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 2.9,
     "marked": 0.4,
@@ -459,9 +459,9 @@
      "within_meter_p_generated_above_real": 0.677
     },
     "ojas": {
-     "p_generated_above_real": 0.3793,
-     "within_meter_mean_difference": -0.4008,
-     "within_meter_p_generated_above_real": 0.32
+     "p_generated_above_real": 0.3857,
+     "within_meter_mean_difference": -1.8173,
+     "within_meter_p_generated_above_real": 0.3284
     },
     "word_length": {
      "p_generated_above_real": 0.4084,
@@ -547,7 +547,7 @@
    "parusha_share": 0.1288,
    "madhura_share": 0.0986,
    "sonorant_share": 0.4375,
-   "ojas": 1.5962,
+   "ojas": 48.8294,
    "word_length": 4.4653,
    "conjunct_rate": 24.0285,
    "aspirate_rate": 4.2565,
@@ -578,11 +578,11 @@
     "soft": 15.5
    },
    "ojas_levels_pct": {
-    "light": 7.9,
-    "leaning_light": 8.8,
-    "moderate": 15.0,
-    "leaning_dense": 13.5,
-    "dense": 54.8
+    "light": 12.4,
+    "leaning_light": 12.6,
+    "moderate": 10.1,
+    "leaning_dense": 11.7,
+    "dense": 53.2
    },
    "prasada_levels_pct": {
     "obscure": 91.4,
@@ -599,7 +599,7 @@
     "exact": 100.0
    },
    "median_surprisal": 11.3981,
-   "median_ojas": 1.1282,
+   "median_ojas": 48.2143,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 53.0,
     "marked": 43.1,
@@ -691,9 +691,9 @@
      "within_meter_p_generated_above_real": 0.7759
     },
     "ojas": {
-     "p_generated_above_real": 0.7421,
-     "within_meter_mean_difference": 0.974,
-     "within_meter_p_generated_above_real": 0.6329
+     "p_generated_above_real": 0.7307,
+     "within_meter_mean_difference": 3.7961,
+     "within_meter_p_generated_above_real": 0.6291
     },
     "word_length": {
      "p_generated_above_real": 0.5294,
@@ -779,7 +779,7 @@
    "parusha_share": 0.1265,
    "madhura_share": 0.101,
    "sonorant_share": 0.4232,
-   "ojas": 1.336,
+   "ojas": 47.9786,
    "word_length": 4.3503,
    "conjunct_rate": 22.1695,
    "aspirate_rate": 4.4861,
@@ -810,11 +810,11 @@
     "soft": 13.0
    },
    "ojas_levels_pct": {
-    "light": 8.5,
-    "leaning_light": 10.6,
-    "moderate": 16.9,
-    "leaning_dense": 15.3,
-    "dense": 48.6
+    "light": 14.1,
+    "leaning_light": 11.7,
+    "moderate": 14.1,
+    "leaning_dense": 13.0,
+    "dense": 47.2
    },
    "prasada_levels_pct": {
     "obscure": 83.8,
@@ -831,7 +831,7 @@
     "exact": 100.0
    },
    "median_surprisal": 10.7782,
-   "median_ojas": 0.8552,
+   "median_ojas": 46.875,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 44.7,
     "marked": 32.8,
@@ -923,9 +923,9 @@
      "within_meter_p_generated_above_real": 0.7362
     },
     "ojas": {
-     "p_generated_above_real": 0.7108,
-     "within_meter_mean_difference": 0.6335,
-     "within_meter_p_generated_above_real": 0.6044
+     "p_generated_above_real": 0.7016,
+     "within_meter_mean_difference": 2.4362,
+     "within_meter_p_generated_above_real": 0.6056
     },
     "word_length": {
      "p_generated_above_real": 0.5379,
@@ -1011,7 +1011,7 @@
    "parusha_share": 0.1328,
    "madhura_share": 0.0984,
    "sonorant_share": 0.4248,
-   "ojas": 1.6787,
+   "ojas": 49.1835,
    "word_length": 4.5167,
    "conjunct_rate": 24.5129,
    "aspirate_rate": 3.9971,
@@ -1042,11 +1042,11 @@
     "soft": 14.8
    },
    "ojas_levels_pct": {
-    "light": 8.8,
-    "leaning_light": 8.5,
-    "moderate": 12.8,
-    "leaning_dense": 12.4,
-    "dense": 57.5
+    "light": 12.1,
+    "leaning_light": 12.1,
+    "moderate": 9.5,
+    "leaning_dense": 11.0,
+    "dense": 55.3
    },
    "prasada_levels_pct": {
     "obscure": 89.4,
@@ -1063,7 +1063,7 @@
     "exact": 100.0
    },
    "median_surprisal": 11.0561,
-   "median_ojas": 1.2009,
+   "median_ojas": 48.2143,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 48.8,
     "marked": 38.9,
@@ -1155,9 +1155,9 @@
      "within_meter_p_generated_above_real": 0.7435
     },
     "ojas": {
-     "p_generated_above_real": 0.7497,
-     "within_meter_mean_difference": 1.1331,
-     "within_meter_p_generated_above_real": 0.6334
+     "p_generated_above_real": 0.7404,
+     "within_meter_mean_difference": 4.1076,
+     "within_meter_p_generated_above_real": 0.6298
     },
     "word_length": {
      "p_generated_above_real": 0.5237,
@@ -1243,7 +1243,7 @@
    "parusha_share": 0.1214,
    "madhura_share": 0.082,
    "sonorant_share": 0.5018,
-   "ojas": -0.3808,
+   "ojas": 40.5963,
    "word_length": 3.4305,
    "conjunct_rate": 11.0363,
    "aspirate_rate": 1.396,
@@ -1274,11 +1274,11 @@
     "soft": 24.5
    },
    "ojas_levels_pct": {
-    "light": 22.3,
-    "leaning_light": 23.6,
-    "moderate": 39.5,
-    "leaning_dense": 11.5,
-    "dense": 3.1
+    "light": 30.5,
+    "leaning_light": 33.9,
+    "moderate": 24.7,
+    "leaning_dense": 8.3,
+    "dense": 2.7
    },
    "prasada_levels_pct": {
     "obscure": 0.9,
@@ -1295,7 +1295,7 @@
     "exact": 0.0
    },
    "median_surprisal": 5.2855,
-   "median_ojas": -0.3523,
+   "median_ojas": 40.9091,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 21.4,
     "marked": 13.2,
@@ -1387,9 +1387,9 @@
      "within_meter_p_generated_above_real": 0.8052
     },
     "ojas": {
-     "p_generated_above_real": 0.3593,
-     "within_meter_mean_difference": -0.4489,
-     "within_meter_p_generated_above_real": 0.3255
+     "p_generated_above_real": 0.3539,
+     "within_meter_mean_difference": -2.245,
+     "within_meter_p_generated_above_real": 0.3273
     },
     "word_length": {
      "p_generated_above_real": 0.322,
@@ -1475,7 +1475,7 @@
    "parusha_share": 0.2022,
    "madhura_share": 0.0596,
    "sonorant_share": 0.4231,
-   "ojas": 1.5829,
+   "ojas": 47.8189,
    "word_length": 4.0731,
    "conjunct_rate": 26.6451,
    "aspirate_rate": 2.0834,
@@ -1506,11 +1506,11 @@
     "soft": 10.1
    },
    "ojas_levels_pct": {
-    "light": 13.5,
-    "leaning_light": 8.1,
-    "moderate": 13.2,
-    "leaning_dense": 11.9,
-    "dense": 53.3
+    "light": 20.2,
+    "leaning_light": 11.5,
+    "moderate": 8.6,
+    "leaning_dense": 11.2,
+    "dense": 48.5
    },
    "prasada_levels_pct": {
     "obscure": 91.0,
@@ -1527,7 +1527,7 @@
     "exact": 100.0
    },
    "median_surprisal": 11.6444,
-   "median_ojas": 1.0937,
+   "median_ojas": 46.875,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 66.3,
     "marked": 57.3,
@@ -1619,9 +1619,9 @@
      "within_meter_p_generated_above_real": 0.6604
     },
     "ojas": {
-     "p_generated_above_real": 0.708,
-     "within_meter_mean_difference": 0.8062,
-     "within_meter_p_generated_above_real": 0.571
+     "p_generated_above_real": 0.6698,
+     "within_meter_mean_difference": 1.4369,
+     "within_meter_p_generated_above_real": 0.5336
     },
     "word_length": {
      "p_generated_above_real": 0.3496,
@@ -1707,7 +1707,7 @@
    "parusha_share": 0.1789,
    "madhura_share": 0.0671,
    "sonorant_share": 0.4295,
-   "ojas": 1.1938,
+   "ojas": 46.7526,
    "word_length": 3.831,
    "conjunct_rate": 24.3583,
    "aspirate_rate": 1.6576,
@@ -1738,11 +1738,11 @@
     "soft": 14.1
    },
    "ojas_levels_pct": {
-    "light": 16.6,
-    "leaning_light": 9.9,
-    "moderate": 14.6,
-    "leaning_dense": 12.6,
-    "dense": 46.3
+    "light": 24.1,
+    "leaning_light": 13.2,
+    "moderate": 9.2,
+    "leaning_dense": 10.3,
+    "dense": 43.2
    },
    "prasada_levels_pct": {
     "obscure": 83.1,
@@ -1759,7 +1759,7 @@
     "exact": 100.0
    },
    "median_surprisal": 10.7402,
-   "median_ojas": 0.7075,
+   "median_ojas": 45.8333,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 66.8,
     "marked": 56.9,
@@ -1851,9 +1851,9 @@
      "within_meter_p_generated_above_real": 0.6886
     },
     "ojas": {
-     "p_generated_above_real": 0.6543,
-     "within_meter_mean_difference": 0.621,
-     "within_meter_p_generated_above_real": 0.536
+     "p_generated_above_real": 0.6198,
+     "within_meter_mean_difference": 1.3807,
+     "within_meter_p_generated_above_real": 0.4977
     },
     "word_length": {
      "p_generated_above_real": 0.3367,
@@ -1939,7 +1939,7 @@
    "parusha_share": 0.1938,
    "madhura_share": 0.0605,
    "sonorant_share": 0.4288,
-   "ojas": 1.6375,
+   "ojas": 48.1169,
    "word_length": 4.1668,
    "conjunct_rate": 26.5472,
    "aspirate_rate": 1.6419,
@@ -1970,11 +1970,11 @@
     "soft": 9.7
    },
    "ojas_levels_pct": {
-    "light": 11.4,
-    "leaning_light": 6.8,
-    "moderate": 15.9,
-    "leaning_dense": 13.9,
-    "dense": 52.1
+    "light": 17.3,
+    "leaning_light": 11.4,
+    "moderate": 11.9,
+    "leaning_dense": 11.2,
+    "dense": 48.3
    },
    "prasada_levels_pct": {
     "obscure": 87.2,
@@ -1991,7 +1991,7 @@
     "exact": 100.0
    },
    "median_surprisal": 11.1865,
-   "median_ojas": 0.9838,
+   "median_ojas": 46.875,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 69.0,
     "marked": 57.3,
@@ -2083,9 +2083,9 @@
      "within_meter_p_generated_above_real": 0.6881
     },
     "ojas": {
-     "p_generated_above_real": 0.7187,
-     "within_meter_mean_difference": 0.8017,
-     "within_meter_p_generated_above_real": 0.5757
+     "p_generated_above_real": 0.6848,
+     "within_meter_mean_difference": 1.6248,
+     "within_meter_p_generated_above_real": 0.5549
     },
     "word_length": {
      "p_generated_above_real": 0.3587,
@@ -2171,7 +2171,7 @@
    "parusha_share": 0.1229,
    "madhura_share": 0.0848,
    "sonorant_share": 0.4827,
-   "ojas": -1.1048,
+   "ojas": 36.4812,
    "word_length": 3.1289,
    "conjunct_rate": 5.736,
    "aspirate_rate": 1.0432,
@@ -2202,10 +2202,10 @@
     "soft": 17.7
    },
    "ojas_levels_pct": {
-    "light": 71.9,
-    "leaning_light": 20.9,
-    "moderate": 6.5,
-    "leaning_dense": 0.7,
+    "light": 81.6,
+    "leaning_light": 14.8,
+    "moderate": 3.4,
+    "leaning_dense": 0.2,
     "dense": 0.0
    },
    "prasada_levels_pct": {
@@ -2223,7 +2223,7 @@
     "exact": 0.2
    },
    "median_surprisal": 6.6512,
-   "median_ojas": -1.1495,
+   "median_ojas": 36.4407,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 31.9,
     "marked": 24.3,
@@ -2315,9 +2315,9 @@
      "within_meter_p_generated_above_real": 0.7704
     },
     "ojas": {
-     "p_generated_above_real": 0.0914,
-     "within_meter_mean_difference": -1.105,
-     "within_meter_p_generated_above_real": 0.0867
+     "p_generated_above_real": 0.0917,
+     "within_meter_mean_difference": -5.8707,
+     "within_meter_p_generated_above_real": 0.0887
     },
     "word_length": {
      "p_generated_above_real": 0.1992,
@@ -2403,7 +2403,7 @@
    "parusha_share": 0.1826,
    "madhura_share": 0.0486,
    "sonorant_share": 0.4457,
-   "ojas": 1.4481,
+   "ojas": 47.6581,
    "word_length": 3.8865,
    "conjunct_rate": 26.5737,
    "aspirate_rate": 0.9698,
@@ -2434,11 +2434,11 @@
     "soft": 10.3
    },
    "ojas_levels_pct": {
-    "light": 21.4,
-    "leaning_light": 5.0,
-    "moderate": 7.2,
-    "leaning_dense": 7.2,
-    "dense": 59.1
+    "light": 27.0,
+    "leaning_light": 5.4,
+    "moderate": 5.2,
+    "leaning_dense": 7.9,
+    "dense": 54.4
    },
    "prasada_levels_pct": {
     "obscure": 98.9,
@@ -2455,7 +2455,7 @@
     "exact": 100.0
    },
    "median_surprisal": 13.2257,
-   "median_ojas": 1.4378,
+   "median_ojas": 48.9583,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 87.0,
     "marked": 80.0,
@@ -2547,9 +2547,9 @@
      "within_meter_p_generated_above_real": 0.8133
     },
     "ojas": {
-     "p_generated_above_real": 0.6872,
-     "within_meter_mean_difference": 0.6697,
-     "within_meter_p_generated_above_real": 0.5515
+     "p_generated_above_real": 0.6592,
+     "within_meter_mean_difference": 0.3872,
+     "within_meter_p_generated_above_real": 0.5384
     },
     "word_length": {
      "p_generated_above_real": 0.411,
@@ -2635,7 +2635,7 @@
    "parusha_share": 0.1944,
    "madhura_share": 0.0595,
    "sonorant_share": 0.4114,
-   "ojas": 1.2359,
+   "ojas": 47.4674,
    "word_length": 3.6966,
    "conjunct_rate": 25.7333,
    "aspirate_rate": 1.7726,
@@ -2666,11 +2666,11 @@
     "soft": 6.1
    },
    "ojas_levels_pct": {
-    "light": 20.2,
-    "leaning_light": 6.8,
-    "moderate": 6.8,
-    "leaning_dense": 9.2,
-    "dense": 56.9
+    "light": 25.4,
+    "leaning_light": 6.1,
+    "moderate": 5.0,
+    "leaning_dense": 8.1,
+    "dense": 55.3
    },
    "prasada_levels_pct": {
     "obscure": 98.9,
@@ -2687,7 +2687,7 @@
     "exact": 100.0
    },
    "median_surprisal": 13.1461,
-   "median_ojas": 1.2921,
+   "median_ojas": 49.0385,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 68.5,
     "marked": 57.8,
@@ -2779,9 +2779,9 @@
      "within_meter_p_generated_above_real": 0.7407
     },
     "ojas": {
-     "p_generated_above_real": 0.686,
-     "within_meter_mean_difference": 0.3816,
-     "within_meter_p_generated_above_real": 0.5278
+     "p_generated_above_real": 0.6702,
+     "within_meter_mean_difference": 0.2533,
+     "within_meter_p_generated_above_real": 0.5201
     },
     "word_length": {
      "p_generated_above_real": 0.402,
@@ -2867,7 +2867,7 @@
    "parusha_share": 0.1818,
    "madhura_share": 0.0477,
    "sonorant_share": 0.463,
-   "ojas": 1.7161,
+   "ojas": 48.8601,
    "word_length": 4.2019,
    "conjunct_rate": 27.1061,
    "aspirate_rate": 0.7957,
@@ -2898,11 +2898,11 @@
     "soft": 13.5
    },
    "ojas_levels_pct": {
-    "light": 20.4,
-    "leaning_light": 5.8,
-    "moderate": 5.6,
-    "leaning_dense": 7.9,
-    "dense": 60.4
+    "light": 24.7,
+    "leaning_light": 6.7,
+    "moderate": 5.8,
+    "leaning_dense": 5.4,
+    "dense": 57.5
    },
    "prasada_levels_pct": {
     "obscure": 93.7,
@@ -2919,7 +2919,7 @@
     "exact": 100.0
    },
    "median_surprisal": 12.5841,
-   "median_ojas": 1.5864,
+   "median_ojas": 50.0,
    "anuprasa_poems_at_or_above_pct": {
     "weak": 89.2,
     "marked": 84.9,
@@ -3011,9 +3011,9 @@
      "within_meter_p_generated_above_real": 0.8176
     },
     "ojas": {
-     "p_generated_above_real": 0.7034,
-     "within_meter_mean_difference": 1.0354,
-     "within_meter_p_generated_above_real": 0.5617
+     "p_generated_above_real": 0.6767,
+     "within_meter_mean_difference": 1.8072,
+     "within_meter_p_generated_above_real": 0.5411
     },
     "word_length": {
      "p_generated_above_real": 0.4491,
@@ -3096,7 +3096,7 @@
      "pileup": 0.1126,
      "overridden_share": 0.2127,
      "real_word_share": 0.2609,
-     "ojas": -1.4716,
+     "ojas": 32.6906,
      "surprisal": 8.4096
     },
     "champakamala": {
@@ -3105,7 +3105,7 @@
      "pileup": 0.2463,
      "overridden_share": 0.5123,
      "real_word_share": 0.1065,
-     "ojas": 2.0557,
+     "ojas": 50.8004,
      "surprisal": 12.492
     },
     "kandamu": {
@@ -3114,7 +3114,7 @@
      "pileup": 0.0998,
      "overridden_share": 0.3413,
      "real_word_share": 0.2574,
-     "ojas": -0.9626,
+     "ojas": 33.6712,
      "surprisal": 9.2752
     },
     "mattebhavikriditamu": {
@@ -3123,7 +3123,7 @@
      "pileup": 0.3625,
      "overridden_share": 0.5518,
      "real_word_share": 0.0541,
-     "ojas": 3.6419,
+     "ojas": 58.1806,
      "surprisal": 13.5705
     },
     "sardulavikriditamu": {
@@ -3132,7 +3132,7 @@
      "pileup": 0.4019,
      "overridden_share": 0.5595,
      "real_word_share": 0.0525,
-     "ojas": 3.9441,
+     "ojas": 59.7625,
      "surprisal": 14.3449
     },
     "seesamu": {
@@ -3141,7 +3141,7 @@
      "pileup": 0.0945,
      "overridden_share": 0.1859,
      "real_word_share": 0.2087,
-     "ojas": -0.9461,
+     "ojas": 35.3942,
      "surprisal": 7.7427
     },
     "tetagiti": {
@@ -3150,7 +3150,7 @@
      "pileup": 0.0944,
      "overridden_share": 0.2298,
      "real_word_share": 0.3077,
-     "ojas": -1.7179,
+     "ojas": 29.6496,
      "surprisal": 8.0885
     },
     "utpalamala": {
@@ -3159,7 +3159,7 @@
      "pileup": 0.2731,
      "overridden_share": 0.5584,
      "real_word_share": 0.0839,
-     "ojas": 1.9109,
+     "ojas": 51.7473,
      "surprisal": 13.2641
     }
    },
@@ -3197,12 +3197,12 @@
      "duplicate_lines": 0.0164
     },
     "ojas": {
-     "overridden_share": 0.5402,
-     "mean_logprob": -0.4378,
-     "real_word_share": -0.6727,
-     "one_akshara_word_share": -0.5607,
-     "distinct_akshara_ratio": 0.3797,
-     "duplicate_lines": 0.1148
+     "overridden_share": 0.5589,
+     "mean_logprob": -0.4635,
+     "real_word_share": -0.6652,
+     "one_akshara_word_share": -0.5703,
+     "distinct_akshara_ratio": 0.4099,
+     "duplicate_lines": 0.1086
     },
     "surprisal": {
      "overridden_share": 0.6214,
@@ -3221,7 +3221,7 @@
      "conjunct_share": 0.0222,
      "overridden_share": 0.2724,
      "real_word_share": 0.2532,
-     "ojas": -0.9306,
+     "ojas": 34.2603,
      "surprisal": 9.0782
     },
     "upajāti": {
@@ -3231,7 +3231,7 @@
      "conjunct_share": 0.0078,
      "overridden_share": 0.2095,
      "real_word_share": 0.2591,
-     "ojas": -1.3785,
+     "ojas": 32.5781,
      "surprisal": 8.0802
     },
     "vrutta": {
@@ -3241,7 +3241,7 @@
      "conjunct_share": 0.1394,
      "overridden_share": 0.5249,
      "real_word_share": 0.0695,
-     "ojas": 2.5326,
+     "ojas": 54.0002,
      "surprisal": 13.8125
     }
    },
@@ -3490,7 +3490,7 @@
      "pileup": 0.0867,
      "overridden_share": 0.3026,
      "real_word_share": 0.4037,
-     "ojas": -0.7667,
+     "ojas": 37.2399,
      "surprisal": 7.7794
     },
     "champakamala": {
@@ -3499,7 +3499,7 @@
      "pileup": 0.2847,
      "overridden_share": 0.2514,
      "real_word_share": 0.1692,
-     "ojas": 1.1479,
+     "ojas": 47.5159,
      "surprisal": 11.0926
     },
     "kandamu": {
@@ -3508,7 +3508,7 @@
      "pileup": 0.1232,
      "overridden_share": 0.2493,
      "real_word_share": 0.4043,
-     "ojas": -0.7634,
+     "ojas": 37.8406,
      "surprisal": 7.4299
     },
     "mattebhavikriditamu": {
@@ -3517,7 +3517,7 @@
      "pileup": 0.5404,
      "overridden_share": 0.2284,
      "real_word_share": 0.0989,
-     "ojas": 3.9022,
+     "ojas": 55.7083,
      "surprisal": 12.3915
     },
     "sardulavikriditamu": {
@@ -3526,7 +3526,7 @@
      "pileup": 0.4292,
      "overridden_share": 0.2757,
      "real_word_share": 0.0487,
-     "ojas": 3.6268,
+     "ojas": 57.5877,
      "surprisal": 12.5538
     },
     "seesamu": {
@@ -3535,7 +3535,7 @@
      "pileup": 0.108,
      "overridden_share": 0.1818,
      "real_word_share": 0.3683,
-     "ojas": -0.8507,
+     "ojas": 35.8601,
      "surprisal": 7.8777
     },
     "tetagiti": {
@@ -3544,7 +3544,7 @@
      "pileup": 0.1057,
      "overridden_share": 0.2251,
      "real_word_share": 0.4416,
-     "ojas": -0.7402,
+     "ojas": 37.0486,
      "surprisal": 7.6805
     },
     "utpalamala": {
@@ -3553,7 +3553,7 @@
      "pileup": 0.2364,
      "overridden_share": 0.2853,
      "real_word_share": 0.1629,
-     "ojas": 1.2774,
+     "ojas": 48.4143,
      "surprisal": 11.331
     }
    },
@@ -3591,12 +3591,12 @@
      "duplicate_lines": 0.0687
     },
     "ojas": {
-     "overridden_share": 0.1539,
-     "mean_logprob": -0.0108,
-     "real_word_share": -0.6743,
-     "one_akshara_word_share": -0.237,
-     "distinct_akshara_ratio": -0.1166,
-     "duplicate_lines": 0.1343
+     "overridden_share": 0.1702,
+     "mean_logprob": -0.0314,
+     "real_word_share": -0.6828,
+     "one_akshara_word_share": -0.3079,
+     "distinct_akshara_ratio": -0.0959,
+     "duplicate_lines": 0.1212
     },
     "surprisal": {
      "overridden_share": 0.1354,
@@ -3615,7 +3615,7 @@
      "conjunct_share": 0.03,
      "overridden_share": 0.2028,
      "real_word_share": 0.432,
-     "ojas": -0.4894,
+     "ojas": 39.0265,
      "surprisal": 7.6224
     },
     "upajāti": {
@@ -3625,7 +3625,7 @@
      "conjunct_share": 0.0317,
      "overridden_share": 0.2365,
      "real_word_share": 0.4045,
-     "ojas": -0.7859,
+     "ojas": 36.7162,
      "surprisal": 7.7792
     },
     "vrutta": {
@@ -3635,7 +3635,7 @@
      "conjunct_share": 0.1039,
      "overridden_share": 0.2405,
      "real_word_share": 0.1283,
-     "ojas": 2.3352,
+     "ojas": 51.4409,
      "surprisal": 12.29
     }
    },
@@ -3886,7 +3886,7 @@
      "pileup": 0.0549,
      "overridden_share": 0.3219,
      "real_word_share": 0.3044,
-     "ojas": -0.5721,
+     "ojas": 39.5138,
      "surprisal": 7.4634
     },
     "champakamala": {
@@ -3895,7 +3895,7 @@
      "pileup": 0.0761,
      "overridden_share": 0.3395,
      "real_word_share": 0.1242,
-     "ojas": 1.3066,
+     "ojas": 48.4656,
      "surprisal": 10.7336
     },
     "kandamu": {
@@ -3904,7 +3904,7 @@
      "pileup": 0.0647,
      "overridden_share": 0.2867,
      "real_word_share": 0.2759,
-     "ojas": -0.3345,
+     "ojas": 40.8037,
      "surprisal": 7.5337
     },
     "mattebhavikriditamu": {
@@ -3913,7 +3913,7 @@
      "pileup": 0.1758,
      "overridden_share": 0.3446,
      "real_word_share": 0.0723,
-     "ojas": 2.8595,
+     "ojas": 54.472,
      "surprisal": 12.7555
     },
     "sardulavikriditamu": {
@@ -3922,7 +3922,7 @@
      "pileup": 0.2001,
      "overridden_share": 0.3511,
      "real_word_share": 0.0243,
-     "ojas": 3.7431,
+     "ojas": 57.6639,
      "surprisal": 12.8765
     },
     "seesamu": {
@@ -3931,7 +3931,7 @@
      "pileup": 0.0616,
      "overridden_share": 0.294,
      "real_word_share": 0.2726,
-     "ojas": -0.4173,
+     "ojas": 40.6732,
      "surprisal": 7.0945
     },
     "tetagiti": {
@@ -3940,7 +3940,7 @@
      "pileup": 0.0745,
      "overridden_share": 0.2623,
      "real_word_share": 0.3433,
-     "ojas": -0.6149,
+     "ojas": 39.4287,
      "surprisal": 6.9703
     },
     "utpalamala": {
@@ -3949,7 +3949,7 @@
      "pileup": 0.1158,
      "overridden_share": 0.3698,
      "real_word_share": 0.0957,
-     "ojas": 2.2277,
+     "ojas": 51.9211,
      "surprisal": 11.5815
     }
    },
@@ -3987,12 +3987,12 @@
      "duplicate_lines": 0.0578
     },
     "ojas": {
-     "overridden_share": 0.0803,
-     "mean_logprob": 0.2054,
-     "real_word_share": -0.5867,
-     "one_akshara_word_share": -0.3028,
-     "distinct_akshara_ratio": -0.2365,
-     "duplicate_lines": 0.1714
+     "overridden_share": 0.0972,
+     "mean_logprob": 0.1927,
+     "real_word_share": -0.5866,
+     "one_akshara_word_share": -0.3325,
+     "distinct_akshara_ratio": -0.223,
+     "duplicate_lines": 0.1642
     },
     "surprisal": {
      "overridden_share": 0.1262,
@@ -4011,7 +4011,7 @@
      "conjunct_share": 0.0296,
      "overridden_share": 0.2913,
      "real_word_share": 0.2964,
-     "ojas": -0.3367,
+     "ojas": 40.6491,
      "surprisal": 7.709
     },
     "upajāti": {
@@ -4021,7 +4021,7 @@
      "conjunct_share": 0.025,
      "overridden_share": 0.2928,
      "real_word_share": 0.3068,
-     "ojas": -0.5348,
+     "ojas": 39.8719,
      "surprisal": 7.1761
     },
     "vrutta": {
@@ -4031,7 +4031,7 @@
      "conjunct_share": 0.131,
      "overridden_share": 0.3256,
      "real_word_share": 0.089,
-     "ojas": 2.3526,
+     "ojas": 52.1444,
      "surprisal": 12.323
     }
    },

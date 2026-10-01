@@ -97,23 +97,28 @@ The classical texts give ojas two sources, and the proposal asks for both
 
 | term | what is counted | classical source |
 |---|---|---|
-| L, word length | aksharas per printed word | abundance of compounds: Daṇḍin 1.80, the treatise 4.69, Kāvyaprakāśa 8.75 |
+| W, bound share | aksharas of words that continue a word, per 100: 100 · (1 − 1/L), L the mean word length | abundance of compounds: Daṇḍin 1.80, the treatise 4.69, Kāvyaprakāśa 8.75 |
 | J, conjunct rate | aksharas that begin with a conjunct, per 100 | a tight texture: Vāmana 3.1.5 |
 
-    O = ½ · [ (L − 3.844) / 0.730 + (J − 12.04) / 5.12 ]
+    O = (W + J) / 2            (version 2.0)
 
-The constants are the mean and standard deviation of L and J over the poems of
-the four dataset files. The form, word length plus a second count, is that of
-the readability formulas (Flesch 1948). Sinha et al. (2012) fitted the same two
-features, average word length and conjuncts, to readers' judgements of Hindi
-and Bangla text. Their coefficients are for prose in their units, so here each
-term is standardised on Telugu verse and the two count equally.
+O is a percentage of the poem's own aksharas and uses no statistic of any
+corpus, so any poet is scored on the same scale; version 1.0 standardised L and
+J on the four dataset files, and its scale moved when the reference changed
+(spec §7.8, §10). The form, word length plus a second count, is that of the
+readability formulas (Flesch 1948); Sinha et al. (2012) fitted the same two
+features to readers' judgements of Hindi and Bangla text. Both terms here are
+shares of aksharas, so they need no coefficient; they spread about equally
+across poems (standard deviations 4.7 and 5.1 points) and are unrelated.
 
-Rubric: five bands on O against the reference corpus (light, leaning light,
-moderate, leaning dense, dense). The rubric describes; denser is not better.
+Rubric: five bands on O, anchored to the treatise's own examples: light below
+its words-apart example (4.61, O = 39.3), dense from its ojas example (4.70,
+O = 47.5), the interval between split in three. The rubric describes; denser
+is not better.
 
 Validation:
 - All 8 pairs that the classical texts set against each other as more and less ojas are in the texts' order.
+- No poet moves the scale: rebuilding the reference without one corpus relabels none of its poems (version 1.0: 2.6–23.9%).
 - Printed word length tracks compound units: Spearman 0.71 with gloss units per printed word, over 5,266 Bhāgavatamu verses.
 - Aspirated stops are reported and left out of O. With them in, Vāmana's own tight / not-tight pair reverses.
 - Two classical claims are not confirmed on the data: prose is no denser than verse (0.52), and fierce poems are not denser than tender ones (0.49, 0.59, 0.38).
@@ -228,7 +233,7 @@ python3 <metric>.py build-baseline                        # 5–10 s; chandas_di
 python3 <metric>.py validate                              # 25–35 s; chandas_distance about 4 min
 python3 samples_analysis.py                               # the metrics on ../samples/json, ~2 min
 python3 degradation_protocol.py                           # the admission test on every metric, ~2 min
-python3 -m unittest discover -s tests -v                  # 121 tests
+python3 -m unittest discover -s tests -v                  # 123 tests
 ```
 
 ## Layout

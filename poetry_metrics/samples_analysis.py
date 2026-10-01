@@ -94,9 +94,9 @@ def score(lines, baselines, vocabulary, meter=None) -> dict:
     clarity = pr.poem_figures(baselines["prasada"], lines)
     return {
         **chandas(lines, baselines["chandas"], meter),
-        "ojas": oj.index(density, baselines["ojas"]["scale"]), "word_length": density.word_length,
+        "ojas": oj.index(density), "word_length": density.word_length,
         "conjunct_rate": density.conjunct_rate, "aspirate_rate": density.aspirate_rate,
-        "ojas_level": oj.level_of(oj.index(density, baselines["ojas"]["scale"]), baselines["ojas"]["cuts"]["poem"]),
+        "ojas_level": oj.level_of(oj.index(density), baselines["ojas"]["cuts"]["poem"]),
         "surprisal": clarity["surprisal"], "zipf": clarity["zipf"], "known_word_share": clarity["known_word_share"],
         "prasada_level": pr.level_of(clarity["surprisal"], baselines["prasada"].meta["cuts"]["poem"]),
         "rules": dict(total.rules), "clusters": clusters,

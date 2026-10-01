@@ -248,7 +248,7 @@ Vemana is the clearest. Kuchimanchi's pure-Telugu verse is the hardest for the
 model: it avoids the Sanskrit vocabulary that most verse shares.
 
 Spearman of H with the other metrics (poems): conjunct rate 0.25 to 0.42; ojas
-0.10 to 0.28; mādhurya −0.11 to −0.22; anuprāsa z −0.06 to 0.04. Dense and
+0.08 to 0.28 (ojas 2.0); mādhurya −0.11 to −0.22; anuprāsa z −0.06 to 0.04. Dense and
 harsh verse is somewhat harder; alliteration is unrelated.
 
 ### 6.7 Lines for reading

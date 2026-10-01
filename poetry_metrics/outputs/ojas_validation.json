@@ -1,32 +1,43 @@
 {
- "version": "1.0",
- "scale": {
-  "word_length": {
-   "mean": 3.84362,
-   "sd": 0.72973
+ "version": "2.0",
+ "formula": "O = (W + J) / 2; W = 100 * (1 - words / aksharas of words); J = 100 * conjunct-initial aksharas / aksharas",
+ "anchors": {
+  "light": {
+   "id": "kas_4_61_madhurya",
+   "locus": "4.61",
+   "ojas": 39.2857
   },
-  "conjunct_rate": {
-   "mean": 12.0379,
-   "sd": 5.12301
+  "dense": {
+   "id": "kas_4_70_ojas",
+   "locus": "4.70",
+   "ojas": 47.5
   }
  },
  "cuts": {
   "line": [
-   -1.2882,
-   -0.5485,
-   0.6622,
-   1.7346
+   39.2857,
+   42.0238,
+   44.7619,
+   47.5
   ],
   "poem": [
-   -0.8654,
-   -0.3924,
-   0.2984,
-   0.9179
+   39.2857,
+   42.0238,
+   44.7619,
+   47.5
   ]
  },
  "corpora": {
   "bhagavatam": {
    "n_poems": 7366,
+   "bound_share": {
+    "n": 7366,
+    "mean": 74.176,
+    "sd": 4.3791,
+    "p10": 68.6275,
+    "median": 74.1379,
+    "p90": 79.661
+   },
    "word_length": {
     "n": 7366,
     "mean": 3.994,
@@ -53,23 +64,23 @@
    },
    "ojas": {
     "n": 7366,
-    "mean": 0.0995,
-    "sd": 0.6945,
-    "p10": -0.7383,
-    "median": 0.0565,
-    "p90": 0.9666
+    "mean": 43.0888,
+    "sd": 3.2571,
+    "p10": 38.8889,
+    "median": 43.125,
+    "p90": 47.2222
    },
    "poem_levels_pct": {
-    "light": 6.67,
-    "leaning_light": 17.21,
-    "moderate": 40.93,
-    "leaning_dense": 23.95,
-    "dense": 11.24
+    "light": 11.91,
+    "leaning_light": 25.18,
+    "moderate": 33.76,
+    "leaning_dense": 20.05,
+    "dense": 9.1
    },
    "fierce_above_tender": {
     "ojas": {
-     "auc": 0.4936,
-     "z": -0.42,
+     "auc": 0.5007,
+     "z": 0.04,
      "n_pos": 616,
      "n_neg": 845
     },
@@ -95,35 +106,35 @@
    "by_meter": {
     "kandamu": {
      "n": 2608,
-     "mean_ojas": -0.148
+     "mean_ojas": 41.853
     },
     "tetagiti": {
      "n": 1051,
-     "mean_ojas": 0.186
+     "mean_ojas": 43.503
     },
     "seesamu": {
      "n": 1048,
-     "mean_ojas": 0.277
+     "mean_ojas": 43.949
     },
     "aataveladi": {
      "n": 716,
-     "mean_ojas": 0.099
+     "mean_ojas": 42.976
     },
     "mattebhavikriditamu": {
      "n": 586,
-     "mean_ojas": 0.471
+     "mean_ojas": 45.02
     },
     "champakamala": {
      "n": 490,
-     "mean_ojas": 0.078
+     "mean_ojas": 43.065
     },
     "utpalamala": {
      "n": 471,
-     "mean_ojas": 0.093
+     "mean_ojas": 43.181
     },
     "shardulavikriditamu": {
      "n": 289,
-     "mean_ojas": 0.567
+     "mean_ojas": 45.518
     }
    },
    "prose": {
@@ -132,8 +143,8 @@
     "conjunct_rate": 12.567,
     "prose_above_verse": {
      "ojas": {
-      "auc": 0.5244,
-      "z": 3.27,
+      "auc": 0.5356,
+      "z": 4.76,
       "n_pos": 1871,
       "n_neg": 7366
      },
@@ -153,95 +164,95 @@
    },
    "spearman": {
     "word_length_with_conjunct_rate": -0.0449,
-    "ojas_with_madhurya": -0.32,
+    "ojas_with_madhurya": -0.3341,
     "conjunct_rate_with_madhurya": -0.4183,
     "word_length_with_madhurya": -0.0146,
-    "ojas_with_anuprasa_z": -0.0433,
-    "ojas_with_poem_length": 0.1754,
+    "ojas_with_anuprasa_z": -0.0447,
+    "ojas_with_poem_length": 0.1813,
     "word_length_with_long_word_share": 0.8522
    },
    "lightest_lines": [
     {
-     "ojas": -2.61,
+     "ojas": 21.43,
      "poem": "bhagavatam:3-382-క.",
      "line": "తే పో ధారుణిఁ గామా"
     },
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "bhagavatam:1-420-క.",
      "line": "జాలిఁ బడ నేల? నా శర"
     },
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "bhagavatam:4-59-క.",
      "line": "పతి మీ మామ మఖము సు"
     },
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "bhagavatam:4-758-క.",
      "line": "వీరలు నా సఖు లీ లల"
     },
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "bhagavatam:10.1-1016-క.",
      "line": "హరి నీ దెస రాఁడు గదా"
     },
     {
-     "ojas": -2.55,
+     "ojas": 22.73,
      "poem": "bhagavatam:4-59-క.",
      "line": "సతి దన పతి యగు నా పశు"
     },
     {
-     "ojas": -2.52,
+     "ojas": 23.33,
      "poem": "bhagavatam:8-278-క.",
      "line": "నా కురు లా పిఱుఁదు నడుము నా ముఖమా న"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "bhagavatam:3-583-క.",
      "line": "జీవించుచు నా యెడ సం"
     }
    ],
    "densest_lines": [
     {
-     "ojas": 5.44,
+     "ojas": 70.83,
      "poem": "bhagavatam:2-27-సీ.",
      "line": "క్షేత్రజ్ఞుతోఁ గూర్చి, క్షేత్రజ్ఞునాత్మలో-"
     },
     {
-     "ojas": 5.15,
-     "poem": "bhagavatam:3-58-మ.",
-     "line": "న్నుతులధ్యాత్మ విదుల్మహాభుజులు మాన్యుల్ధర్మమార్గుల్సము"
-    },
-    {
-     "ojas": 4.99,
+     "ojas": 67.5,
      "poem": "bhagavatam:10.2-145-మ.",
      "line": "ద్ధనయోన్నిద్రఁ బ్రపూర్ణసద్గుణసముద్రన్భద్ర నక్షుద్ర నా"
     },
     {
-     "ojas": 4.66,
-     "poem": "bhagavatam:3-927-మ.",
-     "line": "త్తముసర్వాంగ విమర్శనక్రియలకుందార్కొల్పి ప్రత్యంగమున్"
+     "ojas": 65.0,
+     "poem": "bhagavatam:3-58-మ.",
+     "line": "న్నుతులధ్యాత్మ విదుల్మహాభుజులు మాన్యుల్ధర్మమార్గుల్సము"
     },
     {
-     "ojas": 4.64,
+     "ojas": 63.64,
+     "poem": "bhagavatam:8-554-సీ.",
+     "line": "ప్రత్యర్థు లర్థులు ప్రబ్బికొనిన"
+    },
+    {
+     "ojas": 63.16,
      "poem": "bhagavatam:9-527-శా.",
      "line": "ప్రాప్తోద్యద్వరదక్షదక్షిణకరప్రాలంబముం జేసి ప్రో"
     },
     {
-     "ojas": 4.18,
-     "poem": "bhagavatam:10.2-799-మ.",
-     "line": "\"మధుదైత్యాంతకుమీఁది మత్సరమునన్మత్తిల్లి జన్మత్రయా"
+     "ojas": 62.5,
+     "poem": "bhagavatam:3-927-మ.",
+     "line": "త్తముసర్వాంగ విమర్శనక్రియలకుందార్కొల్పి ప్రత్యంగమున్"
     },
     {
-     "ojas": 4.18,
-     "poem": "bhagavatam:10.2-663-మ.",
-     "line": "భవదీయోజ్జ్వలకీర్తి దిగ్వితతులన్భాసిల్లు యుష్మత్పదో"
+     "ojas": 61.54,
+     "poem": "bhagavatam:7-71-క.",
+     "line": "ద్రిజగద్రాజ్యంబు నప్రతిద్వంద్వము దో"
     },
     {
-     "ojas": 4.18,
-     "poem": "bhagavatam:10.2-627-మ.",
-     "line": "య్యకలంకున్వరదున్, మహాపురుషు, బ్రహ్మణ్యున్నతాబ్జాసనున్,"
+     "ojas": 61.54,
+     "poem": "bhagavatam:1-500-క.",
+     "line": "నమ్మనుజేంద్రుండు మ్రొక్కి హర్షాశ్రుతతుల్"
     }
    ],
    "longest_words": [
@@ -289,6 +300,14 @@
   },
   "vemana": {
    "n_poems": 1164,
+   "bound_share": {
+    "n": 1164,
+    "mean": 72.7697,
+    "sd": 3.4349,
+    "p10": 68.6275,
+    "median": 72.9167,
+    "p90": 76.9231
+   },
    "word_length": {
     "n": 1164,
     "mean": 3.7296,
@@ -315,118 +334,118 @@
    },
    "ojas": {
     "n": 1164,
-    "mean": -0.2205,
-    "sd": 0.5327,
-    "p10": -0.8881,
-    "median": -0.2611,
-    "p90": 0.4509
+    "mean": 41.6744,
+    "sd": 2.7693,
+    "p10": 38.2353,
+    "median": 41.5094,
+    "p90": 45.098
    },
    "poem_levels_pct": {
-    "light": 10.74,
-    "leaning_light": 27.23,
-    "moderate": 46.13,
-    "leaning_dense": 12.97,
-    "dense": 2.92
+    "light": 19.76,
+    "leaning_light": 37.89,
+    "moderate": 28.44,
+    "leaning_dense": 11.34,
+    "dense": 2.58
    },
    "by_meter": {
     "aataveladi": {
      "n": 1018,
-     "mean_ojas": -0.196
+     "mean_ojas": 41.802
     },
     "kandamu": {
      "n": 132,
-     "mean_ojas": -0.433
+     "mean_ojas": 40.573
     }
    },
    "spearman": {
     "word_length_with_conjunct_rate": -0.0933,
-    "ojas_with_madhurya": -0.2412,
+    "ojas_with_madhurya": -0.2368,
     "conjunct_rate_with_madhurya": -0.2954,
     "word_length_with_madhurya": 0.0077,
-    "ojas_with_anuprasa_z": -0.0562,
-    "ojas_with_poem_length": -0.1284,
+    "ojas_with_anuprasa_z": -0.0585,
+    "ojas_with_poem_length": -0.1129,
     "word_length_with_long_word_share": 0.8479
    },
    "lightest_lines": [
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "vemana:vemana-96-ఆ.",
      "line": "నీ వాడిన నే నాడుదు"
     },
     {
-     "ojas": -2.3,
+     "ojas": 27.27,
      "poem": "vemana:vemana-16-ఆ.",
      "line": "జూడఁ జూడ రుచుల జాడ వేఱు"
     },
     {
-     "ojas": -2.3,
+     "ojas": 27.27,
      "poem": "vemana:vemana-47-ఆ.",
      "line": "వెంట రాదు; ధనము కొంచఁ బోఁడు;"
     },
     {
-     "ojas": -2.3,
+     "ojas": 27.27,
      "poem": "vemana:vemana-520-ఆ.",
      "line": "యెందు సుఖము లేక యెండి యెండి"
     },
     {
-     "ojas": -2.27,
+     "ojas": 27.78,
      "poem": "vemana:vemana-325-ఆ.",
      "line": "కాలము తన కిక చాలా"
     },
     {
-     "ojas": -2.21,
+     "ojas": 28.57,
      "poem": "vemana:vemana-32-ఆ.",
      "line": "గంగ పారు చుండు కదలని గతి తోడ"
     },
     {
-     "ojas": -2.21,
+     "ojas": 28.57,
      "poem": "vemana:vemana-594-ఆ.",
      "line": "కామి కానివాఁడు కవి గాఁడు రవి గాడు"
     },
     {
-     "ojas": -2.21,
+     "ojas": 28.57,
      "poem": "vemana:vemana-942-ఆ.",
      "line": "జా కుడి నయోగి నెవరు గానరు వేమా."
     }
    ],
    "densest_lines": [
     {
-     "ojas": 3.67,
+     "ojas": 61.54,
      "poem": "vemana:vemana-868-ఆ.",
      "line": "ఆత్మశుద్ధియన్న మన్న శుద్ధియునాత్మ"
     },
     {
-     "ojas": 3.67,
+     "ojas": 61.54,
      "poem": "vemana:vemana-170-ఆ.",
      "line": "కోఁతిఁ బట్టితెచ్చి క్రొత్తపుట్టముగట్టి"
     },
     {
-     "ojas": 3.67,
+     "ojas": 61.54,
      "poem": "vemana:vemana-113-ఆ.",
      "line": "కల్పతరువుక్రింద గ్రచ్చ చెట్టునట్లు"
     },
     {
-     "ojas": 3.36,
+     "ojas": 60.0,
      "poem": "vemana:vemana-997-ఆ.",
      "line": "భద్రమౌను విద్య బ్రహ్మవిద్య"
     },
     {
-     "ojas": 3.36,
+     "ojas": 60.0,
      "poem": "vemana:vemana-548-ఆ.",
      "line": "యిట్టునట్టుఁ బెద్దయిల్లు గట్టి"
     },
     {
-     "ojas": 3.36,
+     "ojas": 60.0,
      "poem": "vemana:vemana-487-ఆ.",
      "line": "తన్నుఁగన్న తల్లి తల్లితల్లి"
     },
     {
-     "ojas": 3.0,
+     "ojas": 58.33,
      "poem": "vemana:vemana-1066-ఆ.",
      "line": "బ్రహ్మవాదు లెల్ల బ్రహ్మంబనంగను"
     },
     {
-     "ojas": 3.0,
+     "ojas": 58.33,
      "poem": "vemana:vemana-567-ఆ.",
      "line": "భ్రష్టుత్రోవఁ దిరుగు భ్రష్టజనులు"
     }
@@ -476,6 +495,14 @@
   },
   "kuchimanchi_timmakavi": {
    "n_poems": 1642,
+   "bound_share": {
+    "n": 1642,
+    "mean": 68.912,
+    "sd": 4.9937,
+    "p10": 63.4615,
+    "median": 68.0,
+    "p90": 76.25
+   },
    "word_length": {
     "n": 1642,
     "mean": 3.3208,
@@ -502,23 +529,23 @@
    },
    "ojas": {
     "n": 1642,
-    "mean": -0.4297,
-    "sd": 0.7338,
-    "p10": -1.2145,
-    "median": -0.546,
-    "p90": 0.452
+    "mean": 40.1086,
+    "sd": 3.8006,
+    "p10": 35.75,
+    "median": 39.6552,
+    "p90": 44.8619
    },
    "poem_levels_pct": {
-    "light": 28.93,
-    "leaning_light": 30.39,
-    "moderate": 28.01,
-    "leaning_dense": 6.7,
-    "dense": 5.97
+    "light": 45.07,
+    "leaning_light": 29.17,
+    "moderate": 15.53,
+    "leaning_dense": 4.81,
+    "dense": 5.42
    },
    "fierce_above_tender": {
     "ojas": {
-     "auc": 0.3829,
-     "z": -4.23,
+     "auc": 0.3811,
+     "z": -4.3,
      "n_pos": 374,
      "n_neg": 154
     },
@@ -544,116 +571,116 @@
    "by_meter": {
     "kandamu": {
      "n": 513,
-     "mean_ojas": -0.757
+     "mean_ojas": 38.401
     },
     "tetagiti": {
      "n": 370,
-     "mean_ojas": -0.601
+     "mean_ojas": 39.275
     },
     "seesamu": {
      "n": 235,
-     "mean_ojas": -0.189
+     "mean_ojas": 41.51
     },
     "aataveladi": {
      "n": 173,
-     "mean_ojas": -0.742
+     "mean_ojas": 38.314
     },
     "champakamala": {
      "n": 148,
-     "mean_ojas": -0.042
+     "mean_ojas": 42.259
     }
    },
    "spearman": {
     "word_length_with_conjunct_rate": 0.0266,
-    "ojas_with_madhurya": -0.3554,
+    "ojas_with_madhurya": -0.3366,
     "conjunct_rate_with_madhurya": -0.3043,
     "word_length_with_madhurya": -0.1557,
-    "ojas_with_anuprasa_z": 0.0942,
-    "ojas_with_poem_length": 0.3471,
+    "ojas_with_anuprasa_z": 0.1022,
+    "ojas_with_poem_length": 0.372,
     "word_length_with_long_word_share": 0.7403
    },
    "lightest_lines": [
     {
-     "ojas": -2.71,
+     "ojas": 18.75,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-733",
      "line": "ఓ ఱేఁడ! నీకు మది వే"
     },
     {
-     "ojas": -2.71,
+     "ojas": 18.75,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-1134",
      "line": "నొక రెండు మేటి మీ లే"
     },
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-459",
      "line": "దా కఱి మెడ దొర దీనిం"
     },
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-562",
      "line": "ఆ పొల మేపరి సూ డిపు"
     },
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-858",
      "line": "నరజు మెయి పూని యా ద"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-382",
      "line": "కావున మా యెడ మీకుం"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-566",
      "line": "నీ యానతిఁ గడవఁ బోము నీ యాన సుమీ!"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-635",
      "line": "జోటి పనుల్‌ గోరిన న"
     }
    ],
    "densest_lines": [
     {
-     "ojas": 4.66,
-     "poem": "kuchimanchi_timmakavi:kuchimanchi-53",
-     "line": "తనగేహభ్రమఁగిన్నినాళ్ళు ఘనవృద్ధప్రాప్తిఁ గొన్నేళ్ళుఁబా"
-    },
-    {
-     "ojas": 4.18,
-     "poem": "kuchimanchi_timmakavi:kuchimanchi-60",
-     "line": "ప్రథితాదభ్రసితాభ్రశుభ్రయశ! భర్గా! పార్వతీవల్లభా!"
-    },
-    {
-     "ojas": 4.13,
-     "poem": "kuchimanchi_timmakavi:kuchimanchi-71",
-     "line": "మన్నెల్లందమసొమ్మటంచు వసుధా మార్త్యోత్తమక్షేత్రముల్"
-    },
-    {
-     "ojas": 4.13,
-     "poem": "kuchimanchi_timmakavi:kuchimanchi-59",
-     "line": "ద్రాఘిష్ఠప్రభుతాగుణోల్లాసన! భర్గా! పార్వతీవల్లభా!"
-    },
-    {
-     "ojas": 4.12,
+     "ojas": 62.5,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-1473",
      "line": "డక్కూళ గ్రద్ద గ్రుద్దియు"
     },
     {
-     "ojas": 4.1,
-     "poem": "kuchimanchi_timmakavi:kuchimanchi-92",
-     "line": "గైకొండ్రెల్లపదార్థల్నిజమహో కార్కూఁతలం గ్రోల్చుచు"
+     "ojas": 62.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-180",
+     "line": "నెట్లు పూజ్యములయ్యె నట్లెల్లవేల్పు-"
     },
     {
-     "ojas": 4.01,
+     "ojas": 62.5,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-53",
+     "line": "తనగేహభ్రమఁగిన్నినాళ్ళు ఘనవృద్ధప్రాప్తిఁ గొన్నేళ్ళుఁబా"
+    },
+    {
+     "ojas": 62.5,
      "poem": "kuchimanchi_timmakavi:kuchimanchi-18",
      "line": "స్వరకార్తస్వర విస్ఫురన్మకుట శాశ్వత్పద్మ రాగప్రభో"
     },
     {
-     "ojas": 3.81,
-     "poem": "kuchimanchi_timmakavi:kuchimanchi-180",
-     "line": "నెట్లు పూజ్యములయ్యె నట్లెల్లవేల్పు-"
+     "ojas": 61.11,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-92",
+     "line": "గైకొండ్రెల్లపదార్థల్నిజమహో కార్కూఁతలం గ్రోల్చుచు"
+    },
+    {
+     "ojas": 60.71,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-295",
+     "line": "విన్ను ద్రిమ్మరిరాచకన్నియ ల్వరవుళ్లు"
+    },
+    {
+     "ojas": 60.53,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-71",
+     "line": "మన్నెల్లందమసొమ్మటంచు వసుధా మార్త్యోత్తమక్షేత్రముల్"
+    },
+    {
+     "ojas": 60.53,
+     "poem": "kuchimanchi_timmakavi:kuchimanchi-59",
+     "line": "ద్రాఘిష్ఠప్రభుతాగుణోల్లాసన! భర్గా! పార్వతీవల్లభా!"
     }
    ],
    "longest_words": [
@@ -701,6 +728,14 @@
   },
   "chandassu": {
    "n_poems": 2532,
+   "bound_share": {
+    "n": 2532,
+    "mean": 73.0105,
+    "sd": 4.0432,
+    "p10": 68.0,
+    "median": 72.619,
+    "p90": 78.2809
+   },
    "word_length": {
     "n": 2532,
     "mean": 3.7976,
@@ -727,23 +762,23 @@
    },
    "ojas": {
     "n": 2532,
-    "mean": 0.0906,
-    "sd": 0.7127,
-    "p10": -0.7394,
-    "median": 0.0149,
-    "p90": 1.0062
+    "mean": 43.1499,
+    "sd": 3.4819,
+    "p10": 38.8158,
+    "median": 42.8571,
+    "p90": 47.7183
    },
    "poem_levels_pct": {
-    "light": 7.07,
-    "leaning_light": 17.18,
-    "moderate": 42.97,
-    "leaning_dense": 20.58,
-    "dense": 12.2
+    "light": 12.2,
+    "leaning_light": 25.43,
+    "moderate": 33.81,
+    "leaning_dense": 17.18,
+    "dense": 11.37
    },
    "fierce_above_tender": {
     "ojas": {
-     "auc": 0.5943,
-     "z": 3.55,
+     "auc": 0.5935,
+     "z": 3.52,
      "n_pos": 147,
      "n_neg": 600
     },
@@ -769,120 +804,120 @@
    "by_meter": {
     "seesamu": {
      "n": 576,
-     "mean_ojas": -0.007
+     "mean_ojas": 42.736
     },
     "mattebhavikriditamu": {
      "n": 547,
-     "mean_ojas": 0.536
+     "mean_ojas": 45.316
     },
     "kandamu": {
      "n": 534,
-     "mean_ojas": -0.341
+     "mean_ojas": 40.924
     },
     "utpalamala": {
      "n": 326,
-     "mean_ojas": 0.045
+     "mean_ojas": 42.954
     },
     "champakamala": {
      "n": 290,
-     "mean_ojas": -0.094
+     "mean_ojas": 42.274
     },
     "shardulavikriditamu": {
      "n": 258,
-     "mean_ojas": 0.523
+     "mean_ojas": 45.318
     }
    },
    "spearman": {
     "word_length_with_conjunct_rate": 0.0563,
-    "ojas_with_madhurya": -0.4142,
+    "ojas_with_madhurya": -0.4157,
     "conjunct_rate_with_madhurya": -0.4624,
     "word_length_with_madhurya": -0.0979,
-    "ojas_with_anuprasa_z": -0.046,
-    "ojas_with_poem_length": 0.047,
+    "ojas_with_anuprasa_z": -0.0513,
+    "ojas_with_poem_length": 0.0539,
     "word_length_with_long_word_share": 0.8367
    },
    "lightest_lines": [
     {
-     "ojas": -2.58,
+     "ojas": 22.22,
      "poem": "chandassu:chandassu-sampangimanna-18-క.",
      "line": "మాయ యనఁగ వే ఱై యొక"
     },
     {
-     "ojas": -2.54,
+     "ojas": 23.08,
      "poem": "chandassu:chandassu-madanagopala-18-సీ.",
      "line": "నా సామి నా దొర నా మనోహర యని"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "chandassu:chandassu-aandhranaayaka-103-సీ.",
      "line": "నామీఁదఁ బాఱ నీ వేమి సామి"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "chandassu:chandassu-krishna-2-క.",
      "line": "నీవే నా తోడు నీడ నీవే సఖుడౌ"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "chandassu:chandassu-krishna-89-క.",
      "line": "జంటయు నీ వుండుట నే"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "chandassu:chandassu-madanagopala-24-సీ.",
      "line": "యించుక నీ దయ యుంచరా నా సామి"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "chandassu:chandassu-sampangimanna-18-క.",
      "line": "మాయ! తా రోసినను జూ"
     },
     {
-     "ojas": -2.44,
+     "ojas": 25.0,
      "poem": "chandassu:chandassu-sampangimanna-22-క.",
      "line": "పోరై యారై దూఱై"
     }
    ],
    "densest_lines": [
     {
-     "ojas": 4.66,
-     "poem": "chandassu:chandassu-sarveswara-108-మ.",
-     "line": "అణిమాద్యష్టగుణప్రసిద్ధులు త్రిలోకారాధ్యు లుద్యద్వచో-"
+     "ojas": 63.16,
+     "poem": "chandassu:chandassu-sarveswara-139-శా.",
+     "line": "ప్రాకామ్యస్తవ మొప్పఁ జెప్పె శుభకృత్ప్రవ్యక్తవర్షంబునన్"
     },
     {
-     "ojas": 4.66,
-     "poem": "chandassu:chandassu-sarveswara-97-మ.",
-     "line": "దివిజేంద్రత్వముఁ బద్మజత్వము జగత్సేవ్యస్థిరానర్గళో-"
-    },
-    {
-     "ojas": 4.64,
+     "ojas": 63.16,
      "poem": "chandassu:chandassu-devakinandana-27-శా.",
      "line": "ర్బోధావ్యాప్తినివారణంబు సతతస్ఫూర్జ జ్జగద్రక్షణో"
     },
     {
-     "ojas": 4.24,
-     "poem": "chandassu:chandassu-bhaktamandaara-58-మ.",
-     "line": "పలఁ గోట్యర్బుదసంఖ్యయైనఁ ద్రిజగత్ప్రఖ్యాతదానవచ్ఛటా-"
+     "ojas": 62.5,
+     "poem": "chandassu:chandassu-sarveswara-108-మ.",
+     "line": "అణిమాద్యష్టగుణప్రసిద్ధులు త్రిలోకారాధ్యు లుద్యద్వచో-"
     },
     {
-     "ojas": 4.18,
-     "poem": "chandassu:chandassu-srikaalahasteeswara-108-మ.",
-     "line": "పటవద్రజ్జుభుజంగవద్రజత విభ్రాంతి స్ఫురచ్ఛుక్తివ"
-    },
-    {
-     "ojas": 4.18,
-     "poem": "chandassu:chandassu-srikaalahasteeswara-107-మ.",
-     "line": "విమలమ్ము ల్కమలాభము ల్జితలసద్విత్యుల్లతాలాస్యముల్‌"
-    },
-    {
-     "ojas": 4.18,
-     "poem": "chandassu:chandassu-srikaalahasteeswara-102-మ.",
-     "line": "తసుఖస్వాంతులు సత్యభాషణ సముద్యద్రత్నరుద్రాక్షరా"
-    },
-    {
-     "ojas": 4.18,
+     "ojas": 62.5,
      "poem": "chandassu:chandassu-sarveswara-97-మ.",
-     "line": "లవమాత్రస్థితు లెన్న భక్తిజనితోల్లాసావనోద్యత్సుఖా-"
+     "line": "దివిజేంద్రత్వముఁ బద్మజత్వము జగత్సేవ్యస్థిరానర్గళో-"
+    },
+    {
+     "ojas": 62.5,
+     "poem": "chandassu:chandassu-sarveswara-37-మ.",
+     "line": "త్తమరాజ్యస్థితిపట్టభద్రుఁ డగు సద్భక్తుండు సర్వేశ్వరా!"
+    },
+    {
+     "ojas": 62.5,
+     "poem": "chandassu:chandassu-aandhranaayaka-43-సీ.",
+     "line": "ప్రహ్లాదుఁ డాజన్మభక్తియుక్తుం డండ్రు"
+    },
+    {
+     "ojas": 60.53,
+     "poem": "chandassu:chandassu-srikaalahasteeswara-89-శా.",
+     "line": "న్చిన్నంబుచ్చక ప్రోవకుండునెడలన్‌ శ్రీకాళహస్తీశ్వరా!"
+    },
+    {
+     "ojas": 60.53,
+     "poem": "chandassu:chandassu-srikaalahasteeswara-51-శా.",
+     "line": "ఏలీలన్నుతియింపవచ్చు నుపమోత్ప్రేక్షా ధ్వనివ్యంగ్యశ"
     }
    ],
    "longest_words": [
@@ -933,14 +968,48 @@
   "headline": {
    "spearman_with_headline": 1.0
   },
-  "word_length_only": {
-   "spearman_with_headline": 0.6582
+  "bound_share_only": {
+   "spearman_with_headline": 0.6606
   },
   "conjunct_rate_only": {
-   "spearman_with_headline": 0.7191
+   "spearman_with_headline": 0.7238
   },
   "with_aspirates": {
-   "spearman_with_headline": 0.8682
+   "spearman_with_headline": 0.9318
+  },
+  "version_1_0": {
+   "spearman_with_headline": 0.9936
+  },
+  "spearman_bound_share_with_conjunct_rate": 0.0107
+ },
+ "reference_dependence": {
+  "bhagavatam": {
+   "share_of_reference_pct": 58.0,
+   "v1_word_length_mean_without_it": 3.636,
+   "v1_relabelled_pct": 23.9,
+   "v1_rank_spearman": 0.9967,
+   "v2_relabelled_pct": 0.0
+  },
+  "vemana": {
+   "share_of_reference_pct": 9.2,
+   "v1_word_length_mean_without_it": 3.855,
+   "v1_relabelled_pct": 2.6,
+   "v1_rank_spearman": 0.9998,
+   "v2_relabelled_pct": 0.0
+  },
+  "kuchimanchi_timmakavi": {
+   "share_of_reference_pct": 12.9,
+   "v1_word_length_mean_without_it": 3.921,
+   "v1_relabelled_pct": 13.0,
+   "v1_rank_spearman": 0.9999,
+   "v2_relabelled_pct": 0.0
+  },
+  "chandassu": {
+   "share_of_reference_pct": 19.9,
+   "v1_word_length_mean_without_it": 3.855,
+   "v1_relabelled_pct": 4.1,
+   "v1_rank_spearman": 0.9997,
+   "v2_relabelled_pct": 0.0
   }
  },
  "contrasts": {
@@ -950,8 +1019,8 @@
     "less": "kas_4_61_madhurya",
     "on": "index",
     "basis": "The treatise: ojas is a texture full of compounds (4.69); its mādhurya is words standing apart (4.60).",
-    "value_more": 5.049,
-    "value_less": -0.591,
+    "value_more": 47.5,
+    "value_less": 39.286,
     "in_order": true,
     "with_aspirates_in_order": true
    },
@@ -960,8 +1029,8 @@
     "less": "kp_8_74_madhurya",
     "on": "index",
     "basis": "Mammaṭa: long compounds for ojas (8.75), none or middling for mādhurya (8.74).",
-    "value_more": 4.503,
-    "value_less": 0.429,
+    "value_more": 57.143,
+    "value_less": 44.318,
     "in_order": true,
     "with_aspirates_in_order": true
    },
@@ -970,8 +1039,8 @@
     "less": "kp_8_74_madhurya",
     "on": "index",
     "basis": "Mammaṭa: a vehement arrangement (8.77) against his mādhurya example.",
-    "value_more": 5.594,
-    "value_less": 0.429,
+    "value_more": 56.548,
+    "value_less": 44.318,
     "in_order": true,
     "with_aspirates_in_order": true
    },
@@ -980,8 +1049,8 @@
     "less": "kp_8_74_madhurya",
     "on": "index",
     "basis": "Mammaṭa: a vehement arrangement (8.77) against his mādhurya example.",
-    "value_more": 4.794,
-    "value_less": 0.429,
+    "value_more": 55.952,
+    "value_less": 44.318,
     "in_order": true,
     "with_aspirates_in_order": true
    },
@@ -990,8 +1059,8 @@
     "less": "vamana_3_1_5_not",
     "on": "index",
     "basis": "Vāmana's own pair for a tight texture (3.1.5).",
-    "value_more": 2.632,
-    "value_less": 1.981,
+    "value_more": 50.0,
+    "value_less": 46.667,
     "in_order": true,
     "with_aspirates_in_order": false
    },
@@ -1000,8 +1069,8 @@
     "less": "kd_1_84_ojas",
     "on": "index",
     "basis": "Daṇḍin: the easterners' ojas against the unconfused ojas others want (1.82-84).",
-    "value_more": 7.16,
-    "value_less": 0.849,
+    "value_more": 64.062,
+    "value_less": 46.875,
     "in_order": true,
     "with_aspirates_in_order": true
    },
@@ -1010,8 +1079,8 @@
     "less": "kd_1_70_sukumara",
     "on": "index",
     "basis": "Daṇḍin: an ojas example against the verse he calls not forceful (anūrjita, 1.71).",
-    "value_more": 0.849,
-    "value_less": 0.152,
+    "value_more": 46.875,
+    "value_less": 43.75,
     "in_order": true,
     "with_aspirates_in_order": true
    },
@@ -1030,163 +1099,190 @@
   "with_aspirates_in_order": "6/7",
   "exemplars": {
    "kas_4_62_saukumarya": {
-    "ojas": -0.954,
+    "ojas": 38.125,
+    "bound_share": 73.75,
     "word_length": 3.81,
     "conjunct_rate": 2.5,
     "aspirate_rate": 1.2
    },
    "kp_8_74_madhurya": {
-    "ojas": 0.429,
+    "ojas": 44.318,
+    "bound_share": 79.55,
     "word_length": 4.89,
     "conjunct_rate": 9.1,
     "aspirate_rate": 6.8
    },
    "kas_4_21_parusha": {
-    "ojas": 9.27,
+    "ojas": 64.286,
+    "bound_share": 92.86,
     "word_length": 14.0,
     "conjunct_rate": 35.7,
     "aspirate_rate": 35.7
    },
    "kp_8_75_ojas": {
-    "ojas": 4.503,
+    "ojas": 57.143,
+    "bound_share": 88.1,
     "word_length": 8.4,
     "conjunct_rate": 26.2,
     "aspirate_rate": 9.5
    },
    "kp_8_77_bhima": {
-    "ojas": 5.594,
+    "ojas": 56.548,
+    "bound_share": 90.48,
     "word_length": 10.5,
     "conjunct_rate": 22.6,
     "aspirate_rate": 15.5
    },
    "kp_8_77_kumbhakarna": {
-    "ojas": 4.794,
+    "ojas": 55.952,
+    "bound_share": 89.29,
     "word_length": 9.33,
     "conjunct_rate": 22.6,
     "aspirate_rate": 15.5
    },
    "kd_1_70_sukumara": {
-    "ojas": 0.152,
+    "ojas": 43.75,
+    "bound_share": 75.0,
     "word_length": 4.0,
     "conjunct_rate": 12.5,
     "aspirate_rate": 9.4
    },
    "kd_1_72_krcchrodya": {
-    "ojas": 2.99,
+    "ojas": 57.143,
+    "bound_share": 64.29,
     "word_length": 2.8,
     "conjunct_rate": 50.0,
     "aspirate_rate": 0.0
    },
    "kasc_tikkana_gadha": {
-    "ojas": 1.127,
+    "ojas": 48.684,
+    "bound_share": 71.05,
     "word_length": 3.45,
     "conjunct_rate": 26.3,
     "aspirate_rate": 6.6
    },
    "kasc_peddana_ekkadi": {
-    "ojas": -0.305,
+    "ojas": 41.25,
+    "bound_share": 70.0,
     "word_length": 3.33,
     "conjunct_rate": 12.5,
     "aspirate_rate": 0.0
    },
    "kas_4_61_madhurya": {
-    "ojas": -0.591,
+    "ojas": 39.286,
+    "bound_share": 66.67,
     "word_length": 3.0,
     "conjunct_rate": 11.9,
     "aspirate_rate": 3.6
    },
    "kas_4_70_ojas": {
-    "ojas": 5.049,
+    "ojas": 47.5,
+    "bound_share": 92.0,
     "word_length": 12.5,
     "conjunct_rate": 3.0,
     "aspirate_rate": 10.0
    },
    "kp_8_76_prasada": {
-    "ojas": 2.084,
+    "ojas": 51.471,
+    "bound_share": 82.35,
     "word_length": 5.67,
     "conjunct_rate": 20.6,
     "aspirate_rate": 7.4
    },
    "kd_1_59_first_half": {
-    "ojas": -1.98,
+    "ojas": 25.0,
+    "bound_share": 43.75,
     "word_length": 1.78,
     "conjunct_rate": 6.2,
     "aspirate_rate": 12.5
    },
    "kd_1_59_second_half": {
-    "ojas": -1.828,
+    "ojas": 28.125,
+    "bound_share": 50.0,
     "word_length": 2.0,
     "conjunct_rate": 6.2,
     "aspirate_rate": 6.2
    },
    "kd_1_43_sithila": {
-    "ojas": -0.04,
+    "ojas": 40.909,
+    "bound_share": 81.82,
     "word_length": 5.5,
     "conjunct_rate": 0.0,
     "aspirate_rate": 0.0
    },
    "kd_1_82_ojas": {
-    "ojas": 7.16,
+    "ojas": 64.062,
+    "bound_share": 90.62,
     "word_length": 10.67,
     "conjunct_rate": 37.5,
     "aspirate_rate": 3.1
    },
    "kd_1_84_ojas": {
-    "ojas": 0.849,
+    "ojas": 46.875,
+    "bound_share": 78.12,
     "word_length": 4.57,
     "conjunct_rate": 15.6,
     "aspirate_rate": 6.2
    },
    "vamana_3_1_5_gadha": {
-    "ojas": 2.632,
+    "ojas": 50.0,
+    "bound_share": 86.67,
     "word_length": 7.5,
     "conjunct_rate": 13.3,
     "aspirate_rate": 0.0
    },
    "vamana_3_1_5_not": {
-    "ojas": 1.981,
+    "ojas": 46.667,
+    "bound_share": 86.67,
     "word_length": 7.5,
     "conjunct_rate": 6.7,
     "aspirate_rate": 13.3
    },
    "kas_4_59_prasada": {
-    "ojas": 0.624,
+    "ojas": 44.491,
+    "bound_share": 81.48,
     "word_length": 5.4,
     "conjunct_rate": 7.5,
     "aspirate_rate": 5.0
    },
    "kas_4_5_aprayukta": {
-    "ojas": 2.547,
+    "ojas": 50.0,
+    "bound_share": 86.36,
     "word_length": 7.33,
     "conjunct_rate": 13.6,
     "aspirate_rate": 9.1
    },
    "kas_4_8_asamartha": {
-    "ojas": 2.103,
+    "ojas": 47.727,
+    "bound_share": 86.36,
     "word_length": 7.33,
     "conjunct_rate": 9.1,
     "aspirate_rate": 4.5
    },
    "kas_4_15_apratita": {
-    "ojas": -0.646,
+    "ojas": 39.583,
+    "bound_share": 70.83,
     "word_length": 3.43,
     "conjunct_rate": 8.3,
     "aspirate_rate": 0.0
    },
    "kas_4_17_klishta": {
-    "ojas": 20.731,
+    "ojas": 51.429,
+    "bound_share": 97.14,
     "word_length": 35.0,
     "conjunct_rate": 5.7,
     "aspirate_rate": 2.9
    },
    "kd_1_45_prasada": {
-    "ojas": 0.713,
+    "ojas": 46.667,
+    "bound_share": 73.33,
     "word_length": 3.75,
     "conjunct_rate": 20.0,
     "aspirate_rate": 0.0
    },
    "kd_1_46_vyutpanna": {
-    "ojas": 5.234,
+    "ojas": 63.333,
+    "bound_share": 86.67,
     "word_length": 7.5,
     "conjunct_rate": 40.0,
     "aspirate_rate": 0.0

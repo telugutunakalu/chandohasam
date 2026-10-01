@@ -189,7 +189,7 @@
    "spearman_of_surprisal_with": {
     "zipf": -0.2906,
     "known_word_share": -0.2752,
-    "ojas": 0.1008,
+    "ojas": 0.1145,
     "word_length": -0.1695,
     "conjunct_rate": 0.2987,
     "madhurya": -0.1985,
@@ -342,7 +342,7 @@
    "spearman_of_surprisal_with": {
     "zipf": -0.2418,
     "known_word_share": -0.2257,
-    "ojas": 0.0951,
+    "ojas": 0.0787,
     "word_length": -0.2029,
     "conjunct_rate": 0.2467,
     "madhurya": -0.2209,
@@ -495,7 +495,7 @@
    "spearman_of_surprisal_with": {
     "zipf": -0.3408,
     "known_word_share": -0.3099,
-    "ojas": 0.1447,
+    "ojas": 0.1076,
     "word_length": -0.1549,
     "conjunct_rate": 0.3202,
     "madhurya": -0.1058,
@@ -648,7 +648,7 @@
    "spearman_of_surprisal_with": {
     "zipf": -0.3741,
     "known_word_share": -0.4339,
-    "ojas": 0.2766,
+    "ojas": 0.2776,
     "word_length": -0.0723,
     "conjunct_rate": 0.4231,
     "madhurya": -0.1945,
@@ -743,6 +743,6 @@
  },
  "versions": {
   "madhurya": "1.1",
-  "ojas": "1.0"
+  "ojas": "2.0"
  }
 }

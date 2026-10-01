@@ -118,7 +118,7 @@ def run(args) -> None:
 
         m = [madhurya.pooled(madhurya.profile_poem(p.lines)).index() for p in poems]
         counts = [ojas.pooled(ojas.count_poem(p.lines)) for p in poems]
-        o = [ojas.index(c, oj_base["scale"]) for c in counts]
+        o = [ojas.index(c) for c in counts]
         az = [anuprasa.poem_levels(t, an_base["level_probs"])[anuprasa.HEADLINE][0]
               for t in anuprasa.tokens_of(poems)]
         keep = [i for i, v in enumerate(az) if v is not None]

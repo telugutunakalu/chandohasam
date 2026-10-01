@@ -1,6 +1,7 @@
 # The poetry metrics on the constrained-decoding poems
 
-Date: 2026-09-30. Metrics: anuprāsa 1.0, mādhurya 1.1, ojas 1.0, prasāda 1.0, chandas distance 1.1.
+Date: 2026-09-30; finding 10 rerun with ojas 2.0 on 2026-10-01. Metrics: anuprāsa 1.0, mādhurya 1.1, ojas 2.0,
+prasāda 1.0, chandas distance 1.1.
 Script: [`samples_analysis.py`](../samples_analysis.py) (about 2 min).
 Numbers: [`outputs/samples_analysis.json`](../outputs/samples_analysis.json); one row per poem in `outputs/samples_scores.jsonl`.
 
@@ -204,15 +205,15 @@ clearer. The "obscure" band holds the hardest 10% of real verse.
 |---|---:|---:|---:|---:|
 | constrained: word length L (aksharas) | 3.84 | 4.35 – 4.52 | 3.83 – 4.17 | 3.70 – 4.20 |
 | constrained: conjunct rate J (per 100 aksharas) | 12.0 | 22.2 – 24.5 | 24.4 – 26.6 | 25.7 – 27.1 |
-| constrained: poems in the "dense" band | 10% | 49 – 58% | 46 – 53% | 57 – 60% |
-| free baseline: mean ojas O | 0.00 | −0.28 | −0.38 | −1.10 |
+| constrained: poems in the "dense" band | 8.5% | 47.2 – 55.3% | 43.2 – 48.5% | 54.4 – 57.5% |
+| free baseline: mean ojas O | 42.6 | 41.3 | 40.6 | 36.5 |
 
 The conjunct rate doubles while word length barely moves. In classical verse a
 dense texture comes with long compounds; here it comes from the ్ర / ్య
-clusters of finding 3. In the vṛttas the mean O is +2.3 to +2.5; in the native
-meters it is −0.3 to −1.4, below the real-verse mean of 0. Free text is lighter than
-classical verse, DiffusionGemma's most of all (72% of its baseline poems are in
-the "light" band).
+clusters of finding 3. In the vṛttas the mean O is 51.4 to 54.0; in the native
+meters it is 32.6 to 40.6, below the real-verse mean of 42.6. Free text is lighter
+than classical verse, DiffusionGemma's most of all (81.6% of its baseline poems are
+in the "light" band).
 
 ### 11. Left free, the models are farther from the meter than prose
 

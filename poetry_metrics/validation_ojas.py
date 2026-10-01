@@ -14,7 +14,10 @@ Everything is written to outputs/ojas_validation.json.
    of prose); fierce against tender poems (Kāvyaprakāśa 8.69-70 places ojas in
    the heroic and furious rasas).
 5. Sensitivity: each term alone, aspirates as a third term, the share of long
-   words instead of the mean.
+   words instead of the mean, and version 1.0's standardised index.
+8. Reference dependence: each corpus in turn plays a new poet. Version 1.0
+   rebuilt from the other three corpora relabels part of its poems; version
+   2.0 cannot, since O uses no corpus statistic.
 6. Relations to the other metrics, and between the two terms.
 7. The densest and lightest lines.
 """
@@ -37,23 +40,60 @@ MIN_PROSE_AKSHARAS = 20       # a prose passage shorter than this is not compare
 LONG_WORD = 6                 # aksharas; for the long-word variant
 
 
-def z(value, scale: dict):
-    return (value - scale["mean"]) / scale["sd"]
+# version 1.0 standardised L and J on the four corpora (baselines/ojas_baseline.json of version 1.0)
+V1_SCALE = {"word_length": {"mean": 3.84362, "sd": 0.72973}, "conjunct_rate": {"mean": 12.0379, "sd": 5.12301}}
+V1_CUT_PERCENTILES = (10, 30, 70, 90)
 
 
-def variants(c: oj.Counts, base: dict, extra: dict) -> dict:
-    """The index under other choices of terms."""
-    zl, zj = z(c.word_length, base["scale"]["word_length"]), z(c.conjunct_rate, base["scale"]["conjunct_rate"])
-    za = z(c.aspirate_rate, extra["aspirate_rate"])
-    return {"headline": (zl + zj) / 2, "word_length_only": zl, "conjunct_rate_only": zj,
-            "with_aspirates": (zl + zj + za) / 3}
+def v1_index(c: oj.Counts, scale: dict = V1_SCALE):
+    if c.word_length is None or c.conjunct_rate is None:
+        return None
+    return 0.5 * ((c.word_length - scale["word_length"]["mean"]) / scale["word_length"]["sd"]
+                  + (c.conjunct_rate - scale["conjunct_rate"]["mean"]) / scale["conjunct_rate"]["sd"])
+
+
+def variants(c: oj.Counts) -> dict:
+    """The index under other choices of terms (all shares of aksharas, in percent), and version 1.0's."""
+    w, j, a = c.bound_share, c.conjunct_rate, c.aspirate_rate
+    return {"headline": (w + j) / 2, "bound_share_only": w, "conjunct_rate_only": j,
+            "with_aspirates": (w + j + a) / 3, "version_1_0": v1_index(c)}
+
+
+def reference_dependence(totals_by_corpus: dict) -> dict:
+    """Each corpus as a new poet: rebuild version 1.0 on the other three and count its relabelled poems."""
+    from common.scoring import quantiles
+    out = {}
+    everything = [t for ts in totals_by_corpus.values() for t in ts]
+
+    def scale_of(ts):
+        return {name: {"mean": statistics.fmean(getattr(t, name) for t in ts),
+                       "sd": statistics.pstdev(getattr(t, name) for t in ts)} for name in ("word_length", "conjunct_rate")}
+
+    def cuts_of(ts, sc):
+        q = quantiles([v1_index(t, sc) for t in ts])
+        return [q[k] for k in V1_CUT_PERCENTILES]
+
+    full_scale = scale_of(everything)
+    full_cuts = cuts_of(everything, full_scale)
+    for cname, ts in totals_by_corpus.items():
+        rest = [t for other, us in totals_by_corpus.items() if other != cname for t in us]
+        sc = scale_of(rest)
+        cuts = cuts_of(rest, sc)
+        before = [oj.level_of(v1_index(t, full_scale), full_cuts) for t in ts]
+        after = [oj.level_of(v1_index(t, sc), cuts) for t in ts]
+        out[cname] = {"share_of_reference_pct": round(100 * len(ts) / len(everything), 1),
+                      "v1_word_length_mean_without_it": round(sc["word_length"]["mean"], 3),
+                      "v1_relabelled_pct": round(100 * sum(x != y for x, y in zip(before, after)) / len(ts), 1),
+                      "v1_rank_spearman": spearman([v1_index(t, full_scale) for t in ts], [v1_index(t, sc) for t in ts]),
+                      "v2_relabelled_pct": 0.0}
+    return out
 
 
 def exemplar_counts() -> dict:
     return {e["id"]: oj.pooled(oj.count_poem(e["lines"])) for e in vm.load_exemplars()}
 
 
-def contrasts_report(base: dict, extra: dict) -> dict:
+def contrasts_report(base: dict) -> dict:
     counts = exemplar_counts()
     data = json.loads(vm.EXEMPLARS.read_text(encoding="utf-8"))
     rows = []
@@ -64,13 +104,13 @@ def contrasts_report(base: dict, extra: dict) -> dict:
         if c["on"] == "conjuncts":
             a, b = more.conjunct_rate, less.conjunct_rate
         else:
-            a, b = oj.index(more, base["scale"]), oj.index(less, base["scale"])
+            a, b = oj.index(more), oj.index(less)
         rows.append({"more": c["more"], "less": c["less"], "on": c["on"], "basis": c["basis"],
                      "value_more": round(a, 3), "value_less": round(b, 3), "in_order": a > b,
-                     "with_aspirates_in_order": (variants(more, base, extra)["with_aspirates"]
-                                                 > variants(less, base, extra)["with_aspirates"])
+                     "with_aspirates_in_order": (variants(more)["with_aspirates"] > variants(less)["with_aspirates"])
                      if c["on"] == "index" else None})
-    figures = {eid: {"ojas": round(oj.index(c, base["scale"]), 3), "word_length": round(c.word_length, 2),
+    figures = {eid: {"ojas": round(oj.index(c), 3), "bound_share": round(c.bound_share, 2),
+                     "word_length": round(c.word_length, 2),
                      "conjunct_rate": round(c.conjunct_rate, 1), "aspirate_rate": round(c.aspirate_rate, 1)}
                for eid, c in counts.items()}
     on_index = [r for r in rows if r["on"] == "index"]
@@ -110,7 +150,9 @@ def long_word_share(lines) -> float:
 def run(args) -> None:
     base = oj.load_baseline()
     md_base, an_base = madhurya.load_baseline(), anuprasa.load_baseline()
-    report = {"version": oj.VERSION, "scale": base["scale"], "cuts": base["cuts"], "corpora": {}}
+    report = {"version": oj.VERSION, "formula": base["formula"], "anchors": base["anchors"], "cuts": base["cuts"],
+              "corpora": {}}
+    totals_by_corpus = {}
 
     everything, all_variants = [], defaultdict(list)
     for cname in corpus.CORPORA:
@@ -118,10 +160,12 @@ def run(args) -> None:
         per_poem = [oj.count_poem(p.lines) for p in poems]
         totals = [oj.pooled(c) for c in per_poem]
         everything += totals
-        index = [oj.index(t, base["scale"]) for t in totals]
+        totals_by_corpus[cname] = [t for t in totals if t.word_length is not None and t.conjunct_rate is not None]
+        index = [oj.index(t) for t in totals]
         levels = Counter(oj.level_of(o, base["cuts"]["poem"]) for o in index)
         entry = {
             "n_poems": len(poems),
+            "bound_share": summary([t.bound_share for t in totals]),
             "word_length": summary([t.word_length for t in totals]),
             "conjunct_rate": summary([t.conjunct_rate for t in totals]),
             "aspirate_rate": summary([t.aspirate_rate for t in totals]),
@@ -133,9 +177,9 @@ def run(args) -> None:
         n = Counter(groups)
         if min(n["fierce"], n["tender"]) >= vm.MIN_GROUP:
             entry["fierce_above_tender"] = {
-                name: auc([getattr(t, attr) if attr else oj.index(t, base["scale"])
+                name: auc([getattr(t, attr) if attr else oj.index(t)
                            for t, g in zip(totals, groups) if g == "fierce"],
-                          [getattr(t, attr) if attr else oj.index(t, base["scale"])
+                          [getattr(t, attr) if attr else oj.index(t)
                            for t, g in zip(totals, groups) if g == "tender"])
                 for name, attr in (("ojas", None), ("word_length", "word_length"), ("conjunct_rate", "conjunct_rate"),
                                    ("aspirate_rate", "aspirate_rate"))}
@@ -154,7 +198,7 @@ def run(args) -> None:
                 "word_length": round(statistics.fmean(t.word_length for t in prose), 3),
                 "conjunct_rate": round(statistics.fmean(t.conjunct_rate for t in prose), 3),
                 "prose_above_verse": {name: auc([f(t) for t in prose], [f(t) for t in totals])
-                                      for name, f in (("ojas", lambda t: oj.index(t, base["scale"])),
+                                      for name, f in (("ojas", lambda t: oj.index(t)),
                                                       ("word_length", lambda t: t.word_length),
                                                       ("conjunct_rate", lambda t: t.conjunct_rate))}}
 
@@ -174,7 +218,7 @@ def run(args) -> None:
                                                          [long_word_share(p.lines) for p in poems]),
         }
 
-        lines = [(oj.index(c, base["scale"]), p.key, text) for p, counts in zip(poems, per_poem)
+        lines = [(oj.index(c), p.key, text) for p, counts in zip(poems, per_poem)
                  for text, c in zip(p.lines, counts) if c.words >= MIN_LINE_WORDS]
         lines.sort(key=lambda x: x[0])
         entry["lightest_lines"] = [{"ojas": round(o, 2), "poem": k, "line": l} for o, k, l in lines[:8]]
@@ -184,14 +228,17 @@ def run(args) -> None:
         report["corpora"][cname] = entry
         print(f"{cname}: {len(poems)} poems")
 
-    extra = {"aspirate_rate": {"mean": statistics.fmean(t.aspirate_rate for t in everything),
-                               "sd": statistics.pstdev(t.aspirate_rate for t in everything)}}
     for t in everything:
-        for name, v in variants(t, base, extra).items():
+        if t.word_length is None or t.conjunct_rate is None:
+            continue
+        for name, v in variants(t).items():
             all_variants[name].append(v)
     report["sensitivity"] = {name: {"spearman_with_headline": spearman(all_variants["headline"], v)}
                              for name, v in all_variants.items()}
-    report["contrasts"] = contrasts_report(base, extra)
+    report["sensitivity"]["spearman_bound_share_with_conjunct_rate"] = spearman(all_variants["bound_share_only"],
+                                                                               all_variants["conjunct_rate_only"])
+    report["reference_dependence"] = reference_dependence(totals_by_corpus)
+    report["contrasts"] = contrasts_report(base)
     report["gloss_check"] = gloss_check()
     report["madhurya_version"] = md_base["version"]
 

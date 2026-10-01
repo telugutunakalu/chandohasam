@@ -1,6 +1,7 @@
 # Do the metrics follow the degradation protocol?
 
-Date: 2026-09-30. Metrics: anuprāsa 1.0, mādhurya 1.1, ojas 1.0, prasāda 1.0, chandas distance 1.1.
+Date: 2026-09-30; the ojas rows rerun with ojas 2.0 on 2026-10-01. Metrics: anuprāsa 1.0, mādhurya 1.1, ojas 2.0,
+prasāda 1.0, chandas distance 1.1.
 Script: [`degradation_protocol.py`](../degradation_protocol.py) (about 2 min, seed 42).
 Numbers: [`outputs/degradation_protocol.json`](../outputs/degradation_protocol.json).
 
@@ -60,7 +61,7 @@ at full strength is below that of the original.
 | prasāda −H | −6.057 | −6.119 | −6.242 | −6.426 | −6.591 | 96.6% | declines |
 | anuprāsa z | 0.690 | 0.649 | 0.557 | 0.421 | 0.331 | 63.8% | declines |
 | mādhurya M | −0.042 | −0.043 | −0.042 | −0.041 | −0.040 | 39.8% | no response |
-| ojas O | −0.112 | −0.112 | −0.112 | −0.112 | −0.112 | 0% | no response |
+| ojas O | 42.02 | 42.02 | 42.02 | 42.02 | 42.02 | 0% | no response |
 
 Ojas is built from counts that a shuffle cannot change. Mādhurya's sequence
 term sees only adjacent aksharas, so moving words barely moves it.
@@ -72,7 +73,7 @@ term sees only adjacent aksharas, so moving words barely moves it.
 | chandas S | 0.953 | 0.861 | 0.747 | 0.584 | 0.264 | 99.6% | declines |
 | prasāda −H | −6.057 | −6.290 | −6.604 | −7.121 | −8.535 | 100% | declines |
 | mādhurya M | −0.042 | −0.044 | −0.045 | −0.045 | −0.052 | 55.7% | declines |
-| ojas O | −0.112 | −0.111 | −0.108 | −0.107 | −0.090 | 43.5% | no response |
+| ojas O | 42.02 | 42.02 | 42.04 | 42.04 | 42.09 | 43.6% | no response |
 | anuprāsa z | 0.690 | 0.701 | 0.717 | 0.747 | 0.823 | 40.9% | rises |
 
 Prasāda falls because a broken akshara also breaks a word. Anuprāsa rises a
@@ -84,7 +85,7 @@ repeated sound.
 | metric | original | 10% | 25% | 50% | 100% | lower | verdict |
 |---|---:|---:|---:|---:|---:|---:|---|
 | chandas S | 0.953 | 0.810 | 0.621 | 0.382 | 0.065 | 99.1% | declines |
-| ojas O | −0.112 | −0.224 | −0.409 | −0.689 | −1.261 | 99.5% | declines |
+| ojas O | 42.02 | 41.45 | 40.50 | 39.07 | 36.14 | 99.4% | declines |
 | prasāda −H | −6.057 | −6.191 | −6.358 | −6.545 | −6.611 | 73.1% | declines |
 | mādhurya M | −0.042 | −0.023 | −0.014 | −0.098 | −3.212 | 21.4% | rises |
 | anuprāsa z | 0.690 | 2.24 | 6.48 | 18.60 | 64.50 | 0% | rises |
@@ -101,7 +102,7 @@ repeated sound.
 | chandas S | −0.608 | −0.661 | −0.727 | −0.856 | −1.074 | 88.9% | declines |
 | anuprāsa z | 1.123 | 0.863 | 0.580 | 0.304 | 0.084 | 75.5% | declines |
 | mādhurya M | −0.047 | −0.051 | −0.059 | −0.071 | −0.130 | 61.5% | declines |
-| ojas O | −0.759 | −0.693 | −0.582 | −0.437 | −0.147 | 11.7% | rises |
+| ojas O | 37.93 | 38.50 | 39.32 | 40.34 | 42.06 | 7.0% | rises |
 | prasāda −H | −7.706 | −7.475 | −7.206 | −6.734 | −5.980 | 2.0% | rises |
 
 A gloss keeps the meaning and replaces the poet's word by a plain modern one.
@@ -123,7 +124,7 @@ nine model and strategy cells:
 | prasāda (clarity) | 0.005 – 0.08 | **rejected** |
 | mādhurya | 0.25 – 0.53 | not told apart |
 | chandas S | 0.53 | level: both are in meter |
-| ojas | 0.65 – 0.75 | scores higher |
+| ojas | 0.62 – 0.74 | scores higher |
 | anuprāsa | 0.68 – 0.95 | scores higher |
 
 The rule asks only meaning metrics to reject the control. Prasāda is the one
@@ -145,6 +146,6 @@ metric here that reads anything like meaning, and it does reject it.
 
 - **The synonym swap is a gloss swap.** The repository has no synonym dictionary. The glosses exist for the Bhāgavatamu only, they are modern prose words, and the ladder starts from the verse with its sandhi taken apart.
 - **The filler is one akshara repeated.** Filler made of real particles or stock words is not tested.
-- **One seed, 400 poems a corpus.** The sign tests are far from their thresholds except for ojas under a broken meter (z = 3.09, at the threshold).
+- **One seed, 400 poems a corpus.** The sign tests are far from their thresholds except for ojas under a broken meter (z = 2.86, against the threshold of 3.09).
 - **Monotone is judged on means.** A step that reverses by less than sampling error would still fail it; none of the "declines" verdicts is close.
 - **The proposal also requires correlation with human ratings.** Nothing here replaces that.
