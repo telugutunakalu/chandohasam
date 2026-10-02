@@ -1,3 +1,17 @@
+> [!IMPORTANT]
+> **Project Mid Submission: Team Chandohasam**
+>
+> - Samvaran Rallabandi (samvaran.rallabandi@research.iiit.ac.in)
+> - Mahesh Emani (mahesh.emani@research.iiit.ac.in)
+> - Radhe Shyam Salopanthula (radheshyam.s@research.iiit.ac.in)
+>
+> 1. **Code Submission.** Repository and development branch for code submission:
+>    https://github.com/telugutunakalu/chandohasam/tree/dev
+> 2. **Datasets.** Contains all the datasets used and going to be published for the project:
+>    https://huggingface.co/datasets/samvaran/chandohasam
+> 3. **Models.** Contains the models trained and their description:
+>    https://huggingface.co/samvaran/chandohasam
+
 # Telugu Chandassu — computational analysis of Telugu metrical poetry
 
 Tooling and experiments for analysing classical Telugu verse (ఛందస్సు): metre
