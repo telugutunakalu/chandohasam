@@ -99,6 +99,19 @@ def load_ruleset(path: Optional[str | Path] = None) -> Ruleset:
     return Ruleset(data, p)
 
 
+_DEFAULT_RS: Optional[Ruleset] = None
+
+
+def _rs(ruleset: Optional[Ruleset]) -> Ruleset:
+    """``ruleset``, or the default ruleset loaded once (parsing the YAML on every call is the slow part)."""
+    global _DEFAULT_RS
+    if ruleset is not None:
+        return ruleset
+    if _DEFAULT_RS is None:
+        _DEFAULT_RS = load_ruleset()
+    return _DEFAULT_RS
+
+
 _METER_INDEX: Optional[dict] = None
 
 

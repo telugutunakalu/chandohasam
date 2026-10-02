@@ -87,7 +87,7 @@ def _prasa_yati(syllables: Sequence[Any], g: tuple[int, ...], rs: Ruleset) -> di
         if str(ENGINE_DIR) not in sys.path:
             sys.path.insert(0, str(ENGINE_DIR))
         import prasa_engine as pe  # noqa: WPS433 (local import: prāsa is optional for pair checks)
-        prs = pe.load_ruleset()
+        prs = pe._rs(None)
         if s2.onset == sy1.onset:
             sub = "PRASA-SAMA-01"
         elif len(s2.onset) == 1 and len(sy1.onset) == 1:

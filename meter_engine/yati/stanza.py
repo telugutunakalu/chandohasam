@@ -54,18 +54,28 @@ class StanzaYati:
         return "\n".join(out)
 
 
+_METER_FLAGS: Optional[dict] = None
+
+
 def _meter_flags(meter: str) -> dict:
-    try:
-        with open(DEFAULT_METER_RULES_PATH, "r", encoding="utf-8") as fh:
-            data = yaml.safe_load(fh)
-        for m in data["meters"]:
-            if m["name"] == meter:
+    global _METER_FLAGS
+    if _METER_FLAGS is None:                        # meter_rules.yaml is parsed once, not per stanza
+        flags: dict[str, dict] = {}
+        try:
+            with open(DEFAULT_METER_RULES_PATH, "r", encoding="utf-8") as fh:
+                data = yaml.safe_load(fh)
+            for m in data["meters"]:
                 st = m.get("structure", {})
-                return {"prasa_yati": bool(m.get("prasa_yati")), "halves": int(st.get("halves_per_line", 1)),
-                        "yati_ganas": list(st.get("yati_ganas", [])), "system": st.get("system", "")}
-    except Exception:  # pragma: no cover
-        pass
-    return {"prasa_yati": False, "halves": 1, "yati_ganas": [], "system": ""}
+                flags.setdefault(m["name"], {
+                    "prasa_yati": bool(m.get("prasa_yati")), "halves": int(st.get("halves_per_line", 1)),
+                    "yati_ganas": list(st.get("yati_ganas", [])), "system": st.get("system", "")})
+        except Exception:  # pragma: no cover
+            pass
+        _METER_FLAGS = flags
+    f = _METER_FLAGS.get(meter)
+    if f is None:
+        return {"prasa_yati": False, "halves": 1, "yati_ganas": [], "system": ""}
+    return dict(f, yati_ganas=list(f["yati_ganas"]))
 
 
 @dataclass

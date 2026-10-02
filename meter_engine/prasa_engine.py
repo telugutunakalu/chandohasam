@@ -24,7 +24,7 @@ from prasa.constants import (ANUSVARA, ARDHABINDU, CONSONANTS, DANTYA_MAP, DEFAU
                              KHANDAKHANDA_RULES, LONG_VOWELS, MATRA_TO_VOWEL, NAKAARA_POLLU,
                              NEVER_ACCEPTED, PROJECT_ROOT, VISARGA, ZWSP)
 from prasa.aksharanusarika_loader import _extend_aksharanusarika                              # noqa: F401
-from prasa.ruleset import _meter_index                                                        # noqa: F401
+from prasa.ruleset import _meter_index, _rs                                                   # noqa: F401
 from prasa.compare import (_bindu_special, _geminate_like, _khandakhanda_variant, _pair_scope,   # noqa: F401
                            _santa_identification)
 from prasa.stanza import _compose_labels, _weight_rule                                        # noqa: F401

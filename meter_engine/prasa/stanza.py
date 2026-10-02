@@ -10,7 +10,7 @@ from typing import Optional
 
 from .constants import KHANDAKHANDA_RULES
 from .akshara import render_onset
-from .ruleset import Ruleset, load_ruleset, _meter_index
+from .ruleset import Ruleset, _meter_index, _rs
 from .features import LineFeatures, extract_line, druta_sandhi_reading
 from .compare import TrailEntry, PairVerdict, compare_pair, _pair_scope
 
@@ -121,7 +121,7 @@ def evaluate(padas: list[str], profile: str = "strict", meter: Optional[str] = N
     weight rule holds.  ``min_profile`` is the least permissive profile under
     which the stanza matches, independent of the requested ``profile``.
     """
-    rs = ruleset or load_ruleset()
+    rs = _rs(ruleset)
     if profile not in rs.profiles:
         raise ValueError(f"unknown profile {profile!r}; choose from {list(rs.profiles)}")
     rs_meta = {"path": str(rs.path) if rs.path else None, "schema_version": rs.version,

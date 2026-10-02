@@ -7,13 +7,13 @@ from __future__ import annotations
 from typing import Optional
 
 from .constants import DANTYA_MAP
-from .ruleset import Ruleset, load_ruleset
+from .ruleset import Ruleset, _rs, load_ruleset
 from .stanza import evaluate
 
 
 def lookup_pair(a: str, b: str, ruleset: Optional[Ruleset] = None) -> dict:
     """The consonant-pair lookup table entry for two single consonants."""
-    rs = ruleset or load_ruleset()
+    rs = _rs(ruleset)
     rule = rs.lookup_pair_rule(a, b)
     status = rs.status(rule)
     return {
