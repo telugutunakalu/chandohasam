@@ -364,6 +364,7 @@ class Desc:
     grow: bool                          # at least one more consonant will join the onset
     vowel: Optional[str]                # None: not written yet
     marks: bool                         # ం / ః may still be added
+    options: Optional[frozenset] = None  # with an inventory: the attested syllables it may still become
 
 
 @dataclass(frozen=True)
@@ -372,6 +373,7 @@ class Cont:
     kind: str                           # keep | grow | die | pollu | split | lone
     weights: tuple[str, ...]            # possible U/I of the pending positions
     descs: tuple[Desc, ...]             # one per pending position
+    u_by_conjunct: bool = False         # a final U only through a conjunct the next akshara must open
 
 
 def _fixed(s) -> Desc:
@@ -380,13 +382,25 @@ def _fixed(s) -> Desc:
 
 @lru_cache(maxsize=200_000)
 def continuations(word: str, cluster_can_grow: bool = True, long_pollu: bool = True,
-                  bare_pollu: bool = True) -> tuple[Cont, ...]:
+                  bare_pollu: bool = True, inv=None) -> tuple[Cont, ...]:
     """The structural classes behind ``split_word(word, cluster_can_grow, long_pollu).options``.
 
     ``bare_pollu=False`` says a word may not be dead consonants alone (the orthography filter):
     a word-initial ``C్`` must grow, and a first syllable cannot die. Their weights stay among the
     options (growing gives U or I), but the akshara with neither onset nor vowel that ending there
     would scan is gone — the registers must not count on it as a vaḷi or a yati / prāsa partner.
+
+    With an inventory ``inv`` (:mod:`.inventory`) only attested syllables count: the committed ones
+    and every final form must be in it, and the last pending syllable carries the attested completions
+    that give it the class's weight (``Desc.options``), one class per weight and route: laghu through the
+    completions light by their own rules; guru through those guru by their own rules (long vowel, mark,
+    pollu form such as రుఁక్), or through the light ones followed by a conjunct (rule 5). That last route
+    binds the next akshara to open a conjunct, so its class says so (``u_by_conjunct``) and the registers
+    check it where the next akshara is the prāsa akshara, a yati target or a prāsa-yati partner
+    (``Registers.alive``). Each route is judged on its own completions: unchecked, the conjunct route
+    promised రుఁ as guru for an ఆటవెలది's ప్రాసయతి (రుఁక్ is not attested, no conjunct rhymes with ర); taken
+    only when no guru form existed, it refused a లలిత's line 2 the prāsa akshara న్స్మ, attested only light
+    and guru in line 1 through the conjunct after it — random-logit control, two dead ends.
 
     >>> sorted((c.kind, c.weights) for c in continuations("సత్య"))
     [('die', ('U',)), ('grow', ('UU', 'UI')), ('keep', ('UU', 'UI'))]
@@ -435,7 +449,82 @@ def continuations(word: str, cluster_can_grow: bool = True, long_pollu: bool = T
         ws = (head + "U",) if sc.self_rules(b) else (head + "U", head + "I")
         closed = bool(b.anusvara or b.visarga or b.candrabindu)     # after a mark no other may follow (orthography)
         out.append(Cont("keep", ws, head_desc + (Desc(b.text, closed, tuple(b.onset), False, b.vowel, not closed),)))
+    if inv is not None:
+        return _attested(tuple(out), syls, inv)
     return tuple(out)
+
+
+def _attested(conts: tuple[Cont, ...], syls: tuple, inv) -> tuple[Cont, ...]:
+    """``conts`` restricted to an inventory: final syllables must be attested, pending ones get their
+    attested completions, and only the weights those completions have by their own rules remain."""
+    if any(s.text not in inv for s in syls[:-2]):
+        return ()                                              # a committed syllable is not attested
+    out = []
+    for c in conts:
+        descs = []
+        last = len(c.descs) - 1
+        for i, d in enumerate(c.descs):
+            closed = c.kind == "keep" and i == last and d.fixed and d.vowel   # closed by a mark: a pollu may follow
+            if d.fixed and not closed:
+                if d.text not in inv:
+                    break
+                descs.append(d)
+                continue
+            if d.grow:                                         # the cluster grows: a longer onset
+                opts = inv.growing(d.onset)
+            elif d.vowel:                                      # written: only marks or a pollu may follow
+                opts = inv.extending(d.text, d.onset)
+            else:                                              # the cluster takes its vowel
+                opts = inv.with_onset(d.onset)
+            if not opts:
+                break
+            descs.append(replace(d, options=opts))
+        else:
+            d = descs[-1]
+            if d.options is None:                                  # every syllable fixed by the text
+                out.append(Cont(c.kind, c.weights, tuple(descs)))
+                continue
+            light = frozenset(u for u in d.options if not _guru(u))
+            guru = d.options - light
+            head = tuple(descs[:-1])
+            for w in c.weights:
+                if w[-1] == "I":
+                    routes = ((light, False),)
+                else:                                              # guru by itself, or light + a conjunct
+                    routes = ((guru, False), (light, True))
+                for opts, conj in routes:
+                    if opts:
+                        out.append(Cont(c.kind, (w,), head + (replace(d, options=opts),), u_by_conjunct=conj))
+    return tuple(out)
+
+
+def _onsets(options) -> list[tuple[str, ...]]:
+    """The distinct consonant clusters of the attested completions."""
+    return sorted({tuple(_syllables(u)[0].onset) for u in options})
+
+
+def _guru(unit: str) -> bool:
+    syls = _syllables(unit)
+    return bool(syls and sc.self_rules(syls[0]))
+
+
+@lru_cache(maxsize=50_000)
+def _yati_forms(options) -> tuple[str, ...]:
+    """The completions, one syllable per combination the yati engine distinguishes (onset, vowel,
+    ం / ః / ఁ, pollu or not): the same verdicts from far fewer candidates."""
+    seen, out = set(), []
+    for u in sorted(options):
+        s = _syllables(u)[0]
+        key = (tuple(s.onset), s.vowel, s.anusvara, s.visarga, s.candrabindu, bool(s.dead))
+        if key not in seen:
+            seen.add(key)
+            out.append(u)
+    return tuple(out)
+
+
+def _conjunct_units(inv) -> frozenset:
+    """The attested syllables that open with a conjunct."""
+    return inv.conjuncts()
 
 
 def _realizations(d: Desc, weight: str, prefer: tuple[str, ...] = (), signs: tuple[str, ...] = ("ం",),
@@ -444,6 +533,8 @@ def _realizations(d: Desc, weight: str, prefer: tuple[str, ...] = (), signs: tup
     (``prefer``: consonants to try first when the onset grows, e.g. the vaḷi's;
     ``signs``: the marks worth trying — a bindu for yati, ం and ః for a pūrva;
     ``vowels``: the vowels worth trying when it has none yet, default all that fit the weight)."""
+    if d.options is not None:                  # an inventory: the class's attested completions
+        return _yati_forms(d.options)
     if d.fixed or (d.vowel and not d.marks and not d.grow):
         return [d.text]
     if d.vowel:                                # written: only a mark may still follow
@@ -465,13 +556,20 @@ def _realizations(d: Desc, weight: str, prefer: tuple[str, ...] = (), signs: tup
 
 @lru_cache(maxsize=200_000)
 def _anchor_follows(meter: str, done: tuple[str, ...], before_prasa: str, profile: str) -> bool:
-    """Can line 1's own prāsa akshara follow ``before_prasa`` (the line up to its pūrva)?
-    Line 1's pūrva may have fused a dead consonant into the prāsa onset (saṁśleṣa), so
-    the anchor is tried with and without that consonant written after the pūrva."""
-    anchor = _prasa_features(done[0])
-    fused = "".join(c + VIRAMA for c in anchor.fused_from_purva)
-    tails = [anchor.prasa] + ([fused + anchor.prasa] if fused and not before_prasa.endswith(fused) else [])
-    return any(_prasa_ok(meter, done + (before_prasa + t + NEUTRAL_TAIL,), profile) for t in tails)
+    """Can the prāsa akshara of a line already written follow ``before_prasa`` (the line up to its
+    pūrva)? Every written line's own prāsa akshara is tried, not only line 1's: lines in prāsa maitri
+    differ (line 1 జన్ చి, line 2 బింజ), and a pūrva that fits line 2's akshara may not fit line 1's
+    (random-logit control, మానిని: with only line 1's tried, no first token of line 3 was allowed — a
+    dead end). A pūrva may have fused a dead consonant into the prāsa onset (saṁśleṣa), so each
+    anchor is tried with and without that consonant written after the pūrva."""
+    tails = []
+    for line in done:
+        anchor = _prasa_features(line)
+        fused = "".join(c + VIRAMA for c in anchor.fused_from_purva)
+        tails.append(anchor.prasa)
+        if fused and not before_prasa.endswith(fused):
+            tails.append(fused + anchor.prasa)
+    return any(_prasa_ok(meter, done + (before_prasa + t + NEUTRAL_TAIL,), profile) for t in dict.fromkeys(tails))
 
 
 def _prasa_yati_holds(syls, g: tuple[int, ...]) -> bool:
@@ -595,26 +693,34 @@ class Registers:
 
     # ------------------------------------------------------------ liveness
     def alive(self, enf, st, cluster_can_grow: bool = True, long_pollu: bool = True,
-              bare_pollu: bool = True) -> bool:
-        """Some continuation keeps gaṇa, prāsa and yati satisfiable together."""
+              bare_pollu: bool = True, inv=None) -> bool:
+        """Some continuation keeps gaṇa, prāsa and yati satisfiable together (with attested
+        syllables only, given an inventory ``inv``)."""
         if st.word:
             split = split_word(st.word, cluster_can_grow, long_pollu)
             q2 = enf.run(st.q, split.committed)
             if q2 is None:
                 return False
             line = _Line(st, st.line_pat + split.committed)
-            conts = continuations(st.word, cluster_can_grow, long_pollu, bare_pollu)
+            conts = continuations(st.word, cluster_can_grow, long_pollu, bare_pollu, inv)
         else:
             q2 = st.q
             line = _Line(st, st.line_pat)
             conts = (Cont("keep", ("",), ()),)
         for cont in conts:
             for w in cont.weights:
-                if enf.run(q2, w) is not None and self._option_ok(st, line, cont, w):
+                q3 = enf.run(q2, w)
+                if q3 is None:
+                    continue
+                conj = inv is not None and cont.u_by_conjunct and w.endswith("U")
+                if conj and enf.run(q3, "U") is None and enf.run(q3, "I") is None:
+                    continue                           # no room for the conjunct akshara in this line
+                if self._option_ok(st, line, cont, w, inv if conj else None):
                     return True
         return False
 
-    def _option_ok(self, st, line: _Line, cont: Cont, w: str) -> bool:
+    def _option_ok(self, st, line: _Line, cont: Cont, w: str, conj=None) -> bool:
+        """``conj`` (an inventory): the akshara after the pending ones must open with a conjunct."""
         if self.prasa and not st.prasa_ok and not self._prasa_ok(st, line, cont, w):
             return False
         if not self.yati:
@@ -625,11 +731,12 @@ class Registers:
         if not per_slot:
             return True                        # (the automaton has the final word on the gaṇas)
         # groups before ydone were decided in advance() — they are the same in every slot
-        return any(all(g is None or g[0] > n or self._group_possible(st, line, cont, w, pattern, g)
+        return any(all(g is None or g[0] > n or self._group_possible(st, line, cont, w, pattern, g, conj)
                        for g in groups[st.ydone:])
                    for groups in per_slot)
 
-    def _group_possible(self, st, line: _Line, cont: Cont, w: str, pattern: str, g: tuple[int, ...]) -> bool:
+    def _group_possible(self, st, line: _Line, cont: Cont, w: str, pattern: str, g: tuple[int, ...],
+                        conj=None) -> bool:
         """Some continuation satisfies the group: every target in maitri with the vaḷi, or,
         where the meter allows it, ప్రాసయతి for a pair (P, Y) (weights of P and Y equal,
         akshara Y+1 rhyming with akshara P+1)."""
@@ -642,6 +749,15 @@ class Registers:
         niyati = len(g) > 2 and _niyati_binding(self.profile) and _vali_width(vali) > 1
         direct, serves = True, []
         for p in g[1:]:
+            if p == n + 1 and conj is not None:
+                # the next akshara must open with a conjunct: some attested one in maitri with the vaḷi
+                prev = _syllables(cont.descs[-1].text)[-1] if cont.descs and cont.descs[-1].text else None
+                d = Desc("", False, (), False, None, True, options=_conjunct_units(conj))
+                if not any(_target_feasible(vali, _canon_prev(prev), False, d, wt, self.profile) for wt in "UI"):
+                    direct = False
+                    break
+                serves.append(frozenset((None,)))
+                continue
             if p > n:
                 continue                       # not written yet: any constituent can still be served
             if p <= line.F:
@@ -664,13 +780,20 @@ class Registers:
         p1, y = g
         if pattern[p1 - 1] != pattern[y - 1]:
             return False                       # YATI-PY-03: aksharas P and Y must weigh the same
+        if y + 1 == n + 1 and conj is not None:
+            # the prāsa-yati akshara must open with a conjunct, and a conjunct rhymes only by identity
+            onset2 = _norm_onset(tuple(line.syls[p1].onset)) if p1 <= line.F else None
+            return onset2 is None or (len(onset2) >= 2 and _prasa_yati_pair(onset2, onset2))
         if y + 1 > n:
             return True                        # the prāsa-yati akshara is not written yet
         if y + 1 <= line.F:
             return _prasa_yati_holds(line.syls, g)
         # akshara P+1 is committed: Y+1 ≤ F + 3 and every such meter has Y ≥ P + 4
         d = cont.descs[y - line.F]
-        return _fallback_feasible(_norm_onset(tuple(line.syls[p1].onset)), d.onset, d.grow)
+        onset2 = _norm_onset(tuple(line.syls[p1].onset))
+        if d.options is not None:
+            return any(_prasa_yati_pair(onset2, _norm_onset(o)) for o in _onsets(d.options))
+        return _fallback_feasible(onset2, d.onset, d.grow)
 
     @staticmethod
     def _target_args(st, line: _Line, cont: Cont, w: str, p: int) -> tuple:
@@ -695,28 +818,38 @@ class Registers:
                 return True
             d2 = line.desc(2, cont)
             dead1 = _syllables(d1.text)[0].dead if d1.text else ()
+            if d2.options is not None:
+                return bool(dead1) or any(_onsets(d2.options))
             return not (d2.vowel and not d2.onset and not d2.grow and not dead1)
         done = tuple(st.done)
         purva = _canon_purva(d1.text, d1.onset)
         if n < 2 or not d1.fixed:
-            # akshara 2 not started, or the pūrva still open: some final form of the pūrva must
-            # take line 1's own prāsa akshara (identity is the canonical prāsa)
-            sep = self._after_purva(line, cont) if n >= 1 and d1.fixed else ""
+            # akshara 2 not started, or the pūrva still open: some final form of the pūrva must take
+            # a written line's own prāsa akshara (identity is the canonical prāsa) — in the same word
+            # or after a space, unless what follows the pūrva is already written
+            after = self._after_purva(line, cont) if n >= 1 and d1.fixed else ""
+            seps = (after,) if after else ("", " ")
             weight = w[0] if 1 > line.F else line.pattern[0]
             if d1.fixed:
                 pooled = [purva]
+            elif d1.options is not None:       # an inventory: the class's attested final forms (a light one
+                # is guru through the anchor's conjunct; the prāsa engine reads the pūrva with the anchor)
+                pooled = sorted({_canon_purva(u, tuple(_syllables(u)[0].onset)) for u in d1.options})
             elif d1.vowel:                     # the text as it stands (ఁ and all), plus the marks still possible
                 pooled = [purva] + ([purva + s for s in ("ం", "ః")] if d1.marks and weight == "U" else [])
             else:                              # consonants only: a canonical onset
                 canon = Desc("", False, ("క",) if (d1.onset or d1.grow) else (), False, None, d1.marks)
                 pooled = _realizations(canon, weight, signs=("ం", "ః"))
-            return any(_anchor_follows(self.meter, done, r + sep, self.profile) for r in pooled)
-        anchor = _prasa_features(st.done[0])
+            return any(_anchor_follows(self.meter, done, r + sep, self.profile) for r in pooled for sep in seps)
         head = purva + self._between_1_2(line, cont)
         d2 = line.desc(2, cont)
+        if d2.options is not None:
+            return any(_prasa_ok(self.meter, done + (head + VIRAMA.join(o) + NEUTRAL_TAIL,), self.profile)
+                       for o in _onsets(d2.options) if o)
         if d2.grow:
             eff = list(_syllables(d1.text)[0].dead) + list(d2.onset)
-            if not (len(anchor.onset) > len(eff) and anchor.onset[:len(eff)] == eff):
+            if not any(len(a.onset) > len(eff) and a.onset[:len(eff)] == eff
+                       for a in (_prasa_features(t) for t in st.done)):
                 return False
             return _anchor_follows(self.meter, done, head, self.profile)
         if not d2.onset:

@@ -101,7 +101,7 @@ class TestPromptsAndEvaluation(unittest.TestCase):
 
 
 def load_tests(loader, tests, ignore):
-    for name in ("incremental", "orthography", "enforcer", "registers", "strategies", "sources", "vocab", "prompts", "evaluate"):
+    for name in ("incremental", "orthography", "enforcer", "registers", "inventory", "attestation", "strategies", "sources", "vocab", "prompts", "evaluate"):
         tests.addTests(doctest.DocTestSuite(importlib.import_module(f"metrical_decoder.{name}")))
     return tests
 

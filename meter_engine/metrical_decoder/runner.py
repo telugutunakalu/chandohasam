@@ -53,17 +53,20 @@ def run_grid(source, index: TokenIndex, meters: Sequence[str], modes: Sequence[s
              topics: Sequence[tuple[str, str]], seeds: Sequence[int], out_dir: str | Path,
              cfg: DecodeConfig = DecodeConfig(), units: int = 1, model_name: str = "",
              log: Callable[[str], None] = print, prasa: bool = False, yati: bool = False,
-             profile: str = "strict", mask_workers: int = 0, decode_fn: Callable = decode) -> Path:
+             profile: str = "strict", mask_workers: int = 0, decode_fn: Callable = decode,
+             inventory: Optional[str] = None) -> Path:
     """Generate and evaluate every cell of the grid; returns the run directory.
     ``mask_workers`` > 0 computes the masks in that many worker processes (same masks, faster).
     ``decode_fn`` generates one poem (default: the autoregressive strategies; the diffusion loop is
-    ``metrical_decoder.diffusion.decoding.decode_diffusion``)."""
+    ``metrical_decoder.diffusion.decoding.decode_diffusion``). ``inventory`` (``verse`` /
+    ``tokenizer``) allows only attested syllables (:mod:`.inventory`)."""
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     (out / "run.json").write_text(json.dumps({
         "model": model_name, "meters": list(meters), "modes": list(modes), "topics": dict(topics),
         "seeds": list(seeds), "units": units, "config": asdict(cfg),
-        "enforce": {"gana": True, "prasa": prasa, "yati": yati, "profile": profile}, "mask_workers": mask_workers,
+        "enforce": {"gana": True, "prasa": prasa, "yati": yati, "profile": profile, "inventory": inventory},
+        "mask_workers": mask_workers,
         "token_budget": {m: token_budget(Enforcer(m, units=units), cfg) for m in meters},
         "started": time.strftime("%Y-%m-%d %H:%M:%S")}, ensure_ascii=False, indent=1), encoding="utf-8")
     done = _done_keys(out / "results.jsonl")
@@ -78,7 +81,8 @@ def run_grid(source, index: TokenIndex, meters: Sequence[str], modes: Sequence[s
             if not todo_meter:
                 continue
             clear_caches()                    # the caches hold one meter's lines: bound memory on long runs
-            enf = Enforcer(meter, units=units, prasa=prasa, yati=yati, profile=profile)
+            enf = Enforcer(meter, units=units, prasa=prasa, yati=yati, profile=profile, inventory=inventory,
+                           alphabet=frozenset(t for t in index.texts if len(t) == 1) if inventory else None)
             pool = mask_pool(index, mask_workers) if mask_workers > 0 else None     # fresh workers, same reason
             masks = ParallelMaskCache(enf, index, pool, mask_workers) if pool else MaskCache(enf, index)
             try:

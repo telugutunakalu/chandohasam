@@ -50,7 +50,10 @@ def _modes(spec: str) -> list[str]:
 
 def _config(ns) -> DecodeConfig:
     return DecodeConfig(temperature=ns.temperature, top_p=ns.top_p, force_nl=ns.force_nl,
-                        baseline_max_tokens=ns.baseline_max_tokens)
+                        baseline_max_tokens=ns.baseline_max_tokens,
+                        attest_weight=getattr(ns, "attest_weight", 0.0),
+                        attest_where=getattr(ns, "attest_where", "override"),
+                        attest_corpus=getattr(ns, "attest_corpus", "all"))
 
 
 def _grid_args(p: argparse.ArgumentParser, default_modes: str) -> None:
@@ -70,6 +73,14 @@ def _grid_args(p: argparse.ArgumentParser, default_modes: str) -> None:
                    help="baseline budget (default 3 × the meter's longest poem + 32)")
     p.add_argument("--mask-workers", type=int, default=0,
                    help="compute masks in N worker processes (same masks; 0 = in this process)")
+    p.add_argument("--inventory", choices=("none", "verse", "tokenizer"), default="none",
+                   help="allow only attested syllables: the verse corpus's or the syllable tokenizer's")
+    p.add_argument("--attest-weight", type=float, default=0.0,
+                   help="Layer B: prefer allowed tokens that keep the words real (probability × exp(w × score))")
+    p.add_argument("--attest-where", choices=("override", "all"), default="override",
+                   help="Layer B acts only where the model's first choice is not allowed, or at every step")
+    p.add_argument("--attest-corpus", choices=("all", "train90"), default="all",
+                   help="Layer B's words: all the verse, or 90% of the poems (a held-out check)")
 
 
 def main(argv: Optional[list[str]] = None) -> int:
@@ -135,9 +146,13 @@ def main(argv: Optional[list[str]] = None) -> int:
     enforce = {x.strip() for x in ns.enforce.split(",")}
     out = run_grid(source, index, meters, modes, topics, seeds, ns.out, _config(ns), ns.units, name,
                    prasa="prasa" in enforce, yati="yati" in enforce, profile=ns.profile,
-                   mask_workers=ns.mask_workers)
+                   mask_workers=ns.mask_workers, inventory=_inventory(ns))
     print(summarize(out))
     return 0
+
+
+def _inventory(ns) -> Optional[str]:
+    return None if ns.inventory == "none" else ns.inventory
 
 
 def _diffusion(ns, meters, modes, topics, seeds) -> int:
@@ -170,7 +185,7 @@ def _diffusion(ns, meters, modes, topics, seeds) -> int:
     enforce = {x.strip() for x in ns.enforce.split(",")}
     out = run_grid(canvas, canvas.index, meters, modes, topics, seeds, ns.out, cfg, ns.units, name,
                    prasa="prasa" in enforce, yati="yati" in enforce, profile=ns.profile,
-                   mask_workers=ns.mask_workers, decode_fn=decode_diffusion)
+                   mask_workers=ns.mask_workers, decode_fn=decode_diffusion, inventory=_inventory(ns))
     print(summarize(out))
     return 0
 

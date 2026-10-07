@@ -147,6 +147,30 @@ class TestWordEnds(unittest.TestCase):
         self.assertEqual(kinds("సత్య", bare_pollu=False), {"grow", "keep", "die"})  # a later one can (సత్య్)
 
 
+class TestPrasaOpenings(unittest.TestCase):
+    """Regression (random-logit control, మానిని, tokenizer inventory): line 1 జన్ చి and line 2 బింజ are in
+    prāsa maitri; with only line 1's prāsa akshara tried, and no space allowed after an unfinished pūrva,
+    no first token of line 3 was allowed although whole openings such as బింజ were — a dead end."""
+
+    LINES = (" జన్ చి థతారువె బ్య్జానికి వారఎ ల్వ్స్పైచ్చరుపుడ్డి ఉ ప్స్యర్చి అభిల్",
+             " బింజ ఘటన్రి ఛ మ్లీ వ్యవ నిర్వ లు మ్ర్లింగ్ క్ష రుణండెములేంత్రహ భాష్")
+
+    def test_any_written_lines_prasa_akshara_may_follow(self):
+        self.assertTrue(R._anchor_follows("manini", self.LINES, "కిం", "strict"))     # fits line 2's జ
+        self.assertTrue(R._anchor_follows("manini", self.LINES, "కన్ ", "strict"))    # line 1's form, with its space
+
+    def test_a_line_may_open_toward_any_written_lines_prasa(self):
+        import re
+        for inv in (None, "tokenizer"):
+            e = Enforcer("manini", prasa=True, yati=True, inventory=inv)
+            s = e.initial()
+            for piece in re.findall(r"\s*\S+", "\n".join(self.LINES)) + ["\n", " "]:
+                s = e.step(s, piece)
+                self.assertIsNotNone(s)
+            for first in ("జ", "జన్", "బిం", "పం"):
+                with self.subTest(inventory=inv, first=first):
+                    self.assertIsNotNone(e.step(s, first))
+
 class TestAnalysis(unittest.TestCase):
     def test_positions(self):
         from metrical_decoder.analysis import _position, _yati_targets

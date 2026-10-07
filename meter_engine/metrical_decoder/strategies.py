@@ -66,6 +66,11 @@ class DecodeConfig:
     force_nl: str = "must_end"           # or "on_accept" (paper)
     trace_top: int = 5
     watch_baseline: bool = True          # baseline: compute masks while the text is still in the meter
+    # Layer B (attestation.py): prefer allowed tokens that keep the words real — probability ×
+    # exp(attest_weight × score); "override": only where the model's first choice is not allowed
+    attest_weight: float = 0.0
+    attest_where: str = "override"       # or "all"
+    attest_corpus: str = "all"           # or "train90" (attestation.load_attestation)
 
 
 class MaskCache:
@@ -204,6 +209,10 @@ def _constrained(enf: Enforcer, index: TokenIndex, source: LogitsSource, mode: s
     tau_c, backtracks, consecutive, decay_left = cfg.temperature, 0, 0, 0
     stall, progress = 0, (0, 0)
     n_masks, mask_seconds, steps = 0, 0.0, 0
+    att = None
+    if cfg.attest_weight:
+        from .attestation import load_attestation
+        att = load_attestation(cfg.attest_corpus)
     status = "budget"
     while len(out) < budget and steps < (cfg.max_backtracks + 2) * budget:
         steps += 1
@@ -258,6 +267,10 @@ def _constrained(enf: Enforcer, index: TokenIndex, source: LogitsSource, mode: s
             status = "dead_end"
             break
         probs = _probs(dist, valid, tau_c)
+        scores = None
+        if att is not None and (cfg.attest_where == "all" or index.position(dist.top[0][0]) not in set(valid)):
+            from .attestation import reweight
+            probs, scores = reweight(probs, state.word, index.texts, cfg.attest_weight, att)
         if mode == "hybrid":
             acc: dict[int, float] = {}
             alv: dict[int, float] = {}
@@ -277,6 +290,8 @@ def _constrained(enf: Enforcer, index: TokenIndex, source: LogitsSource, mode: s
         tid = index.ids[choice]
         state = enf.step(state, index.texts[choice])
         tracer.token(len(out), tid, how, dist, p_pick, frozenset(valid), tau_c, state)
+        if scores is not None:                         # Layer B acted here: the chosen token's score
+            tracer.records[-1]["attest"] = scores[choice]
         out.append(tid)
         source.push(tid)
         consecutive = 0

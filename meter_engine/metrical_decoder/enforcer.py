@@ -57,6 +57,9 @@ class Enforcer:
 
     ``prasa`` / ``yati`` add the engines' prāsa and yati verdicts to the gaṇa
     automaton (``registers.py``), under ``profile`` with yati sandhi off.
+    ``inventory`` (``"verse"`` / ``"tokenizer"`` or an :class:`~.inventory.Inventory`) allows only
+    attested syllables, in the filter and in the liveness test alike (:mod:`.inventory`); ``alphabet``
+    (the model's single-character tokens) keeps only the syllables the model can write.
 
     >>> e = Enforcer("vidyunmala")                   # every akshara guru
     >>> s = e.step(e.initial(), "శ్రీ రామా")
@@ -67,7 +70,7 @@ class Enforcer:
     """
 
     def __init__(self, meter: str, units: int = 1, orthography: bool = True, prasa: bool = False,
-                 yati: bool = False, profile: str = "strict"):
+                 yati: bool = False, profile: str = "strict", inventory=None, alphabet=None):
         dawg = default_dawg()
         self.meter = meter
         self.spec = dawg.spec(meter)
@@ -80,8 +83,16 @@ class Enforcer:
         if prasa or yati:
             from .registers import Registers
             self.registers = Registers(meter, prasa=prasa, yati=yati, profile=profile)
+        self.inventory = None
+        if inventory is not None:
+            from .inventory import Inventory, load_inventory
+            if isinstance(inventory, Inventory):
+                self.inventory = inventory
+            else:
+                self.inventory = load_inventory(inventory, frozenset(alphabet)) if alphabet else load_inventory(inventory)
         self._config = dict(meter=meter, units=self.units, orthography=orthography, prasa=prasa, yati=yati,
-                            profile=profile)
+                            profile=profile, inventory=self.inventory.name if self.inventory is not None else None,
+                            alphabet=self.inventory.alphabet if self.inventory is not None else None)
 
     def config(self) -> dict:
         """The constructor's arguments: ``Enforcer(**e.config())`` behaves like ``e`` (worker processes)."""
@@ -111,6 +122,8 @@ class Enforcer:
                     return None
             if is_boundary(ch):
                 if word:
+                    if self.inventory is not None and not self.inventory.all_known(word):
+                        return None                    # a syllable outside the inventory
                     w = word_weights(word)
                     q = self.run(q, w)
                     if q is None:
@@ -151,9 +164,17 @@ class Enforcer:
         bare_pollu = not self.orthography              # … and a word of dead consonants alone
         if self.registers is not None:
             return self.registers.alive(self, state, cluster_can_grow=not full_cluster, long_pollu=long_pollu,
-                                        bare_pollu=bare_pollu)
+                                        bare_pollu=bare_pollu, inv=self.inventory)
         if not state.word:
             return True                                # q is live: the automaton is trimmed
+        if self.inventory is not None:
+            from .registers import continuations
+            committed, _, _ = split_word(state.word, cluster_can_grow=not full_cluster, long_pollu=long_pollu)
+            q2 = self.run(state.q, committed)
+            return q2 is not None and any(
+                self.run(q2, w) is not None
+                for c in continuations(state.word, not full_cluster, long_pollu, bare_pollu, self.inventory)
+                for w in c.weights)
         committed, options, _ = split_word(state.word, cluster_can_grow=not full_cluster, long_pollu=long_pollu)
         q2 = self.run(state.q, committed)
         return q2 is not None and any(self.run(q2, o) is not None for o in options)
@@ -175,6 +196,8 @@ class Enforcer:
             return False
         if self.orthography and not ortho.can_end(state.ortho):
             return False                               # the word would end in two dead consonants
+        if self.inventory is not None and state.word and not self.inventory.all_known(state.word):
+            return False                               # a syllable outside the inventory
         if self.last_line(state):
             if not self.dfa.is_accepting(q2):
                 return False

@@ -1,5 +1,14 @@
 # Constrained decoding on the metrical DAWG — plan
 
+> **Status (2026-10-07): v2 of the constraint — §17.** Two corpus-built layers beside the
+> unchanged metrical DAWG: an akshara inventory (only syllables attested in the verse may be
+> written; `--inventory verse`) and a soft preference for real words (`--attest-weight 2
+> --attest-where all`). Every poem still in meter (random-logit control 555/555, corpus completeness
+> 225/225, E4B trial 111/111); real words of 2+ aksharas +8.9 points per poem on the E4B trial (+8.2
+> with the preference built from 90% of the poems only). Six exactness holes found and fixed on the
+> way, two of them v1 misjudgements of prāsa line openings. Defaults stay v1 (no inventory, weight 0):
+> v2 is chosen per run. Three models × all ablations with v1: §16.
+>
 > **Status (2026-09-25): prāsa + yati enforced exactly; E4B constrained grid done (§14).**
 >
 > * **Decided:** models Gemma-4 E4B first, then DiffusionGemma 26B-A4B (the
@@ -724,3 +733,86 @@ masking + backtracking / hybrid.
   the most under the left-to-right constraint (−3.1 to −3.8): the frozen-prefix
   loop overrides the block it plans (§15); a constraint that works with the
   model's own order of commitment is the open problem.
+
+## 17. Toward a v2 DAWG: what the corpus says about the junk (2026-10-05)
+
+`experiments/runs/2026-10-05_absent_words/` (README there). The DAWG of arXiv 2307.01428 is Blumer's
+suffix automaton of a text, not our kind (the minimal acyclic automaton of the finite language of
+legal lines); its linear-time construction does not matter at our sizes. Built over the aksharas of
+real verse, though, it measures what our decoder lacks: whether what it writes is attested.
+
+* Words containing an akshara never seen in real verse: 0.3% of held-out real words, 0.0–1.1% in
+  the free baselines, **21–30% under the constraint** (all three models, all strategies); 8.8% of
+  all constrained aksharas, 8,090 distinct invented ones (ల్రు, ల్రి, న్యె, వ్రి, మమ్ …).
+* Unseen akshara pairs: 9% of real words, 21–27% constrained — a real difference, but too common in
+  real verse for a hard rule.
+* The junk sits where the constraint overrode the model (60–67% of those words, against 11–40% of
+  the words the model wrote itself); the allowed set there has a median of 38–222 tokens.
+
+v2 design under consideration: (A) an **akshara inventory** — only aksharas attested in real verse
+may be written — compiled as a lexicon DAWG over characters and composed with the orthography filter
+and the metrical DAWG, exact only if the scansion options and the prāsa/yati realizations draw from
+the same inventory; (B) the **corpus suffix automaton** as a soft preference among allowed tokens
+(attested akshara pairs and runs first), which cannot affect exactness. Test before adopting: a
+111-poem E4B trial against the same keys of the current grid.
+
+**Layer A built and tested (2026-10-05, branch `dawg-v2`, worktree `chandohasam-v2`).**
+`metrical_decoder/inventory.py` (`--inventory verse|tokenizer`): only attested syllables, in the filter
+and in liveness. Exactness took six fixes, each found by the random-logit control or the tests and
+kept as a regression test: guru through a following conjunct only where the next akshara's prāsa,
+yati and prāsa-yati are checked (ఆటవెలది); each weight and route judged on its own completions (లలిత,
+న్స్మ); a syllable closed by ఁ/ం may still take a pollu; only orthographically writable syllables;
+only syllables the model's single-character tokens can write (Gemma has no ఁ token: శాలిని, స్రగ్ధర);
+and two prāsa under-approximations at line openings that v1 had too (only line 1's prāsa akshara
+tried; no space allowed after an unfinished pūrva: మానిని). Checks: 85 decoder tests; random-logit
+control with the verse inventory 555/555 complete and in meter; corpus completeness 225/225 (no
+real poem lost; the tokenizer inventory loses 1, a syllable it lacks). The tokenizer inventory is
+impractical as well as weaker: 7–8 GB per enforcer process (35,230 syllables), and it lets half the
+invented aksharas through (§17 above); dropped from the trial.
+
+E4B trial, 37 meters × 3 strategies, T1, seed 42 (111 poems; `runs/2026-10-05_e4b_v2_*`). The new
+code without an inventory reproduces v1 token for token (111/111), so the differences below are the
+inventory's alone. Masking only / backtracking / hybrid:
+
+| | v1 | v2, verse inventory |
+|---|---|---|
+| in meter, dead ends | 111/111, 0 | 111/111, 0 |
+| words with an akshara never seen in real verse | 32 / 24 / 27% | **0 / 0 / 0%** |
+| junk words (minimal absent factor ≤ 2) | 56 / 48 / 49% | **46 / 38 / 46%** |
+| corpus words | 24.6 / 25.5 / 25.9% | 25.3 / 27.0 / 27.8% |
+| chosen-token logp | −2.19 / −2.05 / −2.09 | −2.10 / −2.23 / −2.26 |
+| poems repeating a line | 24 / 24 / 30% | 19 / 22 / 24% |
+
+The inventory removes the invented aksharas and a fifth of the junk at no cost to exactness or speed,
+and the worst poems change most (మానిని, hybrid: 22 words with invented aksharas → 0). It barely
+moves the share of real words (+1–2 points, within noise at this size): the model now writes
+attested syllables but still strings them into non-words. Layer B (a soft preference for attested
+akshara runs) targets exactly that.
+
+**Layer B built and tested (2026-10-07, `metrical_decoder/attestation.py`, `--attest-weight`,
+`--attest-where`).** Among the allowed tokens, probability × exp(weight × score), the score from the
+words of two aksharas or more in `dataset/*.json` (a set of word prefixes and a character suffix
+automaton — the DAWG of arXiv 2307.01428 — for "occurs inside a word"): a token that ends a word scores
+2 if that word is real; one that continues a word, 2 if it begins a real word and 1 if it occurs inside
+one. The allowed set is untouched, so exactness cannot change. A first scoring that also rewarded every
+word begun and every single-akshara "word" made the model end a word after almost every akshara
+(single-akshara words 4% → 37–46%, real words down; `runs/2026-10-07_e4b_v2_verse_attest2_override`,
+kept with a README); fixed as above.
+
+E4B trial, same 111 poems, verse inventory + Layer B at weight 2 (masking only / backtracking /
+hybrid; real words = corpus words of 2+ aksharas):
+
+| | v1 | A | A+B where the first choice is refused | A+B at every step |
+|---|---|---|---|---|
+| in meter | 111/111 | 111/111 | 111/111 | 111/111 |
+| real words | 23.1 / 24.3 / 24.0% | 23.4 / 23.1 / 25.4% | 25.7 / 28.3 / 28.1% | **30.3 / 37.1 / 33.2%** |
+| single-akshara words | 4.7 / 2.9 / 3.9% | 4.3 / 6.4 / 3.1% | 3.0 / 3.3 / 2.7% | 3.3 / 5.0 / 3.1% |
+| chosen-token logp | −2.19 / −2.05 / −2.09 | −2.10 / −2.23 / −2.26 | −2.14 / −2.20 / −2.23 | −2.11 / −2.10 / −2.28 |
+| poems repeating a line | 9 / 9 / 11 of 37 | 7 / 8 / 9 | 7 / 10 / 10 | 8 / 11 / 10 |
+
+Per poem, A+B at every step against v1: +8.9 points of real words (paired bootstrap 95% CI +6.0 to
++11.9; better in 62 of 111 poems, worse in 25); against A alone +8.3 (+5.4 to +11.5). No filler, the
+model's own token probabilities unchanged, repetition unchanged. Caveat: Layer B is built from the
+same corpus as the real-word measure, so the gain is partly its own target; still about two words in
+three are not real, and repeated lines are untouched. Independent checks still to do: Layer B built
+from 90% of the poems and scored on the rest, a calibrated judge, blind human reading.
