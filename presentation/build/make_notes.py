@@ -1,0 +1,25 @@
+import json, sys, os
+out_dir = sys.argv[1]
+notes = json.load(open(os.path.join(out_dir, 'notes_data.json')))
+notes.sort(key=lambda d: d['n'])
+L = []
+L.append('# Chandohasam progress seminar: speaker notes\n')
+L.append('Deck: `chandohasam_seminar.pptx` (editable, 28 slides = title + 26 content slides + closing); PDF: `chandohasam_seminar.pdf`; figures used by the deck: `figures/`.\n')
+L.append('Source of every number and claim: the mid-submission paper *Chandohasam: Towards Semantically Coherent Telugu Metrical Poetry Generation with Text Diffusion* (Tables 1, 2, 4, 5, 6; Figures 1, 2; Algorithms 1 to 4; §1 to §6). Each slide note below starts with the paper section it is grounded in. Three items are **not** in the paper and are marked as such: the pilot120m training-loss curve (slide 19), the kandamu rule-card figure (slide 8) and the pilot120m architecture figure (slide 18), all from the project write-ups, and the demonstration output (slides 7 and 27), which is the live output of `python3 -m chandohasam` and `python3 -m indic_meter_dawg prefix` on Pothana’s opening verse.\n')
+L.append('## The narrative\n')
+L.append('1. **The problem.** A padyaṃ must balance śabdaṃ (sound) and arthaṃ (meaning). Prior work solves one at the expense of the other: soft control drifts, hard control produces metrically perfect verse that humans rate 2.1 to 2.7 of 5. Telugu adds three positional constraints per line, 37 metres in three families, an alpha-syllabary script and an evaluation gap.')
+L.append('2. **Chandassu.** Akṣara weights, gaṇas, yati and prāsa; what the controller annotates; fixed, class-based and composite metres.')
+L.append('3. **The benchmark.** 12,673 labelled poems from four sources, audited for metre, meaning and duplication.')
+L.append('4. **The controller.** Constrained decoding as a puzzle; the DAWG; one labelled DAWG for 37 metres (1,431 states, 370,315 lines, 99.85% on the Bhāgavatamu); the enforcer; plugging it into autoregressive and diffusion models.')
+L.append('5. **Results.** Form by construction for every model (0 → 555 in metre); the lexical cost of subword tokens; our 120M akṣara-level diffusion model keeps the words; MAUVE says no one writes like the corpus yet; scale does not buy coherence.')
+L.append('6. **Measuring poetry and the road ahead.** Why validity is not quality; the five deterministic metrics; the metrics in design; the full framework with RLVR; progress so far; next steps to 31 October 2026; a live demonstration.\n')
+L.append('Timing: about 1.5 minutes per content slide gives 40 minutes plus questions. If time is short, compress slides 12 and 13 (DAWG) into one and skip slide 22 (caṃdomiti details).\n')
+L.append('## Live demonstration (slide 27)\n')
+L.append('```bash\ncd meter_engine\npython3 -m chandohasam --file poem.txt            # poem.txt = presentation/demo_poem.txt, the four pādas of slide 27\npython3 -m indic_meter_dawg prefix UUUI        # metres still completable after the prefix\npython3 -m indic_meter_dawg stats                 # 37 metres, 1,431 states, 2,514 edges, 370,315 lines\n```\n')
+L.append('## Slide-by-slide notes\n')
+for d in notes:
+    n = 1 if d['n'] == 0 else (28 if d['n'] == 99 else d['n'] + 1)
+    L.append(f"### Slide {n}: {d['title']}\n")
+    L.append(d['note'].strip() + '\n')
+open(os.path.join(out_dir, 'notes.md'), 'w', encoding='utf-8').write('\n'.join(L))
+print('notes.md written with', len(notes), 'slides')
