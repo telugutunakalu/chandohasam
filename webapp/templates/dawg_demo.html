@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dawg_demo.css') }}">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+{% endblock %}
+{% block content %}
+<div class="dg" id="dg">
+    <div class="dg-stage" id="dg-stage"></div>
+
+    <header class="dg-header">
+        <a class="dg-back" href="{{ url_for('index') }}">← Analyzer</a>
+        <div class="dg-title">
+            <span class="dg-title-te">ఛందస్సు DAWG</span>
+            <span class="dg-title-en">akshara-by-akshara walk</span>
+        </div>
+        <div class="dg-version" role="group" aria-label="DAWG version">
+            <button type="button" class="dg-seg" data-version="v1" aria-pressed="true"
+                    title="The metre DAWG alone: guru/laghu, 37 metres">v1 · metre DAWG</button>
+            <button type="button" class="dg-seg" data-version="v2" aria-pressed="false"
+                    title="The metre DAWG + Layer A (akshara inventory) + Layer B (word DAWG over the corpus)">v2 · + inventory + word DAWG</button>
+        </div>
+        <span class="dg-stats" id="dg-stats"></span>
+        <button type="button" class="dg-btn dg-btn-ghost" id="dg-edit">Change poem</button>
+    </header>
+
+    <section class="dg-drawer" id="dg-drawer" hidden>
+        <label for="dg-example">Example</label>
+        <select id="dg-example"><option value="">— paste your own —</option></select>
+        <p class="dg-example-note" id="dg-example-note"></p>
+        <textarea id="dg-poem" rows="6" lang="te" spellcheck="false"></textarea>
+        <div class="dg-drawer-row">
+            <button type="button" class="dg-btn dg-btn-primary" id="dg-trace">Trace this poem</button>
+            <button type="button" class="dg-btn dg-btn-ghost" id="dg-cancel">Close</button>
+        </div>
+    </section>
+
+    <aside class="dg-panel dg-left" id="dg-left">
+        <div class="dg-card dg-poem" id="dg-poem-view"></div>
+        <div class="dg-card dg-caption" id="dg-caption" aria-live="polite"></div>
+    </aside>
+
+    <aside class="dg-panel dg-right" id="dg-right">
+        <div class="dg-card dg-v2" id="dg-v2" hidden></div>
+        <div class="dg-card dg-hyps">
+            <div class="dg-hyps-head">
+                <span class="dg-hyps-title">Hypotheses <span class="dg-muted">(metre, slot)</span></span>
+                <span class="dg-hyps-count" id="dg-hyps-count"></span>
+            </div>
+            <div class="dg-bar"><div class="dg-bar-fill" id="dg-bar-fill"></div></div>
+            <ol class="dg-hyps-list" id="dg-hyps"></ol>
+        </div>
+    </aside>
+
+    <footer class="dg-controls">
+        <button type="button" class="dg-btn dg-icon" id="dg-first" title="Back to the start (Home)">⏮</button>
+        <button type="button" class="dg-btn dg-icon" id="dg-prev" title="Previous step (←)">◀</button>
+        <button type="button" class="dg-btn dg-btn-primary dg-next" id="dg-next" title="Next akshara (→ or Space)">Next ▶</button>
+        <button type="button" class="dg-btn dg-icon" id="dg-play" title="Play / pause (P)">⏵</button>
+        <select id="dg-speed" title="Animation speed">
+            <option value="0.5">0.5×</option>
+            <option value="1" selected>1×</option>
+            <option value="2">2×</option>
+            <option value="4">4×</option>
+        </select>
+        <input type="range" id="dg-scrub" min="0" max="0" value="0" aria-label="Step">
+        <span class="dg-counter" id="dg-counter"></span>
+        <label class="dg-follow"><input type="checkbox" id="dg-follow" checked> follow</label>
+    </footer>
+
+    <div class="dg-legend" id="dg-legend">
+        <div><i class="sw sw-u"></i>U guru edge</div>
+        <div><i class="sw sw-i"></i>| laghu edge</div>
+        <div><i class="dot" style="--c:var(--fam-vrutta)"></i>vṛtta</div>
+        <div><i class="dot" style="--c:var(--fam-jati)"></i>jāti</div>
+        <div><i class="dot" style="--c:var(--fam-upajati)"></i>upajāti</div>
+        <div><i class="dot" style="--c:var(--fam-mixed)"></i>several families</div>
+        <div class="dg-legend-v2"><i class="dot" style="--c:var(--ok)"></i>begins a real word</div>
+        <div class="dg-legend-v2"><i class="dot" style="--c:var(--warn)"></i>inside a real word</div>
+        <div class="dg-legend-v2"><i class="dot" style="--c:var(--bad)"></i>in no corpus word</div>
+    </div>
+
+    <div class="dg-tooltip" id="dg-tooltip" hidden></div>
+    <div class="dg-loading" id="dg-loading"><div class="dg-spinner"></div><span id="dg-loading-text">Loading the DAWG…</span></div>
+</div>
+
+<script id="dg-data" type="application/json">{{ {"poem": poem_text, "version": version, "examples": examples} | tojson }}</script>
+<script type="module" src="{{ url_for('static', filename='js/dawg_demo.js') }}"></script>
+{% endblock %}

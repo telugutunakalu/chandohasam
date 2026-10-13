@@ -155,6 +155,16 @@ button:active {
   background: #5b21b6;
 }
 
+button.btn-secondary {
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+button.btn-secondary:hover {
+  background: rgba(124, 58, 237, 0.08);
+}
+
 /* Banners */
 .banner {
   padding: 1rem 1.2rem;

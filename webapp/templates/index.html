@@ -13,6 +13,8 @@
                 {% endfor %}
             </select>
             <button type="submit">Analyze</button>
+            <button type="submit" class="btn-secondary" formaction="{{ url_for('dawg_page') }}"
+                    title="Watch the metre DAWG read this poem one akshara at a time">▶ DAWG demo</button>
         </div>
     </form>
 
