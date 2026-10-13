@@ -7,6 +7,7 @@
 | Baseline | [`baselines/anuprasa_baseline.json`](../baselines/anuprasa_baseline.json), built by `python3 anuprasa.py build-baseline` |
 | Validation | [`outputs/anuprasa_validation.json`](../outputs/anuprasa_validation.json), built by `python3 anuprasa.py validate` ([`validation_anuprasa.py`](../validation_anuprasa.py)) |
 | Tests | [`tests/test_anuprasa.py`](../tests/test_anuprasa.py): 16 tests |
+| Version 2.0 candidate | [`anuprasa_v2.py`](../anuprasa_v2.py), [`baselines/anuprasa_v2_baseline.json`](../baselines/anuprasa_v2_baseline.json); under evaluation, compared with 1.0 in [`reports/v2_comparison.md`](../reports/v2_comparison.md) (§9) |
 | Proposal | Section 6 and Appendix E.1 (Tier 1), `proposal/chandohasam_full_proposal_v3.md` |
 
 ## 1. What it measures
@@ -264,8 +265,27 @@ See [`../references.bib`](../references.bib) (keys in brackets).
 - Benner, D. C. (2014). The Sounds of the Psalter: Computational Analysis of Soundplay. *Literary and Linguistic Computing* 29(3), 361–378. doi:10.1093/llc/fqu024. [`benner2014psalter`]
 - Benner, D. C. (2013). The Sounds of the Psalter: Computational Analysis of Phonological Parallelism in Biblical Hebrew Poetry. *Digital Humanities 2013* (ADHO), abstract. [`benner2013psalter`]
 - Blain, D. R. (1987). A mathematical model for alliteration. *Style* 21(4), 607–625. JSTOR 42945665. [`blain1987alliteration`]
+- Daṇḍin. *Kāvyādarśa*, pariccheda 1. GRETIL e-text. [`dandin_kavyadarsa`]
 - Frisch, S. A., Pierrehumbert, J. B. & Broe, M. B. (2004). Similarity avoidance and the OCP. *Natural Language & Linguistic Theory* 22(1), 179–228. doi:10.1023/B:NALA.0000005557.78535.3c. [`frisch2004ocp`]
 - Leavitt, J. A. (1976). On the measurement of alliteration in poetry. *Computers and the Humanities* 10(6), 333–342. doi:10.1007/BF02402557. [`leavitt1976alliteration`]
 - Rāmarājabhūṣaṇuḍu (Bhaṭṭumūrti). *Kāvyālaṅkārasaṅgrahamu* (*Narasabhūpālīyamu*), 1920 edition, āśvāsa 4. Telugu Wikisource. [`ramarajabhushana_kas1920`]
 - Simpson, E. H. (1949). Measurement of diversity. *Nature* 163, 688. doi:10.1038/163688a0. [`simpson1949diversity`]
 - Skinner, B. F. (1939). The alliteration in Shakespeare's sonnets: a study in literary behavior. *The Psychological Record* 3, 186–192. [`skinner1939alliteration`]
+
+## 9. Versions
+
+- **1.0** (the default): the chance model's frequencies p are those of the four
+  dataset files, the poems the metric is used to describe.
+- **2.0** (candidate, 1 October 2026, under evaluation;
+  [`anuprasa_v2.py`](../anuprasa_v2.py)): the statistic, the rubric and the
+  output of 1.0, with p a frozen constant of the language: the consonant
+  frequencies of the verse collection that prasāda's model is built from
+  (362,247 crawled poems, none of them in the four dataset files), read from
+  that model's akshara counts. No statistic of the four files enters a score or
+  a label; the percentiles printed beside the score are still against them.
+  - q (varga) rises from 0.0789 to 0.0797, so z falls a little: 99.1% of lines keep their level, and every change is one step down.
+  - Every check gives the same answer as 1.0: the degradation verdicts, the nonsense control (0.684–0.947), the pilot grid (AUC 0.776, varga). The treatise's example (4.77) reads weak at the `varna` level in both, with ష carrying lines 1–3.
+  - Version 1.0 rebuilt without one corpus relabels 0.05–0.32% of that corpus's lines; 2.0 relabels none.
+  - A chance model taken from the poem itself, which would need no corpus at all, was tried and rejected. It cannot see a sound carried through the whole poem: the treatise's 4.77 reads as no anuprāsa (z = 0.17), and the pilot grid's sound figures are separated with AUC 0.61. It is, however, immune to filler. Within a window of 5 aksharas (Daṇḍin 1.55, 1.58; Barbadikar & Kulkarni 2024, §5) it does worse (AUC 0.27).
+
+  Full comparison: [`reports/v2_comparison.md`](../reports/v2_comparison.md), §1.

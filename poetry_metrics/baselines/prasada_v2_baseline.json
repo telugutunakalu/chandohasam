@@ -1,0 +1,31 @@
+{
+ "metric": "prasada",
+ "version": "2.0",
+ "rubric": "anchored to the treatise: its prasāda example (4.59) and its example of a word found only in śāstras and purāṇas (apratīta, 4.15), the interval in thirds; the model is version 1.0's frozen files; no statistic of the four dataset files",
+ "anchors": {
+  "clear": {
+   "id": "kas_4_59_prasada",
+   "locus": "4.59",
+   "surprisal": 5.306857330004358
+  },
+  "obscure": {
+   "id": "kas_4_15_apratita",
+   "locus": "4.15",
+   "surprisal": 6.562059217782234
+  }
+ },
+ "cuts": {
+  "line": [
+   5.306857330004358,
+   5.72525795926365,
+   6.143658588522942,
+   6.562059217782234
+  ],
+  "poem": [
+   5.306857330004358,
+   5.72525795926365,
+   6.143658588522942,
+   6.562059217782234
+  ]
+ }
+}

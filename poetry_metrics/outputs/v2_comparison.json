@@ -1,0 +1,1833 @@
+{
+ "seed": 42,
+ "versions": {
+  "anuprasa": [
+   "1.0",
+   "2.0"
+  ],
+  "madhurya": [
+   "1.1",
+   "2.0"
+  ],
+  "prasada": [
+   "1.0",
+   "2.0"
+  ]
+ },
+ "what_changes": {
+  "anuprasa": "the chance model's consonant frequencies: the four dataset files (v1) -> the language reference, prasāda's crawled verse (v2); statistic and rubric unchanged",
+  "madhurya": "the rubric: reference percentiles (v1) -> symmetric about M = 0 with outer cuts at the treatise's saukumārya example, 4.62 (v2); M unchanged",
+  "prasada": "the rubric: reference percentiles (v1) -> the treatise's prasāda example (4.59) and its example of a word found only in śāstras (apratīta, 4.15), in thirds (v2); H and the model unchanged"
+ },
+ "cuts": {
+  "madhurya": {
+   "v1": {
+    "line": [
+     -0.4643,
+     -0.1579,
+     0.125,
+     0.3
+    ],
+    "poem": [
+     -0.2829,
+     -0.1226,
+     0.049,
+     0.1562
+    ]
+   },
+   "v2": {
+    "line": [
+     -0.39375,
+     -0.13125,
+     0.13125,
+     0.39375
+    ],
+    "poem": [
+     -0.39375,
+     -0.13125,
+     0.13125,
+     0.39375
+    ]
+   }
+  },
+  "prasada": {
+   "v1": {
+    "line": [
+     4.592,
+     5.2567,
+     6.4893,
+     7.6211
+    ],
+    "poem": [
+     5.1211,
+     5.539,
+     6.3311,
+     7.0623
+    ]
+   },
+   "v2": {
+    "line": [
+     5.306857330004358,
+     5.72525795926365,
+     6.143658588522942,
+     6.562059217782234
+    ],
+    "poem": [
+     5.306857330004358,
+     5.72525795926365,
+     6.143658588522942,
+     6.562059217782234
+    ]
+   }
+  }
+ },
+ "anuprasa": {
+  "agreement": {
+   "corpora": {
+    "bhagavatam": {
+     "v1": {
+      "lines_at_or_above_pct": {
+       "weak": 8.27,
+       "marked": 3.77,
+       "strong": 1.62
+      },
+      "poem_labels_pct": {
+       "none": 86.0,
+       "weak": 13.6,
+       "marked": 0.4,
+       "strong": 0.0
+      },
+      "median_poem_z": 0.177
+     },
+     "v2": {
+      "lines_at_or_above_pct": {
+       "weak": 7.82,
+       "marked": 3.48,
+       "strong": 1.5
+      },
+      "poem_labels_pct": {
+       "none": 87.0,
+       "weak": 12.6,
+       "marked": 0.3,
+       "strong": 0.0
+      },
+      "median_poem_z": 0.114
+     }
+    },
+    "vemana": {
+     "v1": {
+      "lines_at_or_above_pct": {
+       "weak": 9.29,
+       "marked": 4.68,
+       "strong": 2.11
+      },
+      "poem_labels_pct": {
+       "none": 82.7,
+       "weak": 16.8,
+       "marked": 0.4,
+       "strong": 0.1
+      },
+      "median_poem_z": 0.75
+     },
+     "v2": {
+      "lines_at_or_above_pct": {
+       "weak": 8.77,
+       "marked": 4.38,
+       "strong": 1.99
+      },
+      "poem_labels_pct": {
+       "none": 83.5,
+       "weak": 16.1,
+       "marked": 0.3,
+       "strong": 0.1
+      },
+      "median_poem_z": 0.699
+     }
+    },
+    "kuchimanchi_timmakavi": {
+     "v1": {
+      "lines_at_or_above_pct": {
+       "weak": 11.87,
+       "marked": 6.33,
+       "strong": 3.18
+      },
+      "poem_labels_pct": {
+       "none": 76.9,
+       "weak": 22.2,
+       "marked": 1.0,
+       "strong": 0.0
+      },
+      "median_poem_z": 0.673
+     },
+     "v2": {
+      "lines_at_or_above_pct": {
+       "weak": 11.5,
+       "marked": 6.04,
+       "strong": 3.03
+      },
+      "poem_labels_pct": {
+       "none": 77.5,
+       "weak": 21.6,
+       "marked": 0.9,
+       "strong": 0.0
+      },
+      "median_poem_z": 0.613
+     }
+    },
+    "chandassu": {
+     "v1": {
+      "lines_at_or_above_pct": {
+       "weak": 9.78,
+       "marked": 4.64,
+       "strong": 1.89
+      },
+      "poem_labels_pct": {
+       "none": 82.9,
+       "weak": 16.3,
+       "marked": 0.8,
+       "strong": 0.0
+      },
+      "median_poem_z": 0.413
+     },
+     "v2": {
+      "lines_at_or_above_pct": {
+       "weak": 9.31,
+       "marked": 4.24,
+       "strong": 1.71
+      },
+      "poem_labels_pct": {
+       "none": 84.5,
+       "weak": 14.8,
+       "marked": 0.7,
+       "strong": 0.0
+      },
+      "median_poem_z": 0.332
+     }
+    }
+   },
+   "spearman_poem_z": 0.9999,
+   "spearman_line_z": 0.9999,
+   "mean_change_poem_z": -0.0659,
+   "lines_same_level_pct": 99.1,
+   "poems_same_label_pct": 98.87,
+   "line_levels_confusion": {
+    "none": {
+     "none": 55591
+    },
+    "weak": {
+     "weak": 2666,
+     "none": 276
+    },
+    "marked": {
+     "weak": 192,
+     "marked": 1314
+    },
+    "strong": {
+     "marked": 86,
+     "strong": 1102
+    }
+   },
+   "moments": {
+    "v1": {
+     "varga": {
+      "q": 0.078937,
+      "r": 0.007154
+     },
+     "varna": {
+      "q": 0.057581,
+      "r": 0.004182
+     }
+    },
+    "v2": {
+     "varga": {
+      "q": 0.079706,
+      "r": 0.007327
+     },
+     "varna": {
+      "q": 0.058638,
+      "r": 0.004399
+     }
+    }
+   },
+   "four_files_tokens": {
+    "line_wise": 1044872,
+    "word_wise": 1044872,
+    "same_count_of_every_sound": true
+   }
+  },
+  "examples": {
+   "kas_4_77_vrttyanuprasa": {
+    "v1": {
+     "varga": {
+      "score": 0.75,
+      "label": "weak",
+      "z": 1.832,
+      "lift": 1.219,
+      "z_percentile": 87.8
+     },
+     "varna": {
+      "score": 1.25,
+      "label": "weak",
+      "z": 3.18,
+      "lift": 1.473,
+      "z_percentile": 96.6
+     },
+     "line_labels_varna": [
+      "weak",
+      "marked",
+      "marked",
+      "none"
+     ],
+     "line_carriers_varna": [
+      "ష",
+      "ష",
+      "ష",
+      "హ"
+     ]
+    },
+    "v2": {
+     "varga": {
+      "score": 0.5,
+      "label": "weak",
+      "z": 1.728,
+      "lift": 1.208,
+      "z_percentile": 87.4
+     },
+     "varna": {
+      "score": 1.25,
+      "label": "weak",
+      "z": 2.973,
+      "lift": 1.446,
+      "z_percentile": 96.4
+     },
+     "line_labels_varna": [
+      "weak",
+      "marked",
+      "marked",
+      "none"
+     ],
+     "line_carriers_varna": [
+      "ష",
+      "ష",
+      "ష",
+      "హ"
+     ]
+    },
+    "locus": "KAS 4.77"
+   },
+   "kd_1_72_krcchrodya": {
+    "v1": {
+     "varga": {
+      "score": 0.0,
+      "label": "none",
+      "z": 1.096,
+      "lift": 1.276,
+      "z_percentile": 74.0
+     },
+     "varna": {
+      "score": 2.0,
+      "label": "marked",
+      "z": 2.406,
+      "lift": 1.749,
+      "z_percentile": 92.1
+     },
+     "line_labels_varna": [
+      "marked"
+     ],
+     "line_carriers_varna": [
+      "ష"
+     ]
+    },
+    "v2": {
+     "varga": {
+      "score": 0.0,
+      "label": "none",
+      "z": 1.044,
+      "lift": 1.263,
+      "z_percentile": 74.5
+     },
+     "varna": {
+      "score": 1.0,
+      "label": "weak",
+      "z": 2.285,
+      "lift": 1.717,
+      "z_percentile": 92.4
+     },
+     "line_labels_varna": [
+      "weak"
+     ],
+     "line_carriers_varna": [
+      "ష"
+     ]
+    }
+   }
+  },
+  "degradations": {
+   "word_shuffle": {
+    "v1": {
+     "original_mean": 0.6899,
+     "steps": [
+      {
+       "strength": 0.1,
+       "n": 1600,
+       "mean": 0.649,
+       "mean_change": -0.0409,
+       "lower_pct": 24.6,
+       "higher_pct": 18.7,
+       "sign_z": -3.61
+      },
+      {
+       "strength": 0.25,
+       "n": 1600,
+       "mean": 0.5569,
+       "mean_change": -0.1331,
+       "lower_pct": 50.5,
+       "higher_pct": 36.9,
+       "sign_z": -5.83
+      },
+      {
+       "strength": 0.5,
+       "n": 1600,
+       "mean": 0.4214,
+       "mean_change": -0.2685,
+       "lower_pct": 61.8,
+       "higher_pct": 37.1,
+       "sign_z": -9.91
+      },
+      {
+       "strength": 1.0,
+       "n": 1600,
+       "mean": 0.331,
+       "mean_change": -0.3589,
+       "lower_pct": 63.8,
+       "higher_pct": 36.2,
+       "sign_z": -11.0
+      }
+     ],
+     "monotone_decline": true,
+     "verdict": "declines"
+    },
+    "v2": {
+     "original_mean": 0.6228,
+     "steps": [
+      {
+       "strength": 0.1,
+       "n": 1600,
+       "mean": 0.5822,
+       "mean_change": -0.0406,
+       "lower_pct": 24.6,
+       "higher_pct": 18.7,
+       "sign_z": -3.61
+      },
+      {
+       "strength": 0.25,
+       "n": 1600,
+       "mean": 0.4908,
+       "mean_change": -0.132,
+       "lower_pct": 50.5,
+       "higher_pct": 36.9,
+       "sign_z": -5.83
+      },
+      {
+       "strength": 0.5,
+       "n": 1600,
+       "mean": 0.3565,
+       "mean_change": -0.2663,
+       "lower_pct": 61.8,
+       "higher_pct": 37.1,
+       "sign_z": -9.96
+      },
+      {
+       "strength": 1.0,
+       "n": 1600,
+       "mean": 0.2665,
+       "mean_change": -0.3563,
+       "lower_pct": 63.8,
+       "higher_pct": 36.2,
+       "sign_z": -11.03
+      }
+     ],
+     "monotone_decline": true,
+     "verdict": "declines"
+    }
+   },
+   "meter_break": {
+    "v1": {
+     "original_mean": 0.6899,
+     "steps": [
+      {
+       "strength": 0.02,
+       "n": 1600,
+       "mean": 0.7008,
+       "mean_change": 0.0109,
+       "lower_pct": 35.1,
+       "higher_pct": 40.8,
+       "sign_z": 2.64
+      },
+      {
+       "strength": 0.05,
+       "n": 1600,
+       "mean": 0.7172,
+       "mean_change": 0.0273,
+       "lower_pct": 44.4,
+       "higher_pct": 49.2,
+       "sign_z": 2.02
+      },
+      {
+       "strength": 0.1,
+       "n": 1600,
+       "mean": 0.7471,
+       "mean_change": 0.0572,
+       "lower_pct": 43.7,
+       "higher_pct": 55.6,
+       "sign_z": 4.77
+      },
+      {
+       "strength": 0.25,
+       "n": 1600,
+       "mean": 0.8233,
+       "mean_change": 0.1333,
+       "lower_pct": 40.9,
+       "higher_pct": 59.1,
+       "sign_z": 7.25
+      }
+     ],
+     "monotone_decline": false,
+     "verdict": "rises"
+    },
+    "v2": {
+     "original_mean": 0.6228,
+     "steps": [
+      {
+       "strength": 0.02,
+       "n": 1600,
+       "mean": 0.6336,
+       "mean_change": 0.0108,
+       "lower_pct": 35.0,
+       "higher_pct": 40.8,
+       "sign_z": 2.67
+      },
+      {
+       "strength": 0.05,
+       "n": 1600,
+       "mean": 0.6497,
+       "mean_change": 0.0269,
+       "lower_pct": 44.4,
+       "higher_pct": 49.2,
+       "sign_z": 1.96
+      },
+      {
+       "strength": 0.1,
+       "n": 1600,
+       "mean": 0.6794,
+       "mean_change": 0.0567,
+       "lower_pct": 43.8,
+       "higher_pct": 55.4,
+       "sign_z": 4.69
+      },
+      {
+       "strength": 0.25,
+       "n": 1600,
+       "mean": 0.7546,
+       "mean_change": 0.1318,
+       "lower_pct": 40.9,
+       "higher_pct": 59.1,
+       "sign_z": 7.25
+      }
+     ],
+     "monotone_decline": false,
+     "verdict": "rises"
+    }
+   },
+   "filler": {
+    "v1": {
+     "original_mean": 0.6899,
+     "steps": [
+      {
+       "strength": 0.1,
+       "n": 1600,
+       "mean": 2.2415,
+       "mean_change": 1.5516,
+       "lower_pct": 12.5,
+       "higher_pct": 85.4,
+       "sign_z": 29.48
+      },
+      {
+       "strength": 0.25,
+       "n": 1600,
+       "mean": 6.4847,
+       "mean_change": 5.7948,
+       "lower_pct": 1.2,
+       "higher_pct": 98.6,
+       "sign_z": 38.97
+      },
+      {
+       "strength": 0.5,
+       "n": 1600,
+       "mean": 18.6019,
+       "mean_change": 17.912,
+       "lower_pct": 0.0,
+       "higher_pct": 100.0,
+       "sign_z": 40.0
+      },
+      {
+       "strength": 1.0,
+       "n": 1600,
+       "mean": 64.4957,
+       "mean_change": 63.8057,
+       "lower_pct": 0.0,
+       "higher_pct": 100.0,
+       "sign_z": 40.0
+      }
+     ],
+     "monotone_decline": false,
+     "verdict": "rises"
+    },
+    "v2": {
+     "original_mean": 0.6228,
+     "steps": [
+      {
+       "strength": 0.1,
+       "n": 1600,
+       "mean": 2.1586,
+       "mean_change": 1.5358,
+       "lower_pct": 12.5,
+       "higher_pct": 85.4,
+       "sign_z": 29.48
+      },
+      {
+       "strength": 0.25,
+       "n": 1600,
+       "mean": 6.3576,
+       "mean_change": 5.7349,
+       "lower_pct": 1.2,
+       "higher_pct": 98.6,
+       "sign_z": 38.97
+      },
+      {
+       "strength": 0.5,
+       "n": 1600,
+       "mean": 18.3493,
+       "mean_change": 17.7266,
+       "lower_pct": 0.0,
+       "higher_pct": 100.0,
+       "sign_z": 40.0
+      },
+      {
+       "strength": 1.0,
+       "n": 1600,
+       "mean": 63.781,
+       "mean_change": 63.1582,
+       "lower_pct": 0.0,
+       "higher_pct": 100.0,
+       "sign_z": 40.0
+      }
+     ],
+     "monotone_decline": false,
+     "verdict": "rises"
+    }
+   },
+   "synonym_swap": {
+    "v1": {
+     "original_mean": 1.1234,
+     "steps": [
+      {
+       "strength": 0.1,
+       "n": 343,
+       "mean": 0.8629,
+       "mean_change": -0.2605,
+       "lower_pct": 66.8,
+       "higher_pct": 32.7,
+       "sign_z": -6.34
+      },
+      {
+       "strength": 0.25,
+       "n": 343,
+       "mean": 0.5799,
+       "mean_change": -0.5435,
+       "lower_pct": 73.2,
+       "higher_pct": 26.5,
+       "sign_z": -8.65
+      },
+      {
+       "strength": 0.5,
+       "n": 343,
+       "mean": 0.3037,
+       "mean_change": -0.8197,
+       "lower_pct": 76.4,
+       "higher_pct": 23.6,
+       "sign_z": -9.77
+      },
+      {
+       "strength": 1.0,
+       "n": 343,
+       "mean": 0.0839,
+       "mean_change": -1.0395,
+       "lower_pct": 75.5,
+       "higher_pct": 24.5,
+       "sign_z": -9.45
+      }
+     ],
+     "monotone_decline": true,
+     "verdict": "declines"
+    },
+    "v2": {
+     "original_mean": 1.0352,
+     "steps": [
+      {
+       "strength": 0.1,
+       "n": 343,
+       "mean": 0.776,
+       "mean_change": -0.2592,
+       "lower_pct": 67.3,
+       "higher_pct": 32.4,
+       "sign_z": -6.49
+      },
+      {
+       "strength": 0.25,
+       "n": 343,
+       "mean": 0.4934,
+       "mean_change": -0.5417,
+       "lower_pct": 72.9,
+       "higher_pct": 27.1,
+       "sign_z": -8.48
+      },
+      {
+       "strength": 0.5,
+       "n": 343,
+       "mean": 0.2164,
+       "mean_change": -0.8187,
+       "lower_pct": 76.4,
+       "higher_pct": 23.6,
+       "sign_z": -9.77
+      },
+      {
+       "strength": 1.0,
+       "n": 343,
+       "mean": -0.0094,
+       "mean_change": -1.0446,
+       "lower_pct": 75.8,
+       "higher_pct": 24.2,
+       "sign_z": -9.56
+      }
+     ],
+     "monotone_decline": true,
+     "verdict": "declines"
+    }
+   },
+   "v1_reproduces_degradation_protocol_json": true
+  },
+  "known_groups": {
+   "auc_sabda_vs_artha_varga": {
+    "v1": 0.7757,
+    "v2": 0.7757
+   },
+   "auc_sabda_vs_artha_varna": {
+    "v1": 0.808,
+    "v2": 0.8083
+   }
+  },
+  "new_poet": {
+   "bhagavatam": {
+    "share_of_reference_pct": 58.0,
+    "q_without_it": 0.07946,
+    "v1_lines_relabelled_pct": 0.28,
+    "v1_poems_relabelled_pct": 0.38,
+    "v2_lines_relabelled_pct": 0.0
+   },
+   "vemana": {
+    "share_of_reference_pct": 9.2,
+    "q_without_it": 0.07902,
+    "v1_lines_relabelled_pct": 0.32,
+    "v1_poems_relabelled_pct": 0.17,
+    "v2_lines_relabelled_pct": 0.0
+   },
+   "kuchimanchi_timmakavi": {
+    "share_of_reference_pct": 12.9,
+    "q_without_it": 0.07881,
+    "v1_lines_relabelled_pct": 0.05,
+    "v1_poems_relabelled_pct": 0.18,
+    "v2_lines_relabelled_pct": 0.0
+   },
+   "chandassu": {
+    "share_of_reference_pct": 19.9,
+    "q_without_it": 0.0789,
+    "v1_lines_relabelled_pct": 0.08,
+    "v1_poems_relabelled_pct": 0.08,
+    "v2_lines_relabelled_pct": 0.0
+   },
+   "v2_chance_model_moves_with_the_reference": false,
+   "q_v1": 0.07894,
+   "q_v2": 0.07971
+  },
+  "corpus_free": {
+   "definition": "the poem's own consonants as the chance model (a random deal of its tokens over its consonant slots); pairs in one line, or in one line and at most 5 aksharas apart (Daṇḍin 1.55, 1.58; Barbadikar & Kulkarni 2024, §5)",
+   "treatise_example_4_77": {
+    "own_chance_line": {
+     "poem_z": 0.175,
+     "line_z": [
+      -0.0552,
+      1.1816,
+      0.7857,
+      -2.0244
+     ]
+    },
+    "own_chance_near_5": {
+     "poem_z": 0.4564,
+     "line_z": [
+      -0.3109,
+      1.1641,
+      0.8298,
+      -1.144
+     ]
+    }
+   },
+   "controls": {
+    "bhagavatam": {
+     "own_chance_line": {
+      "real_beats_word_shuffle_pct": 55.23,
+      "real_beats_word_salad_pct": 50.77
+     },
+     "own_chance_near_5": {
+      "real_beats_word_shuffle_pct": 43.69,
+      "real_beats_word_salad_pct": 40.42
+     },
+     "v1": {
+      "real_beats_word_shuffle_pct": 54.97,
+      "real_beats_word_salad_pct": 62.53
+     }
+    },
+    "vemana": {
+     "own_chance_line": {
+      "real_beats_word_shuffle_pct": 77.15,
+      "real_beats_word_salad_pct": 75.0
+     },
+     "own_chance_near_5": {
+      "real_beats_word_shuffle_pct": 61.0,
+      "real_beats_word_salad_pct": 58.93
+     },
+     "v1": {
+      "real_beats_word_shuffle_pct": 77.06,
+      "real_beats_word_salad_pct": 78.44
+     }
+    },
+    "kuchimanchi_timmakavi": {
+     "own_chance_line": {
+      "real_beats_word_shuffle_pct": 59.32,
+      "real_beats_word_salad_pct": 59.14
+     },
+     "own_chance_near_5": {
+      "real_beats_word_shuffle_pct": 45.86,
+      "real_beats_word_salad_pct": 45.07
+     },
+     "v1": {
+      "real_beats_word_shuffle_pct": 59.44,
+      "real_beats_word_salad_pct": 69.24
+     }
+    },
+    "chandassu": {
+     "own_chance_line": {
+      "real_beats_word_shuffle_pct": 58.85,
+      "real_beats_word_salad_pct": 54.3
+     },
+     "own_chance_near_5": {
+      "real_beats_word_shuffle_pct": 46.72,
+      "real_beats_word_salad_pct": 42.38
+     },
+     "v1": {
+      "real_beats_word_shuffle_pct": 58.41,
+      "real_beats_word_salad_pct": 66.75
+     }
+    }
+   },
+   "spearman_with_v1_poem_z": {
+    "own_chance_line": 0.6288,
+    "own_chance_near_5": 0.4238
+   },
+   "pilot_auc_sabda_vs_artha": {
+    "own_chance_line": 0.6056,
+    "own_chance_near_5": 0.2681
+   },
+   "degradation_verdicts": {
+    "word_shuffle": {
+     "own_chance_line": "declines",
+     "own_chance_near_5": "no response"
+    },
+    "meter_break": {
+     "own_chance_line": "no response",
+     "own_chance_near_5": "rises"
+    },
+    "filler": {
+     "own_chance_line": "no response",
+     "own_chance_near_5": "rises"
+    },
+    "synonym_swap": {
+     "own_chance_line": "no response",
+     "own_chance_near_5": "no response"
+    }
+   },
+   "filler_full_strength_mean": {
+    "own_chance_line": 0.0,
+    "own_chance_near_5": 0.0
+   }
+  }
+ },
+ "madhurya": {
+  "agreement": {
+   "corpora": {
+    "bhagavatam": {
+     "v1": {
+      "poem_labels_pct": {
+       "harsh": 10.2,
+       "leaning_harsh": 20.4,
+       "balanced": 40.3,
+       "leaning_soft": 19.8,
+       "soft": 9.3
+      },
+      "line_labels_pct": {
+       "harsh": 9.8,
+       "leaning_harsh": 20.4,
+       "balanced": 38.6,
+       "leaning_soft": 22.0,
+       "soft": 9.2
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "harsh": 4.4,
+       "leaning_harsh": 24.6,
+       "balanced": 58.1,
+       "leaning_soft": 12.8,
+       "soft": 0.1
+      },
+      "line_labels_pct": {
+       "harsh": 12.9,
+       "leaning_harsh": 20.6,
+       "balanced": 37.0,
+       "leaning_soft": 26.5,
+       "soft": 3.0
+      }
+     }
+    },
+    "vemana": {
+     "v1": {
+      "poem_labels_pct": {
+       "harsh": 7.1,
+       "leaning_harsh": 15.0,
+       "balanced": 32.5,
+       "leaning_soft": 27.1,
+       "soft": 18.3
+      },
+      "line_labels_pct": {
+       "harsh": 8.9,
+       "leaning_harsh": 16.2,
+       "balanced": 30.1,
+       "leaning_soft": 18.0,
+       "soft": 26.9
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "harsh": 3.7,
+       "leaning_harsh": 17.4,
+       "balanced": 54.9,
+       "leaning_soft": 23.7,
+       "soft": 0.3
+      },
+      "line_labels_pct": {
+       "harsh": 11.5,
+       "leaning_harsh": 16.1,
+       "balanced": 28.8,
+       "leaning_soft": 41.4,
+       "soft": 2.2
+      }
+     }
+    },
+    "kuchimanchi_timmakavi": {
+     "v1": {
+      "poem_labels_pct": {
+       "harsh": 10.8,
+       "leaning_harsh": 21.3,
+       "balanced": 39.7,
+       "leaning_soft": 18.3,
+       "soft": 9.9
+      },
+      "line_labels_pct": {
+       "harsh": 10.3,
+       "leaning_harsh": 21.3,
+       "balanced": 39.4,
+       "leaning_soft": 20.5,
+       "soft": 8.6
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "harsh": 4.6,
+       "leaning_harsh": 25.8,
+       "balanced": 56.0,
+       "leaning_soft": 13.6,
+       "soft": 0.0
+      },
+      "line_labels_pct": {
+       "harsh": 14.2,
+       "leaning_harsh": 20.5,
+       "balanced": 37.4,
+       "leaning_soft": 25.3,
+       "soft": 2.7
+      }
+     }
+    },
+    "chandassu": {
+     "v1": {
+      "poem_labels_pct": {
+       "harsh": 10.0,
+       "leaning_harsh": 20.5,
+       "balanced": 42.1,
+       "leaning_soft": 18.5,
+       "soft": 8.9
+      },
+      "line_labels_pct": {
+       "harsh": 9.4,
+       "leaning_harsh": 20.8,
+       "balanced": 40.3,
+       "leaning_soft": 21.1,
+       "soft": 8.3
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "harsh": 4.5,
+       "leaning_harsh": 24.5,
+       "balanced": 59.0,
+       "leaning_soft": 11.9,
+       "soft": 0.0
+      },
+      "line_labels_pct": {
+       "harsh": 12.4,
+       "leaning_harsh": 21.3,
+       "balanced": 38.5,
+       "leaning_soft": 25.3,
+       "soft": 2.5
+      }
+     }
+    }
+   },
+   "all": {
+    "v1": {
+     "poem_labels_pct": {
+      "harsh": 10.0,
+      "leaning_harsh": 20.0,
+      "balanced": 39.8,
+      "leaning_soft": 20.0,
+      "soft": 10.1
+     },
+     "line_labels_pct": {
+      "harsh": 9.7,
+      "leaning_harsh": 20.3,
+      "balanced": 38.5,
+      "leaning_soft": 21.3,
+      "soft": 10.2
+     }
+    },
+    "v2": {
+     "poem_labels_pct": {
+      "harsh": 4.4,
+      "leaning_harsh": 24.1,
+      "balanced": 57.7,
+      "leaning_soft": 13.8,
+      "soft": 0.1
+     },
+     "line_labels_pct": {
+      "harsh": 12.9,
+      "leaning_harsh": 20.4,
+      "balanced": 36.8,
+      "leaning_soft": 27.2,
+      "soft": 2.8
+     }
+    }
+   },
+   "poems_same_label_pct": 66.44,
+   "lines_same_label_pct": 84.6,
+   "poem_labels_confusion": {
+    "balanced": {
+     "balanced": 5062
+    },
+    "leaning_harsh": {
+     "leaning_harsh": 2347,
+     "balanced": 199
+    },
+    "harsh": {
+     "harsh": 555,
+     "leaning_harsh": 711
+    },
+    "soft": {
+     "leaning_soft": 1279,
+     "soft": 8
+    },
+    "leaning_soft": {
+     "balanced": 2075,
+     "leaning_soft": 468
+    }
+   }
+  },
+  "examples": {
+   "exemplars": [
+    {
+     "id": "kas_4_62_saukumarya",
+     "locus": "4.62",
+     "pole": "soft",
+     "tier": "primary",
+     "madhurya": 0.3937,
+     "v1": "soft",
+     "v2": "soft"
+    },
+    {
+     "id": "kp_8_74_madhurya",
+     "locus": "8.74, example 347",
+     "pole": "soft",
+     "tier": "primary",
+     "madhurya": 0.0227,
+     "v1": "balanced",
+     "v2": "balanced"
+    },
+    {
+     "id": "kas_4_21_parusha",
+     "locus": "4.21",
+     "pole": "harsh",
+     "tier": "primary",
+     "madhurya": -1.25,
+     "v1": "harsh",
+     "v2": "harsh"
+    },
+    {
+     "id": "kp_8_75_ojas",
+     "locus": "8.75, example 348",
+     "pole": "harsh",
+     "tier": "primary",
+     "madhurya": -0.4762,
+     "v1": "harsh",
+     "v2": "harsh"
+    },
+    {
+     "id": "kp_8_77_bhima",
+     "locus": "8.77, example 350 (Veṇīsaṃhāra 1.22)",
+     "pole": "harsh",
+     "tier": "primary",
+     "madhurya": -0.5476,
+     "v1": "harsh",
+     "v2": "harsh"
+    },
+    {
+     "id": "kp_8_77_kumbhakarna",
+     "locus": "8.77, example 351",
+     "pole": "harsh",
+     "tier": "primary",
+     "madhurya": -0.5536,
+     "v1": "harsh",
+     "v2": "harsh"
+    },
+    {
+     "id": "kd_1_70_sukumara",
+     "locus": "1.70",
+     "pole": "soft",
+     "tier": "primary",
+     "madhurya": -0.0312,
+     "v1": "balanced",
+     "v2": "balanced"
+    },
+    {
+     "id": "kd_1_72_krcchrodya",
+     "locus": "1.72",
+     "pole": "harsh",
+     "tier": "primary",
+     "madhurya": -1.5,
+     "v1": "harsh",
+     "v2": "harsh"
+    },
+    {
+     "id": "kasc_tikkana_gadha",
+     "locus": "commentary on 4.69-70 (ojas)",
+     "pole": "harsh",
+     "tier": "commentary",
+     "madhurya": -0.25,
+     "v1": "leaning_harsh",
+     "v2": "leaning_harsh"
+    },
+    {
+     "id": "kasc_peddana_ekkadi",
+     "locus": "commentary on 4.62 (saukumārya)",
+     "pole": "soft",
+     "tier": "commentary",
+     "madhurya": -0.0875,
+     "v1": "balanced",
+     "v2": "balanced"
+    },
+    {
+     "id": "kas_4_61_madhurya",
+     "locus": "4.61",
+     "pole": "info",
+     "tier": "primary",
+     "madhurya": 0.0893,
+     "v1": "leaning_soft",
+     "v2": "balanced"
+    },
+    {
+     "id": "kas_4_70_ojas",
+     "locus": "4.70",
+     "pole": "info",
+     "tier": "primary",
+     "madhurya": 0.015,
+     "v1": "balanced",
+     "v2": "balanced"
+    },
+    {
+     "id": "kp_8_76_prasada",
+     "locus": "8.76, example 349",
+     "pole": "info",
+     "tier": "primary",
+     "madhurya": -0.3676,
+     "v1": "harsh",
+     "v2": "leaning_harsh"
+    },
+    {
+     "id": "kd_1_59_first_half",
+     "locus": "1.59ab",
+     "pole": "info",
+     "tier": "primary",
+     "madhurya": -0.25,
+     "v1": "leaning_harsh",
+     "v2": "leaning_harsh"
+    },
+    {
+     "id": "kd_1_59_second_half",
+     "locus": "1.59cd",
+     "pole": "info",
+     "tier": "primary",
+     "madhurya": -0.125,
+     "v1": "balanced",
+     "v2": "balanced"
+    },
+    {
+     "id": "kd_1_43_sithila",
+     "locus": "1.43",
+     "pole": "info",
+     "tier": "primary",
+     "madhurya": 0.3182,
+     "v1": "soft",
+     "v2": "leaning_soft"
+    }
+   ],
+   "same_label": "13/16",
+   "v1_on_their_side": "7/10",
+   "v2_on_their_side": "7/10",
+   "v1_harsh_examples_labelled_harsh": "5/6",
+   "v2_harsh_examples_labelled_harsh": "5/6"
+  },
+  "new_poet": {
+   "bhagavatam": {
+    "share_of_reference_pct": 58.0,
+    "v1_poem_cuts_without_it": [
+     -0.2771,
+     -0.1187,
+     0.0556,
+     0.1633
+    ],
+    "v1_poems_relabelled_pct": 4.37,
+    "v1_lines_relabelled_pct": 4.26,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "vemana": {
+    "share_of_reference_pct": 9.2,
+    "v1_poem_cuts_without_it": [
+     -0.2857,
+     -0.1266,
+     0.0426,
+     0.15
+    ],
+    "v1_poems_relabelled_pct": 2.84,
+    "v1_lines_relabelled_pct": 1.71,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "kuchimanchi_timmakavi": {
+    "share_of_reference_pct": 12.9,
+    "v1_poem_cuts_without_it": [
+     -0.2812,
+     -0.1204,
+     0.05,
+     0.1569
+    ],
+    "v1_poems_relabelled_pct": 1.22,
+    "v1_lines_relabelled_pct": 3.42,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "chandassu": {
+    "share_of_reference_pct": 19.9,
+    "v1_poem_cuts_without_it": [
+     -0.2829,
+     -0.1224,
+     0.0521,
+     0.1596
+    ],
+    "v1_poems_relabelled_pct": 1.7,
+    "v1_lines_relabelled_pct": 2.86,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "v2_cuts_move_with_the_reference": false
+  }
+ },
+ "prasada": {
+  "agreement": {
+   "corpora": {
+    "bhagavatam": {
+     "v1": {
+      "poem_labels_pct": {
+       "obscure": 8.4,
+       "leaning_obscure": 15.1,
+       "ordinary": 40.6,
+       "leaning_clear": 23.1,
+       "clear": 12.8
+      },
+      "line_labels_pct": {
+       "obscure": 8.0,
+       "leaning_obscure": 17.7,
+       "ordinary": 40.9,
+       "leaning_clear": 23.2,
+       "clear": 10.2
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "obscure": 17.4,
+       "leaning_obscure": 13.2,
+       "ordinary": 21.9,
+       "leaning_clear": 25.7,
+       "clear": 21.8
+      },
+      "line_labels_pct": {
+       "obscure": 23.8,
+       "leaning_obscure": 11.0,
+       "ordinary": 14.2,
+       "leaning_clear": 15.7,
+       "clear": 35.3
+      }
+     }
+    },
+    "vemana": {
+     "v1": {
+      "poem_labels_pct": {
+       "obscure": 1.0,
+       "leaning_obscure": 10.0,
+       "ordinary": 42.3,
+       "leaning_clear": 29.7,
+       "clear": 17.0
+      },
+      "line_labels_pct": {
+       "obscure": 5.2,
+       "leaning_obscure": 15.6,
+       "ordinary": 36.1,
+       "leaning_clear": 18.5,
+       "clear": 24.6
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "obscure": 5.5,
+       "leaning_obscure": 12.2,
+       "ordinary": 22.9,
+       "leaning_clear": 30.2,
+       "clear": 29.3
+      },
+      "line_labels_pct": {
+       "obscure": 19.3,
+       "leaning_obscure": 9.9,
+       "ordinary": 12.8,
+       "leaning_clear": 13.2,
+       "clear": 44.8
+      }
+     }
+    },
+    "kuchimanchi_timmakavi": {
+     "v1": {
+      "poem_labels_pct": {
+       "obscure": 18.1,
+       "leaning_obscure": 35.9,
+       "ordinary": 37.0,
+       "leaning_clear": 7.5,
+       "clear": 1.5
+      },
+      "line_labels_pct": {
+       "obscure": 17.8,
+       "leaning_obscure": 26.7,
+       "ordinary": 37.6,
+       "leaning_clear": 12.1,
+       "clear": 5.8
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "obscure": 41.0,
+       "leaning_obscure": 24.0,
+       "ordinary": 20.6,
+       "leaning_clear": 10.8,
+       "clear": 3.6
+      },
+      "line_labels_pct": {
+       "obscure": 42.5,
+       "leaning_obscure": 12.3,
+       "ordinary": 14.4,
+       "leaning_clear": 11.7,
+       "clear": 19.1
+      }
+     }
+    },
+    "chandassu": {
+     "v1": {
+      "poem_labels_pct": {
+       "obscure": 13.5,
+       "leaning_obscure": 28.5,
+       "ordinary": 39.0,
+       "leaning_clear": 14.8,
+       "clear": 4.2
+      },
+      "line_labels_pct": {
+       "obscure": 11.7,
+       "leaning_obscure": 22.8,
+       "ordinary": 40.7,
+       "leaning_clear": 17.6,
+       "clear": 7.2
+      }
+     },
+     "v2": {
+      "poem_labels_pct": {
+       "obscure": 31.0,
+       "leaning_obscure": 19.7,
+       "ordinary": 21.4,
+       "leaning_clear": 18.6,
+       "clear": 9.4
+      },
+      "line_labels_pct": {
+       "obscure": 32.5,
+       "leaning_obscure": 12.7,
+       "ordinary": 14.5,
+       "leaning_clear": 13.8,
+       "clear": 26.5
+      }
+     }
+    }
+   },
+   "all": {
+    "v1": {
+     "poem_labels_pct": {
+      "obscure": 10.0,
+      "leaning_obscure": 20.0,
+      "ordinary": 40.0,
+      "leaning_clear": 20.0,
+      "clear": 10.0
+     },
+     "line_labels_pct": {
+      "obscure": 10.0,
+      "leaning_obscure": 20.0,
+      "ordinary": 40.0,
+      "leaning_clear": 20.0,
+      "clear": 10.0
+     }
+    },
+    "v2": {
+     "poem_labels_pct": {
+      "obscure": 22.1,
+      "leaning_obscure": 15.8,
+      "ordinary": 21.7,
+      "leaning_clear": 22.8,
+      "clear": 17.6
+     },
+     "line_labels_pct": {
+      "obscure": 28.1,
+      "leaning_obscure": 11.5,
+      "ordinary": 14.2,
+      "leaning_clear": 14.5,
+      "clear": 31.7
+     }
+    }
+   },
+   "poems_same_label_pct": 62.05,
+   "lines_same_label_pct": 36.08,
+   "poem_labels_confusion": {
+    "leaning_obscure": {
+     "obscure": 1531,
+     "leaning_obscure": 1010
+    },
+    "ordinary": {
+     "ordinary": 2760,
+     "leaning_obscure": 998,
+     "leaning_clear": 1322
+    },
+    "obscure": {
+     "obscure": 1271
+    },
+    "leaning_clear": {
+     "leaning_clear": 1572,
+     "clear": 970
+    },
+    "clear": {
+     "clear": 1270
+    }
+   }
+  },
+  "examples": {
+   "exemplars": [
+    {
+     "id": "kas_4_15_apratita",
+     "surprisal": 6.5621,
+     "v1": "leaning_obscure",
+     "v2": "obscure"
+    },
+    {
+     "id": "kas_4_17_klishta",
+     "surprisal": 6.0419,
+     "v1": "ordinary",
+     "v2": "ordinary"
+    },
+    {
+     "id": "kas_4_59_prasada",
+     "surprisal": 5.3069,
+     "v1": "leaning_clear",
+     "v2": "leaning_clear"
+    },
+    {
+     "id": "kas_4_5_aprayukta",
+     "surprisal": 8.8158,
+     "v1": "obscure",
+     "v2": "obscure"
+    },
+    {
+     "id": "kas_4_8_asamartha",
+     "surprisal": 5.6808,
+     "v1": "ordinary",
+     "v2": "leaning_clear"
+    },
+    {
+     "id": "kd_1_45_prasada",
+     "surprisal": 9.468,
+     "v1": "obscure",
+     "v2": "obscure"
+    },
+    {
+     "id": "kd_1_46_vyutpanna",
+     "surprisal": 13.249,
+     "v1": "obscure",
+     "v2": "obscure"
+    }
+   ],
+   "contrasts_in_order_both_versions": "5/5"
+  },
+  "new_poet": {
+   "bhagavatam": {
+    "share_of_reference_pct": 58.0,
+    "v1_poem_cuts_without_it": [
+     5.255,
+     5.7122,
+     6.5233,
+     7.1665
+    ],
+    "v1_poems_relabelled_pct": 23.45,
+    "v1_lines_relabelled_pct": 11.98,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "vemana": {
+    "share_of_reference_pct": 9.2,
+    "v1_poem_cuts_without_it": [
+     5.1443,
+     5.5699,
+     6.3809,
+     7.1129
+    ],
+    "v1_poems_relabelled_pct": 4.9,
+    "v1_lines_relabelled_pct": 2.82,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "kuchimanchi_timmakavi": {
+    "share_of_reference_pct": 12.9,
+    "v1_poem_cuts_without_it": [
+     5.0877,
+     5.4789,
+     6.2325,
+     6.9931
+    ],
+    "v1_poems_relabelled_pct": 9.68,
+    "v1_lines_relabelled_pct": 7.65,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "chandassu": {
+    "share_of_reference_pct": 19.9,
+    "v1_poem_cuts_without_it": [
+     5.0841,
+     5.4853,
+     6.2504,
+     7.0084
+    ],
+    "v1_poems_relabelled_pct": 8.21,
+    "v1_lines_relabelled_pct": 4.29,
+    "v2_poems_relabelled_pct": 0.0
+   },
+   "v2_cuts_move_with_the_reference": false,
+   "not_measured": "version 1 rebuilt for a new poet would also retrain its model without that poet's poems; version 2 never retrains. Only the rubric's share is measured here."
+  }
+ },
+ "nonsense_control": {
+  "cells": {
+   "DiffusionGemma 26B-A4B | hybrid": {
+    "anuprasa_v1": 0.9472,
+    "anuprasa_v2": 0.9474
+   },
+   "DiffusionGemma 26B-A4B | masking_backtrack": {
+    "anuprasa_v1": 0.8401,
+    "anuprasa_v2": 0.8397
+   },
+   "DiffusionGemma 26B-A4B | masking_only": {
+    "anuprasa_v1": 0.9322,
+    "anuprasa_v2": 0.9323
+   },
+   "Gemma-4 26B-A4B | hybrid": {
+    "anuprasa_v1": 0.8257,
+    "anuprasa_v2": 0.8258
+   },
+   "Gemma-4 26B-A4B | masking_backtrack": {
+    "anuprasa_v1": 0.8155,
+    "anuprasa_v2": 0.8155
+   },
+   "Gemma-4 26B-A4B | masking_only": {
+    "anuprasa_v1": 0.8249,
+    "anuprasa_v2": 0.8248
+   },
+   "Gemma-4 E4B | hybrid": {
+    "anuprasa_v1": 0.7021,
+    "anuprasa_v2": 0.702
+   },
+   "Gemma-4 E4B | masking_backtrack": {
+    "anuprasa_v1": 0.6844,
+    "anuprasa_v2": 0.6841
+   },
+   "Gemma-4 E4B | masking_only": {
+    "anuprasa_v1": 0.7296,
+    "anuprasa_v2": 0.7296
+   }
+  },
+  "constrained_poems": 4995,
+  "anuprasa_v1_p_above_real": [
+   0.6844,
+   0.9472
+  ],
+  "anuprasa_v2_p_above_real": [
+   0.6841,
+   0.9474
+  ],
+  "poems_with_poem_z_strong_pct": {
+   "v1": {
+    "constrained": 47.7,
+    "real": 2.7
+   },
+   "v2": {
+    "constrained": 46.0,
+    "real": 2.4
+   }
+  },
+  "madhurya_labels_pct": {
+   "v1": {
+    "constrained": {
+     "harsh": 35.5,
+     "leaning_harsh": 16.9,
+     "balanced": 21.5,
+     "leaning_soft": 14.1,
+     "soft": 11.9
+    },
+    "real": {
+     "harsh": 10.0,
+     "leaning_harsh": 20.0,
+     "balanced": 39.8,
+     "leaning_soft": 20.0,
+     "soft": 10.1
+    }
+   },
+   "v2": {
+    "constrained": {
+     "harsh": 26.9,
+     "leaning_harsh": 24.1,
+     "balanced": 33.8,
+     "leaning_soft": 14.5,
+     "soft": 0.7
+    },
+    "real": {
+     "harsh": 4.4,
+     "leaning_harsh": 24.1,
+     "balanced": 57.7,
+     "leaning_soft": 13.8,
+     "soft": 0.1
+    }
+   }
+  },
+  "prasada_labels_pct": {
+   "v1": {
+    "constrained": {
+     "obscure": 90.8,
+     "leaning_obscure": 5.2,
+     "ordinary": 2.9,
+     "leaning_clear": 0.8,
+     "clear": 0.3
+    },
+    "real": {
+     "obscure": 10.0,
+     "leaning_obscure": 20.0,
+     "ordinary": 40.0,
+     "leaning_clear": 20.0,
+     "clear": 10.0
+    },
+    "gate": {
+     "ordinary": {
+      "constrained_passing": 200,
+      "real_passing_pct": 70.0
+     },
+     "leaning_clear": {
+      "constrained_passing": 54,
+      "real_passing_pct": 30.0
+     }
+    }
+   },
+   "v2": {
+    "constrained": {
+     "obscure": 94.6,
+     "leaning_obscure": 2.6,
+     "ordinary": 1.4,
+     "leaning_clear": 0.8,
+     "clear": 0.6
+    },
+    "real": {
+     "obscure": 22.1,
+     "leaning_obscure": 15.8,
+     "ordinary": 21.7,
+     "leaning_clear": 22.8,
+     "clear": 17.6
+    },
+    "gate": {
+     "ordinary": {
+      "constrained_passing": 139,
+      "real_passing_pct": 62.1
+     },
+     "leaning_clear": {
+      "constrained_passing": 71,
+      "real_passing_pct": 40.4
+     }
+    }
+   }
+  },
+  "v1_reproduces_samples_analysis_json": true
+ },
+ "alternative_rubrics": {
+  "madhurya": {
+   "thirds_between_4_21_and_4_62": {
+    "cuts": [
+     -1.25,
+     -0.7021,
+     -0.1542,
+     0.3937
+    ],
+    "poem_labels_pct": {
+     "harsh": 0.0,
+     "leaning_harsh": 0.4,
+     "balanced": 24.4,
+     "leaning_soft": 75.1,
+     "soft": 0.1
+    },
+    "harsh_examples_read_balanced_or_softer": [
+     "kasc_tikkana_gadha",
+     "kp_8_75_ojas",
+     "kp_8_77_bhima",
+     "kp_8_77_kumbhakarna"
+    ],
+    "exemplar_labels": {
+     "kas_4_62_saukumarya": "soft",
+     "kp_8_74_madhurya": "leaning_soft",
+     "kas_4_21_parusha": "leaning_harsh",
+     "kp_8_75_ojas": "balanced",
+     "kp_8_77_bhima": "balanced",
+     "kp_8_77_kumbhakarna": "balanced",
+     "kd_1_70_sukumara": "leaning_soft",
+     "kd_1_72_krcchrodya": "harsh",
+     "kasc_tikkana_gadha": "balanced",
+     "kasc_peddana_ekkadi": "leaning_soft"
+    }
+   },
+   "four_anchors_4_21_tikkana_peddana_4_62": {
+    "cuts": [
+     -1.25,
+     -0.25,
+     -0.0875,
+     0.3937
+    ],
+    "poem_labels_pct": {
+     "harsh": 0.0,
+     "leaning_harsh": 12.7,
+     "balanced": 24.4,
+     "leaning_soft": 62.9,
+     "soft": 0.1
+    },
+    "harsh_examples_read_balanced_or_softer": [
+     "kasc_tikkana_gadha"
+    ],
+    "exemplar_labels": {
+     "kas_4_62_saukumarya": "soft",
+     "kp_8_74_madhurya": "leaning_soft",
+     "kas_4_21_parusha": "leaning_harsh",
+     "kp_8_75_ojas": "leaning_harsh",
+     "kp_8_77_bhima": "leaning_harsh",
+     "kp_8_77_kumbhakarna": "leaning_harsh",
+     "kd_1_70_sukumara": "leaning_soft",
+     "kd_1_72_krcchrodya": "harsh",
+     "kasc_tikkana_gadha": "balanced",
+     "kasc_peddana_ekkadi": "leaning_soft"
+    }
+   },
+   "reference_poems_below_4_21": 3
+  },
+  "prasada": {
+   "obscure_anchor_4_5": {
+    "cuts": [
+     5.3069,
+     6.4765,
+     7.6462,
+     8.8158
+    ],
+    "poem_labels_pct": {
+     "obscure": 0.3,
+     "leaning_obscure": 3.1,
+     "ordinary": 21.5,
+     "leaning_clear": 57.5,
+     "clear": 17.6
+    },
+    "constrained_labels_pct": {
+     "obscure": 74.9,
+     "leaning_obscure": 10.8,
+     "ordinary": 9.5,
+     "leaning_clear": 4.1,
+     "clear": 0.6
+    },
+    "gate": {
+     "ordinary": {
+      "constrained_passing": 711,
+      "real_passing_pct": 96.6
+     },
+     "leaning_clear": {
+      "constrained_passing": 237,
+      "real_passing_pct": 75.1
+     }
+    },
+    "exemplar_labels": {
+     "kas_4_59_prasada": "leaning_clear",
+     "kas_4_5_aprayukta": "obscure",
+     "kas_4_15_apratita": "ordinary",
+     "kas_4_17_klishta": "leaning_clear",
+     "kas_4_8_asamartha": "leaning_clear"
+    }
+   }
+  }
+ }
+}

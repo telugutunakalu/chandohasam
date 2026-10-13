@@ -214,6 +214,25 @@ metrics over the 6,660 constrained-decoding poems of `../samples/json`
 - Constrained poems are dense through conjuncts (22–27 per 100 aksharas against 12), not through longer words.
 - Left free, the models are farther from the requested meter than prose cut to its line lengths (mean skill −0.20 to −0.33); 93–97% of their poems are rated unmetered. Every constrained poem keeps the weights, the yati and the prāsa.
 
+## Version 2 candidates: scores no poet moves (under evaluation)
+
+Version 1 of anuprāsa, mādhurya and prasāda takes a constant from the four
+dataset files, so adding or removing a poet moves other poets' labels. Each has
+a version 2.0 beside it that puts no statistic of those files into a score or a
+label. Version 1 stays the default until a decision is made; ojas already moved
+to 2.0 in place. [`reports/v2_comparison.md`](reports/v2_comparison.md) compares
+the two on every admission check (`python3 compare_versions.py`, about 75 s).
+
+| metric | version 1 takes from the four files | version 2 instead | labels kept | version 1 relabels, one corpus left out |
+|---|---|---|---:|---:|
+| anuprāsa ([`anuprasa_v2.py`](anuprasa_v2.py)) | the chance model's consonant frequencies | those of prasāda's crawled verse, frozen; statistic and rubric unchanged | 99.1% of lines | 0.05–0.32% of lines |
+| mādhurya ([`madhurya_v2.py`](madhurya_v2.py)) | the rubric's percentile cuts | cuts symmetric about M = 0, outer ones at the treatise's soft example (4.62) | 66.4% of poems | 1.2–4.4% of poems |
+| prasāda ([`prasada_v2.py`](prasada_v2.py)) | the rubric's percentile cuts | the treatise's 4.59 (clear) and 4.15 (apratīta, obscure), in thirds | 62.1% of poems | 4.9–23.5% of poems |
+
+- The scores of mādhurya and prasāda do not change, so neither do their checks. For anuprāsa every check gives the same verdict.
+- Anuprāsa cannot be freed of every corpus: with the poem as its own chance model, the treatise's own example of vṛttyanuprāsa reads as no anuprāsa.
+- Prasāda keeps its frozen model, the record of what is "well known"; version 2 never rebuilds it. Its gate ("ordinary" or clearer) passes 139 of the 4,995 constrained poems instead of 200.
+
 ## Running
 
 System `python3` (3.12), standard library only. The chandas distance also
@@ -233,7 +252,9 @@ python3 <metric>.py build-baseline                        # 5–10 s; chandas_di
 python3 <metric>.py validate                              # 25–35 s; chandas_distance about 4 min
 python3 samples_analysis.py                               # the metrics on ../samples/json, ~2 min
 python3 degradation_protocol.py                           # the admission test on every metric, ~2 min
-python3 -m unittest discover -s tests -v                  # 123 tests
+python3 <metric>_v2.py score --text "..."                 # a version 2.0 candidate (anuprasa, madhurya, prasada)
+python3 compare_versions.py                               # versions 1 and 2 side by side, ~75 s
+python3 -m unittest discover -s tests -v                  # 138 tests
 ```
 
 ## Layout
@@ -258,6 +279,8 @@ poetry_metrics/
   validation_prasada.py    its contrasts, degradation controls and model-order check
   chandas_distance.py      metric 8
   validation_chandas_distance.py   its chance baseline, engine agreement, ladders and nearest-meter checks
+  anuprasa_v2.py, madhurya_v2.py, prasada_v2.py   version 2.0 candidates: no statistic of the four files in a score or label
+  compare_versions.py      versions 1 and 2 side by side on every admission check
   samples_analysis.py      the five metrics on the generated poems of ../samples/json
   degradation_protocol.py  the proposal's degradations applied to every metric
   fixtures/                classical_exemplars.json: verses the classical texts quote, the pairs they contrast, their broken-meter examples

@@ -8,6 +8,7 @@
 | Validation | [`outputs/madhurya_validation.json`](../outputs/madhurya_validation.json), built by `python3 madhurya.py validate` ([`validation_madhurya.py`](../validation_madhurya.py)) |
 | Exemplars | [`fixtures/classical_exemplars.json`](../fixtures/classical_exemplars.json): 27 verses the classical texts quote, 16 of them soft, harsh or for information on this metric |
 | Tests | [`tests/test_madhurya.py`](../tests/test_madhurya.py): 28 tests |
+| Version 2.0 candidate | [`madhurya_v2.py`](../madhurya_v2.py), [`baselines/madhurya_v2_baseline.json`](../baselines/madhurya_v2_baseline.json); under evaluation, compared with 1.1 in [`reports/v2_comparison.md`](../reports/v2_comparison.md) (§10) |
 | Proposal | Section 6 and Appendix E.1 (Tier 1), `proposal/chandohasam_full_proposal_v3.md` |
 
 Version 1.1 (2026-09-30) made the index sensitive to sequence: harsh aksharas
@@ -403,3 +404,21 @@ See [`../references.bib`](../references.bib) (keys in brackets).
 - Sandhan, J., Barbadikar, A., Maity, M., Satuluri, P., Sandhan, T., Gupta, R. M., Goyal, P. & Behera, L. (2025). Aesthetics of Sanskrit poetry from the perspective of computational linguistics: A case study analysis on Śikṣāṣṭaka. *Computational Sanskrit and Digital Humanities — World Sanskrit Conference 2025*, 15–36. ACL Anthology 2025.wsc-csdh.2. [`sandhan2025aesthetics`]
 - Wald, A. & Wolfowitz, J. (1940). On a test whether two samples are from the same population. *The Annals of Mathematical Statistics* 11(2), 147–162. [`wald1940runs`]
 - Whissell, C. (1999). Phonosymbolism and the emotional nature of sounds: Evidence of the preferential use of particular phonemes in texts of differing emotional tone. *Perceptual and Motor Skills* 89(1), 19–48. [`whissell1999phonosymbolism`]
+
+## 10. Versions
+
+- **1.0**: the inventory I alone.
+- **1.1** (2026-09-30, the default): M = I − P, with the rubric's cut points at
+  the 10th, 30th, 70th and 90th percentiles of the four dataset files (§5).
+- **2.0** (candidate, 1 October 2026, under evaluation;
+  [`madhurya_v2.py`](../madhurya_v2.py)): M of 1.1, with a rubric that uses no
+  corpus. It is symmetric about M = 0, where the soft and harsh weights cancel;
+  the outer cuts are ±0.394, the M of the treatise's example of saukumārya
+  (4.62), and the inner cuts ±0.131, a third of it. Lines and poems share the
+  cuts.
+  - The score, and every check on it, is unchanged. All ten soft and harsh examples of the texts keep their labels; every harsh example of the root texts reads harsh.
+  - 66.4% of poems keep their label. Most verse is balanced (57.7% of poems), and "soft" is kept for texture at least as soft as the treatise's example, which 8 of the 12,704 poems reach.
+  - Version 1.1 rebuilt without one corpus relabels 1.2–4.4% of that corpus's poems; 2.0 relabels none.
+  - Cut in thirds between the treatise's harsh (4.21) and soft (4.62) examples, as ojas 2.0 is, four of the six harsh examples would read balanced: 4.21 is one compound, harsher than all but 3 of the 12,704 poems.
+
+  Full comparison: [`reports/v2_comparison.md`](../reports/v2_comparison.md), §2.

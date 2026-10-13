@@ -8,6 +8,7 @@
 | Validation | [`outputs/prasada_validation.json`](../outputs/prasada_validation.json), built by `python3 prasada.py validate` ([`validation_prasada.py`](../validation_prasada.py)) |
 | Exemplars | [`fixtures/classical_exemplars.json`](../fixtures/classical_exemplars.json): 5 contrasts the classical texts draw |
 | Tests | [`tests/test_prasada.py`](../tests/test_prasada.py): 15 tests |
+| Version 2.0 candidate | [`prasada_v2.py`](../prasada_v2.py), [`baselines/prasada_v2_baseline.json`](../baselines/prasada_v2_baseline.json); under evaluation, compared with 1.0 in [`reports/v2_comparison.md`](../reports/v2_comparison.md) (§9) |
 | Proposal | Section 6 and Appendix E.1 (Tier 1), `proposal/chandohasam_full_proposal_v3.md` |
 
 ## 1. What it measures
@@ -290,3 +291,22 @@ See [`../references.bib`](../references.bib) (keys in brackets).
 - van Heuven, W. J. B., Mandera, P., Keuleers, E. & Brysbaert, M. (2014). SUBTLEX-UK: A new and improved word frequency database for British English. *The Quarterly Journal of Experimental Psychology* 67(6), 1176–1190. [`vanheuven2014subtlex`]
 - Vāmana. *Kāvyālaṅkārasūtra* with the author's gloss. GRETIL e-text. [`vamana_kavyalankarasutra`]
 - Witten, I. H. & Bell, T. C. (1991). The zero-frequency problem: Estimating the probabilities of novel events in adaptive text compression. *IEEE Transactions on Information Theory* 37(4), 1085–1094. [`witten1991zero`]
+
+## 9. Versions
+
+- **1.0** (the default): the rubric's cut points are the 10th, 30th, 70th and
+  90th percentiles of the four dataset files (§4).
+- **2.0** (candidate, 1 October 2026, under evaluation;
+  [`prasada_v2.py`](../prasada_v2.py)): H and the model of 1.0, frozen and never
+  rebuilt, with a rubric anchored to the treatise: its example of prasāda (4.59,
+  5.31 bits) and its example of a word found only in the śāstras and purāṇas
+  (apratīta, 4.15, 6.56 bits), the interval split in three. Lines and poems
+  share the cuts. Of the four defects of §1, apratīta and aprayukta (4.5) lie in
+  the form of a word; the cut is at the clearer of the two, so both read obscure.
+  - The score, and every check on it, is unchanged.
+  - Real poems, obscure to clear: 22.1, 15.8, 21.7, 22.8 and 17.6%. 62.1% keep their 1.0 label; the corpora keep their order.
+  - The gate "ordinary or clearer" passes 139 of the 4,995 constrained poems (1.0: 200) and 62.1% of real poems (1.0: 70%).
+  - Version 1.0 rebuilt without one corpus relabels 4.9–23.5% of that corpus's poems (23.5% for the Bhāgavatamu); 2.0 relabels none.
+  - The model stays a corpus by definition: "well-known words" (4.57) needs a record of what is well known.
+
+  Full comparison: [`reports/v2_comparison.md`](../reports/v2_comparison.md), §3.

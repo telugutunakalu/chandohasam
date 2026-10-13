@@ -161,10 +161,10 @@ def sample_poems(rng: random.Random) -> list:
     return out
 
 
-def ladder(originals: list, versions: dict) -> dict:
+def ladder(originals: list, versions: dict, metrics: dict = METRICS) -> dict:
     """Per metric: the mean at each strength, the paired comparison with the original, the verdict."""
     out = {}
-    for metric, value in METRICS.items():
+    for metric, value in metrics.items():
         base = [value(r) for r in originals]
         steps, means = [], [statistics.fmean(v for v in base if v is not None)]
         for level, rows in versions.items():

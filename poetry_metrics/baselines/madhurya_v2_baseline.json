@@ -1,0 +1,24 @@
+{
+ "metric": "madhurya",
+ "version": "2.0",
+ "rubric": "symmetric about M = 0, the balance point of the weights; outer cuts at the M of the treatise's saukumārya example (4.62), inner cuts at a third of it; no statistic of any corpus",
+ "anchor": {
+  "id": "kas_4_62_saukumarya",
+  "locus": "4.62",
+  "madhurya": 0.39375
+ },
+ "cuts": {
+  "line": [
+   -0.39375,
+   -0.13125,
+   0.13125,
+   0.39375
+  ],
+  "poem": [
+   -0.39375,
+   -0.13125,
+   0.13125,
+   0.39375
+  ]
+ }
+}
