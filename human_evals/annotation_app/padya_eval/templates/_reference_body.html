@@ -1,0 +1,143 @@
+{%- macro meter_card(m, open=False) -%}
+<details class="meter-card" id="meter-{{ m.name }}" {% if open %}open{% endif %}>
+  <summary>
+    <span class="meter-card-name">{{ m.name_te }}</span>
+    <span class="muted small">{{ m.name }} · {{ m.family_te }} · {{ m.padalu }} పాదాలు{% if m.aksharalu[0] %} · {% if m.aksharalu[0] == m.aksharalu[1] %}{{ m.aksharalu[0] }}{% else %}{{ m.aksharalu[0] }}–{{ m.aksharalu[1] }}{% endif %} అక్షరాలు/పాదం{% endif %}</span>
+  </summary>
+  <dl class="meter-facts">
+    <dt>గణాలు</dt>
+    <dd>
+      {%- for row in m.slots %}
+      <div class="slot-row{% if row.alt %} slot-alt{% endif %}">
+        {% if m.slots|length > 1 %}<span class="slot-lines">{% if row.alt %}ప్రత్యామ్నాయం · {% endif %}పాదాలు {{ row.lines|join(', ') }}:</span>{% endif %}
+        {%- for g in row.ganas %}<span class="chip" {% if g.cls %}title="{{ ref.class_names.get(g.cls, g.cls) }}"{% endif %}>{{ g.t }}{% if g.pat %}<small>{{ g.pat|replace('I', '|') }}</small>{% endif %}</span>{%- endfor %}
+      </div>
+      {%- endfor %}
+      {% if m.ganalu_text %}<div class="small muted">{{ m.ganalu_text }}</div>{% endif %}
+    </dd>
+    <dt>యతి</dt>
+    <dd>{% for y in m.yati %}<div>{{ y }}</div>{% endfor %}{% if m.prasa_yati %}<div class="small muted">ప్రాసయతి కూడా చెల్లుతుంది · prāsa-yati is allowed</div>{% endif %}</dd>
+    <dt>ప్రాస</dt>
+    <dd>{% if m.prasa %}ఉంది — ప్రతి పాదంలో 2వ అక్షరం · every pāda's 2nd akshara{% else %}లేదు · not required{% endif %}</dd>
+    {% if m.constraints %}<dt>నియమాలు</dt><dd><ul class="tight">{% for c in m.constraints|unique %}<li>{{ c }}</li>{% endfor %}</ul></dd>{% endif %}
+    {% if m.followed_by %}<dt>తరువాత</dt><dd>{% for f in m.followed_by %}{{ ref.meters[f].name_te if f in ref.meters else f }}{% if not loop.last %} / {% endif %}{% endfor %} (గీతి)</dd>{% endif %}
+    {% if m.halves_per_line > 1 %}<dt>ముద్రణ</dt><dd class="small">ఒక్కో పాదం {{ m.halves_per_line }} పంక్తులుగా ముద్రితం · each pāda printed as {{ m.halves_per_line }} lines</dd>{% endif %}
+    {% if m.notes %}<dt>గమనిక</dt><dd class="small muted">{{ m.notes }}</dd>{% endif %}
+  </dl>
+</details>
+{%- endmacro -%}
+
+{%- macro status(s) -%}<span class="status status-{{ s }}" title="{{ s }}">{{ ref.status_te.get(s, s) }}</span>{%- endmacro -%}
+
+<nav class="ref-toc" aria-label="Ruleset sections">
+  {% if focus %}<a href="#ref-this">ఈ ఛందస్సు</a>{% endif %}
+  <a href="#ref-guru">గురు లఘువులు</a><a href="#ref-gana">గణాలు</a><a href="#ref-yati">యతి</a><a href="#ref-prasa">ప్రాస</a><a href="#rubric">Rubric</a>{% if full %}<a href="#ref-meters">అన్ని ఛందస్సులు</a>{% endif %}
+</nav>
+
+{% if focus %}
+<section class="ref-section" id="ref-this">
+  <h3>ఈ పద్యం ఛందస్సు <span class="muted">· this poem's meter</span></h3>
+  {% for m in focus %}{{ meter_card(m, open=True) }}{% endfor %}
+</section>
+{% endif %}
+
+<section class="ref-section" id="ref-guru">
+  <h3>గురు లఘు నియమాలు <span class="muted">· guru / laghu</span></h3>
+  <p class="small">ఈ క్రింది వాటిలో ఏదైనా ఉంటే అక్షరం <b>గురువు (U)</b>; లేకపోతే <b>లఘువు (|)</b>.</p>
+  <table class="ref-table">
+    <thead><tr><th>నియమం</th><th>condition</th></tr></thead>
+    <tbody>{% for r in ref.guru_rules %}<tr><td>{{ r.te }}</td><td>{{ r.when }}</td></tr>{% endfor %}</tbody>
+  </table>
+  <ul class="tight small">
+    <li>అర్ధానుస్వారం (ఁ) బరువు పెంచదు · the arasunna ఁ adds no weight.</li>
+    <li>పాదాంత లఘువును ఛందస్సు కోరితే గురువుగా చదవవచ్చు · a pāda-final laghu may be read as guru where the meter needs it.</li>
+    <li>వికల్పం: తరువాతి పదం సంయుక్తాక్షరంతో మొదలైతే ముందటి లఘువు గురువు కావచ్చు; ర-వత్తు సంయుక్తానికి ముందటి అక్షరం లఘువుగా ఉండవచ్చు ·
+      vikalpa: a laghu before a word-initial conjunct may be guru; a syllable before a ర-vattu conjunct may stay laghu.</li>
+  </ul>
+</section>
+
+<section class="ref-section" id="ref-gana">
+  <h3>గణాలు <span class="muted">· gaṇas</span></h3>
+  {% for t in ref.gana_tables %}
+  <details class="gana-table" {% if t.key in ('trika_ganas', 'surya_ganas', 'indra_ganas') %}open{% endif %}>
+    <summary>{{ {'ekakshara_ganas': 'ఏకాక్షర గణాలు', 'dvyakshara_ganas': 'ద్వ్యక్షర గణాలు', 'trika_ganas': 'త్ర్యక్షర (వృత్త) గణాలు', 'surya_ganas': 'సూర్య గణాలు', 'indra_ganas': 'ఇంద్ర గణాలు', 'chandra_ganas': 'చంద్ర గణాలు', 'kanda_ganas': 'కంద గణాలు'}.get(t.key, t.key) }}</summary>
+    <div class="chips">{% for g in t.ganas %}<span class="chip">{{ g.telugu }}<small>{{ g.pattern|replace('I', '|') }}</small></span>{% endfor %}</div>
+  </details>
+  {% endfor %}
+</section>
+
+<section class="ref-section" id="ref-yati">
+  <h3>యతి <span class="muted">· yati (వళి)</span></h3>
+  <p class="small">ప్రతి పాదంలో మొదటి అక్షరం (వళి) యతిస్థానంలోని అక్షరంతో మైత్రి కలిగి ఉండాలి. హల్లులు మైత్రి కలిగి ఉండాలి, <b>అచ్చులు కూడా ఒకే వర్గంలో ఉండాలి</b>.
+    ఁ, ం, ః, పొల్లు మైత్రిని మార్చవు. యతిస్థానం ఛందస్సును బట్టి (పైన ఛందస్సు కార్డు చూడండి).</p>
+  <table class="ref-table">
+    <thead><tr><th colspan="2">స్వరమైత్రి · vowel classes</th></tr></thead>
+    <tbody>{% for cls, vowels in ref.yati.vowel_classes.items() %}<tr><td>{{ cls }}</td><td>{{ vowels|join(' ') }}</td></tr>{% endfor %}</tbody>
+  </table>
+  <table class="ref-table">
+    <thead><tr><th>యతి</th><th>మైత్రి · pairs</th><th>స్థితి</th></tr></thead>
+    <tbody>
+      {% for row in ref.yati.maitri %}
+      <tr>
+        <td>{{ row.te }}<div class="small muted">{{ row.en }}</div></td>
+        <td>{% if row.vargas %}{% for v in row.vargas %}<span class="chip">{{ v|join(' ') }}</span>{% endfor %}{% else %}{% for pr in row.pairs %}<span class="chip">{{ pr|join(' – ') }}</span>{% endfor %}{% endif %}{% if row.note %}<div class="small muted">{{ row.note }}</div>{% endif %}</td>
+        <td>{{ status(row.status) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if full %}
+  <h4>పూర్తి యతి నియమావళి <span class="muted">· full yati catalogue (yathi_compact.md)</span></h4>
+  {% for fam in ref.yati.families %}
+  <details class="rule-family">
+    <summary>{{ fam.te }} <span class="muted small">· {{ fam.en }} ({{ fam.rules|length }})</span></summary>
+    <ul class="rules">
+      {% for r in fam.rules %}
+      <li><code>{{ r.id }}</code> {{ status(r.status) }} <b>{{ r.name }}</b>{% if r.when %} — <i>{{ r.when }}</i>{% endif %}{% if r.match %}<div class="small">{{ r.match }}</div>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+  {% endif %}
+</section>
+
+<section class="ref-section" id="ref-prasa">
+  <h3>ప్రాస <span class="muted">· prāsa</span></h3>
+  <p class="small">ప్రతి పాదంలో <b>2వ అక్షరం</b>లోని హల్లు(లు) అన్ని పాదాల్లో ఒకటే కావాలి; అచ్చు మారవచ్చు. ప్రాసకు ముందటి (1వ) అక్షరం అన్ని పాదాల్లో గురువు లేదా అన్నిటిలో లఘువు కావాలి.</p>
+  {% set core = ref.prasa.rules|selectattr('status', 'in', ['canonical', 'canonical_subtype', 'mandatory'])|list %}
+  {% set relax = ref.prasa.rules|selectattr('status', 'in', ['accepted_relaxation', 'orthographic_relaxation', 'deprecated'])|list %}
+  {% set banned = ref.prasa.rules|selectattr('status', 'equalto', 'forbidden')|list %}
+  <details class="rule-family" open>
+    <summary>ప్రామాణిక నియమాలు <span class="muted small">· canonical and mandatory ({{ core|length }})</span></summary>
+    <ul class="rules">{% for r in core %}<li>{{ status(r.status) }} <b>{{ r.te }}</b> <span class="muted small">{{ r.en }}</span>{% if full %}<div class="small">{{ r.statement }}</div>{% endif %}</li>{% endfor %}</ul>
+  </details>
+  <details class="rule-family">
+    <summary>ప్రాసమైత్రి / సడలింపులు <span class="muted small">· relaxations ({{ relax|length }})</span></summary>
+    <ul class="rules">{% for r in relax %}<li>{{ status(r.status) }} <b>{{ r.te }}</b> <span class="muted small">{{ r.en }}</span>{% if full %}<div class="small">{{ r.statement }}</div>{% endif %}</li>{% endfor %}</ul>
+  </details>
+  <details class="rule-family">
+    <summary>నిషిద్ధం <span class="muted small">· never a prāsa ({{ banned|length }})</span></summary>
+    <ul class="rules">{% for r in banned %}<li>{{ status(r.status) }} <b>{{ r.te }}</b> <span class="muted small">{{ r.en }}</span>{% if full %}<div class="small">{{ r.statement }}</div>{% endif %}</li>{% endfor %}</ul>
+  </details>
+</section>
+
+<section class="ref-section" id="rubric">
+  <h3>Rubric guide <span class="muted">· మూల్యాంకన సూచనలు</span></h3>
+  <ol class="rubric">
+    {% for q in questions %}
+    <li>
+      <b>{{ q.text }}</b> <span class="muted">{{ q.text_te }}</span>
+      <div class="small">{% if q.kind == 'likert' %}1 = {{ q.low }} … 5 = {{ q.high }}.{% else %}0 = No, 1 = Yes.{% endif %} {{ q.guide }}{% if q.na_reason %} <i>Shown as not applicable when: {{ q.na_reason }}</i>{% endif %}</div>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="small muted">Rate the poem as it is printed. Read and answer 1–3 before opening the bhavam. Use the whole scale.
+    The gaṇa division and the yati/prāsa underlines are an automatic reading to help you check; your judgement decides 5–7.</p>
+</section>
+
+{% if full %}
+<section class="ref-section" id="ref-meters">
+  <h3>అన్ని ఛందస్సులు <span class="muted">· every meter in this study ({{ ref.meters|length }})</span></h3>
+  {% for m in ref.meters.values() %}{{ meter_card(m) }}{% endfor %}
+</section>
+{% endif %}

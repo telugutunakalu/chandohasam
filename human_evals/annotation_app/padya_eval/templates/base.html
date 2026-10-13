@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="te">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f3ec">
+  <script>
+    // apply the saved theme before the first paint (light unless the viewer chose dark)
+    try { if (localStorage.getItem("padya-theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
+  <title>{% block title %}పద్య మూల్యాంకనం{% endblock %} · Chandohasam human eval</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}?v={{ asset_version }}">
+  <script src="{{ url_for('static', filename='app.js') }}?v={{ asset_version }}" defer></script>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('main.index') }}">
+      <span class="brand-te">ఛందోహాసం</span><span class="brand-en">human eval</span>
+    </a>
+    <div class="topbar-right">
+    {% block topnav %}
+    {% if annotator %}
+    <nav class="topnav" aria-label="Main">
+      {% if progress %}
+      {% if progress.all_mode %}
+      <span class="pill" title="Poems you have rated, of all {{ progress.poems }}">
+        <b>{{ progress.mine }}</b><span class="pill-study">/{{ progress.poems }}</span><span class="pill-label"> rated</span>
+      </span>
+      {% else %}
+      <span class="pill" title="Poems you have rated · poems with enough ratings in the whole study">
+        <b>{{ progress.mine }}</b><span class="pill-label"> rated</span>
+        <span class="pill-sep">·</span>
+        <span class="pill-study">{{ progress.complete }}/{{ progress.poems }}</span>
+      </span>
+      {% endif %}
+      {% endif %}
+      <a href="{{ url_for('main.reference') }}" class="navlink" data-ref-open
+         data-ref-src="{{ url_for('main.reference_fragment', poem=poem.id if poem else None) }}">నియమాలు<span class="navlink-en"> · Rules</span></a>
+      <a href="{{ url_for('main.mine') }}" class="navlink">నావి<span class="navlink-en"> · Mine</span></a>
+      <form method="post" action="{{ url_for('main.logout') }}" class="inline">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit" class="navlink linkish" title="Log out {{ annotator.username }}">⎋<span class="navlink-en"> {{ annotator.username }}</span></button>
+      </form>
+    </nav>
+    {% endif %}
+    {% endblock %}
+    <button type="button" class="icon-btn theme-btn" data-theme-toggle aria-label="Switch light / dark mode" title="Light / dark mode">
+      <span class="t-light" aria-hidden="true">☾</span><span class="t-dark" aria-hidden="true">☀</span>
+    </button>
+    </div>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="flashes" role="status">
+    {% for cat, msg in messages %}<div class="flash flash-{{ cat }}">{{ msg }}</div>{% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+  <main id="main" class="{% block main_class %}page{% endblock %}">
+    {% block content %}{% endblock %}
+  </main>
+
+  <dialog id="ref-dialog" class="ref-dialog" aria-labelledby="ref-dialog-title">
+    <div class="ref-dialog-head">
+      <h2 id="ref-dialog-title">ఛందో నియమాలు <span class="muted">· Ruleset</span></h2>
+      <a class="small" href="{{ url_for('main.reference', poem=poem.id if poem else None) }}" target="_blank" rel="noopener">Full page ↗</a>
+      <button type="button" class="icon-btn" data-ref-close aria-label="Close">✕</button>
+    </div>
+    <div class="ref-dialog-body" id="ref-dialog-body"><p class="muted">Loading…</p></div>
+  </dialog>
+  <div id="tip" class="tip" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

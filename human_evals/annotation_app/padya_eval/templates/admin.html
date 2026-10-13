@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}Admin · agreement{% endblock %}
+{% block topnav %}
+<nav class="topnav" aria-label="Admin">
+  <a class="navlink" href="{{ url_for('main.reference') }}">Rules</a>
+  <form method="post" action="{{ url_for('admin.logout') }}" class="inline">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit" class="navlink linkish">Log out admin</button>
+  </form>
+</nav>
+{% endblock %}
+{% block main_class %}page wide{% endblock %}
+{% macro num(x, digits=3) -%}{% if x is none %}<span class="muted">–</span>{% else %}{{ ('%.' ~ digits ~ 'f')|format(x) }}{% endif %}{%- endmacro %}
+{% macro alpha_cell(x) -%}
+<td class="num {% if x is none %}{% elif x >= 0.8 %}good{% elif x >= 0.667 %}fair{% else %}poor{% endif %}">{{ num(x) }}</td>
+{%- endmacro %}
+{% macro agreement_table(rows) %}
+<div class="table-scroll">
+<table class="data">
+  <thead>
+    <tr><th>#</th><th class="left">question</th><th>level</th><th title="poems with ≥ 2 ratings">paired</th><th>α</th>{% if n_boot %}<th>95% CI</th>{% endif %}
+      <th title="share of agreeing rater pairs">% agree</th><th title="1–5: pairs within one point · yes/no: Gwet's AC1">±1 / AC1</th>
+      <th>Fleiss κ</th><th title="Cohen's κ, quadratic-weighted for 1–5, averaged over annotator pairs sharing ≥ 5 poems">pairwise κ</th><th>mean / % yes</th><th class="left">distribution</th></tr>
+  </thead>
+  <tbody>
+    {% for r in rows %}
+    <tr>
+      <td>{{ r.number }}</td>
+      <td class="left">{{ r.text }}</td>
+      <td class="small">{{ r.level }}</td>
+      <td class="num">{{ r.n_paired_units }}</td>
+      {{ alpha_cell(r.alpha) }}
+      {% if n_boot %}<td class="num small">{% if r.alpha_ci %}{{ num(r.alpha_ci[0]) }} – {{ num(r.alpha_ci[1]) }}{% else %}–{% endif %}</td>{% endif %}
+      <td class="num">{{ num(r.pct_agreement) }}</td>
+      <td class="num">{{ num(r.within_one if r.kind == 'likert' else r.gwet_ac1) }}</td>
+      <td class="num">{{ num(r.fleiss_kappa) if r.kind == 'binary' else '' }}</td>
+      <td class="num">{{ num(r.mean_pairwise_kappa) }} <span class="muted small">({{ r.n_annotator_pairs }})</span></td>
+      <td class="num">{{ num(r.mean, 2) if r.kind == 'likert' else num(r.prop_yes) }}</td>
+      <td class="left small dist">{% for c, n in r.distribution.items() %}<span title="{{ c }}: {{ n }}"><b>{{ c }}</b>&thinsp;{{ n }}</span> {% endfor %}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endmacro %}
+
+{% block content %}
+<section class="card">
+  <div class="row-between">
+    <h1>Study dashboard</h1>
+    <div class="actions">
+      <a class="btn btn-ghost" href="{{ url_for('admin.annotations_csv') }}">annotations.csv</a>
+      <a class="btn btn-ghost" href="{{ url_for('admin.annotations_json') }}">annotations.json</a>
+      <a class="btn btn-ghost" href="{{ url_for('admin.agreement_json', bootstrap=n_boot or None) }}">agreement.json</a>
+      <a class="btn btn-ghost" href="{{ url_for('admin.agreement_md', bootstrap=n_boot or None) }}">agreement.md</a>
+    </div>
+  </div>
+  <p class="small">{{ meta.dataset }} · {{ meta.pool }} pool ({{ meta.pool_file }}) · built {{ meta.built_on }} with meter_engine {{ meta.engine_revision }} ·
+    {% if report.study.ratings_per_poem == 'all' %}<b>every annotator rates every poem</b>{% else %}target <b>{{ report.study.ratings_per_poem }}</b> ratings per poem{% endif %} · calibration set of <b>{{ report.study.calibration_size }}</b> ·
+    rubric v{{ report.study.rubric_version }}</p>
+  <div class="stats">
+    <div class="stat"><b>{{ progress.complete }}</b><span>of {{ progress.poems }} poems have {{ progress.target }} rating{{ 's' if progress.target != 1 }}</span></div>
+    <div class="stat"><b>{{ progress.ratings }}</b><span>ratings</span></div>
+    <div class="stat"><b>{{ progress.ratings_needed }}</b><span>ratings still needed</span></div>
+    <div class="stat"><b>{{ report.study.annotators }}</b><span>active annotators ({{ annotators|length }} signed up)</span></div>
+  </div>
+  <div class="meter-bar" role="img" aria-label="{{ progress.complete }} of {{ progress.poems }} poems complete">
+    <span style="width: {{ (100 * progress.complete / progress.poems)|round(1) if progress.poems else 0 }}%"></span>
+  </div>
+  <p class="small">Poems by number of ratings:
+    {% for n, c in progress.histogram.items() %}<span class="chip">{{ n }}{% if loop.last %}+{% endif %} → {{ c }}</span>{% endfor %}</p>
+</section>
+
+<section class="card">
+  <div class="row-between">
+    <h2>Agreement · all poems</h2>
+    {% if n_boot %}<a class="small" href="{{ url_for('admin.dashboard') }}">hide CIs</a>{% else %}<a class="small" href="{{ url_for('admin.dashboard', bootstrap=1000) }}">add bootstrap 95% CIs (slower)</a>{% endif %}
+  </div>
+  {{ agreement_table(report.questions) }}
+  <p class="small muted">α = Krippendorff's alpha: ordinal for the 1–5 questions, nominal for yes/no. Questions that do not apply
+    (no bhavam, no prāsa in the meter) are left out, not counted as answers. Krippendorff's guide: α ≥ 0.800 reliable,
+    0.667–0.800 tentative. With yes/no items where almost every answer is the same, α and κ collapse even when agreement
+    is high (the prevalence paradox); read % agree and AC1 alongside them.</p>
+</section>
+
+{% if report.calibration %}
+<section class="card">
+  <h2>Agreement · calibration set <span class="muted small">(every annotator rates these {{ calibration|length }} poems)</span></h2>
+  {{ agreement_table(report.calibration) }}
+</section>
+{% endif %}
+
+<section class="card">
+  <h2>Annotators</h2>
+  <div class="table-scroll">
+  <table class="data">
+    <thead><tr><th class="left">annotator</th><th>rated</th><th>skipped</th><th>calibration</th><th>median s / poem</th>
+      <th title="mean change in α when this annotator is left out; clearly positive = the others agree better without them">LOO Δα</th>
+      <th title="mean pairwise Cohen's κ with the other annotators">mean κ</th><th>last saved</th></tr></thead>
+    <tbody>
+      {% for a in report.annotators %}
+      <tr>
+        <td class="left">{{ a.username }}</td><td class="num">{{ a.rated }}</td><td class="num">{{ a.skipped }}</td>
+        <td class="num">{{ a.calibration_done }}/{{ a.calibration_total }}</td><td class="num">{{ num(a.median_seconds, 0) }}</td>
+        <td class="num {% if a.loo_alpha_delta is not none and a.loo_alpha_delta > 0.05 %}poor{% endif %}">{{ num(a.loo_alpha_delta) }}</td>
+        <td class="num">{{ num(a.mean_kappa) }}</td><td class="small">{{ (a.last_update or '')[:16]|replace('T', ' ') }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8" class="muted">No annotations yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</section>
+
+{% if report.by_source %}
+<section class="card">
+  <h2>Mean rating by source <span class="muted small">(admin only; 1–5 means, yes/no shares)</span></h2>
+  <div class="table-scroll">
+  <table class="data">
+    <thead><tr><th class="left">source</th><th>n</th>{% for q in questions %}<th title="{{ q.text }}">Q{{ q.number }}</th>{% endfor %}</tr></thead>
+    <tbody>
+      {% for row in report.by_source %}
+      <tr><td class="left">{{ row.source }}</td><td class="num">{{ row.n_annotations }}</td>
+        {% for q in questions %}{% set c = row.cells[q.key] %}<td class="num" title="n = {{ c.n }}">{{ num(c.value, 2) }}</td>{% endfor %}</tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

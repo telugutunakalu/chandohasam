@@ -1,0 +1,23 @@
+{#- The poem as printed, and beside each line its prāsa akshara and yati seats (below the line on phones). -#}
+<div class="poem" lang="te">
+  {%- for line in poem.lines %}
+  {%- set n = poem.raw.notes[loop.index0] %}
+  <p class="poem-line">
+    {%- for t in line -%}
+      {%- if t.s -%}{{ t.t }}{%- elif t.c -%}<span class="ak mk-{{ t.c|join(' mk-') }}">{{ t.t }}</span>{%- else -%}{{ t.t }}{%- endif -%}
+    {%- endfor -%}
+  </p>
+  <div class="line-note">
+    {%- if n.prasa %}
+    <span class="ln" title="ప్రాసాక్షరం · prāsa akshara"><span class="ln-k">ప్రాస</span> <b class="ln-p">{{ n.prasa }}</b></span>
+    {%- endif %}
+    {%- for y in n.yati %}
+    <span class="ln" title="{{ y.rule }}{% if y.hyp %} · సంధి ఊహ (sandhi hypothesis){% endif %}"><span class="ln-k">యతి</span>
+      {% for a in y.ak %}<b class="ln-y">{{ a }}</b>{% if not loop.last %} – {% endif %}{% endfor %}
+      {%- if show_checks and y.te %} – <span class="ln-rule{% if not y.ok %} ln-bad{% endif %}">{{ y.te }}{% if y.hyp %}<sup title="సంధి ఊహ · sandhi hypothesis">*</sup>{% endif %}</span>{% endif %}
+    </span>
+    {%- endfor %}
+    {%- if n.no_yati %}<span class="ln ln-none">యతి లేదు</span>{% endif %}
+  </div>
+  {%- endfor %}
+</div>

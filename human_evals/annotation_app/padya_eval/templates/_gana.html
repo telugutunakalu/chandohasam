@@ -1,0 +1,56 @@
+{#- The DAWG analysis as a table: per pāda three rows (gaṇa names, guru/laghu marks, aksharas by gaṇa)
+    and a ✔ when the pāda's gaṇas fit the meter and its yati holds. -#}
+{%- macro weight_te(w) -%}{{ 'గురువు' if w == 'U' else 'లఘువు' }}{%- endmacro -%}
+<div class="gana-grid" lang="te">
+  {%- for u in poem.units %}
+  {% if poem.units|length > 1 %}<h3 class="unit-name">{{ u.name_te }}</h3>{% endif %}
+  {%- set width = u.padas|map(attribute='ganas')|map('length')|max %}
+  <div class="table-scroll">
+  <table class="gana-table">
+    {%- for p in u.padas %}
+    <tbody class="pada-block">
+      <tr class="r-gana">
+        {%- if show_checks %}
+        <th rowspan="3" scope="rowgroup" class="pada-check {{ 'ok' if p.ok else 'bad' }}"
+            title="పాదం {{ p.no }}: {{ 'గణాలు, యతి సరిపోయాయి · gaṇas and yati fit' if p.ok else 'యతి సరిపోలేదు · yati does not hold' }}">{{ '✔' if p.ok else '✘' }}</th>
+        {%- else %}
+        <th rowspan="3" scope="rowgroup" class="pada-check" title="పాదం {{ p.no }}">{{ p.no }}</th>
+        {%- endif %}
+        {%- for g in p.ganas %}
+        <td data-tip="{{ g.n }} గణం · {{ g.pat|replace('I', '|')|join(' ') }} · {{ g.ak|map(attribute='t')|join(' ') }}">{{ g.n }}{% if g.cls %}<small>{{ 'ఇం' if g.cls == 'indra' else 'సూ' }}</small>{% endif %}</td>
+        {%- endfor %}
+        {%- for _ in range(width - p.ganas|length) %}<td class="empty" aria-hidden="true"></td>{% endfor %}
+      </tr>
+      <tr class="r-weight">
+        {%- for g in p.ganas %}
+        <td data-tip="{{ g.n }}">{% for a in g.ak %}<span class="w w-{{ a.w|lower }}{% if a.alt %} alt{% endif %}">{{ a.w|mark }}</span>{% endfor %}</td>
+        {%- endfor %}
+        {%- for _ in range(width - p.ganas|length) %}<td class="empty" aria-hidden="true"></td>{% endfor %}
+      </tr>
+      <tr class="r-aks">
+        {%- for g in p.ganas %}
+        <td>
+          {%- for a in g.ak -%}
+            {%- if a.alt -%}
+              {%- set tip = a.t ~ ' — ' ~ weight_te(a.cw) ~ ' → ' ~ weight_te(a.w) ~ ': ' ~ vikalpa_notes.get(a.alt, a.alt) -%}
+            {%- else -%}
+              {%- set tip = a.t ~ ' — ' ~ weight_te(a.w) ~ ': ' ~ (a.r|rules_te) -%}
+            {%- endif -%}
+            {%- if not loop.first %} {% endif -%}
+            <span class="ga{% if a.m %} mk-{{ a.m|join(' mk-') }}{% endif %}" data-tip="{{ tip }}" title="{{ tip }}">{{ a.t }}</span>
+          {%- endfor -%}
+        </td>
+        {%- endfor %}
+        {%- for _ in range(width - p.ganas|length) %}<td class="empty" aria-hidden="true"></td>{% endfor %}
+      </tr>
+    </tbody>
+    {%- endfor %}
+  </table>
+  </div>
+  {%- endfor %}
+  <p class="legend small">
+    <span class="w w-u">U</span> గురువు · guru &nbsp; <span class="w w-i">|</span> లఘువు · laghu &nbsp;
+    <span class="w w-u alt">U</span> ఛందస్సు కోసం మరో పఠనం (పాదాంత / వికల్పం) &nbsp;
+    <span class="muted">Hover or tap a cell for its gaṇa or rule.</span>
+  </p>
+</div>

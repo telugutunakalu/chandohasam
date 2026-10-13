@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}{{ poem.id }} · {{ poem.meter_te }}{% endblock %}
+{% block body_class %}annotate{% endblock %}
+{% block main_class %}page wide{% endblock %}
+{% block content %}
+<div class="annotate-grid">
+  <section class="poem-col" aria-label="Poem">
+    <article class="card poem-card">
+      <header class="poem-head">
+        <div>
+          <p class="eyebrow">{{ poem.id }}{% if is_calibration %} <span class="badge" title="Every annotator rates this poem">calibration</span>{% endif %}{% if existing %} <span class="badge badge-ok">rated</span>{% endif %}</p>
+          <h1 class="meter-name">{{ poem.meter_te }}</h1>
+        </div>
+        <a class="btn btn-ghost ref-btn" href="{{ url_for('main.reference', poem=poem.id) }}" target="_blank" rel="noopener"
+           data-ref-open data-ref-src="{{ url_for('main.reference_fragment', poem=poem.id) }}">📖 నియమాలు<span class="hide-sm"> · Rules</span></a>
+      </header>
+      {% include "_poem_text.html" %}
+      {% for ps in poem.raw.prasa_summary %}
+      <p class="prasa-summary"><span class="ln-k">ప్రాసాక్షరాలు</span>
+        {% for a in ps.ak %}<b class="ln-p">{{ a }}</b>{% if not loop.last %} <span class="muted">·</span> {% endif %}{% endfor %}
+        {% if show_checks and ps.label %}<span class="ln-rule"> — {{ ps.label }}</span>{% endif %}</p>
+      {% endfor %}
+      <p class="legend" aria-label="Legend">
+        <span><span class="mk mk-y">య</span> యతి · yati</span>
+        {% if poem.prasa_applicable %}<span><span class="mk mk-p">ప్రా</span> ప్రాస · prāsa</span>{% else %}<span class="muted">ప్రాస నియమం లేదు · no prāsa in this meter</span>{% endif %}
+      </p>
+    </article>
+
+    <details class="card gana-card" id="gana-details" open>
+      <summary><h2>గణవిభజన <span class="muted">· gaṇa division &amp; guru/laghu</span></h2></summary>
+      {% include "_gana.html" %}
+    </details>
+  </section>
+
+  <section class="form-col" aria-label="Evaluation form">
+    <form method="post" class="card eval-form" id="eval-form" data-draft-key="{{ annotator.username }}:{{ poem.id }}"
+          data-has-saved="{{ 1 if existing else 0 }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <input type="hidden" name="started" value="{{ '%.3f'|format(started) }}">
+      {% if next_url %}<input type="hidden" name="next" value="{{ next_url }}">{% endif %}
+      <h2 class="form-title">మూల్యాంకనం <span class="muted">· Evaluation</span></h2>
+      {% if errors %}<p class="alert" role="alert">Please answer every question marked below.</p>{% endif %}
+      <p class="draft-note" id="draft-note" hidden>Restored your unsaved answers on this device.</p>
+
+      {% for item in questions %}
+        {% set q = item.q %}
+        <fieldset class="q q-{{ q.kind }}{% if errors.get(q.key) %} q-error{% endif %}{% if not item.applies %} q-na{% endif %}"
+                  id="q-{{ q.key }}" {% if errors.get(q.key) %}aria-invalid="true"{% endif %}>
+          <legend><span class="q-num">{{ q.number }}</span><span class="q-text">{{ q.text }}<span class="q-te">{{ q.text_te }}</span></span></legend>
+
+          {% if q.applies == 'bhavam' and item.applies %}
+          <details class="bhavam" data-bhavam>
+            <summary>భావం చూపించు · Show the bhavam <span class="muted small">(answer 1–3 first)</span></summary>
+            {% if poem.bhavam.te %}<p class="bhavam-te" lang="te">{{ poem.bhavam.te }}</p>{% endif %}
+            {% if poem.bhavam.en %}
+              {% if poem.bhavam.te %}<details class="bhavam-en"><summary>English</summary><p lang="en">{{ poem.bhavam.en }}</p></details>
+              {% else %}<p class="bhavam-en-only" lang="en">{{ poem.bhavam.en }}</p>{% endif %}
+            {% endif %}
+          </details>
+          {% endif %}
+
+          {% if item.applies %}
+          <div class="choices choices-{{ q.choices|length }}" role="radiogroup" aria-label="{{ q.text }}">
+            {% for v in q.choices %}
+            <label class="choice">
+              <input type="radio" name="{{ q.key }}" value="{{ v }}" {% if values.get(q.key) == v %}checked{% endif %} {% if loop.first %}required{% endif %}>
+              <span>{% if q.kind == 'binary' %}{{ 'అవును · Yes' if v == 1 else 'కాదు · No' }}<small>{{ v }}</small>{% else %}{{ v }}{% endif %}</span>
+            </label>
+            {% endfor %}
+          </div>
+          {% if q.kind == 'likert' %}<div class="anchors" aria-hidden="true"><span>1 · {{ q.low }}</span><span>{{ q.high }} · 5</span></div>{% endif %}
+          {% if errors.get(q.key) %}<p class="q-msg">{{ errors[q.key] }}</p>{% endif %}
+          {% else %}
+          <p class="na">{{ q.na_reason }}</p>
+          {% endif %}
+        </fieldset>
+      {% endfor %}
+
+      <label class="field comments">
+        <span>వ్యాఖ్యలు · Comments <span class="muted">(optional)</span></span>
+        <textarea name="comments" rows="4" maxlength="5000" placeholder="Anything worth noting: alankāras you found, doubtful words, scansion issues…">{{ comments }}</textarea>
+      </label>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">{{ 'Update' if existing else 'Save' }} &amp; next →</button>
+        {% if not existing %}
+        <button type="submit" class="btn btn-ghost" formaction="{{ url_for('main.skip', eval_id=poem.id) }}" formnovalidate
+                title="You cannot judge this poem; it goes to someone else">Skip</button>
+        {% endif %}
+      </div>
+      {% if existing %}<p class="small muted">Last saved {{ existing.updated_at.replace('T', ' ')[:16] }} UTC · revision {{ existing.revisions }}</p>{% endif %}
+    </form>
+  </section>
+</div>
+{% endblock %}

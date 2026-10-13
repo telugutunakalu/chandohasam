@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}ప్రవేశం{% endblock %}
+{% block topnav %}{% endblock %}
+{% block main_class %}page narrow{% endblock %}
+{% block content %}
+<section class="card login-card">
+  <h1>పద్య మూల్యాంకనం</h1>
+  <p class="lead">Human evaluation of Telugu padyams. Pick a username and use the same one every time, on every device,
+    so your ratings stay together.</p>
+  {% if error %}<p class="alert" role="alert">{{ error }}</p>{% endif %}
+  <form method="post" class="stack" novalidate>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label class="field">
+      <span>Username <span class="muted">· వాడుకరి పేరు</span></span>
+      <input name="username" value="{{ username }}" autocomplete="username" autocapitalize="none" spellcheck="false"
+             required minlength="2" maxlength="40" pattern="[\w.\-]{2,40}" inputmode="text" autofocus>
+    </label>
+    {% if need_code %}
+    <label class="field">
+      <span>Access code <span class="muted">· ప్రవేశ సంకేతం</span></span>
+      <input name="access_code" type="password" autocomplete="current-password" required>
+    </label>
+    {% endif %}
+    <button type="submit" class="btn btn-primary btn-block">ప్రారంభించండి · Start</button>
+  </form>
+  <p class="small muted">Before you start, read the <a href="{{ url_for('main.reference') }}#rubric">rubric guide</a>.</p>
+</section>
+{% endblock %}

@@ -1,0 +1,5577 @@
+{
+ "dataset": "chandohasam_human_eval_v1",
+ "pool": "strict",
+ "pool_file": "human_eval_poems_strict.json",
+ "compliance_profile": "strict",
+ "built_on": "2026-10-13",
+ "engine": "meter_engine/chandohasam.analyze (indic_meter_dawg + prasa + yati)",
+ "engine_revision": "c93ee08",
+ "n_poems": 500,
+ "meters": {
+  "utpalamala": {
+   "name": "utpalamala",
+   "name_te": "ఉత్పలమాల",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    20,
+    20
+   ],
+   "ganalu_text": "భ, ర, న, భ, భ, ర, వ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "భ"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "వ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 10వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "champakamala": {
+   "name": "champakamala",
+   "name_te": "చంపకమాల",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    21,
+    21
+   ],
+   "ganalu_text": "న, జ, భ, జ, జ, జ, ర",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "న"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "ర"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 11వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "mattebhavikriditamu": {
+   "name": "mattebhavikriditamu",
+   "name_te": "మత్తేభవిక్రీడితము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    20,
+    20
+   ],
+   "ganalu_text": "స, భ, ర, న, మ, య, వ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "స"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "మ"
+      },
+      {
+       "t": "య"
+      },
+      {
+       "t": "వ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 14వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "sardulavikriditamu": {
+   "name": "sardulavikriditamu",
+   "name_te": "శార్దూలవిక్రీడితము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    19,
+    19
+   ],
+   "ganalu_text": "మ, స, జ, స, త, త, గ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "మ"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "గ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 13వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "sragdhara": {
+   "name": "sragdhara",
+   "name_te": "స్రగ్ధర",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    21,
+    21
+   ],
+   "ganalu_text": "మ, ర, భ, న, య, య, య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "మ"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "య"
+      },
+      {
+       "t": "య"
+      },
+      {
+       "t": "య"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 8వ అక్షరం, 15వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "mahasragdhara": {
+   "name": "mahasragdhara",
+   "name_te": "మహాస్రగ్ధర",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    22,
+    22
+   ],
+   "ganalu_text": "స, త, త, న, స, ర, ర, గ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "స"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "గ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 9వ అక్షరం, 16వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "totakamu": {
+   "name": "totakamu",
+   "name_te": "తోటకము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    12,
+    12
+   ],
+   "ganalu_text": "స, స, స, స",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "స"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "స"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 9వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "bhujangaprayatamu": {
+   "name": "bhujangaprayatamu",
+   "name_te": "భుజంగప్రయాతము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    12,
+    12
+   ],
+   "ganalu_text": "య, య, య, య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "య"
+      },
+      {
+       "t": "య"
+      },
+      {
+       "t": "య"
+      },
+      {
+       "t": "య"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 8వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "mattakokilamu": {
+   "name": "mattakokilamu",
+   "name_te": "మత్తకోకిలము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    18,
+    18
+   ],
+   "ganalu_text": "ర, స, జ, జ, భ, ర",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "ర"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "ర"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 11వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "pamcacamaramu": {
+   "name": "pamcacamaramu",
+   "name_te": "పంచచామరము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    16,
+    16
+   ],
+   "ganalu_text": "జ, ర, జ, ర, జ, గ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "జ"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "గ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 10వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "vasamtatilakamu": {
+   "name": "vasamtatilakamu",
+   "name_te": "వసంతతిలకము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    14,
+    14
+   ],
+   "ganalu_text": "త, భ, జ, జ, గా",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "త"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "గా"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 8వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "indravajra": {
+   "name": "indravajra",
+   "name_te": "ఇంద్రవజ్ర",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    11,
+    11
+   ],
+   "ganalu_text": "త, త, జ, గా",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "త"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "గా"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 8వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "upendravajra": {
+   "name": "upendravajra",
+   "name_te": "ఉపేంద్రవజ్ర",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    11,
+    11
+   ],
+   "ganalu_text": "జ, త, జ, గా",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "జ"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "గా"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 8వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "salini": {
+   "name": "salini",
+   "name_te": "శాలిని",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    11,
+    11
+   ],
+   "ganalu_text": "మ, త, త, గా",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "మ"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "త"
+      },
+      {
+       "t": "గా"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 7వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "rathoddhata": {
+   "name": "rathoddhata",
+   "name_te": "రథోద్ధత",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    11,
+    11
+   ],
+   "ganalu_text": "ర, న, ర, వ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "ర"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "వ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 7వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "sragvini": {
+   "name": "sragvini",
+   "name_te": "స్రగ్విణి",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    12,
+    12
+   ],
+   "ganalu_text": "ర, ర, ర, ర",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "ర"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "ర"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 7వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "vidyunmala": {
+   "name": "vidyunmala",
+   "name_te": "విద్యున్మాల",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    8,
+    8
+   ],
+   "ganalu_text": "మ, మ, గా",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "మ"
+      },
+      {
+       "t": "మ"
+      },
+      {
+       "t": "గా"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 5వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "lalita": {
+   "name": "lalita",
+   "name_te": "లలిత",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    12,
+    12
+   ],
+   "ganalu_text": "త, భ, జ, ర",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "త"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "ర"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 9వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "kandamu": {
+   "name": "kandamu",
+   "name_te": "కందము",
+   "family": "jati",
+   "family_te": "జాతి",
+   "padalu": 4,
+   "system": "gana",
+   "aksharalu": [
+    6,
+    20
+   ],
+   "ganalu_text": "1,3 పాదాలలో 3 గణములు; 2,4 పాదాలలో 5 గణములు (భ,జ,స,నల,గా మాత్రమే)",
+   "slots": [
+    {
+     "slot": "odd",
+     "lines": [
+      1,
+      3
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      },
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      },
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      }
+     ]
+    },
+    {
+     "slot": "even",
+     "lines": [
+      2,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      },
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      },
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      },
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      },
+      {
+       "t": "కంద",
+       "cls": "kanda"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "పాదాలు 1, 3: యతి లేదు",
+    "పాదాలు 2, 4: 1వ గణం మొదటి అక్షరం ↔ 4వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [
+    "జగణము బేసి గణములలో (1,3,5,7) రాకూడదు",
+    "జగణము బేసి గణములలో (1,3,5,7) రాకూడదు — even line ganas 2,4 are half-ganas 5,7",
+    "ఆరవ గణము జగణము లేదా నలము",
+    "పాదాంతమున (అర్ధభాగాంతమున) గురువు",
+    "మొదటి అక్షరము గురువైన అన్ని పాదములలో గురువు, లఘువైన లఘువు — verify against Appakaviyamu"
+   ],
+   "notes": ""
+  },
+  "utsahamu": {
+   "name": "utsahamu",
+   "name_te": "ఉత్సాహము",
+   "family": "jati",
+   "family_te": "జాతి",
+   "padalu": 4,
+   "system": "gana",
+   "aksharalu": [
+    15,
+    22
+   ],
+   "ganalu_text": "7 సూర్యగణములు + గురువు",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "గ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ గణం మొదటి అక్షరం ↔ 5వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "taruvoja": {
+   "name": "taruvoja",
+   "name_te": "తరువోజ",
+   "family": "jati",
+   "family_te": "జాతి",
+   "padalu": 4,
+   "system": "gana",
+   "aksharalu": [
+    22,
+    30
+   ],
+   "ganalu_text": "3 ఇంద్ర, 1 సూర్య, 3 ఇంద్ర, 1 సూర్య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ గణం మొదటి అక్షరం ↔ 3వ గణం మొదటి అక్షరం, 5వ గణం మొదటి అక్షరం, 7వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "dvipada": {
+   "name": "dvipada",
+   "name_te": "ద్విపద",
+   "family": "jati",
+   "family_te": "జాతి",
+   "padalu": 2,
+   "system": "gana",
+   "aksharalu": [
+    11,
+    15
+   ],
+   "ganalu_text": "3 ఇంద్ర, 1 సూర్య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ గణం మొదటి అక్షరం ↔ 3వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": true,
+   "constraints": [],
+   "notes": ""
+  },
+  "madhyakkara": {
+   "name": "madhyakkara",
+   "name_te": "మధ్యాక్కర",
+   "family": "jati",
+   "family_te": "జాతి",
+   "padalu": 4,
+   "system": "gana",
+   "aksharalu": [
+    16,
+    22
+   ],
+   "ganalu_text": "2 ఇంద్ర, 1 సూర్య, 2 ఇంద్ర, 1 సూర్య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ గణం మొదటి అక్షరం ↔ 4వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "madhuragati_ragada": {
+   "name": "madhuragati_ragada",
+   "name_te": "మధురగతి_రగడ",
+   "family": "jati",
+   "family_te": "జాతి",
+   "padalu": 2,
+   "system": "matra",
+   "aksharalu": [
+    8,
+    16
+   ],
+   "ganalu_text": "4 చతుర్మాత్రా గణములు",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "చతుర్మాత్రా",
+       "cls": "m4"
+      },
+      {
+       "t": "చతుర్మాత్రా",
+       "cls": "m4"
+      },
+      {
+       "t": "చతుర్మాత్రా",
+       "cls": "m4"
+      },
+      {
+       "t": "చతుర్మాత్రా",
+       "cls": "m4"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ గణం మొదటి అక్షరం ↔ 3వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": true,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": true,
+   "constraints": [],
+   "notes": ""
+  },
+  "hayapracara_ragada": {
+   "name": "hayapracara_ragada",
+   "name_te": "హయప్రచార_రగడ",
+   "family": "jati",
+   "family_te": "జాతి",
+   "padalu": 2,
+   "system": "matra",
+   "aksharalu": [
+    8,
+    12
+   ],
+   "ganalu_text": "4 త్రిమాత్రా గణములు",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "త్రిమాత్రా",
+       "cls": "m3"
+      },
+      {
+       "t": "త్రిమాత్రా",
+       "cls": "m3"
+      },
+      {
+       "t": "త్రిమాత్రా",
+       "cls": "m3"
+      },
+      {
+       "t": "త్రిమాత్రా",
+       "cls": "m3"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ గణం మొదటి అక్షరం ↔ 3వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": true,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": true,
+   "constraints": [],
+   "notes": ""
+  },
+  "seesamu": {
+   "name": "seesamu",
+   "name_te": "సీసము",
+   "family": "upajati",
+   "family_te": "ఉపజాతి",
+   "padalu": 4,
+   "system": "gana",
+   "aksharalu": [
+    22,
+    36
+   ],
+   "ganalu_text": "6 ఇంద్ర గణములు, 2 సూర్య గణములు",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      }
+     ]
+    },
+    {
+     "slot": "laghu",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": true,
+     "ganas": [
+      {
+       "t": "నలల"
+      },
+      {
+       "t": "నలల"
+      },
+      {
+       "t": "నలల"
+      },
+      {
+       "t": "నలల"
+      },
+      {
+       "t": "నలల"
+      },
+      {
+       "t": "నలల"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "న"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "రెండు యతులు — 1వ గణం ↔ 3వ గణం, 5వ గణం ↔ 7వ గణం (మొదటి అక్షరాలు)"
+   ],
+   "prasa": false,
+   "prasa_yati": true,
+   "halves_per_line": 2,
+   "followed_by": [
+    "ataveladi",
+    "tetagiti"
+   ],
+   "repeatable": false,
+   "constraints": [],
+   "notes": "the all-laghu form (సర్వలఘు సీసము, Pothana 11-72) is the alternative slot pattern of this meter"
+  },
+  "ataveladi": {
+   "name": "ataveladi",
+   "name_te": "ఆటవెలది",
+   "family": "upajati",
+   "family_te": "ఉపజాతి",
+   "padalu": 4,
+   "system": "gana",
+   "aksharalu": [
+    10,
+    17
+   ],
+   "ganalu_text": "1,3 పాదాలలో 3 సూర్య + 2 ఇంద్ర; 2,4 పాదాలలో 5 సూర్య",
+   "slots": [
+    {
+     "slot": "odd",
+     "lines": [
+      1,
+      3
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      }
+     ]
+    },
+    {
+     "slot": "even",
+     "lines": [
+      2,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "పాదాలు 1, 3: 1వ గణం మొదటి అక్షరం ↔ 4వ గణం మొదటి అక్షరం",
+    "పాదాలు 2, 4: 1వ గణం మొదటి అక్షరం ↔ 4వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": false,
+   "prasa_yati": true,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "tetagiti": {
+   "name": "tetagiti",
+   "name_te": "తేటగీతి",
+   "family": "upajati",
+   "family_te": "ఉపజాతి",
+   "padalu": 4,
+   "system": "gana",
+   "aksharalu": [
+    12,
+    17
+   ],
+   "ganalu_text": "1 సూర్య, 2 ఇంద్ర, 2 సూర్య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "ఇంద్ర",
+       "cls": "indra"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      },
+      {
+       "t": "సూర్య",
+       "cls": "surya"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ గణం మొదటి అక్షరం ↔ 4వ గణం మొదటి అక్షరం"
+   ],
+   "prasa": false,
+   "prasa_yati": true,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "taralamu": {
+   "name": "taralamu",
+   "name_te": "తరళము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    19,
+    19
+   ],
+   "ganalu_text": "న, భ, ర, స, జ, జ, గ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "న"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "ర"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "గ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 12వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "malini": {
+   "name": "malini",
+   "name_te": "మాలిని",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    15,
+    15
+   ],
+   "ganalu_text": "న, న, మ, య, య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "న"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "మ"
+      },
+      {
+       "t": "య"
+      },
+      {
+       "t": "య"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 9వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "manini": {
+   "name": "manini",
+   "name_te": "మానిని",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    22,
+    22
+   ],
+   "ganalu_text": "భ, భ, భ, భ, భ, భ, భ, గ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "భ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "గ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 7వ అక్షరం, 13వ అక్షరం, 19వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 2,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": "Pothana prints each pāda as two half-lines (10.1-214); both printings are identified"
+  },
+  "kavirajavirajitamu": {
+   "name": "kavirajavirajitamu",
+   "name_te": "కవిరాజవిరాజితము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    23,
+    23
+   ],
+   "ganalu_text": "న, జ, జ, జ, జ, జ, జ, వ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "న"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "వ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 8వ అక్షరం, 14వ అక్షరం, 20వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "vanamayuramu": {
+   "name": "vanamayuramu",
+   "name_te": "వనమయూరము",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    14,
+    14
+   ],
+   "ganalu_text": "భ, జ, స, న, గా",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "గా"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 9వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "mangalamahasri": {
+   "name": "mangalamahasri",
+   "name_te": "మంగళమహాశ్రీ",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    26,
+    26
+   ],
+   "ganalu_text": "భ, జ, స, న, భ, జ, స, న, గా",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "గా"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 9వ అక్షరం, 17వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": false,
+   "halves_per_line": 1,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": ""
+  },
+  "layagrahi": {
+   "name": "layagrahi",
+   "name_te": "లయగ్రాహి",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    30,
+    30
+   ],
+   "ganalu_text": "భ, జ, స, న, భ, జ, స, న, భ, య",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "జ"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "భ"
+      },
+      {
+       "t": "య"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 9వ అక్షరం, 17వ అక్షరం, 25వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": true,
+   "halves_per_line": 2,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": "the yati points take ప్రాసయతి (the second akshara of each segment rhymes with the pāda's prāsa), not yati-maitri; Pothana prints each pāda as two half-lines"
+  },
+  "layavibhati": {
+   "name": "layavibhati",
+   "name_te": "లయవిభాతి",
+   "family": "vrutta",
+   "family_te": "వృత్తము",
+   "padalu": 4,
+   "system": "fixed",
+   "aksharalu": [
+    34,
+    34
+   ],
+   "ganalu_text": "న, స, న, న, స, న, న, స, న, న, స, గ",
+   "slots": [
+    {
+     "slot": "all",
+     "lines": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "alt": false,
+     "ganas": [
+      {
+       "t": "న"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "న"
+      },
+      {
+       "t": "స"
+      },
+      {
+       "t": "గ"
+      }
+     ]
+    }
+   ],
+   "yati": [
+    "1వ అక్షరం ↔ 10వ అక్షరం, 19వ అక్షరం, 28వ అక్షరం"
+   ],
+   "prasa": true,
+   "prasa_yati": true,
+   "halves_per_line": 2,
+   "followed_by": [],
+   "repeatable": false,
+   "constraints": [],
+   "notes": "the yati points take ప్రాసయతి (the second akshara of each segment rhymes with the pāda's prāsa), not yati-maitri; Pothana prints each pāda as two half-lines"
+  }
+ },
+ "guru_rules": [
+  {
+   "id": "deergha",
+   "te": "దీర్ఘము",
+   "when": "long vowel: ఆ ఈ ఊ ౠ ఏ ఓ ౡ or their signs"
+  },
+  {
+   "id": "sandhyakshara",
+   "te": "సంధ్యక్షరము",
+   "when": "diphthong ఐ ఔ / ై ౌ"
+  },
+  {
+   "id": "anusvara",
+   "te": "అనుస్వారము",
+   "when": "full sunna ం (not the arasunna ఁ)"
+  },
+  {
+   "id": "visarga",
+   "te": "విసర్గ",
+   "when": "ః"
+  },
+  {
+   "id": "pollu",
+   "te": "పొల్లు",
+   "when": "the syllable ends in a dead consonant (C్)"
+  },
+  {
+   "id": "samyukta",
+   "te": "సంయుక్తాక్షర పూర్వము",
+   "when": "the next syllable of the same word begins with a conjunct or double consonant"
+  }
+ ],
+ "gana_tables": [
+  {
+   "key": "ekakshara_ganas",
+   "description": "Single-akshara ganas — one syllable counts as a gana on its own.",
+   "ganas": [
+    {
+     "name": "guruvu",
+     "telugu": "గురువు",
+     "pattern": "U",
+     "aksharas": 1,
+     "matras": 2
+    },
+    {
+     "name": "laghuvu",
+     "telugu": "లఘువు",
+     "pattern": "I",
+     "aksharas": 1,
+     "matras": 1
+    }
+   ]
+  },
+  {
+   "key": "dvyakshara_ganas",
+   "description": "Two-akshara ganas — two syllables together form one gana (4 kinds).",
+   "ganas": [
+    {
+     "name": "lala",
+     "telugu": "లల",
+     "pattern": "II",
+     "aksharas": 2,
+     "matras": 2
+    },
+    {
+     "name": "va",
+     "telugu": "వ",
+     "pattern": "IU",
+     "aksharas": 2,
+     "matras": 3,
+     "note": "also called \"laga\""
+    },
+    {
+     "name": "ha",
+     "telugu": "హ",
+     "pattern": "UI",
+     "aksharas": 2,
+     "matras": 3,
+     "note": "also called \"gala\""
+    },
+    {
+     "name": "gaa",
+     "telugu": "గా",
+     "pattern": "UU",
+     "aksharas": 2,
+     "matras": 4,
+     "note": "also called \"gaga\""
+    }
+   ]
+  },
+  {
+   "key": "trika_ganas",
+   "description": "Trika ganas — three-akshara ganas; the 8 standard ganas used in vritta meters.",
+   "ganas": [
+    {
+     "name": "bha",
+     "telugu": "భ",
+     "pattern": "UII",
+     "aksharas": 3,
+     "matras": 4,
+     "note": "initial guru"
+    },
+    {
+     "name": "ja",
+     "telugu": "జ",
+     "pattern": "IUI",
+     "aksharas": 3,
+     "matras": 4,
+     "note": "medial guru"
+    },
+    {
+     "name": "sa",
+     "telugu": "స",
+     "pattern": "IIU",
+     "aksharas": 3,
+     "matras": 4,
+     "note": "final guru"
+    },
+    {
+     "name": "na",
+     "telugu": "న",
+     "pattern": "III",
+     "aksharas": 3,
+     "matras": 3,
+     "note": "all laghus"
+    },
+    {
+     "name": "ya",
+     "telugu": "య",
+     "pattern": "IUU",
+     "aksharas": 3,
+     "matras": 5,
+     "note": "initial laghu"
+    },
+    {
+     "name": "ra",
+     "telugu": "ర",
+     "pattern": "UIU",
+     "aksharas": 3,
+     "matras": 5,
+     "note": "medial laghu"
+    },
+    {
+     "name": "ta",
+     "telugu": "త",
+     "pattern": "UUI",
+     "aksharas": 3,
+     "matras": 5,
+     "note": "final laghu"
+    },
+    {
+     "name": "ma",
+     "telugu": "మ",
+     "pattern": "UUU",
+     "aksharas": 3,
+     "matras": 6,
+     "note": "all gurus"
+    }
+   ]
+  },
+  {
+   "key": "surya_ganas",
+   "description": "Surya ganas (2 kinds).",
+   "ganas": [
+    {
+     "name": "na",
+     "telugu": "న",
+     "pattern": "III",
+     "aksharas": 3,
+     "matras": 3
+    },
+    {
+     "name": "ha",
+     "telugu": "హ",
+     "pattern": "UI",
+     "aksharas": 2,
+     "matras": 3
+    }
+   ]
+  },
+  {
+   "key": "indra_ganas",
+   "description": "Indra ganas (6 kinds). Note: the earlier Notes/Comprehensive_Catalog_Metrical_poetry file in this project mistakenly listed bha, ja, sa, nala, naga, sala — te.wikipedia.org and telugu_prosody_engine independently confirm bha, ra, ta, nala, naga, sala (ra and ta instead of ja and sa).",
+   "ganas": [
+    {
+     "name": "bha",
+     "telugu": "భ",
+     "pattern": "UII",
+     "aksharas": 3,
+     "matras": 4
+    },
+    {
+     "name": "ra",
+     "telugu": "ర",
+     "pattern": "UIU",
+     "aksharas": 3,
+     "matras": 5
+    },
+    {
+     "name": "ta",
+     "telugu": "త",
+     "pattern": "UUI",
+     "aksharas": 3,
+     "matras": 5
+    },
+    {
+     "name": "nala",
+     "telugu": "నల",
+     "pattern": "IIII",
+     "aksharas": 4,
+     "matras": 4
+    },
+    {
+     "name": "naga",
+     "telugu": "నగ",
+     "pattern": "IIIU",
+     "aksharas": 4,
+     "matras": 5
+    },
+    {
+     "name": "sala",
+     "telugu": "సల",
+     "pattern": "IIUI",
+     "aksharas": 4,
+     "matras": 5
+    }
+   ]
+  },
+  {
+   "key": "chandra_ganas",
+   "description": "Chandra ganas — extended/composite ganas of 4-5 aksharas, used at line ends or in special contexts. Taken directly from the telugu_prosody_engine source (ganadefs.py) — the te.wikipedia.org article names the same ganas (under some of these names) but only briefly, not exhaustively.",
+   "ganas": [
+    {
+     "name": "bhala",
+     "telugu": "భల",
+     "pattern": "UIII",
+     "aksharas": 4,
+     "matras": 5
+    },
+    {
+     "name": "bhaguru",
+     "telugu": "భగురు",
+     "pattern": "UIIU",
+     "aksharas": 4,
+     "matras": 6
+    },
+    {
+     "name": "malaghu",
+     "telugu": "మలఘు",
+     "pattern": "UUUI",
+     "aksharas": 4,
+     "matras": 7
+    },
+    {
+     "name": "sava",
+     "telugu": "సవ",
+     "pattern": "IIUIU",
+     "aksharas": 5,
+     "matras": 7
+    },
+    {
+     "name": "saha",
+     "telugu": "సహ",
+     "pattern": "IIUUI",
+     "aksharas": 5,
+     "matras": 7
+    },
+    {
+     "name": "tala",
+     "telugu": "తల",
+     "pattern": "UUII",
+     "aksharas": 4,
+     "matras": 6
+    },
+    {
+     "name": "rala",
+     "telugu": "రల",
+     "pattern": "UIUI",
+     "aksharas": 4,
+     "matras": 6
+    },
+    {
+     "name": "nava",
+     "telugu": "నవ",
+     "pattern": "IIIIU",
+     "aksharas": 5,
+     "matras": 6
+    },
+    {
+     "name": "raguru",
+     "telugu": "రగురు",
+     "pattern": "UIUU",
+     "aksharas": 4,
+     "matras": 7
+    },
+    {
+     "name": "taga",
+     "telugu": "తగ",
+     "pattern": "UUIU",
+     "aksharas": 4,
+     "matras": 7
+    },
+    {
+     "name": "nagaga",
+     "telugu": "నగగ",
+     "pattern": "IIIUU",
+     "aksharas": 5,
+     "matras": 7
+    },
+    {
+     "name": "naha",
+     "telugu": "నహ",
+     "pattern": "IIIUI",
+     "aksharas": 5,
+     "matras": 6
+    },
+    {
+     "name": "nalala",
+     "telugu": "నలల",
+     "pattern": "IIIII",
+     "aksharas": 5,
+     "matras": 5
+    }
+   ]
+  },
+  {
+   "key": "kanda_ganas",
+   "description": "Kanda ganas — the five 4-matra ganas permitted in Kandamu (chatur-matra ganas). Positional restrictions (no ja at odd ganas, ja/nala at the 6th, guru at the half end) are meter rules, recorded in meter_rules.yaml, not properties of the class.",
+   "ganas": [
+    {
+     "name": "bha",
+     "telugu": "భ",
+     "pattern": "UII",
+     "aksharas": 3,
+     "matras": 4
+    },
+    {
+     "name": "ja",
+     "telugu": "జ",
+     "pattern": "IUI",
+     "aksharas": 3,
+     "matras": 4
+    },
+    {
+     "name": "sa",
+     "telugu": "స",
+     "pattern": "IIU",
+     "aksharas": 3,
+     "matras": 4
+    },
+    {
+     "name": "nala",
+     "telugu": "నల",
+     "pattern": "IIII",
+     "aksharas": 4,
+     "matras": 4
+    },
+    {
+     "name": "gaa",
+     "telugu": "గా",
+     "pattern": "UU",
+     "aksharas": 2,
+     "matras": 4,
+     "note": "also called \"gaga\""
+    }
+   ]
+  }
+ ],
+ "class_names": {
+  "indra": "ఇంద్ర గణము",
+  "surya": "సూర్య గణము",
+  "kanda": "కంద గణము (చతుర్మాత్ర)",
+  "m3": "త్రిమాత్రా గణము",
+  "m4": "చతుర్మాత్రా గణము",
+  "m5": "పంచమాత్రా గణము"
+ },
+ "yati": {
+  "vowel_classes": {
+   "A": [
+    "అ",
+    "ఆ",
+    "ఐ",
+    "ఔ"
+   ],
+   "I": [
+    "ఇ",
+    "ఈ",
+    "ఋ",
+    "ౠ",
+    "ఌ",
+    "ౡ",
+    "ఎ",
+    "ఏ"
+   ],
+   "U": [
+    "ఉ",
+    "ఊ",
+    "ఒ",
+    "ఓ"
+   ]
+  },
+  "vargas": [
+   {
+    "name": "ka",
+    "members": [
+     "క",
+     "ఖ",
+     "గ",
+     "ఘ",
+     "ఙ"
+    ]
+   },
+   {
+    "name": "ca",
+    "members": [
+     "చ",
+     "ఛ",
+     "జ",
+     "ఝ",
+     "ఞ"
+    ]
+   },
+   {
+    "name": "ṭa",
+    "members": [
+     "ట",
+     "ఠ",
+     "డ",
+     "ఢ",
+     "ణ"
+    ]
+   },
+   {
+    "name": "ta",
+    "members": [
+     "త",
+     "థ",
+     "ద",
+     "ధ",
+     "న"
+    ]
+   },
+   {
+    "name": "pa",
+    "members": [
+     "ప",
+     "ఫ",
+     "బ",
+     "భ",
+     "మ"
+    ]
+   }
+  ],
+  "maitri": [
+   {
+    "rule": "YATI-VY-02.1",
+    "pairs": [],
+    "vargas": [
+     [
+      "క",
+      "ఖ",
+      "గ",
+      "ఘ"
+     ],
+     [
+      "చ",
+      "ఛ",
+      "జ",
+      "ఝ"
+     ],
+     [
+      "ట",
+      "ఠ",
+      "డ",
+      "ఢ"
+     ],
+     [
+      "త",
+      "థ",
+      "ద",
+      "ధ"
+     ],
+     [
+      "ప",
+      "ఫ",
+      "బ",
+      "భ"
+     ]
+    ],
+    "te": "వర్గజ యతి",
+    "en": "same-varga stop yati",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-04",
+    "pairs": [
+     [
+      "న",
+      "ణ"
+     ]
+    ],
+    "te": "న-ణ యతి (సరసయతి-1)",
+    "en": "na-ṇa yati",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-08",
+    "pairs": [
+     [
+      "య",
+      "హ"
+     ]
+    ],
+    "te": "ఋజు యతి",
+    "en": "ya-ha yati",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-11",
+    "pairs": [
+     [
+      "శ",
+      "ష"
+     ],
+     [
+      "శ",
+      "స"
+     ],
+     [
+      "ష",
+      "స"
+     ]
+    ],
+    "te": "ఊష్మ యతి",
+    "en": "sibilant yati",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-12",
+    "pairs": [
+     [
+      "శ",
+      "చ"
+     ],
+     [
+      "శ",
+      "ఛ"
+     ],
+     [
+      "శ",
+      "జ"
+     ],
+     [
+      "శ",
+      "ఝ"
+     ],
+     [
+      "ష",
+      "చ"
+     ],
+     [
+      "ష",
+      "ఛ"
+     ],
+     [
+      "ష",
+      "జ"
+     ],
+     [
+      "ష",
+      "ఝ"
+     ],
+     [
+      "స",
+      "చ"
+     ],
+     [
+      "స",
+      "ఛ"
+     ],
+     [
+      "స",
+      "జ"
+     ],
+     [
+      "స",
+      "ఝ"
+     ]
+    ],
+    "te": "సరసయతి-4 (శషస-చజ)",
+    "en": "sibilant with palatal",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-13",
+    "pairs": [
+     [
+      "వ",
+      "బ"
+     ]
+    ],
+    "te": "అభేద యతి (వ-బ)",
+    "en": "va-ba yati",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-14",
+    "pairs": [
+     [
+      "వ",
+      "ప"
+     ],
+     [
+      "వ",
+      "ఫ"
+     ],
+     [
+      "వ",
+      "భ"
+     ]
+    ],
+    "te": "అభేదవర్గ యతి (వ-ప/ఫ/భ)",
+    "en": "va with pa pha bha",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-15",
+    "pairs": [
+     [
+      "ల",
+      "ళ"
+     ]
+    ],
+    "te": "అభేద యతి-2 (ల-ళ)",
+    "en": "la-ḷa yati",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-SP-08",
+    "pairs": [
+     [
+      "ర",
+      "ఱ"
+     ]
+    ],
+    "te": "ద్విరేఫ యతి / ఱవడి",
+    "en": "ra with ṟa",
+    "status": "orthographic_relaxation"
+   },
+   {
+    "rule": "YATI-DL-04",
+    "pairs": [
+     [
+      "ల",
+      "డ"
+     ],
+     [
+      "ళ",
+      "డ"
+     ]
+    ],
+    "te": "ల-డ / ళ-డ అభేద యతి",
+    "en": "la/ḷa with ḍa",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-DL-05",
+    "pairs": [
+     [
+      "ద",
+      "డ"
+     ]
+    ],
+    "te": "ద-డ సావర్ణ్య యతి",
+    "en": "da-ḍa yati",
+    "status": "accepted_relaxation"
+   },
+   {
+    "rule": "YATI-DL-02",
+    "pairs": [
+     [
+      "ర",
+      "ల"
+     ]
+    ],
+    "te": "ర-ల యతి",
+    "en": "ra-la yati",
+    "status": "accepted_relaxation"
+   },
+   {
+    "rule": "YATI-DL-02.1",
+    "pairs": [
+     [
+      "ర",
+      "ళ"
+     ]
+    ],
+    "te": "ర-ళ యతి",
+    "en": "ra-ḷa yati",
+    "status": "accepted_relaxation"
+   },
+   {
+    "rule": "YATI-RJ-13",
+    "pairs": [
+     [
+      "ల",
+      "ఢ"
+     ],
+     [
+      "ళ",
+      "ఢ"
+     ]
+    ],
+    "te": "ల-ఢ / ళ-ఢ",
+    "en": "la/ḷa with ḍha",
+    "status": "forbidden"
+   },
+   {
+    "rule": "YATI-RJ-14",
+    "pairs": [
+     [
+      "ధ",
+      "డ"
+     ],
+     [
+      "ద",
+      "ఢ"
+     ],
+     [
+      "త",
+      "డ"
+     ]
+    ],
+    "te": "ధ-డ / ద-ఢ / త-డ",
+    "en": "other dental-retroflex pairs",
+    "status": "forbidden"
+   },
+   {
+    "rule": "YATI-RJ-07",
+    "pairs": [
+     [
+      "మ",
+      "వ"
+     ]
+    ],
+    "te": "సంభావన వడి (మ-వ)",
+    "en": "ma with va",
+    "status": "forbidden"
+   },
+   {
+    "rule": "YATI-RJ-06",
+    "pairs": [
+     [
+      "య",
+      "ర"
+     ],
+     [
+      "య",
+      "ల"
+     ],
+     [
+      "య",
+      "వ"
+     ],
+     [
+      "ర",
+      "వ"
+     ],
+     [
+      "ల",
+      "వ"
+     ],
+     [
+      "శ",
+      "హ"
+     ],
+     [
+      "ష",
+      "హ"
+     ],
+     [
+      "స",
+      "హ"
+     ]
+    ],
+    "te": "య-శ వర్గద్వయ యతి",
+    "en": "semivowel/spirant cross pairs",
+    "status": "forbidden"
+   },
+   {
+    "rule": "YATI-VY-16",
+    "pairs": [
+     [
+      "మ",
+      "ప"
+     ]
+    ],
+    "note": "అచ్చులు రెండూ U-వర్గం",
+    "te": "ము విభక్తి యతి / పోలిక వడి",
+    "en": "mu with pu-series",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-16",
+    "pairs": [
+     [
+      "మ",
+      "ఫ"
+     ]
+    ],
+    "note": "అచ్చులు రెండూ U-వర్గం",
+    "te": "ము విభక్తి యతి / పోలిక వడి",
+    "en": "mu with pu-series",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-16",
+    "pairs": [
+     [
+      "మ",
+      "బ"
+     ]
+    ],
+    "note": "అచ్చులు రెండూ U-వర్గం",
+    "te": "ము విభక్తి యతి / పోలిక వడి",
+    "en": "mu with pu-series",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-VY-16",
+    "pairs": [
+     [
+      "మ",
+      "భ"
+     ]
+    ],
+    "note": "అచ్చులు రెండూ U-వర్గం",
+    "te": "ము విభక్తి యతి / పోలిక వడి",
+    "en": "mu with pu-series",
+    "status": "canonical"
+   },
+   {
+    "rule": "YATI-DL-06",
+    "pairs": [
+     [
+      "మ",
+      "వ"
+     ]
+    ],
+    "note": "అచ్చులు రెండూ U-వర్గం",
+    "te": "ము-వు యతి",
+    "en": "mu with vu",
+    "status": "canonical"
+   }
+  ],
+  "profiles": {
+   "strict": {
+    "te": "కఠిన",
+    "en": "Strict — Appakavi / Kavitraya canon",
+    "accepts": [
+     "canonical",
+     "canonical_subtype",
+     "mandatory",
+     "informational"
+    ]
+   },
+   "relaxed": {
+    "te": "సడలింపు",
+    "en": "Relaxed — later lākṣaṇikas and kāvya usage (ర-ల, ద-డ generalised, స్నా-త, విశ్వామిత్ర vowel) + ర/ఱ orthographic relaxation",
+    "accepts": [
+     "canonical",
+     "canonical_subtype",
+     "mandatory",
+     "informational",
+     "accepted_relaxation",
+     "orthographic_relaxation"
+    ]
+   },
+   "historical": {
+    "te": "చారిత్రక",
+    "en": "Historical — additionally IDENTIFY deprecated forms (బహుయతి lapses, prāsa-yati variants); forbidden still fails",
+    "accepts": [
+     "canonical",
+     "canonical_subtype",
+     "mandatory",
+     "informational",
+     "accepted_relaxation",
+     "orthographic_relaxation",
+     "deprecated"
+    ]
+   }
+  },
+  "families": [
+   {
+    "code": "POS",
+    "te": "యతిస్థానములు",
+    "en": "positions",
+    "rules": [
+     {
+      "id": "YATI-POS-01",
+      "name": "వళి",
+      "status": "canonical",
+      "when": "first akshara of every pāda",
+      "match": "",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-02",
+      "name": "యతిస్థానము",
+      "status": "canonical",
+      "when": "akshara index (vritta) or gaṇa start (jāti) fixed by the meter",
+      "match": "",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-03",
+      "name": "యతిమైత్రి",
+      "status": "canonical",
+      "when": "",
+      "match": "akshara at యతిస్థానము identical to or friend of the వళి: Class(a1)=Class(a_yati)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-04",
+      "name": "maitri is meter-independent",
+      "status": "canonical",
+      "when": "",
+      "match": "only the position depends on the meter",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-05",
+      "name": "line independence",
+      "status": "canonical",
+      "when": "",
+      "match": "pāda k's వళి compared only with pāda k's yati akshara; kinds may differ per pāda; సీసము+గీతి = 12 independent yatis",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-06",
+      "name": "word boundary irrelevant",
+      "status": "canonical",
+      "when": "",
+      "match": "yati akshara may be word-initial, medial or final; no weight constraint on preceding aksharas",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-07",
+      "name": "11 synonyms",
+      "status": "informational",
+      "when": "",
+      "match": "{వళి,వడి,యతి,విరతి,విశ్రాంతి,విశ్రామము,విశ్రమము,శ్రాంతి,విరమణము,విరమము,విరామము}",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-08",
+      "name": "sama-vritta coordinates",
+      "status": "canonical",
+      "when": "",
+      "match": "ఉత్పలమాల {1,10}; చంపకమాల {1,11}; శార్దూలము {1,13}; మత్తేభము {1,14}",
+      "scope": "vrittas"
+     },
+     {
+      "id": "YATI-POS-09",
+      "name": "jāti/upajāti coordinates",
+      "status": "canonical",
+      "when": "",
+      "match": "ఆటవెలది, తేటగీతి: {akshara 1, first akshara of gaṇa 4}",
+      "scope": "ఆటవెలది,తేటగీతి"
+     },
+     {
+      "id": "YATI-POS-10",
+      "name": "కందము",
+      "status": "canonical",
+      "when": "",
+      "match": "pādas 1,3: no yati; pādas 2,4: {akshara 1, first akshara of gaṇa 4}",
+      "scope": "కందము"
+     },
+     {
+      "id": "YATI-POS-11",
+      "name": "సీసము",
+      "status": "canonical",
+      "when": "",
+      "match": "two independent yatis per line: {gaṇa 1, gaṇa 3} and {gaṇa 5, gaṇa 7}; engine needs pairs/groups not bare positions",
+      "scope": "సీసము"
+     },
+     {
+      "id": "YATI-POS-12",
+      "name": "బహుయతులు",
+      "status": "canonical",
+      "when": "",
+      "match": "స్రగ్ధర {1,8,15}; మహాస్రగ్ధర {1,9,16}; మంగళమహాశ్రీ {1,9,17}; తరువోజ gaṇas {1,3,5,7}; also మానిని,కవిరాజవిరాజితము,సరసిజము,క్రౌంచపదము,విజయభద్ర రగడ,విజయమంగళ రగడ; all coordinates mutually rhyme",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-13",
+      "name": "దండకము",
+      "status": "canonical",
+      "when": "",
+      "match": "no yati, no prāsa",
+      "scope": "దండకము"
+     },
+     {
+      "id": "YATI-POS-14",
+      "name": "Telugu position in Sanskrit vrittas",
+      "status": "informational",
+      "when": "",
+      "match": "first akshara after the Sanskrit word-break (శార్దూలము 12+7 -> 13); no పాదాంత yati; words may cross the pāda boundary",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-15",
+      "name": "yati vs prāsa",
+      "status": "informational",
+      "when": "",
+      "match": "prāsa: 2nd akshara, consonant only, tied across pādas, pūrvākṣara weight rule; yati: 1st akshara vs internal coordinate, consonant AND vowel, line-independent, no weight rule",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-16",
+      "name": "Sanskrit yati vs Telugu yati",
+      "status": "informational",
+      "when": "",
+      "match": "Sanskrit = word break, no sound agreement; Telugu = sound agreement, no word break",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-17",
+      "name": "Appakavi's 41",
+      "status": "informational",
+      "when": "",
+      "match": "7 svara + 21 vyañjana + 12 ubhaya (13 with భిన్న restored) + 1 ప్రాసయతి; some అగ్రాహ్య; అఖండ apraśasta",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-18",
+      "name": "7 svara yatis",
+      "status": "informational",
+      "when": "",
+      "match": "స్వరమైత్రి 6.2.1; స్వరప్రధాన 6.3; లుప్తవిసర్గక 6.4; ఋ 6.5; ఋత్వసంబంధ 6.6; ఋత్వసామ్య 6.7; వృద్ధి 6.8",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-19",
+      "name": "21 vyañjana yatis",
+      "status": "informational",
+      "when": "",
+      "match": "ప్రాణి,వర్గజ,బిందు,తద్భవవ్యాజ,విశేష,అనుస్వారసంబంధ,అనునాసికాక్షర,మువిభక్తి,ముకార,మవర్ణ,ఋజు,ప్రత్యేక,భిన్న,ఏకతర,అభేద,అభేదవర్గ,ఊష్మ,సరస,సంయుక్త,అంత్యోష్మసంధి,వికల్ప",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-20",
+      "name": "13 ubhaya yatis",
+      "status": "informational",
+      "when": "",
+      "match": "భిన్న,నిత్య,విభాగ,కాకుస్వర,ప్లుతయుగ,పంచమీవిభక్తి(rejected),యుష్మదస్మచ్ఛబ్ద,నిత్యసమాస,దేశ్యనిత్యసమాస,నామాఖండ,రాగమసంధి,పరరూప,ప్రాది",
+      "scope": ""
+     },
+     {
+      "id": "YATI-POS-21",
+      "name": "భేదములు vs విధానములు",
+      "status": "informational",
+      "when": "",
+      "match": "bhēda = which sounds pair; vidhāna = how/where the test is applied",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "MOD",
+    "te": "సంధి చిహ్నాలు (ఁ ం ః న్)",
+    "en": "signs at the junction",
+    "rules": [
+     {
+      "id": "YATI-MOD-01",
+      "name": "అర్ధబిందువు ఁ",
+      "status": "canonical",
+      "when": "",
+      "match": "no effect before or after: ఁక<->గ -> క<->గ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-MOD-02",
+      "name": "ం on/after the akshara",
+      "status": "canonical",
+      "when": "",
+      "match": "no effect: కం<->గ -> క<->గ; అం<->ఆ -> అ<->ఆ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-MOD-03",
+      "name": "ం before the akshara",
+      "status": "canonical",
+      "when": "",
+      "match": "never breaks a maitri (ంక<->గ -> క<->గ); adds pairs: బిందు YATI-VY-03, అనునాసిక YATI-VY-05, అనుస్వారసంబంధ YATI-VY-06, మవర్ణ YATI-SP-03",
+      "scope": ""
+     },
+     {
+      "id": "YATI-MOD-04",
+      "name": "విసర్గ ః",
+      "status": "canonical",
+      "when": "",
+      "match": "transparent: ఃఖ -> ఖ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-MOD-05",
+      "name": "ద్రుతము న్ after the akshara",
+      "status": "canonical",
+      "when": "",
+      "match": "no effect",
+      "scope": ""
+     },
+     {
+      "id": "YATI-MOD-06",
+      "name": "ద్రుతము న్ or ల్ before the akshara",
+      "status": "canonical",
+      "when": "",
+      "match": "adds cluster readings: న్+C -> {న+V, C+V}; ల్+C -> {ల+V, C+V}",
+      "scope": ""
+     },
+     {
+      "id": "YATI-MOD-07",
+      "name": "ప్లుతము",
+      "status": "canonical",
+      "when": "",
+      "match": "3 mātrās scans as guru; opens కాకుస్వర dual track",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "SV",
+    "te": "స్వర యతులు",
+    "en": "vowel yatis",
+    "rules": [
+     {
+      "id": "YATI-SV-01",
+      "name": "స్వరమైత్రి వర్గములు",
+      "status": "canonical",
+      "when": "",
+      "match": "A={అ,ఆ,ఐ,ఔ}; I={ఇ,ఈ,ఋ,ౠ,ఎ,ఏ,ఌ}; U={ఉ,ఊ,ఒ,ఓ}; any two vowels of one class pair; no cross-class pair ever",
+      "scope": "all"
+     },
+     {
+      "id": "YATI-SV-01.1",
+      "name": "consonant AND vowel must both pair",
+      "status": "mandatory",
+      "when": "",
+      "match": "(C1,V1)<->(C2,V2) requires C-maitri AND class(V1)=class(V2); క<->గ,కా<->గై ok; క<->గి no",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-01.2",
+      "name": "corpus check",
+      "status": "informational",
+      "when": "",
+      "match": "0 of 175 svara-pradhāna examples cross classes",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02",
+      "name": "స్వరప్రధాన యతి",
+      "status": "canonical",
+      "when": "akshara at the yati site or at the వళి (or both) is the product of a sandhi with a vowel-initial second word",
+      "match": "(sandhi akshara) -> initial vowel of the second word (పరపదాది స్వరము); the resulting consonant is ignored",
+      "scope": "all"
+     },
+     {
+      "id": "YATI-SV-02.1",
+      "name": "scope",
+      "status": "canonical",
+      "when": "any two-word junction whose second word begins with a vowel, formal sandhi or not",
+      "match": "",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.2",
+      "name": "sandhi types",
+      "status": "canonical",
+      "when": "",
+      "match": "సవర్ణదీర్ఘ (వేదార్థ->అ); గుణ (పరమేశ్వర->ఈ); పూర్వరూప (ఓ+అ,ఏ+అ -> hidden అ); జశ్త్వ (దృగంచల->అ); విసర్గ (చతురబ్ధి->అ); ఉత్వ,ఇత్వ,అత్వ; న్+V -> V (no న match); య్+V -> V (no య match); వృద్ధి -> YATI-SV-08; ఋ -> YATI-SV-03.2",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.3",
+      "name": "both ends",
+      "status": "canonical",
+      "when": "",
+      "match": "వళి may itself be a sandhi product: భాషా+అపర <-> వివిధ+అధ్వర -> అ<->అ; దేశాళితోన్+ఆది <-> అజితుండు+ఐ -> ఆ<->ఐ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.4",
+      "name": "only the sandhi akshara",
+      "status": "canonical",
+      "when": "",
+      "match": "other aksharas of the word keep ordinary consonant yatis",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.5",
+      "name": "drutam elides under sandhi",
+      "status": "canonical",
+      "when": "",
+      "match": "నందున్+అతని -> నందతని; vikalpa sandhi decided by the printed text",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.6",
+      "name": "అపదము junctions",
+      "status": "canonical",
+      "when": "",
+      "match": "రెండు+అవ, -ఎడు, -ఎడి, -ఏసి -> see YATI-UB-03/04/05, YATI-DL-12",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.7",
+      "name": "bhēda vs vidhāna",
+      "status": "informational",
+      "when": "",
+      "match": "స్వరయతి (YATI-SV-01) is the bhēda; స్వరప్రధాన is the vidhāna resolving through it",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.8",
+      "name": "అఖండయతి guard",
+      "status": "forbidden",
+      "when": "",
+      "match": "!consonant yati on the surface akshara of a transparent junction",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.9",
+      "name": "prāṇi vs svara-pradhāna trap",
+      "status": "mandatory",
+      "when": "",
+      "match": "test for a sandhi boundary before classifying an apparent identity: వొ<->వు in నీవు+ఒక్కరుఁడవ <-> ఉన్నవాఁడవు+ఉర్వీ is ఒ<->ఉ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-02.10",
+      "name": "అచ్చు-ఆధారిత సంధి యతి (vowel-only acceptance)",
+      "status": "accepted_relaxation",
+      "when": "engine mode sandhi=acchu; neither side has printed or lexical evidence of a sandhi",
+      "match": "class(vowel_a)=class(vowel_b) suffices, sandhi assumed on both coordinates; always flagged as a hypothesis",
+      "scope": "relaxed profile and up"
+     },
+     {
+      "id": "YATI-SV-03",
+      "name": "bare vowels inside a line",
+      "status": "informational",
+      "when": "",
+      "match": "normally only at first akshara of pāda 1; elsewhere fused (so in-line vowel yatis arise via YATI-SV-02)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-03.1",
+      "name": "bare ఋ",
+      "status": "canonical",
+      "when": "",
+      "match": "ఋ stands unfused anywhere (ఋషి,ఋణము,ఋతము); ఋ <-> {ఇ,ఈ,ఎ,ఏ,ఋ} directly",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-03.2",
+      "name": "ఋ as పరపదాది స్వరము",
+      "status": "canonical",
+      "when": "",
+      "match": "మాతృ+ఋణము=మాతౄణము, దేవ+ఋషి=దేవర్షి -> ఋ; ఋ as వళి vs a sandhi-resolved I-vowel is ordinary YATI-SV-02",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-03.3",
+      "name": "ఌ",
+      "status": "informational",
+      "when": "",
+      "match": "only in క్ఌప్త -> YATI-DL-01",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-04",
+      "name": "లుప్తవిసర్గక / గూఢస్వర యతి",
+      "status": "canonical",
+      "when": "Sanskrit compound, first member ends in short అ+విసర్గ/అస్, second begins with short అ -> ఓ (దాసోఽహమ్, మనోబ్జ, తపోనల, వక్షోలంకార, వచోమృత)",
+      "match": "(C+ఓ at that junction) -> hidden short అ (class A); !consonant yati on సో/నో there",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-04.1",
+      "name": "అన్యోన్య",
+      "status": "canonical",
+      "when": "",
+      "match": "న్యో -> అ; also listed as నిత్యసమాస ubhaya so hal: నో or యో allowed",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-04.2",
+      "name": "Appakavi vs Anantudu",
+      "status": "informational",
+      "when": "",
+      "match": "Appakavi's \"ఓ matches అ,య,హ\" is a class error; the match is to the hidden అ (గూఢస్వరయతి)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-04.3",
+      "name": "ఓ before a voiced consonant",
+      "status": "mandatory",
+      "when": "",
+      "match": "యశోనాశము, మనోరథము, అంభోయాన -> no hidden vowel; ordinary consonant yati on శో/నో/భో",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-04.4",
+      "name": "plain పూర్వరూప",
+      "status": "informational",
+      "when": "",
+      "match": "ఓ+అ=ఓ, ఏ+అ=ఏ without visarga also hide అ, as ordinary YATI-SV-02",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-05",
+      "name": "ఋ యతి / రివడి",
+      "status": "canonical",
+      "when": "",
+      "match": "ఋ <-> {రి,రీ,రె,రే}; !ఋ<->{రు,రూ,ర,రా}; summary: ఋ<->రి-series, ఋ<->conjunct with రి, C+ృ<->రి-series, C+ృ<->conjunct with రి",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-05.1",
+      "name": "రి inside a conjunct",
+      "status": "canonical",
+      "when": "",
+      "match": "ఋ <-> ర్చి, త్రీ, బ్రీ, ర్కి, ర్గి, ద్రి (extract ర్+V by YATI-SY-01)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-05.2",
+      "name": "వట్రసుడి",
+      "status": "canonical",
+      "when": "",
+      "match": "C+ృ <-> {రి,రీ,రె,రే}; host C ignored (నృ<->రి, కృ<->రీ, రె<->దృ, కృ<->రే)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-05.3",
+      "name": "cluster to cluster",
+      "status": "canonical",
+      "when": "",
+      "match": "కృ<->ప్రి, వృ<->శ్రీ, కృ<->శ్రే, కృ<->ర్మి, ద్వృ<->రి",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-05.4",
+      "name": "మహత్త్వము",
+      "status": "mandatory",
+      "when": "",
+      "match": "only ఋ may detach from its host consonant; !అ<->క, !ఇ<->కి, !ఉ<->కు",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-05.5",
+      "name": "ఋ with ఱ",
+      "status": "orthographic_relaxation",
+      "when": "",
+      "match": "ఋ or C+ృ <-> {ఱి,ఱీ,ఱె,ఱే} (కృ<->ఱి, గృ<->ఱె, ఱే<->నృ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-06",
+      "name": "ఋత్వసంబంధ యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "C+ృ (or CC+ృ) <-> independent {ఇ,ఈ,ఋ,ౠ,ఎ,ఏ}; host consonant(s) ignored; vowel side may be sandhi-resolved (న్+ఇందు->ఇ <-> కృ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-06.1",
+      "name": "unique to ఋ",
+      "status": "mandatory",
+      "when": "",
+      "match": "!కి<->ఇ, !క<->అ, !కు<->ఉ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-06.2",
+      "name": "classification note",
+      "status": "informational",
+      "when": "",
+      "match": "ని<->నృ, కృ<->కే also valid as ప్రాణి; book files them under ఋత్వసంబంధ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-07",
+      "name": "ఋత్వసామ్య యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "C1+ృ <-> C2+ృ for any C1,C2 (మృ<->గృ, హృ<->మృ, గృ<->శృ, స్కృ<->దృ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-07.1",
+      "name": "exclusive to ఋ",
+      "status": "mandatory",
+      "when": "",
+      "match": "!క<->ప, !కి<->పి, !కు<->పు, !గ<->శ (but గృ<->శృ ok)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-07.2",
+      "name": "Appakavi's వృ-పృ example",
+      "status": "informational",
+      "when": "",
+      "match": "weak illustration (వ,ప already pair by అభేదవర్గ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SV-08",
+      "name": "వృద్ధి యతి (ఉభయస్వర)",
+      "status": "canonical",
+      "when": "అ/ఆ+ఏ/ఐ -> ఐ; అ/ఆ+ఓ/ఔ -> ఔ (భోగైక, బలౌఘ, వనౌకస)",
+      "match": "Option A: ఐ/ఔ as class A (అ<->భోగైక, ఆ<->బాణౌఘ); Option B: underlying ఏ as class I or ఓ as class U (ఎ<->లోకైక, ఉ<->బిడౌజ); both may co-exist in one verse",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "VY",
+    "te": "వ్యంజన యతులు",
+    "en": "consonant yatis",
+    "rules": [
+     {
+      "id": "YATI-VY-02",
+      "name": "వర్గములు",
+      "status": "canonical",
+      "when": "",
+      "match": "క-వర్గ={క,ఖ,గ,ఘ}; చ-వర్గ={చ,ౘ,ఛ,జ,ౙ,ఝ}; ట-వర్గ={ట,ఠ,డ,ఢ}; త-వర్గ={త,థ,ద,ధ}; ప-వర్గ={ప,ఫ,బ,భ}; nasals ఙ,ఞ,ణ,న,మ excluded",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-01",
+      "name": "ప్రాణి యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "C+V1 <-> C+V2 with class(V1)=class(V2): {క,కా,కై,కౌ}, {కి,కీ,కృ,కౄ,కె,కే}, {కు,కూ,కొ,కో}; !క<->కి, !కి<->కు",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-01.1",
+      "name": "sandhi first",
+      "status": "mandatory",
+      "when": "",
+      "match": "see YATI-SV-02.9",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-02.1",
+      "name": "వర్గజ యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "within each varga stops 1-4 pair mutually; చ-వర్గ includes ౘ,ౙ (15 pairs); total 39 pairs",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-02.2",
+      "name": "nasal excluded",
+      "status": "mandatory",
+      "when": "",
+      "match": "!క<->ఙ, !చ<->ఞ, !ట<->ణ, !త<->న, !ప<->మ without a preceding ం",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-02.3",
+      "name": "vowel alignment",
+      "status": "mandatory",
+      "when": "",
+      "match": "క<->గ,ఖా,ఘౌ ok; !క<->గి,ఘు",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-02.4",
+      "name": "sandhi-derived stops",
+      "status": "canonical",
+      "when": "",
+      "match": "గసడదవాదేశ consonant evaluated on the surface (కన్నుల->గన్నుల: క<->గ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-03",
+      "name": "బిందు యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "{ంక,ంఖ,ంగ,ంఘ}<->ఙ; {ంచ,ంఛ,ంజ,ంఝ}<->ఞ; {ంట,ంఠ,ండ,ంఢ}<->ణ; {ంత,ంథ,ంద,ంధ}<->న; {ంప,ంఫ,ంబ,ంభ}<->మ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-03.1",
+      "name": "bindu adds, never cancels",
+      "status": "canonical",
+      "when": "",
+      "match": "ంప <-> ప (prāṇi), బ,భ (vargaja), మ (bindu)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-03.2",
+      "name": "line-break bridging",
+      "status": "canonical",
+      "when": "",
+      "match": "line ends ...ఘం, next opens టా -> ంటా<->ణ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-03.3",
+      "name": "druta-derived nasal compound",
+      "status": "canonical",
+      "when": "",
+      "match": "కోటులన్+పావను -> కోటులంబావను: ంబా<->మా",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-03.4",
+      "name": "dental duality",
+      "status": "canonical",
+      "when": "",
+      "match": "న్+త/ద scans as conjunct (వాడుటన్దేట: నే<->నీ) or as ంత/ంద (వాడుటందేట: ందే<->నీ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-04",
+      "name": "న-ణ యతి (సరసయతి-1)",
+      "status": "canonical",
+      "when": "",
+      "match": "న <-> ణ, vowels aligned; radical or ādēśa ణ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-05",
+      "name": "అనునాసికాక్షర యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "{ంట,ంఠ,ండ,ంఢ} <-> న; {ంత,ంథ,ంద,ంధ} <-> ణ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-05.1",
+      "name": "ట/త only",
+      "status": "mandatory",
+      "when": "",
+      "match": "!ంక,ంచ,ంప stops with foreign nasals",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-06",
+      "name": "అనుస్వారసంబంధ యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "{ంట,ంఠ,ండ,ంఢ} <-> {ంత,ంథ,ంద,ంధ} (16 pairs), vowels aligned",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-06.1",
+      "name": "ట/త only",
+      "status": "mandatory",
+      "when": "",
+      "match": "!bindu-preceded క,చ,ప stops here",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-07",
+      "name": "no transitive chaining",
+      "status": "mandatory",
+      "when": "",
+      "match": "ఇ<->ఋ and ఋ<->రి does not give ఇ<->రి; bridges only when explicitly sanctioned and attested",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-08",
+      "name": "ఋజు యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "య <-> హ, vowels aligned",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-09",
+      "name": "సరసయతి-2 అ-య",
+      "status": "canonical",
+      "when": "",
+      "match": "{అ,ఆ,ఐ,ఔ}<->{య,యా,యై,యౌ}; {ఇ,ఈ,ఋ,ఎ,ఏ}<->{యి,యీ,యె,యే}; {ఉ,ఊ,ఒ,ఓ}<->{యు,యూ,యొ,యో}; either side may be sandhi-resolved",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-09.1",
+      "name": "only శబ్దసిద్ధ య",
+      "status": "mandatory",
+      "when": "",
+      "match": "ఆగమ య (యడాగమము: వినియల్గి) -> bypass to the vowel (YATI-SV-02); !sarasa on an āgama య",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-10",
+      "name": "సరసయతి-3 అ-హ",
+      "status": "canonical",
+      "when": "",
+      "match": "{అ,ఆ,ఐ,ఔ}<->{హ,హా,హై,హౌ}; {ఇ,ఈ,ఋ,ఎ,ఏ}<->{హి,హీ,హృ,హె,హే}; {ఉ,ఊ,ఒ,ఓ}<->{హు,హూ,హొ,హో}",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-10.1",
+      "name": "closed triad",
+      "status": "canonical",
+      "when": "",
+      "match": "{అ,య,హ} mutually (ṛju + sarasa-2 + sarasa-3), vowels aligned",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-11",
+      "name": "ఊష్మ యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "శ <-> ష <-> స, vowels aligned; హ excluded",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-12",
+      "name": "సరసయతి-4 sibilant-palatal",
+      "status": "canonical",
+      "when": "",
+      "match": "{శ,ష,స} <-> {చ,ౘ,ఛ,జ,ౙ,ఝ} (18 pairs), vowels aligned",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-12.1",
+      "name": "dental affricate vowels",
+      "status": "mandatory",
+      "when": "",
+      "match": "ౘ,ౙ occur only with {అ,ఆ,ఉ,ఊ,ఒ,ఓ,ఐ,ఔ}, never {ఇ,ఈ,ఎ,ఏ,ఋ}",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-13",
+      "name": "అభేద యతి వ-బ",
+      "status": "canonical",
+      "when": "",
+      "match": "వ <-> బ, vowels aligned",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-13.1",
+      "name": "both వ types",
+      "status": "canonical",
+      "when": "",
+      "match": "శబ్దసిద్ధ వ and ఆదేశ (గసడదవాదేశ) వ both pair with బ; Appakavi's radical-only restriction overturned by Nannaya",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-14",
+      "name": "అభేదవర్గ యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "వ <-> {ప,ఫ,భ}, vowels aligned",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-14.1",
+      "name": "both వ types; copyist variants rejected",
+      "status": "canonical",
+      "when": "",
+      "match": "inherent and ఆదేశ వ both; originals నెపంబున, బావులు, విభేదము stand over emended వ-వ readings",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-15",
+      "name": "అభేద యతి-2 ల-ళ",
+      "status": "canonical",
+      "when": "",
+      "match": "ల <-> ళ, vowels aligned; tatsama doublets, native ళ, plural ఆదేశ ళ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-16",
+      "name": "ము విభక్తి యతి / పోలిక వడి",
+      "status": "canonical",
+      "when": "ము is the nominal suffix (ము-వర్ణకము incl. భయమున్) or the augment ముగాగమము (వృక్షములు, దైవమునకు)",
+      "match": "ము <-> {పు,పూ,పొ,పో,ఫు,ఫూ,ఫొ,ఫో,బు,బూ,బొ,బో,భు,భూ,భొ,భో} (16), no anusvāra needed",
+      "scope": ""
+     },
+     {
+      "id": "YATI-VY-17",
+      "name": "ముకార యతి",
+      "status": "canonical",
+      "when": "radical/stem ము,మూ,మొ,మో (not the suffix)",
+      "match": "ము-series <-> U-class forms of {పు,ఫు,బు,భు} (మ్ము<->పు, స్ఫూ<->మూ, భూ<->మ్రొ)",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "SY",
+    "te": "సంయుక్త యతులు",
+    "en": "conjunct yatis",
+    "rules": [
+     {
+      "id": "YATI-SY-01",
+      "name": "సంయుక్త యతి axiom",
+      "status": "canonical",
+      "when": "",
+      "match": "cluster C1+C2+..+V -> candidates {(C1,V),(C2,V),..}; any single constituent + terminal vowel may satisfy the yati",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-02",
+      "name": "cluster sources",
+      "status": "canonical",
+      "when": "",
+      "match": "శబ్దసిద్ధ (శ్రీ,వ్రత) and సంధిగత (త్రిజగద్విఖ్యాత -> ద్వి) clusters decomposed alike",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-03",
+      "name": "ద్విత్వాక్షర",
+      "status": "canonical",
+      "when": "",
+      "match": "geminate C+C+V -> (C,V) (త్త<->థా, ట్టి<->ఠీ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-04",
+      "name": "class after extraction",
+      "status": "canonical",
+      "when": "",
+      "match": "the extracted consonant's own bhēda rule applies (attested across all 16 classes)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-05",
+      "name": "క్ష",
+      "status": "canonical",
+      "when": "",
+      "match": "క్ష -> క: {క} prāṇi, {ఖ,గ,ఘ} vargaja, {చ,ౘ,ఛ,జ,ౙ,ఝ} sarasa-4; క్ష -> ష: {ష} prāṇi, {శ,స} ūṣma, palatals sarasa-4",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-06",
+      "name": "ఉభయ సంయుక్తాక్షర",
+      "status": "canonical",
+      "when": "",
+      "match": "both coordinates clusters -> test every constituent pairing; any hit validates (క్ష<->ఖ్యా, ర్బీ<->శ్రీ, ష్టి<->డ్కిం, త్త<->ద్వై)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-07",
+      "name": "three-consonant clusters",
+      "status": "canonical",
+      "when": "",
+      "match": "C1+C2+C3+V -> all three eligible (క్ష్మా: కా<->గా, షా<->స, మా<->ంప)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-08",
+      "name": "నకార సంశ్లేషము (druta fusion)",
+      "status": "canonical",
+      "when": "previous line ends in inflected న్",
+      "match": "న్+C(వళి) -> cluster; extract (న,V) for the yati (న్సా -> నా <-> న్య)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-08.1",
+      "name": "metric integrity",
+      "status": "informational",
+      "when": "",
+      "match": "fusion keeps the previous line's last syllable guru; prints separate న్ only for readability",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-08.2",
+      "name": "permissive",
+      "status": "canonical",
+      "when": "",
+      "match": "optional; ignored when the line matches natively",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-08.3",
+      "name": "site 1 line start",
+      "status": "canonical",
+      "when": "",
+      "match": "న్+గ->న<->న; న్+ఘో->నో<->ంతు; న్+పా->నా<->ణ; న్+మ->న<->ంథా; న్+వ->న<->ంద; న్+సై->నై<->న; న్+హ->న<->న",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-08.4",
+      "name": "site 2 caesura",
+      "status": "canonical",
+      "when": "",
+      "match": "internal న్ before the yati akshara fuses with it: పయిపయిన్+మధ్యాహ్నము -> న్మ(న)<->ంద; గలిగినన్+భిక్ష -> న్భి(ని)<->నీ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-08.5",
+      "name": "site 3 dual fusion",
+      "status": "canonical",
+      "when": "",
+      "match": "న్+C1 (న,V1) <-> న్+C2 (న,V2): న్మ<->న్సం, న్ఖ<->న్గ, న్ము<->న్గో, న్మృ<->న్వే, న్హృ<->న్ని",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-08.6",
+      "name": "four-step order",
+      "status": "canonical",
+      "when": "",
+      "match": "native -> site1 -> site2 -> site3 -> fail",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-09",
+      "name": "లకార సంశ్లేషము",
+      "status": "canonical",
+      "when": "word-final లు -> ల్ (ఉకారలోపము; plural or lexical root) at line end or before the yati akshara",
+      "match": "ల్+C -> extract (ల,V); ల may then pair with ల or ళ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-09.1",
+      "name": "site 1",
+      "status": "canonical",
+      "when": "",
+      "match": "ల్గ->ల<->లా; ల్గౌ->లౌ<->ళా; ల్చూ->లూ<->లో; ల్ద->ల<->లా; ల్ప->ల<->ళం",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-09.2",
+      "name": "site 2",
+      "status": "canonical",
+      "when": "",
+      "match": "ల<->ల్గా(లా); లు<->ల్ను(లు); లో<->ల్శు(లు); ళ<->ల్సం(ల)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-09.3",
+      "name": "site 3",
+      "status": "canonical",
+      "when": "",
+      "match": "ల్గ(ల)<->ల్సా(లా); ల్మే(లే)<->ల్హే(లే)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-09.4",
+      "name": "lexical లు",
+      "status": "canonical",
+      "when": "",
+      "match": "ఒడల్->ల్తి(లి)<->ల్తే(లే); మొగుల్->ల్బ(ల)<->ల",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-09.5",
+      "name": "optional",
+      "status": "canonical",
+      "when": "",
+      "match": "ignored when the line aligns natively",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-10",
+      "name": "co-existence",
+      "status": "informational",
+      "when": "",
+      "match": "న- and ల-saṁślēṣa may occur in different lines of one stanza",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-11",
+      "name": "బహుయతి నియతి",
+      "status": "mandatory",
+      "when": "multi-yati line whose వళి is a conjunct",
+      "match": "constituent chosen for caesura 1 must serve every later caesura of the line; switching = నియతిభంగము even if each pair is valid",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-11.1",
+      "name": "middle-cluster consistency",
+      "status": "mandatory",
+      "when": "",
+      "match": "an internal cluster's matched constituent fixes the chain; later coordinates cannot switch to its unused members",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-11.2",
+      "name": "సీసము exempt",
+      "status": "canonical",
+      "when": "",
+      "match": "halves (gaṇas 1-4, 5-8) are independent; C1 in one half, C2 in the other is allowed",
+      "scope": "సీసము"
+     },
+     {
+      "id": "YATI-SY-11.3",
+      "name": "adherence corpus",
+      "status": "informational",
+      "when": "",
+      "match": "స్రగ్ధర శ్రీ(రీ)<->ర్చి<->శ్రే (Bhāgavatam 1-1); తరువోజ స్రు(సు)<->శూ<->సొం<->సొ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SY-11.4",
+      "name": "lapses",
+      "status": "deprecated",
+      "when": "",
+      "match": "constituent switches in Amuktamālyada 6-135, 4-238, Bhāskara Rāmāyaṇamu 2-185 are కవిప్రామాదికము",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "SP",
+    "te": "విశేష వ్యంజన యతులు",
+    "en": "special consonant yatis",
+    "rules": [
+     {
+      "id": "YATI-SP-01",
+      "name": "తద్భవవ్యాజ యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "జ్ఞ <-> {న,ణ} as a unit (in addition to saṁyukta జ/ఞ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-02",
+      "name": "విశేష యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "జ్ఞ <-> {క,ఖ,గ,ఘ}",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-03",
+      "name": "మవర్ణ యతి / మా వడి",
+      "status": "canonical",
+      "when": "",
+      "match": "ం+{య,ర,ల,వ,శ,ష,స,హ} <-> మ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-04",
+      "name": "అంత్యోష్మసంధి యతి",
+      "status": "canonical",
+      "when": "unvoiced stop {క్,ట్,త్,ప్}+హ at a Sanskrit compound boundary -> గ్ఘ/డ్ఢ/ద్ధ/బ్భ (or unassimilated గ్హ..)",
+      "match": "Option A: surface stop by class (ద్ధ->ద/ధ); Option B: underlying హ (then అ<->హ, య<->హ, హ<->హ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-05",
+      "name": "వికల్ప యతి / యుక్త వికల్పయతి",
+      "status": "canonical",
+      "when": "unvoiced stop {క్,చ్,ట్,త్,ప్}+న్/మ్ at a Sanskrit compound boundary -> class nasal (సన్మార్గ, వాఙ్నియమ, దృఙ్మధు)",
+      "match": "Option A: the nasal (న,ఙ..); Option B: the pre-sandhi stop (త->vargaja ద/ధ, క->గ); Option C: word-2 initial న/మ by saṁyukta",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-05.1",
+      "name": "-మయ/-మాత్ర",
+      "status": "mandatory",
+      "when": "",
+      "match": "చిన్మయ, తన్మాత్ర: !Option B (sandhi obligatory); only A or C",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-06",
+      "name": "ప్రత్యేక యతి",
+      "status": "mandatory",
+      "when": "అది/అవి fused with elision of అ (చేతిది, నాది, నీది, దానిది, అట్టిది, మంచిది)",
+      "match": "hal only on the surface consonant (తి, ది, ని, టి); !vowel అ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-06.1",
+      "name": "hiatus form",
+      "status": "canonical",
+      "when": "",
+      "match": "చేతియది, నాయది -> అ by YATI-SV-02 or sarasa",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-06.2",
+      "name": "ఉన్నది/ఉన్నవి",
+      "status": "informational",
+      "when": "",
+      "match": "అత్వసంధి -> దేశ్య నిత్యసమాస ubhaya YATI-UB-16",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-07",
+      "name": "ఏకతర యతులు / ఎక్కటి",
+      "status": "canonical",
+      "when": "",
+      "match": "ర <-> ర only; ఱ <-> ఱ only; no other consonant family (ర pairs with the vowel ఋ only via YATI-SV-05)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-08",
+      "name": "ద్విరేఫ యతి / ఱవడి",
+      "status": "orthographic_relaxation",
+      "when": "",
+      "match": "ర <-> ఱ, vowels aligned",
+      "scope": "strict profile: defect (YATI-RJ-15); relaxed/historical: accepted"
+     },
+     {
+      "id": "YATI-SP-08.1",
+      "name": "doublet check first",
+      "status": "canonical",
+      "when": "",
+      "match": "రాయి/ఱాయి, పాఱు/పారు, రంతు/ఱంతు, చెఱఁగు/చెరఁగు, ఊఱుఁగాయ/ఊరుఁగాయ, రెప్ప/ఱెప్ప, రేకు/ఱేకు, రొమ్ము/ఱొమ్ము, రేవు/ఱేవు may scan as ఏకతర via the doublet",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-08.2",
+      "name": "definite ద్విరేఫ",
+      "status": "orthographic_relaxation",
+      "when": "",
+      "match": "non-doublet stems (క్రమ్మఱు, గుఱ్ఱము, మీఱు, మాఱట): ర<->ఱ, రి<->ఱి, రు<->ఱు, రూ<->ఱు, రో<->ఱు attested",
+      "scope": ""
+     },
+     {
+      "id": "YATI-SP-08.3",
+      "name": "ఋ extension",
+      "status": "orthographic_relaxation",
+      "when": "",
+      "match": "see YATI-SV-05.5",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "UB",
+    "te": "ఉభయ యతులు",
+    "en": "ubhaya yatis",
+    "rules": [
+     {
+      "id": "YATI-UB-00",
+      "name": "ubhaya definition",
+      "status": "informational",
+      "when": "",
+      "match": "at a qualified junction: svara: underlying junction vowel; hal: surface consonant (any constituent of a cluster); both obey YATI-SV-01",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-01",
+      "name": "భిన్న యతి (-ఇంచు)",
+      "status": "canonical",
+      "when": "verb/verbal noun in -ఇంచు (పచించు, హరించు, తిలకించు, నుతించు, పోషించు)",
+      "match": "svara: ఇ (class I); hal: surface consonant (తి, రి, షి, కి)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-01.1",
+      "name": "stem types and modes",
+      "status": "canonical",
+      "when": "",
+      "match": "Type1 ధరియించు: vowel ఇ; Type2 ధరించు/నుతించు: consonant (పెఱయతి) or vowel ఇ; Type3 పోషించు/ఉపమించు: consonant or vowel ఇ (అభిన్నయతి); all five modes valid",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-02",
+      "name": "నిత్య యతి (-ఏని)",
+      "status": "canonical",
+      "when": "enclitic ఏని compounded (చేసెనేని, కాదేని, ఏదేని, ఎన్నఁడున్నేని)",
+      "match": "svara: ఏ (class I); hal: surface consonant (నే, దే, పే)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-03",
+      "name": "విభాగ యతి (-ఏసి)",
+      "status": "canonical",
+      "when": "distributive -ఏసి on numerals/measures (నాలుగేసి, గంపెఁడేసి, దోసెఁడేసి, ఇంతలేసి, అంతేసి)",
+      "match": "svara: ఏ; hal: surface consonant (గే, డే, తే; vargaja allowed)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-03.1",
+      "name": "extensions",
+      "status": "informational",
+      "when": "",
+      "match": "-ఎఁడు -> YATI-UB-04; -అవ -> YATI-UB-05",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-04",
+      "name": "-ఎఁడు (volumetric)",
+      "status": "canonical",
+      "when": "measure suffix -ఎఁడు (తూమెఁడు, గంపెఁడు, దోసెఁడు, పిడికెఁడు, పుడిసెఁడు)",
+      "match": "svara: ఎ (eligible); hal: surface consonant (practice: జె<->సె)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-04.1",
+      "name": "verbal -ఎడు excluded",
+      "status": "mandatory",
+      "when": "",
+      "match": "వండెడును, పలికెడు, ఉండెడు: hal only; !vowel ఎ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-05",
+      "name": "-అవ (ordinal)",
+      "status": "canonical",
+      "when": "ordinal augment -అవ (రెండవ, మూఁడవ, నాలవ, పదుమూఁడవ, ఎనిమిదవ)",
+      "match": "svara: అ (class A; also అ<->య sarasa); hal: surface consonant (డ, ల)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-06",
+      "name": "యుష్మదస్మదాది శబ్ద యతి",
+      "status": "canonical",
+      "when": "pronominal base in -ద్/-త్ (యుష్మద్, అస్మద్, భవత్, తద్, యద్, ఏతద్) + vowel-initial word (యుష్మదాగమన, అస్మదుదర, భవదగ్రజ, తదాశ్రమ)",
+      "match": "svara: the second word's vowel; hal: ద (త-వర్గ by vargaja)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-07",
+      "name": "కాకుస్వర / ప్లుత యతి",
+      "status": "canonical",
+      "when": "syllable bearing emotional pluta (శోక, తర్క, సంబోధన, దూరాహ్వాన, సంశయ, ప్రశ్న, ఆశ్చర్య, ప్రార్థన, భీతి, గాన)",
+      "match": "svara: the protracted vowel (ఆ,ఈ,ఏ,ఓ); hal: the host consonant",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-08",
+      "name": "ప్లుతయుగ యతి",
+      "status": "canonical",
+      "when": "both వళి and yati akshara are genuine pluta syllables of the same vowel class",
+      "match": "valid on vowel-class parity alone even with unrelated consonants (నీవే!<->రఘుపతీ!); !if one is an ordinary long vowel; !if classes differ; if consonants already pair it is plain vargaja",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-09",
+      "name": "పరరూప యతి",
+      "status": "canonical",
+      "when": "శకంధ్వాది compounds (శకంధు, మనీషా, వేదండ, సారంగ, మార్తండ, సీమంత, మంజీర, కులట, పతంజలి, హలీషా, ఉష్ణీష, మస్తిష్క)",
+      "match": "svara: the pararūpa vowel (అ,ఇ,ఈ); hal: surface consonant (ద,ర,న,త,మ,జ,ల,ష)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10",
+      "name": "ప్రాది యతులు",
+      "status": "canonical",
+      "when": "upasarga {ప్ర,పరా,అప,సమ్,అను,అవ,నిస్,నిర్,దుస్,దుర్,వి,ఆఙ్,ని,అధి,అపి,అతి,సు,ఉద్,అభి,ప్రతి,పరి,ఉప} + vowel-initial root with sandhi; alignment on the fused syllable",
+      "match": "svara: root-initial vowel; hal: any constituent of the fused cluster (ప్రాప్తి -> ప or ర)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10.1",
+      "name": "హలాది roots barred",
+      "status": "mandatory",
+      "when": "",
+      "match": "ప్రమాణ, అభిమాన, విశేష, అనురాగ, సుమహత్, నిస్తరించి, నిర్ధూత, విఖ్యాత, సంతోష: no ubhaya; Lakṣaṇa Śirōmaṇi's prādi classification of అనురాగ, సుమహత్, నిస్తరించి, ఆకలిత is an error",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10.2",
+      "name": "ఆఙ్ excluded",
+      "status": "mandatory",
+      "when": "",
+      "match": "ఆ+vowel is pure vowel sandhi (ఓదక) -> svara only; ఆకలిత no choice",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10.3",
+      "name": "పరా valid",
+      "status": "canonical",
+      "when": "",
+      "match": "పరాఙ్ముఖ రా -> అ or ర; పలాయన లా -> అ or ల (ఉపసర్గస్యాయతౌ 8-2-19); Appakavi's 20-list bundles నిస్/నిర్ and దుస్/దుర్",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10.4",
+      "name": "node is the fused syllable",
+      "status": "mandatory",
+      "when": "",
+      "match": "aligning the prefix head (ని of నిరతిశయ) is ordinary ప్రాణి, not prādi",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10.5",
+      "name": "nested prefixes",
+      "status": "canonical",
+      "when": "",
+      "match": "సంప్రాపణ, సముదగ్ర, సముపేత: one node per prefix; judge the fused syllable against its immediate prefix",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10.6",
+      "name": "yanādēśa ambiguity",
+      "status": "informational",
+      "when": "",
+      "match": "ఇ-final prefixes: base vowel match ≡ య match by sarasa; only సవర్ణదీర్ఘ forms (వీక్షా, అతీత, అధీశ్వర) give a clean vowel/consonant split",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-10.7",
+      "name": "prefix table",
+      "status": "canonical",
+      "when": "",
+      "match": "ప్ర: ప్రా(ం)->అ/ఆ or ప,ర; ప్రో->ఉ/ఊ; ప్రే->ఇ/ఈ. పరా: రా->అ; లా->అ or ల; రే->ఇ; రో->ఊ. అప: పా->అ; పే/పో->ఈ/ఇ/ఊ or ప. సమ్: మ(ం)->అ; మా->ఆ; మి/మీ->ఇ/ఈ; ము/మూ->ఉ/ఊ; మే->ఏ; hal మ. అను: న్వ->అ; న్వి/న్వీ->ఇ/ఈ or న,వ. అవ: వా/వే->ఆ/ఈ or వ. నిర్: రం->అ; రా->ఆ; రీ->ఈ or ర. దుర్: ర/రా/రు->అ/ఆ/ఉ or ర. వి: వీ->ఈ or వ; వ్యా/వ్య->ఆ/అ or వ,య. ని: న్యా/న్య->ఆ/అ or న,య. అధి: ధీ->ఇ/ఈ or ధ; ధ్యా/ధ్య->ఆ/అ or ధ,య. అపి: ప్య->అ or ప,య; పీ->ఇ or ప. అతి: తీ->ఇ or త; త్య/త్యా/త్యు->అ/ఆ/ఉ or త,య. సు: సూ->ఉ or స; స్వా/స్వ->ఆ/అ or స,వ. ఉద్: ద(ం)->అ; దా->ఆ; దీ->ఈ or ద. అభి: భీ->ఈ/ఇ or భ; భ్య(ం)->అ/ఉ or భ,య. ప్రతి: త్య/త్యే->అ/ఏ or త,య; తీ->ఈ/ఇ or త. పరి: రీ->ఈ or ర; ర్య->అ/ఆ or ర,య. ఉప: పా(ం)->అ/ఆ or ప; పే->ఈ/ఇ or ప",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-11",
+      "name": "నిత్యసమాస యతి",
+      "status": "canonical",
+      "when": "indivisible Sanskrit compound (అవిగ్రహో స్వపదవిగ్రహో వా) or ఏకపదవత్ word with a vowel-initial second member",
+      "match": "svara: the junction vowel (base and modified vowel both eligible under వృద్ధి/గూఢస్వర); hal: every constituent of the junction cluster",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-11.1",
+      "name": "compound table",
+      "status": "canonical",
+      "when": "",
+      "match": "కర్ణాట ర్ణా->అ or ర,ణ; వనౌకస్ నౌ->ఓ/ఔ or న; ద్వీప ద్వీ->అ/ఈ or ద,వ; అంతరీప రీ->అ/ఈ or ర; ప్రతీప తీ->అ/ఈ or త; సమీప మీ->అ/ఈ or మ; ఆపోశన పో->అ or ప; స్వాంత స్వాం->అ or స,వ; ఏకాంత కాం->అ or క; అన్యోన్య న్యో->అ or న,య; ద్వార ద్వా->అ or ద,వ; గవాక్ష వా->అ or వ; -అంత: సిద్ధాంత/రాద్ధాంత/శుద్ధాంత ద్ధాం->అ or ద,ధ, వృత్తాంత త్తాం->అ or త, లతాంత తాం->అ or త; -అయన: వాతాయన తా, రసాయన సా, రామాయణ మా, బాదరాయణ/పరాయణ/పారాయణ రా, ఉత్తరాయణ, దక్షిణాయన, సాంఖ్యాయన, శాకటాయన, కాత్యాయన, వాత్స్యాయన, బోధాయన ->అ or consonant; -అండ: మార్తాండ ర్తాం->అ or ర,త, బ్రహ్మాండ హ్మాం->అ or మ, అజాండ జాం->అ or జ; అక్షౌహిణి క్షౌ->ఊ/ఔ or క,ష; అక్షోహిణి క్షో->ఊ or క,ష",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-11.2",
+      "name": "semantic gates",
+      "status": "mandatory",
+      "when": "",
+      "match": "పదార్థ \"word meaning\" -> svara only; \"entity\" -> ubhaya (అ or ద); నిశాంత \"house\" -> ubhaya (అ or శ); \"dawn\" -> svara only",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-11.3",
+      "name": "సహార్థక స-",
+      "status": "mandatory",
+      "when": "",
+      "match": "స+vowel stem (సాంగ, సాదర, సార్థ) -> అ/ఆ or స; !స+consonant stem (సకుటుంబ, సవినయ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-11.4",
+      "name": "విశ్వామిత్ర",
+      "status": "accepted_relaxation",
+      "when": "",
+      "match": "hal: శా or వా (grammatical); svara: అ accepted with a flag (Pōtana, Errana, Raṅganātha usage; no real sandhi per Pāṇini 6-3-130)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-12",
+      "name": "నిత్యసమాస proper names",
+      "status": "canonical",
+      "when": "",
+      "match": "నారాయణ రా->అ or ర; జనార్దన నా->అ or న; దామోదర మో->ఉ or మ; సాంబ సాం->అ or స; మురారి/పురారి రా->అ or ర; లంబోదర మో->ఉ or మ; మందార దా->అ or ద; నారికేళ కే->ఈ or క; deity or human referent alike",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-13",
+      "name": "నఞ్ సమాసములు",
+      "status": "canonical",
+      "when": "",
+      "match": "అన్+vowel stem (అనంత, అనన్య, అనర్గళ, అనర్ఘ, అనర్హ న->అ or న; అనారత నా->ఆ; అనూన నూ->ఊ; అనేక(ప) నే->ఏ); invariables నాక->అ or న, నాసత్య->ఆ or న, నాస్తి->అ or న, నైక->ఏ or న; !అ+consonant stem (అభావ, అకార్య, అధర్మ): svara only",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-14",
+      "name": "క్యచ్ ప్రత్యయాంతములు",
+      "status": "forbidden",
+      "when": "",
+      "match": "కుమారాయిత, ఇంద్రాయిత, భద్రాయిత, భృంగాయిత, శబ్దాయమాన, మూర్ఖాయిష్యమాణ: hal only (ర,ద,గ,బ); !vowel ఆ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-15",
+      "name": "ఉపసర్గ సంధి యతి (reverse)",
+      "status": "canonical",
+      "when": "",
+      "match": "noun + vowel-initial upasarga by Sanskrit sandhi (వసుధాధిప ధా, వృషభాధిప భా, రమాధిప మా, యాత్రాభివృద్ధి త్రా) -> అ or consonant; !Telugu ఉత్వసంధి (అతఁడధిపతి): svara only",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-16",
+      "name": "దేశ్య నిత్యసమాస యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "-అఱు (ఉక్కఱు, క్రచ్చఱు, పెంపఱు, పెల్లఱు, చూపఱు) ->అ or క/చ/ప; -ఆరు (ఏపారు, సొంపారు, అలరారు, ఒప్పారు, కన్నారు, పెంపారు) ->ఆ or ప/ర; క్రిక్కిఱియు ->ఇ or క; ఒకొండు/ఒక్కొండు/పదునొకొండు ->ఒ or క; ఇల్లాలు ->ఆ or ల; ఓలమాసగొను ->ఆ or మ; కూర్చుండు ->ఉ or ర/చ; గ్రక్కన ->అ or క; బోరన ->అ or ర; ఉన్నది/ఉన్నవి/కన్నది/చెప్పినవి/పిన్నది ->అ or న (unsandhied ఉన్నయది svara only)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-16.1",
+      "name": "guardrails",
+      "status": "mandatory",
+      "when": "",
+      "match": "other అత్వసంధి (ఉన్నపుడు, ఆచరించినట్టి, విన్నంత, కన్నంత): svara only, !న; ఒకడు, ఒకండు, ఒక్కడు: no node",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-17",
+      "name": "నామాఖండ / ప్రభునామాంత యతి",
+      "status": "canonical",
+      "when": "personal name = base + {అయ్య/అయ, అమ్మ/అమ, అన్న/అన, అక్క, అప్ప/అప, అరుసు, ఆయి} with obligatory sandhi",
+      "match": "svara: అ (ఆ for ఆయి); hal: base consonant (అంబక్క బ; నారన ర; సీతమ్మ త; రామయ్య మ; తిమ్మరుసు మ; గంగాయి గ); geminate and degeminate forms both valid",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-18",
+      "name": "రాగమసంధి యతి",
+      "status": "canonical",
+      "when": "stem + రుగాగమ + ఆలు (పేదరాలు, ముద్దరాలు, బాలెంతరాలు, కొమరాలు, గొడ్డురాలు, ధీరురాలు, ప్రియురాలు, జేవరాలు)",
+      "match": "రా -> svara: ఆ; hal: ర",
+      "scope": ""
+     },
+     {
+      "id": "YATI-UB-19",
+      "name": "చతుర్థీ విభక్తి యతి",
+      "status": "canonical",
+      "when": "dative కై/కయి = కున్+ఐ/అయి",
+      "match": "svara: ఐ/అ (శివమౌళికై, నాకై); hal: క (మురారికై కై<->గ, ముక్తికై)",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "PY",
+    "te": "ప్రాస యతి",
+    "en": "prāsa-yati",
+    "rules": [
+     {
+      "id": "YATI-PY-01",
+      "name": "ప్రాసయతి mechanism",
+      "status": "canonical",
+      "when": "head yati (1 <-> Y) fails in a permitted metre",
+      "match": "position 2 (Prāsa 1) <-> position Y+1 (Prāsa 2) by prāsa rules",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-02",
+      "name": "permitted metres",
+      "status": "mandatory",
+      "when": "",
+      "match": "",
+      "scope": "సీసము, తేటగీతి, ఆటవెలది, సరసిజము, క్రౌంచపదము, లయగ్రాహి, లయవిభాతి, లయహారి, త్రిభంగి; !ఉత్పలమాల, చంపకమాల, శార్దూలము, మత్తేభము, కందము"
+     },
+     {
+      "id": "YATI-PY-03",
+      "name": "ప్రాసపూర్వాక్షర నియమము",
+      "status": "mandatory",
+      "when": "",
+      "match": "weight(position 1) = weight(Y) (both laghu or both guru)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-04",
+      "name": "consonant only",
+      "status": "canonical",
+      "when": "",
+      "match": "vowels on Prāsa 1/2 ignored (లు<->ల); Prāsa 1/2 weights free",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-05",
+      "name": "autonomy",
+      "status": "canonical",
+      "when": "",
+      "match": "each line/hemistich independent; mixing head yati and prāsa yati allowed; different consonants per node",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-06",
+      "name": "dental/palatal",
+      "status": "canonical",
+      "when": "",
+      "match": "చ<->ౘ, జ<->ౙ are sama-prāsa",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-07",
+      "name": "సమప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "identical consonants; preceding weight uniform",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-08",
+      "name": "ఋత్వసహిత ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "C+ఋ <-> C+any V (క<->కృ, న<->నృ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-09",
+      "name": "పూర్ణబిందు ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "ంC <-> ంC (both sides bindu; single-sided fails); preceding guru",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-10",
+      "name": "సంయుక్తాక్షర/ద్విత్వ ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "identical clusters/geminates in identical order; ృ inside cluster still valid; preceding guru",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-11",
+      "name": "అర్ధబిందు ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "ఁC <-> ఁC (native lexemes)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-12",
+      "name": "ఖండాఖండ ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "ఁC <-> C",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-13",
+      "name": "లఘు యకార ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "యడాగమ య <-> root య",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-14",
+      "name": "స్వవర్గజ ప్రాసము",
+      "status": "accepted_relaxation",
+      "when": "",
+      "match": "ధ <-> థ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-15",
+      "name": "న-ణ ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "న <-> ణ (ādēśa or radical); scribal regularisations rejected (Nannaya Āraṇya 1-49)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-16",
+      "name": "స-శ ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "స <-> శ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-17",
+      "name": "ల-ళ ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "ల <-> ళ (tatsama, native, geminate)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-18",
+      "name": "ఋ ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "word-initial ఋ <-> ర",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-19",
+      "name": "లఘుద్విత్వ / సమలఘు ప్రాసము",
+      "status": "canonical_subtype",
+      "when": "",
+      "match": "native light conjuncts ద్రు/ద్రి (విద్రు<->లద్రు); both preceding laghu",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-20",
+      "name": "వికల్ప ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "ఙ్న<->గ్ని, ఙ్మ<->గ్మ, ఙ్ము<->గ్మి (ప్రాఙ్నగ/ప్రాగ్నగ); preceding guru",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-21",
+      "name": "ప్రాసమైత్రి ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "ంబు/ంబ <-> మ్ము/మ్మ; preceding guru",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-22",
+      "name": "ర-ఱ ప్రాసము",
+      "status": "orthographic_relaxation",
+      "when": "",
+      "match": "ర <-> ఱ (దరు<->మఱ, చోర<->జూఱ); Appakavi: prāsa-vairamu; later usage accepts",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-23",
+      "name": "సంధిగత ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "evaluate the post-sandhi surface consonant (ంగ<->ంగ, మ్మ<->మ్మ, క్క<->క్క, య్య<->య్య, గ్గ<->గ్గ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-24",
+      "name": "అధిక ప్రాసము",
+      "status": "canonical",
+      "when": "",
+      "match": "geminate+C cluster <-> plain cluster of the same consonants (జ్జ్వ<->జ్వా, త్త్ర<->త్ర, త్త్వ<->త్వ, శ్శ్రీ<->శ్రీ); preceding guru",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-25",
+      "name": "precedence",
+      "status": "canonical",
+      "when": "",
+      "match": "head yati satisfied -> report head yati even if prāsa yati also holds; exception అవకలిప్రాస సీసము -> prāsa yati",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-26",
+      "name": "inadmissible in prāsa yati",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ద<->ధ, !డ<->ఢ, !ల<->డ, !ళ<->డ, !స<->ష; లేడు-రూఢికి is a corruption for రూడి",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-27",
+      "name": "సంయుక్తాసంయుత ప్రాస నిషేధము",
+      "status": "deprecated",
+      "when": "",
+      "match": "!C <-> రేఫ conjunct (డ<->ండ్ర, భ<->ంభ్ర, మ<->మ్ర); !C <-> ల్C (ండు<->ండ్లు)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-PY-28",
+      "name": "పూర్ణార్ధబిందు ప్రాస నిషేధము",
+      "status": "deprecated",
+      "when": "",
+      "match": "!ఁC <-> ంC (పాఁడి<->తండ్రి, వేఁడు<->బండ్లు)",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "DL",
+    "te": "తరువాతి / వ్యుత్పన్న యతులు",
+    "en": "derived and late yatis",
+    "rules": [
+     {
+      "id": "YATI-DL-01",
+      "name": "ఌకార యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "కౢ <-> {కి,కీ,కె,కే,కృ,కౄ} (prāṇi); <-> ఖ/గ/ఘ + I vowels (vargaja); <-> {లి,లీ,లె,లే} and {ళి,ళీ,ళె,ళే} (lateral release); <-> {ఇ,ఈ,ఎ,ఏ,ఋ,ౠ} (theoretical, unattested)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-02",
+      "name": "ర-ల యతి",
+      "status": "accepted_relaxation",
+      "when": "",
+      "match": "ర <-> ల (Errana, Śrīnātha, Vasucaritramu, Gōpīnātha Rāmāyaṇamu); Appakavi condemned (3-270) and emended texts",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-02.1",
+      "name": "ర-ళ యతి",
+      "status": "accepted_relaxation",
+      "when": "",
+      "match": "ర <-> ళ (derived from ర-ల + ల-ళ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-02.2",
+      "name": "ఋ-లి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ఋ <-> లి (no transitivity across vowel/consonant)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-03",
+      "name": "నిత్యసంధి యతి",
+      "status": "canonical",
+      "when": "stem-final dental stop assimilated by compulsory Sanskrit sandhi",
+      "match": "surface consonant by saṁyukta OR the underlying dental stop + syllable vowel: తోర్లి ల్ల -> త/ద (ఉల్లాసము ల్లా->దా, సంచరల్లీలా ల్లీ->తీ); శ్చుత్వ చ్చ/జ్జ -> త/ద (భవచ్చరిత, మజ్జనక, రోచ్చలిత); ఛత్వ చ్ఛ -> త/ద (తచ్ఛైల చ్ఛై->దై, విలసచ్ఛిల్ప చ్ఛి->తి); ష్టుత్వ ట్ట/డ్డ -> dental (తట్టీకా, లసడ్ఢక్కా)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-04",
+      "name": "ల-డ, ళ-డ అభేద యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "ల <-> డ; ళ <-> డ (జలధి/జడధి, వడి/వళి; Nannaya Ādi 8-148 డు<->ళు)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-04.1",
+      "name": "ల-ఢ, ళ-ఢ",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ల<->ఢ, !ళ<->ఢ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-05",
+      "name": "ద-డ సావర్ణ్య యతి",
+      "status": "accepted_relaxation",
+      "when": "",
+      "match": "ద <-> డ generalised (Lakṣaṇa Śirōmaṇi 4-158, Sukavi Manōrañjanamu 2-285-301); Appakavi limited it to dvirūpa lexemes (దంభ/డంభ, దాక/డాక, దగ్గఱ/డగ్గఱ ...) as ఆదేశయతి (canonical for those)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-05.1",
+      "name": "other dental-retroflex pairs",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ధ<->డ, !ద<->ఢ, !త<->డ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-06",
+      "name": "ము-వు యతి",
+      "status": "canonical",
+      "when": "",
+      "match": "{ము,మూ,మొ,మో} <-> {వు,వూ,వొ,వో} (via పు-series <-> ము and పు-series <-> వు); both ādēśa and radical వ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-07",
+      "name": "మతుబాదేశ యతి",
+      "status": "canonical",
+      "when": "possessive మతుప్ -> వత్ after అ/ఆ stems (బలవంతుడు, ధనవంతుడు)",
+      "match": "suffix syllable వ -> hal: వ; or underlying మ (Errana Śānti 6-199)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-08",
+      "name": "ఏవార్థకములు",
+      "status": "mandatory",
+      "when": "emphatic clitic అ/ఎ/ఏ fused (నేన, నేనె, నేనే, అతండ, అతండె, అతండే, తాన, అట్ల, పర్వంబ)",
+      "match": "hal only on the surface consonant (బ,న,ల,డ); !clitic vowel",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-09",
+      "name": "స్నాన యతి",
+      "status": "accepted_relaxation",
+      "when": "",
+      "match": "స్నా -> స or న (saṁyukta, canonical); additionally త/తా and ధ/ధా by vargaja (Lakṣaṇasāra Saṅgrahamu 2-160-162: tadbhava తానము, variant స్త్నాన)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-10",
+      "name": "āgama invariants",
+      "status": "mandatory",
+      "when": "టుగాగమ (కరకుటమ్ము, పువ్వుటమ్ముల, వేల్పుటేలికలు), నుగాగమ (విష్ణునాజ్ఞ, కలశంబునందు, తిరుగునట్టి), ఆరగాగమ (అసురలార, కపులార)",
+      "match": "svara only: the second stem's vowel (or the augment's ఆ for -ఆర); !ట, !న, !ర, !ల on the hal track",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-11",
+      "name": "ద్విరుక్త టకారము",
+      "status": "mandatory",
+      "when": "కుఱు/చిఱు/కడు/నిడు/నడు + vowel -> ట్ట (కట్టలుక, కట్టెదురు, నిట్టూరుపు, నట్టిల్లు)",
+      "match": "svara only: the second stem's vowel (అ<->అ, అ<->ఆ, ఇ<->ఎ, ఉ<->ఊ); !ట్ట",
+      "scope": ""
+     },
+     {
+      "id": "YATI-DL-12",
+      "name": "-ఎడి / -ఎడు suffixes",
+      "status": "mandatory",
+      "when": "agentive/adjectival -ఎడి/-ఎడు on verb bases (పలికెడు, ఉండెడు, చేసెడి, పోరెడు, వర్ధిలెడు, చెలంగెడు)",
+      "match": "hal only on the fused syllable (కి<->కి, లె<->లీ, రె<->రె, డె<->డె/డే, గీ<->గె); !ఎ",
+      "scope": ""
+     }
+    ]
+   },
+   {
+    "code": "RJ",
+    "te": "నిషిద్ధ యతులు",
+    "en": "rejected yatis",
+    "rules": [
+     {
+      "id": "YATI-RJ-01",
+      "name": "అఖండ యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!surface-consonant yati across a transparent vowel-sandhi junction (వేదార్థ దా for అ; పరమేశ్వర మే for ఈ; చతురోక్తి రో for ఉ; కవీంద్ర వీ for ఇ; నీవారోహింపుము వా for ఆ)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-02",
+      "name": "false transitivity",
+      "status": "mandatory",
+      "when": "",
+      "match": "!derived bridges (ఇ<->ఋ + ఋ<->రి does not give ఇ<->రి)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-03",
+      "name": "vowel detachment",
+      "status": "mandatory",
+      "when": "",
+      "match": "!అ<->క, !ఇ<->కి, !ఉ<->కు, !కి<->ఇ; !క<->ప by shared vowel; only ఋ detaches",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-04",
+      "name": "cross-class vowels",
+      "status": "mandatory",
+      "when": "",
+      "match": "!అ<->ఇ, !ఇ<->ఉ, !ఏ<->ఆ etc.",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-05",
+      "name": "బిందురహిత వర్గపంచమాక్షర యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!త<->న, !థ<->న, !ద<->న, !ధ<->న, !ప<->మ without a preceding ం",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-06",
+      "name": "య-శ వర్గద్వయ యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!య<->ర, !య<->ల, !య<->వ, !ర<->వ, !ల<->వ, !శ<->హ, !ష<->హ, !స<->హ (only ర<->ల stands, YATI-DL-02)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-07",
+      "name": "సంభావన వడి మ-వ",
+      "status": "forbidden",
+      "when": "",
+      "match": "!మ<->వ in any vowel class (only ము-వు survives, YATI-DL-06)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-08",
+      "name": "ఉ-వు యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!{ఉ,ఊ,ఒ,ఓ} <-> {వు,వూ,వొ,వో}",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-09",
+      "name": "ఉ-ఋ యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!{కు,బు,బొ,ము,భూ} <-> {కృ,బృ,మృ} (ఋ is class I)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-10",
+      "name": "ఋ-రు యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ఋ or C+ృ <-> రు,రూ,త్రు,గ్రూ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-11",
+      "name": "ఘఞ్ యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "ఆలాప లా: hal ల only; !vowel ఆ (ādi-vṛddhi, not sandhi)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-12",
+      "name": "ఋ-లి",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ఋ<->లి",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-13",
+      "name": "ల-ఢ, ళ-ఢ",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ల<->ఢ, !ళ<->ఢ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-14",
+      "name": "ధ-డ, ద-ఢ, త-డ",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ధ<->డ, !ద<->ఢ, !త<->డ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-15",
+      "name": "ర-ఱ (strict profile)",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ర<->ఱ in the strict profile; orthographic_relaxation from relaxed (YATI-SP-08)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-16",
+      "name": "prāsa-yati exclusions",
+      "status": "forbidden",
+      "when": "",
+      "match": "see YATI-PY-26, YATI-PY-27, YATI-PY-28",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-17",
+      "name": "పంచమీ విభక్తి యతి",
+      "status": "forbidden",
+      "when": "",
+      "match": "రామునికంటెన్, రామునికన్నన్: క hal only; !split కి+అంటెన్/అన్నన్ for vowel అ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-18",
+      "name": "క్యచ్ vowel track",
+      "status": "forbidden",
+      "when": "",
+      "match": "see YATI-UB-14",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-19",
+      "name": "ప్రత్యేక vowel track",
+      "status": "forbidden",
+      "when": "",
+      "match": "see YATI-SP-06",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-20",
+      "name": "pseudo-prādi",
+      "status": "forbidden",
+      "when": "",
+      "match": "హలాది roots, prefix-head alignment, ఆఙ్: no ubhaya (YATI-UB-10.1, 10.2, 10.4)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-21",
+      "name": "ubhaya on ordinary junctions",
+      "status": "forbidden",
+      "when": "",
+      "match": "నఞ్+consonant (అభావ); Telugu ఉత్వసంధి with a prefix (అతఁడధిపతి); non-అది/అవి అత్వసంధి (ఉన్నపుడు, విన్నంత); numerals without sandhi (ఒకడు); స+consonant stem (సకుటుంబ); పదార్థ \"word meaning\"; నిశాంత \"dawn\": hal track closed",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-22",
+      "name": "vikalpa Option B on -మయ/-మాత్ర",
+      "status": "forbidden",
+      "when": "",
+      "match": "see YATI-SP-05.1",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-23",
+      "name": "augment consonants on the hal track",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ట (టుగాగమ), !న (నుగాగమ), !ర,!ల (ఆరగాగమ), !ట్ట (ద్విరుక్త)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-24",
+      "name": "clitic/suffix vowels on the svara track",
+      "status": "forbidden",
+      "when": "",
+      "match": "!ఏవార్థక అ/ఎ/ఏ; !verbal -ఎడు/-ఎడి ఎ",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-25",
+      "name": "బహుయతి నియతిభంగము",
+      "status": "deprecated",
+      "when": "",
+      "match": "constituent switching between caesuras (see YATI-SY-11.4)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-26",
+      "name": "గూఢస్వర on ఓ before a voiced consonant",
+      "status": "forbidden",
+      "when": "",
+      "match": "see YATI-SV-04.3",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-27",
+      "name": "sarasa on an āgama య",
+      "status": "forbidden",
+      "when": "",
+      "match": "see YATI-VY-09.1 (the line still passes as svara-pradhāna)",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-28",
+      "name": "రేఫయుత యతి (normalisation)",
+      "status": "informational",
+      "when": "",
+      "match": "native (అచ్చతెనుఁగు) roots have no vocalic ఋ: [ru] in మ్రుచ్చిమి, స్రుక్కండు, క్రుమ్ము is ర్+ఉ -> saṁyukta/ēkatara on ర (or మ,స,క); !ఋ-yati there",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-29",
+      "name": "సౌభాగ్య యతి",
+      "status": "informational",
+      "when": "",
+      "match": "two ubhaya nodes coinciding at వళి and yati site; not a distinct class",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-30",
+      "name": "యా-యతి",
+      "status": "informational",
+      "when": "",
+      "match": "native nominals with యె/యే only in ఊయేల, పయ్యెద, తాయెతు (+ఉయ్యెల, పయ్యద, తాయెత్తు); verbs regular (కనియెన్); check whether the poet scanned యె (I) or య (A); no new logic",
+      "scope": ""
+     },
+     {
+      "id": "YATI-RJ-31",
+      "name": "ఎక్కటి యతులు obsolete",
+      "status": "informational",
+      "when": "",
+      "match": "old isolation class {మ,ర,ఱ,ల,వ} dissolved: మ via బిందు/మవర్ణ/ముకార/ము-వు; ర<->ఱ late; ల<->ళ,డ; వ<->బ,ప,ఫ,భ; only ఏకతర (YATI-SP-07) remains",
+      "scope": ""
+     }
+    ]
+   }
+  ]
+ },
+ "prasa": {
+  "profiles": {
+   "strict": {
+    "te": "కఠిన (తుల్యాక్షర నియమము)",
+    "en": "Strict — tulyākṣara niyamamu",
+    "accepts": [
+     "canonical",
+     "canonical_subtype",
+     "mandatory",
+     "informational"
+    ]
+   },
+   "relaxed": {
+    "te": "సడలింపు (ప్రాసమైత్రి)",
+    "en": "Relaxed — prāsamaitri admitted by the lākṣaṇikas",
+    "accepts": [
+     "canonical",
+     "canonical_subtype",
+     "mandatory",
+     "informational",
+     "accepted_relaxation",
+     "orthographic_relaxation"
+    ]
+   },
+   "historical": {
+    "te": "చారిత్రక (అప్రశస్త రూపాల గుర్తింపు)",
+    "en": "Historical — identify deprecated (apraśasta) forms too",
+    "accepts": [
+     "canonical",
+     "canonical_subtype",
+     "mandatory",
+     "informational",
+     "accepted_relaxation",
+     "orthographic_relaxation",
+     "deprecated"
+    ]
+   }
+  },
+  "rules": [
+   {
+    "id": "PRASA-POS-01",
+    "te": "ప్రాసస్థానము",
+    "en": "Prāsa position (2nd akshara of every pāda)",
+    "status": "canonical",
+    "statement": "Prāsa is the rhyme of the SECOND akshara (prāsākṣaramu) of each pāda of a stanza; the FIRST akshara is the pre-prāsa akshara (prāsa-pūrvākṣaramu). Only the consonant(s) of the prāsa akshara are compared."
+   },
+   {
+    "id": "PRASA-POS-02",
+    "te": "ఛందో అర్హత",
+    "en": "Meter eligibility",
+    "status": "canonical",
+    "statement": "Prāsa is required in vṛttas, in the prāsa-bearing jātis (Kandamu, Utsāhamu, Dvipada, …) and in special meters; it is absent in the upajātis (Sīsamu, Tēṭagīti, Āṭaveladi, Mañjari Dvipada) and in Daṇḍakamu. The lakṣaṇam of a meter says only whether prāsa is present."
+   },
+   {
+    "id": "PRASA-POS-03",
+    "te": "ఛందోనిరపేక్షత",
+    "en": "Uniformity across meters",
+    "status": "informational",
+    "statement": "Prāsa rules operate identically in every meter that enforces prāsa: a permissible pair (స/శ) is permissible everywhere, an impermissible pair (డ/ఢ) is impermissible everywhere; no meter has custom prāsa variants."
+   },
+   {
+    "id": "PRASA-POS-04",
+    "te": "పాదజోడీల పరిశీలన",
+    "en": "Stanza scope — every pair of pādas",
+    "status": "canonical",
+    "statement": "The treatises phrase every requirement as \"if line 1 has X, lines 2–4 must have X\". Because prāsamaitri is not always transitive (స~శ and స~ష do not imply శ~ష) the engine compares EVERY pair of pādas; the stanza matches only when every pair matches."
+   },
+   {
+    "id": "PRASA-POS-05",
+    "te": "సంధిగత రూపమే ప్రమాణము",
+    "en": "Sandhi surface form is what is judged",
+    "status": "canonical",
+    "statement": "Prāsa is determined solely by the final phonetic shape after sandhi; pre-sandhi forms are irrelevant (unlike yati). Syllables inherent in a word (śabda-siddha) and syllables produced by sandhi (sandhigata) match freely (see PRASA-SAMA-12)."
+   },
+   {
+    "id": "PRASA-POS-06",
+    "te": "సంశ్లేషము (ద్రుతము / పొల్లు ముందున్నప్పుడు)",
+    "en": "Saṁśleṣa — a dead consonant on the pre-prāsa akshara fuses into the prāsa onset",
+    "status": "mandatory",
+    "statement": "A drutam (న్) or a pollu ల్ (or any dead consonant) that immediately precedes the prāsa akshara cannot be split off to claim a simple consonant rhyme: it fuses with the following consonant and the prāsa akshara becomes that conjunct (నిన్ వదలి -> న్వ; పూవుల్ విరియ -> ల్వి). The conjunct must then be matched in every line (PRASA-SAMYUKTA-01/02)."
+   },
+   {
+    "id": "PRASA-POS-07",
+    "te": "ద్రుతసంధి (సరళాదేశ) పఠనము",
+    "en": "Druta-sandhi alternative reading",
+    "status": "canonical",
+    "statement": "When a drutam precedes a paruṣa the alternative sandhi outcome softens the stop to its sarala and turns the drutam into a bindu (పుత్రున్ కని -> పుత్రుంగని); the prāsa akshara is then a bindu-pūrvaka గ and must satisfy PRASA-PURVAKA-01. The engine tries this reading only when the written (saṁśleṣa) reading fails, and says so in the trail."
+   },
+   {
+    "id": "PRASA-POS-08",
+    "te": "దంత్య చ/జ సమీకరణము",
+    "en": "Dantya ౘ/ౙ normalisation",
+    "status": "canonical",
+    "statement": "The dental letters ౘ and ౙ are read as చ and జ before comparison (see PRASA-SAMA-09)."
+   },
+   {
+    "id": "PRASA-SAMA-01",
+    "te": "సమప్రాస (తుల్యాక్షర నియమము)",
+    "en": "Samaprāsa — identical consonant (tulyākṣara niyamamu)",
+    "status": "canonical",
+    "statement": "The base consonant (hallu) occupying the prāsa position must be identical in every pāda. When the prāsa akshara is a conjunct the whole ordered consonant sequence must be identical (PRASA-SAMYUKTA-02). Aspirates are distinct from their unaspirated counterparts (ఖ≠క …), the three sibilants are three separate series, ర≠ఱ and ల≠ళ under this rule (relaxations are separate rules with their own status)."
+   },
+   {
+    "id": "PRASA-SAMA-02",
+    "te": "అచ్చు నిరపేక్షత",
+    "en": "Vowel neutrality",
+    "status": "canonical",
+    "statement": "No rule governs the vowels attached to the prāsa consonants; they may be identical or entirely different (తా/తో/తి/త is as valid as త/త/త/త)."
+   },
+   {
+    "id": "PRASA-SAMA-03",
+    "te": "ఋత్వ సహిత ప్రాసాక్షరము",
+    "en": "ఋ-tva sahita — vaṭruvasuḍi is a vowel",
+    "status": "canonical",
+    "statement": "ృ/ౄ are vowels; a prāsa consonant with vaṭruvasuḍi (కృ) needs no ృ in the other lines and pairs with the same consonant under any vowel (క/కి/కృ). కృ = క్+ఋ is NOT a conjunct; క్రు = క్+ర్+ఉ IS (see PRASA-REPHAYUTA-KRARAKOMMU). Long ౄ is theoretically valid but practically unattested in prāsa."
+   },
+   {
+    "id": "PRASA-SAMA-04",
+    "te": "ఌకార సహిత ప్రాసాక్షరము",
+    "en": "ఌ-kāra sahita",
+    "status": "canonical",
+    "statement": "ఌ/ౡ are vowels; కౢ (as in కౢప్తి) validly rhymes with క/కి. Only one classical instance is recorded (Rāghava Pāṇḍavīyamu 1-3: క, కౢ, క, కి)."
+   },
+   {
+    "id": "PRASA-SAMA-05",
+    "te": "బిందు సహిత ప్రాసాక్షరము",
+    "en": "Bindu-sahita — a trailing anusvāra is neutral",
+    "status": "canonical",
+    "statement": "An anusvāra FOLLOWING the prāsa akshara (కం, కిం) is unconstrained: కం, క, కి, కు rhyme through the shared క్. (Contrast the anusvāra BEFORE the prāsa akshara, PRASA-PURVAKA-01, which is binding.)"
+   },
+   {
+    "id": "PRASA-SAMA-06",
+    "te": "విసర్గ సహిత ప్రాసాక్షరము",
+    "en": "Visarga-sahita — a trailing visarga is neutral",
+    "status": "canonical",
+    "statement": "A visarga following the prāsa akshara (యః) is unconstrained; యు/యః/యై/యు is a valid య-kāra prāsa (Bhāratam Ādi 3-11)."
+   },
+   {
+    "id": "PRASA-SAMA-07",
+    "te": "ద్రుత సహిత ప్రాసాక్షరము",
+    "en": "Drutam following the prāsa akshara is neutral",
+    "status": "canonical",
+    "statement": "A drutam న్ immediately after the prāsa akshara (ప్రీతిన్ వైరి: prāsa తిన్) makes the akshara guru but is ignored for the rhyme; the prāsa syllable is తి."
+   },
+   {
+    "id": "PRASA-SAMA-08",
+    "te": "పొల్లు లకార సహిత ప్రాసాక్షరము",
+    "en": "Pollu ల్ (or any dead consonant) following the prāsa akshara is neutral",
+    "status": "canonical",
+    "statement": "A pure ల్ right after the prāsa akshara (ఠావుల్ దప్పెను: prāsa వుల్) is ignored for the rhyme (Bhāgavatam 8-90: వొ, వుల్, వే, వే). The engine generalises to any word-final dead consonant on the prāsa akshara."
+   },
+   {
+    "id": "PRASA-SAMA-09",
+    "te": "దంత్య-తాలవ్య చజ సవర్ణత",
+    "en": "Dantya and tālavya చ/జ are savarṇa",
+    "status": "canonical",
+    "statement": "Dental ౘ and palatal చ (likewise ౙ and జ) are homogeneous; their pairing is a pure identity rhyme (samaprāsa)."
+   },
+   {
+    "id": "PRASA-SAMA-10",
+    "te": "ప్రాసాక్షర గురులఘు స్వేచ్ఛ",
+    "en": "Weight of the prāsa akshara itself is free",
+    "status": "informational",
+    "statement": "The guru/laghu uniformity mandate binds the 1st akshara only; the prāsa aksharas may mix heavy and light across lines (వు/వా/విం/వు) provided the line's gana pattern is intact."
+   },
+   {
+    "id": "PRASA-SAMA-11",
+    "te": "లఘు యకార ప్రాసము",
+    "en": "Laghu-yakāra prāsa — augment య and root య rhyme freely",
+    "status": "canonical_subtype",
+    "statement": "A య inserted by sandhi (yaḍāgama, 'laghu') and an inherent root య ('alaghu') rhyme freely (ఈ యున్న / బోయి / త్యాయత / మా యిన్ని). The engine makes no distinction; it only flags a probable yaḍāgama (word-initial య after a vowel-final word) as information."
+   },
+   {
+    "id": "PRASA-SAMA-12",
+    "te": "సంధిగత ప్రాసము",
+    "en": "Sandhigata prāsa — sandhi-derived and inherent consonants match freely",
+    "status": "canonical_subtype",
+    "statement": "A prāsa akshara created by vowel sandhi (తాను+ఊరక -> తానూరక, నూ) or by consonant sandhi, and the gasaḍadavādēśa mutations (వాఁడు+కొట్టె -> వాఁడుగొట్టె), are judged on the RESULTING consonant; they rhyme with inherent (śabda-siddha) consonants without restriction."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-01",
+    "te": "సంయుక్తాక్షర ప్రాసము",
+    "en": "Conjunct presence must agree (saṁyuktākṣara prāsamu)",
+    "status": "mandatory",
+    "statement": "If the prāsa akshara of one line is a conjunct, the prāsa aksharas of all other lines must be conjuncts too; if it is simple, no other line may have a conjunct."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-02",
+    "te": "సంయుక్తాక్షర క్రమ నియమము",
+    "en": "Constituent consonants and their order must be identical (kramamu)",
+    "status": "mandatory",
+    "statement": "The consonants of the cluster must appear in the same order in every line: తర్క (ర్క = ర+క) may only rhyme with ర్క; చక్రి (క్రి = క+ర) only with క్ర-clusters. Reversal (ర్క vs క్ర) violates the rhyme."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-03",
+    "te": "ద్విత్వాక్షర ప్రాసము",
+    "en": "Dvitvākṣara prāsa — a geminate must be matched by the same geminate",
+    "status": "mandatory",
+    "statement": "If the prāsa akshara is a doubled consonant (క్క), every line must carry the geminate of that identical consonant (Sumatī: క్క, క్కి, క్కి, క్కు). A cluster whose two members are maitri-related (ళ్ల beside ల్ల under ల-ళ abhēda) counts as a geminate; the element-wise maitri step then prices the relaxation."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-04",
+    "te": "త్రిహల్ సంయుక్త ప్రాస",
+    "en": "Three-consonant clusters keep all three in order",
+    "status": "mandatory",
+    "statement": "Clusters of three consonants must preserve all three consonants in identical order across all lines."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-05",
+    "te": "సంయుక్తాక్షర ఋత్వ సహితము",
+    "en": "ఋ inside a conjunct is a vowel",
+    "status": "canonical",
+    "statement": "If a conjunct carries ృ (క్తృ), the other lines need not; any vowel may follow the same cluster."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-06",
+    "te": "పూర్ణబిందుపూర్వక సంయుక్తాక్షర ప్రాస",
+    "en": "Pūrṇabindu-pūrvaka saṁyuktākṣara prāsa",
+    "status": "canonical_subtype",
+    "statement": "If the conjunct is preceded by a full bindu, every other line must have the identical conjunct preceded by a full bindu (composition of PRASA-PURVAKA-01 and PRASA-SAMYUKTA-01/02)."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-07",
+    "te": "ద్రుతసంశ్లేష సంయుక్తాక్షర ప్రాస",
+    "en": "Drutam-fused conjunct prāsa (న్X)",
+    "status": "canonical_subtype",
+    "statement": "When every line shares the conjunct formed by a preceding drutam (అన్వయ / మన్వంతర / ధన్వంతరి / నిన్వదలి) the stanza carries a valid 'న్వ'కార saṁyuktākṣara prāsa."
+   },
+   {
+    "id": "PRASA-SAMYUKTA-08",
+    "te": "లకారసంశ్లేష సంయుక్తాక్షర ప్రాస",
+    "en": "Pollu-ల్-fused conjunct prāsa (ల్X)",
+    "status": "canonical_subtype",
+    "statement": "చెల్వ / కల్వ / కొల్వ / (పూ)వుల్విరియ share the cluster ల్వ formed by the pollu ల్ — a valid 'ల్వ'కార saṁyuktākṣara prāsa."
+   },
+   {
+    "id": "PRASA-PURVAKA-01",
+    "te": "పూర్ణబిందు ప్రాసము",
+    "en": "Pūrṇabindu prāsa — a full bindu before the prāsa akshara binds every line",
+    "status": "mandatory",
+    "statement": "If the prāsa akshara of line 1 is preceded by ం (నిండు…: prāsa డు after ం), the prāsa aksharas of every other line must also be preceded by ం; if line 1 has none, no other line may have one. When present in every line the stanza is a Pūrṇabindu prāsamu (a samaprāsa)."
+   },
+   {
+    "id": "PRASA-PURVAKA-02",
+    "te": "విసర్గ ప్రాసము",
+    "en": "Visarga prāsa — a visarga before the prāsa akshara binds every line",
+    "status": "mandatory",
+    "statement": "If line 1's prāsa consonant is preceded by ః (దుఃఖ…: prāsa ఖ after ః), every line must have the same consonant preceded by ః; if line 1 has no visarga before the prāsa, no line may have one."
+   },
+   {
+    "id": "PRASA-PURVAKA-03",
+    "te": "అర్ధబిందు ప్రాసము",
+    "en": "Ardhabindu prāsa — uniform half-bindu before the prāsa akshara",
+    "status": "canonical_subtype",
+    "statement": "When every line's prāsa akshara is preceded by ఁ (వీఁక / దాఁకిన / రాఁకలి / వ్రేఁకని) the stanza is an Ardhabindu samaprāsa. Unlike the full bindu, keeping the ardhabindu uniform is optional, not compulsory."
+   },
+   {
+    "id": "PRASA-PURVAKA-04A",
+    "te": "ఖండాఖండ ప్రాసము (అనంతుని నియమము)",
+    "en": "Khaṇḍākhaṇḍa prāsa within Ananta's restriction (ప/ట)",
+    "status": "canonical_subtype",
+    "statement": "A prāsa akshara preceded by ఁ may rhyme with one lacking ఁ. Ananta limited the licence to the consonants ప and ట (…వటమాత్రంబఁట / లఁట ముక్తి)."
+   },
+   {
+    "id": "PRASA-PURVAKA-04B",
+    "te": "ఖండాఖండ ప్రాసము (అప్పకవి నియమము)",
+    "en": "Khaṇḍākhaṇḍa prāsa within Appakavi's restriction (paruṣa after a long vowel)",
+    "status": "canonical_subtype",
+    "statement": "Appakavi limited the mixed-ardhabindu licence to unvoiced consonants (paruṣas క చ ట త ప) following long vowels (బాఁకిడిన against ఆ కొలువు / లాకృతి / దాకారిత)."
+   },
+   {
+    "id": "PRASA-PURVAKA-04C",
+    "te": "ఖండాఖండ ప్రాసము (కావ్యప్రయోగ విస్తృతి)",
+    "en": "Khaṇḍākhaṇḍa prāsa in its wide classical form",
+    "status": "accepted_relaxation",
+    "statement": "Classical poetry applies the mixed-ardhabindu licence more widely — after short vowels and with voiced consonants — beyond both authorities' restrictions."
+   },
+   {
+    "id": "PRASA-PURVAKSHARA-01",
+    "te": "ప్రాసపూర్వాక్షర నియమము",
+    "en": "Pre-prāsa akshara weight uniformity",
+    "status": "mandatory",
+    "statement": "The 1st akshara of every pāda must have the same metrical weight — all guru or all laghu. Sama vṛttas satisfy this automatically (Utpalamāla / Śārdūlamu start guru, Campakamāla / Mattēbhamu start laghu); jātis (Kandamu) must satisfy it by gana choice; asama vṛttas are exempt."
+   },
+   {
+    "id": "PRASA-PURVAKSHARA-02",
+    "te": "గురులఘు (హ్రస్వదీర్ఘము కాదు)",
+    "en": "Metrical weight",
+    "status": "canonical",
+    "statement": "The rule regulates guru/laghu, not hrasva/dīrgha: a short vowel made heavy by a following conjunct (కు before క్షి) counts as guru beside an inherently long vowel (రా). కు, రా, ర, నా are uniformly guru."
+   },
+   {
+    "id": "PRASA-PURVAKSHARA-03",
+    "te": "కందపద్య గణనియమ ఫలితము",
+    "en": "Kandamu gana corollary",
+    "status": "informational",
+    "statement": "In Kandamu the initial ganas భ and గగ start guru; జ, స, నల start laghu. If line 1 opens with భ/గగ, lines 2–4 must open with భ/గగ; if it opens with స/నల, they must open with laghu-initial ganas (జ/స/నల in even lines, స/నల in line 3). The weight rule thus constrains gana selection."
+   },
+   {
+    "id": "PRASA-PURVAKSHARA-04",
+    "te": "క్రారవడి / లఘుద్విత్వ ప్రాసము",
+    "en": "Light repha clusters — krāravaḍi and laghudvitva",
+    "status": "canonical_subtype",
+    "statement": "(a) When a native Telugu word begins with a repha cluster (క్రందు, క్రాలు, క్రొత్త) the cluster is pronounced lightly and does not lengthen the preceding word's final syllable; the preceding syllables must therefore be gurus in their own right (ఈ క్రార / లై క్రాలుచుఁ / శ్రీ క్రొమ్ముడి / వాక్రువ్వ). (b) Laghudvitva: medial light repha clusters in select Telugu words (అద్రుచు, ఎద్రుచు, పద్రుచు, చిద్రుప) leave the preceding short vowel laghu; if such a cluster is the prāsa akshara every line must use a light cluster so all preceding syllables stay laghu (ఎద్రిచిన / పద్రిచిన / విద్రుపఁగఁ / జిద్రుపలు)."
+   },
+   {
+    "id": "PRASA-MAITRI-SA-SHA",
+    "te": "స-శ ప్రాసము",
+    "en": "స ~ శ sibilant compatibility",
+    "status": "accepted_relaxation",
+    "statement": "Dental స and palatal శ have prāsamaitri through articulatory closeness and may rhyme across lines, also under a preceding bindu (ంస~ంశ), as geminates (స్స~శ్శ) and inside identical clusters (స్య~శ్య, స్ర~శ్ర)."
+   },
+   {
+    "id": "PRASA-MAITRI-THA-DHA",
+    "te": "స్వవర్గజ ప్రాసము (థ-ధ)",
+    "en": "థ ~ ధ svavargaja prāsa",
+    "status": "accepted_relaxation",
+    "statement": "Within the dental class the 2nd consonant థ and the 4th ధ may rhyme (both aspirates); the licence also holds under a full bindu (ంథ~ంధ) and in clusters (ర్థ~ర్ధ). It is NOT extendable to the other vargas (క-ఖ, గ-ఘ, చ-ఛ, ట-ఠ, ప-ఫ, బ-భ remain forbidden — PRASA-VAIRA-SVAVARGAJA-EXT)."
+   },
+   {
+    "id": "PRASA-MAITRI-NA-NNA",
+    "te": "ఉభయ ప్రాసము (న-ణ)",
+    "en": "న ~ ణ ubhaya prāsa (1)",
+    "status": "accepted_relaxation",
+    "statement": "In Sanskrit loans ణ is either inherent (sahaja) or derived from న by sandhi (ādēśa). Appakavi let ādēśa-ణ rhyme with sahaja-ణ and with dental న; classical usage lets both kinds of ణ rhyme freely with న. (ణ~ణ is plain samaprāsa; the sahaja/ādēśa distinction is lexical and not tested.)"
+   },
+   {
+    "id": "PRASA-MAITRI-LA-LLA",
+    "te": "అభేద ప్రాసము (ల-ళ)",
+    "en": "ల ~ ళ abhēda prāsa",
+    "status": "accepted_relaxation",
+    "statement": "Dental ల and retroflex ళ are treated as non-distinct and rhyme freely in Sanskrit loans and native Telugu words (అలఘుఁడు/బలుఁడు/ప్రళయాంతకుఁడు/లలిత; కులశైలంబులు/గలఁగెఁ/దలఁకిరి/కళవళమయ్యెన్)."
+   },
+   {
+    "id": "PRASA-MAITRI-RU-RA",
+    "te": "ఋ ప్రాసము",
+    "en": "ఋ prāsa — word-initial vocalic ఋ rhymes with ర",
+    "status": "accepted_relaxation",
+    "statement": "A word-initial ఋ standing in the prāsa slot (బా ఋభుపతి; ఆ ఋషికుమారు) may rhyme with the consonant ర, because initial ఋ has a consonantal r-onset and substitutes for r in sandhi."
+   },
+   {
+    "id": "PRASA-MAITRI-RU-HALSAMYUTA",
+    "te": "హల్సంయుత ఋ ప్రాసము",
+    "en": "Hal-saṁyuta ఋ prāsa — Cృ rhymes with C్ర",
+    "status": "accepted_relaxation",
+    "statement": "A consonant with vaṭruvasuḍi (తృ) may rhyme with the same consonant in a repha conjunct (త్ర, త్రి): క్షత్రియ / క్షత్రియ / చరిత్రము / మాంధాతృ. This is the only phonetically grounded form of saṁyuktāsaṁyukta. It is BLOCKED when the conjunct side carries ు/ూ (krārakommu, PRASA-REPHAYUTA-KRARAKOMMU)."
+   },
+   {
+    "id": "PRASA-MAITRI-VIKALPA",
+    "te": "వికల్ప ప్రాసము",
+    "en": "Vikalpa prāsa — nasal-sandhi doublets",
+    "status": "accepted_relaxation",
+    "statement": "Sanskrit anunāsika sandhi gives a stop + nasal two valid shapes — class nasal (5th) or class voiced stop (3rd): వాఙ్నియమ / వాగ్నియమ, ద్యన్మోద / ద్యద్మోద. A poet may write one shape and rhyme it with lines using the other (అగ్ని / భుఙ్నివహము / డగ్నుల / యగ్నియనన్; పద్మా / పద్మావతిఁ / ద్యన్మోదంబునఁ / పద్మము). Valid only for sandhi between independent words, not for obligatory suffixes such as -maya, -mātra — verify manually."
+   },
+   {
+    "id": "PRASA-MAITRI-BINDU-SAMSLESHA",
+    "te": "బిందు-సంశ్లేష ప్రాసము (ంద ~ న్ద)",
+    "en": "Bindu ~ saṁśleṣa spelling of one nasal + stop (ంద ~ న్ద)",
+    "status": "accepted_relaxation",
+    "statement": "A drutam before a stop has two written outcomes — saṁśleṣa (చున్ + దర్పంబులు -> చున్దర్పంబులు, prāsa న్ద) or bindu (-> చుందర్పంబులు, prāsa ంద; with a paruṣa the stop softens: పుత్రున్ కని -> పుత్రుంగని). When one line shows the conjunct spelling and another the bindu spelling of the same nasal + stop (or of the drutam-softened stop, న్క ~ ంగ), the pair is accepted as a relaxation and the pūrṇabindu-uniformity rule is waived for it."
+   },
+   {
+    "id": "PRASA-MAITRI-RA-RRA-ORTHO",
+    "te": "ర-ఱ లిపిసడలింపు ప్రాసము",
+    "en": "ర ~ ఱ orthographic relaxation (rēpha ~ śakaṭarēpha)",
+    "status": "orthographic_relaxation",
+    "statement": "The treatise forbids ర against ఱ (prāsavairamu, PRASA-VAIRA-RA-RRA). The printed corpora, however, do not distinguish ర from ఱ reliably — the Bhāgavatam edition in dataset/ pairs them in 70 of 4,552 prāsa-bearing poems — and the śakaṭarēpha had merged with ర in speech by Pōtana's time. By project decision the pair is accepted as an ORTHOGRAPHIC relaxation: a property of the text's spelling, not a treatise licence, carried under its own status so it can be counted separately or switched off. Under the strict profile the pair still fails, and the trail names both this rule and the superseded treatise rule."
+   },
+   {
+    "id": "PRASA-MAITRI-SA-SSA",
+    "te": "ఉభయ ప్రాసము (స-ష)",
+    "en": "స ~ ష ubhaya prāsa (2) — deprecated",
+    "status": "deprecated",
+    "statement": "Appakavi proposed that a substitute ష (ādēśa, from స) could rhyme with natural ష and with స. ādēśa-ష ~ sahaja-ష is plain samaprāsa; స ~ ష lacks phonetic justification and is not recommended for emulation (వసుధా / రసదళ / విసరాంబుజ / విషమ)."
+   },
+   {
+    "id": "PRASA-MAITRI-LA-DA",
+    "te": "ల-డ / ళ-డ ప్రాసము (అప్రశస్తము)",
+    "en": "ల/ళ ~ డ — deprecated doublet-based rhyme",
+    "status": "deprecated",
+    "statement": "Appakavi also proposed ల~డ and ళ~డ on the strength of interchangeable word doublets (la-ḍayōr abhēdaḥ); arbitrary pairings without doublets are unattested and deprecated."
+   },
+   {
+    "id": "PRASA-MAITRI-DA-DHA",
+    "te": "ద-ధ ప్రాసము (అప్రశస్తము)",
+    "en": "ద ~ ధ — deprecated",
+    "status": "deprecated",
+    "statement": "Pairing unaspirated ద with aspirated ధ (ముదము / బుధులు) lacks articulatory balance; apraśasta, unlike థ~ధ which pairs two aspirates."
+   },
+   {
+    "id": "PRASA-MAITRI-SAMYUKTASAMYUKTA",
+    "te": "సంయుక్తాసంయుక్త ప్రాసము",
+    "en": "Saṁyuktāsaṁyukta prāsa — C్ర/C్ల rhyming with plain C (deprecated)",
+    "status": "deprecated",
+    "statement": "A proposed relaxation letting a consonant conjunct with repha (or ల) rhyme with the bare consonant (క్రొ ~ కా/కో/కీ, Bhāratam Āraṇya 6-103). Ananta admitted it only for the numeral prefix త్రి (Triprāsamu). Lacks phonetic similarity; deprecated."
+   },
+   {
+    "id": "PRASA-MAITRI-ANUNASIKA",
+    "te": "అనునాసిక ప్రాసము",
+    "en": "Anunāsika prāsa — న్న ~ ంన",
+    "status": "deprecated",
+    "statement": "Geminate న rhymes with bindu + న (మిన్నేఱు / తన్నాభిని / సాంనిధ్యము / సంనుతి) and geminate మ with bindu + మ (తమ్ములను / మమ్ముల / …మ్మురసంహరు / సంమదమున), reflecting doublets like sannidhi / saṁnidhi. Non-standard orthography; deprecated. The pair is DEFINED by a pūrṇabindu asymmetry, so it is the only sanctioned exception to PRASA-PURVAKA-01."
+   },
+   {
+    "id": "PRASA-MAITRI-MBA-MMA",
+    "te": "ప్రాసమైత్రి ప్రాసము (ంబ-మ్మ)",
+    "en": "ంబ ~ మ్మ prāsamaitri prāsa (deprecated)",
+    "status": "deprecated",
+    "statement": "Full-bindu బ rhyming with geminate మ on the strength of the -ంబు / -మ్ము inflection doublets (బింబంబు / బింబమ్ము): ఇమ్ముగ / బమ్మున / ధ్రమ్మను / ద్యుంబరముం. Articulatorily distinct; early poets avoided it; deprecated. Second sanctioned exception to PRASA-PURVAKA-01."
+   },
+   {
+    "id": "PRASA-REPHAYUTA-KRARAKOMMU",
+    "te": "రేఫయుత ప్రాసము (క్రారకొమ్ము ≠ వట్రువసుడి)",
+    "en": "Krārakommu vs vaṭruvasuḍi may not rhyme",
+    "status": "forbidden",
+    "statement": "A conjunct consonant + ర + ు/ూ (krārakommu: క్రు, క్రూ, గ్రు) cannot rhyme with the consonant carrying vocalic ఋ/ౠ (కృ, కౄ) despite the acoustic likeness; krārakommus rhyme only with other repha conjuncts (సంగ్రామ / చం గ్రుమ్మఱుచున్న / నం గ్రుచ్చి / చెం గ్రూరాస్త్రములు)."
+   },
+   {
+    "id": "PRASA-VAIRA-RA-RRA",
+    "te": "ప్రాసవైరము (ర-ఱ)",
+    "en": "ర ≠ ఱ (prāsavairamu)",
+    "status": "forbidden",
+    "statement": "Sādhu rēpha ర and śakaṭa rēpha ఱ are strictly forbidden from rhyming; ర only with ర (Bhāratam Ādi 1-26), ఱ only with ఱ (Bhāgavatam 8-130)."
+   },
+   {
+    "id": "PRASA-VAIRA-TA-DA",
+    "te": "ట-డ ప్రాస చెల్లదు",
+    "en": "ట ≠ డ",
+    "status": "forbidden",
+    "statement": "Unvoiced retroflex ట with voiced retroflex డ (మాట / జాడ) causes an audible break in the cadence — impermissible."
+   },
+   {
+    "id": "PRASA-VAIRA-DA-DDA",
+    "te": "ద-డ ప్రాస దోషము",
+    "en": "ద ≠ డ",
+    "status": "forbidden",
+    "statement": "Dental ద with retroflex డ (పదము / కడుపు) — distinct articulatory zones; manuscript occurrences are dialect corruptions or copyist errors."
+   },
+   {
+    "id": "PRASA-VAIRA-DDA-DDHA",
+    "te": "డ-ఢ ప్రాస చెల్లదు",
+    "en": "డ ≠ ఢ",
+    "status": "forbidden",
+    "statement": "Unaspirated డ with aspirated ఢ (జడ / మూఢ) is universally rejected across all meters."
+   },
+   {
+    "id": "PRASA-VAIRA-RA-LA",
+    "te": "ర-ల ప్రాస నిషిద్ధము",
+    "en": "ర ≠ ల (niṣiddhamu)",
+    "status": "forbidden",
+    "statement": "Telugu prosody keeps an absolute barrier between rēpha and la-kāra (తరము / తలము), although Sanskrit śleṣa allows ralayōr abhēdaḥ."
+   },
+   {
+    "id": "PRASA-VAIRA-SVAVARGAJA-EXT",
+    "te": "స్వవర్గజ ప్రాస విస్తరణ నిషేధము",
+    "en": "Svavargaja licence does not extend beyond థ-ధ",
+    "status": "forbidden",
+    "statement": "The 2nd/4th-consonant licence is restricted to థ-ధ; క-ఖ, గ-ఘ, చ-ఛ, ట-ఠ, ప-ఫ, బ-భ are non-standard. Aspirates require exact aspirate-to-aspirate correspondence."
+   },
+   {
+    "id": "PRASA-VAIRA-GENERIC",
+    "te": "ప్రాసమైత్రి లేదు (అసమప్రాస)",
+    "en": "No prāsamaitri between these consonants (asamaprāsa)",
+    "status": "forbidden",
+    "statement": "Any consonant pair not listed in the maitri_table has no compatibility; the sibilants are three separate series (only స~శ relaxed), ల≠ళ and ర≠ఱ under identity, aspirates are distinct from their plain counterparts."
+   },
+   {
+    "id": "PRASA-DEFECT-PURNARDHABINDU",
+    "te": "పూర్ణార్ధబిందు ప్రాసము",
+    "en": "Pūrṇārdhabindu prāsa — ం against ఁ",
+    "status": "forbidden",
+    "statement": "Rhyming a prāsa akshara preceded by ం (guru-making) with one preceded by ఁ (weightless): కొండ vs గోఁడు. Breaches both PRASA-PURVAKA-01 and the weight rule; an unapproved asamaprāsa."
+   },
+   {
+    "id": "PRASA-DEFECT-ADHIKA",
+    "te": "అధిక ప్రాసము",
+    "en": "Adhika prāsa — surplus consonant / surplus syllable",
+    "status": "forbidden",
+    "statement": "(1) An extra consonant present in the cluster of some lines but missing in others (స్త్ర vs స్త) — an asamaprāsa, failed and named. (2) Extending the rhyme into the 3rd akshara (dvyakṣara prāsa) irregularly — reported as information only, since the 2nd-akshara rule is unaffected."
+   },
+   {
+    "id": "PRASA-DEFECT-SANTA",
+    "te": "శాంతప్రాసము",
+    "en": "Śānta prāsa — muted / partial rhyme",
+    "status": "forbidden",
+    "statement": "A non-standard irregular rhyme where a consonant's sharpness is softened by sandhi or nasal resonance; documented only to explain rare early lines, not to be followed."
+   }
+  ]
+ },
+ "status_te": {
+  "canonical": "ప్రామాణికం",
+  "canonical_subtype": "ప్రామాణిక ఉపభేదం",
+  "mandatory": "తప్పనిసరి",
+  "accepted_relaxation": "సడలింపు",
+  "orthographic_relaxation": "లిపి సడలింపు",
+  "deprecated": "అప్రశస్తం",
+  "forbidden": "నిషిద్ధం",
+  "informational": "సమాచారం"
+ }
+}

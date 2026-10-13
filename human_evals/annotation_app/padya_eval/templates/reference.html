@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}ఛందో నియమాలు · Ruleset{% endblock %}
+{% block main_class %}page reading{% endblock %}
+{% block content %}
+<article class="card reference-page">
+  <h1>ఛందో నియమాలు <span class="muted">· Ruleset reference</span></h1>
+  <p class="small muted">Read from meter_engine's own rule files (meter_rules.yaml, ganas.yaml, yati_rules.yaml,
+    yathi_docs/yathi_compact.md, prasa_rules.yaml), so the reference matches the gaṇa division and the underlines shown with each poem.</p>
+  {% include "_reference_body.html" %}
+</article>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}పూర్తి{% endblock %}
+{% block main_class %}page narrow{% endblock %}
+{% block content %}
+<section class="card center">
+  <h1>ధన్యవాదాలు 🙏</h1>
+  <p class="lead">There is nothing left in your queue{% if progress %}: you have rated {{ progress.mine }} poems{% endif %}.</p>
+  <p class="small muted">{% if progress and progress.all_mode %}You have rated or skipped every poem. Skipped poems are listed under “Mine” if you want to go back to them.{% else %}Every poem either has enough ratings already or you have rated or skipped it. New work appears here if other annotators skip poems.{% endif %}</p>
+  <p><a class="btn" href="{{ url_for('main.mine') }}">Review my ratings</a></p>
+</section>
+{% endblock %}
