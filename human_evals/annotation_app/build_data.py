@@ -265,8 +265,13 @@ def _text_key(lines: list[str]) -> str:
     return re.sub(r"[^ఀ-౿]", "", "".join(lines))
 
 
-def load_bhavam_sources() -> dict:
-    """Index every corpus record that can carry a bhavam."""
+BACKFILL = DATA_OUT / "bhavam_padyarchana.json"     # written by backfill_bhavam.py
+MANUAL = DATA_OUT / "bhavam_manual.json"            # written by hand, matched by the poem's lines
+
+
+def load_bhavam_sources(backfill: bool = True) -> dict:
+    """Index every corpus record that can carry a bhavam, the hand-written bhavams and the
+    Padyarchana backfill."""
     by_id, by_text = {}, {}
     for name in ("bhagavatam", "vemana", "kuchimanchi_timmakavi", "chandassu"):
         path = ROOT / "dataset" / f"{name}.json"
@@ -280,7 +285,13 @@ def load_bhavam_sources() -> dict:
     gen_path = ROOT / "metrics" / "initial_evals" / "Outputs" / "chandas_dataset.json"
     if gen_path.is_file():
         generated = {p["id"]: p for p in json.loads(gen_path.read_text(encoding="utf-8"))["poems"]}
-    return {"by_id": by_id, "by_text": by_text, "generated": generated}
+    filled = {}
+    if backfill and BACKFILL.is_file():
+        filled = json.loads(BACKFILL.read_text(encoding="utf-8"))["bhavams"]
+    manual = {}
+    if MANUAL.is_file():
+        manual = {_text_key(b["lines"]): b for b in json.loads(MANUAL.read_text(encoding="utf-8"))["bhavams"]}
+    return {"by_id": by_id, "by_text": by_text, "generated": generated, "backfill": filled, "manual": manual}
 
 
 def _corpus_bhavam(rec: dict) -> dict | None:
@@ -299,6 +310,8 @@ def find_bhavam(poem: dict, sources: dict, overrides: dict) -> dict | None:
     if poem["eval_id"] in overrides:
         o = overrides[poem["eval_id"]]
         return {"te": o.get("te"), "en": o.get("en"), "source": o.get("source", "override")}
+    if m := sources.get("manual", {}).get(_text_key(poem["lines"])):
+        return {"te": m.get("te"), "en": m.get("en"), "source": m.get("source", "manual")}
     src = poem["source_dataset"]
     if src == "generated":
         g = sources["generated"].get(poem["source_id"])
@@ -308,7 +321,10 @@ def find_bhavam(poem: dict, sources: dict, overrides: dict) -> dict | None:
     rec = sources["by_id"].get(poem["source_id"]) if src != "reference" else None
     if rec is None:
         rec = sources["by_text"].get(_text_key(poem["lines"]))
-    return _corpus_bhavam(rec) if rec else None
+    found = _corpus_bhavam(rec) if rec else None
+    if found is None and (b := sources.get("backfill", {}).get(_text_key(poem["lines"]))):
+        return {"te": b["te"], "en": b.get("en"), "source": f"{b['source']}:{b['padyarchana_id']}"}
+    return found
 
 
 # -----------------------------------------------------------------------------

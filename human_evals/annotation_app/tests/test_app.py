@@ -11,6 +11,7 @@ from markupsafe import escape
 from conftest import FormClient, full_answers, make_app, poem_where
 from padya_eval import db
 from padya_eval.rubric import QUESTIONS
+from padya_eval.store import load_store
 
 
 def saved(app, username, eval_id):
@@ -122,7 +123,9 @@ def test_bhavam_is_behind_a_reveal(client, store):
     assert "<details class=\"bhavam\"" in html and poem.bhavam["te"][:40] in html
 
 
-def test_not_applicable_questions(client, store):
+def test_not_applicable_questions(tmp_path, no_bhavam_data):
+    client = FormClient(make_app(tmp_path, DATA_DIR=no_bhavam_data).test_client())
+    store = load_store(no_bhavam_data)
     client.login()
     no_bhavam = poem_where(store, lambda p: not p.has_bhavam and p.prasa_applicable)
     html = client.get(f"/poem/{no_bhavam.id}").get_data(as_text=True)
@@ -170,10 +173,11 @@ def test_duration_is_recorded(client, app, store):
     assert 41 <= saved(app, "alice", "he_0001")["duration_s"] < 60
 
 
-def test_not_applicable_answers_are_stored_as_none(client, app, store):
+def test_not_applicable_answers_are_stored_as_none(tmp_path, no_bhavam_data):
+    app = make_app(tmp_path, DATA_DIR=no_bhavam_data)
+    client = FormClient(app.test_client())
     client.login()
-    poem = poem_where(store, lambda p: not p.has_bhavam and not p.prasa_applicable) if any(
-        not p.has_bhavam and not p.prasa_applicable for p in store.poems) else poem_where(store, lambda p: not p.has_bhavam)
+    poem = poem_where(load_store(no_bhavam_data), lambda p: not p.has_bhavam and not p.prasa_applicable)
     data = {**full_answers(poem), "bhavam": 5, "prasa": 1}                      # sent anyway
     assert client.post_form(f"/poem/{poem.id}", data).status_code == 302
     answers = saved(app, "alice", poem.id)["answers"]

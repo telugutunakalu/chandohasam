@@ -193,19 +193,41 @@ the command line:
 - A database remembers which pool it was created for. Use a new `HE_DATABASE`
   after switching pools.
 
-**Bhavam coverage (strict pool).** It comes from the corpora:
+**Bhavam coverage (strict pool).** Every poem has one. It comes from a hand-written
+bhavam if there is one, then from the corpora, then from the Padyarchana export:
 
 | Source | Poems | Where the bhavam comes from |
 |---|---|---|
 | Bhāgavatam | 198 | `bhavam` field of `dataset/bhagavatam.json` |
 | Vemana, Kūcimañci | 117 | LLM gloss from batch run5 (`generated.bhavam`) |
 | Generated poems | 84 | The poem's `meaning_telugu` |
-| Bhāgavatam | 29 | None |
-| Textbook reference examples | 72 | None |
+| Bhāgavatam సీసము heads | 29 | Padyarchana model gloss of the head (`padyarchana_llm_gloss`) |
+| Textbook reference examples | 35 | Padyarchana edition bhavam (`padyarchana_editorial`) |
+| Textbook reference examples | 34 | Padyarchana model gloss (`padyarchana_llm_gloss`) |
+| Textbook reference examples | 3 | Written by hand (`data/bhavam_manual.json`) |
 
-The 101 poems with no bhavam show question 4 as not applicable. To fill them,
-put a `data/bhavam_overrides.json` of the form
-`{"he_0005": {"te": "…", "en": "…", "source": "manual"}}` and rebuild.
+`backfill_bhavam.py` makes the Padyarchana bhavams. It reads
+`padyarchana_exports/padyarchana_poems_v2.jsonl` (about 2 GB, not in git) and writes
+`data/bhavam_padyarchana.json`, keyed by the poem's Telugu letters so it serves all
+three pools; `build_data.py` reads that file, so a rebuild does not need the export.
+A record matches when the two texts share 95% of their Telugu letters both ways. The
+edition's bhavam is preferred to the model gloss, with three exceptions:
+
+- A Bhāgavatam సీసము head never takes the edition's bhavam. The edition wrote one
+  bhavam for the head and its గీతి trailer together, and the pool poem prints only the
+  head. `dataset/bhagavatam.json` keeps that same bhavam on the trailer record.
+- A bhavam that names the poet is skipped, because rating is blind (he_0389).
+- A bhavam with letters of another script is skipped.
+
+Two model glosses were read and rejected (`REJECTED` in the script): he_0221 glosses
+the ఆటవెలది lakṣaṇa as చంపకమాల, and he_0353 reads the gaṇa names as words. These two
+and he_0204 (one couplet of a longer ద్విపద; the only record glosses the whole passage)
+have bhavams written by hand in `data/bhavam_manual.json`. Each entry carries the
+poem's lines and is matched by its Telugu letters, so it serves every pool; to add
+one, append an entry and rebuild. `data/bhavam_overrides.json`
+(`{"he_0204": {"te": "…", "en": "…", "source": "manual"}}`) still overrides by eval_id,
+but eval_ids differ between pools. Question 4 shows as not applicable only for a poem
+with no bhavam at all.
 
 **Note on the engine's verdicts.** Three things show the engine's verdict: the
 ✔ beside each pāda, the yati rule names beside each line, and the prāsa label.
@@ -217,7 +239,7 @@ verdicts.
 ## 5. Tests
 
 ```bash
-.venv/bin/python -m pytest          # 103 tests, about 8 s
+.venv/bin/python -m pytest          # 104 tests, about 10 s
 ```
 
 They cover:
@@ -234,6 +256,7 @@ They cover:
 ```
 annotation_app/
 ├── build_data.py          offline: meter_engine → data/poems.json, data/reference.json
+├── backfill_bhavam.py     offline: Padyarchana export → data/bhavam_padyarchana.json
 ├── data/                  generated poem and ruleset data (static, preloaded)
 ├── padya_eval/
 │   ├── __init__.py        create_app() and configuration

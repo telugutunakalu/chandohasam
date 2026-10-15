@@ -97,8 +97,17 @@ def test_bhavam_shapes(store):
     for p in store.poems:
         if p.bhavam:
             assert p.bhavam.get("te") or p.bhavam.get("en")
-        if p.hidden["source_dataset"] == "reference":
-            assert not p.has_bhavam
+        if p.hidden["source_dataset"] == "reference" and p.bhavam:
+            assert p.bhavam["source"].startswith(("padyarchana_", "manual"))
+
+
+def test_padyarchana_backfill(store):
+    """A Bhāgavatam సీసము head gets the model gloss of the head alone: the edition's bhavam
+    also covers the గీతి trailer, which the pool poem does not print."""
+    heads = [p for p in store.poems if p.hidden["source_dataset"] == "bhagavatam" and p.meters == ["seesamu"]]
+    assert heads and all(p.bhavam["source"].startswith("padyarchana_llm_gloss:") for p in heads)
+    assert all(p.has_bhavam for p in store.poems)
+    assert {p.id for p in store.poems if p.bhavam["source"] == "manual"} == {"he_0204", "he_0221", "he_0353"}
 
 
 def test_user_example_bhagavatam_1_1(store):

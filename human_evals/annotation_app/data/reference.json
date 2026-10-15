@@ -3,7 +3,7 @@
  "pool": "strict",
  "pool_file": "human_eval_poems_strict.json",
  "compliance_profile": "strict",
- "built_on": "2026-10-13",
+ "built_on": "2026-10-15",
  "engine": "meter_engine/chandohasam.analyze (indic_meter_dawg + prasa + yati)",
  "engine_revision": "c93ee08",
  "n_poems": 500,

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import json
+import shutil
 import sys
 from pathlib import Path
 
@@ -70,6 +72,20 @@ class FormClient:
 @pytest.fixture
 def client(app):
     return FormClient(app.test_client())
+
+
+@pytest.fixture
+def no_bhavam_data(tmp_path) -> Path:
+    """The shipped data with the bhavam removed from the first poem with prāsa and the first
+    without: every shipped poem has a bhavam, but question 4's not-applicable path must work."""
+    data = json.loads((DATA_DIR / "poems.json").read_text(encoding="utf-8"))
+    for want in (True, False):
+        next(p for p in data["poems"] if p["prasa_applicable"] == want)["bhavam"] = None
+    out = tmp_path / "data"
+    out.mkdir()
+    (out / "poems.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    shutil.copy(DATA_DIR / "reference.json", out / "reference.json")
+    return out
 
 
 def full_answers(poem, likert=4, binary=1) -> dict:
