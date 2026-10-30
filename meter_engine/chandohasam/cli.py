@@ -22,7 +22,8 @@ def main(argv: Optional[list[str]] = None) -> int:
     ap.add_argument("--json", action="store_true", help="print the full structured result as JSON")
     ns = ap.parse_args(argv)
     if ns.file:
-        text = open(ns.file, encoding="utf-8").read().strip()
+        with open(ns.file, encoding="utf-8") as f:
+            text = f.read().strip()
     elif ns.padas:
         text = "\n".join(ns.padas)
     else:
