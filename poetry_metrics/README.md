@@ -29,7 +29,7 @@ Every metric follows the same contract:
 | 3 | Euphony index | *mādhurya* | [`madhurya.py`](madhurya.py) | **done**: [spec](specs/03_madhurya.md) |
 | 4 | Word-density index | *ojas* | [`ojas.py`](ojas.py) | **done**: [spec](specs/04_ojas.md) |
 | 5 | Clarity index | *prasāda* | [`prasada.py`](prasada.py) | **done**: [spec](specs/05_prasada.md) |
-| 6 | Word-resolution rate | — | — | planned |
+| 6 | Word-resolution rate | — | [`../word_resolution_metric`](../word_resolution_metric) | built as its own folder (the resolver); scored on `dataset/` and the grid by [`../final_report_metrics`](../final_report_metrics). Here, [`real_words.py`](real_words.py) is the simpler lexicon measure the grid reports (through `../lora_gemma_diffusion/score_e6.py` and `../RL/reward.py`). |
 | 7 | Defect penalties | *doṣa* | — | planned |
 | 8 | Chandas distance (the edit-distance half of the *laya* item) | *chandobhaṅga* | [`chandas_distance.py`](chandas_distance.py) | **done**: [spec](specs/08_chandas_distance.md) |
 
@@ -214,6 +214,15 @@ metrics over the 6,660 constrained-decoding poems of `../samples/json`
 - Constrained poems are dense through conjuncts (22–27 per 100 aksharas against 12), not through longer words.
 - Left free, the models are farther from the requested meter than prose cut to its line lengths (mean skill −0.20 to −0.33); 93–97% of their poems are rated unmetered. Every constrained poem keeps the weights, the yati and the prāsa.
 
+**Real words, version 2** ([`real_words.py`](real_words.py), report
+[`reports/real_words_v2.md`](reports/real_words_v2.md), 2026-10-19) replaces the "lexical %" of the E6 reports, which
+looked words up only in the verses of `../dataset` and called valid compounds and sandhi forms non-words. Its lexicon
+adds the E6 training split (poems, gloss words and splits, bhāvams; forms seen ≥ 2 times); a word of 2+ aksharas also
+counts when it splits into 2–3 known pieces (with the commonest initial sandhi undone); one-akshara filler is reported
+apart, and one syllable repeated (కకకక) never counts. The exact rate is a lower bound, the compound-aware rate a
+looser one (it admits a few false compounds such as గదా + దడ). Compare models with gold in the training-lexicon
+column: gold val/test poems reach 86.5% / 87.6% there.
+
 ## Version 2 candidates: scores no poet moves (under evaluation)
 
 Version 1 of anuprāsa, mādhurya and prasāda takes a constant from the four
@@ -254,8 +263,21 @@ python3 samples_analysis.py                               # the metrics on ../sa
 python3 degradation_protocol.py                           # the admission test on every metric, ~2 min
 python3 <metric>_v2.py score --text "..."                 # a version 2.0 candidate (anuprasa, madhurya, prasada)
 python3 compare_versions.py                               # versions 1 and 2 side by side, ~75 s
-python3 -m unittest discover -s tests -v                  # 138 tests
+python3 -m unittest discover -s tests -v                  # 138 tests, ~12 s
 ```
+
+Two scripts read the Padyarchana E6 split (`../diffusion_finetuning/data/e6/`, not in git) and run in other venvs:
+
+```bash
+../.venv/bin/python real_words.py build                   # the real-words lexicon, ~2 min (cache/, gitignored)
+../.venv/bin/python real_words.py report                  # every E6 / Phase 1 / Phase 2 run -> reports/real_words_v2.md
+../.venv/bin/python real_words.py selfcheck               # -> reports/real_words_v2_selfcheck.md
+~/.venvs/embed/bin/python meaning_similarity_check.py     # embedding similarity as a meaning measure (EmbeddingGemma 2,
+                                                          #   LaBSE; GPU) -> reports/meaning_similarity_check.md
+```
+
+`~/.venvs/embed` holds transformers 5.20.1 for EmbeddingGemma 2 and reaches the project `.venv` through a `.pth` file
+(set up 2026-10-19).
 
 ## Layout
 
@@ -283,6 +305,8 @@ poetry_metrics/
   compare_versions.py      versions 1 and 2 side by side on every admission check
   samples_analysis.py      the five metrics on the generated poems of ../samples/json
   degradation_protocol.py  the proposal's degradations applied to every metric
+  real_words.py            real words v2: lexicon + compound-aware share of real words, one-akshara filler
+  meaning_similarity_check.py   can poem–bhāvam embedding similarity measure meaning? (three checks)
   fixtures/                classical_exemplars.json: verses the classical texts quote, the pairs they contrast, their broken-meter examples
   baselines/               frozen corpus statistics, one JSON per metric; the prasāda model (two .tsv.gz)
   outputs/                 validation and analysis results (JSON)
