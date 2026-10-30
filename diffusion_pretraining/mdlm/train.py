@@ -33,7 +33,7 @@ import torch
 
 from tokenizer import load_default
 
-from .checkpoint import PowerMonitor, load_latest, save_checkpoint, save_snapshot
+from .checkpoint import PowerMonitor, load_latest, save_archive, save_checkpoint, save_snapshot
 from .data import TokenMixture, fixed_canvases
 from .diffusion import EPS, invalid_bias, nelbo
 from .metrics import sample_metrics
@@ -84,6 +84,9 @@ class TrainConfig:
     battery_ckpt_min: float = _doc(5.0, "Minutes between checkpoints while running on battery.")
     battery_stop_percent: int = _doc(15, "Save and exit when the battery falls to this level.")
     snapshot_every: int = _doc(5000, "Steps between permanent bf16 EMA snapshots.")
+    archive_every: int = _doc(0, "Steps between permanent full checkpoints (model, EMA, optimizer) in "
+                                 "runs/<run>/archive/, points the run can be rolled back to with "
+                                 "deploy/rollback.sh; 0: none.")
     init_from: str = _doc("", "Weights to start a new run from, e.g. a grown model written by mdlm.grow "
                               "(fresh optimizer, step 0); ignored once the run has a checkpoint of its own.")
 
@@ -172,6 +175,15 @@ def _truncate_log(path: Path, step: int) -> None:
 
 EXIT_RESTART, EXIT_DIVERGED = 75, 3
 MAX_BAD_STEPS = 100
+
+
+def _is_compile_error(exc: BaseException) -> bool:
+    """An error raised by torch.compile's machinery (Dynamo, Inductor, Triton), anywhere in the chain."""
+    while exc is not None:
+        if type(exc).__module__.startswith(("torch._dynamo", "torch._inductor", "triton")):
+            return True
+        exc = exc.__cause__ or exc.__context__
+    return False
 
 
 def accumulate_step(trunk, model, x: torch.Tensor, micro: int, mask_id: int, bias: torch.Tensor,
@@ -267,8 +279,12 @@ def main(argv: list[str] | None = None) -> int:
     trunk = _Trunk(model, hidden)
     print(f"{cfg.preset}: {model.num_params() / 1e6:.1f}M non-embedding params; train tokens {data.tokens()}", flush=True)
 
-    from torch.utils.tensorboard import SummaryWriter
-    writer = SummaryWriter(str(run_dir / "tb"), purge_step=step or None)
+    try:                                                  # optional: metrics.jsonl is the record
+        from torch.utils.tensorboard import SummaryWriter
+        writer = SummaryWriter(str(run_dir / "tb"), purge_step=step or None)
+    except ImportError:
+        print("tensorboard is not installed: logging to metrics.jsonl only", flush=True)
+        writer = None
     log = (run_dir / "metrics.jsonl").open("a", encoding="utf-8")
 
     def emit(rec: dict) -> None:
@@ -276,7 +292,7 @@ def main(argv: list[str] | None = None) -> int:
         log.write(json.dumps(rec) + "\n")
         log.flush()
         for k, v in rec.items():
-            if k != "step" and isinstance(v, (int, float)):
+            if writer is not None and k != "step" and isinstance(v, (int, float)):
                 writer.add_scalar(k, v, step)
 
     stop = {"flag": False}
@@ -324,7 +340,17 @@ def main(argv: list[str] | None = None) -> int:
         for grp in opt.param_groups:
             grp["lr"] = lr_at(step, cfg)
         x = data.batch(step, cfg.batch_size, cfg.seed).pin_memory().to(device, non_blocking=True)
-        loss_sum, micro = accumulate_step(trunk, model, x, micro, mask_id, bias, cfg.seed * 1_000_003 + step, device)
+        try:
+            loss_sum, micro = accumulate_step(trunk, model, x, micro, mask_id, bias, cfg.seed * 1_000_003 + step, device)
+        except Exception as exc:                                # torch.compile failed: same step, eager
+            if not (cfg.compile and _is_compile_error(exc)):
+                raise
+            print(f"torch.compile failed at step {step} ({type(exc).__name__}): continuing without it", flush=True)
+            model.zero_grad(set_to_none=True)
+            torch.cuda.empty_cache()
+            cfg.compile = False
+            trunk = _Trunk(model, model.hidden)
+            loss_sum, micro = accumulate_step(trunk, model, x, micro, mask_id, bias, cfg.seed * 1_000_003 + step, device)
         grad_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip)
         if torch.isfinite(loss_sum) and torch.isfinite(grad_norm):
             opt.step()
@@ -355,6 +381,8 @@ def main(argv: list[str] | None = None) -> int:
             guarded("sampling", do_sample)
         if step % cfg.snapshot_every == 0:
             guarded("snapshot", lambda: save_snapshot(run_dir, ema, step))
+        if cfg.archive_every and step % cfg.archive_every == 0:
+            guarded("archive", lambda: save_archive(run_dir, _state(model, ema, opt, step, cfg)))
         now = time.time()
         if now - last_power_check > 30:
             last_power_check = now

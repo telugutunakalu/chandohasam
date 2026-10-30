@@ -23,16 +23,41 @@ def _fsync_dir(path: Path) -> None:
         os.close(fd)
 
 
+def _drop_cache(fh) -> None:
+    """Evict a just-written (and fsync'ed) file from the page cache. On the GB10 (unified memory) CUDA
+    counts cached file pages as used memory, so gigabytes of checkpoints would otherwise starve GPU jobs."""
+    try:
+        os.posix_fadvise(fh.fileno(), 0, 0, os.POSIX_FADV_DONTNEED)
+    except (AttributeError, OSError):
+        pass
+
+
+def _write(path: Path, obj) -> None:
+    """torch.save to a temporary file, fsync, evict from the page cache, then atomically rename."""
+    tmp = path.with_suffix(".tmp")
+    with open(tmp, "wb") as fh:
+        torch.save(obj, fh)
+        fh.flush()
+        os.fsync(fh.fileno())
+        _drop_cache(fh)
+    os.replace(tmp, path)
+    _fsync_dir(path.parent)
+
+
 def save_checkpoint(run_dir: Path, state: dict) -> Path:
     slots = [run_dir / s for s in SLOTS]
     target = min(slots, key=lambda p: p.stat().st_mtime if p.exists() else -1.0)   # the older slot
-    tmp = target.with_suffix(".tmp")
-    with open(tmp, "wb") as fh:
-        torch.save(state, fh)
-        fh.flush()
-        os.fsync(fh.fileno())
-    os.replace(tmp, target)
-    _fsync_dir(run_dir)
+    _write(target, state)
+    return target
+
+
+def save_archive(run_dir: Path, state: dict) -> Path:
+    """A permanent full checkpoint (model, EMA, optimizer, step) in archive/: a point the run can be
+    rolled back to (deploy/rollback.sh copies it into a slot, and the next start resumes from it)."""
+    out = run_dir / "archive"
+    out.mkdir(exist_ok=True)
+    target = out / f"ckpt_step_{state['step']:07d}.pt"
+    _write(target, state)
     return target
 
 
@@ -56,12 +81,8 @@ def save_snapshot(run_dir: Path, ema: torch.nn.Module, step: int) -> None:
     """EMA weights only, in bf16: a permanent milestone for curves and stage-2 starts."""
     out = run_dir / "snapshots"
     out.mkdir(exist_ok=True)
-    tmp = out / f"ema_step_{step:07d}.tmp"
-    with open(tmp, "wb") as fh:
-        torch.save({"step": step, "ema": {k: v.to(torch.bfloat16) for k, v in ema.state_dict().items()}}, fh)
-        fh.flush()
-        os.fsync(fh.fileno())
-    os.replace(tmp, tmp.with_suffix(".pt"))
+    _write(out / f"ema_step_{step:07d}.pt",
+           {"step": step, "ema": {k: v.to(torch.bfloat16) for k, v in ema.state_dict().items()}})
 
 
 class PowerMonitor:

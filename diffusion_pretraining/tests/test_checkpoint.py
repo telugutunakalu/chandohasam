@@ -46,3 +46,18 @@ def test_power_monitor(tmp_path):
     (tmp_path / "ADP1" / "online").write_text("1\n")
     assert pm.on_mains() is True
     assert PowerMonitor(tmp_path / "ADP1").on_mains() is None      # no supplies found -> unknown
+
+
+def test_archives_are_permanent_and_resumable(tmp_path):
+    from mdlm.checkpoint import save_archive, save_snapshot
+    for step in (10, 20):
+        save_archive(tmp_path, {"step": step, "model": {"w": torch.ones(2) * step}})
+    names = sorted(p.name for p in (tmp_path / "archive").glob("*.pt"))
+    assert names == ["ckpt_step_0000010.pt", "ckpt_step_0000020.pt"]
+    assert not list((tmp_path / "archive").glob("*.tmp"))
+    state = torch.load(tmp_path / "archive" / names[0], weights_only=False)
+    assert state["step"] == 10 and torch.equal(state["model"]["w"], torch.ones(2) * 10)
+    ema = torch.nn.Linear(2, 2)
+    save_snapshot(tmp_path, ema, 30)
+    snap = torch.load(tmp_path / "snapshots" / "ema_step_0000030.pt", weights_only=False)
+    assert snap["step"] == 30 and snap["ema"]["weight"].dtype == torch.bfloat16
