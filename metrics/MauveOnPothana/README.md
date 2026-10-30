@@ -76,7 +76,7 @@ signal.
 
 ## Corpus
 
-`extract_poems.py` parses `../bhagavatam.txt` (blocks: `book-verse-meter.`
+`extract_poems.py` parses `../../dataset/bhagavatam.txt` (blocks: `book-verse-meter.`
 header → verse lines → `టీకా:` gloss → `భావము:` commentary) and keeps **only
 padyas** (metrical poems):
 

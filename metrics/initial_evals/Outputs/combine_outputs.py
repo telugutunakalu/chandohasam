@@ -8,7 +8,7 @@ File roles (established by inspection):
 """
 import json, re, hashlib, pathlib, collections, datetime, unicodedata
 
-D = pathlib.Path("/home/samvaran/phd_workspace/anlp_project/Outputs")
+D = pathlib.Path(__file__).resolve().parent
 OUT = D / "chandas_dataset.json"
 
 F_INPUTS = "Prompt templates for various chandas (1).txt"

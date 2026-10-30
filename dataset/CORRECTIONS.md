@@ -1,6 +1,8 @@
 # Corpus corrections
 
-Backups of the untouched files are in `dataset/backup/`.
+`dataset/backup/` (gitignored) holds only the copies taken before the two 2026-09-28 fixes. The other backups named
+below are no longer on disk. The git history holds every committed state, and each entry says how its file differs
+from the state before it (the 2026-09-26 states without `generated` were never committed on their own).
 
 ## 2026-09-13 — two poems relabelled కందము → ఆటవెలది
 

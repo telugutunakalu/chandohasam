@@ -1,6 +1,7 @@
 """Convert vemana_poems.txt (blank-line-separated padyas) to JSON.
 
-Source: /home/samvaran/workspace/workspace/padyarchana_prototype/vemana_poems.txt
+Source: /home/samvaran/workspace/workspace/padyarchana_prototype/vemana_poems.txt, no longer on this
+machine; vemana_poems.json is the extract kept, and ../../dataset/vemana.json was built from the same text.
 1258 blocks: 1254 four-line (Ataveladi with the Vemana makuta) and 4
 eight-line (Seesamu-style). Exact duplicate blocks are removed.
 """

@@ -10,7 +10,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-SRC = Path(__file__).resolve().parent.parent / "kuchimanchi_timmakavi_poems.txt"
+SRC = Path(__file__).resolve().parents[2] / "dataset" / "raw" / "kuchimanchi_timmakavi_poems.txt"
 OUT = Path(__file__).resolve().parent / "kuchimanchi_poems.json"
 
 

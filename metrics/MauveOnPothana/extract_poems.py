@@ -20,7 +20,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-SRC = Path(__file__).resolve().parent.parent / "bhagavatam.txt"
+# dataset/bhagavatam.txt; on it this rebuilds pothana_poems.json except the 5 poems relabelled since
+# (dataset/CORRECTIONS.md, 2026-09-14), whose id and meter changed
+SRC = Path(__file__).resolve().parents[2] / "dataset" / "bhagavatam.txt"
 OUT = Path(__file__).resolve().parent / "pothana_poems.json"
 
 HEADER_RE = re.compile(r"^(\d+)-(\d+(?:\.\d+)?)-(\S+)\s*$")

@@ -4,7 +4,7 @@
 make_datasets.py — convert raw poem text files into the ``dataset/bhagavatam.json``
 record layout, so every corpus can be run through the same evaluation scripts.
 
-    python3 scripts/make_datasets.py kuchimanchi  ../kuchimanchi_timmakavi_poems.txt  ../dataset/kuchimanchi_timmakavi.json
+    python3 scripts/make_datasets.py kuchimanchi  ../dataset/raw/kuchimanchi_timmakavi_poems.txt  ../dataset/kuchimanchi_timmakavi.json
     python3 scripts/make_datasets.py vemana       /path/to/vemana_poems.txt           ../dataset/vemana.json
 
 Input: poems separated by blank lines, one pāda (or printed half-line) per row.
