@@ -1,8 +1,9 @@
-# Build the mid-submission paper (ACL format) with XeLaTeX: `make` (main.pdf), `make figures`, `make clean`.
+# Build the papers (ACL format) with XeLaTeX: `make` (main.pdf = mid-submission, final.pdf = final paper), `make figures`,
+# `make clean`. Without XeLaTeX: `tectonic -X compile final.tex`.
 # XeLaTeX is needed for the Telugu examples (Noto Sans Telugu) and the IAST diacritics (TeX Gyre Termes).
-DOCS = main
+DOCS = main final
 TEX = xelatex -interaction=nonstopmode -halt-on-error
-DEPS = references.bib acl.sty acl_natbib.bst figures/fig1_system_overview.pdf figures/fig2_dawg_two_panel.pdf \
+DEPS = references.bib final_refs.bib acl.sty acl_natbib.bst figures/fig1_system_overview.pdf figures/fig2_dawg_two_panel.pdf \
        figures/fig3_experiments.pdf \
        $(wildcard tables/*.tex)
 
