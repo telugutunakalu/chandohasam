@@ -315,8 +315,12 @@ def main(argv: list[str] | None = None) -> int:
     trunk = _Trunk(model, hidden)
     print(f"stage {cfg.stage}: {cfg.total_steps} steps; {data_info}", flush=True)
 
-    from torch.utils.tensorboard import SummaryWriter
-    writer = SummaryWriter(str(run_dir / "tb"), purge_step=step or None)
+    try:                                                  # optional: metrics.jsonl is the record
+        from torch.utils.tensorboard import SummaryWriter
+        writer = SummaryWriter(str(run_dir / "tb"), purge_step=step or None)
+    except ImportError:
+        print("tensorboard is not installed: logging to metrics.jsonl only", flush=True)
+        writer = None
     log = (run_dir / "metrics.jsonl").open("a", encoding="utf-8")
 
     def emit(rec: dict) -> None:
@@ -324,7 +328,7 @@ def main(argv: list[str] | None = None) -> int:
         log.write(json.dumps(rec) + "\n")
         log.flush()
         for k, val_ in rec.items():
-            if k != "step" and isinstance(val_, (int, float)):
+            if writer is not None and k != "step" and isinstance(val_, (int, float)):
                 writer.add_scalar(k, val_, step)
 
     stop = {"flag": False}

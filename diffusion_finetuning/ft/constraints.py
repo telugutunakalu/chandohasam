@@ -584,6 +584,8 @@ def main(argv=None) -> int:
     oracle = YatiOracle(tok, tt, args.yati_profile, args.yati_sandhi, cache_dir=args.data_dir / "yati_oracle")
     rep: dict = {"yati": {"profile": args.yati_profile, "sandhi": args.yati_sandhi}}
     for split in ("val", "test", "test_seen"):
+        if not (args.data_dir / "records" / f"{split}.jsonl").exists():    # test_seen: older builds only
+            continue
         acc, yati_pos, yati_ok, poems_ok, n = collections.Counter(), 0, 0, 0, 0
         for line in (args.data_dir / "records" / f"{split}.jsonl").open(encoding="utf-8"):
             r = json.loads(line)

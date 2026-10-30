@@ -25,7 +25,12 @@ from .text import GLOSS_KEY, LEXICON_KEY, MEANING_KEY, METRE_KEY, POEM_KEY, STYL
 
 GIVEN, TARGET, FILL = 0, 1, 2
 TASKS = ("T1", "T2", "T3", "T4", "T5", "T0")
-DEFAULT_MIX = {"T1": 0.40, "T2": 0.20, "T3": 0.10, "T4": 0.05, "T5": 0.15, "T0": 0.10}
+# Decided 2026-10-13: all six tasks, weighted toward writing poems. T1 (metre + meaning -> poem), T5 (repair a
+# poem) and T0 (metre -> poem) are 75% of canvases, against 65% in PLAN §5.1's mix (kept as PLAN_MIX for ablations).
+DEFAULT_MIX = {"T1": 0.50, "T2": 0.15, "T3": 0.05, "T4": 0.05, "T5": 0.15, "T0": 0.10}
+PLAN_MIX = {"T1": 0.40, "T2": 0.20, "T3": 0.10, "T4": 0.05, "T5": 0.15, "T0": 0.10}
+# Decided 2026-10-16 ("aggressive fine-tuning on poem generation"): poem writing is 85% of canvases, all six tasks kept.
+POEM_HEAVY_MIX = {"T1": 0.60, "T2": 0.10, "T3": 0.025, "T4": 0.025, "T5": 0.15, "T0": 0.10}
 BUCKETS = (128, 256, 384, 512)
 METRE_OK = ("agree", "engine-only")
 RARE_METRE = 500            # metres with fewer training poems are upsampled ...
