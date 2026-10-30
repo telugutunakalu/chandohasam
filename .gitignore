@@ -42,6 +42,37 @@ metrics/MauveOnPothana/embeddings_cache/
 dataset/backup/
 pretraining_datasets/
 diffusion_pretraining/runs/
+# the Padyarchana poem exports: never commit
+padyarchana_exports/
+# the v3 poems with word-by-word meanings (prathipadārtham), copied from padyarchana_exports/: never commit
+padyarchana_final_corpus/
+padyarchana_final_corpus.tar.xz
+# word resolution: the vendored minimal_setup (word_resolution_metric/ is its extracted copy). Its database holds the
+# Padyarchana word-by-word glossary: never commit it, the model or the precomputed tables
+minimal_setup.tar.xz
+# the Hugging Face release's staged weights (hf_release/build.py rebuilds them)
+hf_release/stage/
+word_resolution_metric/db/
+word_resolution_metric/models/
+word_resolution_metric/data/
+# stage-2 weights, poem token files and runs (derived from padyarchana_exports/)
+diffusion_finetuning/models/
+diffusion_finetuning/data/
+diffusion_finetuning/runs/
+# autoregressive fine-tuning: checkpoints and generated poems (the Nandi weights stay in the HF cache)
+autoregressive_finetuning/runs/
+# real_words.py lexicon cache (derived from the Padyarchana training split: never committed)
+poetry_metrics/cache/
+# MAUVE reference embeddings and texts (derived from the Padyarchana training split: never committed)
+metrics/mauve_padyarchana/cache/
+# the full grid: its prompts and records (the held-out poems, bhāvams and word glosses), generated poems, cell logs
+full_grid_experiments/prompts/
+full_grid_experiments/runs/
+full_grid_experiments/logs/
+# decoder v2 inventories from the Padyarchana training split (never committed; rebuilt by
+# `cd meter_engine && python3 -m metrical_decoder inventory`)
+meter_engine/metrical_decoder/inventories/padyarchana.txt
+meter_engine/metrical_decoder/inventories/padyarchana_words.txt
 
 # ---- os / editor ----
 .DS_Store
