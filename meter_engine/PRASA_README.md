@@ -7,7 +7,7 @@ reference engine that returns a **provenance trail** for every verdict.
 | File | Role |
 |---|---|
 | `prasa_rules.yaml` | The ruleset: profiles, alphabet, akshara model, 62 rules, consonant-pair lookup table, Appakavi's 17 cross-reference, decision procedure, trail schema, 87 attested fixtures |
-| `prasa_engine.py` | Reference implementation (reads the YAML; splits pādas with `aksharanusarika_v0.0.6a.py` from the project root) |
+| `prasa_engine.py` | Entry point for the `prasa/` package (reads the YAML; splits pādas with the bundled `aksharanusarika.py`, v0.0.7a) |
 | `tests/test_prasa_rules.py` | Deterministic verification of the table, the rules and the fixtures |
 | `run_corpus.py` | Runs the engine over a poems corpus (`dataset/bhagavatam.json` layout) and writes JSONL + CSV results and a Markdown summary |
 | `corpus_runs/bhagavatam_*` | The full Bhāgavatam run: every poem's verdict, label, classifications, violations (`_results.jsonl`, `_results.csv`) and the aggregate report (`_summary.md`) |
