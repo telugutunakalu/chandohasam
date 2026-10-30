@@ -50,6 +50,9 @@ def current_annotator():
     aid = session.get("annotator_id")
     if aid is not None:
         row = db.get_annotator(get_db(), aid)
+        users = current_app.config.get("USERS")
+        if row is not None and users is not None and row["username"] not in users:
+            row = None
         if row is None:
             session.pop("annotator_id", None)
     g.annotator = row

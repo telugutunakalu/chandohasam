@@ -19,9 +19,10 @@
 <body class="{% block body_class %}{% endblock %}">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="topbar">
-    <a class="brand" href="{{ url_for('main.index') }}">
+    <a class="brand" href="{{ config.HOME_URL or url_for('main.index') }}">
       <span class="brand-te">ఛందోహాసం</span><span class="brand-en">human eval</span>
     </a>
+    {% if config.STUDY_LABEL %}<a class="pill" href="{{ config.HOME_URL or url_for('main.index') }}" title="Choose a study">{{ config.STUDY_LABEL }}</a>{% endif %}
     <div class="topbar-right">
     {% block topnav %}
     {% if annotator %}

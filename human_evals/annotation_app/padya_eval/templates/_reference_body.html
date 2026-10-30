@@ -127,7 +127,7 @@
     {% for q in questions %}
     <li>
       <b>{{ q.text }}</b> <span class="muted">{{ q.text_te }}</span>
-      <div class="small">{% if q.kind == 'likert' %}1 = {{ q.low }} … 5 = {{ q.high }}.{% else %}0 = No, 1 = Yes.{% endif %} {{ q.guide }}{% if q.na_reason %} <i>Shown as not applicable when: {{ q.na_reason }}</i>{% endif %}</div>
+      <div class="small">{% if q.kind == 'likert' %}1 = {{ q.low }} … 5 = {{ q.high }}.{% else %}0 = {{ q.label(0) }}, 1 = {{ q.label(1) }}.{% endif %} {{ q.guide }}{% if q.na_reason %} <i>Shown as not applicable when: {{ q.na_reason }}</i>{% endif %}</div>
     </li>
     {% endfor %}
   </ol>

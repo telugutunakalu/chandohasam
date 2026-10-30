@@ -533,12 +533,15 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--pool", default="strict", choices=["strict", "relaxed", "historical"],
                     help="which human_eval_poems_<pool>.json to annotate (default: strict)")
+    ap.add_argument("--pool-file", type=Path, help="a pool JSON given by path (overrides --pool), e.g. study 2's "
+                    "../human_eval_poems_study2.json (build_study2_pool.py)")
     ap.add_argument("--out", type=Path, default=DATA_OUT)
     ap.add_argument("--overrides", type=Path, default=DATA_OUT / "bhavam_overrides.json",
                     help="optional {eval_id: {te, en, source}} bhavams that replace or fill the corpus ones")
     args = ap.parse_args(argv)
 
-    pool_path = HUMAN_EVALS / f"human_eval_poems_{args.pool}.json"
+    pool_path = args.pool_file or HUMAN_EVALS / f"human_eval_poems_{args.pool}.json"
+    pool_name = pool_path.stem.removeprefix("human_eval_poems_")
     pool = json.loads(pool_path.read_text(encoding="utf-8"))
     profile = pool["compliance_profile"]
     analyze, catalogue, scansion = load_engine()
@@ -559,7 +562,7 @@ def main(argv=None) -> int:
     meters = sorted({m for p in poems for m in p["meters"]})
     reference = build_reference(meters, catalogue, scansion)
     meta = {
-        "dataset": pool["dataset"], "pool": args.pool, "pool_file": pool_path.name,
+        "dataset": pool["dataset"], "pool": pool_name, "pool_file": pool_path.name,
         "compliance_profile": profile, "built_on": date.today().isoformat(),
         "engine": "meter_engine/chandohasam.analyze (indic_meter_dawg + prasa + yati)",
         "engine_revision": engine_revision(), "n_poems": len(poems),
@@ -572,7 +575,7 @@ def main(argv=None) -> int:
 
     bh = Counter((p["bhavam"] or {}).get("source", "none").split(":")[0] for p in poems)
     src = Counter(p["hidden"]["source_dataset"] for p in poems)
-    print(f"wrote {len(poems)} poems ({args.pool} pool, profile {profile}) to {args.out}")
+    print(f"wrote {len(poems)} poems ({pool_name} pool, profile {profile}) to {args.out}")
     print("  sources: " + ", ".join(f"{k} {v}" for k, v in src.most_common()))
     print("  bhavam:  " + ", ".join(f"{k} {v}" for k, v in bh.most_common()))
     print(f"  meters:  {len(meters)}; reference cards: {len(reference['meters'])}")

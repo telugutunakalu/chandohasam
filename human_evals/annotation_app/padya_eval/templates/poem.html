@@ -11,8 +11,14 @@
           <p class="eyebrow">{{ poem.id }}{% if is_calibration %} <span class="badge" title="Every annotator rates this poem">calibration</span>{% endif %}{% if existing %} <span class="badge badge-ok">rated</span>{% endif %}</p>
           <h1 class="meter-name">{{ poem.meter_te }}</h1>
         </div>
-        <a class="btn btn-ghost ref-btn" href="{{ url_for('main.reference', poem=poem.id) }}" target="_blank" rel="noopener"
-           data-ref-open data-ref-src="{{ url_for('main.reference_fragment', poem=poem.id) }}">📖 నియమాలు<span class="hide-sm"> · Rules</span></a>
+        <div class="poem-actions">
+          <button type="button" class="btn btn-ghost ref-btn" data-copy="{{ poem.plain_lines|join('\n') }}"
+                  title="పద్యాన్ని క్లిప్‌బోర్డ్‌కు కాపీ చేయండి · Copy the poem's lines to the clipboard">📋 కాపీ<span class="hide-sm"> · Copy</span></button>
+          <a class="btn btn-ghost ref-btn" href="https://andhrabharati.com/dictionary/" target="_blank" rel="noopener" data-dict-lookup
+             title="పద్యంలో ఒక పదాన్ని ఎంచుకుని నొక్కండి: ఆంధ్రభారతి నిఘంటువులో చూపిస్తుంది · Select a word in the poem, then press: opens it in the Andhrabharati dictionary">🔎 ఆంధ్రభారతి<span class="hide-sm"> · Dictionary</span></a>
+          <a class="btn btn-ghost ref-btn" href="{{ url_for('main.reference', poem=poem.id) }}" target="_blank" rel="noopener"
+             data-ref-open data-ref-src="{{ url_for('main.reference_fragment', poem=poem.id) }}">📖 నియమాలు<span class="hide-sm"> · Rules</span></a>
+        </div>
       </header>
       {% include "_poem_text.html" %}
       {% for ps in poem.raw.prasa_summary %}
@@ -41,6 +47,8 @@
       <h2 class="form-title">మూల్యాంకనం <span class="muted">· Evaluation</span></h2>
       {% if errors %}<p class="alert" role="alert">Please answer every question marked below.</p>{% endif %}
       <p class="draft-note" id="draft-note" hidden>Restored your unsaved answers on this device.</p>
+      {% if backfill %}<p class="draft-note">మీ పాత సమాధానాలు నింపి ఉన్నాయి · Your earlier answers are filled in, and you
+        can change them. Please answer the new question{{ 's' if backfill|length > 1 }}: {{ backfill|join(', ') }}.</p>{% endif %}
 
       {% for item in questions %}
         {% set q = item.q %}
@@ -50,7 +58,7 @@
 
           {% if q.applies == 'bhavam' and item.applies %}
           <details class="bhavam" data-bhavam>
-            <summary>భావం చూపించు · Show the bhavam <span class="muted small">(answer 1–3 first)</span></summary>
+            <summary>భావం చూపించు · Show the bhavam <span class="muted small">(answer {{ bhavam_first }} first)</span></summary>
             {% if poem.bhavam.te %}<p class="bhavam-te" lang="te">{{ poem.bhavam.te }}</p>{% endif %}
             {% if poem.bhavam.en %}
               {% if poem.bhavam.te %}<details class="bhavam-en"><summary>English</summary><p lang="en">{{ poem.bhavam.en }}</p></details>
@@ -64,7 +72,7 @@
             {% for v in q.choices %}
             <label class="choice">
               <input type="radio" name="{{ q.key }}" value="{{ v }}" {% if values.get(q.key) == v %}checked{% endif %} {% if loop.first %}required{% endif %}>
-              <span>{% if q.kind == 'binary' %}{{ 'అవును · Yes' if v == 1 else 'కాదు · No' }}<small>{{ v }}</small>{% else %}{{ v }}{% endif %}</span>
+              <span>{% if q.kind == 'binary' %}{{ q.label(v) }}<small>{{ v }}</small>{% else %}{{ v }}{% endif %}</span>
             </label>
             {% endfor %}
           </div>

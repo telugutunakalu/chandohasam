@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 import pytest
 
 from padya_eval import assignment, db
+from padya_eval.rubric import QUESTIONS, RUBRIC_VERSION
 
 
 @dataclass(frozen=True)
@@ -13,6 +14,11 @@ class FakePoem:
     id: str
     meter: str
     hidden: dict = field(default_factory=dict)
+    has_bhavam: bool = True
+    prasa_applicable: bool = True
+
+
+FULL = {q.key: (3 if q.kind == "likert" else 1) for q in QUESTIONS}
 
 
 class FakeStore:
@@ -22,6 +28,10 @@ class FakeStore:
         self.poems = [FakePoem(f"he_{i:04d}", meters[i % 4], {"source_dataset": sources[i % len(sources)]})
                       for i in range(1, n + 1)]
         self.ids = [p.id for p in self.poems]
+        self.phase_ids = self.ids                 # no first-phase subset here: the whole pool
+
+    def get(self, e):
+        return next((p for p in self.poems if p.id == e), None)
 
     def __contains__(self, e):
         return e in self.ids
@@ -44,7 +54,7 @@ def annotator(conn, name):
 
 
 def rate(conn, who, eval_id):
-    db.save_annotation(conn, who["id"], eval_id, {"readability": 3}, "", 10.0, "1")
+    db.save_annotation(conn, who["id"], eval_id, FULL, "", 10.0, RUBRIC_VERSION)   # complete: not served again
 
 
 def serve(conn, store, who, k=3, cal=(), now=1000.0, ttl=1800):

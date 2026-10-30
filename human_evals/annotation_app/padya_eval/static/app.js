@@ -69,6 +69,59 @@
     tipTimer = setTimeout(function () { tip.hidden = true; }, 4000);
   }
 
+  // ---------- copy the poem's lines (the button's data-copy) ----------
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise(function (resolve, reject) {     // plain http: the old way, through a hidden textarea
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { /* unsupported */ }
+      document.body.removeChild(ta);
+      if (ok) resolve(); else reject();
+    });
+  }
+  document.addEventListener("click", function (ev) {
+    var btn = ev.target.closest("[data-copy]");
+    if (!btn) return;
+    copyText(btn.dataset.copy).then(
+      function () { showTip("పద్యం కాపీ అయింది · Poem copied"); },
+      function () { showTip("కాపీ కాలేదు: పద్యాన్ని ఎంచుకుని కాపీ చేయండి · Could not copy: select the poem and copy it"); });
+  });
+
+  // ---------- look up the selected word in the Andhrabharati dictionary (the link's data-dict-lookup) ----------
+  // On phones a tap on the button can clear the selection first, so the last selection made is remembered.
+  var DICT_URL = "https://andhrabharati.com/dictionary/index.php?w=";
+  var lastSelection = "";
+  function selectedWord() {
+    var s = window.getSelection ? String(window.getSelection()).trim() : "";
+    s = (s || lastSelection).replace(/[\s​]+/g, " ").trim();
+    try { s = s.replace(/^[\p{P}\p{S}\p{N}\s]+|[\p{P}\p{S}\p{N}\s]+$/gu, ""); }   // !, ?, dandas, digits at the ends
+    catch (e) { s = s.replace(/^[\s!?,.;:'"()\-–—।॥|0-9]+|[\s!?,.;:'"()\-–—।॥|0-9]+$/g, ""); }
+    return s;
+  }
+  document.addEventListener("selectionchange", function () {
+    var s = window.getSelection ? String(window.getSelection()).trim() : "";
+    if (s) lastSelection = s;
+  });
+  document.addEventListener("click", function (ev) {
+    var link = ev.target.closest("[data-dict-lookup]");
+    if (!link) return;
+    var word = selectedWord();
+    if (!word) {
+      ev.preventDefault();
+      showTip("ముందు పద్యంలో ఒక పదాన్ని ఎంచుకోండి · Select a word in the poem first");
+      return;
+    }
+    link.href = DICT_URL + encodeURIComponent(word);   // the link then opens it in a new tab
+    showTip("ఆంధ్రభారతిలో · Looking up: " + word);
+  });
+
   // ---------- remember whether the gaṇa panel is open ----------
   var gana = document.getElementById("gana-details");
   if (gana) {

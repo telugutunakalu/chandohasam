@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}అధ్యయనాలు{% endblock %}
+{% block topnav %}{% endblock %}
+{% block main_class %}page narrow{% endblock %}
+{% block content %}
+<section class="card login-card">
+  <h1>పద్య మూల్యాంకనం</h1>
+  <p class="lead">Human evaluation of Telugu padyams. Choose a study · అధ్యయనాన్ని ఎంచుకోండి.</p>
+  <div class="stack">
+    {% for s in studies %}
+    <a class="btn btn-block{% if loop.first %} btn-primary{% endif %}" href="{{ s.url }}">{{ s.title }}</a>
+    <p class="small muted">{{ s.text }}</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

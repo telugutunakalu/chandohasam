@@ -43,11 +43,36 @@
 </table>
 </div>
 {% endmacro %}
+{% macro source_table(rows, span=none) %}
+<div class="table-scroll">
+<table class="data">
+  <thead><tr><th class="left">source</th><th>n</th>{% for q in questions %}<th class="qhead" tabindex="0"
+    data-tip="Q{{ q.number }}. {{ q.text }} ({{ 'mean of 1–5' if q.kind == 'likert' else 'share answering ' ~ q.label(1) }})"
+    {%- if span %} data-tip-norm="Q{{ q.number }}. {{ q.text }} (
+      {%- if q.key not in span %}yes/no, not scaled: share answering {{ q.label(1) }}
+      {%- elif span[q.key].min is none %}no answers
+      {%- elif span[q.key].max == span[q.key].min %}not scaled: every answer was {{ span[q.key].min }}
+      {%- else %}this annotator's answers {{ span[q.key].min }}–{{ span[q.key].max }} stretched onto 1–5: {{ span[q.key].min }} → 1, {{ span[q.key].max }} → 5{% endif %})"{% endif %}>Q{{ q.number }}</th>{% endfor %}</tr></thead>
+  <tbody>
+    {% for row in rows %}
+    <tr><td class="left">{{ row.source }}</td><td class="num">{{ row.n_annotations }}</td>
+      {% for q in questions %}{% set c = row.cells[q.key] %}<td class="num" title="n = {{ c.n }}">
+        {%- if span and q.key in span %}<span class="v-raw">{{ num(c.value, 2) }}</span><span class="v-norm">{{ num(c.norm, 2) }}</span>{% else %}{{ num(c.value, 2) }}{% endif %}</td>{% endfor %}</tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endmacro %}
 
 {% block content %}
+{% if config.ADMIN_TABS %}
+<nav class="study-tabs" aria-label="Study">
+  {% for t in config.ADMIN_TABS %}<a href="{{ t.url }}"{% if t.key == config.ADMIN_TAB %} aria-current="page"{% endif %}>{{ t.label }}</a>{% endfor %}
+</nav>
+{% endif %}
 <section class="card">
   <div class="row-between">
-    <h1>Study dashboard</h1>
+    <h1>Study dashboard{% if config.ADMIN_TABS %} · {% for t in config.ADMIN_TABS if t.key == config.ADMIN_TAB %}{{ t.label }}{% endfor %}{% endif %}</h1>
     <div class="actions">
       <a class="btn btn-ghost" href="{{ url_for('admin.annotations_csv') }}">annotations.csv</a>
       <a class="btn btn-ghost" href="{{ url_for('admin.annotations_json') }}">annotations.json</a>
@@ -116,17 +141,29 @@
 {% if report.by_source %}
 <section class="card">
   <h2>Mean rating by source <span class="muted small">(admin only; 1–5 means, yes/no shares)</span></h2>
-  <div class="table-scroll">
-  <table class="data">
-    <thead><tr><th class="left">source</th><th>n</th>{% for q in questions %}<th title="{{ q.text }}">Q{{ q.number }}</th>{% endfor %}</tr></thead>
-    <tbody>
-      {% for row in report.by_source %}
-      <tr><td class="left">{{ row.source }}</td><td class="num">{{ row.n_annotations }}</td>
-        {% for q in questions %}{% set c = row.cells[q.key] %}<td class="num" title="n = {{ c.n }}">{{ num(c.value, 2) }}</td>{% endfor %}</tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  {{ source_table(report.by_source) }}
+</section>
+{% endif %}
+
+{% if report.by_source_by_annotator %}
+<section class="card by-annotator">
+  <div class="row-between">
+    <h2>Mean rating by source, per annotator <span class="muted small">(admin only)</span></h2>
+    <div class="seg" role="radiogroup" aria-label="Scores shown in the per-annotator tables">
+      <label><input type="radio" name="bysrc-scale" value="raw" checked> Original</label>
+      <label><input type="radio" name="bysrc-scale" value="norm" id="bysrc-norm"> Normalized</label>
+    </div>
   </div>
+  <p class="small muted v-raw">Original: 1–5 means and yes/no shares, as each annotator rated.</p>
+  <p class="small muted v-norm">Normalized: the 1–5 questions ({% for q in questions if q.kind == 'likert' %}Q{{ q.number }}{{ ', ' if not loop.last }}{% endfor %})
+    are min–max scaled per annotator and question, so the scores are comparable across annotators: each annotator's own
+    lowest answer becomes 1 and their highest 5, by 1 + 4 × (rating − min) ÷ (max − min); an annotator who answered 2–4
+    has 2 → 1, 3 → 3, 4 → 5. Yes/no questions are unchanged. – = the annotator gave the same answer every time.
+    A single extreme answer sets an annotator's range. Hover a Q header for the annotator's min and max.</p>
+  {% for a in report.by_source_by_annotator %}
+  <h3>{{ a.username }} <span class="muted small">({{ a.rows|sum(attribute='n_annotations') }} ratings)</span></h3>
+  {{ source_table(a.rows, a.span) }}
+  {% endfor %}
 </section>
 {% endif %}
 {% endblock %}

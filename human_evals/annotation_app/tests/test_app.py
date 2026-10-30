@@ -10,8 +10,10 @@ from markupsafe import escape
 
 from conftest import FormClient, full_answers, make_app, poem_where
 from padya_eval import db
-from padya_eval.rubric import QUESTIONS
+from padya_eval.rubric import QUESTIONS, RUBRIC_VERSION
 from padya_eval.store import load_store
+from padya_eval.users import check_password, hash_password, load_users
+from padya_eval.users import main as users_cli
 
 
 def saved(app, username, eval_id):
@@ -56,6 +58,42 @@ def test_access_code(tmp_path):
     assert c.login("bob", access_code="sesame").status_code == 302
 
 
+def test_user_passwords_replace_the_access_code(tmp_path):
+    app = make_app(tmp_path, USERS={"shyam": hash_password("k7mx-q9pt-4nar")}, ACCESS_CODE="sesame")
+    c = FormClient(app.test_client())
+    page = c.get("/login").data
+    assert b'name="password"' in page and b"access_code" not in page
+    assert c.login("shyam").status_code == 400
+    assert c.login("shyam", password="wrong").status_code == 400
+    assert c.login("mallory", password="k7mx-q9pt-4nar").status_code == 400
+    assert c.login(" Shyam ", password="k7mx-q9pt-4nar").status_code == 302
+    conn = db.connect(app.config["DATABASE"])
+    assert [r["username"] for r in db.list_annotators(conn)] == ["shyam"]
+
+
+def test_removed_user_loses_their_session(tmp_path):
+    app = make_app(tmp_path, USERS={"shyam": hash_password("a"), "mahesh": hash_password("b")})
+    c = FormClient(app.test_client())
+    assert c.login("mahesh", password="b").status_code == 302
+    assert c.get("/mine").status_code == 200
+    del app.config["USERS"]["mahesh"]
+    r = c.get("/mine")
+    assert r.status_code == 302 and "/login" in r.headers["Location"]
+
+
+def test_users_cli(tmp_path, capsys):
+    path = tmp_path / "users.json"
+    assert users_cli(["--file", str(path), "set", "Shyam", "mahesh"]) == 0
+    printed = dict(line.split() for line in capsys.readouterr().out.splitlines())
+    users = load_users(path)
+    assert sorted(users) == ["mahesh", "shyam"] and oct(path.stat().st_mode & 0o777) == "0o600"
+    assert check_password(users, "shyam", printed["shyam"]) and not check_password(users, "shyam", printed["mahesh"])
+    assert users_cli(["--file", str(path), "remove", "mahesh"]) == 0
+    assert sorted(load_users(path)) == ["shyam"]
+    assert users_cli(["--file", str(path), "remove", "nobody"]) == 1
+    assert users_cli(["--file", str(path), "set", "two words"]) == 2
+
+
 def test_post_without_csrf_token_is_rejected(client):
     client.get("/login")
     r = client.post("/login", data={"username": "alice"})
@@ -96,7 +134,7 @@ def test_poem_page_shows_poem_gana_table_and_form(client, store):
     for q in QUESTIONS:
         assert q.text in html
     assert 'name="comments"' in html
-    assert html.count('type="radio"') == 5 * 5 + 2 * 5                          # every question applies here
+    assert html.count('type="radio"') == sum(len(q.choices) for q in QUESTIONS)  # every question applies here
     assert 'data-ref-open' in html and "/reference/fragment?poem=he_0099" in html
 
 
@@ -112,8 +150,9 @@ def test_poem_page_is_blind_to_source(client, store):
                  poem.hidden["metadata"].get("title"), poem.hidden["metadata"].get("contributor")]
         if poem.hidden["author"] not in content:            # a makuṭam such as "వినర వేమ" may name the poet
             leaks.append(poem.hidden["author"])
+        page = html.replace("ai_generated", "").replace("AI-generated", "")   # Q12's own key and wording
         for leak in filter(None, leaks):
-            assert leak not in html, (poem.id, leak)
+            assert leak not in page, (poem.id, leak)
 
 
 def test_bhavam_is_behind_a_reveal(client, store):
@@ -162,7 +201,7 @@ def test_save_valid_annotation(client, app, store):
     a = saved(app, "alice", "he_0099")
     assert a["answers"] == {q.key: (4 if q.kind == "likert" else 1) for q in QUESTIONS}
     assert a["comments"] == "vṛttyanuprāsa in pāda 2"
-    assert a["duration_s"] is None and a["revisions"] == 1 and a["rubric_version"] == "1"
+    assert a["duration_s"] is None and a["revisions"] == 1 and a["rubric_version"] == RUBRIC_VERSION
 
 
 def test_duration_is_recorded(client, app, store):
@@ -326,7 +365,7 @@ def test_admin_dashboard_and_exports(client, app, store):
     assert row["source_id"] == "1-1-శా." and row["meter"] == "sardulavikriditamu"
 
     rep = client.get("/admin/agreement.json").get_json()
-    assert rep["study"]["annotations"] == 18 and len(rep["questions"]) == 10
+    assert rep["study"]["annotations"] == 18 and len(rep["questions"]) == len(QUESTIONS)
     readability = rep["questions"][0]
     assert readability["n_paired_units"] == 6 and readability["distribution"]["4"] == 12
 

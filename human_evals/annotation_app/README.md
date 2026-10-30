@@ -74,7 +74,8 @@ Put it behind HTTPS (nginx, Caddy, or a platform's proxy). Then also set
 | Variable | Default | Meaning |
 |---|---|---|
 | `HE_SECRET_KEY` | random, kept in `instance/secret_key` | Signs the session cookies. Set it explicitly when hosting. |
-| `HE_ACCESS_CODE` | none | When set, annotators need this code to log in. |
+| `HE_ACCESS_CODE` | none | When set, annotators need this code to log in. Not asked once a users file exists. |
+| `HE_USERS_FILE` | `instance/users.json` | Per-annotator passwords (see below). Without the file, login is open. |
 | `HE_ADMIN_PASSWORD` | none (admin disabled) | Password for `/admin`. |
 | `HE_DATABASE` | `instance/annotations.db` | The SQLite file holding all ratings. |
 | `HE_RATINGS_PER_POEM` | `all` | `all`: every annotator rates all 500 poems. A number k: share the poems out until each has k ratings. |
@@ -94,6 +95,18 @@ sqlite3 instance/annotations.db ".backup 'annotations-$(date +%F).db'"
 **Annotators** log in with a username: 2–40 letters, digits, `.`, `-` or `_`.
 They must use the same username on every device so their ratings stay
 together. Sessions last 30 days.
+
+**Per-annotator passwords.** To allow only named annotators, each with their
+own password, create `instance/users.json` (it stores only password hashes):
+
+```bash
+.venv/bin/python -m padya_eval.users set shyam mahesh    # creates them, or gives them new passwords; prints the passwords once
+.venv/bin/python -m padya_eval.users remove mahesh       # their ratings stay; their session ends
+.venv/bin/python -m padya_eval.users list
+```
+
+Restart the server after a change. While the file exists, only its users can
+log in and the access code is not asked.
 
 ## 3. How the poems are assigned (inter-annotator agreement design)
 
@@ -176,6 +189,26 @@ the command line:
 .venv/bin/python -m padya_eval.report --db instance/annotations.db --out reports/ --bootstrap 1000
 ```
 
+## 3a. Two studies (2026-10-30)
+
+`create_site()` serves **study 1** (the 500-poem pool, `data/`, `instance/annotations.db`) at `/`, and, when
+`data_study2/poems.json` exists, **study 2** at `/study2` (a second app in the same process). To switch it on, point
+`wsgi.py` at `create_site()` (its docstring), back up `instance/annotations.db` and reload the service; until then
+`wsgi.py` serves study 1 alone, as before. The home page `/`
+offers both; a pill in the top bar names the study and leads back to it.
+
+- **Study 2** rates 99 poems (`he2_0001`–`he2_0099`) of the three best fine-tuned grid models with the v2 controller
+  (MDLM-523M, T5Gemma 2 1B, Nandi-Mini-150M), 33 prompts × 3 models, the gold poems not shown again (they keep their
+  study-1 ratings). Prompts: the poets' grid prompts whose gold has ≥ 4 study-1 raters, ranked within each source by
+  z(gold's annotator-centred study-1 rating) + z(the three poems' out-of-fold p(real)); method and table in
+  `build_study2_pool.py` and `reports/study2/selection.md`. The bhāvam shown is the retold prompt the models wrote from.
+- Its own database `instance/annotations_study2.db`, session cookie (`he2_session`, path `/study2`) and admin page
+  (`/study2/admin`); the same usernames and passwords (`instance/users.json`), with a separate login. 3 ratings per
+  poem, a calibration set of 6 (2 per model: `hidden.source_dataset` is the model), engine verdicts hidden.
+- Rebuild: `../../.venv/bin/python -u build_study2_pool.py`, then
+  `../../.venv/bin/python build_data.py --pool-file ../human_eval_poems_study2.json --out data_study2 --overrides data_study2/bhavam_overrides.json`.
+  Changing the pool after ratings exist makes the study-2 app refuse to start (the fingerprint), as for study 1.
+
 ## 4. The poem data
 
 `data/poems.json` and `data/reference.json` are generated. Rebuild them after
@@ -239,6 +272,7 @@ verdicts.
 ## 5. Tests
 
 ```bash
+.venv/bin/python -m pytest          # 106 tests, about 8 s
 .venv/bin/python -m pytest          # 104 tests, about 10 s
 ```
 
@@ -269,6 +303,7 @@ annotation_app/
 │   ├── db.py              SQLite schema and queries
 │   ├── store.py           read-only access to data/*.json
 │   ├── security.py        sessions, CSRF, guards
+│   ├── users.py           per-annotator passwords (instance/users.json) and their CLI
 │   ├── templates/         Jinja templates (_gana.html is the gaṇa table)
 │   └── static/            app.css, app.js (progressive enhancement only)
 ├── tests/

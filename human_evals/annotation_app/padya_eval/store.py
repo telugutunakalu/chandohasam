@@ -87,6 +87,14 @@ class PoemStore:
         if len(self.by_id) != len(self.poems):
             raise ValueError("duplicate poem ids in poems.json")
         self.ids = [p.id for p in self.poems]
+        # the study's first phase (data/active_pool.json, written by build_active_pool.py): every annotator gets
+        # these poems first (after the calibration set), then the rest of the pool; progress counts them. poems.json
+        # and the fingerprint stay the full pool, so the database is unchanged.
+        self.phase_ids = self.ids
+        active = self.data_dir / "active_pool.json"
+        if active.exists():
+            keep = set(json.loads(active.read_text(encoding="utf-8"))["ids"])
+            self.phase_ids = [e for e in self.ids if e in keep]
 
     def __len__(self) -> int:
         return len(self.poems)

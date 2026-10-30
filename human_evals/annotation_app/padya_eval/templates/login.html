@@ -5,8 +5,12 @@
 {% block content %}
 <section class="card login-card">
   <h1>పద్య మూల్యాంకనం</h1>
+  {% if need_password %}
+  <p class="lead">Human evaluation of Telugu padyams. Log in with the username and password you were given.</p>
+  {% else %}
   <p class="lead">Human evaluation of Telugu padyams. Pick a username and use the same one every time, on every device,
     so your ratings stay together.</p>
+  {% endif %}
   {% if error %}<p class="alert" role="alert">{{ error }}</p>{% endif %}
   <form method="post" class="stack" novalidate>
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
@@ -15,6 +19,13 @@
       <input name="username" value="{{ username }}" autocomplete="username" autocapitalize="none" spellcheck="false"
              required minlength="2" maxlength="40" pattern="[\w.\-]{2,40}" inputmode="text" autofocus>
     </label>
+    {% if need_password %}
+    <label class="field">
+      <span>Password <span class="muted">· సంకేతపదం</span></span>
+      <input name="password" type="password" autocomplete="current-password" autocapitalize="none" spellcheck="false"
+             required>
+    </label>
+    {% endif %}
     {% if need_code %}
     <label class="field">
       <span>Access code <span class="muted">· ప్రవేశ సంకేతం</span></span>

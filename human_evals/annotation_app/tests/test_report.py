@@ -69,6 +69,42 @@ def test_by_source_and_export_rows(store):
     assert csv_text.splitlines()[0].split(",") == report.EXPORT_FIELDS
 
 
+def test_by_source_by_annotator(store):
+    gen = next(p for p in store.poems if p.hidden["source_dataset"] == "generated")
+    bh = next(p for p in store.poems if p.hidden["source_dataset"] == "bhagavatam")
+    rows = [ann("b", gen.id, 4, 1), ann("a", gen.id, 2, 0), ann("a", bh.id, 5, 1)]
+    per = report.by_source_by_annotator(rows, store)
+    assert [p["username"] for p in per] == ["a", "b"]
+    a = {r["source"]: r for r in per[0]["rows"]}
+    assert a["generated"]["cells"]["poetic"]["value"] == 2 and a["bhagavatam"]["cells"]["poetic"]["value"] == 5
+    assert [r["source"] for r in per[1]["rows"]] == ["generated"]
+    assert per[1]["rows"][0]["cells"]["poetic"]["value"] == 4 and per[1]["rows"][0]["n_annotations"] == 1
+    # min-max per annotator: a answered 2 and 5 -> 2 becomes 1, 5 stays 5; b answered once -> no range
+    assert per[0]["span"]["poetic"] == {"min": 2, "max": 5}
+    assert a["generated"]["cells"]["poetic"]["norm"] == 1 and a["bhagavatam"]["cells"]["poetic"]["norm"] == 5
+    assert per[1]["rows"][0]["cells"]["poetic"]["norm"] is None
+    assert "chandassu" not in per[0]["span"] and "norm" not in a["generated"]["cells"]["chandassu"]  # yes/no untouched
+    assert "norm" not in report.by_source(rows, store)[0]["cells"]["poetic"]  # pooled table unchanged
+    rep = report.agreement_report(rows, store, k=None, calibration=[])
+    assert rep["by_source_by_annotator"] == per
+
+
+def test_min_max_scaling_makes_annotators_comparable(store):
+    """b ranks the poems exactly as a does but only uses 2-4 where a uses 1-5. The original tables
+    differ; after min-max scaling onto 1-5 they are identical (2 -> 1, 3 -> 3, 4 -> 5)."""
+    rows = []
+    for e, v in zip(store.ids[:15], [1, 3, 5] * 5):
+        rows += [ann("a", e, v, 1), ann("b", e, (v + 3) // 2, 1)]
+    per = report.by_source_by_annotator(rows, store)
+    assert per[1]["span"]["poetic"] == {"min": 2, "max": 4}
+    ta, tb = ({r["source"]: r["cells"] for r in p["rows"]} for p in per)
+    assert any(ta[s]["poetic"]["value"] != tb[s]["poetic"]["value"] for s in ta)
+    for s in ta:
+        for q in QUESTIONS:
+            if q.kind == "likert":
+                assert ta[s][q.key]["norm"] == ta[s][q.key]["value"] == tb[s][q.key]["norm"], (s, q.key)
+
+
 def test_markdown_report(store):
     rows = [ann(u, e, 3, 1) for e in store.ids[:3] for u in ("a", "b")]
     md = report.to_markdown(report.agreement_report(rows, store, k=2, calibration=store.ids[:1]))

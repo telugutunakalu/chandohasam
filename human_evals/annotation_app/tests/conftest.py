@@ -32,6 +32,7 @@ def make_app(tmp_path, **overrides):
         "CALIBRATION_SIZE": 5,
         "ADMIN_PASSWORD": "pw",
         "ACCESS_CODE": None,
+        "USERS": None,
     }
     config.update(overrides)
     return create_app(config)

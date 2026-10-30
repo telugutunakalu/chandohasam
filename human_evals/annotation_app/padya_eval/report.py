@@ -29,13 +29,14 @@ MIN_PAIR_OVERLAP = 5
 # -----------------------------------------------------------------------------
 # reshaping
 # -----------------------------------------------------------------------------
-def ratings_by_question(annotations: Iterable[dict], subset: Optional[set] = None) -> dict:
+def ratings_by_question(annotations: Iterable[dict], subset: Optional[set] = None,
+                        questions: Sequence[Question] = QUESTIONS) -> dict:
     """{question key: {eval_id: {username: value}}}, None answers (not applicable) left out."""
-    out: dict = {q.key: defaultdict(dict) for q in QUESTIONS}
+    out: dict = {q.key: defaultdict(dict) for q in questions}
     for a in annotations:
         if subset is not None and a["eval_id"] not in subset:
             continue
-        for q in QUESTIONS:
+        for q in questions:
             v = a["answers"].get(q.key)
             if v is not None:
                 out[q.key][a["eval_id"]][a["username"]] = v
@@ -85,7 +86,8 @@ def question_stats(q: Question, ratings: dict, n_boot: int = 0, seed: int = 0,
     return out
 
 
-def annotator_stats(annotations: list[dict], skips: dict, calibration: Sequence[str]) -> list[dict]:
+def annotator_stats(annotations: list[dict], skips: dict, calibration: Sequence[str],
+                    questions: Sequence[Question] = QUESTIONS) -> list[dict]:
     """Per-annotator workload and two agreement diagnostics.
 
     * loo_alpha_delta: mean over questions of (alpha without this annotator) - (alpha with
@@ -93,18 +95,18 @@ def annotator_stats(annotations: list[dict], skips: dict, calibration: Sequence[
     * mean_kappa: their mean pairwise Cohen's kappa with the other annotators, averaged over questions.
     """
     users = sorted({a["username"] for a in annotations})
-    by_q = ratings_by_question(annotations)
-    base = {q.key: ag.krippendorff_alpha(_units(by_q[q.key]), q.level) for q in QUESTIONS}
+    by_q = ratings_by_question(annotations, questions=questions)
+    base = {q.key: ag.krippendorff_alpha(_units(by_q[q.key]), q.level) for q in questions}
     pair_tables = {q.key: ag.pairwise_cohen(by_q[q.key], weights="quadratic" if q.kind == "likert" else None,
                                             categories=q.choices, min_overlap=MIN_PAIR_OVERLAP)
-                   for q in QUESTIONS}
+                   for q in questions}
     cal = set(calibration)
     rows = []
     for u in users:
         mine = [a for a in annotations if a["username"] == u]
         durations = [a["duration_s"] for a in mine if a.get("duration_s")]
         deltas, kappas = [], []
-        for q in QUESTIONS:
+        for q in questions:
             without = {e: [v for r, v in per.items() if r != u] for e, per in by_q[q.key].items()}
             a_wo = ag.krippendorff_alpha(without, q.level)
             if a_wo is not None and base[q.key] is not None:
@@ -123,8 +125,13 @@ def annotator_stats(annotations: list[dict], skips: dict, calibration: Sequence[
     return rows
 
 
-def by_source(annotations: list[dict], store) -> list[dict]:
-    """Mean rating (Likert) or share of 'yes' (binary) per source: for the admin only."""
+def by_source(annotations: list[dict], store, span: Optional[dict] = None,
+              questions: Sequence[Question] = QUESTIONS) -> list[dict]:
+    """Mean rating (Likert) or share of 'yes' (binary) per source: for the admin only.
+
+    With span ({question key: {"min", "max"}}), the cells of those questions also get "norm": the
+    source mean min-max scaled from [min, max] onto the question's full range (1-5); None when min == max.
+    """
     groups: dict = defaultdict(lambda: defaultdict(list))
     n_by_source: Counter = Counter()
     for a in annotations:
@@ -133,47 +140,83 @@ def by_source(annotations: list[dict], store) -> list[dict]:
             continue
         src = poem.hidden["source_dataset"]
         n_by_source[src] += 1
-        for q in QUESTIONS:
+        for q in questions:
             v = a["answers"].get(q.key)
             if v is not None:
                 groups[src][q.key].append(v)
     rows = []
     for src in sorted(groups):
         cells = {}
-        for q in QUESTIONS:
+        for q in questions:
             vs = groups[src][q.key]
             cells[q.key] = {"value": _r(statistics.fmean(vs), 2) if vs else None, "n": len(vs)}
+            if span is not None and q.key in span:
+                lo, hi = span[q.key]["min"], span[q.key]["max"]
+                bottom, top = q.choices[0], q.choices[-1]
+                cells[q.key]["norm"] = (_r(bottom + (top - bottom) * (statistics.fmean(vs) - lo) / (hi - lo), 2)
+                                        if vs and hi is not None and hi > lo else None)
         rows.append({"source": src, "n_annotations": n_by_source[src], "cells": cells})
     return rows
 
 
+def by_source_by_annotator(annotations: list[dict], store, questions: Sequence[Question] = QUESTIONS) -> list[dict]:
+    """by_source() for each annotator, with the 1-5 questions also min-max scaled: for the admin only.
+
+    Per annotator and per 1-5 question, ratings are stretched from that annotator's own lowest and
+    highest answer (over every poem they rated) onto the full 1-5 range, 1 + 4 * (x - min) / (max - min),
+    so that the scores are comparable across annotators (answers 2-4: 2 -> 1, 3 -> 3, 4 -> 5). The map
+    is linear, so a source's scaled mean is the map of its mean. None when min == max. Yes/no
+    questions are left as they are.
+    """
+    mine: dict = defaultdict(list)
+    for a in annotations:
+        if store.get(a["eval_id"]) is not None:
+            mine[a["username"]].append(a)
+    out = []
+    for u in sorted(mine):
+        span = {}
+        for q in questions:
+            if q.kind == "likert":
+                vs = [a["answers"][q.key] for a in mine[u] if a["answers"].get(q.key) is not None]
+                span[q.key] = {"min": min(vs, default=None), "max": max(vs, default=None)}
+        out.append({"username": u, "rows": by_source(mine[u], store, span=span, questions=questions), "span": span})
+    return out
+
+
 def agreement_report(annotations: list[dict], store, *, k: Optional[int], calibration: Sequence[str],
-                     skips: Optional[dict] = None, n_boot: int = 0, seed: int = 0) -> dict:
-    by_q = ratings_by_question(annotations)
+                     skips: Optional[dict] = None, n_boot: int = 0, seed: int = 0,
+                     questions: Sequence[Question] = QUESTIONS, rubric_version: str = RUBRIC_VERSION) -> dict:
+    by_q = ratings_by_question(annotations, questions=questions)
     cal = set(calibration)
-    by_q_cal = ratings_by_question(annotations, subset=cal) if cal else None
+    by_q_cal = ratings_by_question(annotations, subset=cal, questions=questions) if cal else None
     return {
         "study": {"dataset": store.meta.get("dataset"), "pool": store.meta.get("pool"), "poems": len(store),
                   "ratings_per_poem": "all" if k is None else k, "calibration_size": len(cal),
-                  "rubric_version": RUBRIC_VERSION,
+                  "rubric_version": rubric_version,
                   "annotators": len({a["username"] for a in annotations}), "annotations": len(annotations),
                   "bootstrap": n_boot},
-        "questions": [question_stats(q, by_q[q.key], n_boot=n_boot, seed=seed) for q in QUESTIONS],
-        "calibration": [question_stats(q, by_q_cal[q.key], n_boot=n_boot, seed=seed) for q in QUESTIONS] if cal else [],
-        "annotators": annotator_stats(annotations, skips or {}, calibration),
-        "by_source": by_source(annotations, store),
+        "questions": [question_stats(q, by_q[q.key], n_boot=n_boot, seed=seed) for q in questions],
+        "calibration": [question_stats(q, by_q_cal[q.key], n_boot=n_boot, seed=seed) for q in questions] if cal else [],
+        "annotators": annotator_stats(annotations, skips or {}, calibration, questions),
+        "by_source": by_source(annotations, store, questions=questions),
+        "by_source_by_annotator": by_source_by_annotator(annotations, store, questions),
     }
 
 
 # -----------------------------------------------------------------------------
 # exports
 # -----------------------------------------------------------------------------
-EXPORT_FIELDS = (["annotator", "eval_id", "meter", "source_dataset", "source_id", "author", "calibration"]
-                 + [q.key for q in QUESTIONS]
-                 + ["comments", "duration_s", "revisions", "rubric_version", "created_at", "updated_at"])
+def export_fields(questions: Sequence[Question] = QUESTIONS) -> list[str]:
+    return (["annotator", "eval_id", "meter", "source_dataset", "source_id", "author", "calibration"]
+            + [q.key for q in questions]
+            + ["comments", "duration_s", "revisions", "rubric_version", "created_at", "updated_at"])
 
 
-def export_rows(annotations: Iterable[dict], store, calibration: Sequence[str]) -> list[dict]:
+EXPORT_FIELDS = export_fields()
+
+
+def export_rows(annotations: Iterable[dict], store, calibration: Sequence[str],
+                questions: Sequence[Question] = QUESTIONS) -> list[dict]:
     cal = set(calibration)
     rows = []
     for a in annotations:
@@ -182,7 +225,7 @@ def export_rows(annotations: Iterable[dict], store, calibration: Sequence[str]) 
         row = {"annotator": a["username"], "eval_id": a["eval_id"], "meter": poem.meter if poem else "",
                "source_dataset": hidden.get("source_dataset", ""), "source_id": hidden.get("source_id", ""),
                "author": hidden.get("author", ""), "calibration": int(a["eval_id"] in cal)}
-        for q in QUESTIONS:
+        for q in questions:
             v = a["answers"].get(q.key)
             row[q.key] = "" if v is None else v
         row.update({"comments": a.get("comments", ""), "duration_s": a.get("duration_s") or "",
@@ -192,9 +235,9 @@ def export_rows(annotations: Iterable[dict], store, calibration: Sequence[str]) 
     return rows
 
 
-def to_csv(rows: list[dict]) -> str:
+def to_csv(rows: list[dict], questions: Sequence[Question] = QUESTIONS) -> str:
     buf = io.StringIO()
-    w = csv.DictWriter(buf, fieldnames=EXPORT_FIELDS, extrasaction="ignore")
+    w = csv.DictWriter(buf, fieldnames=export_fields(questions), extrasaction="ignore")
     w.writeheader()
     w.writerows(rows)
     return buf.getvalue()

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-The human-evaluation rubric: ten questions, in the order the form shows them.
+The human-evaluation rubric: twelve questions, in the order the form shows them (v2, 2026-10-26: questions 11 and
+12 added — grānthika or ādhunika, and AI-generated or not; questions 1–10 unchanged, so v1 answers stay comparable).
 
 Edit the wording here; keep the ``key`` of a question stable once annotation has
 started, because the stored answers and the agreement report are keyed by it.
@@ -11,7 +12,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-RUBRIC_VERSION = "1"
+RUBRIC_VERSION = "2"
 
 LIKERT = (1, 2, 3, 4, 5)
 BINARY = (0, 1)
@@ -24,6 +25,7 @@ class Question:
     text: str
     text_te: str
     kind: str                         # 'likert' (1-5, ordinal) | 'binary' (0/1, nominal)
+    labels: dict = field(default_factory=dict)   # binary: {0: ..., 1: ...} in place of No / Yes
     low: str = ""                     # anchor of the lowest value
     high: str = ""                    # anchor of the highest value
     applies: str = "always"           # 'always' | 'bhavam' (needs a bhavam) | 'prasa' (meter has prāsa)
@@ -42,7 +44,7 @@ class Question:
 
     def label(self, value: int) -> str:
         if self.kind == "binary":
-            return "అవును · Yes" if value == 1 else "కాదు · No"
+            return self.labels.get(value) or ("అవును · Yes" if value == 1 else "కాదు · No")
         return self.anchors.get(value, "")
 
 
@@ -82,9 +84,27 @@ QUESTIONS: tuple[Question, ...] = (
     Question("poetic", 10, "How poetic is it?", "పద్యం ఎంత కవితాత్మకంగా ఉంది?", "likert",
              low="Prose in metre", high="Highly poetic", anchors=_scale("Prose in metre", "Highly poetic"),
              guide="Overall poetic quality: imagery, diction, rasa and craft, beyond metrical correctness."),
+    Question("register", 11, "Is this grānthika (archaic) or ādhunika (modern) Telugu?",
+             "ఇది గ్రాంథికమా, ఆధునికమా?", "binary",
+             labels={0: "ఆధునికం · Modern", 1: "గ్రాంథికం · Archaic"},
+             guide="The language of the poem as a whole: grānthika (classical literary Telugu) or ādhunika "
+                   "(modern Telugu). Choose the one it is closer to."),
+    Question("ai_generated", 12, "Do you think this poem is AI-generated?",
+             "ఈ పద్యాన్ని కృత్రిమ మేధ (AI) రాసిందని మీరు భావిస్తున్నారా?", "binary",
+             guide="Your impression only, after reading the poem and answering the other questions."),
 )
 
-BY_KEY = {q.key: q for q in QUESTIONS}
+# Study 2 (create_site, /study2) adds a coherence question. It is shown after Q3, so that it is answered before the
+# bhavam is opened, and keeps the number 13, so that Q1–Q12 mean the same in both studies. Study 1 is unchanged.
+COHERENCE = Question("coherence", 13, "How meaningful (coherent) is the poem?", "పద్యం ఎంత అర్థవంతంగా ఉంది?", "likert",
+                     low="Meaningless", high="Fully meaningful", anchors=_scale("Meaningless", "Fully meaningful"),
+                     guide="Does the poem make sense as a whole: do its lines come together into one meaning? Judge "
+                           "the sense itself, not how easy the words are (2, 3) or how close it is to the bhavam (4). "
+                           "Answer it before opening the bhavam, like 1–3.")
+STUDY2_QUESTIONS: tuple[Question, ...] = QUESTIONS[:3] + (COHERENCE,) + QUESTIONS[3:]
+STUDY2_RUBRIC_VERSION = "3"            # 2026-10-30: v2 + coherence
+
+BY_KEY = {q.key: q for q in STUDY2_QUESTIONS}
 COMMENTS_MAX = 5000
 
 
@@ -97,13 +117,13 @@ def applicable(question: Question, poem) -> bool:
     return True
 
 
-def parse_answers(form, poem) -> tuple[dict, dict]:
+def parse_answers(form, poem, questions: tuple[Question, ...] = QUESTIONS) -> tuple[dict, dict]:
     """Validate a submitted form. Returns (answers, errors), both keyed by question key.
 
     A question that does not apply to the poem is stored as None whatever was sent.
     """
     answers, errors = {}, {}
-    for q in QUESTIONS:
+    for q in questions:
         if not applicable(q, poem):
             answers[q.key] = None
             continue

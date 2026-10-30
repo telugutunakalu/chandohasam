@@ -12,6 +12,7 @@ from .rubric import COMMENTS_MAX, QUESTIONS, RUBRIC_VERSION, applicable, parse_a
 from .security import (USERNAME_RE, check_csrf, csrf_token, current_annotator, get_db, login_required,
                        normalise_username, safe_next, same_secret)
 from .store import GURU_RULE_TE, VIKALPA_NOTES
+from .users import check_password
 
 bp = Blueprint("main", __name__)
 
@@ -64,12 +65,17 @@ def _csrf_guard():
 # -----------------------------------------------------------------------------
 @bp.route("/")
 def index():
+    studies = current_app.config.get("HOME_STUDIES")
+    if studies:                         # two studies (create_site): the annotator chooses one
+        here = url_for("main.next_poem") if current_annotator() else url_for("main.login")
+        return render_template("home.html", studies=[{**s, "url": s["url"] or here} for s in studies])
     return redirect(url_for("main.next_poem") if current_annotator() else url_for("main.login"))
 
 
 @bp.route("/login", methods=["GET", "POST"])
 def login():
-    need_code = bool(current_app.config.get("ACCESS_CODE"))
+    users = current_app.config.get("USERS")
+    need_code = users is None and bool(current_app.config.get("ACCESS_CODE"))
     error = None
     username = ""
     if request.method == "POST":
@@ -77,6 +83,8 @@ def login():
         code = request.form.get("access_code", "")
         if not USERNAME_RE.match(username):
             error = "Use 2–40 letters, digits, dots, dashes or underscores (no spaces)."
+        elif users is not None and not check_password(users, username, request.form.get("password", "")):
+            error = "The username or password is not right."
         elif need_code and not same_secret(code, current_app.config["ACCESS_CODE"]):
             error = "The access code is not right."
         else:
@@ -85,7 +93,7 @@ def login():
             session.permanent = True
             session["annotator_id"] = row["id"]
             return redirect(safe_next(request.args.get("next"), url_for("main.next_poem")))
-    return render_template("login.html", need_code=need_code, error=error, username=username), (400 if error else 200)
+    return render_template("login.html", need_code=need_code, need_password=users is not None, error=error, username=username), (400 if error else 200)
 
 
 @bp.route("/logout", methods=["POST"])
@@ -102,7 +110,8 @@ def logout():
 def next_poem():
     cfg = current_app.config
     eval_id = assignment.next_poem(get_db(), store(), current_annotator(), k=cfg["RATINGS_PER_POEM"],
-                                   claim_ttl_s=cfg["CLAIM_TTL_MINUTES"] * 60, calibration=calibration())
+                                   claim_ttl_s=cfg["CLAIM_TTL_MINUTES"] * 60, calibration=calibration(),
+                                   questions=study_questions())
     if eval_id is None:
         return redirect(url_for("main.done"))
     return redirect(url_for("main.poem", eval_id=eval_id))
@@ -133,8 +142,34 @@ def mine():
 # -----------------------------------------------------------------------------
 # one poem
 # -----------------------------------------------------------------------------
+def study_questions() -> tuple:
+    """This study's rubric: rubric.QUESTIONS, or the study's own list (study 2 adds Q13 coherence)."""
+    return current_app.config.get("QUESTIONS") or QUESTIONS
+
+
 def _questions_for(poem):
-    return [{"q": q, "applies": applicable(q, poem)} for q in QUESTIONS]
+    return [{"q": q, "applies": applicable(q, poem)} for q in study_questions()]
+
+
+def _number_runs(numbers: list[int]) -> str:
+    """[1, 2, 3, 13] → '1–3, 13'."""
+    runs: list[list[int]] = []
+    for n in numbers:
+        if runs and n == runs[-1][-1] + 1:
+            runs[-1].append(n)
+        else:
+            runs.append([n])
+    return ", ".join(f"{r[0]}–{r[-1]}" if len(r) > 2 else ", ".join(map(str, r)) for r in runs)
+
+
+def _before_bhavam(questions) -> str:
+    """The numbers of the questions shown before the bhavam question, for the 'answer … first' hint."""
+    numbers = []
+    for q in questions:
+        if q.applies == "bhavam":
+            break
+        numbers.append(q.number)
+    return _number_runs(numbers)
 
 
 @bp.route("/poem/<eval_id>", methods=["GET", "POST"])
@@ -146,13 +181,15 @@ def poem(eval_id: str):
     conn = get_db()
     ann = current_annotator()
     existing = db.get_annotation(conn, ann["id"], eval_id)
-    errors, values, comments = {}, {}, ""
+    qs = study_questions()
+    errors, values, comments, missing = {}, {}, "", []
     if existing:
         values = {k: v for k, v in existing["answers"].items() if v is not None}
         comments = existing["comments"]
+        missing = [q.number for q in qs if applicable(q, p) and existing["answers"].get(q.key) is None]
 
     if request.method == "POST":
-        answers, errors = parse_answers(request.form, p)
+        answers, errors = parse_answers(request.form, p, qs)
         comments = (request.form.get("comments") or "").strip()[:COMMENTS_MAX]
         if not errors:
             try:
@@ -161,7 +198,8 @@ def poem(eval_id: str):
                 duration = duration if 0 <= duration <= MAX_DURATION_S else None
             except ValueError:
                 duration = None
-            db.save_annotation(conn, ann["id"], eval_id, answers, comments, duration, RUBRIC_VERSION)
+            db.save_annotation(conn, ann["id"], eval_id, answers, comments, duration,
+                               current_app.config.get("RUBRIC_VERSION") or RUBRIC_VERSION)
             flash(f"Saved {eval_id}.", "ok")
             return redirect(safe_next(request.form.get("next"), url_for("main.next_poem")))
         values = {k: v for k, v in answers.items() if v is not None}
@@ -170,6 +208,7 @@ def poem(eval_id: str):
         "poem.html", poem=p, questions=_questions_for(p), values=values, comments=comments, errors=errors,
         existing=existing, started=time.time(), is_calibration=eval_id in set(calibration()),
         next_url=safe_next(request.values.get("next"), ""), meter_cards=store().meter_cards(p),
+        backfill=missing if current_app.config.get("BACKFILL_NOTE") else [], bhavam_first=_before_bhavam(qs),
     ), (422 if errors else 200)
 
 
@@ -196,7 +235,7 @@ def _reference_context(eval_id: str | None, meter: str | None):
         focus = [ref["meters"][meter]]
     else:
         focus = []
-    return {"ref": ref, "focus": focus, "questions": QUESTIONS}
+    return {"ref": ref, "focus": focus, "questions": study_questions()}
 
 
 @bp.route("/reference")

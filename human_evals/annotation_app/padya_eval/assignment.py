@@ -102,15 +102,16 @@ def ensure_calibration(conn, store, size: int, seed: int = 42) -> list[str]:
 
 
 def next_poem(conn, store, annotator, *, k: Optional[int], claim_ttl_s: float, calibration: Sequence[str],
-              now: Optional[float] = None) -> Optional[str]:
+              now: Optional[float] = None, questions=None) -> Optional[str]:
     """The next poem for ``annotator`` (a row with id and username), claimed for them; None when done.
 
-    ``k`` None means every annotator rates every poem.
+    ``k`` None means every annotator rates every poem. ``questions``: the study's rubric (default rubric.QUESTIONS).
     """
     now = time.time() if now is None else now
     conn.execute("BEGIN IMMEDIATE")          # serialise selection + claim across workers
     try:
-        choice = _select(conn, store, annotator, k=k, claim_ttl_s=claim_ttl_s, calibration=calibration, now=now)
+        choice = _select(conn, store, annotator, k=k, claim_ttl_s=claim_ttl_s, calibration=calibration, now=now,
+                         questions=questions)
         if choice is None:
             db.release_claim(conn, annotator["id"])
         else:
@@ -122,14 +123,41 @@ def next_poem(conn, store, annotator, *, k: Optional[int], claim_ttl_s: float, c
     return choice
 
 
-def _select(conn, store, annotator, *, k, claim_ttl_s, calibration, now) -> Optional[str]:
+def incomplete_ids(conn, store, annotator_id: int, questions=None) -> set[str]:
+    """Served poems the annotator rated before a question was added (rubric v2; study 2's coherence): an applicable
+    question unanswered. They are served again, with the earlier answers filled in, so only the new questions need
+    an answer. ``questions``: the study's rubric (default rubric.QUESTIONS)."""
+    from .rubric import QUESTIONS, applicable
+    served = set(store.ids)
+    out = set()
+    for a in db.annotations_of(conn, annotator_id):
+        p = store.get(a["eval_id"])
+        if p is not None and a["eval_id"] in served and any(
+                applicable(q, p) and a["answers"].get(q.key) is None for q in (questions or QUESTIONS)):
+            out.add(a["eval_id"])
+    return out
+
+
+def _select(conn, store, annotator, *, k, claim_ttl_s, calibration, now, questions=None) -> Optional[str]:
     aid, user = annotator["id"], annotator["username"]
-    excluded = db.rated_ids(conn, aid) | db.skipped_ids(conn, aid)
+    revisit = incomplete_ids(conn, store, aid, questions)
+    excluded = (db.rated_ids(conn, aid) - revisit) | db.skipped_ids(conn, aid)
     key = lambda e: order_key(user, e)                       # noqa: E731
 
     pending_cal = [e for e in calibration if e not in excluded and e in store]
-    if pending_cal:
+    if pending_cal:                          # the calibration set first (new, or reopened for new questions)
         return min(pending_cal, key=key)
+    phase = set(store.phase_ids)
+    reopen = [e for e in revisit if e not in excluded]
+    reopen_phase = [e for e in reopen if e in phase]
+    if reopen_phase:                         # then first-phase poems rated before the new questions: quick
+        return min(reopen_phase, key=key)
+    if k is None:                            # then the rest of the first phase: the same poems for everyone
+        first = [e for e in store.phase_ids if e not in excluded]
+        if first:
+            return min(first, key=key)
+    if reopen:                               # then other poems rated before the new questions
+        return min(reopen, key=key)
     if k is None:                            # everyone rates everything: just their own order
         rest = [e for e in store.ids if e not in excluded]
         return min(rest, key=key) if rest else None
@@ -162,10 +190,12 @@ def target_per_poem(conn, k: Optional[int]) -> int:
 
 
 def study_progress(conn, store, k: Optional[int]) -> dict:
+    """Progress over the first phase (store.phase_ids; the whole pool when no phase is set)."""
     k = target_per_poem(conn, k)
     counts = db.rating_counts(conn)
-    complete = sum(1 for e in store.ids if counts.get(e, 0) >= k)
-    needed = sum(max(0, k - counts.get(e, 0)) for e in store.ids)
-    histogram = Counter(min(counts.get(e, 0), k) for e in store.ids)
-    return {"poems": len(store), "complete": complete, "ratings_needed": needed, "target": k,
+    ids = store.phase_ids
+    complete = sum(1 for e in ids if counts.get(e, 0) >= k)
+    needed = sum(max(0, k - counts.get(e, 0)) for e in ids)
+    histogram = Counter(min(counts.get(e, 0), k) for e in ids)
+    return {"poems": len(ids), "complete": complete, "ratings_needed": needed, "target": k,
             "ratings": sum(counts.values()), "histogram": {n: histogram.get(n, 0) for n in range(k + 1)}}

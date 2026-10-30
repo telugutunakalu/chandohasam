@@ -57,6 +57,22 @@ CREATE TABLE IF NOT EXISTS calibration (
     position INTEGER PRIMARY KEY,
     eval_id  TEXT NOT NULL UNIQUE
 );
+-- every earlier version of an annotation, kept when it is updated (e.g. when a rubric-v1 rating is reopened to
+-- answer the questions added in v2): the answers, comments and time exactly as first recorded
+CREATE TABLE IF NOT EXISTS annotation_history (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    annotation_id  INTEGER NOT NULL,
+    annotator_id   INTEGER NOT NULL,
+    eval_id        TEXT NOT NULL,
+    answers        TEXT NOT NULL,
+    comments       TEXT NOT NULL,
+    duration_s     REAL,
+    rubric_version TEXT NOT NULL,
+    created_at     TEXT NOT NULL,
+    updated_at     TEXT NOT NULL,
+    revisions      INTEGER NOT NULL,
+    archived_at    TEXT NOT NULL
+);
 """
 
 
@@ -134,8 +150,15 @@ def _annotation(row: sqlite3.Row) -> dict:
 
 def save_annotation(conn, annotator_id: int, eval_id: str, answers: dict, comments: str,
                     duration_s: Optional[float], rubric_version: str) -> None:
-    """Insert, or update an existing annotation (adding to its time and revision count)."""
+    """Insert, or update an existing annotation (adding to its time and revision count); an update first copies
+    the current version into annotation_history, so no recorded answer is lost."""
     ts = now_iso()
+    conn.execute(
+        """INSERT INTO annotation_history(annotation_id, annotator_id, eval_id, answers, comments, duration_s,
+                                          rubric_version, created_at, updated_at, revisions, archived_at)
+           SELECT id, annotator_id, eval_id, answers, comments, duration_s, rubric_version, created_at, updated_at,
+                  revisions, ? FROM annotations WHERE annotator_id = ? AND eval_id = ?""",
+        (ts, annotator_id, eval_id))
     conn.execute(
         """INSERT INTO annotations(annotator_id, eval_id, answers, comments, duration_s, rubric_version,
                                    created_at, updated_at)

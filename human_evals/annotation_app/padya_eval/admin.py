@@ -8,7 +8,7 @@ from flask import Blueprint, Response, current_app, redirect, render_template, r
 
 from . import assignment, db
 from .report import agreement_report, export_rows, to_csv, to_markdown
-from .rubric import QUESTIONS
+from .rubric import QUESTIONS, RUBRIC_VERSION
 from .security import admin_required, get_db, safe_next, same_secret
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
@@ -23,11 +23,16 @@ def _skips_by_user(conn) -> dict:
     return {names[i]: n for i, n in db.skip_counts(conn).items() if i in names}
 
 
+def _questions() -> tuple:
+    return current_app.config.get("QUESTIONS") or QUESTIONS
+
+
 def _report(n_boot: int = 0) -> dict:
     conn = get_db()
     return agreement_report(db.all_annotations(conn), _store(), k=current_app.config["RATINGS_PER_POEM"],
                             calibration=current_app.config["CALIBRATION_IDS"], skips=_skips_by_user(conn),
-                            n_boot=n_boot)
+                            n_boot=n_boot, questions=_questions(),
+                            rubric_version=current_app.config.get("RUBRIC_VERSION") or RUBRIC_VERSION)
 
 
 def _n_boot() -> int:
@@ -65,7 +70,7 @@ def dashboard():
     report = _report(n_boot)
     progress = assignment.study_progress(conn, _store(), current_app.config["RATINGS_PER_POEM"])
     annotators = {r["username"]: r for r in db.list_annotators(conn)}
-    return render_template("admin.html", report=report, progress=progress, questions=QUESTIONS,
+    return render_template("admin.html", report=report, progress=progress, questions=_questions(),
                            annotators=annotators, n_boot=n_boot, meta=_store().meta,
                            calibration=current_app.config["CALIBRATION_IDS"])
 
@@ -87,15 +92,15 @@ def agreement_md():
 @bp.route("/annotations.csv")
 @admin_required
 def annotations_csv():
-    rows = export_rows(db.all_annotations(get_db()), _store(), current_app.config["CALIBRATION_IDS"])
+    rows = export_rows(db.all_annotations(get_db()), _store(), current_app.config["CALIBRATION_IDS"], _questions())
     # BOM so spreadsheet programs read the Telugu text as UTF-8
-    return Response("﻿" + to_csv(rows), mimetype="text/csv; charset=utf-8",
+    return Response("﻿" + to_csv(rows, _questions()), mimetype="text/csv; charset=utf-8",
                     headers={"Content-Disposition": "attachment; filename=annotations.csv"})
 
 
 @bp.route("/annotations.json")
 @admin_required
 def annotations_json():
-    rows = export_rows(db.all_annotations(get_db()), _store(), current_app.config["CALIBRATION_IDS"])
+    rows = export_rows(db.all_annotations(get_db()), _store(), current_app.config["CALIBRATION_IDS"], _questions())
     return Response(json.dumps(rows, ensure_ascii=False, indent=1), mimetype="application/json",
                     headers={"Content-Disposition": "attachment; filename=annotations.json"})
