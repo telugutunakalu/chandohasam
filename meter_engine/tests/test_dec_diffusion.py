@@ -187,5 +187,26 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
+class TestCanvasPassEntropy(unittest.TestCase):
+    """CanvasPass entropies stay finite when end tokens are removed (forbid_end: −inf logits); 2026-10-21."""
+
+    def test_finite_with_forbidden_tokens(self):
+        import math
+        from metrical_decoder.diffusion.canvas import CanvasPass
+        g = torch.Generator().manual_seed(0)
+        logits = torch.randn(6, 50, generator=g)
+        scaled = logits / 0.8
+        banned = (0, 3, 7)
+        scaled[:, list(banned)] = float("-inf")
+        fake = types.SimpleNamespace(torch=torch, generator=torch.Generator().manual_seed(1), slice=torch.arange(10),
+                                     top_k=3)
+        p = CanvasPass(fake, logits, scaled, first=0)
+        keep = [i for i in range(50) if i not in banned]
+        ref = torch.distributions.Categorical(logits=scaled[:, keep]).entropy()
+        for pos in range(6):
+            self.assertTrue(math.isfinite(p.entropy(pos)))
+            self.assertAlmostEqual(p.entropy(pos), float(ref[pos]), places=4)
+
+
 if __name__ == "__main__":
     unittest.main()

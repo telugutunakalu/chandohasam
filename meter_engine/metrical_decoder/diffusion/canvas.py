@@ -253,7 +253,10 @@ class CanvasPass:
         open_scaled = scaled[first:]
         log_probs = torch.log_softmax(open_scaled, dim=-1)
         probs = log_probs.exp()
-        self._entropy = (-(probs * log_probs).sum(-1)).tolist()
+        # entr(p) = −p log p with entr(0) = 0. With ``forbid_end`` the end tokens' scaled logits are −inf and
+        # −Σ p log p was NaN (0 · −inf) at every position: every entropy comparison failed, so the canvas kept
+        # no prediction and the entropy bound never stopped a run of proposals (fixed 2026-10-21).
+        self._entropy = torch.special.entr(probs).sum(-1).tolist()
         self._proposals = torch.multinomial(probs, 1, generator=canvas.generator).squeeze(-1)
         self._log_probs = log_probs                       # scaled, open positions
         self._proposal_list = self._proposals.tolist()
