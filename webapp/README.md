@@ -2,36 +2,25 @@
 
 A minimalist Flask web app for analyzing Telugu poems. Paste a poem, get its full metrical analysis: identified metre, గణవిభజన (foot division), ప్రాస (rhyme) and యతి (caesura) verdicts, rendered with beautiful typography.
 
-## Install
+## Run
+
+```bash
+cd webapp && ./run.sh                  # first run creates .venv and installs requirements.txt (flask, pyyaml)
+```
+
+or by hand:
 
 ```bash
 cd webapp
-python3 -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python app.py                       # http://127.0.0.1:5000/
+PORT=12345 .venv/bin/python app.py            # another port
 ```
 
-## Run
-
-From the `webapp` directory:
-
-```bash
-PYTHONPATH=.. source .venv/bin/activate && python app.py
-```
-
-Or, more simply, from the parent `anlp_project` directory:
-
-```bash
-cd webapp && PYTHONPATH=.. source .venv/bin/activate && python app.py
-```
-
-Then open **http://127.0.0.1:5000/** in your browser. To use another port, set `PORT`:
-
-```bash
-cd webapp && PORT=12345 PYTHONPATH=.. .venv/bin/python app.py      # http://127.0.0.1:12345/
-```
-
-The `PYTHONPATH=..` tells Python to find the `meter_engine` package in the parent directory. The metre catalogue and DAWG are built once on first request and cached for the life of the process — keep the same `python app.py` process running rather than restarting per request for optimal speed.
+`app.py` puts the repository root on `sys.path` itself, so `meter_engine` is found from any working directory. The
+server listens on 127.0.0.1 only, in Flask's debug mode; it is a local tool and is not hosted (the hosted app is
+`human_evals/annotation_app`). The metre catalogue and DAWG are built on the first request and kept for the life of
+the process.
 
 ## Features
 
@@ -73,7 +62,7 @@ against `walker.walk_options`, the verdict against `analyze`, and the v2 words a
 tokenizer:
 
 ```bash
-cd webapp && PYTHONPATH=.. .venv/bin/python -m unittest test_dawg_demo -v
+cd webapp && ../.venv/bin/python -m unittest test_dawg_demo -v     # 7 tests, ≈ 10 s; needs no Flask
 ```
 
 three.js 0.160.0 is loaded from the jsDelivr CDN, so the demo page needs network access (as the fonts do).
@@ -95,6 +84,6 @@ Paste the opening of Pōtana's Bhāgavatam (4 pādas, kandamu metre) to see all 
 - **Frontend**: plain HTML + CSS for the analyzer (no JS); the DAWG demo is `templates/dawg_demo.html` + `static/js/dawg_demo.js` (three.js, ES modules)
 - **DAWG demo data**: `dawg_demo.py` (graph layout, akshara-by-akshara trace, v2 layers), served at `/api/dawg/graph` and `/api/dawg/trace`
 - **Fonts**: Google Fonts Noto Sans Telugu + Inter
-- **Dependencies**: `flask`, `pyyaml`, `pytz` (via `meter_engine`)
+- **Dependencies**: `flask`, `pyyaml`
 
 See `app.py` for the routes and `templates/index.html` for the result rendering logic.

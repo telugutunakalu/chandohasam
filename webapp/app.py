@@ -4,7 +4,7 @@ import os
 import sys
 from pathlib import Path
 
-# Add the parent directory (anlp_project) to sys.path so chandohasam can be imported
+# Add the repository root to sys.path so meter_engine can be imported
 # This works whether the app is run from a venv or directly from the system Python
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:

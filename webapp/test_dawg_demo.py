@@ -2,16 +2,22 @@
 """The DAWG demo must show what the engine does: same accept sets, same
 pādānta, same verdict as ``chandohasam.analyze``.
 
-    cd webapp && .venv/bin/python -m unittest test_dawg_demo -v
+    cd webapp && ../.venv/bin/python -m unittest test_dawg_demo -v
 """
 from __future__ import annotations
 
+import sys
 import unittest
+from pathlib import Path
 
-import dawg_demo as dd
-from indic_meter_dawg import default_dawg
-from indic_meter_dawg.walker import walk_options
-from meter_engine.chandohasam import analyze
+ROOT = Path(__file__).resolve().parent.parent          # the repository root, for meter_engine (as in app.py)
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+import dawg_demo as dd                                                      # noqa: E402
+from indic_meter_dawg import default_dawg                                   # noqa: E402
+from indic_meter_dawg.walker import walk_options                            # noqa: E402
+from meter_engine.chandohasam import analyze                                # noqa: E402
 
 BROKEN = "పలికెడిది భాగవత మఁట,\nపలికించెడివాడు రామభద్రుం డఁట, నేఁ\nబలికిన భవహర మగునఁట,\nపలికెద వేఱొండు గాథ"
 
