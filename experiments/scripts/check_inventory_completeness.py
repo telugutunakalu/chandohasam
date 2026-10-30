@@ -9,7 +9,9 @@ break between lines), skipped if the orthography filter rejects them, and fed th
 the tokenizer inventory. Every poem that gets through without an inventory must get through with
 the verse inventory (it holds every syllable of that verse); a loss would be a flaw in the
 inventory's liveness test. The tokenizer inventory lacks 12 verse syllables, so a few losses there
-are expected and are listed.
+are expected and are listed. The padyarchana inventory (2026-10-22: Padyarchana's train split, syllables
+of ≥ 3 poems) lacks some held-out syllables: each of its losses must be explained by one (`missing`);
+an unexplained loss would be a liveness flaw.
 
 usage: check_inventory_completeness.py OUT_JSON [--per-meter 40] [--workers 16]
 """
@@ -27,7 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "meter_engine"))
 
-INVENTORIES = (None, "verse", "tokenizer")
+INVENTORIES = (None, "verse", "tokenizer", "padyarchana")
 
 
 def candidates(per_meter: int, seed: int = 0) -> list[tuple[str, str, str]]:
@@ -85,6 +87,10 @@ def check(task: tuple) -> tuple[str, str, dict]:
                 ok = False
                 break
         verdict[str(inv)] = ok
+    from metrical_decoder.analysis import _telugu_words
+    from metrical_decoder.inventory import load_inventory, units
+    pad = load_inventory("padyarchana")
+    verdict["padyarchana_missing"] = sorted({u for w in _telugu_words(text) for u in units(w) if u not in pad})
     return pid, meter, verdict
 
 
@@ -106,18 +112,25 @@ def main() -> None:
     losses = defaultdict(list)
     for pid, meter, v in results:
         for k, ok in v.items():
-            passed[k] += ok
-        for k in ("verse", "tokenizer"):
+            if isinstance(ok, bool):
+                passed[k] += ok
+        for k in ("verse", "tokenizer", "padyarchana"):
             if v["None"] and not v[k]:
                 losses[k].append((pid, meter))
     summary = {"poems": len(results), "passed": dict(passed),
                "lost_with_verse": losses["verse"], "lost_with_tokenizer": losses["tokenizer"],
+               "lost_with_padyarchana": losses["padyarchana"],
                "results": [{"id": p, "meter": m, **v} for p, m, v in sorted(results)]}
     Path(ns.out).write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"passed without inventory {passed['None']}, with verse {passed['verse']}, with tokenizer "
           f"{passed['tokenizer']} (of {len(results)})")
     print("lost with the verse inventory:", losses["verse"][:20])
     print("lost with the tokenizer inventory:", losses["tokenizer"][:20])
+    miss = {p: v["padyarchana_missing"] for p, _, v in results}
+    unexplained = [(p, m) for p, m in losses["padyarchana"] if not miss[p]]
+    print(f"with padyarchana {passed['padyarchana']}: lost {len(losses['padyarchana'])}, explained by a missing "
+          f"syllable {len(losses['padyarchana']) - len(unexplained)}, UNEXPLAINED {len(unexplained)} {unexplained[:20]}")
+    print("missing syllables:", sorted({u for p, _ in losses["padyarchana"] for u in miss[p]})[:40])
 
 
 if __name__ == "__main__":

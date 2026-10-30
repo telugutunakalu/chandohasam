@@ -118,7 +118,14 @@ class Attestation:
 def load_attestation(corpus: str = "all") -> Attestation:
     """Built once per process from the verse of ``dataset/*.json``: ``all`` of it
     (``analysis.corpus_lexicon``), or ``train90`` — the words of 90% of the poems only, for checking the
-    preference against words it has never seen (the split of :func:`verse_split`)."""
+    preference against words it has never seen (the split of :func:`verse_split`); or ``padyarchana`` — the
+    words of 2+ aksharas of the E6 train split (Padyarchana minus ``dataset/``) found in at least 3 poems,
+    ``inventories/padyarchana_words.txt`` (212,422 words, 2026-10-22; :func:`build_padyarchana_words`,
+    ``python3 -m metrical_decoder inventory`` rebuilds it). ``all`` and ``train90`` contain the
+    held-out poems' own words; ``padyarchana`` does not, so it is the one for evaluating on them."""
+    if corpus == "padyarchana":
+        from .inventory import HERE
+        return Attestation((HERE / "inventories" / "padyarchana_words.txt").read_text(encoding="utf-8").split("\n"))
     if corpus == "all":
         from .analysis import corpus_lexicon
         return Attestation(corpus_lexicon())
@@ -126,7 +133,25 @@ def load_attestation(corpus: str = "all") -> Attestation:
         from .analysis import _telugu_words
         train, _ = verse_split()
         return Attestation({w for p in train for ln in p for w in _telugu_words(ln)})
-    raise ValueError(f"unknown attestation corpus {corpus!r}: all | train90")
+    raise ValueError(f"unknown attestation corpus {corpus!r}: all | train90 | padyarchana")
+
+
+def build_padyarchana_words(records=None, min_poems: int = 3) -> list[str]:
+    """The words of two aksharas or more of the poems in ``records`` (E6 records, one JSON per line, ``lines``;
+    default the train split) that occur in at least ``min_poems`` poems, sorted: ``inventories/padyarchana_words.txt``."""
+    import json
+    import unicodedata
+    from collections import Counter
+    from .analysis import _telugu_words
+    from .inventory import PADYARCHANA_RECORDS, units
+    by_poems: Counter = Counter()
+    with open(records or PADYARCHANA_RECORDS, encoding="utf-8") as f:
+        for line in f:
+            seen: set[str] = set()
+            for ln in json.loads(line).get("lines") or []:
+                seen.update(w for w in _telugu_words(unicodedata.normalize("NFC", ln)) if len(units(w)) >= 2)
+            by_poems.update(seen)
+    return sorted(w for w, c in by_poems.items() if c >= min_poems)
 
 
 def verse_split(held: float = 0.1, seed: int = 0) -> tuple[list[list[str]], list[list[str]]]:

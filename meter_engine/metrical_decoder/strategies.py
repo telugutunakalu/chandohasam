@@ -70,7 +70,7 @@ class DecodeConfig:
     # exp(attest_weight × score); "override": only where the model's first choice is not allowed
     attest_weight: float = 0.0
     attest_where: str = "override"       # or "all"
-    attest_corpus: str = "all"           # or "train90" (attestation.load_attestation)
+    attest_corpus: str = "all"           # or "train90", "padyarchana" (attestation.load_attestation)
 
 
 class MaskCache:

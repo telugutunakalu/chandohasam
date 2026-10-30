@@ -11,9 +11,12 @@ Command line::
     python3 -m metrical_decoder diffusion --control --out RUN_DIR       # random-logit canvas, no model
     python3 -m metrical_decoder summarize RUN_DIR
     python3 -m metrical_decoder report RUN_DIR [RUN_DIR …] [--out report.md]
+    python3 -m metrical_decoder inventory [--only verse|padyarchana|padyarchana_words] [--out-dir DIR]
 
 ``control`` is the EXP-12 random-logit control (no model, CPU only): it
 needs only the tokenizer, to build the same vocabulary slice as the model.
+``inventory`` rebuilds ``inventories/``: ``verse.txt`` from ``dataset/``, and
+the two Padyarchana files (gitignored) from the E6 train records (≈ 40 s each).
 """
 from __future__ import annotations
 
@@ -26,6 +29,7 @@ from .runner import run_grid, summarize
 from .strategies import MODES, DecodeConfig
 
 CONSTRAINED = ("masking_only", "masking_backtrack", "hybrid")
+INVENTORY_FILES = ("verse", "padyarchana", "padyarchana_words")
 
 
 def _meters(spec: str) -> list[str]:
@@ -73,14 +77,16 @@ def _grid_args(p: argparse.ArgumentParser, default_modes: str) -> None:
                    help="baseline budget (default 3 × the meter's longest poem + 32)")
     p.add_argument("--mask-workers", type=int, default=0,
                    help="compute masks in N worker processes (same masks; 0 = in this process)")
-    p.add_argument("--inventory", choices=("none", "verse", "tokenizer"), default="none",
-                   help="allow only attested syllables: the verse corpus's or the syllable tokenizer's")
+    p.add_argument("--inventory", choices=("none", "verse", "padyarchana", "tokenizer"), default="none",
+                   help="allow only attested syllables: the verse corpus's (dataset/), Padyarchana's train split's "
+                        "(≥ 3 poems) or the syllable tokenizer's")
     p.add_argument("--attest-weight", type=float, default=0.0,
                    help="Layer B: prefer allowed tokens that keep the words real (probability × exp(w × score))")
     p.add_argument("--attest-where", choices=("override", "all"), default="override",
                    help="Layer B acts only where the model's first choice is not allowed, or at every step")
-    p.add_argument("--attest-corpus", choices=("all", "train90"), default="all",
-                   help="Layer B's words: all the verse, or 90% of the poems (a held-out check)")
+    p.add_argument("--attest-corpus", choices=("all", "train90", "padyarchana"), default="all",
+                   help="Layer B's words: all the verse (dataset/), 90% of its poems (a held-out check), or "
+                        "Padyarchana's train split (words of ≥ 3 poems; held-out-safe)")
 
 
 def main(argv: Optional[list[str]] = None) -> int:
@@ -114,6 +120,11 @@ def main(argv: Optional[list[str]] = None) -> int:
     p = sub.add_parser("report", help="token choices and probabilities across run directories (markdown)")
     p.add_argument("run_dirs", nargs="+")
     p.add_argument("--out", help="write the report here (and the numbers next to it as .json)")
+    p = sub.add_parser("inventory", help="rebuild the syllable inventories and the Padyarchana word list")
+    p.add_argument("--only", choices=INVENTORY_FILES, action="append",
+                   help="rebuild only this file (repeatable; default all three)")
+    p.add_argument("--records", help="E6 records for the Padyarchana files (default the train split)")
+    p.add_argument("--out-dir", help="write here instead of metrical_decoder/inventories/")
     ns = ap.parse_args(argv)
 
     if ns.cmd == "rules":
@@ -126,6 +137,8 @@ def main(argv: Optional[list[str]] = None) -> int:
         from .analysis import report
         print(report(ns.run_dirs, ns.out))
         return 0
+    if ns.cmd == "inventory":
+        return _rebuild_inventories(ns)
     meters, modes = _meters(ns.meters), _modes(ns.modes)
     topics, seeds = topic_items(ns.topics), [int(s) for s in ns.seeds.split(",")]
     if ns.cmd == "diffusion":
@@ -153,6 +166,24 @@ def main(argv: Optional[list[str]] = None) -> int:
 
 def _inventory(ns) -> Optional[str]:
     return None if ns.inventory == "none" else ns.inventory
+
+
+def _rebuild_inventories(ns) -> int:
+    """Write ``inventories/<name>.txt``, one entry per line (the files the loaders read)."""
+    from pathlib import Path
+    from .attestation import build_padyarchana_words
+    from .inventory import HERE, build_padyarchana_inventory, build_verse_inventory
+    records = Path(ns.records) if ns.records else None
+    builders = {"verse": build_verse_inventory,
+                "padyarchana": lambda: build_padyarchana_inventory(records),
+                "padyarchana_words": lambda: build_padyarchana_words(records)}
+    out_dir = Path(ns.out_dir) if ns.out_dir else HERE / "inventories"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for name in ns.only or INVENTORY_FILES:
+        entries = builders[name]()
+        (out_dir / f"{name}.txt").write_text("".join(e + "\n" for e in entries), encoding="utf-8")
+        print(f"{out_dir / name}.txt: {len(entries):,} entries", flush=True)
+    return 0
 
 
 def _diffusion(ns, meters, modes, topics, seeds) -> int:

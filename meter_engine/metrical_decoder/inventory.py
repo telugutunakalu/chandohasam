@@ -8,10 +8,16 @@ and ≤ 1.1% of the models' free text (plan §17, ``experiments/runs/2026-10-05_
 inventory closes that door: every syllable the poem writes, as the scanner cuts it (onset cluster,
 vowel, marks and a merged word-final pollu: ``రా``, ``త్య``, ``కన్``), must be one of a fixed set.
 
-Two inventories:
+Three inventories:
 
 * ``verse`` — every syllable of the verse in ``dataset/*.json`` (15,415 poems; 3,879 syllables), stored
-  in ``inventories/verse.txt`` (``python -m metrical_decoder inventory`` rebuilds it);
+  in ``inventories/verse.txt`` (``python3 -m metrical_decoder inventory`` rebuilds it and the two below);
+* ``padyarchana`` — the syllables of the E6 train split (Padyarchana minus ``dataset/``: 365,679 poems)
+  seen in at least ``PADYARCHANA_MIN_POEMS`` (3) poems: 6,131 syllables, stored in
+  ``inventories/padyarchana.txt`` (:func:`build_padyarchana_inventory`; 2026-10-22). It holds no syllable
+  only the held-out poems have, so it can serve their evaluation; it allows 99.975% of their syllable
+  tokens. The threshold drops the web corpus's typos and transliterations (seen once: డ్డ్డు, గ్పీ,
+  హ్గ, స్విచ్);
 * ``tokenizer`` — the atomic syllables of the syllable-aware Telugu tokenizer
   (``diffusion_pretraining/tokenizer/telugu_alldomain.tokenizer.json``, 44,835): the aksharas of modern
   all-domain Telugu. Its segmentation agrees with the scanner's on 99.998% of the corpus's words.
@@ -46,8 +52,11 @@ from .incremental import ENGINE_DIR, sc
 
 HERE = Path(__file__).resolve().parent
 VERSE_FILE = HERE / "inventories" / "verse.txt"
+PADYARCHANA_FILE = HERE / "inventories" / "padyarchana.txt"
+PADYARCHANA_RECORDS = ENGINE_DIR.parent / "diffusion_finetuning" / "data" / "e6" / "records" / "train.jsonl"
+PADYARCHANA_MIN_POEMS = 3
 TOKENIZER_FILE = ENGINE_DIR.parent / "diffusion_pretraining" / "tokenizer" / "telugu_alldomain.tokenizer.json"
-NAMES = ("verse", "tokenizer")
+NAMES = ("verse", "tokenizer", "padyarchana")
 
 
 @lru_cache(maxsize=200_000)
@@ -178,12 +187,32 @@ def build_verse_inventory(dataset_dir: Optional[Path] = None) -> list[str]:
     return sorted(found)
 
 
+def build_padyarchana_inventory(records: Optional[Path] = None,
+                                min_poems: int = PADYARCHANA_MIN_POEMS) -> list[str]:
+    """The syllables of the poems in ``records`` (E6 records, one JSON per line, ``lines``) that occur in at least
+    ``min_poems`` poems, sorted (only those the orthography filter can write)."""
+    from collections import Counter
+    from .analysis import _telugu_words
+    by_poems: Counter = Counter()
+    with open(records or PADYARCHANA_RECORDS, encoding="utf-8") as f:
+        for line in f:
+            seen: set[str] = set()
+            for ln in json.loads(line).get("lines") or []:
+                for w in _telugu_words(unicodedata.normalize("NFC", ln)):
+                    seen.update(units(w))
+            by_poems.update(seen)
+    return sorted(u for u, c in by_poems.items() if c >= min_poems and _writable(u))
+
+
 @lru_cache(maxsize=None)
 def load_inventory(name: str, alphabet: Optional[frozenset] = None) -> Inventory:
-    """``verse`` (from ``inventories/verse.txt``) or ``tokenizer``; with ``alphabet``, only the
-    syllables written entirely in it (a model's single-character tokens)."""
+    """``verse`` (from ``inventories/verse.txt``), ``padyarchana`` (``inventories/padyarchana.txt``) or
+    ``tokenizer``; with ``alphabet``, only the syllables written entirely in it (a model's single-character
+    tokens)."""
     if name == "verse":
         return Inventory(VERSE_FILE.read_text(encoding="utf-8").split("\n"), "verse", alphabet)
+    if name == "padyarchana":
+        return Inventory(PADYARCHANA_FILE.read_text(encoding="utf-8").split("\n"), "padyarchana", alphabet)
     if name == "tokenizer":
         return Inventory(json.loads(TOKENIZER_FILE.read_text(encoding="utf-8"))["atomic_aksharas"], "tokenizer", alphabet)
     raise ValueError(f"unknown inventory {name!r}; choose from {', '.join(NAMES)}")

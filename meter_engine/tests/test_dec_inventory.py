@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """metrical_decoder.inventory — only attested syllables, and liveness stays exact."""
+import contextlib
+import io
 import unittest
 
 from dec_support import test_vocab
@@ -33,6 +35,24 @@ class TestInventory(unittest.TestCase):
     def test_units_are_the_scanners_syllables(self):
         self.assertEqual(units("సత్యము"), ("స", "త్య", "ము"))
         self.assertEqual(units("పూసెన్"), ("పూ", "సెన్"))
+
+    def test_the_padyarchana_files_rebuild_from_records(self):
+        import json
+        import tempfile
+        from pathlib import Path
+        from metrical_decoder.attestation import build_padyarchana_words
+        from metrical_decoder.cli import main
+        from metrical_decoder.inventory import build_padyarchana_inventory
+        poems = [["తల్లి ప్రేమ", "త"], ["తల్లి ప్రేమ"], ["తల్లి"], ["ప్రేమ గొప్ప"]]
+        with tempfile.TemporaryDirectory() as tmp:
+            records = Path(tmp) / "train.jsonl"
+            records.write_text("".join(json.dumps({"lines": p}, ensure_ascii=False) + "\n" for p in poems),
+                               encoding="utf-8")
+            self.assertEqual(build_padyarchana_words(records), ["తల్లి", "ప్రేమ"])   # ≥ 3 poems, ≥ 2 aksharas
+            self.assertEqual(build_padyarchana_inventory(records), ["త", "ప్రే", "మ", "ల్లి"])
+            with contextlib.redirect_stdout(io.StringIO()):
+                main(["inventory", "--only", "padyarchana_words", "--records", str(records), "--out-dir", tmp])
+            self.assertEqual((Path(tmp) / "padyarchana_words.txt").read_text(encoding="utf-8"), "తల్లి\nప్రేమ\n")
 
     def test_an_inventory_reloads_by_name(self):
         import pickle
