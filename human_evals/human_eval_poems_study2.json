@@ -1,0 +1,2880 @@
+{
+ "dataset": "chandohasam_study2",
+ "description": "Study 2's pool: poems of the three best fine-tuned grid models, rated against the poets' study-1 scores.",
+ "compliance_profile": "strict",
+ "generated_on": "2026-10-30",
+ "sampling_seed": 20261030,
+ "target_size": 99,
+ "actual_size": 99,
+ "models": {
+  "mdlm523m_ft": "Chandohasam MDLM-523M SFT",
+  "t5_1b_ft": "T5Gemma 2 1B SFT",
+  "nandi_ft": "Nandi-Mini-150M SFT"
+ },
+ "quota": {
+  "bhagavatam": 10,
+  "vemana": 12,
+  "kuchimanchi_timmakavi": 11
+ },
+ "poems": [
+  {
+   "eval_id": "he2_0001",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-57-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అవల నూదిన యది యవలోహములను గ",
+    "రగ భజియిపఁ జేయు సగము నందు",
+    "నపుడు సర్వశక్తి యగు పెద్దలు దనకు",
+    "నలరు పుట్ట రెట్టు లలరు నలుక"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-57-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0444",
+    "gold_score": 0.5706,
+    "p_real": 0.0817,
+    "selection_score": 0.2781
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0002",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+   "meter_id": "utpalamala",
+   "meter_te": "ఉత్పలమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "utpalamala",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అంతట గ్రూరసైనికులు నండజనంబులు వచ్చి యొక్కనిన్",
+    "వింతలు వాఱుచందమున వృక్షశిలాశనిదఘ్రదంఘ్రికా",
+    "త్యంతభయంకరంబు లయి యాతని నంతము సేసి రట్టి దుర్",
+    "దాంతుల దారుణోద్ధతిని దద్వృకముం బలె ముస్రధారలన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0329",
+    "gold_score": -0.0694,
+    "p_real": 0.6799,
+    "selection_score": 1.0018
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0003",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-327-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "నాట్యసతములు గులసతల్ నవ్యరీతి",
+    "నాడుదురు వేమ తన్నుఁ గన్నతలి విడిచ",
+    "పెరిగె వేమ తన్వంగిని విరువనాడి",
+    "తగులుకొను టదియె పరకాంతలనుబెంచ"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-327-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0107",
+    "gold_score": 0.3306,
+    "p_real": 0.8878,
+    "selection_score": 0.8706
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0004",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:10.1-214-మాని.",
+   "meter_id": "manini",
+   "meter_te": "మానిని",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "manini",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "చందపువల్మిటి చందు బిడారిని జవ్వని కొంగు వసన్ బెళికెం",
+    "గుందనపుందళుకుల్ జడకుందళు కుందము లిందజకోరిక గౌ",
+    "మందసతీభయ మత్తగజేంద్రము స్స్మర్చయకున్ గొద జ్మన్చు వెతల్",
+    "గందళమింపడగన్ సరి గాజులు గందము లింపెసఁగన్ వినుడిన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-214-మాని.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0141",
+    "gold_score": -0.1494,
+    "p_real": 0.2907,
+    "selection_score": -0.5674
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0005",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:3-799-మ.",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "హరి పాదార్పితపుణ్యపత్రసురభోద్యత్పల్లవామోదముల్",
+    "పొరయున్ దద్గత నామధేయముల కీర్పుల్ సేయుచున్ విన్చుచున్",
+    "విరచించున్ వినుచున్ బరాయణముగా విష్ణుండు చేసెన్ విముక్",
+    "తరసత్కార్యము లొంది యోషధులకున్ ధర్మార్థముల్ మానగన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:3-799-మ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0072",
+    "gold_score": 0.0106,
+    "p_real": 0.6378,
+    "selection_score": 3.174
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0006",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "meter_id": "layagrahi",
+   "meter_te": "లయగ్రాహి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "layagrahi",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "భీమ జరసంధులకు పో ముసరు సల్పుచును వ్రేళ్లు పడుచున్న గతి మోము తనువున్ నా",
+    "భీము లయి యెమ్ములు వడిం మనునటుల్ వ్రజ కరం ములు సహించు నెద నెల్ ములు గడుగ్న్యుం",
+    "గాములు దుముక్ లును రయమ్ ములు వహిం చినటులల్ ములు రధిక్ లును నిజాం ములును నెత్తుల్",
+    "వాము లగు వారు నిజ వ్రజ్య ములు పర్య లుగ జల్ ములు రయమ్ము లగుచున్ మరలిరిర్వుల్"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0133",
+    "gold_score": -0.7494,
+    "p_real": 0.1512,
+    "selection_score": -2.2374
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0007",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-51-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "పరదారల కసగందని",
+    "పరసొమ్మనుమానినెఱుఁగఁ బ్రత్యుపకారిన్",
+    "గరగరి నైనను దా నను",
+    "చరు వగుచున్ సంఘటించు సాజము వేమా"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-51-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0244",
+    "gold_score": 0.5092,
+    "p_real": 0.3921,
+    "selection_score": 0.391
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0008",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+   "meter_id": "madhuragati_ragada",
+   "meter_te": "మధురగతి_రగడ",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "madhuragati_ragada",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 2,
+   "lines": [
+    "నిన్ను నిగమాధ్య నిక్షిప్త వేద",
+    "సన్నిధి జగదీశ విశ్వనాయక"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0469",
+    "gold_score": -0.2694,
+    "p_real": 0.1649,
+    "selection_score": 0.4927
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0009",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+   "meter_id": "malini",
+   "meter_te": "మాలిని",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "malini",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "సకలమును భరించుస్వర్ణకాంతిస్ఫురన్యా",
+    "సకలధనురమేశా శత్రుకోటిస్ఫురన్యా",
+    "సకలసురవరప్రశ్రాంతవిశ్వంభరారీ",
+    "సకలశశిమృగశ్రీచారుమచ్చప్రకాశా"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0205",
+    "gold_score": -0.1894,
+    "p_real": 0.4452,
+    "selection_score": -0.5004
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0010",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "హతుఁడగు రాముఁ డేమిటికి నంతముఁ జెందునె యుష్ణభానుచం",
+    "చితరుచి యారఁడే ధరణి చెల్లునె వేయిపడంగఁ డున్నతాఁ",
+    "డతఁడె చలింపఁడే గిరులు నైపడఁడే దివసంబు లంతటన్",
+    "గతిగొనఁడే పయోధు లదె కాంచి యనల్యులు గాక విశ్వముల్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0093",
+    "gold_score": 0.2106,
+    "p_real": 0.268,
+    "selection_score": 2.101
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0011",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+   "meter_id": "utpalamala",
+   "meter_te": "ఉత్పలమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "utpalamala",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "క్రూరులు దత్తఱిల్లి బలగోపకులై యొకదానవారిరా",
+    "డూరక పట్ట కడ్డపడు డుక్కులు వింతలుగాఁగఁ గూలుఁ గా",
+    "లూరక పాదనఖ్మసము లుగ్రభయంకరలీలఁ దాఁకి చా",
+    "వారికడంచులం దునిమి వారలచే ముసలంబు కైవడిన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0329",
+    "gold_score": -0.0694,
+    "p_real": 0.2169,
+    "selection_score": 1.0018
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0012",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:10.1-1185-శా.",
+   "meter_id": "sardulavikriditamu",
+   "meter_te": "శార్దూలవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "sardulavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అంతన్ మయ్యని పెద్దకొడ్కొకఁడు వృమ్యాలాసి యై గొల్ల పెం",
+    "పంతం గైకొని చోరబృందమునఁ బ్రో య్వాసిన్ సముత్కర్షతన్",
+    "కాంతారంబున నల్వురం దగుల మెక్కం డెల్ల నొడ్డోలగం",
+    "బింతై యుండఁగ నేగి యొక్క గుహకుం హ్వీక్షించె నక్షీణమై"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-1185-శా.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0081",
+    "gold_score": -0.1094,
+    "p_real": 0.133,
+    "selection_score": 0.0287
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0013",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-866-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అరయ నీరిలోన నైన రాజహసంబు",
+    "నిజము యోగియైన నిఖిలసుఖము",
+    "లనుభవించుఁ గర్మలంపటుఁ డగుచును",
+    "బక్షి జీవుఁ డగుచు బ్రదుకుఁగాక"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-866-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0307",
+    "gold_score": 0.5306,
+    "p_real": 0.8236,
+    "selection_score": 2.3223
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0014",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-532-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "చదువు చదువు నిష్ప్రసాద మన్యమహావి",
+    "ద్యావశంబు గాగ దలప లేక",
+    "సజ్జనాన్వితంబు జనులచేత నశేష",
+    "బాధలందు నజ్ఞు లొందు వేమ"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-532-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0104",
+    "gold_score": 0.6106,
+    "p_real": 0.5932,
+    "selection_score": 1.8983
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0015",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "meter_id": "sragdhara",
+   "meter_te": "స్రగ్ధర",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "sragdhara",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "సారంబై దైత్యసేనన్ సముదగదఖిలస్ఫారచాపాస్త్రదండం",
+    "బై రథ్యద్విప్యుపాయం బయి తలపడి దైవంబుపై దాకి రంతన్",
+    "సారథ్యంబై దివౌకస్వరులును మహులౌర్జాన్నిరస్తాత్మజం బై",
+    "ఘోరంబై తత్తనువ్యాఘ్రులు దలపడి రాక్షోవిభేదంబునన్ గిన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0488",
+    "gold_score": -0.3094,
+    "p_real": 0.2964,
+    "selection_score": -1.2694
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0016",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:10.2-737-లవి.",
+   "meter_id": "layavibhati",
+   "meter_te": "లయవిభాతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "layavibhati",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "దిగదిగ మునింగి పయ డొగి పెలుచ నగ్నులు గ్రవగఁ బడఁగ నిగ్గు లెసఁగఁగ బెనుమునుఁగ్లౌ",
+    "నెగసిపొడి దోఁగి పడఁ బొగలుగను రాల జలధు గవిసి జలధ్వనిని జెఁగఁజెలఁగఁ గ్రీడల్",
+    "హగసదిసి దొడ్డగ జనఁ గలయఁగ బడ్డ బడియెఁ గలయఁగఁ దొడ్కకొని డొగులకయెడం జొం",
+    "డుగఁ గడఁగి పిడ్గులు గడఁగి కడఁగి జడ్డనఁగఁ బగిలిన జడిగ్గతిఁ బ్రజ గడఁగి సలిల్ధా"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.2-737-లవి.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0071",
+    "gold_score": -0.5094,
+    "p_real": 0.0729,
+    "selection_score": -2.0671
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0017",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+   "meter_id": "madhuragati_ragada",
+   "meter_te": "మధురగతి_రగడ",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "madhuragati_ragada",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 2,
+   "lines": [
+    "ఇంద్ర శరంబును ఎక్కెడి తరుణము",
+    "తొం ద్రముగ కేతనెద్రిప్పు రఘుప"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0311",
+    "gold_score": -0.2294,
+    "p_real": 0.1643,
+    "selection_score": 0.9811
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0018",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "మదనమణిమణి మణిమణి మణిమయూఖ",
+    "భువనసారక సుమదళ పుష్పగంధ",
+    "ప్రణయఘనసారవసుధాసరాంగన వని",
+    "నమ్మి యభిలాష నీప్రేమ నమ్ము మీవు"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0259",
+    "gold_score": 0.2106,
+    "p_real": 0.8318,
+    "selection_score": 2.5804
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0019",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-57-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "గాలి యొకటి యెట్టకేలకు సంచి త్త",
+    "హాస్య మెల్లఁ గరఁగ నైదు జేయ",
+    "నూర్ధ్వశక్తి నున్న యుర్వీశ్వరుం డురు",
+    "లేచి నట్టియెడఁ గలిగెనె విను న"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-57-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0444",
+    "gold_score": 0.5706,
+    "p_real": 0.2984,
+    "selection_score": 0.2781
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0020",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కలుషం బేపున గోవులం బవనముల్ కౌశేయ వాచంయముల్",
+    "కలుషం బేమియు మోటకాపుదొరలుం గైదుష్యదాసారులున్",
+    "కలుషం బేమియు శంభు సౌభ్రవులు బ్రఖ్యాతాధిపుల్ దుష్కవుల్",
+    "కలియుగ్యంబున నిట్టు లున్న తెఱ గెట్లన్ మాతృభూతాధిపా"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0029",
+    "gold_score": -0.7894,
+    "p_real": 0.3078,
+    "selection_score": -1.2882
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0021",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-1006-ఆ.",
+   "meter_id": "utpalamala",
+   "meter_te": "ఉత్పలమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "utpalamala",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఆకలి లేని వానివలె నల్లన మాటల నల్లనల్ల నా",
+    "వాకర మెల్ల మాటలను పద్యము గాను ప్రవాహ మిచ్చుచున్",
+    "నీకథ లెల్ల నల్లన ప్రణీతము చేసెడు శైలి యల్లనన్",
+    "లోకుల నందు నీయవత లోపల నుండును వేమనా శివా"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1006-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0457",
+    "gold_score": 0.5306,
+    "p_real": 0.243,
+    "selection_score": 0.5211
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0022",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+   "meter_id": "pamcacamaramu",
+   "meter_te": "పంచచామరము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "pamcacamaramu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అహో మహోద్ధతిన్కడంగె నట్లు గర్వి వీరుఁడై",
+    "మహోగ్ర కోటి బాణముల్ నిమంత చాపముల్ ఘటిం",
+    "చి హస్త చాప మాత్మ నిండ జేసె శూరతన్ వశం",
+    "బహో మహా కుమార దోష భావముం గృతార్థ మే"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0387",
+    "gold_score": -0.3494,
+    "p_real": 0.1107,
+    "selection_score": -1.03
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0023",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+   "meter_id": "malini",
+   "meter_te": "మాలిని",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "malini",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "పరిగత నిరుపాలుం బాంచజాభోగ దీప్తా",
+    "శరధి ధరిత పాకార్చాస్ర వ్యక్తిత్ర ధీపా",
+    "సురనికర మహేశా శోభి దక్షాధురీణా",
+    "తరుణ రుచిమధుష్పాద్యాప్త విద్యా హితాంకా"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0205",
+    "gold_score": -0.1894,
+    "p_real": 0.1263,
+    "selection_score": -0.5004
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0024",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+   "meter_id": "upendravajra",
+   "meter_te": "ఉపేంద్రవజ్ర",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "upendravajra",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అనఘ్య బంధుర్యతి త్త్యాగమత్యా",
+    "మినిం దపస్విమ్యశమిత్యపిశ్రా",
+    "వృనిం దపోనిర్నిమి త్త్విక్రయేణ్యుం",
+    "శ్రి నీశ్చతుర్విష్వపదృశ్యవాచ్యుం"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0449",
+    "gold_score": -0.3094,
+    "p_real": 0.2138,
+    "selection_score": -1.3031
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0025",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-22-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "మనుజుడు మనసున నసమము",
+    "గను భావన లుండు సర్వ గణములు తనలో",
+    "ననవరతము నమ్మక ద్రో",
+    "హిని విడిచిన శత్రువగును హితు లేరే వే"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-22-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0199",
+    "gold_score": 0.4506,
+    "p_real": 0.239,
+    "selection_score": 0.5492
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0026",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-531-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "విశ్వమున జెప్పు వేమన్న విషయ మెఱుగ",
+    "జాలనట్టి మూర్ఖుని వెల్గు జారినట్టి",
+    "శిరసు వెండ్రుక యెట్లుండు జేయు సుఖము",
+    "ముక్తియును గూర్ప వేమన్న పురుషునకును"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-531-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0112",
+    "gold_score": 0.4906,
+    "p_real": 0.3358,
+    "selection_score": 0.5707
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0027",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+   "meter_id": "upendravajra",
+   "meter_te": "ఉపేంద్రవజ్ర",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "upendravajra",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కృషీవలా తేన పరేత కృష్ణా",
+    "అషణ్ణ ప్రత్యుత్తర ఆప నాథన్",
+    "కృషీవలా కృష్ణ మహీ మనుష్యుం",
+    "కృషీవలా కృష్ణ కృతృష్ణ కృష్ణా"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0449",
+    "gold_score": -0.3094,
+    "p_real": 0.0721,
+    "selection_score": -1.3031
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0028",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-801-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "సర్వాత్మ స్వభావంబును",
+    "శర్వా త్మునుదెలిసి తననె సత్పరమాత్మున్",
+    "బర్విన నేర్పరి యగు మన",
+    "సర్వమునన్ ముక్తి గల్గు సద్గతికిఁ దగున్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-801-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0031",
+    "gold_score": 0.3092,
+    "p_real": 0.7321,
+    "selection_score": 0.0093
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0029",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:10.1-1185-శా.",
+   "meter_id": "sardulavikriditamu",
+   "meter_te": "శార్దూలవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "sardulavikriditamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అంతన్ మయ్యని నొక్కపెట్ట మయు డన్వ్యాఘ్రాయుధుం డొక్కడే",
+    "గొంతెల్ బిల్లడు గాగ దొంగగమిలో గూడంగ నవ్వేళ నల్",
+    "గంతంబుల్ నటియించు వారలకు నైక్యంబుల్ దొలంగించి వా",
+    "డెంతే నొక్కనగంబుగహ్వరము జొన్టిస్తంబుగా నల్లనన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-1185-శా.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0081",
+    "gold_score": -0.1094,
+    "p_real": 0.1487,
+    "selection_score": 0.0287
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0030",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-1094-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఏవిధమును నారయఁ దగ",
+    "దేవిధ మధ్యయనము సలి తిలకుని మాయన్",
+    "గావున మనుజ మగు నది స",
+    "తీవరమును గుణము నరసి తెలిసిన వాఁడే"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1094-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0425",
+    "gold_score": 0.4506,
+    "p_real": 0.2682,
+    "selection_score": 1.8612
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0031",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:3-799-మ.",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "హరిపాదంబుల నప్పు డిచ్చిన సుతుల్యాక్రందముల్ గ్రోలుచున్",
+    "హరిమాహాత్మ్యము లెంచుచున్ బొగడుచున్ నాలించుచున్ ముక్తికా",
+    "కరమౌ సత్క్రియలన్ ఘటించుచును సత్కార్యంబు లర్పించుచున్",
+    "జరమాంకంబున కైన ధర్మవిధులన్ వర్జించె ధర్మార్థముల్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:3-799-మ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0072",
+    "gold_score": 0.0106,
+    "p_real": 0.7495,
+    "selection_score": 3.174
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0032",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-51-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "పరదార లోలుడు పరుల",
+    "పరదార వివర్జితుండు పరహిత సముపా",
+    "ర్జర కోపము చెందిన శాం",
+    "తర సమ్మాన విధము గలు తాను నరుడు వే"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-51-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0244",
+    "gold_score": 0.5092,
+    "p_real": 0.1867,
+    "selection_score": 0.391
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0033",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-1006-ఆ.",
+   "meter_id": "utpalamala",
+   "meter_te": "ఉత్పలమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "utpalamala",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఆకలి లేని వానివలె నాగ్రహ మెప్పుడు లేక యెప్పుడున్",
+    "వాకున బల్కు బద్దెము లవారిత రీతిని బూనుచున్ సమం",
+    "బైకొన జేయు నీదు పరిపాటి మహాద్భుత మద్భుతంబు నీ",
+    "లోకమునందు శంభుడు జెలుంగుగతిన్ మనువారు వేమనన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1006-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0457",
+    "gold_score": 0.5306,
+    "p_real": 0.1759,
+    "selection_score": 0.5211
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0034",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+   "meter_id": "madhuragati_ragada",
+   "meter_te": "మధురగతి_రగడ",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "madhuragati_ragada",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 2,
+   "lines": [
+    "అడరంగ తడబడెడు బాణమును గ",
+    "దొడగెను గద చిలుకల బడి మంటల్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0311",
+    "gold_score": -0.2294,
+    "p_real": 0.3826,
+    "selection_score": 0.9811
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0035",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "పనిఁబూని లోఁతుఁ బెట్టఁగ",
+    "మునుకొని చనుచుండె నతఁడు ముంగలి నమ్మిం",
+    "గొని చేర ధనుశరంబులు",
+    "మునుకొని లక్ష్మణుని డాసి ముంగలఁ బెట్టున్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0347",
+    "gold_score": -0.3894,
+    "p_real": 0.3916,
+    "selection_score": -1.1157
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0036",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:10.2-737-లవి.",
+   "meter_id": "layavibhati",
+   "meter_te": "లయవిభాతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "layavibhati",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "పుడమి గడునల్గి జలధులు పిడుగు లూనిన యెడల దిశ లలమ్రిసి కడు డిసము నిసుమ్రా",
+    "వడరి ఘటి యిఱ్ఱి వడువు లెసగ బెనుగ్రుదులు తుడుము గడు వొడ్రొరయ బెడిదపు వడియ్దం",
+    "బడి బలియు బోరుకడు బిడుగుల కొఱవ్రవలకు లొడిసి యొడిస్రువకు బెడిదపు బలియ్వా",
+    "ఱడరి జలధిప్యమున బడలక యొరుల్రుక యొరుల ఱెడమడగ్రుక యొడి డడలక పెన్మెన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.2-737-లవి.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0071",
+    "gold_score": -0.5094,
+    "p_real": 0.1675,
+    "selection_score": -2.0671
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0037",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-866-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "నీవు వినుము నీవు నీళ్ళలో నున్నను",
+    "రాజహంసములకు రాదు గాద",
+    "యోగి యొకడు గూడ యోగీంద్రు డొందు గ",
+    "ర్మముల బట్టువడక బ్రదుక కుండు"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-866-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0307",
+    "gold_score": 0.5306,
+    "p_real": 0.4681,
+    "selection_score": 2.3223
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0038",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఘనతరశక్తి వైభవసఖామణి నిర్జిత వీవ యభ్యుతా",
+    "యని భవదీయ మందిరము నంతరముం గరతాళవృంతముల్",
+    "గొని నటియించు భక్తు డపకుంఠనగంబు శిఖామణీమయా",
+    "కనకకళాసనాంతరనికామము నొందు మహాభవా భవా"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0270",
+    "gold_score": -0.0294,
+    "p_real": 0.7127,
+    "selection_score": 2.8548
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0039",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+   "meter_id": "malini",
+   "meter_te": "మాలిని",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "malini",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అఖిల జన వనేకా నాంచ కాంతిప్రకాశీ",
+    "అఖిల ధనురణప్రత్యగ్ర సంహార శక్తిన్",
+    "మఖిల మహిమ దైవం మార మౌళీ భృగూఢా",
+    "సఖి శిఖి శిర స్వీయద్ఛానురూపా ఫలా పా"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0205",
+    "gold_score": -0.1894,
+    "p_real": 0.0954,
+    "selection_score": -0.5004
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0040",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-531-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "వేమన వచించె నుర్వీ తలం మనంగ",
+    "లేని మూర్ఖుని వెలుగు విజ్ఞాన సత్య",
+    "మరసి జారిన వెంట్రుక యరసి చూడ",
+    "తనకు గల్గు సౌఖ్యములు ముక్తి నిడును కద"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-531-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0112",
+    "gold_score": 0.4906,
+    "p_real": 0.0423,
+    "selection_score": 0.5707
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0041",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:3-277-చ.",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అలల చకోర మారుత సహాయ వినిర్గత భూరి పూర్ణ కా",
+    "లలము సమగ్ర కాల మది లంబుధి మధ్యమునందు దుగ్ధ పం",
+    "కలమున లోక రూప మది గానఁగ నేరక యంత చింతతో",
+    "నలరుచు నుండె నెంతయు విహారము సేయు చతుర్ముఖుం డనన్"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:3-277-చ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0100",
+    "gold_score": 0.0506,
+    "p_real": 0.1289,
+    "selection_score": 1.7911
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0042",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:10.1-714-మ.",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అదుపుంజాలని పావకంబువులు నీయగ్నిప్రభోద్యద్గిలుల్",
+    "గదనం బగ్నులు వేగవచ్చెఁ బొరలంగన్ మమ్ము నేఁజేయు టే",
+    "మిదియేనోముదు కృష్ణ వీర బలరామీయంఘ్రులన్ మ్రొక్కుచున్",
+    "పదముల్ మాకిదె దిక్కగున్ గరుణ నీపాదంబులన్ గావరే"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-714-మ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0494",
+    "gold_score": 0.2106,
+    "p_real": 0.7358,
+    "selection_score": 2.2718
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0043",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-327-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "పాత కాలపు నృత్యము ప్రభల విడచి",
+    "నవ్య సంప్రదాయముల ననువ్ వ్యపరుచు",
+    "తల్లి నైపుణి యువత తనన్ ల్లిసి యలి",
+    "పెట్టు చుండెను వేమా పరస్ ట్టలు గలు"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-327-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0107",
+    "gold_score": 0.3306,
+    "p_real": 0.1643,
+    "selection_score": 0.8706
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0044",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:3-277-చ.",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అలలఁ జెలంగు నిట్టుల మహానిలముల్ పరికించి చూచి యా",
+    "కలనమునందు భీకరపుఁ గాలుల భూరివితానపూర్ణమై",
+    "లలిఁ బ్రళయంబు దోఁచెఁ దెలి లంబుజమధ్యమునందుఁ బుండరీ",
+    "చలమున లోకముల్ గను మశక్యతఁ దెల్విఁ డతండు సూడఁగన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:3-277-చ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0100",
+    "gold_score": 0.0506,
+    "p_real": 0.3601,
+    "selection_score": 1.7911
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0045",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:10.1-1185-శా.",
+   "meter_id": "sardulavikriditamu",
+   "meter_te": "శార్దూలవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "sardulavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అవ్వేళమ్మను నట్టి మయ్యు నను పెయ్యంబాఱు నయ్యాత్మజుం",
+    "డవ్వేళమ్మున నేకపక్షి వరు డల్లస్యావళీవేష మై",
+    "యవ్వేళన్ గల వారి నల్వుర హరిం యర్హుప్తమం దేవు నేఁ",
+    "గువ్వల్లం గదలించి తోడఁ జనియెన్ గోటీర గుహ్యంబునన్"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-1185-శా.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0081",
+    "gold_score": -0.1094,
+    "p_real": 0.3647,
+    "selection_score": 0.0287
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0046",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+   "meter_id": "madhuragati_ragada",
+   "meter_te": "మధురగతి_రగడ",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "madhuragati_ragada",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 2,
+   "lines": [
+    "రాముడు ఎదురెదురై తడబడకను",
+    "కీ మును విసిరెను కీల శరమును వి"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0311",
+    "gold_score": -0.2294,
+    "p_real": 0.7777,
+    "selection_score": 0.9811
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0047",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-801-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఆత్మల నంతరమున గని",
+    "యాత్మను గల పరమపురుషు నరయగ గలిగెన్",
+    "తాత్ముడు విన్నాణము గల",
+    "యాత్మకు మోక్షంబు దక్కు నవనీస్థలిపై"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-801-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0031",
+    "gold_score": 0.3092,
+    "p_real": 0.094,
+    "selection_score": 0.0093
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0048",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:10.1-214-మాని.",
+   "meter_id": "manini",
+   "meter_te": "మానిని",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "manini",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "చందన మాకడ న్సమ్యజనక్రియ జంద్రిక మస్రసృజారశిలల్",
+    "చందన మల్లె మృషా భ్రమరమ్రమ సద్రిజ విద్రుమ చ్ఛత్ర ధగల్",
+    "హందర కుందన వ్హర్యమథిత్య రయాన దలిర్పగ జ్యాయువనిర్",
+    "జిందర చందన చ్ఛిన్న వదన్మయ క్చిత్ర ద్విషత్కృత న్స్వేషధవః"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-214-మాని.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0141",
+    "gold_score": -0.1494,
+    "p_real": 0.0708,
+    "selection_score": -0.5674
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0049",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-327-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "నాడు నాటి క్రీడలు సంప్రదాలు విడిచి",
+    "యువత నవవిధములను వర్తొవలు సల్పు",
+    "దల్లి విడనాడి యిడుమల దలక జేసి",
+    "పరసతుల బెంచు టది వేమ పరమమూర్తి"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-327-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0107",
+    "gold_score": 0.3306,
+    "p_real": 0.2167,
+    "selection_score": 0.8706
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0050",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఇది తుదిగాదె యింతకును నింతకు బోవునె యిందురాజముల్",
+    "వదలవొ భూమి పాయక సపత్నభుజంగమశేషు డూరకే",
+    "పదపడి పాఱవొం దెఱవ పన్ రజనీకరు లెల్ల నిండుగా",
+    "బొదలవొ వార్ధు లంతరిలవో తగు విశ్వము లగ్ని గాలవో"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0093",
+    "gold_score": 0.2106,
+    "p_real": 0.4045,
+    "selection_score": 2.101
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0051",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "తన తంత్రమున నడచుట ద",
+    "లను దలపున రావణుండు లాలన మెలమిన్",
+    "జనుటకు విలు శరములఁ జే",
+    "తన లక్ష్మణు నిలిపి దైత్యతతి చేరుచు నుం"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0347",
+    "gold_score": -0.3894,
+    "p_real": 0.2181,
+    "selection_score": -1.1157
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0052",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "meter_id": "layagrahi",
+   "meter_te": "లయగ్రాహి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "layagrahi",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కాళులఁ దగుల్పడుచుఁ గీలుకొనుచుం దొఱఁగుచుల్ లులుకు నట్టులు ముఖమ్మునను గాత్రం",
+    "బాళిగఁ జెలంగుచు నులిం లగలఁ దాఁకుచుఁ జలిం లు గలయంగఁ దనుపుం డి యు మ్మనఁగ్రుం",
+    "గాళులయి చూచి నునుఁ బాళఁగను జాలఁ గడు నూలుకొను నుల్కొలుపుఁ బ్రే లెసఁగఁ గొంతం",
+    "జేళి పడఁగన్ గలఁక లే లనఁగఁ గ్రీడల పెనఁన్ లలిత భీమ రససద్ లసత నొందన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0133",
+    "gold_score": -0.7494,
+    "p_real": 0.1292,
+    "selection_score": -2.2374
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0053",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:3-799-మ.",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "హరిపాదస్థములైన పుణ్య తులసీ యావాసముస్వామి తా",
+    "మరిమల్మద్యము నెంచి కీర్తనము బోమద్యమ్ము బోధించి బో",
+    "ధర చర్చించి జగత్ప్రసిద్ధి పరమౌ ధర్మార్థకామమ్ములన్",
+    "వరముల్ సేయుచు విశ్వభవ్యము కవార్ నాశించి విశ్రాంతికై"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:3-799-మ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0072",
+    "gold_score": 0.0106,
+    "p_real": 0.7,
+    "selection_score": 3.174
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0054",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అవివేకమ్ములు లేని మోట పరు లాహా పాతకాలమ్ములో",
+    "పవినమ్ముల్ బరికింపఁ గోప వరు లాపాషాండు దాసయ్య లా",
+    "శివసత్తుల్నతి మత్తు పెద్ద లవురా చేపట్టు వారమ్ము లౌ",
+    "కవి విస్తార మెఱుంగు దుష్కవులలో గౌరీశ భార్గవ్యహో"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0029",
+    "gold_score": -0.7894,
+    "p_real": 0.4173,
+    "selection_score": -1.2882
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0055",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-1094-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఏమియు నేవిధి గొదువగ",
+    "నేమగు నేర్చుటయు లేదు నింతుల మాయన్",
+    "లేమియు నెఱిగిన యది వే",
+    "మా మెలతల గుణము లెఱిగి మఱి యుత్తముడే"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1094-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0425",
+    "gold_score": 0.4506,
+    "p_real": 0.5675,
+    "selection_score": 1.8612
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0056",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:6-399-చ.",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "తలఁపక భక్తులందు భవ దారుణ భావము గల్గు భక్తి నీ",
+    "పలుకులు నెమ్మనంబు నిను బాటిల సన్నుతిసేయ నెంచి నా",
+    "పలుకులు సేవలో నిలువఁ బండును నేనియుఁ గాక నాకు నిం",
+    "ద్రుల సుఖ మివ్విధంబున ధ్రురూద్భవలోకము లేక యుండెనే"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:6-399-చ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0117",
+    "gold_score": -0.1494,
+    "p_real": 0.1084,
+    "selection_score": 0.179
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0057",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "జగతి నడంగు రామునకుఁ జల్లని చంద్రకళావిలాసముల్",
+    "వగవగ వారి జారగ ఫలమ్ములు శేషుడు వీడ కున్నచో",
+    "నగములు వేయు పుణ్యములు నల్లన గ్రమ్మవె చీకటుల్ దివా",
+    "పగలు దివంబు దెల్లముగ పర్వతరాజియు చిమ్మ నారదా"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0093",
+    "gold_score": 0.2106,
+    "p_real": 0.5465,
+    "selection_score": 2.101
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0058",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+   "meter_id": "pamcacamaramu",
+   "meter_te": "పంచచామరము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "pamcacamaramu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అఖండతావిగాగ్రుధన్ దహర్తవీరుఁ డాతఁడున్",
+    "దఖండవేగమున్ శరంబు దప్పకుండఁ గూర్చి వీ",
+    "రఖండతన్ శరంబు లంబరంబు నిండఁగాఁ గురిం",
+    "చె ఖడ్గసిద్ధి యొండెఁ జూడఁ జెట్టఁ బొంద దాతలన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0387",
+    "gold_score": -0.3494,
+    "p_real": 0.2362,
+    "selection_score": -1.03
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0059",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-558-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఱాతినొప్పు చెవిని రాతిరిపఱచును",
+    "గంటిలోన రేణుకాలికళ్లు",
+    "తగులుకొఱకుఁ గాలితలయంటు వెతలక",
+    "ట్లెఱిఁగి వేమన ప్రతి నఱక వాయ"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-558-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0341",
+    "gold_score": 0.6906,
+    "p_real": 0.9532,
+    "selection_score": 2.1343
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0060",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:10.2-737-లవి.",
+   "meter_id": "layavibhati",
+   "meter_te": "లయవిభాతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "layavibhati",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఉడుగక కరం బలమి కడలి యుడుగక్ని పిడుగులు పడుచు నిప్పుకణికలు విరివిగా పెన్",
+    "గడుచు ముసురుక్ కురులు గులుకు బెలుచన్ జరజర లలరు బలియ్వసి బెడ లెసఁగు బెరయ్వే",
+    "బెడుగు బెరసిన్వ బెరసి లసిత బలియ్వ అలరు లసిత బలియ్వ మలరు లసిత బలియ్వే",
+    "వడిఁ బెరిగిరిర్వ బలి జడలు జడియన్ జడిసిరి లయవిభతిజ్యతి జర లలర జరాసం"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.2-737-లవి.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0071",
+    "gold_score": -0.5094,
+    "p_real": 0.0878,
+    "selection_score": -2.0671
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0061",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+   "meter_id": "pamcacamaramu",
+   "meter_te": "పంచచామరము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "pamcacamaramu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఉదగ్రకోపభూరివైరియుద్ధతుండు వీకతో",
+    "విదగ్ధు డై నిశాతబాణవిప్రసవ్యసాచియున్",
+    "విదగ్ధు డై శరాసనంబు వీకతో నొనర్చి విం",
+    "ది దెల్ల నిండ నారసించె దేహి యాస జెందగన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0387",
+    "gold_score": -0.3494,
+    "p_real": 0.3085,
+    "selection_score": -1.03
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0062",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-51-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "పరకాంతల యాసల లే",
+    "డొరుల ధనము గోరకున్న డొరులకు నూపున్",
+    "బరుషము లాడిన దానును",
+    "సరసత వర్తించు నతడు సన్మతి వేమా"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-51-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0244",
+    "gold_score": 0.5092,
+    "p_real": 0.2445,
+    "selection_score": 0.391
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0063",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అలఘులలామ నీ కగుఁ బహర్పతికిన్ బ్రతిగోత్రభాజనుం",
+    "డలఘు భవద్విరోధి మహలాసవ మంతట బాహుపాశమం",
+    "డలముఁ గరంబునం గొని నటం బొనరించు భజించు భక్తుఁ డౌ",
+    "కలధరకైలసాచలశిఖామణి కాంచన కాంచనాదులన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0270",
+    "gold_score": -0.0294,
+    "p_real": 0.2914,
+    "selection_score": 2.8548
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0064",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-532-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "చదువు లేని చదువు సద్వర్తనంబున",
+    "నిట్టి విద్యఁ దప్పి యేర్పరించి",
+    "యెఱుఁగలేక మంచి యెడలఁ గోల్పోయి వ",
+    "మతులు గొందు రంతఁ గుతిలపడుచు"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-532-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0104",
+    "gold_score": 0.6106,
+    "p_real": 0.2803,
+    "selection_score": 1.8983
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0065",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-866-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అది యెఱుంగు నీవు నలినము నీటను",
+    "గలుగు రాజహంస కల గలుగద",
+    "యనఘ యోగి యన్ని సునఁ బడి కర్మము",
+    "పరచి యుండ కతన పాయ కుండు"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-866-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0307",
+    "gold_score": 0.5306,
+    "p_real": 0.0858,
+    "selection_score": 2.3223
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0066",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+   "meter_id": "upendravajra",
+   "meter_te": "ఉపేంద్రవజ్ర",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "upendravajra",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "మహాతపస్వీ భవ ద్మా మృడా త్పా",
+    "టహం సితం నిన్ను నృ ప్టక్ష్వ తానామ్",
+    "దృహం స ఏవాబ్దమపృష్ఠ మేతిమ్",
+    "స్ఫహం సితాంగే శ్రితశాసయే యా"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0449",
+    "gold_score": -0.3094,
+    "p_real": 0.0496,
+    "selection_score": -1.3031
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0067",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-801-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అంతరము దెలిసి తనలో",
+    "నంతము గనునట్టి జీవు నంతట కనుచున్",
+    "స్వాంతన జేయు కలిగిన ప",
+    "రంతర పరమాత్మ గాన రావలె ధరణిన్"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-801-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0031",
+    "gold_score": 0.3092,
+    "p_real": 0.2153,
+    "selection_score": 0.0093
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0068",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-531-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "వేమ నాడంగఁ జేసినవెలుఁగు వెలుఁగు",
+    "శిరము జీరినకురువుగఁ జెల్లు నతని",
+    "కమరునట్టిసుఖంబుల కగునె మోక్ష",
+    "మర్థి నర్థిఁ జనింపంగ నర్థ మగున"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-531-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0112",
+    "gold_score": 0.4906,
+    "p_real": 0.5314,
+    "selection_score": 0.5707
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0069",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+   "meter_id": "madhuragati_ragada",
+   "meter_te": "మధురగతి_రగడ",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "madhuragati_ragada",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 2,
+   "lines": [
+    "విదితంబై నిక్ష్వేప్తంబై నాం",
+    "బుదయంతి త్రిమూర్తి దిశాపతివరు"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0469",
+    "gold_score": -0.2694,
+    "p_real": 0.2976,
+    "selection_score": 0.4927
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0070",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-57-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఇంచుకంత గాలి యిడిన జర్మము సంచి",
+    "యందు నిప్పు గరగ నశని జేయు",
+    "నధికశక్తిశాలి యైయుండ బెద్ద ల",
+    "య్యలత నూర్చి నంత నగ్ని గలద"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-57-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0444",
+    "gold_score": 0.5706,
+    "p_real": 0.3062,
+    "selection_score": 0.2781
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0071",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:3-277-చ.",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అలఘుతరంగసంహతిని నత్యుదితోరుసమీరసంపదన్",
+    "జలనిధి నిండునట్టి యొకసారసమధ్యమునందు లోకసం",
+    "కలితము గాగ దోచె గలకాలము దీని నెఱుంగలేక యా",
+    "కలశజతుర్ముఖుండు సముగారవిచారమునం దలంచెనే"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:3-277-చ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0100",
+    "gold_score": 0.0506,
+    "p_real": 0.7788,
+    "selection_score": 1.7911
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0072",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:6-399-చ.",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అనుచు భవద్గుణంబులు మహాత్ములకున్ మది నిర్వహింప నీ",
+    "వనుపమభక్తితో నిను నుపాస్తి యొనర్పఁగ నాకు నాత్మముల్",
+    "నినుఁ గొనియాడఁ గోరెదను నీదగుదేహము నీదుసేవలో",
+    "నునికికి నుండఁగా ధ్రువకు నొండెను బ్రహ్మసుఖంబు లెయ్యెడన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:6-399-చ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0117",
+    "gold_score": -0.1494,
+    "p_real": 0.6294,
+    "selection_score": 0.179
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0073",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-1094-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఏమియుఁ గడువేగమ యెం",
+    "దేమి దడవి యైన నింతి తెఱఁ గెట్టిది యా",
+    "వేమ లతివల గుహుం డట",
+    "వే మన్నన సేయునతఁడె వేమన చుమ్మీ"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1094-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0425",
+    "gold_score": 0.4506,
+    "p_real": 0.5349,
+    "selection_score": 1.8612
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0074",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-22-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "తనలోన మోసపుచ్చుక",
+    "తనలేనియసువులును దనదగులములుగఁ దా",
+    "ననుఁ జూచి యతఁడు కపటం",
+    "బొనరింపఁగ రిపులుగాఁ డుపోఁతులుభువిలో"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-22-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0199",
+    "gold_score": 0.4506,
+    "p_real": 0.5696,
+    "selection_score": 0.5492
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0075",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కలినీల్గంగను బాపముల్ పెరుగ గోకల్వాపవిన్యక్తకే",
+    "పులకంబుల్ దొరపాషడుల్ దసరు లప్పుల్గేవలున్ సత్తముల్",
+    "మలినంబౌ పెనుమాయ లేశ కఱవమ్మల్ బెద్దలున్ బానిసల్",
+    "చెలఁగన్ నీతరు లంటు విస్తరిలె గోష్ఠీభర్త శర్వాణిపా"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0029",
+    "gold_score": -0.7894,
+    "p_real": 0.3887,
+    "selection_score": -1.2882
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0076",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-1006-ఆ.",
+   "meter_id": "utpalamala",
+   "meter_te": "ఉత్పలమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "utpalamala",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఆకటికుండులేక ప్రతియామములందుఁ బదంబులం దొగిన్",
+    "వేకువఁ బద్యరోధముల వేమన యందఱ కర్థ మయ్యెడిన్",
+    "లోకములోన నీగతి దలొప్మని యాడుదు రీవు జీవులై",
+    "పోక మరెవ్వరున్ జగతి భూరిశివుండును బుట్టినట్టులే"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1006-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0457",
+    "gold_score": 0.5306,
+    "p_real": 0.4085,
+    "selection_score": 0.5211
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0077",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/vemana:vemana-1145-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "శ్వేతవర్ణాకృతులు గణికాతతుల్ వృ",
+    "తారతంత్రముల్ దమతమ యారగింప",
+    "నెంత యాత్మీయు లగువారియెంగిలింత",
+    "తప్పు గాఁబోలు వేమ వేమా ప్పుటెఱిఁగ"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1145-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0416",
+    "gold_score": 0.5706,
+    "p_real": 0.7178,
+    "selection_score": 0.9726
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0078",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "చూడ నమ్మోహనాంగి యీసుదతి చెలువు",
+    "నందున కిక ద్రిలోకము నందు బోటి",
+    "నమ్మి సోదర తత్తన నమ్మినట్టి",
+    "కఠినతపమున కైనను గానరారు"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0357",
+    "gold_score": 0.0106,
+    "p_real": 0.5488,
+    "selection_score": 0.6823
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0079",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+   "meter_id": "madhuragati_ragada",
+   "meter_te": "మధురగతి_రగడ",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "madhuragati_ragada",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 2,
+   "lines": [
+    "విశ్వాధిప నీచే శ్వాసము లీ",
+    "కైశ్వర్యముల్ సకలము నిలిచెను ని"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0469",
+    "gold_score": -0.2694,
+    "p_real": 0.7136,
+    "selection_score": 0.4927
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0080",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:10.1-714-మ.",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కనుఁ డమ్మా దురవస్థ దుస్తరము దుష్కారణ్యకీలాగ్నికీ",
+    "లన ధూమప్రకరంబుతో వడిఁ గడున్ మ్లక్కఱ్ప వచ్చుట్మనవ్",
+    "య్యన మేమేమి సలుప్ర మిప్పుడు కృపన్ బ్యక్షణ్య వీరబ్య భల్",
+    "అన మీపాదము మమ్ము దిక్క యనఁ గావ్యం బాపనిక్నిన్న్య నిన్"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-714-మ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0494",
+    "gold_score": 0.2106,
+    "p_real": 0.0549,
+    "selection_score": 2.2718
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0081",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:6-399-చ.",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "భజనల జూపి నీవు గను భావమునం దలపోయ వ్రాలుచున్",
+    "నిజముగ నాదు వాక్యములు నిన్ను నుతింపగ జేయ వ్రాలుచున్",
+    "నిజముగ నీదు సేవ బరిణేతము నొందగ వ్రాలుచున్ వలన్",
+    "ద్విజపతి యింతె గాక ధ్రువ వీలును బ్రహ్మము వాసవాది సం"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:6-399-చ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0117",
+    "gold_score": -0.1494,
+    "p_real": 0.0692,
+    "selection_score": 0.179
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0082",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "meter_id": "sragdhara",
+   "meter_te": "స్రగ్ధర",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "sragdhara",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అత్యంతోద్దండచాపోత్త్యమసురరిపుతోర్జ్యాణితక్రోడదం డై",
+    "వాత్యుగ్రధ్వగ్రహేలావకములగరముల్ వారణాశ్వంబులుం దా",
+    "నత్యంతాపేతపంక్తిం బ్యతిమిరి దనుజానన్యసామ్రాజ్యమూహం",
+    "బ్రత్యక్షంబై విభూతిన్ బ్రకటితగభగుభ్లాతితోడ్తోఁ జెలంగెన్"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0488",
+    "gold_score": -0.3094,
+    "p_real": 0.0561,
+    "selection_score": -1.2694
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0083",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "చెలియ చెలువంబు గల్గు నాచెలువ కెల్ల",
+    "ముజ్జగంబులఁ జాలరు మొల్లముగను",
+    "నమ్ము మీమాట లన్న యో యనుజ రూప",
+    "తపసులును జూడ మది నిల్పఁ దగరు చెలియ"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0357",
+    "gold_score": 0.0106,
+    "p_real": 0.1749,
+    "selection_score": 0.6823
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0084",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "meter_id": "sragdhara",
+   "meter_te": "స్రగ్ధర",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "sragdhara",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అత్యంతప్రత్యవల్కల్య మగు శరశరాస్యత్నజాతాస్త్ర సంచర్",
+    "త్కత్యూషస్యందనాశ్వగ్మరణరయ సహస్స్కందు సస్యప్మ సైన్యన్",
+    "రాత్యూనా తత్ర ప్రమ్రిత్య్ర స్సుర మర ల్చరల్రవ్ర స్సుర్రస్సురస్యున్",
+    "సుత్యస్యారుణ్య స్సుర్యస్యు సుర స్సుర స్సురస్యున్ర స్సుర్యస్య సుర్యూ"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0488",
+    "gold_score": -0.3094,
+    "p_real": 0.0011,
+    "selection_score": -1.2694
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0085",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అమ్మను దొలగింప దలం",
+    "పమ్మున నడిచి నము జేసి పడవేయగ విల్",
+    "దమ్ములు గడగిన లక్ష్మణ",
+    "సమ్ముఖమున నుంచి దైత్యసార్వభవుండున్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0347",
+    "gold_score": -0.3894,
+    "p_real": 0.0618,
+    "selection_score": -1.1157
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0086",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-532-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "సత్ప్రవర్తనము సహమ్ త్ప్రక చదువు ప్ర",
+    "యోజనము విడిచి యుభమ్ జలకు న",
+    "భ్యసనము నెఱుగ కల రస విలసిల్లు తు",
+    "దకు సమూహముల సమ కరుణ తన"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-532-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0104",
+    "gold_score": 0.6106,
+    "p_real": 0.2406,
+    "selection_score": 1.8983
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0087",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-1145-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "వెల్ల కుక్కల భుక్తియు వెలయ జార",
+    "లధమ పౌరుల శేషంబు లందు కొనుట",
+    "యెంత మేలయ్యె నెంగిలి యెగ్గు మనకు",
+    "నధిక మగువాని యెంగిలి యందు వేమ"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1145-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0416",
+    "gold_score": 0.5706,
+    "p_real": 0.1086,
+    "selection_score": 0.9726
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0088",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/bhagavatam:10.1-214-మాని.",
+   "meter_id": "manini",
+   "meter_te": "మానిని",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "manini",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "బాలకృ ఈవస వచ్చన చేరెను వర్ణపు రాసియ పయ్యె ధరన్",
+    "మేలు గనంగను మేలిమి మేలిమి మేలిమి లెయ్యవి మేల నదే",
+    "వేలుపు పైట దవిన్ మెరిసిన్ నగ న్భిర్య గనన్ కమ ల్విన్న వలల్",
+    "మేలిమి మేలిమి మేలిమి మేలిమి మేలిమి మేలిమి మేలిమి మే"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-214-మాని.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0141",
+    "gold_score": -0.1494,
+    "p_real": 0.0464,
+    "selection_score": -0.5674
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0089",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-558-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అంఘ్రి కంటకా లిహతనంబు చెవిలోన",
+    "నొప్పు లొసగు పచ్చి కప్పు గంటి",
+    "ముల్లు కంటి ముల్లు ముడువంగ నిత్యంబు",
+    "వేమనార్య వేటు వేయు గలహ"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-558-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0341",
+    "gold_score": 0.6906,
+    "p_real": 0.0591,
+    "selection_score": 2.1343
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0090",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అలికి యెవరి యంద మిహ మూఁడు లవని నెవ",
+    "రును నిలువరు నాదుపలుకులు నయము నయ",
+    "సోదరా కఠినత పిల్చె చూచినను హృ",
+    "దయము నదుపు జేసి యదృశ్యమయినచో న"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0357",
+    "gold_score": 0.0106,
+    "p_real": 0.1709,
+    "selection_score": 0.6823
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0091",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-558-ఆ.",
+   "meter_id": "ataveladi",
+   "meter_te": "ఆటవెలది",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "ataveladi",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "రాతి ముక్క లోన రాతి ముక్కను చెవి",
+    "కాటు వేయు పట్టి కంటి చిన్న",
+    "కాలి ముల్లు మిగులు కలత పెట్టును వేమ",
+    "నవరతము కుటుంబ మవని యందు"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-558-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0341",
+    "gold_score": 0.6906,
+    "p_real": 0.0401,
+    "selection_score": 2.1343
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0092",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+   "meter_id": "utpalamala",
+   "meter_te": "ఉత్పలమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "utpalamala",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ఆతఱి గ్రూరసైనికులు నావల మూకలు గాఁగఁ జేరి యా",
+    "రాతని బట్ట నిడ్డ కని రాని విధంబులు వాడి వారలున్",
+    "క్ష్మాతల రాల పిళ్ళకిలి కాళ్ళను గోళ్ళను దాడి చేయుచున్",
+    "మాతను జావు దవ్వులకు మార్చిరి రోకలి కత్తి పోటునన్"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0329",
+    "gold_score": -0.0694,
+    "p_real": 0.2313,
+    "selection_score": 1.0018
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0093",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+   "meter_id": "champakamala",
+   "meter_te": "చంపకమాల",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "champakamala",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "అభవ మహామహీ విభవ యత్యధికప్రతిభాకరా మహా",
+    "యభవ మహాభవా భవద యంతర చేత నతాళవృంతముల్",
+    "నిభయము సేయు భక్తుఁడు వినీత రతామణిభూధరాగ్రసా",
+    "లభమణికాంచనప్రకట లంతర సద్మము గాంచు నెప్పుడున్"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0270",
+    "gold_score": -0.0294,
+    "p_real": 0.8313,
+    "selection_score": 2.8548
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0094",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:10.1-714-మ.",
+   "meter_id": "mattebhavikriditamu",
+   "meter_te": "మత్తేభవిక్రీడితము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "mattebhavikriditamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కనుడీ కందక కేతుకీలకణికాకాలాగ్నిధూమావళీ",
+    "జనితానాసమయోద్ధతాగ్ని జవనజ్వాలల్ మముం జుట్టుముం",
+    "డిన నేమందుము కృష్ణ పద్మదళలోలే శూర మీపాద వం",
+    "దనముల్ వేడుదు మీపదంబులె గతిం దక్కించు డీమంటలన్"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.1-714-మ.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0494",
+    "gold_score": 0.2106,
+    "p_real": 0.4131,
+    "selection_score": 2.2718
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0095",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/vemana:vemana-22-ఆ.",
+   "meter_id": "kandamu",
+   "meter_te": "కందము",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "kandamu",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కపటపు తలపులు నిలిపిన",
+    "నపగత జీవులు దనవలె నమ్మక యుండున్",
+    "విపరీతము తద్వృత్తము",
+    "విపరీతము గాదు లోక వేమన వేమా"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-22-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0199",
+    "gold_score": 0.4506,
+    "p_real": 0.1613,
+    "selection_score": 0.5492
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0096",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/vemana:vemana-1145-ఆ.",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "శునక భక్షణము వధూ వ్యభి నిమిషము న",
+    "ధమ భర ప్రద శేష సమ గ్రహములు గావు",
+    "మనకు నత్యంత యాత్మీయ మంగ లింగ",
+    "మైన తరుణ మంగ ళము తప్పిం నరయు టె"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/vemana:vemana-1145-ఆ.",
+    "gold_source": "vemana",
+    "gold_eval_id": "he_0416",
+    "gold_score": 0.5706,
+    "p_real": 0.072,
+    "selection_score": 0.9726
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0097",
+   "source_dataset": "nandi_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Nandi-Mini-150M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "ప్రేమ నీరే ఫలాయుధపృథివిభునకు",
+    "జాతిరేఖావతంస స్వర్ణా తుషార",
+    "జాతివనితామణిని జగజ్జనుల కాత్మ",
+    "గొమ్మ యనుచు నీయమ్మ నా కూర్మి కొసరు"
+   ],
+   "metadata": {
+    "model": "nandi_ft",
+    "cell": "nandi_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0259",
+    "gold_score": 0.2106,
+    "p_real": 0.5427,
+    "selection_score": 2.5804
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0098",
+   "source_dataset": "t5_1b_ft",
+   "source_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "meter_id": "layagrahi",
+   "meter_te": "లయగ్రాహి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "layagrahi",
+   "strictest_profile": "strict",
+   "author": "T5Gemma 2 1B SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "కడ్రొ క్కడ దన్నుకొనుచుం డ్రొ క్కడ నొండొరుల గాళ్లు తఱుగన్రి కఱు బ్బడ్రి కిట నిఱ్ఱిం",
+    "బెడ్రొ క్కడ దెగ్రువలు ద్రుం డ్రని తలగ్రువలు నెండ్రలు జలక్రిమిగ నెడ్రులు గ్రుమిన్రా",
+    "గడ్రొ క్కడ నెఱ్ఱ లులి నైడ్రొ కడుపున్రుకలు మెడ్రొ క్కడ ద్రుంప డని కొండ్ర లిరుమూడెల్",
+    "కడ్రొ క్కడ నెమ్ములు దొఱం డ్రనుచు నొండొరుల నొండ్రు గడలొత్తగ నొకండు పడ గెడ్రౌ"
+   ],
+   "metadata": {
+    "model": "t5_1b_ft",
+    "cell": "t5_1b_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+    "gold_source": "bhagavatam",
+    "gold_eval_id": "he_0133",
+    "gold_score": -0.7494,
+    "p_real": 0.4381,
+    "selection_score": -2.2374
+   },
+   "ratings": {}
+  },
+  {
+   "eval_id": "he2_0099",
+   "source_dataset": "mdlm523m_ft",
+   "source_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+   "meter_id": "tetagiti",
+   "meter_te": "తేటగీతి",
+   "meter_label_source": "grid_prompt",
+   "declared_meter": "tetagiti",
+   "strictest_profile": "strict",
+   "author": "Chandohasam MDLM-523M SFT · v2 controller",
+   "line_count": 4,
+   "lines": [
+    "వలపు మదనా మణి పసిఁడి బాల లోక",
+    "తరుల దీవ పూవుల దిమ్మ వరుస వనిని",
+    "జనిత మగు పరమ పతివ్రత ననుచు నను",
+    "గోరు ప్రేమ నాకిమ్ము ప్రేమా రమణి మ"
+   ],
+   "metadata": {
+    "model": "mdlm523m_ft",
+    "cell": "mdlm523m_ft|masking_backtrack_v2",
+    "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+    "gold_source": "kuchimanchi_timmakavi",
+    "gold_eval_id": "he_0259",
+    "gold_score": 0.2106,
+    "p_real": 0.0407,
+    "selection_score": 2.5804
+   },
+   "ratings": {}
+  }
+ ]
+}
