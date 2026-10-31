@@ -1,0 +1,226 @@
+{
+ "note": "grid prompts outside human-eval phase 1: to be rated in a phase 2 (user decision 2026-10-28), so every grid prompt has a human-rated poem",
+ "count": 44,
+ "poems": [
+  {
+   "eval_id": "he_0094",
+   "id": "dataset/bhagavatam:10.1-103-మత్త.",
+   "metre": "mattakokilamu"
+  },
+  {
+   "eval_id": "he_0087",
+   "id": "dataset/bhagavatam:10.1-1074-మ.",
+   "metre": "mattebhavikriditamu"
+  },
+  {
+   "eval_id": "he_0500",
+   "id": "dataset/bhagavatam:10.1-1104-మత్త.",
+   "metre": "mattakokilamu"
+  },
+  {
+   "eval_id": "he_0226",
+   "id": "dataset/bhagavatam:10.1-1112-ఇం.",
+   "metre": "indravajra"
+  },
+  {
+   "eval_id": "he_0008",
+   "id": "dataset/bhagavatam:10.1-1385-క.",
+   "metre": "kandamu"
+  },
+  {
+   "eval_id": "he_0473",
+   "id": "dataset/bhagavatam:10.1-1597-శా.",
+   "metre": "sardulavikriditamu"
+  },
+  {
+   "eval_id": "he_0286",
+   "id": "dataset/bhagavatam:10.1-1651-శా.",
+   "metre": "sardulavikriditamu"
+  },
+  {
+   "eval_id": "he_0245",
+   "id": "dataset/bhagavatam:10.1-1769-మత్త.",
+   "metre": "mattakokilamu"
+  },
+  {
+   "eval_id": "he_0051",
+   "id": "dataset/bhagavatam:10.1-586-పంచ.",
+   "metre": "pamcacamaramu"
+  },
+  {
+   "eval_id": "he_0385",
+   "id": "dataset/bhagavatam:10.1-594-ఆ.",
+   "metre": "ataveladi"
+  },
+  {
+   "eval_id": "he_0257",
+   "id": "dataset/bhagavatam:10.1-739-మత్త.",
+   "metre": "mattakokilamu"
+  },
+  {
+   "eval_id": "he_0282",
+   "id": "dataset/bhagavatam:10.1-876-మ.",
+   "metre": "mattebhavikriditamu"
+  },
+  {
+   "eval_id": "he_0118",
+   "id": "dataset/bhagavatam:10.2-1106-ఉ.",
+   "metre": "utpalamala"
+  },
+  {
+   "eval_id": "he_0166",
+   "id": "dataset/bhagavatam:10.2-1152-మత్త.",
+   "metre": "mattakokilamu"
+  },
+  {
+   "eval_id": "he_0467",
+   "id": "dataset/bhagavatam:10.2-283-చ.",
+   "metre": "champakamala"
+  },
+  {
+   "eval_id": "he_0356",
+   "id": "dataset/bhagavatam:10.2-317-ఉ.",
+   "metre": "utpalamala"
+  },
+  {
+   "eval_id": "he_0220",
+   "id": "dataset/bhagavatam:10.2-627-మ.",
+   "metre": "mattebhavikriditamu"
+  },
+  {
+   "eval_id": "he_0492",
+   "id": "dataset/bhagavatam:10.2-658-తే.",
+   "metre": "tetagiti"
+  },
+  {
+   "eval_id": "he_0248",
+   "id": "dataset/bhagavatam:10.2-883-స్రగ్ద.",
+   "metre": "sragdhara"
+  },
+  {
+   "eval_id": "he_0124",
+   "id": "dataset/bhagavatam:10.2-940-మస్ర.",
+   "metre": "mahasragdhara"
+  },
+  {
+   "eval_id": "he_0201",
+   "id": "dataset/bhagavatam:3-1011-చ.",
+   "metre": "champakamala"
+  },
+  {
+   "eval_id": "he_0057",
+   "id": "dataset/bhagavatam:3-1054-మాలి.",
+   "metre": "malini"
+  },
+  {
+   "eval_id": "he_0249",
+   "id": "dataset/bhagavatam:3-347-క.",
+   "metre": "kandamu"
+  },
+  {
+   "eval_id": "he_0415",
+   "id": "dataset/bhagavatam:4-720-సీ.",
+   "metre": "seesamu"
+  },
+  {
+   "eval_id": "he_0432",
+   "id": "dataset/bhagavatam:4-861-చ.",
+   "metre": "champakamala"
+  },
+  {
+   "eval_id": "he_0279",
+   "id": "dataset/bhagavatam:5.1-183-మాలి.",
+   "metre": "malini"
+  },
+  {
+   "eval_id": "he_0187",
+   "id": "dataset/bhagavatam:6-278-ఉ.",
+   "metre": "utpalamala"
+  },
+  {
+   "eval_id": "he_0189",
+   "id": "dataset/bhagavatam:6-321-మత్త.",
+   "metre": "mattakokilamu"
+  },
+  {
+   "eval_id": "he_0156",
+   "id": "dataset/bhagavatam:6-378-వన.",
+   "metre": "vanamayuramu"
+  },
+  {
+   "eval_id": "he_0217",
+   "id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "metre": "layagrahi"
+  },
+  {
+   "eval_id": "he_0422",
+   "id": "dataset/bhagavatam:6-389-ఉత్సా.",
+   "metre": "utsahamu"
+  },
+  {
+   "eval_id": "he_0333",
+   "id": "dataset/bhagavatam:6-454-స్రగ్వి.",
+   "metre": "sragvini"
+  },
+  {
+   "eval_id": "he_0047",
+   "id": "dataset/bhagavatam:6-530-తో.",
+   "metre": "totakamu"
+  },
+  {
+   "eval_id": "he_0197",
+   "id": "dataset/bhagavatam:8-437-మ.",
+   "metre": "mattebhavikriditamu"
+  },
+  {
+   "eval_id": "he_0388",
+   "id": "dataset/bhagavatam:8-662-శా.",
+   "metre": "sardulavikriditamu"
+  },
+  {
+   "eval_id": "he_0243",
+   "id": "dataset/bhagavatam:8-71-శా.",
+   "metre": "sardulavikriditamu"
+  },
+  {
+   "eval_id": "he_0371",
+   "id": "dataset/bhagavatam:8-715-ఆ.",
+   "metre": "ataveladi"
+  },
+  {
+   "eval_id": "he_0232",
+   "id": "dataset/bhagavatam:8-744-మాలి.",
+   "metre": "malini"
+  },
+  {
+   "eval_id": "he_0035",
+   "id": "dataset/bhagavatam:9-384-మ.",
+   "metre": "mattebhavikriditamu"
+  },
+  {
+   "eval_id": "he_0235",
+   "id": "dataset/bhagavatam:9-54-తే.",
+   "metre": "tetagiti"
+  },
+  {
+   "eval_id": "he_0301",
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-28",
+   "metre": "mattebhavikriditamu"
+  },
+  {
+   "eval_id": "he_0055",
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-443",
+   "metre": "utpalamala"
+  },
+  {
+   "eval_id": "he_0089",
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-828",
+   "metre": "tetagiti"
+  },
+  {
+   "eval_id": "he_0178",
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-99",
+   "metre": "sardulavikriditamu"
+  }
+ ]
+}

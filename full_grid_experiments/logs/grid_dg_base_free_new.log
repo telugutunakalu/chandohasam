@@ -1,0 +1,74 @@
+built on cuda in 1s
+987 dense tensors loaded (41s)
+experts of 10/30 layers loaded (47s)
+experts of 20/30 layers loaded (54s)
+experts of 30/30 layers loaded (61s)
+ready in 61s; GPU memory allocated 51.8 GB
+grid_dg_base_free_new: diffusiongemma-26B-A4B NVFP4 (base); instruction prompt; settled decoder; free native; 66 poems in 10 metres; modes ['baseline']; slice 1747 tokens
+[free native] ataveladi|dataset/bhagavatam:10.1-594-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 59 tokens, 6.92s
+[free native] ataveladi|dataset/bhagavatam:8-715-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 73 tokens, 8.52s
+[free native] ataveladi|dataset/vemana:vemana-1130-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 64 tokens, 4.49s
+[free native] ataveladi|dataset/vemana:vemana-202-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 54 tokens, 4.7s
+[free native] ataveladi|dataset/vemana:vemana-345-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 51 tokens, 5.17s
+[free native] ataveladi|dataset/vemana:vemana-532-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 44 tokens, 5.22s
+[free native] ataveladi|dataset/vemana:vemana-558-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 49 tokens, 4.82s
+[free native] ataveladi|dataset/vemana:vemana-57-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 66 tokens, 5.25s
+[free native] ataveladi|dataset/vemana:vemana-866-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 64 tokens, 4.78s
+[free native] ataveladi|gemini:poem_0060|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 56 tokens, 4.05s
+[free native] ataveladi|gemini:poem_0062|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 51 tokens, 5.64s
+[free native] champakamala|dataset/bhagavatam:10.2-283-చ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 76 tokens, 9.43s
+[free native] champakamala|dataset/bhagavatam:3-1011-చ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 60 tokens, 12.1s
+[free native] champakamala|dataset/bhagavatam:3-277-చ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 65 tokens, 10.37s
+[free native] champakamala|dataset/bhagavatam:4-861-చ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 63 tokens, 11.72s
+[free native] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-214|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 63 tokens, 7.74s
+[free native] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-266|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 83 tokens, 10.06s
+[free native] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-674|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 70 tokens, 7.61s
+[free native] champakamala|dataset/vemana:vemana-905-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 48 tokens, 10.0s
+[free native] champakamala|gemini:poem_0247|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 78 tokens, 12.04s
+[free native] kandamu|dataset/bhagavatam:10.1-1385-క.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 41 tokens, 10.18s
+[free native] kandamu|dataset/bhagavatam:3-347-క.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 42 tokens, 5.28s
+[free native] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-668|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 45 tokens, 8.36s
+[free native] kandamu|dataset/vemana:vemana-1068-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 51 tokens, 10.61s
+[free native] kandamu|dataset/vemana:vemana-1094-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 48 tokens, 4.88s
+[free native] kandamu|dataset/vemana:vemana-22-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 48 tokens, 7.02s
+[free native] kandamu|dataset/vemana:vemana-51-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 48 tokens, 13.29s
+[free native] kandamu|dataset/vemana:vemana-727-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 43 tokens, 8.06s
+[free native] kandamu|dataset/vemana:vemana-801-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 40 tokens, 5.07s
+[free native] kandamu|dataset/vemana:vemana-903-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 37 tokens, 6.09s
+[free native] kandamu|gemini:poem_0100|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 41 tokens, 10.13s
+[free native] mattakokilamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1196|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 65 tokens, 13.56s
+[free native] mattebhavikriditamu|dataset/bhagavatam:10.1-1074-మ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 88 tokens, 13.27s
+[free native] mattebhavikriditamu|dataset/bhagavatam:10.1-714-మ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 71 tokens, 12.79s
+[free native] mattebhavikriditamu|dataset/bhagavatam:10.2-627-మ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 46 tokens, 6.88s
+[free native] mattebhavikriditamu|dataset/bhagavatam:3-799-మ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 75 tokens, 6.83s
+[free native] mattebhavikriditamu|dataset/bhagavatam:8-437-మ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 85 tokens, 9.92s
+[free native] mattebhavikriditamu|dataset/bhagavatam:9-384-మ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 68 tokens, 6.87s
+[free native] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-87|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 62 tokens, 5.02s
+[free native] mattebhavikriditamu|gemini:poem_0051|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 79 tokens, 5.59s
+[free native] sardulavikriditamu|dataset/bhagavatam:10.1-1185-శా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 75 tokens, 5.92s
+[free native] sardulavikriditamu|dataset/bhagavatam:10.1-1597-శా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 69 tokens, 5.86s
+[free native] sardulavikriditamu|dataset/bhagavatam:10.1-1651-శా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 82 tokens, 14.22s
+[free native] sardulavikriditamu|dataset/bhagavatam:8-662-శా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 72 tokens, 11.33s
+[free native] sardulavikriditamu|dataset/bhagavatam:8-71-శా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 65 tokens, 9.2s
+[free native] sardulavikriditamu|gemini:poem_0251|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 76 tokens, 8.82s
+[free native] seesamu|dataset/bhagavatam:4-720-సీ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 56 tokens, 10.69s
+[free native] tetagiti|dataset/bhagavatam:10.2-658-తే.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 46 tokens, 7.53s
+[free native] tetagiti|dataset/bhagavatam:9-54-తే.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 45 tokens, 9.44s
+[free native] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-604|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 47 tokens, 4.79s
+[free native] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-654|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 44 tokens, 11.24s
+[free native] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-828|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 52 tokens, 11.86s
+[free native] tetagiti|dataset/vemana:vemana-1077-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 40 tokens, 10.99s
+[free native] tetagiti|dataset/vemana:vemana-1145-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 51 tokens, 4.52s
+[free native] tetagiti|dataset/vemana:vemana-327-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 54 tokens, 5.49s
+[free native] tetagiti|dataset/vemana:vemana-531-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 52 tokens, 12.69s
+[free native] tetagiti|gemini:poem_0069|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 65 tokens, 14.09s
+[free native] utpalamala|dataset/bhagavatam:10.2-1106-ఉ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 60 tokens, 6.55s
+[free native] utpalamala|dataset/bhagavatam:10.2-317-ఉ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 67 tokens, 5.85s
+[free native] utpalamala|dataset/bhagavatam:6-278-ఉ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 72 tokens, 9.29s
+[free native] utpalamala|dataset/kuchimanchi_timmakavi:kuchimanchi-1341|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 76 tokens, 11.03s
+[free native] utpalamala|dataset/kuchimanchi_timmakavi:kuchimanchi-443|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 72 tokens, 6.51s
+[free native] utpalamala|dataset/vemana:vemana-1006-ఆ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 63 tokens, 6.69s
+[free native] utpalamala|gemini:poem_0121|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 76 tokens, 10.74s
+[free native] utpalamala|gemini:poem_0141|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 80 tokens, 11.84s
+[free native] utsahamu|gemini:poem_0110|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 56 tokens, 9.42s
+grid_dg_base_free_new: 66 rows → /home/samvaran/phd_workspace/chandohasam/lora_gemma_diffusion/runs/grid_dg_base_free_new/results.jsonl

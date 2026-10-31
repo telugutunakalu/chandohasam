@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Side queue (user decision 2026-10-29 07:15, full_grid_experiments/PLAN.md decision 23): the DAWG v2 A+B cells of the
+# Side queue (user decision 2026-10-29 07:15, full_grid_experiments/README.md decision 23): the DAWG v2 A+B cells of the
 # 14 smaller rows (Nandi ×2, Gemma-4 E4B, T5 ×7, MDLM ×4) run now, beside the 100-prompt grid (gpu-queue-1028g), not
 # after it: these models leave the GPU mostly idle (T5 1B constrained: ≈ 20% busy, one CPU core), so the job beside
 # them loses little. Gemma-4 26B and DiffusionGemma (≈ 52 GB each) stay in the GPU queue (gpu-queue-1029i), one at a

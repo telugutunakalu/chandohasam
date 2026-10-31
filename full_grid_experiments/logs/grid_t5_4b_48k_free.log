@@ -1,0 +1,81 @@
+Loading weights:   0%|          | 0/1327 [00:00<?, ?it/s]Loading weights:  95%|█████████▌| 1261/1327 [00:00<00:00, 12605.59it/s]Loading weights: 100%|██████████| 1327/1327 [00:00<00:00, 12719.51it/s]
+grid_t5_4b_48k_free: T5Gemma 2 4b runs/t5g-4b-r128-full/lora_at_48000.pt; slice 1,747 tokens; 19 metres, 34 poems; modes ['baseline']; seeds free [42], constrained [42]; inventory none; Layer B weight 0.0 (override, all)
+[1/1] champakamala|dataset/bhagavatam:6-399-చ.|baseline|42: eos tok=100 gana=False prasa=False yati=False 7.8s
+[1/2] mattebhavikriditamu|dataset/bhagavatam:10.1-876-మ.|baseline|42: eos tok=109 gana=False prasa=False yati=False 8.3s
+[2/2] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-28|baseline|42: eos tok=120 gana=False prasa=False yati=False 8.3s
+[1/1] sardulavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-99|baseline|42: budget tok=236 gana=False prasa=False yati=False 16.8s
+[1/2] sragdhara|dataset/bhagavatam:10.2-883-స్రగ్ద.|baseline|42: eos tok=70 gana=False prasa=False yati=False 5.7s
+[2/2] sragdhara|dataset/bhagavatam:6-272-స్రగ్ద.|baseline|42: eos tok=62 gana=False prasa=False yati=False 4.2s
+[1/1] mahasragdhara|dataset/bhagavatam:10.2-940-మస్ర.|baseline|42: eos tok=71 gana=False prasa=False yati=False 5.8s
+[1/2] totakamu|dataset/bhagavatam:6-530-తో.|baseline|42: eos tok=54 gana=False prasa=False yati=False 4.5s
+[2/2] totakamu|dataset/kuchimanchi_timmakavi:kuchimanchi-754|baseline|42: eos tok=78 gana=False prasa=False yati=False 5.4s
+[1/1] bhujangaprayatamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1200|baseline|42: eos tok=95 gana=False prasa=False yati=False 7.3s
+[1/6] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|baseline|42: eos tok=96 gana=False prasa=False yati=False 7.4s
+[2/6] mattakokilamu|dataset/bhagavatam:10.1-1104-మత్త.|baseline|42: eos tok=102 gana=False prasa=False yati=False 6.9s
+[3/6] mattakokilamu|dataset/bhagavatam:10.1-1769-మత్త.|baseline|42: eos tok=60 gana=False prasa=False yati=False 4.2s
+[4/6] mattakokilamu|dataset/bhagavatam:10.1-739-మత్త.|baseline|42: eos tok=100 gana=False prasa=False yati=False 6.8s
+[5/6] mattakokilamu|dataset/bhagavatam:10.2-1152-మత్త.|baseline|42: eos tok=98 gana=False prasa=False yati=False 6.6s
+[6/6] mattakokilamu|dataset/bhagavatam:6-321-మత్త.|baseline|42: eos tok=100 gana=False prasa=False yati=False 6.7s
+[1/2] pamcacamaramu|dataset/bhagavatam:10.1-586-పంచ.|baseline|42: eos tok=102 gana=False prasa=False yati=False 7.8s
+[2/2] pamcacamaramu|dataset/kuchimanchi_timmakavi:kuchimanchi-1197|baseline|42: eos tok=98 gana=False prasa=False yati=False 6.6s
+[1/1] indravajra|dataset/bhagavatam:10.1-1112-ఇం.|baseline|42: eos tok=67 gana=False prasa=False yati=False 5.4s
+[1/1] upendravajra|dataset/bhagavatam:10.1-407-ఉపేం.|baseline|42: eos tok=95 gana=False prasa=False yati=False 7.3s
+[1/2] sragvini|dataset/bhagavatam:6-454-స్రగ్వి.|baseline|42: eos tok=69 gana=False prasa=False yati=False 5.6s
+[2/2] sragvini|dataset/kuchimanchi_timmakavi:kuchimanchi-1209|baseline|42: eos tok=58 gana=False prasa=False yati=False 4.0s
+[1/1] utsahamu|dataset/bhagavatam:6-389-ఉత్సా.|baseline|42: eos tok=33 gana=False prasa=False yati=False 3.3s
+[1/2] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|baseline|42: eos tok=74 gana=False prasa=False yati=False 6.1s
+[2/2] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1207|baseline|42: eos tok=55 gana=False prasa=False yati=False 3.7s
+[1/4] malini|dataset/bhagavatam:3-1054-మాలి.|baseline|42: eos tok=92 gana=False prasa=False yati=False 7.0s
+[2/4] malini|dataset/bhagavatam:5.1-183-మాలి.|baseline|42: eos tok=96 gana=False prasa=False yati=False 6.4s
+[3/4] malini|dataset/bhagavatam:8-744-మాలి.|baseline|42: eos tok=104 gana=False prasa=False yati=False 7.1s
+[4/4] malini|dataset/kuchimanchi_timmakavi:kuchimanchi-863|baseline|42: eos tok=80 gana=False prasa=False yati=False 5.4s
+[1/1] manini|dataset/bhagavatam:10.1-214-మాని.|baseline|42: eos tok=90 gana=False prasa=False yati=False 7.0s
+[1/1] vanamayuramu|dataset/bhagavatam:6-378-వన.|baseline|42: eos tok=110 gana=False prasa=False yati=False 8.2s
+[1/2] layagrahi|dataset/bhagavatam:10.2-739-లగ్రా.|baseline|42: eos tok=95 gana=False prasa=False yati=False 7.2s
+[2/2] layagrahi|dataset/bhagavatam:6-385-లగ్రా.|baseline|42: eos tok=66 gana=False prasa=False yati=False 4.5s
+[1/1] layavibhati|dataset/bhagavatam:10.2-737-లవి.|baseline|42: eos tok=106 gana=False prasa=False yati=False 8.2s
+# Token choices under the constraint
+
+Runs: `grid_t5_4b_48k_free`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 34 | 0 | 0 | 89 | -1.579 | 63 | 22 | 0.749 | 2.875 | 37 | 7 | 0 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| baseline | line_start | 31 | -2.016 | 16 | 6 | 0.920 |
+| baseline | prasa | 20 | -1.592 | 70 | 10 | 0.845 |
+| baseline | other | 63 | -1.551 | 70 | 3 | 0.862 |
+
+## By meter
+
+| meter | baseline in meter % / logp / lexical % |
+|---|---|
+| bhujangaprayatamu | 0 / -1.63 / 19 |
+| champakamala | 0 / -1.38 / 43 |
+| indravajra | 0 / -1.72 / 17 |
+| layagrahi | 0 / -1.67 / 27 |
+| layavibhati | 0 / -1.66 / 39 |
+| madhuragati_ragada | 0 / -1.44 / 53 |
+| mahasragdhara | 0 / -1.88 / 50 |
+| malini | 0 / -1.44 / 23 |
+| manini | 0 / -1.83 / 42 |
+| mattakokilamu | 0 / -1.53 / 34 |
+| mattebhavikriditamu | 0 / -1.58 / 39 |
+| pamcacamaramu | 0 / -1.54 / 48 |
+| sardulavikriditamu | 0 / -1.68 / 32 |
+| sragdhara | 0 / -1.86 / 36 |
+| sragvini | 0 / -1.38 / 59 |
+| totakamu | 0 / -1.68 / 16 |
+| upendravajra | 0 / -1.56 / 62 |
+| utsahamu | 0 / -1.80 / 56 |
+| vanamayuramu | 0 / -1.45 / 15 |
+
+grid_t5_4b_48k_free: 238 s

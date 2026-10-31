@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # The grid's small-model cells beside DiffusionGemma's whole-pool training (user decision 2026-10-24: "run small model
-# cells alongside, let's save time"; full_grid_experiments/PLAN.md §8): Nandi ×2, MDLM ×4, T5Gemma 2 270M / 1B ×4 —
+# cells alongside, let's save time"; full_grid_experiments/README.md, How it ran): Nandi ×2, MDLM ×4, T5Gemma 2 270M / 1B ×4 —
 # 1–5 GB of GPU each and mostly CPU (the metre masks), against the training's ≈ 57 GB. The smoke cells of these rows,
 # then their core cells, then the extra cells of the small † rows (Nandi, MDLM 523M). Every cell is skipped when its
 # results exist, so the main grid queue (gpu-queue-1023f) later skips what this did. The 2-s memory watchdog stops

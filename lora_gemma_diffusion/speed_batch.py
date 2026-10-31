@@ -1,4 +1,4 @@
-"""Phase 0 speed test (../full_grid_experiments/PLAN.md §3, §7 lever ①): examples per forward for the whole-pool LoRA.
+"""Phase 0 speed test (../full_grid_experiments/README.md, Phase 0 and decision 11, lever ①): examples per forward for the whole-pool LoRA.
 
     ../.venv/bin/python -u speed_batch.py            # → runs/speed_batch.json (≈ 5 min with the GPU to itself)
 

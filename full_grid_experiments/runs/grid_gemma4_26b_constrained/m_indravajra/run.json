@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-26B-A4B-it",
+ "meters": [
+  "indravajra"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/bhagavatam:10.1-1112-ఇం.": "గోపికలు మరియు గోపీకృష్ణుడి మధ్య జరిగిన రాసలీలల కథనమును ఎవరైతే శ్రద్ధగా వింటారో, వారు అన్ని రకాల బాధల నుండి విముక్తి పొందుతారు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 376,
+  "baseline_max_tokens": 376,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "indravajra": 376
+ },
+ "started": "2026-10-29 00:50:12"
+}

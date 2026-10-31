@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/1119 [00:00<?, ?it/s]Loading weights:   9%|▉         | 105/1119 [00:00<00:01, 961.71it/s]Loading weights:  19%|█▊        | 209/1119 [00:00<00:00, 1005.97it/s]Loading weights:  28%|██▊       | 313/1119 [00:00<00:00, 987.21it/s] Loading weights:  44%|████▎     | 488/1119 [00:00<00:00, 1276.22it/s]Loading weights:  64%|██████▍   | 714/1119 [00:00<00:00, 1622.81it/s]Loading weights: 100%|██████████| 1119/1119 [00:00<00:00, 2085.52it/s]
+grid_t5_1b_ft_constrained_smoke_v2: T5Gemma 2 1b runs/t5g-1b-full/final; slice 1,747 tokens; 2 metres, 9 poems; modes ['masking_backtrack']; seeds free [42], constrained [42]; inventory padyarchana; Layer B weight 2.0 (all, padyarchana)
+[1/1] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|masking_backtrack|42: complete tok=88 gana=True prasa=True yati=True 11.3s
+[1/1] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|masking_backtrack|42: complete tok=32 gana=True prasa=True yati=True 5.0s
+# Token choices under the constraint
+
+Runs: `grid_t5_1b_ft_constrained_smoke_v2`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| masking_backtrack | 2 | 100 | 100 | 64 | -1.434 | 67 | 6 | 0.922 | 2.171 | 70 | 9 | 0 | 2.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| masking_backtrack | line_start | 8 | -1.909 | 50 | 12 | 0.850 |
+| masking_backtrack | prasa | 6 | -0.775 | 100 | 0 | 0.851 |
+| masking_backtrack | yati | 13 | -1.654 | 69 | 15 | 0.762 |
+| masking_backtrack | other | 101 | -1.407 | 66 | 5 | 0.952 |
+
+## By meter
+
+| meter | masking_backtrack in meter % / logp / lexical % |
+|---|---|
+| madhuragati_ragada | 100 / -1.98 / 56 |
+| mattakokilamu | 100 / -1.16 / 75 |
+
+grid_t5_1b_ft_constrained_smoke_v2: 20 s

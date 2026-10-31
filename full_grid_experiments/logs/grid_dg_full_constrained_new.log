@@ -1,0 +1,74 @@
+built on cuda in 1s
+987 dense tensors loaded (42s)
+experts of 10/30 layers loaded (49s)
+experts of 20/30 layers loaded (56s)
+experts of 30/30 layers loaded (63s)
+ready in 64s; GPU memory allocated 51.8 GB
+grid_dg_full_constrained_new: diffusiongemma-26B-A4B NVFP4 + LoRA runs/lora-full/lora.pt; t1 prompt; settled decoder; free native; 66 poems in 10 metres; modes ['masking_backtrack']; slice 1747 tokens
+[1/11] ataveladi|dataset/bhagavatam:10.1-594-ఆ.|masking_backtrack|42: complete tok=65 gana=True prasa=True yati=True 208.7s
+[2/11] ataveladi|dataset/bhagavatam:8-715-ఆ.|masking_backtrack|42: complete tok=105 gana=True prasa=True yati=True 44.8s
+[3/11] ataveladi|dataset/vemana:vemana-1130-ఆ.|masking_backtrack|42: complete tok=69 gana=True prasa=True yati=True 195.4s
+[4/11] ataveladi|dataset/vemana:vemana-202-ఆ.|masking_backtrack|42: complete tok=60 gana=True prasa=True yati=True 204.5s
+[5/11] ataveladi|dataset/vemana:vemana-345-ఆ.|masking_backtrack|42: complete tok=66 gana=True prasa=True yati=True 219.6s
+[6/11] ataveladi|dataset/vemana:vemana-532-ఆ.|masking_backtrack|42: complete tok=68 gana=True prasa=True yati=True 74.9s
+[7/11] ataveladi|dataset/vemana:vemana-558-ఆ.|masking_backtrack|42: complete tok=77 gana=True prasa=True yati=True 14.0s
+[8/11] ataveladi|dataset/vemana:vemana-57-ఆ.|masking_backtrack|42: complete tok=59 gana=True prasa=True yati=True 178.6s
+[9/11] ataveladi|dataset/vemana:vemana-866-ఆ.|masking_backtrack|42: complete tok=44 gana=True prasa=True yati=True 172.7s
+[10/11] ataveladi|gemini:poem_0060|masking_backtrack|42: complete tok=54 gana=True prasa=True yati=True 17.5s
+[11/11] ataveladi|gemini:poem_0062|masking_backtrack|42: complete tok=58 gana=True prasa=True yati=True 161.7s
+[1/9] champakamala|dataset/bhagavatam:10.2-283-చ.|masking_backtrack|42: complete tok=168 gana=True prasa=True yati=True 176.6s
+[2/9] champakamala|dataset/bhagavatam:3-1011-చ.|masking_backtrack|42: complete tok=137 gana=True prasa=True yati=True 220.1s
+[3/9] champakamala|dataset/bhagavatam:3-277-చ.|masking_backtrack|42: complete tok=118 gana=True prasa=True yati=True 209.1s
+[4/9] champakamala|dataset/bhagavatam:4-861-చ.|masking_backtrack|42: complete tok=108 gana=True prasa=True yati=True 235.7s
+[5/9] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-214|masking_backtrack|42: complete tok=114 gana=True prasa=True yati=True 257.4s
+[6/9] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-266|masking_backtrack|42: complete tok=123 gana=True prasa=True yati=True 308.5s
+[7/9] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-674|masking_backtrack|42: complete tok=118 gana=True prasa=True yati=True 100.9s
+[8/9] champakamala|dataset/vemana:vemana-905-ఆ.|masking_backtrack|42: complete tok=131 gana=True prasa=True yati=True 207.6s
+[9/9] champakamala|gemini:poem_0247|masking_backtrack|42: complete tok=105 gana=True prasa=True yati=True 215.0s
+[1/11] kandamu|dataset/bhagavatam:10.1-1385-క.|masking_backtrack|42: complete tok=69 gana=True prasa=True yati=True 215.1s
+[2/11] kandamu|dataset/bhagavatam:3-347-క.|masking_backtrack|42: complete tok=63 gana=True prasa=True yati=True 98.0s
+[3/11] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-668|masking_backtrack|42: complete tok=73 gana=True prasa=True yati=True 88.3s
+[4/11] kandamu|dataset/vemana:vemana-1068-ఆ.|masking_backtrack|42: complete tok=72 gana=True prasa=True yati=True 190.7s
+[5/11] kandamu|dataset/vemana:vemana-1094-ఆ.|masking_backtrack|42: complete tok=51 gana=True prasa=True yati=True 50.2s
+[6/11] kandamu|dataset/vemana:vemana-22-ఆ.|masking_backtrack|42: complete tok=63 gana=True prasa=True yati=True 71.5s
+[7/11] kandamu|dataset/vemana:vemana-51-ఆ.|masking_backtrack|42: complete tok=62 gana=True prasa=True yati=True 180.8s
+[8/11] kandamu|dataset/vemana:vemana-727-ఆ.|masking_backtrack|42: complete tok=69 gana=True prasa=True yati=True 125.5s
+[9/11] kandamu|dataset/vemana:vemana-801-ఆ.|masking_backtrack|42: complete tok=70 gana=True prasa=True yati=True 191.2s
+[10/11] kandamu|dataset/vemana:vemana-903-ఆ.|masking_backtrack|42: complete tok=56 gana=True prasa=True yati=True 171.9s
+[11/11] kandamu|gemini:poem_0100|masking_backtrack|42: complete tok=67 gana=True prasa=True yati=True 162.5s
+[1/1] mattakokilamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1196|masking_backtrack|42: complete tok=155 gana=True prasa=True yati=True 176.1s
+[1/8] mattebhavikriditamu|dataset/bhagavatam:10.1-1074-మ.|masking_backtrack|42: complete tok=191 gana=True prasa=True yati=True 163.6s
+[2/8] mattebhavikriditamu|dataset/bhagavatam:10.1-714-మ.|masking_backtrack|42: complete tok=139 gana=True prasa=True yati=True 252.8s
+[3/8] mattebhavikriditamu|dataset/bhagavatam:10.2-627-మ.|masking_backtrack|42: complete tok=201 gana=True prasa=True yati=True 262.9s
+[4/8] mattebhavikriditamu|dataset/bhagavatam:3-799-మ.|masking_backtrack|42: complete tok=135 gana=True prasa=True yati=True 220.8s
+[5/8] mattebhavikriditamu|dataset/bhagavatam:8-437-మ.|masking_backtrack|42: complete tok=179 gana=True prasa=True yati=True 238.3s
+[6/8] mattebhavikriditamu|dataset/bhagavatam:9-384-మ.|masking_backtrack|42: complete tok=136 gana=True prasa=True yati=True 240.0s
+[7/8] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-87|masking_backtrack|42: complete tok=119 gana=True prasa=True yati=True 251.2s
+[8/8] mattebhavikriditamu|gemini:poem_0051|masking_backtrack|42: complete tok=146 gana=True prasa=True yati=True 221.3s
+[1/6] sardulavikriditamu|dataset/bhagavatam:10.1-1185-శా.|masking_backtrack|42: complete tok=165 gana=True prasa=True yati=True 260.3s
+[2/6] sardulavikriditamu|dataset/bhagavatam:10.1-1597-శా.|masking_backtrack|42: complete tok=145 gana=True prasa=True yati=True 204.0s
+[3/6] sardulavikriditamu|dataset/bhagavatam:10.1-1651-శా.|masking_backtrack|42: complete tok=151 gana=True prasa=True yati=True 221.8s
+[4/6] sardulavikriditamu|dataset/bhagavatam:8-662-శా.|masking_backtrack|42: complete tok=152 gana=True prasa=True yati=True 290.5s
+[5/6] sardulavikriditamu|dataset/bhagavatam:8-71-శా.|masking_backtrack|42: complete tok=162 gana=True prasa=True yati=True 278.7s
+[6/6] sardulavikriditamu|gemini:poem_0251|masking_backtrack|42: complete tok=153 gana=True prasa=True yati=True 212.6s
+[1/1] seesamu|dataset/bhagavatam:4-720-సీ.|masking_backtrack|42: complete tok=133 gana=True prasa=True yati=True 125.1s
+[1/10] tetagiti|dataset/bhagavatam:10.2-658-తే.|masking_backtrack|42: complete tok=70 gana=True prasa=True yati=True 184.1s
+[2/10] tetagiti|dataset/bhagavatam:9-54-తే.|masking_backtrack|42: complete tok=86 gana=True prasa=True yati=True 191.1s
+[3/10] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-604|masking_backtrack|42: complete tok=71 gana=True prasa=True yati=True 61.5s
+[4/10] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-654|masking_backtrack|42: complete tok=71 gana=True prasa=True yati=True 52.3s
+[5/10] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-828|masking_backtrack|42: complete tok=72 gana=True prasa=True yati=True 48.8s
+[6/10] tetagiti|dataset/vemana:vemana-1077-ఆ.|masking_backtrack|42: complete tok=75 gana=True prasa=True yati=True 176.8s
+[7/10] tetagiti|dataset/vemana:vemana-1145-ఆ.|masking_backtrack|42: complete tok=69 gana=True prasa=True yati=True 184.7s
+[8/10] tetagiti|dataset/vemana:vemana-327-ఆ.|masking_backtrack|42: complete tok=61 gana=True prasa=True yati=True 147.3s
+[9/10] tetagiti|dataset/vemana:vemana-531-ఆ.|masking_backtrack|42: complete tok=59 gana=True prasa=True yati=True 161.9s
+[10/10] tetagiti|gemini:poem_0069|masking_backtrack|42: complete tok=61 gana=True prasa=True yati=True 170.7s
+[1/8] utpalamala|dataset/bhagavatam:10.2-1106-ఉ.|masking_backtrack|42: complete tok=144 gana=True prasa=True yati=True 123.3s
+[2/8] utpalamala|dataset/bhagavatam:10.2-317-ఉ.|masking_backtrack|42: complete tok=118 gana=True prasa=True yati=True 260.0s
+[3/8] utpalamala|dataset/bhagavatam:6-278-ఉ.|masking_backtrack|42: complete tok=120 gana=True prasa=True yati=True 188.3s
+[4/8] utpalamala|dataset/kuchimanchi_timmakavi:kuchimanchi-1341|masking_backtrack|42: complete tok=137 gana=True prasa=True yati=True 200.8s
+[5/8] utpalamala|dataset/kuchimanchi_timmakavi:kuchimanchi-443|masking_backtrack|42: complete tok=109 gana=True prasa=True yati=True 194.5s
+[6/8] utpalamala|dataset/vemana:vemana-1006-ఆ.|masking_backtrack|42: complete tok=111 gana=True prasa=True yati=True 271.8s
+[7/8] utpalamala|gemini:poem_0121|masking_backtrack|42: complete tok=94 gana=True prasa=True yati=True 115.9s
+[8/8] utpalamala|gemini:poem_0141|masking_backtrack|42: complete tok=134 gana=True prasa=True yati=True 282.8s
+[1/1] utsahamu|gemini:poem_0110|masking_backtrack|42: complete tok=109 gana=True prasa=True yati=True 157.7s
+grid_dg_full_constrained_new: 66 rows → /home/samvaran/phd_workspace/chandohasam/lora_gemma_diffusion/runs/grid_dg_full_constrained_new/results.jsonl

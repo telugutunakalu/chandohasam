@@ -1,0 +1,51 @@
+{
+ "model": "google/gemma-4-26B-A4B-it",
+ "meters": [
+  "layagrahi"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/bhagavatam:10.2-739-లగ్రా.": "భీమ మరియు జరాసంధుల మధ్య పోరాటం తీవ్రంగా సాగుతోంది. వారు ఒకరినొకరు కాళ్లతో తన్నుకుంటూ, కీళ్లు విరుగుతున్నట్లుగా, ముఖం, శరీరం మరియు రొమ్ముల వద్ద ఎముకలు విరిగేలా దెబ్బలు కొట్టుకుంటున్నారు. శరీరంపై గాయాల నుండి రక్తం ధారలుగా కారుతుండగా, భూత ప్రేతాలు ఉత్సాహంగా చూస్తుండగా ఆ ఇద్దరు యుద్ధం కొనసాగించారు.",
+  "dataset/bhagavatam:6-385-లగ్రా.": "ఓ మహాత్మా! వృత్రాసురుని అపారమైన గర్వానికి గంధర్వులైన వియచ్చరులు నేలకొయ్యారు. దిక్కులు తమ శక్తిని కోల్పోయాయి, దేవతల సమూహం విస్మయానికి గురైంది. పాములు తడబడగా, మరుత్తులు దిగ్భ్రాంతి చెందారు. అశ్వినీ కుమారులు ఆందోళన చెందారు, రుద్రగణాలు కూడా పడిపోయారు. ద్వాదశాదిత్యులు అపశ్రుతిగా వేలాడారు. దేవతా సైనికులు గాఢ నిద్రలో ఉన్నట్లుగా తమ విల్లమ్ములను వదిలేసి మూర్ఛపోయారు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 276,
+  "baseline_max_tokens": 276,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "layagrahi": 276
+ },
+ "started": "2026-10-29 00:53:05"
+}

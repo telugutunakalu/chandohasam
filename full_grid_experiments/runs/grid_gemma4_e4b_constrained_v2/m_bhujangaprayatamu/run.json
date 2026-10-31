@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "bhujangaprayatamu"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/kuchimanchi_timmakavi:kuchimanchi-1200": "రాముడు తిరిగి రాకపోవడంతో, భర్త జాడ తెలియక అశోకవనంలో దిక్కుతోచని స్థితిలో ఉన్న సీతాదేవి, తన బాధను అదుపుచేసుకోలేక, నడవలేక కొమ్మలను పట్టుకుని నిలబడి విపరీతంగా రోదిస్తోంది. అటువంటి సమయంలో ఆ దుర్మార్గుడైన రావణుడు ఆమె వద్దకు వచ్చాడు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 311,
+  "baseline_max_tokens": 311,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 2.0,
+  "attest_where": "all",
+  "attest_corpus": "padyarchana"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": "padyarchana"
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "bhujangaprayatamu": 311
+ },
+ "started": "2026-10-29 08:14:42"
+}

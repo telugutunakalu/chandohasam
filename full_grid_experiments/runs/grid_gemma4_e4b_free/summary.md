@@ -1,0 +1,22 @@
+| meter | mode | n | gana_strict | gana | prasa_strict | yati_strict | all_strict | all_relaxed | tok | s | logp | valid_mass | argmax_valid | bt |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| bhujangaprayatamu | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 76 | 6.2 | -1.271 | 0.628 | 0.750 | 0.0 |
+| champakamala | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 76 | 6.4 | -0.949 | 0.643 | 0.714 | 0.0 |
+| indravajra | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 74 | 5.9 | -0.835 | 0.723 | 0.667 | 0.0 |
+| layagrahi | baseline | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 110 | 8.0 | -0.442 | 0.638 | 0.650 | 0.0 |
+| layavibhati | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 76 | 6.2 | -0.597 | 0.497 | 0.500 | 0.0 |
+| madhuragati_ragada | baseline | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 40 | 3.3 | -0.587 | 0.702 | 0.708 | 0.0 |
+| mahasragdhara | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 98 | 7.8 | -0.502 | 0.488 | 0.500 | 0.0 |
+| malini | baseline | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 70 | 5.0 | -0.653 | 0.326 | 0.125 | 0.0 |
+| manini | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 82 | 6.8 | -0.749 | 0.548 | 0.667 | 0.0 |
+| mattakokilamu | baseline | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 78 | 5.5 | -0.657 | 0.748 | 0.678 | 0.0 |
+| mattebhavikriditamu | baseline | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 77 | 5.8 | -0.752 | 0.346 | 0.250 | 0.0 |
+| pamcacamaramu | baseline | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 76 | 5.7 | -0.592 | 0.562 | 0.583 | 0.0 |
+| sardulavikriditamu | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 72 | 5.9 | -0.906 | 0.813 | 0.667 | 0.0 |
+| sragdhara | baseline | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 78 | 5.9 | -0.852 | 0.656 | 0.708 | 0.0 |
+| sragvini | baseline | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 75 | 5.6 | -1.084 | 0.744 | 0.833 | 0.0 |
+| totakamu | baseline | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 76 | 5.7 | -0.533 | 0.356 | 0.333 | 0.0 |
+| upendravajra | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 72 | 5.9 | -0.791 | 0.117 | 0.000 | 0.0 |
+| utsahamu | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 60 | 5.2 | -0.668 | 0.753 | 0.833 | 0.0 |
+| vanamayuramu | baseline | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 71 | 5.7 | -1.054 | 0.783 | 0.750 | 0.0 |
+| ALL | baseline | 34 | 0 | 0 | 0 | 0 | 0 | 0 | 76 | 5.7 | -0.722 | 0.582 | 0.551 | 0.0 |

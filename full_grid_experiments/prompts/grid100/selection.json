@@ -1,0 +1,712 @@
+{
+ "created": "2026-10-28 23:33",
+ "quota": {
+  "bhagavatam": 50,
+  "vemana": 20,
+  "kuchimanchi_timmakavi": 20,
+  "gemini": 10
+ },
+ "seed": 42,
+ "prompts": [
+  {
+   "id": "dataset/bhagavatam:10.1-103-మత్త.",
+   "metre": "mattakokilamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0094"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1074-మ.",
+   "metre": "mattebhavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0087"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1104-మత్త.",
+   "metre": "mattakokilamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0500"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1112-ఇం.",
+   "metre": "indravajra",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0226"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1185-శా.",
+   "metre": "sardulavikriditamu",
+   "source": "bhagavatam",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0081"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1385-క.",
+   "metre": "kandamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0008"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1597-శా.",
+   "metre": "sardulavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0473"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1651-శా.",
+   "metre": "sardulavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0286"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-1769-మత్త.",
+   "metre": "mattakokilamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0245"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-214-మాని.",
+   "metre": "manini",
+   "source": "bhagavatam",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0141"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+   "metre": "upendravajra",
+   "source": "bhagavatam",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0449"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-586-పంచ.",
+   "metre": "pamcacamaramu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0051"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-594-ఆ.",
+   "metre": "ataveladi",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0385"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-714-మ.",
+   "metre": "mattebhavikriditamu",
+   "source": "bhagavatam",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0494"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-739-మత్త.",
+   "metre": "mattakokilamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0257"
+  },
+  {
+   "id": "dataset/bhagavatam:10.1-876-మ.",
+   "metre": "mattebhavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0282"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-1106-ఉ.",
+   "metre": "utpalamala",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0118"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-1152-మత్త.",
+   "metre": "mattakokilamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0166"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-283-చ.",
+   "metre": "champakamala",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0467"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-317-ఉ.",
+   "metre": "utpalamala",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0356"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-627-మ.",
+   "metre": "mattebhavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0220"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-658-తే.",
+   "metre": "tetagiti",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0492"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-737-లవి.",
+   "metre": "layavibhati",
+   "source": "bhagavatam",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0071"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "metre": "layagrahi",
+   "source": "bhagavatam",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0133"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-883-స్రగ్ద.",
+   "metre": "sragdhara",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0248"
+  },
+  {
+   "id": "dataset/bhagavatam:10.2-940-మస్ర.",
+   "metre": "mahasragdhara",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0124"
+  },
+  {
+   "id": "dataset/bhagavatam:3-1011-చ.",
+   "metre": "champakamala",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0201"
+  },
+  {
+   "id": "dataset/bhagavatam:3-1054-మాలి.",
+   "metre": "malini",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0057"
+  },
+  {
+   "id": "dataset/bhagavatam:3-277-చ.",
+   "metre": "champakamala",
+   "source": "bhagavatam",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0100"
+  },
+  {
+   "id": "dataset/bhagavatam:3-347-క.",
+   "metre": "kandamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0249"
+  },
+  {
+   "id": "dataset/bhagavatam:3-799-మ.",
+   "metre": "mattebhavikriditamu",
+   "source": "bhagavatam",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0072"
+  },
+  {
+   "id": "dataset/bhagavatam:4-720-సీ.",
+   "metre": "seesamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0415"
+  },
+  {
+   "id": "dataset/bhagavatam:4-861-చ.",
+   "metre": "champakamala",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0432"
+  },
+  {
+   "id": "dataset/bhagavatam:5.1-183-మాలి.",
+   "metre": "malini",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0279"
+  },
+  {
+   "id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "metre": "sragdhara",
+   "source": "bhagavatam",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0488"
+  },
+  {
+   "id": "dataset/bhagavatam:6-278-ఉ.",
+   "metre": "utpalamala",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0187"
+  },
+  {
+   "id": "dataset/bhagavatam:6-321-మత్త.",
+   "metre": "mattakokilamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0189"
+  },
+  {
+   "id": "dataset/bhagavatam:6-378-వన.",
+   "metre": "vanamayuramu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0156"
+  },
+  {
+   "id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "metre": "layagrahi",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0217"
+  },
+  {
+   "id": "dataset/bhagavatam:6-389-ఉత్సా.",
+   "metre": "utsahamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0422"
+  },
+  {
+   "id": "dataset/bhagavatam:6-399-చ.",
+   "metre": "champakamala",
+   "source": "bhagavatam",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0117"
+  },
+  {
+   "id": "dataset/bhagavatam:6-454-స్రగ్వి.",
+   "metre": "sragvini",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0333"
+  },
+  {
+   "id": "dataset/bhagavatam:6-530-తో.",
+   "metre": "totakamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0047"
+  },
+  {
+   "id": "dataset/bhagavatam:8-437-మ.",
+   "metre": "mattebhavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0197"
+  },
+  {
+   "id": "dataset/bhagavatam:8-662-శా.",
+   "metre": "sardulavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0388"
+  },
+  {
+   "id": "dataset/bhagavatam:8-71-శా.",
+   "metre": "sardulavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0243"
+  },
+  {
+   "id": "dataset/bhagavatam:8-715-ఆ.",
+   "metre": "ataveladi",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0371"
+  },
+  {
+   "id": "dataset/bhagavatam:8-744-మాలి.",
+   "metre": "malini",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0232"
+  },
+  {
+   "id": "dataset/bhagavatam:9-384-మ.",
+   "metre": "mattebhavikriditamu",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0035"
+  },
+  {
+   "id": "dataset/bhagavatam:9-54-తే.",
+   "metre": "tetagiti",
+   "source": "bhagavatam",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0235"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1196",
+   "metre": "mattakokilamu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0323"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+   "metre": "pamcacamaramu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0387"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1200",
+   "metre": "bhujangaprayatamu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0092"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+   "metre": "madhuragati_ragada",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0311"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+   "metre": "madhuragati_ragada",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0469"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1209",
+   "metre": "sragvini",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0306"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+   "metre": "utpalamala",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0329"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-214",
+   "metre": "champakamala",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0164"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+   "metre": "champakamala",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0270"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-28",
+   "metre": "mattebhavikriditamu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0301"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-443",
+   "metre": "utpalamala",
+   "source": "kuchimanchi_timmakavi",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0055"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+   "metre": "tetagiti",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0259"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+   "metre": "tetagiti",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0357"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+   "metre": "kandamu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0347"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+   "metre": "champakamala",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0093"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-754",
+   "metre": "totakamu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0302"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-828",
+   "metre": "tetagiti",
+   "source": "kuchimanchi_timmakavi",
+   "from": "pool → phase 2, new P1",
+   "human_eval_id": "he_0089"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+   "metre": "malini",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, the 183",
+   "human_eval_id": "he_0205"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+   "metre": "mattebhavikriditamu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0029"
+  },
+  {
+   "id": "dataset/kuchimanchi_timmakavi:kuchimanchi-99",
+   "metre": "sardulavikriditamu",
+   "source": "kuchimanchi_timmakavi",
+   "from": "pool → phase 2, the 183",
+   "human_eval_id": "he_0178"
+  },
+  {
+   "id": "dataset/vemana:vemana-1006-ఆ.",
+   "metre": "utpalamala",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0457"
+  },
+  {
+   "id": "dataset/vemana:vemana-1068-ఆ.",
+   "metre": "kandamu",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0041"
+  },
+  {
+   "id": "dataset/vemana:vemana-1077-ఆ.",
+   "metre": "tetagiti",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0319"
+  },
+  {
+   "id": "dataset/vemana:vemana-1094-ఆ.",
+   "metre": "kandamu",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0425"
+  },
+  {
+   "id": "dataset/vemana:vemana-1130-ఆ.",
+   "metre": "ataveladi",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0144"
+  },
+  {
+   "id": "dataset/vemana:vemana-1145-ఆ.",
+   "metre": "tetagiti",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0416"
+  },
+  {
+   "id": "dataset/vemana:vemana-202-ఆ.",
+   "metre": "ataveladi",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0045"
+  },
+  {
+   "id": "dataset/vemana:vemana-22-ఆ.",
+   "metre": "kandamu",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0199"
+  },
+  {
+   "id": "dataset/vemana:vemana-327-ఆ.",
+   "metre": "tetagiti",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0107"
+  },
+  {
+   "id": "dataset/vemana:vemana-345-ఆ.",
+   "metre": "ataveladi",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0294"
+  },
+  {
+   "id": "dataset/vemana:vemana-51-ఆ.",
+   "metre": "kandamu",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0244"
+  },
+  {
+   "id": "dataset/vemana:vemana-531-ఆ.",
+   "metre": "tetagiti",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0112"
+  },
+  {
+   "id": "dataset/vemana:vemana-532-ఆ.",
+   "metre": "ataveladi",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0104"
+  },
+  {
+   "id": "dataset/vemana:vemana-558-ఆ.",
+   "metre": "ataveladi",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0341"
+  },
+  {
+   "id": "dataset/vemana:vemana-57-ఆ.",
+   "metre": "ataveladi",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0444"
+  },
+  {
+   "id": "dataset/vemana:vemana-727-ఆ.",
+   "metre": "kandamu",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0392"
+  },
+  {
+   "id": "dataset/vemana:vemana-801-ఆ.",
+   "metre": "kandamu",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0031"
+  },
+  {
+   "id": "dataset/vemana:vemana-866-ఆ.",
+   "metre": "ataveladi",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0307"
+  },
+  {
+   "id": "dataset/vemana:vemana-903-ఆ.",
+   "metre": "kandamu",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0239"
+  },
+  {
+   "id": "dataset/vemana:vemana-905-ఆ.",
+   "metre": "champakamala",
+   "source": "vemana",
+   "from": "phase 1, new P1",
+   "human_eval_id": "he_0280"
+  },
+  {
+   "id": "gemini:poem_0051",
+   "metre": "mattebhavikriditamu",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0192"
+  },
+  {
+   "id": "gemini:poem_0060",
+   "metre": "ataveladi",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0393"
+  },
+  {
+   "id": "gemini:poem_0062",
+   "metre": "ataveladi",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0339"
+  },
+  {
+   "id": "gemini:poem_0069",
+   "metre": "tetagiti",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0312"
+  },
+  {
+   "id": "gemini:poem_0100",
+   "metre": "kandamu",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0346"
+  },
+  {
+   "id": "gemini:poem_0110",
+   "metre": "utsahamu",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0103"
+  },
+  {
+   "id": "gemini:poem_0121",
+   "metre": "utpalamala",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0062"
+  },
+  {
+   "id": "gemini:poem_0141",
+   "metre": "utpalamala",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0009"
+  },
+  {
+   "id": "gemini:poem_0247",
+   "metre": "champakamala",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0098"
+  },
+  {
+   "id": "gemini:poem_0251",
+   "metre": "sardulavikriditamu",
+   "source": "gemini",
+   "from": "phase 1, Gemini bhāvam as is",
+   "human_eval_id": "he_0411"
+  }
+ ]
+}

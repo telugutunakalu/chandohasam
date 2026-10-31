@@ -1,0 +1,27 @@
+{
+ "model": "google/gemma-4-26B-A4B-it",
+ "sources": 183,
+ "passed": 172,
+ "flagged": 11,
+ "threshold": 0.5665062069892883,
+ "failed_by_check": {
+  "telugu": 0,
+  "meaning": 2,
+  "copy": 2,
+  "gold": 0,
+  "length": 0,
+  "fits": 7
+ },
+ "attempts": {
+  "0": 172,
+  "1": 9,
+  "2": 2
+ },
+ "medians": {
+  "similarity": 0.818,
+  "copy_share": 0.206,
+  "length_ratio": 0.977,
+  "source_run": 6.0,
+  "gold_run": 2.0
+ }
+}

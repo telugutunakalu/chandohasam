@@ -1,0 +1,42 @@
+built on cuda in 1s
+987 dense tensors loaded (39s)
+experts of 10/30 layers loaded (46s)
+experts of 20/30 layers loaded (53s)
+experts of 30/30 layers loaded (61s)
+ready in 61s; GPU memory allocated 51.8 GB
+grid_dg_base_free: diffusiongemma-26B-A4B NVFP4 (base); instruction prompt; settled decoder; free native; 34 poems in 19 metres; modes ['baseline']; slice 1747 tokens
+[free native] bhujangaprayatamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1200|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 63 tokens, 7.07s
+[free native] champakamala|dataset/bhagavatam:6-399-చ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 65 tokens, 5.0s
+[free native] indravajra|dataset/bhagavatam:10.1-1112-ఇం.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 54 tokens, 5.85s
+[free native] layagrahi|dataset/bhagavatam:10.2-739-లగ్రా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 95 tokens, 5.99s
+[free native] layagrahi|dataset/bhagavatam:6-385-లగ్రా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 83 tokens, 5.06s
+[free native] layavibhati|dataset/bhagavatam:10.2-737-లవి.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 85 tokens, 5.07s
+[free native] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|baseline|42: 2 lines, gaṇa False, prāsa False, yati False, 29 tokens, 5.4s
+[free native] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1207|baseline|42: 2 lines, gaṇa False, prāsa False, yati False, 29 tokens, 3.54s
+[free native] mahasragdhara|dataset/bhagavatam:10.2-940-మస్ర.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 65 tokens, 5.36s
+[free native] malini|dataset/bhagavatam:3-1054-మాలి.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 51 tokens, 5.56s
+[free native] malini|dataset/bhagavatam:5.1-183-మాలి.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 54 tokens, 4.08s
+[free native] malini|dataset/bhagavatam:8-744-మాలి.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 50 tokens, 5.54s
+[free native] malini|dataset/kuchimanchi_timmakavi:kuchimanchi-863|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 60 tokens, 5.01s
+[free native] manini|dataset/bhagavatam:10.1-214-మాని.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 73 tokens, 5.07s
+[free native] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 59 tokens, 5.33s
+[free native] mattakokilamu|dataset/bhagavatam:10.1-1104-మత్త.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 76 tokens, 5.36s
+[free native] mattakokilamu|dataset/bhagavatam:10.1-1769-మత్త.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 55 tokens, 5.3s
+[free native] mattakokilamu|dataset/bhagavatam:10.1-739-మత్త.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 57 tokens, 6.17s
+[free native] mattakokilamu|dataset/bhagavatam:10.2-1152-మత్త.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 79 tokens, 5.57s
+[free native] mattakokilamu|dataset/bhagavatam:6-321-మత్త.|baseline|42: 3 lines, gaṇa False, prāsa False, yati False, 56 tokens, 6.75s
+[free native] mattebhavikriditamu|dataset/bhagavatam:10.1-876-మ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 98 tokens, 6.58s
+[free native] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-28|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 87 tokens, 8.31s
+[free native] pamcacamaramu|dataset/bhagavatam:10.1-586-పంచ.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 52 tokens, 7.11s
+[free native] pamcacamaramu|dataset/kuchimanchi_timmakavi:kuchimanchi-1197|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 65 tokens, 4.74s
+[free native] sardulavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-99|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 76 tokens, 5.93s
+[free native] sragdhara|dataset/bhagavatam:10.2-883-స్రగ్ద.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 67 tokens, 5.11s
+[free native] sragdhara|dataset/bhagavatam:6-272-స్రగ్ద.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 72 tokens, 6.4s
+[free native] sragvini|dataset/bhagavatam:6-454-స్రగ్వి.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 53 tokens, 5.33s
+[free native] sragvini|dataset/kuchimanchi_timmakavi:kuchimanchi-1209|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 61 tokens, 4.74s
+[free native] totakamu|dataset/bhagavatam:6-530-తో.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 60 tokens, 4.12s
+[free native] totakamu|dataset/kuchimanchi_timmakavi:kuchimanchi-754|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 66 tokens, 5.35s
+[free native] upendravajra|dataset/bhagavatam:10.1-407-ఉపేం.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 54 tokens, 4.46s
+[free native] utsahamu|dataset/bhagavatam:6-389-ఉత్సా.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 61 tokens, 5.04s
+[free native] vanamayuramu|dataset/bhagavatam:6-378-వన.|baseline|42: 4 lines, gaṇa False, prāsa False, yati False, 61 tokens, 5.94s
+grid_dg_base_free: 34 rows → /home/samvaran/phd_workspace/chandohasam/lora_gemma_diffusion/runs/grid_dg_base_free/results.jsonl

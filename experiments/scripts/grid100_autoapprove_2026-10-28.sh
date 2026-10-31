@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Approval of the 100-prompt grid's P1 prompts (full_grid_experiments/PLAN.md decision 21): the user approved them on
+# Approval of the 100-prompt grid's P1 prompts (full_grid_experiments/README.md decision 21): the user approved them on
 # 2026-10-28 ("approve it please") before they existed, so they get no hand review; the automatic checks stand in.
 # Waits for prompts.py (gpu-queue-1028g's first step) to finish them (prompts/grid100/p1/summary.json is written last),
 # then build_grid100.py --approve --allow-flagged: the P1 go into the records and APPROVED lets the queue's new cells

@@ -1,0 +1,3176 @@
+{
+ "cells": {
+  "gold": {
+   "label": "gold (the source poems)",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.53,
+   "line_gana": 0.9574468085106383,
+   "words_s": 0.857163035934678,
+   "filler": 0.04976906606267499,
+   "copy": 0.0203307083118195,
+   "meaning": 0.63,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 1.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "nandi_base|baseline": {
+   "label": "Nandi-Mini-150M · base · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.9562493604896488,
+   "filler": 0.07162090008009643,
+   "copy": 0.09108744639972509,
+   "meaning": 0.43,
+   "repeated": 0.05,
+   "training_line": 0.03,
+   "gold_copy": 0.0,
+   "skill_mean": -2.743584,
+   "skill_median": -2.36455,
+   "n_lines": 2.32
+  },
+  "nandi_base|masking_backtrack": {
+   "label": "Nandi-Mini-150M · base · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.4024035239729983,
+   "filler": 0.1872887974189563,
+   "copy": 0.009419591221135844,
+   "meaning": 0.17,
+   "repeated": 0.33,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "nandi_ft|baseline": {
+   "label": "Nandi-Mini-150M · FT (bhāvam → poem) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.05,
+   "line_gana": 0.7712765957446809,
+   "words_s": 0.8041438865720313,
+   "filler": 0.05468931726362421,
+   "copy": 0.02507280311807166,
+   "meaning": 0.65,
+   "repeated": 0.02,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.8037889999999998,
+   "skill_median": 0.914,
+   "n_lines": 3.95
+  },
+  "nandi_ft|masking_backtrack": {
+   "label": "Nandi-Mini-150M · FT (bhāvam → poem) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.7303462621216775,
+   "filler": 0.0669079495556958,
+   "copy": 0.021620091138502096,
+   "meaning": 0.64,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "gemma4_e4b|baseline": {
+   "label": "Gemma-4 E4B-it · base · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.9516282337866737,
+   "filler": 0.03935067299924616,
+   "copy": 0.20258421682003253,
+   "meaning": 0.94,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": -0.189255,
+   "skill_median": -0.1456,
+   "n_lines": 3.96
+  },
+  "gemma4_e4b|masking_backtrack": {
+   "label": "Gemma-4 E4B-it · base · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.4198789309962915,
+   "filler": 0.07558797700076537,
+   "copy": 0.020735604866409817,
+   "meaning": 0.6,
+   "repeated": 0.06,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "gemma4_26b|baseline": {
+   "label": "Gemma-4 26B-A4B-it · base · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.9687783261196707,
+   "filler": 0.02479406438075169,
+   "copy": 0.15828713931312113,
+   "meaning": 0.92,
+   "repeated": 0.05,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": -0.17049900000000004,
+   "skill_median": -0.0785,
+   "n_lines": 3.92
+  },
+  "gemma4_26b|masking_backtrack": {
+   "label": "Gemma-4 26B-A4B-it · base · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.5312926430549371,
+   "filler": 0.07839784238716051,
+   "copy": 0.03781923037639916,
+   "meaning": 0.63,
+   "repeated": 0.3,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_270m_base|baseline": {
+   "label": "T5Gemma 2 270M · base · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.8444780600154788,
+   "filler": 0.23943971517424242,
+   "copy": 0.1176814551725275,
+   "meaning": 0.33,
+   "repeated": 0.11,
+   "training_line": 0.01,
+   "gold_copy": 0.0,
+   "skill_mean": -2.3446765432098764,
+   "skill_median": -1.9645,
+   "n_lines": 2.4
+  },
+  "t5_270m_base|masking_backtrack": {
+   "label": "T5Gemma 2 270M · base · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.390010140508786,
+   "filler": 0.11576452774209255,
+   "copy": 0.018920421082185786,
+   "meaning": 0.25,
+   "repeated": 0.3,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_270m_ft|baseline": {
+   "label": "T5Gemma 2 270M · FT (full) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.08,
+   "line_gana": 0.7819148936170213,
+   "words_s": 0.7946609370423476,
+   "filler": 0.04239099546101834,
+   "copy": 0.0314176876297451,
+   "meaning": 0.75,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.7663510000000001,
+   "skill_median": 0.9236,
+   "n_lines": 3.95
+  },
+  "t5_270m_ft|masking_backtrack": {
+   "label": "T5Gemma 2 270M · FT (full) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.7525626403859172,
+   "filler": 0.0441045596968874,
+   "copy": 0.02745780426654703,
+   "meaning": 0.64,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_1b_base|baseline": {
+   "label": "T5Gemma 2 1B · base · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.8877209138149206,
+   "filler": 0.27749860494874523,
+   "copy": 0.11936196848912486,
+   "meaning": 0.38,
+   "repeated": 0.19,
+   "training_line": 0.01,
+   "gold_copy": 0.0,
+   "skill_mean": -1.9796089743589742,
+   "skill_median": -1.7076500000000001,
+   "n_lines": 2.43
+  },
+  "t5_1b_base|masking_backtrack": {
+   "label": "T5Gemma 2 1B · base · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.3911127598932409,
+   "filler": 0.09900253738754695,
+   "copy": 0.023050402240310963,
+   "meaning": 0.31,
+   "repeated": 0.17,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_1b_ft|baseline": {
+   "label": "T5Gemma 2 1B · FT (full) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.08,
+   "line_gana": 0.7340425531914894,
+   "words_s": 0.8276448916864383,
+   "filler": 0.04101987317459117,
+   "copy": 0.03292294487231558,
+   "meaning": 0.75,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.724253,
+   "skill_median": 0.9259,
+   "n_lines": 3.96
+  },
+  "t5_1b_ft|masking_backtrack": {
+   "label": "T5Gemma 2 1B · FT (full) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.741252290052167,
+   "filler": 0.05257202551848913,
+   "copy": 0.028068828215651476,
+   "meaning": 0.66,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_4b_base|baseline": {
+   "label": "T5Gemma 2 4B · base · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.9504206088342328,
+   "filler": 0.7542082377330721,
+   "copy": 0.046409541086412015,
+   "meaning": 0.26,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": -2.8453346153846155,
+   "skill_median": -2.4516,
+   "n_lines": 0.41
+  },
+  "t5_4b_base|masking_backtrack": {
+   "label": "T5Gemma 2 4B · base · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.3801485649776963,
+   "filler": 0.12006958859290597,
+   "copy": 0.016029060063267223,
+   "meaning": 0.28,
+   "repeated": 0.29,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_4b_ft|baseline": {
+   "label": "T5Gemma 2 4B · FT (LoRA r 128) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.07,
+   "line_gana": 0.648936170212766,
+   "words_s": 0.8056232852521115,
+   "filler": 0.04930981799119502,
+   "copy": 0.04195205837595797,
+   "meaning": 0.71,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.718137,
+   "skill_median": 0.9068,
+   "n_lines": 3.96
+  },
+  "t5_4b_ft|masking_backtrack": {
+   "label": "T5Gemma 2 4B · FT (LoRA r 128) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.99,
+   "line_gana": 1.0,
+   "words_s": 0.7275427323898616,
+   "filler": 0.06220045059508648,
+   "copy": 0.02705579596354113,
+   "meaning": 0.63,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.998578,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_4b_48k|baseline": {
+   "label": "T5Gemma 2 4B · FT (LoRA r 128), first 48k · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.10106382978723404,
+   "words_s": 0.7744817136452586,
+   "filler": 0.05702119921042729,
+   "copy": 0.03535906735163701,
+   "meaning": 0.65,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.29456499999999997,
+   "skill_median": 0.48934999999999995,
+   "n_lines": 3.89
+  },
+  "t5_4b_48k|masking_backtrack": {
+   "label": "T5Gemma 2 4B · FT (LoRA r 128), first 48k · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.6310181935842987,
+   "filler": 0.07288815745532022,
+   "copy": 0.019440610401029956,
+   "meaning": 0.42,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm120m_base|baseline": {
+   "label": "chandohasam MDLM 120M · base (pre-trained) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.9823843873302477,
+   "filler": 0.05075212219405465,
+   "copy": 0.09174669071778338,
+   "meaning": 0.44,
+   "repeated": 0.03,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": -2.9282500000000002,
+   "skill_median": -2.77745,
+   "n_lines": 1.9
+  },
+  "mdlm120m_base|masking_backtrack": {
+   "label": "chandohasam MDLM 120M · base (pre-trained) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.93,
+   "line_gana": 0.9787234042553191,
+   "words_s": 0.5798752263287765,
+   "filler": 0.20786916392723323,
+   "copy": 0.018031475961656468,
+   "meaning": 0.2,
+   "repeated": 0.11,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.9821259999999999,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm120m_ft|baseline": {
+   "label": "chandohasam MDLM 120M · FT (E6 + T1) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.20212765957446807,
+   "words_s": 0.9164659120506878,
+   "filler": 0.0617032277482014,
+   "copy": 0.07904317504397258,
+   "meaning": 0.83,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.305025,
+   "skill_median": 0.5752999999999999,
+   "n_lines": 3.7
+  },
+  "mdlm120m_ft|masking_backtrack": {
+   "label": "chandohasam MDLM 120M · FT (E6 + T1) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.7773980975113096,
+   "filler": 0.12662049714487694,
+   "copy": 0.04089442926329788,
+   "meaning": 0.73,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm523m_base|baseline": {
+   "label": "chandohasam MDLM 523M · base (pre-trained) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.9874839139179038,
+   "filler": 0.0392046787062375,
+   "copy": 0.08935605723760892,
+   "meaning": 0.45,
+   "repeated": 0.19,
+   "training_line": 0.01,
+   "gold_copy": 0.0,
+   "skill_mean": -2.34507,
+   "skill_median": -2.32855,
+   "n_lines": 2.86
+  },
+  "mdlm523m_base|masking_backtrack": {
+   "label": "chandohasam MDLM 523M · base (pre-trained) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.85,
+   "line_gana": 0.9574468085106383,
+   "words_s": 0.5957153808376939,
+   "filler": 0.17717054541519933,
+   "copy": 0.011848359646889059,
+   "meaning": 0.19,
+   "repeated": 0.13,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.969289,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm523m_ft|baseline": {
+   "label": "chandohasam MDLM 523M · FT (E6 + T1) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.01,
+   "line_gana": 0.39361702127659576,
+   "words_s": 0.8897267682317185,
+   "filler": 0.0617779585391038,
+   "copy": 0.06423909280820037,
+   "meaning": 0.8,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.6055809999999999,
+   "skill_median": 0.73565,
+   "n_lines": 3.94
+  },
+  "mdlm523m_ft|masking_backtrack": {
+   "label": "chandohasam MDLM 523M · FT (E6 + T1) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.99,
+   "line_gana": 1.0,
+   "words_s": 0.7754370461768529,
+   "filler": 0.10622669274499504,
+   "copy": 0.04508113820976588,
+   "meaning": 0.77,
+   "repeated": 0.02,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.9911840000000001,
+   "skill_median": 1.0,
+   "n_lines": 3.95
+  },
+  "dg_base|baseline": {
+   "label": "DiffusionGemma 26B-A4B · base · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.8720202831822162,
+   "filler": 0.04137937278280864,
+   "copy": 0.29197774819816813,
+   "meaning": 1.0,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": -0.14994,
+   "skill_median": -0.08829999999999999,
+   "n_lines": 3.95
+  },
+  "dg_base|masking_backtrack": {
+   "label": "DiffusionGemma 26B-A4B · base · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.33508241734453903,
+   "filler": 0.22998545338173756,
+   "copy": 0.042192995901587226,
+   "meaning": 0.64,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "dg_full|baseline": {
+   "label": "DiffusionGemma 26B-A4B · FT (LoRA r 16) · baseline",
+   "poems": 100,
+   "prompts": 100,
+   "all": 0.0,
+   "line_gana": 0.0,
+   "words_s": 0.797386598053562,
+   "filler": 0.04480356010104043,
+   "copy": 0.146110695701152,
+   "meaning": 0.9,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": -0.09470100000000001,
+   "skill_median": 0.1153,
+   "n_lines": 3.65
+  },
+  "dg_full|masking_backtrack": {
+   "label": "DiffusionGemma 26B-A4B · FT (LoRA r 16) · masking_backtrack",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.2961748446877501,
+   "filler": 0.11746421930299844,
+   "copy": 0.02965229507334771,
+   "meaning": 0.47,
+   "repeated": 0.12,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "nandi_base|masking_only": {
+   "label": "Nandi-Mini-150M · base · masking_only",
+   "poems": 34,
+   "prompts": 34,
+   "all": 0.9705882352941176,
+   "line_gana": 1.0,
+   "words_s": 0.210373974644684,
+   "filler": 0.20336481089076244,
+   "copy": 0.006773618538324421,
+   "meaning": 0.11764705882352941,
+   "repeated": 0.5,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.9779294117647059,
+   "skill_median": 1.0,
+   "n_lines": 3.8823529411764706
+  },
+  "nandi_base|hybrid": {
+   "label": "Nandi-Mini-150M · base · hybrid",
+   "poems": 34,
+   "prompts": 34,
+   "all": 0.8823529411764706,
+   "line_gana": 0.9666666666666667,
+   "words_s": 0.2245093850937504,
+   "filler": 0.32892334613468743,
+   "copy": 0.012092396767319366,
+   "meaning": 0.08823529411764706,
+   "repeated": 0.29411764705882354,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.9736911764705882,
+   "skill_median": 1.0,
+   "n_lines": 3.8823529411764706
+  },
+  "nandi_ft|masking_only": {
+   "label": "Nandi-Mini-150M · FT (bhāvam → poem) · masking_only",
+   "poems": 34,
+   "prompts": 34,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.5721378399935614,
+   "filler": 0.08710028706208721,
+   "copy": 0.00516610152833063,
+   "meaning": 0.5294117647058824,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.8823529411764706
+  },
+  "nandi_ft|hybrid": {
+   "label": "Nandi-Mini-150M · FT (bhāvam → poem) · hybrid",
+   "poems": 34,
+   "prompts": 34,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.6055882751889871,
+   "filler": 0.061766127468265576,
+   "copy": 0.007233994076099339,
+   "meaning": 0.47058823529411764,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.8823529411764706
+  },
+  "mdlm523m_base|masking_only": {
+   "label": "chandohasam MDLM 523M · base (pre-trained) · masking_only",
+   "poems": 34,
+   "prompts": 34,
+   "all": 0.7941176470588235,
+   "line_gana": 0.9666666666666667,
+   "words_s": 0.42130724936628877,
+   "filler": 0.1991740829855215,
+   "copy": 0.006920415224913495,
+   "meaning": 0.08823529411764706,
+   "repeated": 0.29411764705882354,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.9000205882352941,
+   "skill_median": 1.0,
+   "n_lines": 3.823529411764706
+  },
+  "mdlm523m_base|hybrid": {
+   "label": "chandohasam MDLM 523M · base (pre-trained) · hybrid",
+   "poems": 34,
+   "prompts": 34,
+   "all": 0.9117647058823529,
+   "line_gana": 0.9833333333333333,
+   "words_s": 0.4243929869056644,
+   "filler": 0.16095470913934462,
+   "copy": 0.041740938799762324,
+   "meaning": 0.17647058823529413,
+   "repeated": 0.17647058823529413,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.9801941176470588,
+   "skill_median": 1.0,
+   "n_lines": 3.8823529411764706
+  },
+  "mdlm523m_ft|masking_only": {
+   "label": "chandohasam MDLM 523M · FT (E6 + T1) · masking_only",
+   "poems": 34,
+   "prompts": 34,
+   "all": 0.9411764705882353,
+   "line_gana": 1.0,
+   "words_s": 0.565882802014537,
+   "filler": 0.2567706170276844,
+   "copy": 0.02387058368140059,
+   "meaning": 0.7058823529411765,
+   "repeated": 0.029411764705882353,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 0.995679411764706,
+   "skill_median": 1.0,
+   "n_lines": 3.8823529411764706
+  },
+  "mdlm523m_ft|hybrid": {
+   "label": "chandohasam MDLM 523M · FT (E6 + T1) · hybrid",
+   "poems": 34,
+   "prompts": 34,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.5885346102888742,
+   "filler": 0.15112112413949963,
+   "copy": 0.03064287404252802,
+   "meaning": 0.6764705882352942,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.8823529411764706
+  },
+  "nandi_base|masking_backtrack_v2": {
+   "label": "Nandi-Mini-150M · base · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.5332276623821274,
+   "filler": 0.16222628966825314,
+   "copy": 0.005055948136830489,
+   "meaning": 0.19,
+   "repeated": 0.27,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "nandi_ft|masking_backtrack_v2": {
+   "label": "Nandi-Mini-150M · FT (bhāvam → poem) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.7910720941581443,
+   "filler": 0.05932773311856963,
+   "copy": 0.02271709273611279,
+   "meaning": 0.61,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "gemma4_e4b|masking_backtrack_v2": {
+   "label": "Gemma-4 E4B-it · base · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.5052046472000317,
+   "filler": 0.05352266506638823,
+   "copy": 0.017620787965281933,
+   "meaning": 0.59,
+   "repeated": 0.17,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "gemma4_26b|masking_backtrack_v2": {
+   "label": "Gemma-4 26B-A4B-it · base · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.6206398464708003,
+   "filler": 0.0590093048267877,
+   "copy": 0.030495526783681313,
+   "meaning": 0.6,
+   "repeated": 0.29,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_270m_base|masking_backtrack_v2": {
+   "label": "T5Gemma 2 270M · base · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.4994795795492894,
+   "filler": 0.06254903527638028,
+   "copy": 0.012328622805615214,
+   "meaning": 0.27,
+   "repeated": 0.42,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_270m_ft|masking_backtrack_v2": {
+   "label": "T5Gemma 2 270M · FT (full) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.8291581459138634,
+   "filler": 0.04835564983135852,
+   "copy": 0.03208105345084414,
+   "meaning": 0.66,
+   "repeated": 0.02,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_1b_base|masking_backtrack_v2": {
+   "label": "T5Gemma 2 1B · base · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.5020938832794766,
+   "filler": 0.05023272619623238,
+   "copy": 0.016513100041485637,
+   "meaning": 0.22,
+   "repeated": 0.26,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_1b_ft|masking_backtrack_v2": {
+   "label": "T5Gemma 2 1B · FT (full) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.8227243129944161,
+   "filler": 0.0461135012695528,
+   "copy": 0.03458338473229528,
+   "meaning": 0.72,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_4b_base|masking_backtrack_v2": {
+   "label": "T5Gemma 2 4B · base · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.4513499209574562,
+   "filler": 0.05719969174720824,
+   "copy": 0.019200113139354626,
+   "meaning": 0.25,
+   "repeated": 0.37,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_4b_ft|masking_backtrack_v2": {
+   "label": "T5Gemma 2 4B · FT (LoRA r 128) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.7974027281731118,
+   "filler": 0.05279205398841112,
+   "copy": 0.028607751908075314,
+   "meaning": 0.7,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "t5_4b_48k|masking_backtrack_v2": {
+   "label": "T5Gemma 2 4B · FT (LoRA r 128), first 48k · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.7156164395773359,
+   "filler": 0.05936870677546107,
+   "copy": 0.027296654571174743,
+   "meaning": 0.44,
+   "repeated": 0.01,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm120m_base|masking_backtrack_v2": {
+   "label": "chandohasam MDLM 120M · base (pre-trained) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.6602812837415947,
+   "filler": 0.09256162105654721,
+   "copy": 0.022026054317673835,
+   "meaning": 0.24,
+   "repeated": 0.08,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm120m_ft|masking_backtrack_v2": {
+   "label": "chandohasam MDLM 120M · FT (E6 + T1) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.8163027866910686,
+   "filler": 0.05448375202188388,
+   "copy": 0.043080821815357814,
+   "meaning": 0.63,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm523m_base|masking_backtrack_v2": {
+   "label": "chandohasam MDLM 523M · base (pre-trained) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.6699265332248244,
+   "filler": 0.0780880133543061,
+   "copy": 0.02101394307275314,
+   "meaning": 0.22,
+   "repeated": 0.39,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "mdlm523m_ft|masking_backtrack_v2": {
+   "label": "chandohasam MDLM 523M · FT (E6 + T1) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.8538116501401046,
+   "filler": 0.06896067416051692,
+   "copy": 0.0448795697653893,
+   "meaning": 0.76,
+   "repeated": 0.03,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "dg_base|masking_backtrack_v2": {
+   "label": "DiffusionGemma 26B-A4B · base · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.4000133910582592,
+   "filler": 0.16901984996539843,
+   "copy": 0.032032557619470395,
+   "meaning": 0.59,
+   "repeated": 0.0,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  },
+  "dg_full|masking_backtrack_v2": {
+   "label": "DiffusionGemma 26B-A4B · FT (LoRA r 16) · masking_backtrack · v2 A+B",
+   "poems": 100,
+   "prompts": 100,
+   "all": 1.0,
+   "line_gana": 1.0,
+   "words_s": 0.3858895185526871,
+   "filler": 0.06951903949014597,
+   "copy": 0.038466329092005494,
+   "meaning": 0.41,
+   "repeated": 0.13,
+   "training_line": 0.0,
+   "gold_copy": 0.0,
+   "skill_mean": 1.0,
+   "skill_median": 1.0,
+   "n_lines": 3.96
+  }
+ },
+ "tests": {
+  "nandi_ft vs nandi_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.05,
+    "lo": 0.01,
+    "hi": 0.1,
+    "p": 0.0126
+   },
+   "skill": {
+    "n": 100,
+    "diff": 3.5473729999999994,
+    "lo": 3.2989685000000004,
+    "hi": 3.8105639749999995,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.15210547391761747,
+    "lo": -0.19233024543009974,
+    "hi": -0.11409403559329365,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.22,
+    "lo": 0.09,
+    "hi": 0.35,
+    "p": 0.0026
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.0660146432816534,
+    "lo": -0.10113850763870506,
+    "hi": -0.034423839950801546,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 5,
+    "a_only": 0,
+    "p": 0.0625
+   }
+  },
+  "nandi_ft vs nandi_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.32794273814867914,
+    "lo": 0.2753193890934858,
+    "hi": 0.38102626584009314,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.47,
+    "lo": 0.36,
+    "hi": 0.57,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.012200499917366249,
+    "lo": 0.001813824695079154,
+    "hi": 0.022526192603107394,
+    "p": 0.0206
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_270m_ft vs t5_270m_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.08,
+    "lo": 0.03,
+    "hi": 0.14,
+    "p": 0.0006
+   },
+   "skill": {
+    "n": 81,
+    "diff": 3.0935518518518523,
+    "lo": 2.823676728395062,
+    "hi": 3.3682267901234564,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 81,
+    "diff": -0.03899567749640829,
+    "lo": -0.10478912807244264,
+    "hi": 0.027532911957341234,
+    "p": 0.246
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.42,
+    "lo": 0.3,
+    "hi": 0.54,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.08626376754278242,
+    "lo": -0.13676502187875192,
+    "hi": -0.04183281708733935,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 8,
+    "a_only": 0,
+    "p": 0.0078125
+   }
+  },
+  "t5_270m_ft vs t5_270m_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.36255249987713145,
+    "lo": 0.3071181600906989,
+    "hi": 0.414853956302118,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.39,
+    "lo": 0.26,
+    "hi": 0.51,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.008537383184361244,
+    "lo": -0.005038972442134375,
+    "hi": 0.021262753075783094,
+    "p": 0.204
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_1b_ft vs t5_1b_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.08,
+    "lo": 0.03,
+    "hi": 0.14,
+    "p": 0.0002
+   },
+   "skill": {
+    "n": 78,
+    "diff": 2.6751012820512825,
+    "lo": 2.4038181730769232,
+    "hi": 2.9625060256410256,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 78,
+    "diff": -0.061664888165862915,
+    "lo": -0.11625497130148055,
+    "hi": -0.003539120390025757,
+    "p": 0.0362
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.37,
+    "lo": 0.23,
+    "hi": 0.5,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.08643902361680927,
+    "lo": -0.13302414732252785,
+    "hi": -0.04320278025742823,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 8,
+    "a_only": 0,
+    "p": 0.0078125
+   }
+  },
+  "t5_1b_ft vs t5_1b_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.35013953015892585,
+    "lo": 0.2995157734415115,
+    "hi": 0.3998796691410143,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.35,
+    "lo": 0.23,
+    "hi": 0.47,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.0050184259753405114,
+    "lo": -0.010788345894842438,
+    "hi": 0.019847408785889926,
+    "p": 0.5088
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_4b_ft vs t5_4b_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.07,
+    "lo": 0.02,
+    "hi": 0.12,
+    "p": 0.0012
+   },
+   "skill": {
+    "n": 26,
+    "diff": 3.339538461538461,
+    "lo": 2.8293402884615384,
+    "hi": 3.8860615384615382,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 26,
+    "diff": -0.17954363543521754,
+    "lo": -0.2768277369546131,
+    "hi": -0.09947186078221981,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.45,
+    "lo": 0.33,
+    "hi": 0.57,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.004457482710454056,
+    "lo": -0.03209528831536933,
+    "hi": 0.02019753742743554,
+    "p": 0.747
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 7,
+    "a_only": 0,
+    "p": 0.015625
+   }
+  },
+  "t5_4b_ft vs t5_4b_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": -0.01,
+    "lo": -0.03,
+    "hi": 0.0,
+    "p": 0.7212
+   },
+   "skill": {
+    "n": 100,
+    "diff": -0.0014219999999999999,
+    "lo": -0.004266,
+    "hi": 0.0,
+    "p": 0.7212
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.3473941674121653,
+    "lo": 0.28975221295153336,
+    "hi": 0.40458622634296915,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.35,
+    "lo": 0.23,
+    "hi": 0.46,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.0110267359002739,
+    "lo": -0.00037640488850665654,
+    "hi": 0.022542318390430856,
+    "p": 0.0592
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 1,
+    "p": 1.0
+   }
+  },
+  "t5_4b_48k vs t5_4b_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 26,
+    "diff": 2.8712999999999997,
+    "lo": 2.3049864423076922,
+    "hi": 3.4720249038461537,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 26,
+    "diff": -0.2009018000367527,
+    "lo": -0.27970826949952254,
+    "hi": -0.1260239563347017,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.39,
+    "lo": 0.27,
+    "hi": 0.51,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.011050473734775003,
+    "lo": -0.03926770648002826,
+    "hi": 0.013908520225052396,
+    "p": 0.413
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_4b_48k vs t5_4b_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.25086962860660245,
+    "lo": 0.1956436196278511,
+    "hi": 0.30543477005490216,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.14,
+    "lo": 0.02,
+    "hi": 0.27,
+    "p": 0.0304
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.0034115503377627338,
+    "lo": -0.006198130301052694,
+    "hi": 0.013116109919798401,
+    "p": 0.4782
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "mdlm120m_ft vs mdlm120m_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 3.233275,
+    "lo": 2.949692625,
+    "hi": 3.5114278000000003,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.0659184752795598,
+    "lo": -0.088617588637647,
+    "hi": -0.04167456218621441,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.39,
+    "lo": 0.28,
+    "hi": 0.5,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.012703515673810799,
+    "lo": -0.04427149120900093,
+    "hi": 0.01756041960464299,
+    "p": 0.4248
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "mdlm120m_ft vs mdlm120m_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": 0.07,
+    "lo": 0.03,
+    "hi": 0.12,
+    "p": 0.002
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.017874,
+    "lo": 0.005591,
+    "hi": 0.032877,
+    "p": 0.002
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.19752287118253303,
+    "lo": 0.14308974011977174,
+    "hi": 0.2516227518333683,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.53,
+    "lo": 0.42,
+    "hi": 0.64,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.02286295330164142,
+    "lo": 0.0075231517281264424,
+    "hi": 0.03848531557170438,
+    "p": 0.0042
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 7,
+    "a_only": 0,
+    "p": 0.015625
+   }
+  },
+  "mdlm523m_ft vs mdlm523m_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.01,
+    "lo": 0.0,
+    "hi": 0.03,
+    "p": 0.7582
+   },
+   "skill": {
+    "n": 100,
+    "diff": 2.950651,
+    "lo": 2.7094980749999995,
+    "hi": 3.2004239999999995,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.09775714568618529,
+    "lo": -0.12697523230028304,
+    "hi": -0.07103254386043607,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.35,
+    "lo": 0.22,
+    "hi": 0.47,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.02511696442940858,
+    "lo": -0.05999006646201396,
+    "hi": 0.006752666896993049,
+    "p": 0.1248
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 1,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "mdlm523m_ft vs mdlm523m_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": 0.14,
+    "lo": 0.07,
+    "hi": 0.21,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.021895,
+    "lo": 0.0025613750000000007,
+    "hi": 0.042926124999999996,
+    "p": 0.0272
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.17972166533915915,
+    "lo": 0.12280520826510732,
+    "hi": 0.2345755203923212,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.58,
+    "lo": 0.47,
+    "hi": 0.68,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.03323277856287683,
+    "lo": 0.02083219387010964,
+    "hi": 0.04590678952439553,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 14,
+    "a_only": 0,
+    "p": 0.0001220703125
+   }
+  },
+  "dg_full vs dg_base (baseline)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.05523900000000002,
+    "lo": -0.050112275000000005,
+    "hi": 0.15715345,
+    "p": 0.2934
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.07463368512865415,
+    "lo": -0.11750128386075517,
+    "hi": -0.03338181119621842,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.1,
+    "lo": -0.16,
+    "hi": -0.05,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.14586705249701612,
+    "lo": -0.18482374576565544,
+    "hi": -0.10736254851011337,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "dg_full vs dg_base (masking_backtrack)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.038907572656788895,
+    "lo": -0.07865703841374795,
+    "hi": 0.00047995878806324953,
+    "p": 0.052
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.17,
+    "lo": -0.29,
+    "hi": -0.05,
+    "p": 0.0082
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.012540700828239531,
+    "lo": -0.02972341064615639,
+    "hi": 0.0065436936429583495,
+    "p": 0.1836
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "nandi_base: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 3.743584,
+    "lo": 3.503368925,
+    "hi": 3.9946745249999998,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.5538458365166504,
+    "lo": -0.6098412566225618,
+    "hi": -0.49790577636243255,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.26,
+    "lo": -0.38,
+    "hi": -0.14,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.08166785517858925,
+    "lo": -0.11563880987637759,
+    "hi": -0.05224004052928375,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "nandi_ft: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 0.95,
+    "lo": 0.9,
+    "hi": 0.99,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.196211,
+    "lo": 0.123738775,
+    "hi": 0.29124795000000003,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.07379762445035377,
+    "lo": -0.10672781587226025,
+    "hi": -0.041438213842034194,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.01,
+    "lo": -0.12,
+    "hi": 0.1,
+    "p": 0.921
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.003452711979569565,
+    "lo": -0.012327851565595878,
+    "hi": 0.005419285774923138,
+    "p": 0.4426
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 95,
+    "a_only": 0,
+    "p": 5.048709793414476e-29
+   }
+  },
+  "gemma4_e4b: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 1.1892550000000002,
+    "lo": 1.13257425,
+    "hi": 1.2528904749999998,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.5317493027903822,
+    "lo": -0.5856286876144854,
+    "hi": -0.4759770738267311,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.34,
+    "lo": -0.44,
+    "hi": -0.24,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.18184861195362273,
+    "lo": -0.22279895748110973,
+    "hi": -0.14413022564497652,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "gemma4_26b: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 1.170499,
+    "lo": 1.08384875,
+    "hi": 1.272826575,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.43748568306473357,
+    "lo": -0.4929368778870984,
+    "hi": -0.38142633779701707,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.29,
+    "lo": -0.39,
+    "hi": -0.2,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.12046790893672198,
+    "lo": -0.145884974347847,
+    "hi": -0.09592618960939707,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "t5_270m_base: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 81,
+    "diff": 3.344676543209877,
+    "lo": 3.077086234567902,
+    "hi": 3.6401225617283957,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 81,
+    "diff": -0.4356194564587329,
+    "lo": -0.5049673968794495,
+    "hi": -0.36277300416444414,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.08,
+    "lo": -0.2,
+    "hi": 0.04,
+    "p": 0.2128
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.09876103409034172,
+    "lo": -0.1498016641517442,
+    "hi": -0.054114454061660704,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "t5_270m_ft: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 0.92,
+    "lo": 0.86,
+    "hi": 0.97,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.233649,
+    "lo": 0.1455949,
+    "hi": 0.34205042500000005,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.04209829665643032,
+    "lo": -0.08141458457792276,
+    "hi": -0.00443151895166399,
+    "p": 0.0254
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.11,
+    "lo": -0.22,
+    "hi": 0.0,
+    "p": 0.065
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.003959883363198076,
+    "lo": -0.01516794034233242,
+    "hi": 0.007289048419069451,
+    "p": 0.4714
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 92,
+    "a_only": 0,
+    "p": 4.0389678347315804e-28
+   }
+  },
+  "t5_1b_base: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 78,
+    "diff": 2.9796089743589746,
+    "lo": 2.724877083333334,
+    "hi": 3.256624455128205,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 78,
+    "diff": -0.48038469890757607,
+    "lo": -0.5487094737535393,
+    "hi": -0.40841296595313076,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.07,
+    "lo": -0.2,
+    "hi": 0.06,
+    "p": 0.3382
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.09631156624881392,
+    "lo": -0.14346691086594107,
+    "hi": -0.053315000928959785,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "t5_1b_ft: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 0.92,
+    "lo": 0.86,
+    "hi": 0.97,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.275747,
+    "lo": 0.17763350000000003,
+    "hi": 0.392696925,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.0863926016342715,
+    "lo": -0.12685966276169947,
+    "hi": -0.04894312498357632,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.09,
+    "lo": -0.19,
+    "hi": 0.01,
+    "p": 0.0848
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.0048541166566641045,
+    "lo": -0.015160217641088212,
+    "hi": 0.005020458583244203,
+    "p": 0.345
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 92,
+    "a_only": 0,
+    "p": 4.0389678347315804e-28
+   }
+  },
+  "t5_4b_base: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 26,
+    "diff": 3.8453346153846155,
+    "lo": 3.3244457692307687,
+    "hi": 4.4217619230769225,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 26,
+    "diff": -0.6708129412577036,
+    "lo": -0.7724715069861269,
+    "hi": -0.5520454672182031,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.02,
+    "lo": -0.09,
+    "hi": 0.13,
+    "p": 0.8048
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.030380481023144792,
+    "lo": -0.057260375102682164,
+    "hi": -0.006864009216486841,
+    "p": 0.0094
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "t5_4b_ft: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 0.92,
+    "lo": 0.86,
+    "hi": 0.97,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.28044099999999994,
+    "lo": 0.186877225,
+    "hi": 0.39449819999999997,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.07808055286224994,
+    "lo": -0.1317019109545861,
+    "hi": -0.027788930994290004,
+    "p": 0.0012
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.08,
+    "lo": -0.19,
+    "hi": 0.03,
+    "p": 0.1746
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.014896262412416837,
+    "lo": -0.028058938638433138,
+    "hi": -0.0021778968211040575,
+    "p": 0.0218
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 92,
+    "a_only": 0,
+    "p": 4.0389678347315804e-28
+   }
+  },
+  "t5_4b_48k: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.705435,
+    "lo": 0.59914495,
+    "hi": 0.8255718749999998,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.14346352006095986,
+    "lo": -0.20246630179804567,
+    "hi": -0.08574096767708056,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.23,
+    "lo": -0.35,
+    "hi": -0.11,
+    "p": 0.0002
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.015918456950607052,
+    "lo": -0.025754097041658423,
+    "hi": -0.006170190942612346,
+    "p": 0.0012
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "mdlm120m_base: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 0.93,
+    "lo": 0.88,
+    "hi": 0.97,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 3.9103759999999994,
+    "lo": 3.6899512999999997,
+    "hi": 4.1341683,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.40250916100147127,
+    "lo": -0.4672224246618737,
+    "hi": -0.3380066315804858,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.24,
+    "lo": -0.35,
+    "hi": -0.13,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.07371521475612691,
+    "lo": -0.09831236268609289,
+    "hi": -0.051732791881948834,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 93,
+    "a_only": 0,
+    "p": 2.0194839173657902e-28
+   }
+  },
+  "mdlm120m_ft: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.6949749999999998,
+    "lo": 0.5533661999999999,
+    "hi": 0.8559043249999999,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.13906781453937844,
+    "lo": -0.18396654775543092,
+    "hi": -0.09744998788989807,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.1,
+    "lo": -0.19,
+    "hi": -0.01,
+    "p": 0.0362
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.03814874578067471,
+    "lo": -0.05380873062024697,
+    "hi": -0.023013433317158334,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "mdlm523m_base: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 0.85,
+    "lo": 0.78,
+    "hi": 0.92,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 3.314359,
+    "lo": 3.0708959499999997,
+    "hi": 3.565992575000001,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.39176853308020976,
+    "lo": -0.45175995366205846,
+    "hi": -0.3305916404401324,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.26,
+    "lo": -0.38,
+    "hi": -0.14,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.07750769759071989,
+    "lo": -0.10975333783014495,
+    "hi": -0.049414542974022695,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 85,
+    "a_only": 0,
+    "p": 5.169878828456423e-26
+   }
+  },
+  "mdlm523m_ft: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 0.98,
+    "lo": 0.95,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.38560300000000003,
+    "lo": 0.3026688,
+    "hi": 0.488476425,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.1142897220548654,
+    "lo": -0.15766946332270287,
+    "hi": -0.07229886373649944,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.03,
+    "lo": -0.12,
+    "hi": 0.05,
+    "p": 0.5536
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.019157954598434473,
+    "lo": -0.03080343968896289,
+    "hi": -0.007590320731775166,
+    "p": 0.0008
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 98,
+    "a_only": 0,
+    "p": 6.310887241768095e-30
+   }
+  },
+  "dg_base: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 1.1499400000000002,
+    "lo": 1.0953087750000001,
+    "hi": 1.2212474499999997,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.5369378658376771,
+    "lo": -0.580593830506568,
+    "hi": -0.49270567405053967,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.36,
+    "lo": -0.45,
+    "hi": -0.27,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.249784752296581,
+    "lo": -0.2849258294383934,
+    "hi": -0.21648119882003442,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "dg_full: constrained vs free": {
+   "all": {
+    "n": 100,
+    "diff": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 1.094701,
+    "lo": 0.9825333250000001,
+    "hi": 1.2211081749999997,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": -0.5012117533658118,
+    "lo": -0.5510613688125059,
+    "hi": -0.4492844139176022,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.43,
+    "lo": -0.53,
+    "hi": -0.34,
+    "p": 0.0
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.11645840062780433,
+    "lo": -0.14351616927552788,
+    "hi": -0.08982349287340327,
+    "p": 0.0
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 100,
+    "a_only": 0,
+    "p": 1.5777218104420236e-30
+   }
+  },
+  "nandi_base: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.13082413840912901,
+    "lo": 0.08381441152353461,
+    "hi": 0.17806154059587023,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.02,
+    "lo": -0.07,
+    "hi": 0.11,
+    "p": 0.7552
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.004363643084305354,
+    "lo": -0.01418633015854563,
+    "hi": 0.0038012229086385263,
+    "p": 0.3362
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "nandi_ft: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.06072583203646686,
+    "lo": 0.032780676308195644,
+    "hi": 0.08867621030548224,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.03,
+    "lo": -0.11,
+    "hi": 0.05,
+    "p": 0.5416
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.001097001597610697,
+    "lo": -0.005774484018303678,
+    "hi": 0.008118589544522794,
+    "p": 0.7456
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "gemma4_e4b: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.08532571620374017,
+    "lo": 0.054367815899421336,
+    "hi": 0.11686967202301596,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.01,
+    "lo": -0.11,
+    "hi": 0.09,
+    "p": 0.9234
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.003114816901127887,
+    "lo": -0.011270279545601487,
+    "hi": 0.0050379944275725334,
+    "p": 0.4472
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "gemma4_26b: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.0893472034158631,
+    "lo": 0.04562018848439731,
+    "hi": 0.1317620589044353,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.03,
+    "lo": -0.12,
+    "hi": 0.06,
+    "p": 0.582
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.007323703592717846,
+    "lo": -0.019539521281283438,
+    "hi": 0.0045059725665324004,
+    "p": 0.2276
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_270m_base: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.1094694390405034,
+    "lo": 0.06109764167171722,
+    "hi": 0.15902810273167384,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.02,
+    "lo": -0.09,
+    "hi": 0.13,
+    "p": 0.7882
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.006591798276570573,
+    "lo": -0.01865271391190509,
+    "hi": 0.004205374085117917,
+    "p": 0.2502
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_270m_ft: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.07659550552794596,
+    "lo": 0.04359786144749615,
+    "hi": 0.11133473984018577,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.02,
+    "lo": -0.07,
+    "hi": 0.11,
+    "p": 0.7466
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.004623249184297104,
+    "lo": -0.006800387777601567,
+    "hi": 0.015736796620627463,
+    "p": 0.4236
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_1b_base: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.11098112338623559,
+    "lo": 0.0685795796662251,
+    "hi": 0.15313315398518226,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.09,
+    "lo": -0.2,
+    "hi": 0.02,
+    "p": 0.119
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.006537302198825323,
+    "lo": -0.017784216907444115,
+    "hi": 0.0034694849274470936,
+    "p": 0.2096
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_1b_ft: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.08147202294224913,
+    "lo": 0.046640765507923246,
+    "hi": 0.11409926472534536,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.06,
+    "lo": -0.03,
+    "hi": 0.15,
+    "p": 0.234
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.006514556516643804,
+    "lo": -0.0004524232398618731,
+    "hi": 0.013536938485165474,
+    "p": 0.0676
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_4b_base: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.0712013559797599,
+    "lo": 0.020639693312354154,
+    "hi": 0.12074772956226,
+    "p": 0.0064
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.03,
+    "lo": -0.14,
+    "hi": 0.08,
+    "p": 0.6362
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.003171053076087401,
+    "lo": -0.007786298543049957,
+    "hi": 0.014554907757790881,
+    "p": 0.571
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_4b_ft: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.01,
+    "lo": 0.0,
+    "hi": 0.03,
+    "p": 0.7212
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0014219999999999999,
+    "lo": 0.0,
+    "hi": 0.004266,
+    "p": 0.7212
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.06985999578325017,
+    "lo": 0.04515952330950869,
+    "hi": 0.09490147728181728,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.07,
+    "lo": -0.01,
+    "hi": 0.15,
+    "p": 0.1248
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.0015519559445341907,
+    "lo": -0.006767088787308121,
+    "hi": 0.009671123019782069,
+    "p": 0.7124
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 1,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "t5_4b_48k: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.08459824599303727,
+    "lo": 0.05528731338491939,
+    "hi": 0.1135579439692683,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.02,
+    "lo": -0.09,
+    "hi": 0.13,
+    "p": 0.7922
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.007856044170144783,
+    "lo": -0.00018587420185606858,
+    "hi": 0.016646063275665004,
+    "p": 0.058
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "mdlm120m_base: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.07,
+    "lo": 0.03,
+    "hi": 0.12,
+    "p": 0.002
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.017874,
+    "lo": 0.005591,
+    "hi": 0.032877,
+    "p": 0.002
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.08040605741281812,
+    "lo": 0.04440776810152224,
+    "hi": 0.11656450425888273,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.04,
+    "lo": -0.05,
+    "hi": 0.14,
+    "p": 0.4874
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.003994578356017367,
+    "lo": -0.006497555640384087,
+    "hi": 0.015029306543731979,
+    "p": 0.4684
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 7,
+    "a_only": 0,
+    "p": 0.015625
+   }
+  },
+  "mdlm120m_ft: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.03890468917975911,
+    "lo": 0.010836031482081267,
+    "hi": 0.06766753264464552,
+    "p": 0.0066
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.1,
+    "lo": -0.19,
+    "hi": -0.01,
+    "p": 0.0394
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.0021863925520599348,
+    "lo": -0.009270162509243939,
+    "hi": 0.013363390268080111,
+    "p": 0.7004
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "mdlm523m_base: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.15,
+    "lo": 0.08,
+    "hi": 0.22,
+    "p": 0.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.030711000000000002,
+    "lo": 0.013916600000000003,
+    "hi": 0.05048662499999999,
+    "p": 0.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.07421115238713066,
+    "lo": 0.031012585703332582,
+    "hi": 0.11785490995539281,
+    "p": 0.0006
+   },
+   "meaning": {
+    "n": 100,
+    "diff": 0.03,
+    "lo": -0.07,
+    "hi": 0.13,
+    "p": 0.5992
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.009165583425864083,
+    "lo": -0.0019389256989794576,
+    "hi": 0.02238804512510133,
+    "p": 0.1142
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 15,
+    "a_only": 0,
+    "p": 6.103515625e-05
+   }
+  },
+  "mdlm523m_ft: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.01,
+    "lo": 0.0,
+    "hi": 0.03,
+    "p": 0.744
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.008816,
+    "lo": 0.0,
+    "hi": 0.026448,
+    "p": 0.744
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.07837460396325165,
+    "lo": 0.044624173954154404,
+    "hi": 0.11334032167690747,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.01,
+    "lo": -0.09,
+    "hi": 0.07,
+    "p": 0.915
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.00020156844437657737,
+    "lo": -0.00996888846630506,
+    "hi": 0.009530961588139349,
+    "p": 0.9546
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 1,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "dg_base: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.06493097371372004,
+    "lo": 0.033643814375763914,
+    "hi": 0.09647816841303929,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.05,
+    "lo": -0.15,
+    "hi": 0.05,
+    "p": 0.3564
+   },
+   "copy": {
+    "n": 100,
+    "diff": -0.01016043828211684,
+    "lo": -0.022171163304319265,
+    "hi": 0.0012947737899995048,
+    "p": 0.0822
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  },
+  "dg_full: v2 A+B vs v1 (constrained)": {
+   "all": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "skill": {
+    "n": 100,
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "p": 1.0
+   },
+   "words_s": {
+    "n": 100,
+    "diff": 0.0897146738649369,
+    "lo": 0.04750702212904883,
+    "hi": 0.13262767699171737,
+    "p": 0.0
+   },
+   "meaning": {
+    "n": 100,
+    "diff": -0.06,
+    "lo": -0.16,
+    "hi": 0.04,
+    "p": 0.279
+   },
+   "copy": {
+    "n": 100,
+    "diff": 0.00881403401865779,
+    "lo": -0.002493581792631547,
+    "hi": 0.020137798941245483,
+    "p": 0.12
+   },
+   "mcnemar_all": {
+    "pairs": 100,
+    "b_only": 0,
+    "a_only": 0,
+    "p": 1.0
+   }
+  }
+ }
+}

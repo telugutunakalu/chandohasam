@@ -1,0 +1,105 @@
+Loading weights:   0%|          | 0/1327 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 348/1327 [00:00<00:00, 3442.81it/s]Loading weights:  52%|█████▏    | 693/1327 [00:00<00:00, 3066.97it/s]Loading weights:  76%|███████▌  | 1003/1327 [00:00<00:00, 2750.00it/s]Loading weights: 100%|██████████| 1327/1327 [00:00<00:00, 3333.35it/s]
+grid_t5_4b_ft_free_new: T5Gemma 2 4b runs/t5g-4b-r128-full/lora.pt; slice 1,747 tokens; 10 metres, 66 poems; modes ['baseline']; seeds free [42], constrained [42]; inventory none; Layer B weight 0.0 (override, all)
+[1/8] utpalamala|dataset/bhagavatam:10.2-1106-ఉ.|baseline|42: eos tok=95 gana=True prasa=True yati=False 8.6s
+[2/8] utpalamala|dataset/bhagavatam:10.2-317-ఉ.|baseline|42: eos tok=93 gana=False prasa=False yati=False 7.4s
+[3/8] utpalamala|dataset/bhagavatam:6-278-ఉ.|baseline|42: eos tok=94 gana=False prasa=True yati=False 7.0s
+[4/8] utpalamala|dataset/kuchimanchi_timmakavi:kuchimanchi-1341|baseline|42: eos tok=97 gana=False prasa=True yati=False 6.7s
+[5/8] utpalamala|dataset/kuchimanchi_timmakavi:kuchimanchi-443|baseline|42: eos tok=98 gana=False prasa=False yati=False 7.6s
+[6/8] utpalamala|dataset/vemana:vemana-1006-ఆ.|baseline|42: eos tok=93 gana=True prasa=True yati=False 7.6s
+[7/8] utpalamala|gemini:poem_0121|baseline|42: eos tok=97 gana=False prasa=False yati=False 7.6s
+[8/8] utpalamala|gemini:poem_0141|baseline|42: eos tok=96 gana=True prasa=True yati=False 7.0s
+[1/9] champakamala|dataset/bhagavatam:10.2-283-చ.|baseline|42: eos tok=93 gana=True prasa=False yati=False 8.4s
+[2/9] champakamala|dataset/bhagavatam:3-1011-చ.|baseline|42: eos tok=96 gana=False prasa=False yati=False 6.8s
+[3/9] champakamala|dataset/bhagavatam:3-277-చ.|baseline|42: eos tok=90 gana=True prasa=False yati=False 6.5s
+[4/9] champakamala|dataset/bhagavatam:4-861-చ.|baseline|42: eos tok=92 gana=False prasa=False yati=False 6.4s
+[5/9] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-214|baseline|42: eos tok=89 gana=False prasa=False yati=False 6.0s
+[6/9] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-266|baseline|42: eos tok=92 gana=True prasa=False yati=False 6.2s
+[7/9] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-674|baseline|42: eos tok=99 gana=True prasa=True yati=True 7.5s
+[8/9] champakamala|dataset/vemana:vemana-905-ఆ.|baseline|42: eos tok=93 gana=False prasa=False yati=False 6.4s
+[9/9] champakamala|gemini:poem_0247|baseline|42: eos tok=95 gana=True prasa=False yati=False 7.1s
+[1/8] mattebhavikriditamu|dataset/bhagavatam:10.1-1074-మ.|baseline|42: eos tok=99 gana=True prasa=True yati=False 10.1s
+[2/8] mattebhavikriditamu|dataset/bhagavatam:10.1-714-మ.|baseline|42: eos tok=99 gana=False prasa=True yati=True 8.0s
+[3/8] mattebhavikriditamu|dataset/bhagavatam:10.2-627-మ.|baseline|42: eos tok=101 gana=True prasa=True yati=False 7.6s
+[4/8] mattebhavikriditamu|dataset/bhagavatam:3-799-మ.|baseline|42: eos tok=107 gana=False prasa=False yati=False 7.4s
+[5/8] mattebhavikriditamu|dataset/bhagavatam:8-437-మ.|baseline|42: eos tok=95 gana=False prasa=False yati=False 6.8s
+[6/8] mattebhavikriditamu|dataset/bhagavatam:9-384-మ.|baseline|42: eos tok=104 gana=False prasa=False yati=False 7.3s
+[7/8] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-87|baseline|42: eos tok=106 gana=False prasa=False yati=False 7.5s
+[8/8] mattebhavikriditamu|gemini:poem_0051|baseline|42: eos tok=107 gana=True prasa=False yati=True 8.6s
+[1/6] sardulavikriditamu|dataset/bhagavatam:10.1-1185-శా.|baseline|42: eos tok=105 gana=False prasa=False yati=False 9.8s
+[2/6] sardulavikriditamu|dataset/bhagavatam:10.1-1597-శా.|baseline|42: eos tok=102 gana=False prasa=True yati=False 7.9s
+[3/6] sardulavikriditamu|dataset/bhagavatam:10.1-1651-శా.|baseline|42: eos tok=104 gana=False prasa=False yati=False 8.5s
+[4/6] sardulavikriditamu|dataset/bhagavatam:8-662-శా.|baseline|42: eos tok=98 gana=False prasa=True yati=False 8.6s
+[5/6] sardulavikriditamu|dataset/bhagavatam:8-71-శా.|baseline|42: eos tok=109 gana=False prasa=False yati=False 9.3s
+[6/6] sardulavikriditamu|gemini:poem_0251|baseline|42: eos tok=97 gana=False prasa=False yati=False 8.5s
+[1/1] mattakokilamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1196|baseline|42: eos tok=89 gana=False prasa=False yati=False 8.7s
+[1/11] kandamu|dataset/bhagavatam:10.1-1385-క.|baseline|42: eos tok=58 gana=False prasa=False yati=False 6.4s
+[2/11] kandamu|dataset/bhagavatam:3-347-క.|baseline|42: eos tok=56 gana=True prasa=False yati=False 5.3s
+[3/11] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-668|baseline|42: eos tok=62 gana=True prasa=False yati=True 5.3s
+[4/11] kandamu|dataset/vemana:vemana-1068-ఆ.|baseline|42: eos tok=56 gana=False prasa=False yati=False 4.9s
+[5/11] kandamu|dataset/vemana:vemana-1094-ఆ.|baseline|42: eos tok=55 gana=True prasa=True yati=False 5.2s
+[6/11] kandamu|dataset/vemana:vemana-22-ఆ.|baseline|42: eos tok=58 gana=False prasa=True yati=True 5.5s
+[7/11] kandamu|dataset/vemana:vemana-51-ఆ.|baseline|42: eos tok=60 gana=True prasa=True yati=True 5.6s
+[8/11] kandamu|dataset/vemana:vemana-727-ఆ.|baseline|42: eos tok=54 gana=False prasa=True yati=False 4.9s
+[9/11] kandamu|dataset/vemana:vemana-801-ఆ.|baseline|42: eos tok=56 gana=False prasa=True yati=False 5.1s
+[10/11] kandamu|dataset/vemana:vemana-903-ఆ.|baseline|42: eos tok=53 gana=False prasa=False yati=False 4.6s
+[11/11] kandamu|gemini:poem_0100|baseline|42: eos tok=63 gana=False prasa=False yati=True 5.1s
+[1/1] utsahamu|gemini:poem_0110|baseline|42: eos tok=76 gana=False prasa=False yati=False 8.0s
+[1/1] seesamu|dataset/bhagavatam:4-720-సీ.|baseline|42: eos tok=186 gana=False prasa=False yati=False 16.9s
+[1/11] ataveladi|dataset/bhagavatam:10.1-594-ఆ.|baseline|42: eos tok=57 gana=True prasa=True yati=False 6.3s
+[2/11] ataveladi|dataset/bhagavatam:8-715-ఆ.|baseline|42: eos tok=56 gana=False prasa=True yati=False 5.1s
+[3/11] ataveladi|dataset/vemana:vemana-1130-ఆ.|baseline|42: eos tok=56 gana=True prasa=True yati=True 4.7s
+[4/11] ataveladi|dataset/vemana:vemana-202-ఆ.|baseline|42: eos tok=64 gana=True prasa=True yati=True 5.9s
+[5/11] ataveladi|dataset/vemana:vemana-345-ఆ.|baseline|42: eos tok=54 gana=True prasa=True yati=False 5.5s
+[6/11] ataveladi|dataset/vemana:vemana-532-ఆ.|baseline|42: eos tok=54 gana=True prasa=True yati=False 5.0s
+[7/11] ataveladi|dataset/vemana:vemana-558-ఆ.|baseline|42: eos tok=56 gana=True prasa=True yati=True 5.2s
+[8/11] ataveladi|dataset/vemana:vemana-57-ఆ.|baseline|42: eos tok=57 gana=True prasa=True yati=False 4.6s
+[9/11] ataveladi|dataset/vemana:vemana-866-ఆ.|baseline|42: eos tok=55 gana=True prasa=True yati=False 5.4s
+[10/11] ataveladi|gemini:poem_0060|baseline|42: eos tok=50 gana=True prasa=True yati=False 4.6s
+[11/11] ataveladi|gemini:poem_0062|baseline|42: eos tok=54 gana=True prasa=True yati=True 5.5s
+[1/10] tetagiti|dataset/bhagavatam:10.2-658-తే.|baseline|42: eos tok=57 gana=False prasa=False yati=False 5.7s
+[2/10] tetagiti|dataset/bhagavatam:9-54-తే.|baseline|42: eos tok=62 gana=True prasa=True yati=False 5.5s
+[3/10] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-604|baseline|42: eos tok=62 gana=True prasa=True yati=False 5.3s
+[4/10] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-654|baseline|42: eos tok=64 gana=True prasa=True yati=False 5.2s
+[5/10] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-828|baseline|42: eos tok=67 gana=True prasa=True yati=True 5.4s
+[6/10] tetagiti|dataset/vemana:vemana-1077-ఆ.|baseline|42: eos tok=61 gana=True prasa=True yati=False 5.4s
+[7/10] tetagiti|dataset/vemana:vemana-1145-ఆ.|baseline|42: eos tok=65 gana=False prasa=False yati=False 5.9s
+[8/10] tetagiti|dataset/vemana:vemana-327-ఆ.|baseline|42: eos tok=56 gana=False prasa=False yati=False 4.5s
+[9/10] tetagiti|dataset/vemana:vemana-531-ఆ.|baseline|42: eos tok=58 gana=True prasa=True yati=False 5.6s
+[10/10] tetagiti|gemini:poem_0069|baseline|42: eos tok=61 gana=False prasa=False yati=False 5.4s
+# Token choices under the constraint
+
+Runs: `grid_t5_4b_ft_free_new`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 66 | 11 | 11 | 79 | -1.093 | 73 | 3 | 0.967 | 1.979 | 46 | 5 | 0 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| baseline | line_start | 225 | -1.017 | 64 | 0 | 0.992 |
+| baseline | prasa | 86 | -0.864 | 79 | 1 | 0.966 |
+| baseline | yati | 99 | -1.127 | 74 | 0 | 0.956 |
+| baseline | other | 1610 | -1.137 | 72 | 0 | 0.989 |
+
+## By meter
+
+| meter | baseline in meter % / logp / lexical % |
+|---|---|
+| ataveladi | 36 / -1.14 / 56 |
+| champakamala | 11 / -1.09 / 39 |
+| kandamu | 9 / -1.16 / 52 |
+| mattakokilamu | 0 / -0.95 / 39 |
+| mattebhavikriditamu | 0 / -1.07 / 39 |
+| sardulavikriditamu | 0 / -1.05 / 42 |
+| seesamu | 0 / -1.15 / 71 |
+| tetagiti | 10 / -1.05 / 48 |
+| utpalamala | 0 / -1.11 / 43 |
+| utsahamu | 0 / -1.06 / 38 |
+
+grid_t5_4b_ft_free_new: 477 s

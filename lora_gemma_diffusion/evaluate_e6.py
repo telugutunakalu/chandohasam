@@ -24,7 +24,7 @@ soup under the constraint and short broken free poems — settled.py explains wh
   at the first end token and scored by the strict engines into the same row format (runs/<name>/free_native.jsonl);
   `--free decoder`: the decoder's baseline mode.
 
-Full grid options (../full_grid_experiments/PLAN.md §4; records from $E6_RECORDS_DIR carry its prompts as bhāvams):
+Full grid options (../full_grid_experiments/README.md, The design; records from $E6_RECORDS_DIR carry its prompts as bhāvams):
 - `--prompt instruction`: the September grids' instruction prompt (metrical_decoder.prompts.build_messages: the
   metre's rules, the bhāvam as the topic) in place of the T1 prompt — for the base model;
 - `--free-seeds` (default 42) and `--seeds` (constrained modes; default 42).

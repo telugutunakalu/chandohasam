@@ -1,0 +1,10 @@
+built on cuda in 1s
+987 dense tensors loaded (40s)
+experts of 10/30 layers loaded (47s)
+experts of 20/30 layers loaded (55s)
+experts of 30/30 layers loaded (63s)
+ready in 63s; GPU memory allocated 51.8 GB
+grid_dg_base_constrained_smoke_v2: diffusiongemma-26B-A4B NVFP4 (base); instruction prompt; settled decoder; free native; 9 poems in 2 metres; modes ['masking_backtrack']; slice 1747 tokens
+[1/1] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|masking_backtrack|42: complete tok=31 gana=True prasa=True yati=True 118.5s
+[1/1] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|masking_backtrack|42: complete tok=105 gana=True prasa=True yati=True 99.5s
+grid_dg_base_constrained_smoke_v2: 2 rows → /home/samvaran/phd_workspace/chandohasam/lora_gemma_diffusion/runs/grid_dg_base_constrained_smoke_v2/results.jsonl

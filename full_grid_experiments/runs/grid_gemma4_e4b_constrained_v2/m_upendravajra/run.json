@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "upendravajra"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/bhagavatam:10.1-407-ఉపేం.": "ఓ కృష్ణపరమాత్మా! గొప్ప తపస్వి అయిన నారద మహాముని చెప్పిన మాటలే నిజమయ్యాయి. ఆయన ఇచ్చిన శాపం వల్లనే మేము నిన్ను దర్శించుకోగలిగాము. నీ దర్శనం కోసం మేము ఎన్నో ఏళ్లుగా ఎదురుచూస్తూ తపస్సు చేశాము, అది ఇప్పుడు నెరవేరింది. భక్తుల పట్ల ఎంతో మమకారం కలిగిన నీవు, మమ్ములను నీపై శరణు వేడిన భక్తులుగా స్వీకరించి ఆశీర్వదించు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 325,
+  "baseline_max_tokens": 325,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 2.0,
+  "attest_where": "all",
+  "attest_corpus": "padyarchana"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": "padyarchana"
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "upendravajra": 325
+ },
+ "started": "2026-10-29 08:19:58"
+}

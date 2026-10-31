@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-26B-A4B-it",
+ "meters": [
+  "madhuragati_ragada"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/kuchimanchi_timmakavi:kuchimanchi-1201": "ఇంద్రజిత్తు వదిలిన సర్పబాణాన్ని ఎదుర్కొనే సమయంలో, రాముడు ఏమాత్రం తడబడకుండా చిలుక వంటి అత్యంత శక్తివంతమైన బాణాన్ని విసిరాడు. ఆ బాణం, భయంకరమైన శబ్దంతో గాలిలో ప్రయాణిస్తూ, మంటలను చిమ్ముతూ, నాలుకలను బయటకు చాపి కదుపుతున్న అత్యంత క్రూరమైన పాముల్లాగా ఆకాశమంతా, భూమిపై అన్ని వైపులా వ్యాపించి వెలిగింది."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 320,
+  "baseline_max_tokens": 320,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 2.0,
+  "attest_where": "all",
+  "attest_corpus": "padyarchana"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": "padyarchana"
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "madhuragati_ragada": 320
+ },
+ "started": "2026-10-29 17:40:11"
+}

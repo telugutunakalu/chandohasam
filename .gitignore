@@ -67,10 +67,13 @@ autoregressive_finetuning/data/
 poetry_metrics/cache/
 # MAUVE reference embeddings and texts (derived from the Padyarchana training split: never committed)
 metrics/mauve_padyarchana/cache/
-# the full grid: its prompts and records (the held-out poems, bhāvams and word glosses), generated poems, cell logs
-full_grid_experiments/prompts/
-full_grid_experiments/runs/
-full_grid_experiments/logs/
+# the full grid: prompts, runs and logs are in git (user, 2026-10-31), except the earlier 183-prompt stage's records
+# (a near-duplicate of the grid's own) and the records' links into the E6 train/val split (confidential corpus);
+# PLAN.md was folded into the folder's README (its decisions) and is kept locally only
+full_grid_experiments/prompts/e6_p1/records/
+full_grid_experiments/prompts/*/records/train.jsonl
+full_grid_experiments/prompts/*/records/val.jsonl
+full_grid_experiments/PLAN.md
 # decoder v2 inventories from the Padyarchana training split (never committed; rebuilt by
 # `cd meter_engine && python3 -m metrical_decoder inventory`)
 meter_engine/metrical_decoder/inventories/padyarchana.txt

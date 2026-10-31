@@ -1,0 +1,35 @@
+# Token choices under the constraint
+
+Runs: `grid_mdlm120m_base_free_new`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 66 | 0 | 0 | 281 | -0.815 | 79 | 21 | 0.710 | 1.445 | 44 | 6 | 3 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| baseline | line_start | 82 | -3.193 | 9 | 7 | 0.807 |
+| baseline | prasa | 31 | -2.038 | 65 | 16 | 0.708 |
+| baseline | other | 152 | -1.493 | 64 | 5 | 0.844 |
+
+## By meter
+
+| meter | baseline in meter % / logp / lexical % |
+|---|---|
+| ataveladi | 0 / -0.67 / 38 |
+| champakamala | 0 / -0.81 / 54 |
+| kandamu | 0 / -0.76 / 46 |
+| mattakokilamu | 0 / -1.18 / 39 |
+| mattebhavikriditamu | 0 / -0.82 / 45 |
+| sardulavikriditamu | 0 / -1.09 / 42 |
+| seesamu | 0 / -0.80 / 29 |
+| tetagiti | 0 / -0.79 / 40 |
+| utpalamala | 0 / -0.86 / 51 |
+| utsahamu | 0 / -0.98 / 34 |
+

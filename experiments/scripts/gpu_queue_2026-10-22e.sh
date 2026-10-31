@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Third queue: Phase 0's DiffusionGemma part (full_grid_experiments/PLAN.md §3; user decisions 2026-10-21: a fresh
+# Third queue: Phase 0's DiffusionGemma part (full_grid_experiments/README.md, Phase 0; user decisions 2026-10-21: a fresh
 # LoRA run on the whole T1 pool; lever ① the speed test of examples per forward first).
 # Waits for the second queue (gpu-queue-1021d: T5 1B → T5 4B whole pool) to end, then, one GPU job at a time with the
 # same 2-s memory watchdog: the grid's P1 prompts (full_grid_experiments/prompts.py, Gemma-4 26B-A4B-it; then the

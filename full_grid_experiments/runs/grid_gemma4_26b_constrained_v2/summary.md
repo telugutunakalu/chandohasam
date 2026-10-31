@@ -1,0 +1,27 @@
+| meter | mode | n | gana_strict | gana | prasa_strict | yati_strict | all_strict | all_relaxed | tok | s | logp | valid_mass | argmax_valid | bt |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ataveladi | masking_backtrack | 11 | 100 | 100 | 100 | 100 | 100 | 100 | 68 | 12.2 | -2.077 | 0.704 | 0.731 | 26.3 |
+| bhujangaprayatamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 73 | 12.7 | -2.068 | 0.624 | 0.624 | 30.0 |
+| champakamala | masking_backtrack | 10 | 100 | 100 | 100 | 100 | 100 | 100 | 123 | 17.1 | -2.023 | 0.676 | 0.705 | 30.0 |
+| indravajra | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 79 | 13.9 | -1.447 | 0.726 | 0.672 | 30.0 |
+| kandamu | masking_backtrack | 11 | 100 | 100 | 100 | 100 | 100 | 100 | 65 | 10.0 | -1.536 | 0.765 | 0.777 | 15.5 |
+| layagrahi | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 201 | 21.7 | -1.178 | 0.780 | 0.796 | 23.5 |
+| layavibhati | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 171 | 20.4 | -2.371 | 0.686 | 0.702 | 30.0 |
+| madhuragati_ragada | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 31 | 9.2 | -1.982 | 0.723 | 0.735 | 24.5 |
+| mahasragdhara | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 219 | 23.5 | -0.647 | 0.891 | 0.896 | 30.0 |
+| malini | masking_backtrack | 4 | 100 | 100 | 100 | 100 | 100 | 100 | 90 | 14.8 | -2.435 | 0.597 | 0.616 | 30.0 |
+| manini | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 107 | 9.2 | -0.215 | 0.960 | 0.952 | 0.0 |
+| mattakokilamu | masking_backtrack | 7 | 100 | 100 | 100 | 100 | 100 | 100 | 106 | 17.5 | -2.343 | 0.632 | 0.642 | 29.7 |
+| mattebhavikriditamu | masking_backtrack | 10 | 100 | 100 | 100 | 100 | 100 | 100 | 120 | 15.6 | -1.742 | 0.732 | 0.752 | 27.2 |
+| pamcacamaramu | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 98 | 15.7 | -2.875 | 0.569 | 0.592 | 30.0 |
+| sardulavikriditamu | masking_backtrack | 7 | 100 | 100 | 100 | 100 | 100 | 100 | 127 | 19.4 | -1.978 | 0.709 | 0.736 | 30.0 |
+| seesamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 144 | 21.6 | -1.955 | 0.727 | 0.736 | 30.0 |
+| sragdhara | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 138 | 16.9 | -1.380 | 0.762 | 0.764 | 17.5 |
+| sragvini | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 86 | 15.9 | -2.102 | 0.624 | 0.626 | 30.0 |
+| tetagiti | masking_backtrack | 10 | 100 | 100 | 100 | 100 | 100 | 100 | 73 | 12.8 | -2.441 | 0.663 | 0.670 | 26.4 |
+| totakamu | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 75 | 13.5 | -2.297 | 0.665 | 0.712 | 30.0 |
+| upendravajra | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 65 | 10.4 | -2.033 | 0.645 | 0.660 | 23.0 |
+| utpalamala | masking_backtrack | 8 | 100 | 100 | 100 | 100 | 100 | 100 | 119 | 18.4 | -2.681 | 0.585 | 0.604 | 30.0 |
+| utsahamu | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 92 | 14.9 | -1.672 | 0.744 | 0.745 | 20.0 |
+| vanamayuramu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 81 | 14.7 | -2.721 | 0.596 | 0.634 | 30.0 |
+| ALL | masking_backtrack | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 15.0 | -2.037 | 0.689 | 0.706 | 26.3 |

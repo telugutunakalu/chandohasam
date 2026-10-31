@@ -1,0 +1,51 @@
+{
+ "model": "google/gemma-4-26B-A4B-it",
+ "meters": [
+  "mattebhavikriditamu"
+ ],
+ "modes": [
+  "baseline"
+ ],
+ "topics": {
+  "dataset/bhagavatam:10.1-876-మ.": "యజ్ఞాలు, మంత్రతంత్రాలు, వస్తువులు, సమయం, స్థలం, దేవతలు, అగ్ని మరియు బ్రాహ్మణులు ఎవరైతే ఆ పరమేశ్వరుడో, ఆయనే లోక రక్షణ కోసం శ్రీకృష్ణుడిగా ఈ భూమిపై దిగివచ్చారని మనం గ్రహించలేకపోయాము. సర్వానికి మూలమైన ఆ లక్ష్మీపతికి, ప్రపంచాన్ని కాపాడేవాడికి మరియు రాక్షస రాజులను అంతం చేసేవాడికి మా నమస్కారాలు.",
+  "dataset/kuchimanchi_timmakavi:kuchimanchi-28": "ఓ శివుడా! ఓ పార్వతీదేవి భర్తా! విష్ణుమూర్తి కంటే మించిన దైవం లేడని గర్వంతో, కాశీలో పదేపదే వాదిస్తూ, కఠినమైన మాటలతో ఇతరులను దూషించే స్వభావం గల పరాశర మహర్షి పుత్రుడైన వ్యాసుడిని, గతంలో నీవు భయంకరంగా చేతులు మొద్దుబారిపోయేలా చేసి అణచివేసి కదా!"
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 222,
+  "baseline_max_tokens": 222,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "mattebhavikriditamu": 222
+ },
+ "started": "2026-10-29 00:36:42"
+}

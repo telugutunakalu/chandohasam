@@ -24,7 +24,7 @@ from torch import nn
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
-# $E6_RECORDS_DIR: records whose bhāvams are the full grid's prompts (../full_grid_experiments/PLAN.md)
+# $E6_RECORDS_DIR: records whose bhāvams are the full grid's prompts (../full_grid_experiments/README.md)
 RECORDS = Path(os.environ.get("E6_RECORDS_DIR") or REPO / "diffusion_finetuning" / "data" / "e6" / "records")
 RUNS, DATA, CACHE = HERE / "runs", HERE / "data", HERE / "cache"
 sys.path.insert(0, str(REPO / "meter_engine"))

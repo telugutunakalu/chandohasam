@@ -1,0 +1,22 @@
+| meter | mode | n | gana_strict | gana | prasa_strict | yati_strict | all_strict | all_relaxed | tok | s | logp | valid_mass | argmax_valid | bt |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| bhujangaprayatamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 81 | 13.0 | -2.007 | 0.591 | 0.564 | 30.0 |
+| champakamala | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 109 | 16.4 | -2.729 | 0.520 | 0.579 | 30.0 |
+| indravajra | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 69 | 10.2 | -2.045 | 0.663 | 0.722 | 20.0 |
+| layagrahi | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 182 | 19.9 | -2.422 | 0.595 | 0.607 | 30.0 |
+| layavibhati | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 169 | 20.3 | -2.579 | 0.570 | 0.611 | 30.0 |
+| madhuragati_ragada | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 28 | 10.0 | -2.268 | 0.789 | 0.842 | 30.0 |
+| mahasragdhara | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 201 | 23.6 | -1.904 | 0.643 | 0.654 | 30.0 |
+| malini | masking_backtrack | 4 | 100 | 100 | 100 | 100 | 100 | 100 | 105 | 15.1 | -2.655 | 0.524 | 0.548 | 30.0 |
+| manini | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 143 | 19.2 | -2.957 | 0.509 | 0.530 | 30.0 |
+| mattakokilamu | masking_backtrack | 6 | 100 | 100 | 100 | 100 | 100 | 100 | 115 | 15.9 | -2.622 | 0.529 | 0.545 | 29.2 |
+| mattebhavikriditamu | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 133 | 18.5 | -2.925 | 0.502 | 0.518 | 30.0 |
+| pamcacamaramu | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 102 | 16.2 | -2.821 | 0.518 | 0.517 | 30.0 |
+| sardulavikriditamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 120 | 17.8 | -3.075 | 0.441 | 0.415 | 30.0 |
+| sragdhara | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 194 | 24.7 | -2.329 | 0.569 | 0.586 | 30.0 |
+| sragvini | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 93 | 14.7 | -2.086 | 0.664 | 0.694 | 30.0 |
+| totakamu | masking_backtrack | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 78 | 12.4 | -2.720 | 0.523 | 0.485 | 30.0 |
+| upendravajra | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 79 | 14.8 | -2.790 | 0.535 | 0.551 | 30.0 |
+| utsahamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 99 | 17.5 | -2.585 | 0.589 | 0.576 | 30.0 |
+| vanamayuramu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 84 | 13.8 | -2.313 | 0.579 | 0.631 | 24.0 |
+| ALL | masking_backtrack | 34 | 100 | 100 | 100 | 100 | 100 | 100 | 114 | 16.3 | -2.544 | 0.566 | 0.582 | 29.4 |

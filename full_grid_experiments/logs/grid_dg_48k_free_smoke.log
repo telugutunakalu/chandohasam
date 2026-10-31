@@ -1,0 +1,10 @@
+built on cuda in 1s
+987 dense tensors loaded (38s)
+experts of 10/30 layers loaded (45s)
+experts of 20/30 layers loaded (52s)
+experts of 30/30 layers loaded (59s)
+ready in 59s; GPU memory allocated 51.8 GB
+grid_dg_48k_free_smoke: diffusiongemma-26B-A4B NVFP4 + LoRA runs/lora-48k/lora.pt; t1 prompt; settled decoder; free native; 8 poems in 2 metres; modes ['baseline']; slice 1747 tokens
+[free native] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|baseline|42: 1 lines, gaṇa False, prāsa False, yati False, 9 tokens, 14.93s
+[free native] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|baseline|42: 3 lines, gaṇa False, prāsa False, yati False, 49 tokens, 13.78s
+grid_dg_48k_free_smoke: 2 rows → /home/samvaran/phd_workspace/chandohasam/lora_gemma_diffusion/runs/grid_dg_48k_free_smoke/results.jsonl

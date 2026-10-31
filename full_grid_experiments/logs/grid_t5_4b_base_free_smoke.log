@@ -1,0 +1,29 @@
+Loading weights:   0%|          | 0/1327 [00:00<?, ?it/s]Loading weights:  22%|██▏       | 289/1327 [00:00<00:00, 2888.90it/s]Loading weights:  44%|████▎     | 578/1327 [00:00<00:00, 2752.38it/s]Loading weights:  68%|██████▊   | 901/1327 [00:00<00:00, 2933.24it/s]Loading weights:  94%|█████████▎| 1243/1327 [00:00<00:00, 3119.97it/s]Loading weights: 100%|██████████| 1327/1327 [00:00<00:00, 3163.93it/s]
+grid_t5_4b_base_free_smoke: T5Gemma 2 4b google/t5gemma-2-4b-4b (base); slice 1,747 tokens; 2 metres, 8 poems; modes ['baseline']; seeds free [42], constrained [42]; inventory none; Layer B weight 0.0 (override, all)
+[1/1] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|baseline|42: eos tok=0 gana=False prasa=False yati=False 1.0s
+[1/1] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|baseline|42: eos tok=0 gana=False prasa=False yati=False 0.9s
+# Token choices under the constraint
+
+Runs: `grid_t5_4b_base_free_smoke`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 2 | 0 | 0 | 0 | – | – | – | – | – | – | – | 0 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+
+## By meter
+
+| meter | baseline in meter % / logp / lexical % |
+|---|---|
+| madhuragati_ragada | 0 / – / – |
+| mattakokilamu | 0 / – / – |
+
+grid_t5_4b_base_free_smoke: 4 s

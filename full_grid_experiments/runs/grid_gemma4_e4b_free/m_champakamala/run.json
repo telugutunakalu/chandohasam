@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "champakamala"
+ ],
+ "modes": [
+  "baseline"
+ ],
+ "topics": {
+  "dataset/bhagavatam:6-399-చ.": "భక్తులపై నీవు చూపే సద్గుణాలను నా మనసు గుర్తుంచుకోవాలని, నా మాటలు నిన్ను కీర్తించాలని, నా దేహం నీ సేవలో ఉండాలని ఆశిస్తున్నాను. ఇవే కాకుండా నాకు ధ్రువలోకం, బ్రహ్మలోకం లేదా ఇంద్రుని సుఖాలు వంటివి ఏదీ వద్దు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 197,
+  "baseline_max_tokens": 197,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "champakamala": 197
+ },
+ "started": "2026-10-29 00:16:34"
+}

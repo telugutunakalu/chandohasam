@@ -1,0 +1,51 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "utsahamu"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/bhagavatam:6-389-ఉత్సా.": "గాయపడి భయంతో పరుగులు తీస్తున్న ఐరావతంపై ఇంద్రుడు తన అంకుశంతో నియంత్రణ సాధించాడు. ఆపై తన చల్లని చేత్తో దానిని నెమ్మదిగా స్పర్శిస్తూ అమృత రసాన్ని అనుభవించాడు.",
+  "gemini:poem_0110": "రాత్రింబవళ్లు డిజిటల్ తెరల ముందే నలిగిపోతూ, ఉద్యోగ భద్రత లేని అనిశ్చిత ఆర్థిక చక్రంలో చిక్కుకుని మనిషి తన దేహాన్ని, ప్రశాంతతను కోల్పోతున్నాడు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 304,
+  "baseline_max_tokens": 304,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 2.0,
+  "attest_where": "all",
+  "attest_corpus": "padyarchana"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": "padyarchana"
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "utsahamu": 304
+ },
+ "started": "2026-10-29 08:25:07"
+}

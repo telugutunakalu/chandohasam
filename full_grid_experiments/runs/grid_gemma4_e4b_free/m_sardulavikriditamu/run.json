@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "sardulavikriditamu"
+ ],
+ "modes": [
+  "baseline"
+ ],
+ "topics": {
+  "dataset/kuchimanchi_timmakavi:kuchimanchi-99": "ఓ శివుడా! పార్వతీవల్లభా! నీవు ఒక సాధారణ కాకికి అమరత్వాన్ని ప్రసాదిస్తావు, కానీ తక్కువ కాలం బ్రతికే చిలుకను త్వరగా మరణించేలా చేస్తావు. కీర్తి గల సుశ్లోకుడి జీవితాన్ని త్వరగా ముగిసిపోయేలా చేసి, చెడ్డవాడిని మాత్రం దీర్ఘకాలం జీవించేలా చేస్తావు. గొప్ప దాతను పేదవాడిగా మార్చి, కఠిన స్వభావం కలవాడిని సంపన్నుడిని చేస్తావు. ఓ భర్గా! బ్రహ్మదేవుని ఈ వింతైన సృష్టి విధానాన్ని గమనిస్తే ఆశ్చర్యంగా ఉంది, ఆయన కార్యాలందు ఏమాత్రం అనుమానానికి తావు లేదు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 236,
+  "baseline_max_tokens": 236,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "sardulavikriditamu": 236
+ },
+ "started": "2026-10-29 00:16:54"
+}

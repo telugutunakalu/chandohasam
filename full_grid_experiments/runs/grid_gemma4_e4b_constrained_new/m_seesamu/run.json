@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "seesamu"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/bhagavatam:4-720-సీ.": "ఈ సృష్టి ఏ దానిలో వెలుగుతుందో మరియు ఈ సృష్టి లోపల ఏది వెలుగుతుందో, అటువంటి నిత్యమైన మరియు స్వయంగా వెలిగే ఆత్మ స్వరూపమే పరబ్రహ్మం. మార్పులు లేని ఆ పరబ్రహ్మం, భేదాలను సృష్టించే మాయ ద్వారానే ఈ విశ్వాన్ని నిర్మించాడు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 282,
+  "baseline_max_tokens": 282,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "seesamu": 282
+ },
+ "started": "2026-10-29 05:51:05"
+}

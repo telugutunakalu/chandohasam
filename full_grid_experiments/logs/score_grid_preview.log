@@ -1,0 +1,90 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5766.58it/s]
+scorer (test): 10,747 records, 1,285,232 training lines (23 s)
+nandi_base|baseline: 366 poems
+nandi_base|masking_backtrack: 183 poems
+nandi_ft|baseline: 366 poems
+nandi_ft|masking_backtrack: 183 poems
+t5_270m_base|baseline: 366 poems
+t5_270m_base|masking_backtrack: 183 poems
+t5_270m_ft|baseline: 366 poems
+t5_270m_ft|masking_backtrack: 183 poems
+t5_1b_base|baseline: 366 poems
+t5_1b_base|masking_backtrack: 183 poems
+t5_1b_ft|baseline: 366 poems
+t5_1b_ft|masking_backtrack: 183 poems
+mdlm120m_base|baseline: 366 poems
+mdlm120m_base|masking_backtrack: 183 poems
+mdlm120m_ft|baseline: 366 poems
+mdlm120m_ft|masking_backtrack: 183 poems
+mdlm523m_base|baseline: 366 poems
+mdlm523m_base|masking_backtrack: 183 poems
+mdlm523m_ft|baseline: 366 poems
+mdlm523m_ft|masking_backtrack: 183 poems
+nandi_base|masking_only: 183 poems
+nandi_base|hybrid: 183 poems
+nandi_ft|masking_only: 183 poems
+nandi_ft|hybrid: 183 poems
+mdlm523m_base|masking_only: 183 poems
+mdlm523m_base|hybrid: 183 poems
+mdlm523m_ft|masking_only: 183 poems
+mdlm523m_ft|hybrid: 183 poems
+# Full grid: every model on the 183 P1 prompts
+
+Scored by ../RL/reward.py (the RL report's definitions). Real words with ఁ stripped on both sides. Recognition (raw) is a topic signal, not meaning. Gold copy: a run of ≥ 12 aksharas shared with the poem's own gold poem. Free cells: 2 poems per prompt (seeds 42, 43); constrained cells: 1.
+
+| cell | poems | in metre % | skill mean / median | vṛtta lines on pattern % | real words % | one-akshara % | copy % | recognised % | repeating a line % | training line % | gold copy % | lines |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| gold (the source poems) | 183 | 37.2 | 0.65 / 1.00 | 94.3 | 84.0 | 5.4 | 1.9 | 60.7 | 0.0 | 0.0 | 100.0 | 3.95 |
+| Nandi-Mini-150M · base · baseline | 366 | 0.0 | -3.02 / -2.48 | 0.0 | 93.9 | 9.4 | 9.7 | 39.3 | 6.0 | 0.3 | 0.0 | 2.40 |
+| Nandi-Mini-150M · base · masking_backtrack | 183 | 100.0 | 1.00 / 1.00 | 100.0 | 40.5 | 18.2 | 1.0 | 19.1 | 32.2 | 0.0 | 0.0 | 3.95 |
+| Nandi-Mini-150M · FT (bhāvam → poem) · baseline | 366 | 6.8 | 0.54 / 0.89 | 72.6 | 78.6 | 5.4 | 1.7 | 68.0 | 0.0 | 0.0 | 0.5 | 3.94 |
+| Nandi-Mini-150M · FT (bhāvam → poem) · masking_backtrack | 183 | 100.0 | 1.00 / 1.00 | 100.0 | 71.7 | 8.9 | 1.5 | 61.7 | 0.0 | 0.0 | 0.0 | 3.95 |
+| T5Gemma 2 270M · base · baseline | 366 | 0.0 | -2.52 / -1.97 | 0.0 | 90.0 | 13.9 | 16.5 | 36.6 | 23.0 | 0.0 | 0.0 | 2.79 |
+| T5Gemma 2 270M · base · masking_backtrack | 183 | 100.0 | 1.00 / 1.00 | 100.0 | 40.0 | 9.6 | 2.1 | 25.1 | 38.8 | 0.0 | 0.0 | 3.95 |
+| T5Gemma 2 270M · FT (full) · baseline | 366 | 8.5 | 0.51 / 0.91 | 74.4 | 79.1 | 4.4 | 3.0 | 74.0 | 1.1 | 0.0 | 0.5 | 3.94 |
+| T5Gemma 2 270M · FT (full) · masking_backtrack | 183 | 100.0 | 1.00 / 1.00 | 100.0 | 73.5 | 5.2 | 2.6 | 69.9 | 1.1 | 0.0 | 0.5 | 3.95 |
+| T5Gemma 2 1B · base · baseline | 366 | 0.0 | -2.43 / -1.88 | 0.0 | 91.6 | 18.8 | 18.0 | 50.3 | 10.7 | 0.0 | 0.0 | 2.69 |
+| T5Gemma 2 1B · base · masking_backtrack | 183 | 100.0 | 1.00 / 1.00 | 100.0 | 36.2 | 9.7 | 2.9 | 36.6 | 20.8 | 0.0 | 0.0 | 3.95 |
+| T5Gemma 2 1B · FT (full) · baseline | 366 | 6.8 | 0.47 / 0.91 | 75.0 | 82.5 | 4.8 | 3.1 | 74.3 | 0.8 | 0.0 | 0.0 | 3.93 |
+| T5Gemma 2 1B · FT (full) · masking_backtrack | 183 | 99.5 | 0.99 / 1.00 | 99.1 | 71.2 | 5.5 | 2.7 | 65.6 | 1.1 | 0.0 | 0.5 | 3.93 |
+| chandohasam MDLM 120M · base (pre-trained) · baseline | 366 | 0.0 | -3.40 / -2.98 | 0.0 | 98.7 | 6.9 | 8.2 | 41.5 | 2.7 | 0.3 | 0.0 | 1.77 |
+| chandohasam MDLM 120M · base (pre-trained) · masking_backtrack | 183 | 88.5 | 0.97 / 1.00 | 96.0 | 57.7 | 22.7 | 1.6 | 21.3 | 7.1 | 0.0 | 0.0 | 3.94 |
+| chandohasam MDLM 120M · FT (E6 + T1) · baseline | 366 | 0.3 | 0.07 / 0.54 | 13.1 | 92.2 | 6.3 | 6.7 | 83.9 | 0.3 | 0.0 | 0.0 | 3.72 |
+| chandohasam MDLM 120M · FT (E6 + T1) · masking_backtrack | 183 | 98.4 | 0.98 / 1.00 | 99.1 | 77.8 | 11.1 | 3.8 | 75.4 | 0.5 | 0.0 | 0.0 | 3.93 |
+| chandohasam MDLM 523M · base (pre-trained) · baseline | 366 | 0.0 | -2.63 / -2.09 | 0.0 | 98.4 | 6.1 | 10.3 | 45.4 | 18.3 | 0.5 | 0.0 | 2.70 |
+| chandohasam MDLM 523M · base (pre-trained) · masking_backtrack | 183 | 83.1 | 0.95 / 1.00 | 94.0 | 58.3 | 18.7 | 2.2 | 19.1 | 18.6 | 0.5 | 0.0 | 3.94 |
+| chandohasam MDLM 523M · FT (E6 + T1) · baseline | 366 | 0.5 | 0.33 / 0.67 | 31.8 | 89.6 | 6.1 | 5.8 | 83.1 | 1.1 | 0.0 | 0.3 | 3.92 |
+| chandohasam MDLM 523M · FT (E6 + T1) · masking_backtrack | 183 | 99.5 | 1.00 / 1.00 | 100.0 | 77.6 | 10.2 | 3.9 | 72.7 | 1.1 | 0.0 | 0.0 | 3.94 |
+| Nandi-Mini-150M · base · masking_only | 183 | 97.8 | 0.98 / 1.00 | 98.9 | 38.7 | 24.4 | 1.9 | 20.8 | 40.4 | 0.0 | 0.0 | 3.94 |
+| Nandi-Mini-150M · base · hybrid | 183 | 96.7 | 0.99 / 1.00 | 98.9 | 41.6 | 23.4 | 1.6 | 17.5 | 30.1 | 0.0 | 0.0 | 3.95 |
+| Nandi-Mini-150M · FT (bhāvam → poem) · masking_only | 183 | 100.0 | 1.00 / 1.00 | 100.0 | 69.1 | 10.0 | 1.5 | 61.7 | 0.0 | 0.0 | 0.0 | 3.95 |
+| Nandi-Mini-150M · FT (bhāvam → poem) · hybrid | 183 | 100.0 | 1.00 / 1.00 | 100.0 | 70.1 | 8.1 | 1.2 | 64.5 | 0.0 | 0.0 | 0.0 | 3.95 |
+| chandohasam MDLM 523M · base (pre-trained) · masking_only | 183 | 87.4 | 0.94 / 1.00 | 95.1 | 55.8 | 20.0 | 2.0 | 21.3 | 31.1 | 0.0 | 0.0 | 3.92 |
+| chandohasam MDLM 523M · base (pre-trained) · hybrid | 183 | 94.0 | 0.98 / 1.00 | 97.7 | 56.6 | 12.1 | 2.6 | 25.7 | 18.0 | 0.0 | 0.0 | 3.94 |
+| chandohasam MDLM 523M · FT (E6 + T1) · masking_only | 183 | 97.8 | 1.00 / 1.00 | 100.0 | 71.5 | 17.1 | 3.2 | 72.7 | 2.2 | 0.0 | 0.0 | 3.95 |
+| chandohasam MDLM 523M · FT (E6 + T1) · hybrid | 183 | 99.5 | 0.99 / 1.00 | 99.1 | 71.5 | 11.0 | 2.9 | 76.0 | 0.5 | 0.0 | 0.0 | 3.93 |
+
+## Paired tests (per-prompt means; bootstrap 95% interval and p; in-metre also McNemar on seed 42)
+
+| comparison | in metre Δ pts [95%] p | skill Δ [95%] p | real words Δ pts p | recognised Δ pts p | copy Δ pts p | McNemar in metre (B only / A only, p) |
+|---|---|---|---|---|---|---|
+| nandi_ft vs nandi_base (baseline) | +6.8 [+4.4, +9.6] p 0.000 | +3.56 [+3.39, +3.73] p 0.000 | -15.3 [-18.0, -12.6] p 0.000 | +28.7 [+21.3, +35.8] p 0.000 | -8.1 [-10.3, -6.0] p 0.000 | 9 / 0, p 0.004 |
+| nandi_ft vs nandi_base (masking_backtrack) | +0.0 [+0.0, +0.0] p 1.000 | +0.00 [+0.00, +0.00] p 1.000 | +31.2 [+27.0, +35.3] p 0.000 | +42.6 [+34.4, +50.8] p 0.000 | +0.5 [-0.2, +1.2] p 0.147 | 0 / 0, p 1.000 |
+| t5_270m_ft vs t5_270m_base (baseline) | +8.5 [+5.7, +11.5] p 0.000 | +3.02 [+2.85, +3.20] p 0.000 | -10.9 [-14.3, -7.4] p 0.000 | +37.4 [+30.6, +44.3] p 0.000 | -13.4 [-16.6, -10.3] p 0.000 | 11 / 0, p 0.001 |
+| t5_270m_ft vs t5_270m_base (masking_backtrack) | +0.0 [+0.0, +0.0] p 1.000 | +0.00 [+0.00, +0.00] p 1.000 | +33.5 [+29.7, +37.2] p 0.000 | +44.8 [+36.6, +53.0] p 0.000 | +0.5 [-0.5, +1.5] p 0.302 | 0 / 0, p 1.000 |
+| t5_1b_ft vs t5_1b_base (baseline) | +6.8 [+4.1, +9.8] p 0.000 | +2.86 [+2.67, +3.07] p 0.000 | -9.0 [-11.7, -6.3] p 0.000 | +24.0 [+16.7, +31.4] p 0.000 | -14.8 [-17.5, -12.2] p 0.000 | 11 / 0, p 0.001 |
+| t5_1b_ft vs t5_1b_base (masking_backtrack) | -0.5 [-1.6, +0.0] p 0.747 | -0.01 [-0.04, +0.00] p 0.747 | +35.0 [+30.8, +39.1] p 0.000 | +29.0 [+20.2, +37.2] p 0.000 | -0.2 [-1.4, +0.9] p 0.730 | 0 / 1, p 1.000 |
+| mdlm120m_ft vs mdlm120m_base (baseline) | +0.3 [+0.0, +0.8] p 0.742 | +3.47 [+3.25, +3.69] p 0.000 | -6.5 [-7.8, -5.2] p 0.000 | +42.3 [+35.0, +49.5] p 0.000 | -1.5 [-3.0, -0.1] p 0.041 | 1 / 0, p 1.000 |
+| mdlm120m_ft vs mdlm120m_base (masking_backtrack) | +9.8 [+5.5, +14.8] p 0.000 | +0.01 [-0.02, +0.04] p 0.423 | +20.1 [+16.0, +24.1] p 0.000 | +54.1 [+45.9, +62.3] p 0.000 | +2.2 [+1.1, +3.2] p 0.000 | 20 / 2, p 0.000 |
+| mdlm523m_ft vs mdlm523m_base (baseline) | +0.5 [+0.0, +1.4] p 0.274 | +2.96 [+2.77, +3.15] p 0.000 | -8.8 [-10.5, -7.1] p 0.000 | +37.7 [+30.6, +44.5] p 0.000 | -4.5 [-6.2, -2.9] p 0.000 | 1 / 0, p 1.000 |
+| mdlm523m_ft vs mdlm523m_base (masking_backtrack) | +16.4 [+10.9, +21.9] p 0.000 | +0.04 [+0.02, +0.06] p 0.000 | +19.3 [+15.0, +23.8] p 0.000 | +53.6 [+45.9, +61.2] p 0.000 | +1.7 [+0.4, +2.9] p 0.014 | 30 / 0, p 0.000 |
+| nandi_base: constrained vs free | +100.0 [+100.0, +100.0] p 0.000 | +4.02 [+3.77, +4.29] p 0.000 | -53.4 [-57.4, -49.4] p 0.000 | -20.2 [-27.6, -12.6] p 0.000 | -8.8 [-10.9, -6.7] p 0.000 | 183 / 0, p 0.000 |
+| nandi_ft: constrained vs free | +93.2 [+90.4, +95.6] p 0.000 | +0.46 [+0.33, +0.62] p 0.000 | -6.9 [-9.3, -4.6] p 0.000 | -6.3 [-13.1, +0.3] p 0.070 | -0.2 [-0.8, +0.5] p 0.636 | 174 / 0, p 0.000 |
+| t5_270m_base: constrained vs free | +100.0 [+100.0, +100.0] p 0.000 | +3.51 [+3.28, +3.76] p 0.000 | -50.2 [-53.9, -46.5] p 0.000 | -11.5 [-19.4, -3.6] p 0.006 | -14.4 [-17.5, -11.3] p 0.000 | 183 / 0, p 0.000 |
+| t5_270m_ft: constrained vs free | +91.5 [+88.5, +94.3] p 0.000 | +0.49 [+0.35, +0.64] p 0.000 | -5.6 [-8.1, -3.2] p 0.000 | -4.1 [-10.7, +2.2] p 0.227 | -0.4 [-1.0, +0.2] p 0.168 | 172 / 0, p 0.000 |
+| t5_1b_base: constrained vs free | +100.0 [+100.0, +100.0] p 0.000 | +3.38 [+3.16, +3.62] p 0.000 | -55.5 [-59.5, -51.4] p 0.000 | -13.7 [-21.3, -5.7] p 0.001 | -15.0 [-17.7, -12.4] p 0.000 | 183 / 0, p 0.000 |
+| t5_1b_ft: constrained vs free | +92.6 [+89.6, +95.6] p 0.000 | +0.52 [+0.38, +0.67] p 0.000 | -11.3 [-14.4, -8.4] p 0.000 | -8.7 [-15.0, -2.7] p 0.005 | -0.4 [-1.2, +0.4] p 0.296 | 171 / 0, p 0.000 |
+| mdlm120m_base: constrained vs free | +88.5 [+83.6, +92.9] p 0.000 | +4.37 [+4.10, +4.65] p 0.000 | -41.0 [-45.8, -36.2] p 0.000 | -20.2 [-28.1, -12.3] p 0.000 | -6.6 [-8.0, -5.3] p 0.000 | 162 / 0, p 0.000 |
+| mdlm120m_ft: constrained vs free | +98.1 [+95.9, +99.7] p 0.000 | +0.91 [+0.77, +1.06] p 0.000 | -14.5 [-17.5, -11.7] p 0.000 | -8.5 [-14.5, -2.5] p 0.007 | -3.0 [-4.0, -1.9] p 0.000 | 179 / 0, p 0.000 |
+| mdlm523m_base: constrained vs free | +83.1 [+77.6, +88.5] p 0.000 | +3.58 [+3.32, +3.85] p 0.000 | -40.1 [-44.9, -35.3] p 0.000 | -26.2 [-33.9, -18.3] p 0.000 | -8.1 [-9.7, -6.5] p 0.000 | 152 / 0, p 0.000 |
+| mdlm523m_ft: constrained vs free | +98.9 [+97.3, +100.0] p 0.000 | +0.66 [+0.53, +0.81] p 0.000 | -12.0 [-14.7, -9.5] p 0.000 | -10.4 [-16.4, -4.4] p 0.000 | -1.9 [-2.7, -1.0] p 0.000 | 181 / 0, p 0.000 |

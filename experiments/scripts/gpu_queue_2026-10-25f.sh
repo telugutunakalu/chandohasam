@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fourth queue: the full grid (full_grid_experiments/PLAN.md; user decisions 2026-10-21: the grid runs last; levers
+# Fourth queue: the full grid (full_grid_experiments/README.md; user decisions 2026-10-21: the grid runs last; levers
 # ② the September rerun after the grid, ③ the extra strategies after the core cells).
 # Waits for the third queue (gpu-queue-1022e: P1 prompts → DiffusionGemma whole pool) to end AND for the grid's records
 # (full_grid_experiments/prompts/e6_p1/records/test.jsonl, written by build_records.py after the user's review of the

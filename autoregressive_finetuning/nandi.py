@@ -34,7 +34,7 @@ for p in (REPO / "meter_engine", REPO / "diffusion_finetuning", REPO / "diffusio
 
 from ft.text import MEANING_KEY, METRE_KEY, POEM_KEY, STYLE_KEY        # noqa: E402
 
-# $E6_RECORDS_DIR: records whose bhāvams are the full grid's prompts (../full_grid_experiments/PLAN.md)
+# $E6_RECORDS_DIR: records whose bhāvams are the full grid's prompts (../full_grid_experiments/README.md)
 E6_RECORDS = Path(os.environ.get("E6_RECORDS_DIR") or REPO / "diffusion_finetuning" / "data" / "e6" / "records")
 METRE_OK = ("agree", "engine-only")                                    # as ft.canvas / ft.build_data
 

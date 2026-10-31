@@ -1,0 +1,51 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "sragdhara"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/bhagavatam:10.2-883-స్రగ్ద.": "అనేక గుర్రాలు కింద పడిపోయాయి, ఏనుగులు నేలకేసి వాలాయి, రథాలు ముక్కలై విరిగిపోయాయి, సైనికులు మరణించి పడి ఉన్నారు; ఆ సమయంలో భయానక శక్తులైన బేతాళాలు, పిశాచాలు, భూతాలు ఎంతో సంతోషంగా రక్తమును సేవ చేస్తూ, మాంసమును తింటూ, ఎముకలను కొరుకుతూ, చప్పట్లు కొడుతూ, పరవశంతో నృత్యం చేస్తూ ఉన్నాయి.",
+  "dataset/bhagavatam:6-272-స్రగ్ద.": "అత్యంత శక్తివంతమైన విల్లులు, బాణాలతో, రథాలు, గుర్రాలు మరియు ఏనుగుల సహాయంతో ఆ రాక్షస సైన్యం దేవతలపై దాడి చేసింది. ఆ సమయంలో దేవతలు కూడా లోకాన్ని కంపించేలా, గంభీరమైన జయజయధ్వానాలతో, ఉగ్రరూపంతో ఆ రాక్షసులను ఎదుర్కొన్నారు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 307,
+  "baseline_max_tokens": 307,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 2.0,
+  "attest_where": "all",
+  "attest_corpus": "padyarchana"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": "padyarchana"
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "sragdhara": 307
+ },
+ "started": "2026-10-29 08:12:56"
+}

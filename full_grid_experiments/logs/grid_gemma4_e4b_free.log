@@ -1,0 +1,81 @@
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:   1%|          | 20/2076 [00:00<00:15, 135.73it/s]Loading weights:   3%|▎         | 60/2076 [00:00<00:07, 255.93it/s]Loading weights:   4%|▍         | 88/2076 [00:00<00:10, 182.57it/s]Loading weights:   5%|▌         | 112/2076 [00:00<00:10, 195.38it/s]Loading weights:   6%|▋         | 134/2076 [00:00<00:12, 159.15it/s]Loading weights:   7%|▋         | 152/2076 [00:00<00:12, 157.81it/s]Loading weights:   9%|▉         | 182/2076 [00:00<00:10, 187.57it/s]Loading weights:  10%|▉         | 203/2076 [00:01<00:09, 190.96it/s]Loading weights:  11%|█         | 224/2076 [00:01<00:10, 184.00it/s]Loading weights:  12%|█▏        | 250/2076 [00:01<00:09, 201.65it/s]Loading weights:  13%|█▎        | 271/2076 [00:01<00:14, 125.36it/s]Loading weights:  16%|█▌        | 330/2076 [00:01<00:08, 208.60it/s]Loading weights:  19%|█▉        | 397/2076 [00:01<00:05, 286.53it/s]Loading weights:  21%|██        | 432/2076 [00:02<00:06, 246.65it/s]Loading weights:  22%|██▏       | 462/2076 [00:02<00:10, 155.49it/s]Loading weights:  26%|██▌       | 541/2076 [00:02<00:06, 231.88it/s]Loading weights:  28%|██▊       | 573/2076 [00:02<00:06, 223.22it/s]Loading weights:  29%|██▉       | 607/2076 [00:03<00:07, 196.87it/s]Loading weights:  31%|███       | 640/2076 [00:03<00:06, 214.09it/s]Loading weights:  32%|███▏      | 674/2076 [00:03<00:06, 230.87it/s]Loading weights:  34%|███▍      | 701/2076 [00:03<00:07, 192.29it/s]Loading weights:  35%|███▌      | 728/2076 [00:03<00:06, 197.90it/s]Loading weights:  36%|███▋      | 753/2076 [00:12<01:58, 11.13it/s] Loading weights:  36%|███▋      | 753/2076 [00:29<01:58, 11.13it/s]Loading weights:  36%|███▋      | 755/2076 [00:47<12:46,  1.72it/s]Loading weights:  37%|███▋      | 758/2076 [00:48<12:10,  1.80it/s]Loading weights:  37%|███▋      | 770/2076 [00:48<09:19,  2.33it/s]Loading weights:  38%|███▊      | 779/2076 [00:49<07:57,  2.71it/s]Loading weights:  38%|███▊      | 788/2076 [00:49<06:11,  3.47it/s]Loading weights:  38%|███▊      | 795/2076 [00:50<05:32,  3.85it/s]Loading weights:  39%|███▊      | 800/2076 [00:51<04:39,  4.56it/s]Loading weights:  39%|███▉      | 809/2076 [00:51<03:45,  5.62it/s]Loading weights:  39%|███▉      | 813/2076 [00:52<03:26,  6.11it/s]Loading weights:  40%|███▉      | 822/2076 [00:52<02:22,  8.81it/s]Loading weights:  40%|███▉      | 826/2076 [00:52<02:15,  9.21it/s]Loading weights:  40%|███▉      | 829/2076 [00:53<02:42,  7.70it/s]Loading weights:  40%|████      | 838/2076 [00:53<01:44, 11.88it/s]Loading weights:  41%|████      | 843/2076 [00:54<01:59, 10.34it/s]Loading weights:  41%|████      | 846/2076 [00:54<02:01, 10.09it/s]Loading weights:  41%|████      | 854/2076 [00:54<01:22, 14.84it/s]Loading weights:  41%|████▏     | 857/2076 [00:54<01:18, 15.56it/s]Loading weights:  41%|████▏     | 860/2076 [00:55<01:31, 13.33it/s]Loading weights:  42%|████▏     | 863/2076 [00:55<02:11,  9.23it/s]Loading weights:  42%|████▏     | 873/2076 [00:56<01:12, 16.48it/s]Loading weights:  42%|████▏     | 877/2076 [00:56<01:22, 14.52it/s]Loading weights:  42%|████▏     | 880/2076 [00:56<01:33, 12.81it/s]Loading weights:  43%|████▎     | 886/2076 [00:57<02:19,  8.54it/s]Loading weights:  44%|████▎     | 905/2076 [00:58<00:57, 20.41it/s]Loading weights:  44%|████▍     | 911/2076 [00:59<01:33, 12.51it/s]Loading weights:  45%|████▍     | 925/2076 [00:59<01:06, 17.40it/s]Loading weights:  45%|████▍     | 929/2076 [00:59<01:10, 16.22it/s]Loading weights:  45%|████▍     | 933/2076 [01:00<01:15, 15.11it/s]Loading weights:  45%|████▌     | 942/2076 [01:01<01:41, 11.15it/s]Loading weights:  46%|████▌     | 953/2076 [01:02<01:25, 13.19it/s]Loading weights:  46%|████▋     | 963/2076 [01:02<01:09, 16.02it/s]Loading weights:  47%|████▋     | 966/2076 [01:02<01:15, 14.67it/s]Loading weights:  47%|████▋     | 971/2076 [01:03<01:48, 10.15it/s]Loading weights:  47%|████▋     | 973/2076 [01:04<02:54,  6.33it/s]Loading weights:  49%|████▉     | 1013/2076 [01:05<00:46, 22.63it/s]Loading weights:  49%|████▉     | 1017/2076 [01:06<01:00, 17.60it/s]Loading weights:  49%|████▉     | 1026/2076 [01:06<00:49, 21.32it/s]Loading weights:  50%|████▉     | 1030/2076 [01:06<00:54, 19.09it/s]Loading weights:  50%|████▉     | 1034/2076 [01:07<01:14, 13.94it/s]Loading weights:  50%|█████     | 1043/2076 [01:07<00:54, 19.02it/s]Loading weights:  50%|█████     | 1047/2076 [01:08<01:14, 13.80it/s]Loading weights:  51%|█████     | 1050/2076 [01:08<01:19, 12.83it/s]Loading weights:  51%|█████     | 1058/2076 [01:08<00:58, 17.41it/s]Loading weights:  51%|█████▏    | 1068/2076 [01:08<00:44, 22.57it/s]Loading weights:  52%|█████▏    | 1081/2076 [01:09<00:36, 27.58it/s]Loading weights:  52%|█████▏    | 1085/2076 [01:09<00:58, 16.94it/s]Loading weights:  52%|█████▏    | 1088/2076 [01:10<01:45,  9.32it/s]Loading weights:  53%|█████▎    | 1110/2076 [01:11<00:44, 21.72it/s]Loading weights:  54%|█████▍    | 1117/2076 [01:12<01:03, 15.09it/s]Loading weights:  54%|█████▍    | 1126/2076 [01:12<00:48, 19.71it/s]Loading weights:  55%|█████▍    | 1132/2076 [01:12<00:48, 19.29it/s]Loading weights:  55%|█████▍    | 1137/2076 [01:13<01:03, 14.78it/s]Loading weights:  55%|█████▍    | 1141/2076 [01:14<01:45,  8.86it/s]Loading weights:  56%|█████▌    | 1158/2076 [01:14<00:54, 16.80it/s]Loading weights:  56%|█████▌    | 1163/2076 [01:14<00:48, 18.66it/s]Loading weights:  56%|█████▋    | 1168/2076 [01:15<01:16, 11.86it/s]Loading weights:  57%|█████▋    | 1175/2076 [01:17<01:40,  9.00it/s]Loading weights:  57%|█████▋    | 1191/2076 [01:17<00:54, 16.23it/s]Loading weights:  58%|█████▊    | 1196/2076 [01:18<01:16, 11.56it/s]Loading weights:  58%|█████▊    | 1207/2076 [01:18<00:58, 14.85it/s]Loading weights:  58%|█████▊    | 1211/2076 [01:19<01:12, 11.98it/s]Loading weights:  59%|█████▊    | 1217/2076 [01:20<01:22, 10.46it/s]Loading weights:  59%|█████▉    | 1224/2076 [01:20<01:09, 12.33it/s]Loading weights:  59%|█████▉    | 1231/2076 [01:20<00:54, 15.54it/s]Loading weights:  60%|█████▉    | 1241/2076 [01:21<00:49, 16.74it/s]Loading weights:  60%|█████▉    | 1244/2076 [01:21<00:55, 14.87it/s]Loading weights:  60%|██████    | 1252/2076 [01:21<00:47, 17.37it/s]Loading weights:  61%|██████    | 1260/2076 [01:22<00:48, 16.80it/s]Loading weights:  61%|██████    | 1265/2076 [01:22<00:49, 16.49it/s]Loading weights:  61%|██████    | 1267/2076 [01:22<01:01, 13.19it/s]Loading weights:  61%|██████▏   | 1273/2076 [01:23<00:47, 16.99it/s]Loading weights:  62%|██████▏   | 1278/2076 [01:23<00:50, 15.80it/s]Loading weights:  62%|██████▏   | 1280/2076 [01:24<01:20,  9.86it/s]Loading weights:  62%|██████▏   | 1294/2076 [01:24<00:36, 21.23it/s]Loading weights:  63%|██████▎   | 1303/2076 [01:24<00:28, 27.32it/s]Loading weights:  63%|██████▎   | 1309/2076 [01:25<00:43, 17.80it/s]Loading weights:  63%|██████▎   | 1317/2076 [01:25<00:33, 22.46it/s]Loading weights:  64%|██████▎   | 1322/2076 [01:26<01:03, 11.84it/s]Loading weights:  64%|██████▍   | 1329/2076 [01:26<00:48, 15.43it/s]Loading weights:  64%|██████▍   | 1333/2076 [01:26<00:43, 17.15it/s]Loading weights:  64%|██████▍   | 1337/2076 [01:27<01:19,  9.31it/s]Loading weights:  65%|██████▍   | 1345/2076 [01:27<00:53, 13.74it/s]Loading weights:  65%|██████▍   | 1349/2076 [01:28<01:07, 10.69it/s]Loading weights:  65%|██████▌   | 1352/2076 [01:28<01:11, 10.15it/s]Loading weights:  66%|██████▌   | 1371/2076 [01:30<00:57, 12.25it/s]Loading weights:  67%|██████▋   | 1385/2076 [01:30<00:37, 18.66it/s]Loading weights:  67%|██████▋   | 1390/2076 [01:30<00:38, 17.86it/s]Loading weights:  67%|██████▋   | 1394/2076 [01:31<00:50, 13.50it/s]Loading weights:  67%|██████▋   | 1401/2076 [01:31<00:39, 17.02it/s]Loading weights:  68%|██████▊   | 1405/2076 [01:32<00:54, 12.21it/s]Loading weights:  68%|██████▊   | 1408/2076 [01:32<00:58, 11.33it/s]Loading weights:  68%|██████▊   | 1417/2076 [01:33<00:47, 14.00it/s]Loading weights:  69%|██████▊   | 1427/2076 [01:33<00:30, 21.00it/s]Loading weights:  72%|███████▏  | 1502/2076 [01:33<00:05, 98.89it/s]Loading weights:  74%|███████▍  | 1536/2076 [01:33<00:04, 126.03it/s]Loading weights:  77%|███████▋  | 1592/2076 [01:33<00:02, 190.96it/s]Loading weights:  78%|███████▊  | 1626/2076 [01:33<00:02, 208.64it/s]Loading weights:  80%|███████▉  | 1658/2076 [01:33<00:01, 219.25it/s]Loading weights:  83%|████████▎ | 1713/2076 [01:33<00:01, 268.04it/s]Loading weights:  84%|████████▍ | 1746/2076 [01:34<00:01, 272.00it/s]Loading weights:  86%|████████▌ | 1778/2076 [01:34<00:01, 264.75it/s]Loading weights:  89%|████████▊ | 1842/2076 [01:34<00:00, 338.58it/s]Loading weights:  91%|█████████ | 1883/2076 [01:34<00:00, 340.71it/s]Loading weights:  93%|█████████▎| 1923/2076 [01:34<00:00, 339.25it/s]Loading weights:  95%|█████████▍| 1964/2076 [01:34<00:00, 333.37it/s]Loading weights:  96%|█████████▋| 2003/2076 [01:34<00:00, 320.99it/s]Loading weights:  98%|█████████▊| 2039/2076 [01:34<00:00, 322.22it/s]Loading weights: 100%|██████████| 2076/2076 [01:35<00:00, 265.53it/s]Loading weights: 100%|██████████| 2076/2076 [01:35<00:00, 21.83it/s] 
+grid_gemma4_e4b_free: google/gemma-4-E4B-it; records /home/samvaran/phd_workspace/chandohasam/full_grid_experiments/prompts/grid100/records; slice 1,747 tokens; 19 metres, 34 poems; modes ['baseline']; seeds [42]
+[1/1] champakamala|dataset/bhagavatam:6-399-చ.|baseline|42: eos tok=76 gana=False prasa=False yati=False 6.4s
+[1/2] mattebhavikriditamu|dataset/bhagavatam:10.1-876-మ.|baseline|42: eos tok=78 gana=False prasa=False yati=False 6.3s
+[2/2] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-28|baseline|42: eos tok=76 gana=False prasa=False yati=False 5.2s
+[1/1] sardulavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-99|baseline|42: eos tok=72 gana=False prasa=False yati=False 5.9s
+[1/2] sragdhara|dataset/bhagavatam:10.2-883-స్రగ్ద.|baseline|42: eos tok=89 gana=False prasa=False yati=False 7.1s
+[2/2] sragdhara|dataset/bhagavatam:6-272-స్రగ్ద.|baseline|42: eos tok=68 gana=False prasa=False yati=False 4.7s
+[1/1] mahasragdhara|dataset/bhagavatam:10.2-940-మస్ర.|baseline|42: eos tok=98 gana=False prasa=False yati=False 7.8s
+[1/2] totakamu|dataset/bhagavatam:6-530-తో.|baseline|42: eos tok=63 gana=False prasa=False yati=False 5.3s
+[2/2] totakamu|dataset/kuchimanchi_timmakavi:kuchimanchi-754|baseline|42: eos tok=89 gana=False prasa=False yati=False 6.0s
+[1/1] bhujangaprayatamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1200|baseline|42: eos tok=76 gana=False prasa=False yati=False 6.2s
+[1/6] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|baseline|42: eos tok=74 gana=False prasa=False yati=False 6.0s
+[2/6] mattakokilamu|dataset/bhagavatam:10.1-1104-మత్త.|baseline|42: eos tok=75 gana=False prasa=False yati=False 5.2s
+[3/6] mattakokilamu|dataset/bhagavatam:10.1-1769-మత్త.|baseline|42: eos tok=75 gana=False prasa=False yati=False 5.1s
+[4/6] mattakokilamu|dataset/bhagavatam:10.1-739-మత్త.|baseline|42: eos tok=96 gana=False prasa=False yati=False 6.5s
+[5/6] mattakokilamu|dataset/bhagavatam:10.2-1152-మత్త.|baseline|42: eos tok=73 gana=False prasa=False yati=False 5.1s
+[6/6] mattakokilamu|dataset/bhagavatam:6-321-మత్త.|baseline|42: eos tok=76 gana=False prasa=False yati=False 5.1s
+[1/2] pamcacamaramu|dataset/bhagavatam:10.1-586-పంచ.|baseline|42: eos tok=82 gana=False prasa=False yati=False 6.6s
+[2/2] pamcacamaramu|dataset/kuchimanchi_timmakavi:kuchimanchi-1197|baseline|42: eos tok=71 gana=False prasa=False yati=False 4.9s
+[1/1] indravajra|dataset/bhagavatam:10.1-1112-ఇం.|baseline|42: eos tok=74 gana=False prasa=False yati=False 5.9s
+[1/1] upendravajra|dataset/bhagavatam:10.1-407-ఉపేం.|baseline|42: eos tok=72 gana=False prasa=False yati=False 5.9s
+[1/2] sragvini|dataset/bhagavatam:6-454-స్రగ్వి.|baseline|42: eos tok=77 gana=False prasa=False yati=False 6.1s
+[2/2] sragvini|dataset/kuchimanchi_timmakavi:kuchimanchi-1209|baseline|42: eos tok=73 gana=False prasa=False yati=False 5.0s
+[1/1] utsahamu|dataset/bhagavatam:6-389-ఉత్సా.|baseline|42: eos tok=60 gana=False prasa=False yati=False 5.2s
+[1/2] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|baseline|42: eos tok=39 gana=False prasa=False yati=False 3.8s
+[2/2] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1207|baseline|42: eos tok=41 gana=False prasa=False yati=False 2.9s
+[1/4] malini|dataset/bhagavatam:3-1054-మాలి.|baseline|42: eos tok=69 gana=False prasa=False yati=False 5.6s
+[2/4] malini|dataset/bhagavatam:5.1-183-మాలి.|baseline|42: eos tok=56 gana=False prasa=False yati=False 3.8s
+[3/4] malini|dataset/bhagavatam:8-744-మాలి.|baseline|42: eos tok=77 gana=False prasa=False yati=False 5.2s
+[4/4] malini|dataset/kuchimanchi_timmakavi:kuchimanchi-863|baseline|42: eos tok=79 gana=False prasa=False yati=False 5.5s
+[1/1] manini|dataset/bhagavatam:10.1-214-మాని.|baseline|42: eos tok=82 gana=False prasa=False yati=False 6.8s
+[1/1] vanamayuramu|dataset/bhagavatam:6-378-వన.|baseline|42: eos tok=71 gana=False prasa=False yati=False 5.7s
+[1/2] layagrahi|dataset/bhagavatam:10.2-739-లగ్రా.|baseline|42: eos tok=82 gana=False prasa=False yati=False 6.6s
+[2/2] layagrahi|dataset/bhagavatam:6-385-లగ్రా.|baseline|42: eos tok=138 gana=False prasa=False yati=False 9.5s
+[1/1] layavibhati|dataset/bhagavatam:10.2-737-లవి.|baseline|42: eos tok=76 gana=False prasa=False yati=False 6.2s
+# Token choices under the constraint
+
+Runs: `grid_gemma4_e4b_free`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 34 | 0 | 0 | 76 | -0.712 | 81 | 35 | 0.657 | 1.268 | 44 | 5 | 0 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| baseline | line_start | 32 | -1.054 | 53 | 3 | 0.948 |
+| baseline | prasa | 18 | -0.458 | 100 | 0 | 0.921 |
+| baseline | other | 22 | -1.135 | 68 | 14 | 0.820 |
+
+## By meter
+
+| meter | baseline in meter % / logp / lexical % |
+|---|---|
+| bhujangaprayatamu | 0 / -1.27 / 7 |
+| champakamala | 0 / -0.95 / 59 |
+| indravajra | 0 / -0.83 / 48 |
+| layagrahi | 0 / -0.34 / 33 |
+| layavibhati | 0 / -0.60 / 36 |
+| madhuragati_ragada | 0 / -0.58 / 33 |
+| mahasragdhara | 0 / -0.50 / 42 |
+| malini | 0 / -0.65 / 56 |
+| manini | 0 / -0.75 / 43 |
+| mattakokilamu | 0 / -0.66 / 50 |
+| mattebhavikriditamu | 0 / -0.75 / 51 |
+| pamcacamaramu | 0 / -0.60 / 17 |
+| sardulavikriditamu | 0 / -0.91 / 42 |
+| sragdhara | 0 / -0.87 / 31 |
+| sragvini | 0 / -1.09 / 60 |
+| totakamu | 0 / -0.58 / 48 |
+| upendravajra | 0 / -0.79 / 52 |
+| utsahamu | 0 / -0.67 / 47 |
+| vanamayuramu | 0 / -1.05 / 28 |
+
+grid_gemma4_e4b_free: 207 s

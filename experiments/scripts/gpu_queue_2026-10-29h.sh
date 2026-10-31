@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Sixth queue: DAWG v2 A+B on the 100-prompt grid (user decision 2026-10-28, full_grid_experiments/PLAN.md decision
+# Sixth queue: DAWG v2 A+B on the 100-prompt grid (user decision 2026-10-28, full_grid_experiments/README.md decision
 # 22). Waits for the grid queue (gpu-queue-1028g) to end, then, one GPU job at a time with the 2-s memory watchdog:
 #   the v2 smoke pass (every v2 cell on 1 poem of 2 metres; failures logged, the queue goes on) → the 17 v2 cells
 #   (grid.py --todo v2: every row's constrained cell on all 100 prompts with Layer A + Layer B; DiffusionGemma last)

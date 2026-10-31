@@ -1,0 +1,51 @@
+# Token choices under the constraint
+
+Runs: `grid_mdlm523m_ft_constrained`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| masking_backtrack | 183 | 99 | 99 | 132 | -1.849 | 58 | 19 | 0.788 | 2.182 | 51 | 12 | 1 | 15.1 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| masking_backtrack | line_start | 853 | -1.953 | 51 | 7 | 0.901 |
+| masking_backtrack | prasa | 744 | -1.144 | 78 | 13 | 0.810 |
+| masking_backtrack | yati | 3056 | -2.677 | 43 | 37 | 0.590 |
+| masking_backtrack | other | 19522 | -1.741 | 60 | 17 | 0.813 |
+
+## By meter
+
+| meter | masking_backtrack in meter % / logp / lexical % |
+|---|---|
+| ataveladi | 100 / -1.68 / 70 |
+| bhujangaprayatamu | 100 / -3.78 / 8 |
+| champakamala | 100 / -1.20 / 61 |
+| indravajra | 100 / -2.87 / 25 |
+| kandamu | 100 / -1.64 / 58 |
+| kavirajavirajitamu | 100 / -2.51 / 43 |
+| layagrahi | 75 / -2.45 / 28 |
+| layavibhati | 100 / -2.25 / 54 |
+| madhuragati_ragada | 100 / -2.28 / 49 |
+| mahasragdhara | 100 / -2.88 / 22 |
+| malini | 100 / -1.87 / 17 |
+| manini | 100 / -2.72 / 29 |
+| mattakokilamu | 100 / -1.94 / 54 |
+| mattebhavikriditamu | 100 / -1.56 / 46 |
+| pamcacamaramu | 100 / -1.08 / 48 |
+| sardulavikriditamu | 100 / -1.71 / 40 |
+| seesamu | 100 / -1.82 / 56 |
+| sragdhara | 100 / -2.95 / 13 |
+| sragvini | 100 / -1.67 / 41 |
+| tetagiti | 100 / -1.56 / 63 |
+| totakamu | 100 / -1.56 / 79 |
+| upendravajra | 100 / -3.32 / 9 |
+| utpalamala | 100 / -1.11 / 60 |
+| utsahamu | 100 / -2.22 / 60 |
+| vanamayuramu | 100 / -2.56 / 31 |
+

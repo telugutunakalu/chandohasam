@@ -1,0 +1,50 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "mahasragdhara"
+ ],
+ "modes": [
+  "baseline"
+ ],
+ "topics": {
+  "dataset/bhagavatam:10.2-940-మస్ర.": "జండాపై తాడిచెట్టు ఉన్న బలరాముడు ఆ భీకరమైన రాక్షసుడిని గమనించాడు. ప్రాణులను సంహరించడమే లక్ష్యంగా చేసుకున్న ఆ దానవుడు, తలలను మరియు ఎముకలను మెడలో దండలుగా వేసుకుని ఉన్నాడు. అతని చేతిలో భయంకరమైన శూలం ఉంది, రక్తంతో తడిసిన దౌడలు ఉన్నాయి. వజ్రాయుధంలాంటి అతని కోరల నుండి అగ్నిజ్వాలలు ఆకాశమంతటా వ్యాపిస్తూ ఉన్నాయి, అతని చిత్తం యుద్ధం చేయాలనే ఉత్సాహంతో నిండి ఉంది."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 272,
+  "baseline_max_tokens": 272,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "mahasragdhara": 272
+ },
+ "started": "2026-10-29 00:17:12"
+}

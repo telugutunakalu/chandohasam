@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Sixth queue, after the power outage of 2026-10-29 (rebooted 13:51; full_grid_experiments/PLAN.md decisions 22–25):
+# Sixth queue, after the power outage of 2026-10-29 (rebooted 13:51; full_grid_experiments/README.md decisions 22–25):
 # the rest of the 100-prompt grid (gpu-queue-1028g's last cells: DiffusionGemma whole pool, free and constrained; the
 # 48k adapter is dropped from the study, decision 25), its table, then DAWG v2 A+B for the two ≈ 52 GB rows (Gemma-4
 # 26B, DiffusionGemma) as in gpu_queue_2026-10-29j.sh, ordered for a table tonight. The side queue (grid-v2-side-1029,

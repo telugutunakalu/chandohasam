@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Second queue, v3 (user decisions 2026-10-21 20:00, full_grid_experiments/PLAN.md §9): the T5Gemma 2 4B LoRA trains on
+# Second queue, v3 (user decisions 2026-10-21 20:00, full_grid_experiments/README.md, Decisions): the T5Gemma 2 4B LoRA trains on
 # the whole pool, keeping a snapshot after its first 48,000 examples (no separate 48k run); the DiffusionGemma 24k
 # constrained E6 run is dropped (the grid's row 19 covers it).
 # The first queue (gpu-queue-1021) is steered to stop after its base run by placeholder outputs that its skip rules
@@ -55,7 +55,7 @@ if [ -f $T5/runs/t5g-1b-full/final/config.json ] && [ ! -s $T5/runs/e6_t5g_1b_va
     run e6_t5g_1b_val $T5 $T5/runs/e6_t5g_1b_val.log $PY -u generate.py --size 1b --model runs/t5g-1b-full/final --name e6_t5g_1b_val
 fi
 # 3. T5Gemma 2 4B, LoRA r 32 on attention + MLP, gradient checkpointing, the whole T1 pool; the adapter after the first
-#    48,000 examples kept as lora_at_48000.pt (full_grid_experiments/PLAN.md §3)
+#    48,000 examples kept as lora_at_48000.pt (full_grid_experiments/README.md, Phase 0)
 [ -f $T5/runs/t5g-4b-lora-full/lora.pt ] || run t5g-4b-lora-full $T5 $T5/runs/t5g-4b-lora-full.log \
     $PY -u train.py --size 4b --run t5g-4b-lora-full --data train_full --lora 32 --lora-mlp --grad-ckpt --lr 2e-4 \
     --warmup 400 --eval-every 1000 --save-every 250 --snapshot-at 48000

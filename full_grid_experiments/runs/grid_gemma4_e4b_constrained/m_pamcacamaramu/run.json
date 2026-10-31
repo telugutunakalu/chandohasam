@@ -1,0 +1,51 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "meters": [
+  "pamcacamaramu"
+ ],
+ "modes": [
+  "masking_backtrack"
+ ],
+ "topics": {
+  "dataset/bhagavatam:10.1-586-పంచ.": "నెమలిపింఛం మరియు అడవి పూలతో కృష్ణుని శిరస్సు అలంకరింపబడింది, వాటి రంగుల వెలుగు అతని దేహంపై పరుచుకుంది. అందరికీ అలవాటైన అతని వేణుగానం మరియు కొమ్ముబూర శబ్దాలు వినగానే ప్రపంచమంతా మైమరచిపోతుంది. గోపబాలురు కృష్ణుని శక్తిని పొగుడుతూ సంతోషించారు. కృష్ణుడు ఆ బాలురతో కలిసి ఆనందంగా పశువుల మంద వద్దకు వెళ్లగా, గోపికలందరూ వారిని ఎంతో సంతోషంతో ఆహ్వానించారు.",
+  "dataset/kuchimanchi_timmakavi:kuchimanchi-1197": "అత్యధికంగా పెరిగిన క్రోధంతో ఆ గర్విష్ఠి వీరుడు, అత్యంత వేగంగా తన వింటిపై పదునైన బాణాలను అమర్చి, వీరత్వంతో ఆకాశమంతా నిండిపోయేలా బాణాలను కురిపించాడు. అయినప్పటికీ, అతను కోరుకున్న ఏ చిన్న ఆశయం కూడా నెరవేరలేదు."
+ },
+ "seeds": [
+  42
+ ],
+ "units": 1,
+ "config": {
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "k_rerank": 100,
+  "max_tokens": 253,
+  "baseline_max_tokens": 253,
+  "checkpoint_every": 3,
+  "checkpoint_cap": 15,
+  "max_backtracks": 30,
+  "tau_step": 0.15,
+  "tau_max": 1.2,
+  "tau_decay": 6,
+  "min_valid": 3,
+  "min_valid_mass": 0.001,
+  "stall_limit": 4,
+  "force_nl": "must_end",
+  "trace_top": 5,
+  "watch_baseline": true,
+  "attest_weight": 0.0,
+  "attest_where": "override",
+  "attest_corpus": "all"
+ },
+ "enforce": {
+  "gana": true,
+  "prasa": true,
+  "yati": true,
+  "profile": "strict",
+  "inventory": null
+ },
+ "mask_workers": 4,
+ "token_budget": {
+  "pamcacamaramu": 253
+ },
+ "started": "2026-10-29 00:26:35"
+}

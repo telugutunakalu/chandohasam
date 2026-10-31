@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/911 [00:00<?, ?it/s]Loading weights: 100%|██████████| 911/911 [00:00<00:00, 14298.32it/s]
+grid_t5_270m_base_constrained_smoke: T5Gemma 2 270m google/t5gemma-2-270m-270m (base); slice 1,747 tokens; 2 metres, 30 poems; modes ['masking_backtrack']; seeds free [42], constrained [42]; inventory none; Layer B weight 0.0 (override, all)
+[1/1] kandamu|dataset/bhagavatam:11-102-క.|masking_backtrack|42: complete tok=62 gana=True prasa=True yati=True 7.7s
+[1/1] utpalamala|dataset/bhagavatam:10.1-1145-ఉ.|masking_backtrack|42: complete tok=99 gana=True prasa=True yati=True 9.2s
+# Token choices under the constraint
+
+Runs: `grid_t5_270m_base_constrained_smoke`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| masking_backtrack | 2 | 100 | 100 | 135 | -2.435 | 59 | 32 | 0.614 | 2.885 | 14 | 18 | 50 | 25.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| masking_backtrack | line_start | 22 | -2.318 | 55 | 14 | 0.620 |
+| masking_backtrack | prasa | 17 | -3.429 | 35 | 65 | 0.338 |
+| masking_backtrack | yati | 11 | -2.797 | 36 | 64 | 0.400 |
+| masking_backtrack | other | 220 | -2.352 | 63 | 30 | 0.645 |
+
+## By meter
+
+| meter | masking_backtrack in meter % / logp / lexical % |
+|---|---|
+| kandamu | 100 / -1.89 / 14 |
+| utpalamala | 100 / -2.88 / 14 |
+
+grid_t5_270m_base_constrained_smoke: 24 s

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fifth queue: the 100-prompt grid (user decisions 2026-10-28, full_grid_experiments/PLAN.md decisions 14–19). It
+# Fifth queue: the 100-prompt grid (user decisions 2026-10-28, full_grid_experiments/README.md decisions 14–19). It
 # replaces gpu-queue-1023f (gpu_queue_2026-10-25f.sh, stopped while it waited): one seed, masking + backtracking only,
 # no September rerun, Gemma-4 12B and E2B out, and the prompts cut to 100 (build_grid100.py).
 # Waits for the third queue (gpu-queue-1022e: DiffusionGemma whole-pool LoRA → its E6 check) to end, then, one GPU job

@@ -1,5 +1,5 @@
 """Layer B of the v2 constraint (word attestation, metrical_decoder.attestation) in the settled diffusion decoder, for
-the full grid's v2 cells (full_grid_experiments/PLAN.md decision 22).
+the full grid's v2 cells (full_grid_experiments/README.md decision 22).
 
 The autoregressive decoder applies Layer B where it draws a token: the allowed tokens' probabilities × exp(weight ×
 score), renormalised, where score is 2 when the word so far begins a corpus word, 1 when it occurs inside one, else 0

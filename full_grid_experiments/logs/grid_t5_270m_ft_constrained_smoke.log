@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/911 [00:00<?, ?it/s]Loading weights:  67%|██████▋   | 608/911 [00:00<00:00, 6050.51it/s]Loading weights: 100%|██████████| 911/911 [00:00<00:00, 7377.72it/s]
+grid_t5_270m_ft_constrained_smoke: T5Gemma 2 270m runs/t5g-270m-full/final; slice 1,747 tokens; 2 metres, 30 poems; modes ['masking_backtrack']; seeds free [42], constrained [42]; inventory none; Layer B weight 0.0 (override, all)
+[1/1] kandamu|dataset/bhagavatam:11-102-క.|masking_backtrack|42: complete tok=60 gana=True prasa=True yati=True 5.0s
+[1/1] utpalamala|dataset/bhagavatam:10.1-1145-ఉ.|masking_backtrack|42: complete tok=99 gana=True prasa=True yati=True 8.1s
+# Token choices under the constraint
+
+Runs: `grid_t5_270m_ft_constrained_smoke`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| masking_backtrack | 2 | 100 | 100 | 84 | -1.317 | 75 | 6 | 0.934 | 1.974 | 57 | 3 | 0 | 3.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| masking_backtrack | line_start | 10 | -1.290 | 80 | 0 | 0.989 |
+| masking_backtrack | prasa | 8 | -0.639 | 88 | 0 | 0.992 |
+| masking_backtrack | yati | 13 | -3.330 | 38 | 54 | 0.452 |
+| masking_backtrack | other | 138 | -1.169 | 78 | 2 | 0.972 |
+
+## By meter
+
+| meter | masking_backtrack in meter % / logp / lexical % |
+|---|---|
+| kandamu | 100 / -0.69 / 56 |
+| utpalamala | 100 / -1.64 / 57 |
+
+grid_t5_270m_ft_constrained_smoke: 20 s

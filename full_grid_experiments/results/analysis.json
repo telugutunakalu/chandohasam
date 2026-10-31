@@ -1,0 +1,4165 @@
+{
+ "prompts": {
+  "n": 100,
+  "by_source": {
+   "bhagavatam": 50,
+   "kuchimanchi_timmakavi": 20,
+   "vemana": 20,
+   "gemini": 10
+  },
+  "by_origin": {
+   "pool → phase 2, the 183": 21,
+   "pool → phase 2, new P1": 23,
+   "phase 1, new P1": 33,
+   "phase 1, the 183": 13,
+   "phase 1, Gemini bhāvam as is": 10
+  },
+  "phase1": 56,
+  "metres": 24,
+  "by_metre": {
+   "mattakokilamu": 7,
+   "mattebhavikriditamu": 10,
+   "indravajra": 1,
+   "sardulavikriditamu": 7,
+   "kandamu": 11,
+   "manini": 1,
+   "upendravajra": 1,
+   "pamcacamaramu": 2,
+   "ataveladi": 11,
+   "utpalamala": 8,
+   "champakamala": 10,
+   "tetagiti": 10,
+   "layavibhati": 1,
+   "layagrahi": 2,
+   "sragdhara": 2,
+   "mahasragdhara": 1,
+   "malini": 4,
+   "seesamu": 1,
+   "vanamayuramu": 1,
+   "utsahamu": 2,
+   "sragvini": 2,
+   "totakamu": 2,
+   "bhujangaprayatamu": 1,
+   "madhuragati_ragada": 2
+  },
+  "vrtta": 47
+ },
+ "integrity": {
+  "nandi_base|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "budget": 92,
+    "eos": 8
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "nandi_base|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "nandi_ft|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "nandi_ft|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "gemma4_e4b|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 99,
+    "budget": 1
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "gemma4_e4b|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "gemma4_26b|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 97,
+    "budget": 3
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "gemma4_26b|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_270m_base|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "budget": 80,
+    "eos": 20
+   },
+   "empty": 16,
+   "scored": 100
+  },
+  "t5_270m_base|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_270m_ft|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_270m_ft|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_1b_base|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "budget": 66,
+    "eos": 34
+   },
+   "empty": 19,
+   "scored": 100
+  },
+  "t5_1b_base|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_1b_ft|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_1b_ft|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_base|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 88,
+    "budget": 12
+   },
+   "empty": 66,
+   "scored": 100
+  },
+  "t5_4b_base|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_ft|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_ft|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 99,
+    "budget": 1
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_48k|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 99,
+    "budget": 1
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_48k|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm120m_base|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "budget": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm120m_base|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 93,
+    "budget": 7
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm120m_ft|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 98,
+    "budget": 2
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm120m_ft|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm523m_base|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "budget": 91,
+    "eos": 9
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm523m_base|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 85,
+    "budget": 15
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm523m_ft|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm523m_ft|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 99,
+    "budget": 1
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "dg_base|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "dg_base|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "dg_full|baseline": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "eos": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "dg_full|masking_backtrack": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "nandi_base|masking_only": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 33,
+    "budget": 1
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "nandi_base|hybrid": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 30,
+    "budget": 4
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "nandi_ft|masking_only": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 34
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "nandi_ft|hybrid": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 34
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "mdlm523m_base|masking_only": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 27,
+    "budget": 7
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "mdlm523m_base|hybrid": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 31,
+    "budget": 3
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "mdlm523m_ft|masking_only": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 32,
+    "budget": 2
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "mdlm523m_ft|hybrid": {
+   "poems": 34,
+   "expected": 34,
+   "distinct_prompts": 34,
+   "duplicates": 0,
+   "status": {
+    "complete": 34
+   },
+   "empty": 0,
+   "scored": 34
+  },
+  "nandi_base|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "nandi_ft|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "gemma4_e4b|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "gemma4_26b|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_270m_base|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_270m_ft|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_1b_base|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_1b_ft|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_base|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_ft|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "t5_4b_48k|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm120m_base|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm120m_ft|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm523m_base|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "mdlm523m_ft|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "dg_base|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  },
+  "dg_full|masking_backtrack_v2": {
+   "poems": 100,
+   "expected": 100,
+   "distinct_prompts": 100,
+   "duplicates": 0,
+   "status": {
+    "complete": 100
+   },
+   "empty": 0,
+   "scored": 100
+  }
+ },
+ "constrained_out_of_metre": [
+  {
+   "cell": "t5_4b_ft|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm120m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.2-940-మస్ర.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm120m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.1-876-మ.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm120m_base|masking_backtrack",
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-28",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm120m_base|masking_backtrack",
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-99",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm120m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm120m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm120m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.1-1185-శా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.2-883-స్రగ్ద.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.1-214-మాని.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:6-399-చ.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.2-940-మస్ర.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.1-1074-మ.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.2-627-మ.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:8-437-మ.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": true,
+   "yati_strict": true,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "gemini:poem_0051",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:3-277-చ.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.1-1185-శా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.1-1597-శా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_ft|masking_backtrack",
+   "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 3
+  },
+  {
+   "cell": "nandi_base|masking_only",
+   "prompt_id": "dataset/bhagavatam:10.1-214-మాని.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "nandi_base|hybrid",
+   "prompt_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "nandi_base|hybrid",
+   "prompt_id": "dataset/bhagavatam:10.1-739-మత్త.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "nandi_base|hybrid",
+   "prompt_id": "dataset/bhagavatam:6-399-చ.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "nandi_base|hybrid",
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_only",
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-28",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": true,
+   "yati_strict": true,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_only",
+   "prompt_id": "dataset/bhagavatam:10.2-883-స్రగ్ద.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_only",
+   "prompt_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_only",
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-99",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 3
+  },
+  {
+   "cell": "mdlm523m_base|masking_only",
+   "prompt_id": "dataset/bhagavatam:10.2-940-మస్ర.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 3
+  },
+  {
+   "cell": "mdlm523m_base|masking_only",
+   "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|masking_only",
+   "prompt_id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|hybrid",
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-99",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|hybrid",
+   "prompt_id": "dataset/bhagavatam:10.2-940-మస్ర.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_base|hybrid",
+   "prompt_id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_ft|masking_only",
+   "prompt_id": "dataset/bhagavatam:10.1-214-మాని.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  },
+  {
+   "cell": "mdlm523m_ft|masking_only",
+   "prompt_id": "dataset/bhagavatam:6-385-లగ్రా.",
+   "status": "budget",
+   "gana_strict": false,
+   "prasa_strict": false,
+   "yati_strict": false,
+   "n_lines": 4
+  }
+ ],
+ "by_group": {
+  "gold": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.34,
+    "words_s": 0.8140407669341174,
+    "meaning": 0.58,
+    "filler": 0.06743699981539412
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.8,
+    "words_s": 0.9544040273452039,
+    "meaning": 0.8,
+    "filler": 0.01711309523809524
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.5,
+    "words_s": 0.8212906014525204,
+    "meaning": 0.5,
+    "filler": 0.05227814342520225
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.9500372670807453,
+    "meaning": 0.8,
+    "filler": 0.02172318422318422
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.40425531914893614,
+    "words_s": 0.8205537506080102,
+    "meaning": 0.5957446808510638,
+    "filler": 0.07203571956609096
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.6415094339622641,
+    "words_s": 0.889627873865874,
+    "meaning": 0.660377358490566,
+    "filler": 0.030023165786060815
+   }
+  },
+  "nandi_base|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.9685199911879302,
+    "meaning": 0.46,
+    "filler": 0.08882465000261218
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9760682578053361,
+    "meaning": 0.45,
+    "filler": 0.07624762034251345
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9027055494720913,
+    "meaning": 0.25,
+    "filler": 0.04450953057979645
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9623460344019816,
+    "meaning": 0.6,
+    "filler": 0.03057144894328364
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.9450577803760113,
+    "meaning": 0.5106382978723404,
+    "filler": 0.06802514499675316
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.9661739692696667,
+    "meaning": 0.3584905660377358,
+    "filler": 0.07480958855023105
+   }
+  },
+  "nandi_base|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.3339492672446233,
+    "meaning": 0.14,
+    "filler": 0.1587946548660373
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6358763785234374,
+    "meaning": 0.35,
+    "filler": 0.2213422350067087
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.3079832627382937,
+    "meaning": 0.1,
+    "filler": 0.20598746742129093
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.4665696209834048,
+    "meaning": 0.1,
+    "filler": 0.22425529500337685
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.23788895388964698,
+    "meaning": 0.1702127659574468,
+    "filler": 0.17205510654225759
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.5482938031035175,
+    "meaning": 0.16981132075471697,
+    "filler": 0.20079791951716075
+   }
+  },
+  "nandi_ft|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.04,
+    "words_s": 0.7531241653051686,
+    "meaning": 0.6,
+    "filler": 0.07048337455073928
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.15,
+    "words_s": 0.9400112942612943,
+    "meaning": 0.7,
+    "filler": 0.022002023031434795
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.7593981566678936,
+    "meaning": 0.6,
+    "filler": 0.05469308661679775
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.8769991373360938,
+    "meaning": 0.9,
+    "filler": 0.041086080586080584
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.02127659574468085,
+    "words_s": 0.7585071168586677,
+    "meaning": 0.6382978723404256,
+    "filler": 0.08119691064545616
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.07547169811320754,
+    "words_s": 0.8446142295253914,
+    "meaning": 0.660377358490566,
+    "filler": 0.031182583509924172
+   }
+  },
+  "nandi_ft|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.6865085863008289,
+    "meaning": 0.56,
+    "filler": 0.08728061477641687
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.872286806760491,
+    "meaning": 0.9,
+    "filler": 0.034708333333333334
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6183863728029497,
+    "meaning": 0.5,
+    "filler": 0.06717554313877844
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8895733305857482,
+    "meaning": 0.8,
+    "filler": 0.028908668730650157
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.7093379658411678,
+    "meaning": 0.5957446808510638,
+    "filler": 0.06988569266424452
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.748976260710054,
+    "meaning": 0.6792452830188679,
+    "filler": 0.06426730944056772
+   }
+  },
+  "gemma4_e4b|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.9607949644393985,
+    "meaning": 0.94,
+    "filler": 0.03558435592067306
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9570784274634894,
+    "meaning": 0.95,
+    "filler": 0.029763720896444006
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.932949599377231,
+    "meaning": 0.95,
+    "filler": 0.05513401745599887
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9322514619883041,
+    "meaning": 0.9,
+    "filler": 0.045789473684210526
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.945099540579746,
+    "meaning": 0.9361702127659575,
+    "filler": 0.05412763988676242
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.9574178296494207,
+    "meaning": 0.9433962264150944,
+    "filler": 0.026246570287675138
+   }
+  },
+  "gemma4_e4b|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.33040440877225663,
+    "meaning": 0.52,
+    "filler": 0.0643032578122711
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.686055855908797,
+    "meaning": 0.8,
+    "filler": 0.1058703437515357
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.370769833451722,
+    "meaning": 0.5,
+    "filler": 0.0964654583462633
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.43311588738059326,
+    "meaning": 0.8,
+    "filler": 0.02969187675070028
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.2286803538937213,
+    "meaning": 0.40425531914893614,
+    "filler": 0.04768242639018609
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.5894323861627216,
+    "meaning": 0.7735849056603774,
+    "filler": 0.10033440867429795
+   }
+  },
+  "gemma4_26b|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.9762840125385153,
+    "meaning": 0.92,
+    "filler": 0.03523618658603179
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9758493589743591,
+    "meaning": 0.95,
+    "filler": 0.005441176470588236
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9445609778825892,
+    "meaning": 0.9,
+    "filler": 0.030438678968090733
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9655425247902365,
+    "meaning": 0.9,
+    "filler": 0.0
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.9652480825419324,
+    "meaning": 0.8936170212765957,
+    "filler": 0.03798024173164151
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.9719089194810616,
+    "meaning": 0.9433962264150944,
+    "filler": 0.013100661824302223
+   }
+  },
+  "gemma4_26b|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.41243847829840097,
+    "meaning": 0.52,
+    "filler": 0.08537596237325339
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7921231387291758,
+    "meaning": 0.8,
+    "filler": 0.08531061044218939
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.5084946023002289,
+    "meaning": 0.65,
+    "filler": 0.07684909624249166
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.649498556998557,
+    "meaning": 0.8,
+    "filler": 0.03277919863597613
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.3609923729018965,
+    "meaning": 0.574468085106383,
+    "filler": 0.04729051179210758
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.6823136373415959,
+    "meaning": 0.6792452830188679,
+    "filler": 0.10598358838654709
+   }
+  },
+  "t5_270m_base|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.849428005644349,
+    "meaning": 0.3,
+    "filler": 0.2968163658784323
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.8821023849008923,
+    "meaning": 0.35,
+    "filler": 0.1258229272815739
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.7942164554057073,
+    "meaning": 0.4,
+    "filler": 0.17051120448179272
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.850102788749962,
+    "meaning": 0.3,
+    "filler": 0.3176470588235294
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.7901639627760463,
+    "meaning": 0.2553191489361702,
+    "filler": 0.3428213166231151
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.8837691090823023,
+    "meaning": 0.39622641509433965,
+    "filler": 0.14776169124788363
+   }
+  },
+  "t5_270m_base|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.32810623883340606,
+    "meaning": 0.18,
+    "filler": 0.10008395282374744
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6005000514191691,
+    "meaning": 0.55,
+    "filler": 0.12767755314001444
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.34142229180348377,
+    "meaning": 0.2,
+    "filler": 0.13224724940223326
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.3757255244755245,
+    "meaning": 0.1,
+    "filler": 0.13737590821769322
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.2554319510350075,
+    "meaning": 0.14893617021276595,
+    "filler": 0.11538214995202753
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.509353063249684,
+    "meaning": 0.33962264150943394,
+    "filler": 0.11610361748045216
+   }
+  },
+  "t5_270m_ft|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.08,
+    "words_s": 0.7447957353888839,
+    "meaning": 0.72,
+    "filler": 0.059683166405592035
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.1,
+    "words_s": 0.945859821657456,
+    "meaning": 0.85,
+    "filler": 0.0170151828847481
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.05,
+    "words_s": 0.7501140270548164,
+    "meaning": 0.65,
+    "filler": 0.04045410062858575
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.1,
+    "words_s": 0.830682996054513,
+    "meaning": 0.9,
+    "filler": 0.010555555555555556
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0851063829787234,
+    "words_s": 0.7199615123940941,
+    "meaning": 0.7021276595744681,
+    "filler": 0.06615306351272075
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.07547169811320754,
+    "words_s": 0.8609038230511764,
+    "meaning": 0.7924528301886793,
+    "filler": 0.021318972849131305
+   }
+  },
+  "t5_270m_ft|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.6967649041791928,
+    "meaning": 0.58,
+    "filler": 0.059444393539918525
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9127930914115124,
+    "meaning": 0.75,
+    "filler": 0.009646739130434782
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6911889778794813,
+    "meaning": 0.55,
+    "filler": 0.0503832073723378
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8338377443812227,
+    "meaning": 0.9,
+    "filler": 0.023763736263736263
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.721856556711431,
+    "meaning": 0.6382978723404256,
+    "filler": 0.055298993134674464
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.7797925636444242,
+    "meaning": 0.6415094339622641,
+    "filler": 0.034177420610547946
+   }
+  },
+  "t5_1b_base|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.9343715987780113,
+    "meaning": 0.44,
+    "filler": 0.35082002450253147
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.7683080153911644,
+    "meaning": 0.25,
+    "filler": 0.18994376658633555
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.888009611970064,
+    "meaning": 0.45,
+    "filler": 0.1584560682460912
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9370634920634922,
+    "meaning": 0.2,
+    "filler": 0.32408625730994156
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.883448459019466,
+    "meaning": 0.3617021276595745,
+    "filler": 0.36272117930446535
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.8908540473315871,
+    "meaning": 0.39622641509433965,
+    "filler": 0.20192386919933306
+   }
+  },
+  "t5_1b_base|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.29519546625989457,
+    "meaning": 0.32,
+    "filler": 0.10317453387599064
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6194482877523159,
+    "meaning": 0.3,
+    "filler": 0.10603734969021346
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.3760706858500976,
+    "meaning": 0.3,
+    "filler": 0.10141131815044857
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.4441123204281099,
+    "meaning": 0.3,
+    "filler": 0.05925536881419234
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.24983945736738844,
+    "meaning": 0.3191489361702128,
+    "filler": 0.10262633001383957
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.5163928583595631,
+    "meaning": 0.3018867924528302,
+    "filler": 0.095788985435929
+   }
+  },
+  "t5_1b_ft|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.02,
+    "words_s": 0.77095993321451,
+    "meaning": 0.7,
+    "filler": 0.05200685070452199
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.2,
+    "words_s": 0.938559062420955,
+    "meaning": 0.85,
+    "filler": 0.029667415917415917
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.05,
+    "words_s": 0.8342325543169533,
+    "meaning": 0.7,
+    "filler": 0.03214031339031339
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.2,
+    "words_s": 0.8760660173160174,
+    "meaning": 0.9,
+    "filler": 0.026549019607843137
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.02127659574468085,
+    "words_s": 0.7728787862439696,
+    "meaning": 0.7446808510638298,
+    "filler": 0.054907577977691364
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.1320754716981132,
+    "words_s": 0.876211060663722,
+    "meaning": 0.7547169811320755,
+    "filler": 0.028704361368068358
+   }
+  },
+  "t5_1b_ft|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.6590622014699709,
+    "meaning": 0.6,
+    "filler": 0.06411445371002224
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9247169314603525,
+    "meaning": 0.95,
+    "filler": 0.035108543417366946
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7423861835917631,
+    "meaning": 0.45,
+    "filler": 0.05657000476544749
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.7830056630675826,
+    "meaning": 0.8,
+    "filler": 0.021790890269151136
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.726003997725443,
+    "meaning": 0.6382978723404256,
+    "filler": 0.06281251024766576
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.754774360606054,
+    "meaning": 0.6792452830188679,
+    "filler": 0.04349084094733247
+   }
+  },
+  "t5_4b_base|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.9554882980128078,
+    "meaning": 0.3,
+    "filler": 0.6973728171674882
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9666666666666667,
+    "meaning": 0.2,
+    "filler": 0.8575776397515528
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9318747230693044,
+    "meaning": 0.3,
+    "filler": 0.6700315059950864
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": null,
+    "meaning": 0.1,
+    "filler": 1.0
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.9516970687806838,
+    "meaning": 0.2553191489361702,
+    "filler": 0.693055257402464
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.9486799816345272,
+    "meaning": 0.2641509433962264,
+    "filler": 0.8084382391583281
+   }
+  },
+  "t5_4b_base|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.26790062662922165,
+    "meaning": 0.22,
+    "filler": 0.14397421951096068
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.5980809170227329,
+    "meaning": 0.25,
+    "filler": 0.124129489290093
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.3760321051497522,
+    "meaning": 0.55,
+    "filler": 0.07140500501913545
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.5137564722858841,
+    "meaning": 0.1,
+    "filler": 0.08975579975579975
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.2206460796131308,
+    "meaning": 0.2553191489361702,
+    "filler": 0.09894033822857896
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.5215941652066506,
+    "meaning": 0.3018867924528302,
+    "filler": 0.13880684834995075
+   }
+  },
+  "t5_4b_ft|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.7776610221957241,
+    "meaning": 0.7,
+    "filler": 0.05744604767138755
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.2,
+    "words_s": 0.9150223673385438,
+    "meaning": 0.75,
+    "filler": 0.030785395160395163
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.1,
+    "words_s": 0.7814825373901461,
+    "meaning": 0.65,
+    "filler": 0.04735078568774221
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.1,
+    "words_s": 0.7749179320851147,
+    "meaning": 0.8,
+    "filler": 0.049595579858737755
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.02127659574468085,
+    "words_s": 0.7360966727501268,
+    "meaning": 0.6808510638297872,
+    "filler": 0.0562243907263139
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.11320754716981132,
+    "words_s": 0.8672789604897204,
+    "meaning": 0.7358490566037735,
+    "filler": 0.043178027075146216
+   }
+  },
+  "t5_4b_ft|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.98,
+    "words_s": 0.6284169640567332,
+    "meaning": 0.56,
+    "filler": 0.08330162915208009
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9359744503862151,
+    "meaning": 0.85,
+    "filler": 0.028616213283732466
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7236405913774335,
+    "meaning": 0.45,
+    "filler": 0.05728102027519849
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8141124200876522,
+    "meaning": 0.9,
+    "filler": 0.033701893072602455
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.7074321881745484,
+    "meaning": 0.5957446808510638,
+    "filler": 0.06648180065752947
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.9811320754716981,
+    "words_s": 0.7453766112223089,
+    "meaning": 0.660377358490566,
+    "filler": 0.05840378167178798
+   }
+  },
+  "t5_4b_48k|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.7411698569777988,
+    "meaning": 0.56,
+    "filler": 0.060396235306756196
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.8714251802119449,
+    "meaning": 0.85,
+    "filler": 0.04282870687627384
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.7644470758535572,
+    "meaning": 0.65,
+    "filler": 0.0678091711791738
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.767223339432587,
+    "meaning": 0.7,
+    "filler": 0.04695505945959667
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.6844275637210456,
+    "meaning": 0.5531914893617021,
+    "filler": 0.07762113676296319
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.8543410541440889,
+    "meaning": 0.7358490566037735,
+    "filler": 0.03875333006006527
+   }
+  },
+  "t5_4b_48k|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.5289709372891618,
+    "meaning": 0.36,
+    "filler": 0.09183887705049429
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.8921514596514596,
+    "meaning": 0.55,
+    "filler": 0.03717534645437122
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.5632385743771192,
+    "meaning": 0.4,
+    "filler": 0.06602574961270613
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.7545471813400202,
+    "meaning": 0.5,
+    "filler": 0.06328499716657611
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.5856359948401058,
+    "meaning": 0.40425531914893614,
+    "filler": 0.07433386623817025
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.6712627849234887,
+    "meaning": 0.4339622641509434,
+    "filler": 0.0716061138176985
+   }
+  },
+  "mdlm120m_base|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.978265949778582,
+    "meaning": 0.38,
+    "filler": 0.048599952206547094
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9862713440686957,
+    "meaning": 0.45,
+    "filler": 0.06241509075464739
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9854666906519445,
+    "meaning": 0.5,
+    "filler": 0.056496147541771256
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9890380549682876,
+    "meaning": 0.6,
+    "filler": 0.02669898431497376
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.9894502734837868,
+    "meaning": 0.46808510638297873,
+    "filler": 0.06530400316530055
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.976118412816732,
+    "meaning": 0.41509433962264153,
+    "filler": 0.037847623974270564
+   }
+  },
+  "mdlm120m_base|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.9,
+    "words_s": 0.4866134615179436,
+    "meaning": 0.18,
+    "filler": 0.21200231115047832
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.8766754480899218,
+    "meaning": 0.15,
+    "filler": 0.16757994249726324
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.9,
+    "words_s": 0.5065985688082875,
+    "meaning": 0.2,
+    "filler": 0.25447642492340633
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.5991369219016278,
+    "meaning": 0.4,
+    "filler": 0.17456734867860185
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.9148936170212766,
+    "words_s": 0.3705730535237928,
+    "meaning": 0.2127659574468085,
+    "filler": 0.24911344522713655
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.9433962264150944,
+    "words_s": 0.7654828135331959,
+    "meaning": 0.18867924528301888,
+    "filler": 0.17129404654807373
+   }
+  },
+  "mdlm120m_ft|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.9004740274943195,
+    "meaning": 0.82,
+    "filler": 0.06940086078142378
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9658455433455433,
+    "meaning": 0.9,
+    "filler": 0.04978966131907308
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.8899429494797142,
+    "meaning": 0.75,
+    "filler": 0.06457176979727663
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9507119973847662,
+    "meaning": 0.9,
+    "filler": 0.041305111342195736
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.8797370811535327,
+    "meaning": 0.8085106382978723,
+    "filler": 0.07498462474609788
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.9490367620915613,
+    "meaning": 0.8490566037735849,
+    "filler": 0.049925385127425295
+   }
+  },
+  "mdlm120m_ft|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.7027326373870327,
+    "meaning": 0.66,
+    "filler": 0.12718879640991132
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9439217808335455,
+    "meaning": 0.9,
+    "filler": 0.12806651964232058
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7398740158053659,
+    "meaning": 0.6,
+    "filler": 0.13815136853817514
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.892726194900108,
+    "meaning": 1.0,
+    "filler": 0.09782521303822145
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.7505863104721088,
+    "meaning": 0.6808510638297872,
+    "filler": 0.07789878779356114
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.8011745879045629,
+    "meaning": 0.7735849056603774,
+    "filler": 0.16982654128660984
+   }
+  },
+  "mdlm523m_base|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.9911840619748508,
+    "meaning": 0.5,
+    "filler": 0.04400740750703449
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9954452214452214,
+    "meaning": 0.65,
+    "filler": 0.04620858073670882
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9723099752881186,
+    "meaning": 0.35,
+    "filler": 0.03681121940002677
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9834084358381034,
+    "meaning": 0.0,
+    "filler": 0.005970149253731343
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.983450333291837,
+    "meaning": 0.425531914893617,
+    "filler": 0.04685836280520969
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.9910608627749818,
+    "meaning": 0.4716981132075472,
+    "filler": 0.032417449410922526
+   }
+  },
+  "mdlm523m_base|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.74,
+    "words_s": 0.4615374372922161,
+    "meaning": 0.16,
+    "filler": 0.1725186314263714
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.8693010004271613,
+    "meaning": 0.25,
+    "filler": 0.17038886217542498
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.95,
+    "words_s": 0.6177857712462975,
+    "meaning": 0.15,
+    "filler": 0.16435733720751572
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.9,
+    "words_s": 0.6752930785689406,
+    "meaning": 0.3,
+    "filler": 0.23961989825425486
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.8085106382978723,
+    "words_s": 0.4230339000894769,
+    "meaning": 0.1702127659574468,
+    "filler": 0.17090965638739578
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.8867924528301887,
+    "words_s": 0.7488480147087543,
+    "meaning": 0.20754716981132076,
+    "filler": 0.1827226545530628
+   }
+  },
+  "mdlm523m_ft|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.8735521782403395,
+    "meaning": 0.76,
+    "filler": 0.07547144166551613
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.05,
+    "words_s": 0.9516203703703704,
+    "meaning": 0.85,
+    "filler": 0.04670993093593713
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.8287895908439387,
+    "meaning": 0.8,
+    "filler": 0.05559278786752202
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9686868686868687,
+    "meaning": 0.9,
+    "filler": 0.03581693945653901
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.02127659574468085,
+    "words_s": 0.8261808788394223,
+    "meaning": 0.7446808510638298,
+    "filler": 0.08147615278080553
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.9460787833531886,
+    "meaning": 0.8490566037735849,
+    "filler": 0.04430974855117962
+   }
+  },
+  "mdlm523m_ft|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.98,
+    "words_s": 0.6921860840300873,
+    "meaning": 0.76,
+    "filler": 0.1329742144112304
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9336592707258342,
+    "meaning": 0.85,
+    "filler": 0.06819815834245771
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7563198002118281,
+    "meaning": 0.65,
+    "filler": 0.07473529887650227
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.9134818997427694,
+    "meaning": 0.9,
+    "filler": 0.11152894095587865
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.7057035186116447,
+    "meaning": 0.6595744680851063,
+    "filler": 0.10014729043436651
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.9811320754716981,
+    "words_s": 0.8372762121309058,
+    "meaning": 0.8679245283018868,
+    "filler": 0.11161786083177885
+   }
+  },
+  "dg_base|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.8771020431573332,
+    "meaning": 1.0,
+    "filler": 0.03521892854531836
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.8963938400780507,
+    "meaning": 1.0,
+    "filler": 0.05407738804023634
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.8468108974358974,
+    "meaning": 1.0,
+    "filler": 0.058938821177177615
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.8482831410075992,
+    "meaning": 1.0,
+    "filler": 0.011666666666666667
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.8565064577913162,
+    "meaning": 1.0,
+    "filler": 0.03723129653526059
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.8857778264533915,
+    "meaning": 1.0,
+    "filler": 0.04505785549289843
+   }
+  },
+  "dg_base|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.2626226129788998,
+    "meaning": 0.52,
+    "filler": 0.24902313080667557
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.5441075795119913,
+    "meaning": 0.9,
+    "filler": 0.17008402491938296
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.29083058088282543,
+    "meaning": 0.55,
+    "filler": 0.24114496297393612
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.36783478776125833,
+    "meaning": 0.9,
+    "filler": 0.23228090399735998
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.22717283923726186,
+    "meaning": 0.5531914893617021,
+    "filler": 0.25307780426967874
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.4307758167981623,
+    "meaning": 0.7169811320754716,
+    "filler": 0.20950733089620488
+   }
+  },
+  "dg_full|baseline": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 0.0,
+    "words_s": 0.7469495497336055,
+    "meaning": 0.84,
+    "filler": 0.0706590198160548
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.9259507430974823,
+    "meaning": 1.0,
+    "filler": 0.021428404928404927
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 0.0,
+    "words_s": 0.7398484522013934,
+    "meaning": 0.9,
+    "filler": 0.020619717185119662
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 0.0,
+    "words_s": 0.9075198412698413,
+    "meaning": 1.0,
+    "filler": 0.010644257703081233
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 0.0,
+    "words_s": 0.7379055310799224,
+    "meaning": 0.8723404255319149,
+    "filler": 0.06250289549206715
+   },
+   "other metres": {
+    "n": 53,
+    "all": 0.0,
+    "words_s": 0.8501339593320726,
+    "meaning": 0.9245283018867925,
+    "filler": 0.029107923056167696
+   }
+  },
+  "dg_full|masking_backtrack": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.22593738667991595,
+    "meaning": 0.38,
+    "filler": 0.1457339865189953
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.5242451665981077,
+    "meaning": 0.6,
+    "filler": 0.08063887093298858
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.23377164502164502,
+    "meaning": 0.45,
+    "filler": 0.06277802369554288
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.31602789023841654,
+    "meaning": 0.7,
+    "filler": 0.15913847117794486
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.16820289292129093,
+    "meaning": 0.40425531914893614,
+    "filler": 0.09820315837143938
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.4096594056881952,
+    "meaning": 0.5283018867924528,
+    "filler": 0.1345447827706074
+   }
+  },
+  "nandi_base|masking_only": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 0.96,
+    "words_s": 0.21403997239550557,
+    "meaning": 0.12,
+    "filler": 0.1837543110484287
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 1.0,
+    "words_s": 0.2001906475590686,
+    "meaning": 0.1111111111111111,
+    "filler": 0.25783842156391173
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 1.0,
+    "words_s": 0.19620335403617137,
+    "meaning": 0.0,
+    "filler": 0.20722954605307548
+   },
+   "other metres": {
+    "n": 19,
+    "all": 0.9473684210526315,
+    "words_s": 0.22156130670403607,
+    "meaning": 0.21052631578947367,
+    "filler": 0.20031370418367322
+   }
+  },
+  "nandi_base|hybrid": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 0.88,
+    "words_s": 0.1977187286397813,
+    "meaning": 0.08,
+    "filler": 0.31499427910075445
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 0.8888888888888888,
+    "words_s": 0.2989278752436647,
+    "meaning": 0.1111111111111111,
+    "filler": 0.36761519900672335
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 0.8666666666666667,
+    "words_s": 0.20175229741019213,
+    "meaning": 0.0,
+    "filler": 0.2709422204902081
+   },
+   "other metres": {
+    "n": 19,
+    "all": 0.8947368421052632,
+    "words_s": 0.24247550694919118,
+    "meaning": 0.15789473684210525,
+    "filler": 0.3746979190119079
+   }
+  },
+  "nandi_ft|masking_only": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 1.0,
+    "words_s": 0.5944545466795043,
+    "meaning": 0.6,
+    "filler": 0.0792595895788452
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 1.0,
+    "words_s": 0.5101469880881645,
+    "meaning": 0.3333333333333333,
+    "filler": 0.10888000229331499
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 1.0,
+    "words_s": 0.659523042603538,
+    "meaning": 0.5333333333333333,
+    "filler": 0.06166141726089229
+   },
+   "other metres": {
+    "n": 19,
+    "all": 1.0,
+    "words_s": 0.5031495221435799,
+    "meaning": 0.5263157894736842,
+    "filler": 0.10718360532618845
+   }
+  },
+  "nandi_ft|hybrid": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 1.0,
+    "words_s": 0.5875018870079599,
+    "meaning": 0.48,
+    "filler": 0.06735700582060931
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 1.0,
+    "words_s": 0.6558282423585067,
+    "meaning": 0.4444444444444444,
+    "filler": 0.04623590982286634
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 1.0,
+    "words_s": 0.6815378779623631,
+    "meaning": 0.5333333333333333,
+    "filler": 0.041145798503854775
+   },
+   "other metres": {
+    "n": 19,
+    "all": 1.0,
+    "words_s": 0.5456280624731639,
+    "meaning": 0.42105263157894735,
+    "filler": 0.07804533454543203
+   }
+  },
+  "mdlm523m_base|masking_only": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 0.8,
+    "words_s": 0.39466516563970067,
+    "meaning": 0.12,
+    "filler": 0.20171148675386663
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 0.7777777777777778,
+    "words_s": 0.4953130374957,
+    "meaning": 0.0,
+    "filler": 0.19212573918456272
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 0.8666666666666667,
+    "words_s": 0.43578358766015246,
+    "meaning": 0.06666666666666667,
+    "filler": 0.2192358266864908
+   },
+   "other metres": {
+    "n": 19,
+    "all": 0.7368421052631579,
+    "words_s": 0.4098785612395542,
+    "meaning": 0.10526315789473684,
+    "filler": 0.1833358642742299
+   }
+  },
+  "mdlm523m_base|hybrid": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 0.92,
+    "words_s": 0.4006596904137739,
+    "meaning": 0.16,
+    "filler": 0.15228569618831744
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 0.8888888888888888,
+    "words_s": 0.4903188104942491,
+    "meaning": 0.2222222222222222,
+    "filler": 0.1850353006699756
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 0.9333333333333333,
+    "words_s": 0.4046588693957115,
+    "meaning": 0.26666666666666666,
+    "filler": 0.14710171522373106
+   },
+   "other metres": {
+    "n": 19,
+    "all": 0.8947368421052632,
+    "words_s": 0.43997255336089036,
+    "meaning": 0.10526315789473684,
+    "filler": 0.17189128328325004
+   }
+  },
+  "mdlm523m_ft|masking_only": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 0.92,
+    "words_s": 0.5724761328784502,
+    "meaning": 0.72,
+    "filler": 0.29205143927429567
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 1.0,
+    "words_s": 0.5475679940592221,
+    "meaning": 0.6666666666666666,
+    "filler": 0.15876833300931972
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 1.0,
+    "words_s": 0.5541839265663469,
+    "meaning": 0.6,
+    "filler": 0.29685630547506914
+   },
+   "other metres": {
+    "n": 19,
+    "all": 0.8947368421052632,
+    "words_s": 0.5751187563157397,
+    "meaning": 0.7894736842105263,
+    "filler": 0.22512402088501218
+   }
+  },
+  "mdlm523m_ft|hybrid": {
+   "Bhāgavatam": {
+    "n": 25,
+    "all": 1.0,
+    "words_s": 0.5652348825312078,
+    "meaning": 0.68,
+    "filler": 0.17276210256709326
+   },
+   "Vemana": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "Kūcimañci": {
+    "n": 9,
+    "all": 1.0,
+    "words_s": 0.6532560762823921,
+    "meaning": 0.6666666666666666,
+    "filler": 0.09100729517396183
+   },
+   "Gemini": {
+    "n": 0,
+    "all": null,
+    "words_s": null,
+    "meaning": null,
+    "filler": null
+   },
+   "7 common vṛttas": {
+    "n": 15,
+    "all": 1.0,
+    "words_s": 0.5638940251579234,
+    "meaning": 0.6,
+    "filler": 0.13191342251518046
+   },
+   "other metres": {
+    "n": 19,
+    "all": 1.0,
+    "words_s": 0.607987703813309,
+    "meaning": 0.7368421052631579,
+    "filler": 0.16628509910606742
+   }
+  },
+  "nandi_base|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.45541150032692507,
+    "meaning": 0.18,
+    "filler": 0.15954660695917405
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.810374671541871,
+    "meaning": 0.1,
+    "filler": 0.17569813125238462
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.4454415440081075,
+    "meaning": 0.3,
+    "filler": 0.1539672901644416
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.5435866910866911,
+    "meaning": 0.2,
+    "filler": 0.16519901905300888
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.3548375221859669,
+    "meaning": 0.23404255319148937,
+    "filler": 0.15431734683374862
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.6914226923674017,
+    "meaning": 0.1509433962264151,
+    "filler": 0.16923988048375718
+   }
+  },
+  "nandi_ft|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.754877001665625,
+    "meaning": 0.62,
+    "filler": 0.06477751355684742
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9053366431451471,
+    "meaning": 0.75,
+    "filler": 0.03736585997421911
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7107114177388946,
+    "meaning": 0.4,
+    "filler": 0.07504288395124227
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.9042398114852348,
+    "meaning": 0.7,
+    "filler": 0.044572275550536423
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.7615871457600535,
+    "meaning": 0.6382978723404256,
+    "filler": 0.05556150647844162
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.8172191238696588,
+    "meaning": 0.5849056603773585,
+    "filler": 0.06266759447868314
+   }
+  },
+  "gemma4_e4b|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.38265655161854817,
+    "meaning": 0.58,
+    "filler": 0.04081902841591747
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7753110497771624,
+    "meaning": 0.65,
+    "filler": 0.07610788613691091
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.5191944702782298,
+    "meaning": 0.5,
+    "filler": 0.07695786815523657
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.5497526737967915,
+    "meaning": 0.7,
+    "filler": 0.025
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.3134543120082109,
+    "meaning": 0.5319148936170213,
+    "filler": 0.021893421359193792
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.6752473972757973,
+    "meaning": 0.6415094339622641,
+    "filler": 0.081571239674655
+   }
+  },
+  "gemma4_26b|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.5268857952439276,
+    "meaning": 0.46,
+    "filler": 0.05659155493566053
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.8400091972163903,
+    "meaning": 0.8,
+    "filler": 0.05859291723068812
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6002963928486375,
+    "meaning": 0.65,
+    "filler": 0.08065633334673582
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.6913583083583084,
+    "meaning": 0.8,
+    "filler": 0.0286367724347264
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.47780514574248356,
+    "meaning": 0.5106382978723404,
+    "filler": 0.044566378472075806
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.74730458107893,
+    "meaning": 0.6792452830188679,
+    "filler": 0.07181718291492842
+   }
+  },
+  "t5_270m_base|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.3954954726402093,
+    "meaning": 0.18,
+    "filler": 0.04468520864686461
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6921485191066392,
+    "meaning": 0.5,
+    "filler": 0.08621777624680102
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.5367651136752799,
+    "meaning": 0.25,
+    "filler": 0.08406041026397063
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.5594911667280089,
+    "meaning": 0.3,
+    "filler": 0.06150793650793651
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.345334637617251,
+    "meaning": 0.2127659574468085,
+    "filler": 0.05076984007802135
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.6361741506965687,
+    "meaning": 0.32075471698113206,
+    "filler": 0.07299473667869859
+   }
+  },
+  "t5_270m_ft|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.7803232137883235,
+    "meaning": 0.56,
+    "filler": 0.05842621667687352
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9619523196961277,
+    "meaning": 0.85,
+    "filler": 0.03253231117008207
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7881518946783114,
+    "meaning": 0.6,
+    "filler": 0.04381669719169719
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8897569614481379,
+    "meaning": 0.9,
+    "filler": 0.038727398205659076
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.8067843878641701,
+    "meaning": 0.6170212765957447,
+    "filler": 0.05038023659060249
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.84899902569378,
+    "meaning": 0.6981132075471698,
+    "filler": 0.04656026157316104
+   }
+  },
+  "t5_1b_base|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.38687787127483525,
+    "meaning": 0.22,
+    "filler": 0.0464318895500784
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.740887104166903,
+    "meaning": 0.25,
+    "filler": 0.08354736766501472
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.47030723894829085,
+    "meaning": 0.15,
+    "filler": 0.03377213064713065
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.6641607901902019,
+    "meaning": 0.3,
+    "filler": 0.035528817587641114
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.3458826162772672,
+    "meaning": 0.19148936170212766,
+    "filler": 0.03497962408376742
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.6406208559040774,
+    "meaning": 0.24528301886792453,
+    "filler": 0.06375906203181453
+   }
+  },
+  "t5_1b_ft|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.7569403834797818,
+    "meaning": 0.6,
+    "filler": 0.05329216432053473
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9672989766081871,
+    "meaning": 0.95,
+    "filler": 0.020877242597443835
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.8108300490228576,
+    "meaning": 0.65,
+    "filler": 0.05376587301587301
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8862831612831613,
+    "meaning": 1.0,
+    "filler": 0.04538795986622073
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.8087467283196283,
+    "meaning": 0.7446808510638298,
+    "filler": 0.05055291040785835
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.8351195295928125,
+    "meaning": 0.6981132075471698,
+    "filler": 0.042176666750678084
+   }
+  },
+  "t5_4b_base|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.35558228867352004,
+    "meaning": 0.22,
+    "filler": 0.04266112098293415
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7129606352110222,
+    "meaning": 0.35,
+    "filler": 0.05461879623644329
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.41357593795093794,
+    "meaning": 0.3,
+    "filler": 0.08910353535353535
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.4825146198830409,
+    "meaning": 0.1,
+    "filler": 0.07124664937745433
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.28172922087025243,
+    "meaning": 0.19148936170212766,
+    "filler": 0.05015950361695042
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.6017682776385614,
+    "meaning": 0.3018867924528302,
+    "filler": 0.06344287744762554
+   }
+  },
+  "t5_4b_ft|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.7209912047308411,
+    "meaning": 0.64,
+    "filler": 0.059268627054733264
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9557220412886048,
+    "meaning": 0.85,
+    "filler": 0.022547657952069717
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7833981872225579,
+    "meaning": 0.6,
+    "filler": 0.06012021420849244
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8908308010545862,
+    "meaning": 0.9,
+    "filler": 0.06624166028932067
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.784370124999875,
+    "meaning": 0.7021276595744681,
+    "filler": 0.05475890814506989
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.8089599423078687,
+    "meaning": 0.6981132075471698,
+    "filler": 0.05104786256646846
+   }
+  },
+  "t5_4b_48k|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.626475685657029,
+    "meaning": 0.4,
+    "filler": 0.06123650604694556
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9236341062025646,
+    "meaning": 0.55,
+    "filler": 0.05959239361093581
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6726596657274969,
+    "meaning": 0.45,
+    "filler": 0.06512548361461404
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8311984236280912,
+    "meaning": 0.4,
+    "filler": 0.03806878306878307
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.6728883189219763,
+    "meaning": 0.40425531914893614,
+    "filler": 0.06533963095641383
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.7535074144981265,
+    "meaning": 0.4716981132075472,
+    "filler": 0.05407373627537087
+   }
+  },
+  "mdlm120m_base|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.5481183368677711,
+    "meaning": 0.18,
+    "filler": 0.09380823107401898
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9044733213123306,
+    "meaning": 0.25,
+    "filler": 0.06291071263468288
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6491560217748673,
+    "meaning": 0.3,
+    "filler": 0.10951158936211587
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.7549624669026946,
+    "meaning": 0.4,
+    "filler": 0.11173045120177978
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.4874222534352952,
+    "meaning": 0.2127659574468085,
+    "filler": 0.10584927205691136
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.8135713672207657,
+    "meaning": 0.2641509433962264,
+    "filler": 0.0807782324335828
+   }
+  },
+  "mdlm120m_ft|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.7485484338076503,
+    "meaning": 0.5,
+    "filler": 0.06079494937702631
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9765478281782629,
+    "meaning": 0.85,
+    "filler": 0.038392526936577284
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.7863107796343091,
+    "meaning": 0.6,
+    "filler": 0.04733140103829759
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.8945684822472899,
+    "meaning": 0.9,
+    "filler": 0.06941491738395764
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.7682410255369017,
+    "meaning": 0.6382978723404256,
+    "filler": 0.05477343006554884
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.858923593752311,
+    "meaning": 0.6226415094339622,
+    "filler": 0.054226867719011196
+   }
+  },
+  "mdlm523m_base|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.5580460593729052,
+    "meaning": 0.22,
+    "filler": 0.0675975979096642
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.9298958497642709,
+    "meaning": 0.4,
+    "filler": 0.06741875729849081
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6832000061342167,
+    "meaning": 0.15,
+    "filler": 0.08783873856955057
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.6828433235867446,
+    "meaning": 0.0,
+    "filler": 0.13237715225865707
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.48287760685780223,
+    "meaning": 0.19148936170212766,
+    "filler": 0.0906785370532446
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.8358001094370896,
+    "meaning": 0.24528301886792453,
+    "filler": 0.06692283196090779
+   }
+  },
+  "mdlm523m_ft|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.802288192728621,
+    "meaning": 0.74,
+    "filler": 0.06835901888602616
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.957145734960914,
+    "meaning": 0.8,
+    "filler": 0.050470099238641444
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.8356381257631258,
+    "meaning": 0.65,
+    "filler": 0.08887953628225327
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.9411078163098624,
+    "meaning": 1.0,
+    "filler": 0.069112376133249
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.8206023724802737,
+    "meaning": 0.723404255319149,
+    "filler": 0.06893185675350465
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.8832613869327849,
+    "meaning": 0.7924528301886793,
+    "filler": 0.06898622921956554
+   }
+  },
+  "dg_base|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.3336901634548222,
+    "meaning": 0.54,
+    "filler": 0.1824028400100831
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.6083518420863622,
+    "meaning": 0.75,
+    "filler": 0.14292904721697292
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.33994946359110445,
+    "meaning": 0.5,
+    "filler": 0.17095087329363476
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.435080481953547,
+    "meaning": 0.7,
+    "filler": 0.15042445858235332
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.2606017917671787,
+    "meaning": 0.5106382978723404,
+    "filler": 0.17984481551464954
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.5236425451465757,
+    "meaning": 0.660377358490566,
+    "filler": 0.1594203522141758
+   }
+  },
+  "dg_full|masking_backtrack_v2": {
+   "Bhāgavatam": {
+    "n": 50,
+    "all": 1.0,
+    "words_s": 0.3099100820150569,
+    "meaning": 0.34,
+    "filler": 0.08634483431645902
+   },
+   "Vemana": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.646830311501364,
+    "meaning": 0.6,
+    "filler": 0.04512591575091575
+   },
+   "Kūcimañci": {
+    "n": 20,
+    "all": 1.0,
+    "words_s": 0.28353535353535353,
+    "meaning": 0.2,
+    "filler": 0.051984180035650626
+   },
+   "Gemini": {
+    "n": 10,
+    "all": 1.0,
+    "words_s": 0.4486134453781513,
+    "meaning": 0.8,
+    "filler": 0.06924603174603175
+   },
+   "7 common vṛttas": {
+    "n": 47,
+    "all": 1.0,
+    "words_s": 0.26962325709773177,
+    "meaning": 0.2765957446808511,
+    "filler": 0.07631520226156542
+   },
+   "other metres": {
+    "n": 53,
+    "all": 1.0,
+    "words_s": 0.4889935617297229,
+    "meaning": 0.5283018867924528,
+    "filler": 0.0634922536362457
+   }
+  }
+ },
+ "recomputed_differences": [],
+ "extra_vs_masking_backtrack": {
+  "nandi_base|masking_only": {
+   "n": 34,
+   "this": {
+    "all": 0.9705882352941176,
+    "words_s": 0.210373974644684,
+    "meaning": 0.11764705882352941,
+    "filler": 0.20336481089076244,
+    "repeated": 0.5
+   },
+   "masking_backtrack": {
+    "all": 1.0,
+    "words_s": 0.2652596233669809,
+    "meaning": 0.08823529411764706,
+    "filler": 0.19446901137229258,
+    "repeated": 0.4117647058823529
+   }
+  },
+  "nandi_base|hybrid": {
+   "n": 34,
+   "this": {
+    "all": 0.8823529411764706,
+    "words_s": 0.2245093850937504,
+    "meaning": 0.08823529411764706,
+    "filler": 0.3289233461346874,
+    "repeated": 0.29411764705882354
+   },
+   "masking_backtrack": {
+    "all": 1.0,
+    "words_s": 0.2652596233669809,
+    "meaning": 0.08823529411764706,
+    "filler": 0.19446901137229258,
+    "repeated": 0.4117647058823529
+   }
+  },
+  "nandi_ft|masking_only": {
+   "n": 34,
+   "this": {
+    "all": 1.0,
+    "words_s": 0.5721378399935614,
+    "meaning": 0.5294117647058824,
+    "filler": 0.08710028706208721,
+    "repeated": 0.0
+   },
+   "masking_backtrack": {
+    "all": 1.0,
+    "words_s": 0.5772622694422737,
+    "meaning": 0.5,
+    "filler": 0.07647945093882591,
+    "repeated": 0.0
+   }
+  },
+  "nandi_ft|hybrid": {
+   "n": 34,
+   "this": {
+    "all": 1.0,
+    "words_s": 0.6055882751889871,
+    "meaning": 0.47058823529411764,
+    "filler": 0.06176612746826559,
+    "repeated": 0.0
+   },
+   "masking_backtrack": {
+    "all": 1.0,
+    "words_s": 0.5772622694422737,
+    "meaning": 0.5,
+    "filler": 0.07647945093882591,
+    "repeated": 0.0
+   }
+  },
+  "mdlm523m_base|masking_only": {
+   "n": 34,
+   "this": {
+    "all": 0.7941176470588235,
+    "words_s": 0.4213072493662887,
+    "meaning": 0.08823529411764706,
+    "filler": 0.1991740829855215,
+    "repeated": 0.29411764705882354
+   },
+   "masking_backtrack": {
+    "all": 0.7941176470588235,
+    "words_s": 0.45956486378090344,
+    "meaning": 0.11764705882352941,
+    "filler": 0.17534745524357648,
+    "repeated": 0.14705882352941177
+   }
+  },
+  "mdlm523m_base|hybrid": {
+   "n": 34,
+   "this": {
+    "all": 0.9117647058823529,
+    "words_s": 0.4243929869056644,
+    "meaning": 0.17647058823529413,
+    "filler": 0.16095470913934462,
+    "repeated": 0.17647058823529413
+   },
+   "masking_backtrack": {
+    "all": 0.7941176470588235,
+    "words_s": 0.45956486378090344,
+    "meaning": 0.11764705882352941,
+    "filler": 0.17534745524357648,
+    "repeated": 0.14705882352941177
+   }
+  },
+  "mdlm523m_ft|masking_only": {
+   "n": 34,
+   "this": {
+    "all": 0.9411764705882353,
+    "words_s": 0.565882802014537,
+    "meaning": 0.7058823529411765,
+    "filler": 0.2567706170276844,
+    "repeated": 0.029411764705882353
+   },
+   "masking_backtrack": {
+    "all": 0.9705882352941176,
+    "words_s": 0.6198641869931549,
+    "meaning": 0.6470588235294118,
+    "filler": 0.12957625137542794,
+    "repeated": 0.029411764705882353
+   }
+  },
+  "mdlm523m_ft|hybrid": {
+   "n": 34,
+   "this": {
+    "all": 1.0,
+    "words_s": 0.5885346102888741,
+    "meaning": 0.6764705882352942,
+    "filler": 0.15112112413949963,
+    "repeated": 0.0
+   },
+   "masking_backtrack": {
+    "all": 0.9705882352941176,
+    "words_s": 0.6198641869931549,
+    "meaning": 0.6470588235294118,
+    "filler": 0.12957625137542794,
+    "repeated": 0.029411764705882353
+   }
+  }
+ },
+ "seconds_per_poem": {
+  "nandi_base|baseline": {
+   "mean": 9.66214,
+   "median": 8.903,
+   "n": 100
+  },
+  "nandi_base|masking_backtrack": {
+   "mean": 20.8029,
+   "median": 19.95,
+   "n": 100
+  },
+  "nandi_ft|baseline": {
+   "mean": 5.05424,
+   "median": 4.732,
+   "n": 100
+  },
+  "nandi_ft|masking_backtrack": {
+   "mean": 14.73128,
+   "median": 12.571,
+   "n": 100
+  },
+  "gemma4_e4b|baseline": {
+   "mean": 5.37583,
+   "median": 5.158,
+   "n": 100
+  },
+  "gemma4_e4b|masking_backtrack": {
+   "mean": 14.770199999999999,
+   "median": 15.245,
+   "n": 100
+  },
+  "gemma4_26b|baseline": {
+   "mean": 5.192290000000001,
+   "median": 4.658,
+   "n": 100
+  },
+  "gemma4_26b|masking_backtrack": {
+   "mean": 14.806289999999999,
+   "median": 15.279,
+   "n": 100
+  },
+  "t5_270m_base|baseline": {
+   "mean": 4.34944,
+   "median": 3.799,
+   "n": 100
+  },
+  "t5_270m_base|masking_backtrack": {
+   "mean": 7.8153999999999995,
+   "median": 7.532,
+   "n": 100
+  },
+  "t5_270m_ft|baseline": {
+   "mean": 2.65744,
+   "median": 2.363,
+   "n": 100
+  },
+  "t5_270m_ft|masking_backtrack": {
+   "mean": 5.40285,
+   "median": 4.392,
+   "n": 100
+  },
+  "t5_1b_base|baseline": {
+   "mean": 6.10315,
+   "median": 5.513,
+   "n": 100
+  },
+  "t5_1b_base|masking_backtrack": {
+   "mean": 9.69741,
+   "median": 9.093,
+   "n": 100
+  },
+  "t5_1b_ft|baseline": {
+   "mean": 3.46724,
+   "median": 3.198,
+   "n": 100
+  },
+  "t5_1b_ft|masking_backtrack": {
+   "mean": 6.051810000000001,
+   "median": 4.772,
+   "n": 100
+  },
+  "t5_4b_base|baseline": {
+   "mean": 3.10019,
+   "median": 0.274,
+   "n": 100
+  },
+  "t5_4b_base|masking_backtrack": {
+   "mean": 13.43509,
+   "median": 13.175,
+   "n": 100
+  },
+  "t5_4b_ft|baseline": {
+   "mean": 6.5407,
+   "median": 6.297,
+   "n": 100
+  },
+  "t5_4b_ft|masking_backtrack": {
+   "mean": 10.253779999999999,
+   "median": 9.115,
+   "n": 100
+  },
+  "t5_4b_48k|baseline": {
+   "mean": 9.62405,
+   "median": 8.182,
+   "n": 100
+  },
+  "t5_4b_48k|masking_backtrack": {
+   "mean": 15.97602,
+   "median": 15.152,
+   "n": 100
+  },
+  "mdlm120m_base|baseline": {
+   "mean": 8.6416,
+   "median": 8.75,
+   "n": 100
+  },
+  "mdlm120m_base|masking_backtrack": {
+   "mean": 33.3355,
+   "median": 25.792,
+   "n": 100
+  },
+  "mdlm120m_ft|baseline": {
+   "mean": 3.00158,
+   "median": 2.745,
+   "n": 100
+  },
+  "mdlm120m_ft|masking_backtrack": {
+   "mean": 25.62698,
+   "median": 21.766,
+   "n": 100
+  },
+  "mdlm523m_base|baseline": {
+   "mean": 9.64067,
+   "median": 8.969,
+   "n": 100
+  },
+  "mdlm523m_base|masking_backtrack": {
+   "mean": 35.18305,
+   "median": 26.157,
+   "n": 100
+  },
+  "mdlm523m_ft|baseline": {
+   "mean": 5.23634,
+   "median": 4.832,
+   "n": 100
+  },
+  "mdlm523m_ft|masking_backtrack": {
+   "mean": 23.03457,
+   "median": 20.572,
+   "n": 100
+  },
+  "dg_base|baseline": {
+   "mean": 7.4417,
+   "median": 6.51,
+   "n": 100
+  },
+  "dg_base|masking_backtrack": {
+   "mean": 179.25106,
+   "median": 176.594,
+   "n": 100
+  },
+  "dg_full|baseline": {
+   "mean": 14.6334,
+   "median": 14.33,
+   "n": 100
+  },
+  "dg_full|masking_backtrack": {
+   "mean": 179.09425,
+   "median": 192.432,
+   "n": 100
+  },
+  "nandi_base|masking_only": {
+   "mean": 17.79314705882353,
+   "median": 16.339,
+   "n": 34
+  },
+  "nandi_base|hybrid": {
+   "mean": 17.134794117647058,
+   "median": 16.611,
+   "n": 34
+  },
+  "nandi_ft|masking_only": {
+   "mean": 19.06855882352941,
+   "median": 17.672,
+   "n": 34
+  },
+  "nandi_ft|hybrid": {
+   "mean": 14.383117647058825,
+   "median": 13.382,
+   "n": 34
+  },
+  "mdlm523m_base|masking_only": {
+   "mean": 36.645147058823525,
+   "median": 30.402,
+   "n": 34
+  },
+  "mdlm523m_base|hybrid": {
+   "mean": 35.930588235294124,
+   "median": 26.685,
+   "n": 34
+  },
+  "mdlm523m_ft|masking_only": {
+   "mean": 32.179676470588234,
+   "median": 30.382,
+   "n": 34
+  },
+  "mdlm523m_ft|hybrid": {
+   "mean": 28.560294117647057,
+   "median": 22.601,
+   "n": 34
+  },
+  "nandi_base|masking_backtrack_v2": {
+   "mean": 27.718269999999997,
+   "median": 25.404,
+   "n": 100
+  },
+  "nandi_ft|masking_backtrack_v2": {
+   "mean": 22.583000000000002,
+   "median": 21.793,
+   "n": 100
+  },
+  "gemma4_e4b|masking_backtrack_v2": {
+   "mean": 25.13775,
+   "median": 24.962,
+   "n": 100
+  },
+  "gemma4_26b|masking_backtrack_v2": {
+   "mean": 15.046600000000002,
+   "median": 15.255,
+   "n": 100
+  },
+  "t5_270m_base|masking_backtrack_v2": {
+   "mean": 8.41935,
+   "median": 7.975,
+   "n": 100
+  },
+  "t5_270m_ft|masking_backtrack_v2": {
+   "mean": 7.214510000000001,
+   "median": 6.845,
+   "n": 100
+  },
+  "t5_1b_base|masking_backtrack_v2": {
+   "mean": 10.108229999999999,
+   "median": 9.591,
+   "n": 100
+  },
+  "t5_1b_ft|masking_backtrack_v2": {
+   "mean": 7.05297,
+   "median": 6.885,
+   "n": 100
+  },
+  "t5_4b_base|masking_backtrack_v2": {
+   "mean": 23.74117,
+   "median": 22.452,
+   "n": 100
+  },
+  "t5_4b_ft|masking_backtrack_v2": {
+   "mean": 18.32014,
+   "median": 17.445,
+   "n": 100
+  },
+  "t5_4b_48k|masking_backtrack_v2": {
+   "mean": 22.9437,
+   "median": 20.535,
+   "n": 100
+  },
+  "mdlm120m_base|masking_backtrack_v2": {
+   "mean": 40.93551,
+   "median": 37.436,
+   "n": 100
+  },
+  "mdlm120m_ft|masking_backtrack_v2": {
+   "mean": 40.44909,
+   "median": 36.512,
+   "n": 100
+  },
+  "mdlm523m_base|masking_backtrack_v2": {
+   "mean": 39.87201,
+   "median": 36.265,
+   "n": 100
+  },
+  "mdlm523m_ft|masking_backtrack_v2": {
+   "mean": 35.89609,
+   "median": 34.851,
+   "n": 100
+  },
+  "dg_base|masking_backtrack_v2": {
+   "mean": 148.21599,
+   "median": 154.702,
+   "n": 100
+  },
+  "dg_full|masking_backtrack_v2": {
+   "mean": 176.30584,
+   "median": 192.927,
+   "n": 100
+  }
+ }
+}

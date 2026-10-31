@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Sixth queue, third version (replaces gpu_queue_2026-10-29i.sh, stopped while it waited; full_grid_experiments/PLAN.md
+# Sixth queue, third version (replaces gpu_queue_2026-10-29i.sh, stopped while it waited; full_grid_experiments/README.md
 # decisions 22–24): DAWG v2 A+B for the two ≈ 52 GB rows (Gemma-4 26B, DiffusionGemma), after the 100-prompt grid
 # (gpu-queue-1028g) ends, ordered for a table tonight (user, 2026-10-29: "we are due finishing it today"). The 14
 # smaller rows' v2 cells run beside, in grid-v2-side-1029. One job at a time here, with the 2-s memory watchdog (10 GB):

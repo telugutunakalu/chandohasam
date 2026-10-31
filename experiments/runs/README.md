@@ -592,7 +592,7 @@ the grid's v2 (`../../full_grid_experiments/`).
 **What:** the folder for rerunning the September DiffusionGemma trial with the shared decoder's NaN-entropy bug fixed
 (`../../lora_gemma_diffusion/README.md`). It holds only `DONE`: a placeholder the GPU queues' skip rules honour.
 
-**Result:** not run. The rerun was dropped (user decision 2026-10-28, `full_grid_experiments/PLAN.md` decision 16).
+**Result:** not run. The rerun was dropped (user decision 2026-10-28, `full_grid_experiments/README.md` decision 16).
 `DONE` says how to run it by hand.
 
 ## Scripts (`../scripts/`)

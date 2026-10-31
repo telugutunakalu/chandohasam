@@ -1,0 +1,420 @@
+Loading weights:   0%|          | 0/1119 [00:00<?, ?it/s]Loading weights:   8%|▊         | 93/1119 [00:00<00:01, 911.69it/s]Loading weights:  17%|█▋        | 185/1119 [00:00<00:01, 903.73it/s]Loading weights:  26%|██▌       | 289/1119 [00:00<00:00, 953.97it/s]Loading weights:  38%|███▊      | 428/1119 [00:00<00:00, 1122.61it/s]Loading weights:  78%|███████▊  | 877/1119 [00:00<00:00, 2322.09it/s]Loading weights: 100%|██████████| 1119/1119 [00:00<00:00, 1928.78it/s]
+grid_t5_1b_ft_free: T5Gemma 2 1b runs/t5g-1b-full/final; slice 1,747 tokens; 25 metres, 183 poems; modes ['baseline']; seeds free [42, 43], constrained [42]; inventory none; Layer B weight 0.0 (override, all)
+[1/30] utpalamala|dataset/bhagavatam:10.1-1145-ఉ.|baseline|42: eos tok=93 gana=True prasa=False yati=False 6.5s
+[2/30] utpalamala|dataset/bhagavatam:10.1-1145-ఉ.|baseline|43: eos tok=95 gana=True prasa=True yati=False 4.6s
+[3/30] utpalamala|dataset/bhagavatam:10.1-1328-ఉ.|baseline|42: eos tok=94 gana=False prasa=True yati=False 4.4s
+[4/30] utpalamala|dataset/bhagavatam:10.1-1328-ఉ.|baseline|43: eos tok=88 gana=False prasa=True yati=False 4.6s
+[5/30] utpalamala|dataset/bhagavatam:10.1-1708-ఉ.|baseline|42: eos tok=88 gana=True prasa=True yati=False 5.2s
+[6/30] utpalamala|dataset/bhagavatam:10.1-1708-ఉ.|baseline|43: eos tok=94 gana=True prasa=True yati=False 6.5s
+[7/30] utpalamala|dataset/bhagavatam:3-439-ఉ.|baseline|42: eos tok=96 gana=False prasa=False yati=False 4.7s
+[8/30] utpalamala|dataset/bhagavatam:3-439-ఉ.|baseline|43: eos tok=93 gana=False prasa=True yati=False 6.0s
+[9/30] utpalamala|dataset/bhagavatam:3-500-ఉ.|baseline|42: eos tok=85 gana=True prasa=True yati=False 4.3s
+[10/30] utpalamala|dataset/bhagavatam:3-500-ఉ.|baseline|43: eos tok=83 gana=False prasa=True yati=False 5.0s
+[11/30] utpalamala|dataset/bhagavatam:3-530-ఉ.|baseline|42: eos tok=93 gana=True prasa=False yati=False 4.7s
+[12/30] utpalamala|dataset/bhagavatam:3-530-ఉ.|baseline|43: eos tok=94 gana=False prasa=False yati=False 4.4s
+[13/30] utpalamala|dataset/bhagavatam:6-216-ఉ.|baseline|42: eos tok=94 gana=False prasa=False yati=False 4.5s
+[14/30] utpalamala|dataset/bhagavatam:6-216-ఉ.|baseline|43: eos tok=94 gana=False prasa=False yati=False 4.4s
+[15/30] utpalamala|dataset/bhagavatam:6-352-ఉ.|baseline|42: eos tok=94 gana=False prasa=True yati=True 7.2s
+[16/30] utpalamala|dataset/bhagavatam:6-352-ఉ.|baseline|43: eos tok=93 gana=False prasa=True yati=True 4.5s
+[17/30] utpalamala|dataset/bhagavatam:6-52-ఉ.|baseline|42: eos tok=90 gana=False prasa=False yati=False 4.3s
+[18/30] utpalamala|dataset/bhagavatam:6-52-ఉ.|baseline|43: eos tok=96 gana=False prasa=True yati=True 4.9s
+[19/30] utpalamala|dataset/bhagavatam:9-308-ఉ.|baseline|42: eos tok=100 gana=False prasa=False yati=False 8.1s
+[20/30] utpalamala|dataset/bhagavatam:9-308-ఉ.|baseline|43: eos tok=96 gana=True prasa=True yati=False 4.5s
+[21/30] utpalamala|dataset/chandassu:chandassu-bhaskara-27-ఉ.|baseline|42: eos tok=84 gana=False prasa=False yati=False 3.9s
+[22/30] utpalamala|dataset/chandassu:chandassu-bhaskara-27-ఉ.|baseline|43: eos tok=93 gana=True prasa=True yati=True 4.9s
+[23/30] utpalamala|dataset/chandassu:chandassu-sundariimani-23-ఉ.|baseline|42: eos tok=91 gana=False prasa=False yati=False 4.3s
+[24/30] utpalamala|dataset/chandassu:chandassu-sundariimani-23-ఉ.|baseline|43: eos tok=98 gana=False prasa=False yati=True 9.0s
+[25/30] utpalamala|dataset/chandassu:chandassu-venkateswara-43-ఉ.|baseline|42: eos tok=94 gana=False prasa=False yati=False 4.5s
+[26/30] utpalamala|dataset/chandassu:chandassu-venkateswara-43-ఉ.|baseline|43: eos tok=93 gana=True prasa=True yati=False 5.0s
+[27/30] utpalamala|dataset/chandassu:chandassu-vrushadhipa-103-ఉ.|baseline|42: eos tok=88 gana=True prasa=False yati=False 4.1s
+[28/30] utpalamala|dataset/chandassu:chandassu-vrushadhipa-103-ఉ.|baseline|43: eos tok=86 gana=False prasa=True yati=False 4.0s
+[29/30] utpalamala|dataset/chandassu:chandassu-vrushadhipa-31-ఉ.|baseline|42: eos tok=90 gana=False prasa=False yati=False 10.1s
+[30/30] utpalamala|dataset/chandassu:chandassu-vrushadhipa-31-ఉ.|baseline|43: eos tok=94 gana=True prasa=False yati=False 4.5s
+[1/30] champakamala|dataset/bhagavatam:10.2-1290-చ.|baseline|42: eos tok=99 gana=True prasa=True yati=False 6.5s
+[2/30] champakamala|dataset/bhagavatam:10.2-1290-చ.|baseline|43: eos tok=95 gana=True prasa=False yati=False 4.6s
+[3/30] champakamala|dataset/bhagavatam:3-242-చ.|baseline|42: eos tok=96 gana=True prasa=True yati=True 6.6s
+[4/30] champakamala|dataset/bhagavatam:3-242-చ.|baseline|43: eos tok=99 gana=True prasa=True yati=False 4.7s
+[5/30] champakamala|dataset/bhagavatam:3-262-చ.|baseline|42: eos tok=100 gana=False prasa=False yati=False 5.5s
+[6/30] champakamala|dataset/bhagavatam:3-262-చ.|baseline|43: eos tok=99 gana=False prasa=True yati=False 4.6s
+[7/30] champakamala|dataset/bhagavatam:3-286-చ.|baseline|42: eos tok=104 gana=False prasa=False yati=False 5.8s
+[8/30] champakamala|dataset/bhagavatam:3-286-చ.|baseline|43: eos tok=96 gana=False prasa=False yati=False 4.5s
+[9/30] champakamala|dataset/bhagavatam:3-761-చ.|baseline|42: eos tok=98 gana=False prasa=False yati=False 4.6s
+[10/30] champakamala|dataset/bhagavatam:3-761-చ.|baseline|43: eos tok=97 gana=True prasa=True yati=False 6.9s
+[11/30] champakamala|dataset/bhagavatam:5.1-39-చ.|baseline|42: eos tok=96 gana=False prasa=False yati=False 4.4s
+[12/30] champakamala|dataset/bhagavatam:5.1-39-చ.|baseline|43: eos tok=95 gana=False prasa=True yati=True 4.4s
+[13/30] champakamala|dataset/bhagavatam:6-241-చ.|baseline|42: eos tok=102 gana=False prasa=False yati=False 4.8s
+[14/30] champakamala|dataset/bhagavatam:6-241-చ.|baseline|43: eos tok=103 gana=False prasa=True yati=False 6.3s
+[15/30] champakamala|dataset/bhagavatam:6-399-చ.|baseline|42: eos tok=100 gana=False prasa=False yati=False 4.7s
+[16/30] champakamala|dataset/bhagavatam:6-399-చ.|baseline|43: eos tok=95 gana=True prasa=True yati=False 4.6s
+[17/30] champakamala|dataset/chandassu:chandassu-bhaskara-92-చ.|baseline|42: eos tok=96 gana=True prasa=False yati=False 7.3s
+[18/30] champakamala|dataset/chandassu:chandassu-bhaskara-92-చ.|baseline|43: eos tok=98 gana=False prasa=True yati=True 4.6s
+[19/30] champakamala|dataset/chandassu:chandassu-maathru-72-చ.|baseline|42: eos tok=101 gana=False prasa=False yati=False 4.8s
+[20/30] champakamala|dataset/chandassu:chandassu-maathru-72-చ.|baseline|43: eos tok=93 gana=False prasa=True yati=False 4.4s
+[21/30] champakamala|dataset/chandassu:chandassu-maathru-8-చ.|baseline|42: eos tok=99 gana=False prasa=False yati=False 4.7s
+[22/30] champakamala|dataset/chandassu:chandassu-maathru-8-చ.|baseline|43: eos tok=100 gana=False prasa=False yati=False 7.1s
+[23/30] champakamala|dataset/chandassu:chandassu-maathru-91-చ.|baseline|42: eos tok=93 gana=False prasa=False yati=False 4.3s
+[24/30] champakamala|dataset/chandassu:chandassu-maathru-91-చ.|baseline|43: eos tok=92 gana=False prasa=False yati=False 4.3s
+[25/30] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-1240|baseline|42: eos tok=99 gana=False prasa=True yati=False 4.6s
+[26/30] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-1240|baseline|43: eos tok=102 gana=False prasa=True yati=False 4.7s
+[27/30] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-270|baseline|42: eos tok=96 gana=False prasa=False yati=False 4.5s
+[28/30] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-270|baseline|43: eos tok=100 gana=False prasa=False yati=False 4.7s
+[29/30] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-883|baseline|42: eos tok=97 gana=False prasa=False yati=True 4.7s
+[30/30] champakamala|dataset/kuchimanchi_timmakavi:kuchimanchi-883|baseline|43: eos tok=101 gana=False prasa=False yati=False 4.8s
+[1/30] mattebhavikriditamu|dataset/bhagavatam:10.1-165-మ.|baseline|42: eos tok=96 gana=False prasa=False yati=False 7.7s
+[2/30] mattebhavikriditamu|dataset/bhagavatam:10.1-165-మ.|baseline|43: eos tok=95 gana=False prasa=False yati=False 4.7s
+[3/30] mattebhavikriditamu|dataset/bhagavatam:10.1-876-మ.|baseline|42: eos tok=97 gana=False prasa=False yati=False 6.2s
+[4/30] mattebhavikriditamu|dataset/bhagavatam:10.1-876-మ.|baseline|43: eos tok=105 gana=False prasa=True yati=True 6.5s
+[5/30] mattebhavikriditamu|dataset/bhagavatam:10.2-1148-మ.|baseline|42: eos tok=94 gana=True prasa=True yati=False 6.1s
+[6/30] mattebhavikriditamu|dataset/bhagavatam:10.2-1148-మ.|baseline|43: eos tok=98 gana=False prasa=False yati=False 4.6s
+[7/30] mattebhavikriditamu|dataset/bhagavatam:3-373-మ.|baseline|42: eos tok=98 gana=False prasa=False yati=False 6.9s
+[8/30] mattebhavikriditamu|dataset/bhagavatam:3-373-మ.|baseline|43: eos tok=104 gana=False prasa=False yati=False 4.9s
+[9/30] mattebhavikriditamu|dataset/bhagavatam:9-244-మ.|baseline|42: eos tok=106 gana=False prasa=False yati=False 5.1s
+[10/30] mattebhavikriditamu|dataset/bhagavatam:9-244-మ.|baseline|43: eos tok=106 gana=False prasa=False yati=False 5.1s
+[11/30] mattebhavikriditamu|dataset/bhagavatam:9-529-మ.|baseline|42: eos tok=98 gana=False prasa=False yati=False 7.4s
+[12/30] mattebhavikriditamu|dataset/bhagavatam:9-529-మ.|baseline|43: eos tok=93 gana=False prasa=False yati=False 4.3s
+[13/30] mattebhavikriditamu|dataset/chandassu:chandassu-bhaktamandaara-23-మ.|baseline|42: eos tok=99 gana=True prasa=True yati=False 4.9s
+[14/30] mattebhavikriditamu|dataset/chandassu:chandassu-bhaktamandaara-23-మ.|baseline|43: eos tok=101 gana=False prasa=False yati=False 8.3s
+[15/30] mattebhavikriditamu|dataset/chandassu:chandassu-devakinandana-12-మ.|baseline|42: eos tok=95 gana=False prasa=False yati=False 4.7s
+[16/30] mattebhavikriditamu|dataset/chandassu:chandassu-devakinandana-12-మ.|baseline|43: eos tok=98 gana=False prasa=True yati=False 7.0s
+[17/30] mattebhavikriditamu|dataset/chandassu:chandassu-devakinandana-37-మ.|baseline|42: eos tok=94 gana=False prasa=False yati=False 6.7s
+[18/30] mattebhavikriditamu|dataset/chandassu:chandassu-devakinandana-37-మ.|baseline|43: eos tok=108 gana=True prasa=True yati=False 5.2s
+[19/30] mattebhavikriditamu|dataset/chandassu:chandassu-devakinandana-88-మ.|baseline|42: eos tok=95 gana=False prasa=False yati=False 4.5s
+[20/30] mattebhavikriditamu|dataset/chandassu:chandassu-devakinandana-88-మ.|baseline|43: eos tok=97 gana=False prasa=False yati=False 5.0s
+[21/30] mattebhavikriditamu|dataset/chandassu:chandassu-maaruthi-102-మ.|baseline|42: eos tok=98 gana=False prasa=False yati=False 6.2s
+[22/30] mattebhavikriditamu|dataset/chandassu:chandassu-maaruthi-102-మ.|baseline|43: eos tok=103 gana=False prasa=False yati=False 8.1s
+[23/30] mattebhavikriditamu|dataset/chandassu:chandassu-maaruthi-6-మ.|baseline|42: eos tok=96 gana=False prasa=False yati=False 8.1s
+[24/30] mattebhavikriditamu|dataset/chandassu:chandassu-maaruthi-6-మ.|baseline|43: eos tok=98 gana=False prasa=True yati=False 6.1s
+[25/30] mattebhavikriditamu|dataset/chandassu:chandassu-naarayana-69-మ.|baseline|42: eos tok=103 gana=False prasa=True yati=True 4.9s
+[26/30] mattebhavikriditamu|dataset/chandassu:chandassu-naarayana-69-మ.|baseline|43: eos tok=104 gana=False prasa=True yati=False 9.0s
+[27/30] mattebhavikriditamu|dataset/chandassu:chandassu-naarayana-86-మ.|baseline|42: eos tok=94 gana=False prasa=False yati=False 8.4s
+[28/30] mattebhavikriditamu|dataset/chandassu:chandassu-naarayana-86-మ.|baseline|43: eos tok=101 gana=False prasa=True yati=False 4.9s
+[29/30] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-28|baseline|42: eos tok=99 gana=False prasa=True yati=False 4.7s
+[30/30] mattebhavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-28|baseline|43: eos tok=93 gana=False prasa=True yati=False 4.5s
+[1/30] sardulavikriditamu|dataset/bhagavatam:10.1-1128-శా.|baseline|42: eos tok=95 gana=True prasa=True yati=False 7.4s
+[2/30] sardulavikriditamu|dataset/bhagavatam:10.1-1128-శా.|baseline|43: eos tok=100 gana=False prasa=True yati=False 5.4s
+[3/30] sardulavikriditamu|dataset/bhagavatam:10.1-1211-శా.|baseline|42: eos tok=98 gana=True prasa=True yati=True 8.1s
+[4/30] sardulavikriditamu|dataset/bhagavatam:10.1-1211-శా.|baseline|43: eos tok=93 gana=False prasa=True yati=False 7.2s
+[5/30] sardulavikriditamu|dataset/bhagavatam:10.1-1404-శా.|baseline|42: eos tok=101 gana=True prasa=True yati=False 5.0s
+[6/30] sardulavikriditamu|dataset/bhagavatam:10.1-1404-శా.|baseline|43: eos tok=100 gana=False prasa=False yati=False 4.6s
+[7/30] sardulavikriditamu|dataset/bhagavatam:10.1-271-శా.|baseline|42: eos tok=116 gana=False prasa=True yati=False 7.7s
+[8/30] sardulavikriditamu|dataset/bhagavatam:10.1-271-శా.|baseline|43: eos tok=98 gana=False prasa=True yati=False 4.7s
+[9/30] sardulavikriditamu|dataset/bhagavatam:6-488-శా.|baseline|42: eos tok=99 gana=False prasa=False yati=False 4.7s
+[10/30] sardulavikriditamu|dataset/bhagavatam:6-488-శా.|baseline|43: eos tok=94 gana=True prasa=False yati=False 7.7s
+[11/30] sardulavikriditamu|dataset/bhagavatam:9-283-శా.|baseline|42: eos tok=95 gana=False prasa=True yati=False 4.7s
+[12/30] sardulavikriditamu|dataset/bhagavatam:9-283-శా.|baseline|43: eos tok=90 gana=False prasa=False yati=False 3.8s
+[13/30] sardulavikriditamu|dataset/bhagavatam:9-527-శా.|baseline|42: eos tok=99 gana=False prasa=False yati=False 4.7s
+[14/30] sardulavikriditamu|dataset/bhagavatam:9-527-శా.|baseline|43: eos tok=89 gana=False prasa=True yati=False 4.2s
+[15/30] sardulavikriditamu|dataset/bhagavatam:9-92-శా.|baseline|42: eos tok=106 gana=False prasa=False yati=False 8.9s
+[16/30] sardulavikriditamu|dataset/bhagavatam:9-92-శా.|baseline|43: eos tok=103 gana=True prasa=False yati=False 5.3s
+[17/30] sardulavikriditamu|dataset/chandassu:chandassu-devakinandana-99-శా.|baseline|42: eos tok=95 gana=False prasa=False yati=False 5.1s
+[18/30] sardulavikriditamu|dataset/chandassu:chandassu-devakinandana-99-శా.|baseline|43: eos tok=95 gana=False prasa=True yati=False 4.5s
+[19/30] sardulavikriditamu|dataset/chandassu:chandassu-naarayana-1-శా.|baseline|42: eos tok=96 gana=False prasa=True yati=False 9.9s
+[20/30] sardulavikriditamu|dataset/chandassu:chandassu-naarayana-1-శా.|baseline|43: eos tok=89 gana=False prasa=False yati=False 4.1s
+[21/30] sardulavikriditamu|dataset/chandassu:chandassu-ontimittaraguveera-2-శా.|baseline|42: eos tok=90 gana=False prasa=False yati=False 5.1s
+[22/30] sardulavikriditamu|dataset/chandassu:chandassu-ontimittaraguveera-2-శా.|baseline|43: eos tok=95 gana=False prasa=False yati=False 4.4s
+[23/30] sardulavikriditamu|dataset/chandassu:chandassu-ontimittaraguveera-52-శా.|baseline|42: eos tok=97 gana=True prasa=True yati=False 4.8s
+[24/30] sardulavikriditamu|dataset/chandassu:chandassu-ontimittaraguveera-52-శా.|baseline|43: eos tok=103 gana=False prasa=False yati=False 4.8s
+[25/30] sardulavikriditamu|dataset/chandassu:chandassu-sarveswara-73-శా.|baseline|42: eos tok=92 gana=False prasa=False yati=False 7.2s
+[26/30] sardulavikriditamu|dataset/chandassu:chandassu-sarveswara-73-శా.|baseline|43: eos tok=90 gana=False prasa=True yati=False 7.6s
+[27/30] sardulavikriditamu|dataset/chandassu:chandassu-sarveswara-89-శా.|baseline|42: eos tok=93 gana=False prasa=False yati=False 4.7s
+[28/30] sardulavikriditamu|dataset/chandassu:chandassu-sarveswara-89-శా.|baseline|43: eos tok=98 gana=True prasa=True yati=False 8.4s
+[29/30] sardulavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-99|baseline|42: eos tok=105 gana=False prasa=False yati=False 5.1s
+[30/30] sardulavikriditamu|dataset/kuchimanchi_timmakavi:kuchimanchi-99|baseline|43: eos tok=101 gana=True prasa=True yati=False 8.8s
+[1/6] sragdhara|dataset/bhagavatam:10.2-883-స్రగ్ద.|baseline|42: eos tok=114 gana=False prasa=False yati=False 6.7s
+[2/6] sragdhara|dataset/bhagavatam:10.2-883-స్రగ్ద.|baseline|43: eos tok=106 gana=False prasa=False yati=False 4.9s
+[3/6] sragdhara|dataset/bhagavatam:10.2-952-స్రగ్ద.|baseline|42: eos tok=102 gana=False prasa=False yati=False 4.8s
+[4/6] sragdhara|dataset/bhagavatam:10.2-952-స్రగ్ద.|baseline|43: eos tok=102 gana=False prasa=False yati=False 4.7s
+[5/6] sragdhara|dataset/bhagavatam:6-272-స్రగ్ద.|baseline|42: eos tok=103 gana=False prasa=False yati=False 4.8s
+[6/6] sragdhara|dataset/bhagavatam:6-272-స్రగ్ద.|baseline|43: eos tok=70 gana=False prasa=False yati=False 3.6s
+[1/4] mahasragdhara|dataset/bhagavatam:10.2-940-మస్ర.|baseline|42: eos tok=112 gana=False prasa=False yati=False 6.8s
+[2/4] mahasragdhara|dataset/bhagavatam:10.2-940-మస్ర.|baseline|43: eos tok=84 gana=False prasa=False yati=False 3.3s
+[3/4] mahasragdhara|dataset/bhagavatam:6-403-మస్ర.|baseline|42: eos tok=118 gana=False prasa=False yati=False 5.6s
+[4/4] mahasragdhara|dataset/bhagavatam:6-403-మస్ర.|baseline|43: eos tok=98 gana=False prasa=False yati=False 4.5s
+[1/4] totakamu|dataset/bhagavatam:6-530-తో.|baseline|42: eos tok=84 gana=False prasa=False yati=False 5.2s
+[2/4] totakamu|dataset/bhagavatam:6-530-తో.|baseline|43: eos tok=71 gana=False prasa=False yati=False 3.3s
+[3/4] totakamu|dataset/kuchimanchi_timmakavi:kuchimanchi-754|baseline|42: eos tok=95 gana=False prasa=False yati=False 4.6s
+[4/4] totakamu|dataset/kuchimanchi_timmakavi:kuchimanchi-754|baseline|43: eos tok=91 gana=False prasa=False yati=False 4.2s
+[1/4] bhujangaprayatamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1200|baseline|42: eos tok=97 gana=False prasa=False yati=False 5.7s
+[2/4] bhujangaprayatamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1200|baseline|43: eos tok=98 gana=False prasa=False yati=False 4.5s
+[3/4] bhujangaprayatamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1653|baseline|42: eos tok=55 gana=False prasa=False yati=False 2.5s
+[4/4] bhujangaprayatamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1653|baseline|43: eos tok=90 gana=False prasa=False yati=False 4.2s
+[1/30] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|baseline|42: eos tok=77 gana=False prasa=False yati=False 5.2s
+[2/30] mattakokilamu|dataset/bhagavatam:10.1-103-మత్త.|baseline|43: eos tok=81 gana=False prasa=False yati=False 4.1s
+[3/30] mattakokilamu|dataset/bhagavatam:10.1-1104-మత్త.|baseline|42: eos tok=90 gana=True prasa=True yati=False 4.6s
+[4/30] mattakokilamu|dataset/bhagavatam:10.1-1104-మత్త.|baseline|43: eos tok=87 gana=False prasa=False yati=False 4.6s
+[5/30] mattakokilamu|dataset/bhagavatam:10.1-1769-మత్త.|baseline|42: eos tok=76 gana=False prasa=False yati=False 3.6s
+[6/30] mattakokilamu|dataset/bhagavatam:10.1-1769-మత్త.|baseline|43: eos tok=84 gana=False prasa=True yati=False 4.6s
+[7/30] mattakokilamu|dataset/bhagavatam:10.1-213-మత్త.|baseline|42: eos tok=93 gana=False prasa=False yati=False 4.3s
+[8/30] mattakokilamu|dataset/bhagavatam:10.1-213-మత్త.|baseline|43: eos tok=95 gana=False prasa=False yati=False 6.1s
+[9/30] mattakokilamu|dataset/bhagavatam:10.1-310-మత్త.|baseline|42: eos tok=90 gana=False prasa=False yati=False 4.2s
+[10/30] mattakokilamu|dataset/bhagavatam:10.1-310-మత్త.|baseline|43: eos tok=97 gana=False prasa=False yati=False 5.3s
+[11/30] mattakokilamu|dataset/bhagavatam:10.1-34-మత్త.|baseline|42: eos tok=78 gana=True prasa=True yati=False 5.4s
+[12/30] mattakokilamu|dataset/bhagavatam:10.1-34-మత్త.|baseline|43: eos tok=91 gana=False prasa=False yati=False 4.3s
+[13/30] mattakokilamu|dataset/bhagavatam:10.1-739-మత్త.|baseline|42: eos tok=87 gana=False prasa=True yati=True 4.0s
+[14/30] mattakokilamu|dataset/bhagavatam:10.1-739-మత్త.|baseline|43: eos tok=82 gana=False prasa=True yati=False 3.8s
+[15/30] mattakokilamu|dataset/bhagavatam:10.2-1152-మత్త.|baseline|42: eos tok=94 gana=False prasa=False yati=False 4.4s
+[16/30] mattakokilamu|dataset/bhagavatam:10.2-1152-మత్త.|baseline|43: eos tok=90 gana=False prasa=False yati=False 4.2s
+[17/30] mattakokilamu|dataset/bhagavatam:11-16-మత్త.|baseline|42: eos tok=75 gana=True prasa=True yati=False 4.7s
+[18/30] mattakokilamu|dataset/bhagavatam:11-16-మత్త.|baseline|43: eos tok=87 gana=False prasa=False yati=False 4.1s
+[19/30] mattakokilamu|dataset/bhagavatam:3-146-మత్త.|baseline|42: eos tok=91 gana=True prasa=False yati=True 4.7s
+[20/30] mattakokilamu|dataset/bhagavatam:3-146-మత్త.|baseline|43: eos tok=84 gana=True prasa=False yati=False 6.7s
+[21/30] mattakokilamu|dataset/bhagavatam:6-321-మత్త.|baseline|42: eos tok=88 gana=False prasa=True yati=False 4.4s
+[22/30] mattakokilamu|dataset/bhagavatam:6-321-మత్త.|baseline|43: eos tok=94 gana=False prasa=False yati=False 4.4s
+[23/30] mattakokilamu|dataset/bhagavatam:6-329-మత్త.|baseline|42: eos tok=85 gana=False prasa=True yati=False 8.0s
+[24/30] mattakokilamu|dataset/bhagavatam:6-329-మత్త.|baseline|43: eos tok=83 gana=False prasa=False yati=False 4.0s
+[25/30] mattakokilamu|dataset/bhagavatam:8-167-మత్త.|baseline|42: eos tok=85 gana=False prasa=False yati=False 4.3s
+[26/30] mattakokilamu|dataset/bhagavatam:8-167-మత్త.|baseline|43: eos tok=88 gana=True prasa=True yati=True 9.2s
+[27/30] mattakokilamu|dataset/bhagavatam:9-143-మత్త.|baseline|42: eos tok=84 gana=False prasa=False yati=False 3.2s
+[28/30] mattakokilamu|dataset/bhagavatam:9-143-మత్త.|baseline|43: eos tok=85 gana=False prasa=True yati=False 4.0s
+[29/30] mattakokilamu|dataset/bhagavatam:9-351-మత్త.|baseline|42: eos tok=84 gana=False prasa=False yati=False 4.0s
+[30/30] mattakokilamu|dataset/bhagavatam:9-351-మత్త.|baseline|43: eos tok=83 gana=False prasa=False yati=False 3.9s
+[1/4] pamcacamaramu|dataset/bhagavatam:10.1-586-పంచ.|baseline|42: eos tok=85 gana=False prasa=False yati=False 5.8s
+[2/4] pamcacamaramu|dataset/bhagavatam:10.1-586-పంచ.|baseline|43: eos tok=78 gana=False prasa=False yati=False 4.1s
+[3/4] pamcacamaramu|dataset/kuchimanchi_timmakavi:kuchimanchi-1197|baseline|42: eos tok=75 gana=False prasa=False yati=False 4.0s
+[4/4] pamcacamaramu|dataset/kuchimanchi_timmakavi:kuchimanchi-1197|baseline|43: eos tok=79 gana=False prasa=False yati=False 4.3s
+[1/8] indravajra|dataset/bhagavatam:10.1-1112-ఇం.|baseline|42: eos tok=65 gana=False prasa=False yati=False 4.5s
+[2/8] indravajra|dataset/bhagavatam:10.1-1112-ఇం.|baseline|43: eos tok=65 gana=False prasa=False yati=False 3.1s
+[3/8] indravajra|dataset/bhagavatam:10.1-690-ఇం.|baseline|42: eos tok=89 gana=False prasa=False yati=False 4.2s
+[4/8] indravajra|dataset/bhagavatam:10.1-690-ఇం.|baseline|43: eos tok=56 gana=False prasa=False yati=False 2.5s
+[5/8] indravajra|dataset/bhagavatam:6-310-ఇం.|baseline|42: eos tok=93 gana=False prasa=False yati=False 4.5s
+[6/8] indravajra|dataset/bhagavatam:6-310-ఇం.|baseline|43: eos tok=99 gana=False prasa=False yati=False 4.6s
+[7/8] indravajra|dataset/bhagavatam:9-222-ఇం.|baseline|42: eos tok=100 gana=False prasa=False yati=False 4.6s
+[8/8] indravajra|dataset/bhagavatam:9-222-ఇం.|baseline|43: eos tok=53 gana=False prasa=False yati=False 2.6s
+[1/2] upendravajra|dataset/bhagavatam:10.1-407-ఉపేం.|baseline|42: eos tok=91 gana=False prasa=False yati=False 5.1s
+[2/2] upendravajra|dataset/bhagavatam:10.1-407-ఉపేం.|baseline|43: eos tok=93 gana=False prasa=False yati=False 4.2s
+[1/4] sragvini|dataset/bhagavatam:6-454-స్రగ్వి.|baseline|42: eos tok=89 gana=False prasa=False yati=False 5.4s
+[2/4] sragvini|dataset/bhagavatam:6-454-స్రగ్వి.|baseline|43: eos tok=83 gana=False prasa=False yati=False 3.9s
+[3/4] sragvini|dataset/kuchimanchi_timmakavi:kuchimanchi-1209|baseline|42: eos tok=74 gana=False prasa=False yati=False 3.4s
+[4/4] sragvini|dataset/kuchimanchi_timmakavi:kuchimanchi-1209|baseline|43: eos tok=125 gana=False prasa=False yati=False 5.8s
+[1/30] kandamu|dataset/bhagavatam:11-102-క.|baseline|42: eos tok=65 gana=False prasa=True yati=False 5.5s
+[2/30] kandamu|dataset/bhagavatam:11-102-క.|baseline|43: eos tok=56 gana=True prasa=True yati=True 4.1s
+[3/30] kandamu|dataset/bhagavatam:3-296-క.|baseline|42: eos tok=54 gana=False prasa=True yati=True 3.6s
+[4/30] kandamu|dataset/bhagavatam:3-296-క.|baseline|43: eos tok=52 gana=False prasa=False yati=False 3.0s
+[5/30] kandamu|dataset/bhagavatam:4-303-క.|baseline|42: eos tok=56 gana=True prasa=True yati=True 4.3s
+[6/30] kandamu|dataset/bhagavatam:4-303-క.|baseline|43: eos tok=58 gana=False prasa=False yati=False 3.6s
+[7/30] kandamu|dataset/bhagavatam:4-448-క.|baseline|42: eos tok=53 gana=True prasa=True yati=False 3.4s
+[8/30] kandamu|dataset/bhagavatam:4-448-క.|baseline|43: eos tok=57 gana=True prasa=False yati=True 3.9s
+[9/30] kandamu|dataset/bhagavatam:4-46-క.|baseline|42: eos tok=56 gana=True prasa=True yati=True 4.1s
+[10/30] kandamu|dataset/bhagavatam:4-46-క.|baseline|43: eos tok=58 gana=False prasa=False yati=True 2.7s
+[11/30] kandamu|dataset/bhagavatam:4-828-క.|baseline|42: eos tok=62 gana=False prasa=False yati=True 2.9s
+[12/30] kandamu|dataset/bhagavatam:4-828-క.|baseline|43: eos tok=53 gana=False prasa=False yati=False 2.5s
+[13/30] kandamu|dataset/bhagavatam:8-171-క.|baseline|42: eos tok=54 gana=True prasa=True yati=False 4.0s
+[14/30] kandamu|dataset/bhagavatam:8-171-క.|baseline|43: eos tok=53 gana=False prasa=True yati=True 3.9s
+[15/30] kandamu|dataset/bhagavatam:8-467-క.|baseline|42: eos tok=52 gana=False prasa=True yati=True 3.0s
+[16/30] kandamu|dataset/bhagavatam:8-467-క.|baseline|43: eos tok=49 gana=True prasa=True yati=True 4.4s
+[17/30] kandamu|dataset/bhagavatam:9-264-క.|baseline|42: eos tok=62 gana=False prasa=True yati=True 4.1s
+[18/30] kandamu|dataset/bhagavatam:9-264-క.|baseline|43: eos tok=59 gana=False prasa=False yati=False 2.8s
+[19/30] kandamu|dataset/chandassu:chandassu-kumaara-11-క.|baseline|42: eos tok=57 gana=False prasa=True yati=False 2.8s
+[20/30] kandamu|dataset/chandassu:chandassu-kumaara-11-క.|baseline|43: eos tok=57 gana=True prasa=True yati=True 3.0s
+[21/30] kandamu|dataset/chandassu:chandassu-kumaara-31-క.|baseline|42: eos tok=56 gana=False prasa=True yati=True 7.3s
+[22/30] kandamu|dataset/chandassu:chandassu-kumaara-31-క.|baseline|43: eos tok=64 gana=False prasa=False yati=False 3.3s
+[23/30] kandamu|dataset/chandassu:chandassu-kumaara-35-క.|baseline|42: eos tok=57 gana=False prasa=False yati=False 2.6s
+[24/30] kandamu|dataset/chandassu:chandassu-kumaara-35-క.|baseline|43: eos tok=56 gana=True prasa=True yati=False 3.4s
+[25/30] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1266|baseline|42: eos tok=59 gana=False prasa=True yati=True 5.5s
+[26/30] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1266|baseline|43: eos tok=56 gana=True prasa=True yati=True 5.9s
+[27/30] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-354|baseline|42: eos tok=59 gana=True prasa=True yati=False 3.0s
+[28/30] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-354|baseline|43: eos tok=54 gana=True prasa=True yati=True 3.4s
+[29/30] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-807|baseline|42: eos tok=61 gana=False prasa=True yati=False 3.0s
+[30/30] kandamu|dataset/kuchimanchi_timmakavi:kuchimanchi-807|baseline|43: eos tok=59 gana=False prasa=False yati=False 2.8s
+[1/10] utsahamu|dataset/bhagavatam:10.2-860-ఉత్సా.|baseline|42: eos tok=83 gana=False prasa=False yati=False 6.1s
+[2/10] utsahamu|dataset/bhagavatam:10.2-860-ఉత్సా.|baseline|43: eos tok=75 gana=False prasa=False yati=False 3.9s
+[3/10] utsahamu|dataset/bhagavatam:10.2-861-ఉత్సా.|baseline|42: eos tok=84 gana=False prasa=True yati=False 3.8s
+[4/10] utsahamu|dataset/bhagavatam:10.2-861-ఉత్సా.|baseline|43: eos tok=82 gana=False prasa=False yati=False 3.9s
+[5/10] utsahamu|dataset/bhagavatam:6-389-ఉత్సా.|baseline|42: eos tok=80 gana=True prasa=True yati=False 4.5s
+[6/10] utsahamu|dataset/bhagavatam:6-389-ఉత్సా.|baseline|43: eos tok=81 gana=True prasa=True yati=False 3.9s
+[7/10] utsahamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1195|baseline|42: eos tok=89 gana=False prasa=False yati=False 4.6s
+[8/10] utsahamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1195|baseline|43: eos tok=89 gana=False prasa=False yati=False 4.7s
+[9/10] utsahamu|dataset/kuchimanchi_timmakavi:kuchimanchi-787|baseline|42: eos tok=74 gana=False prasa=False yati=False 4.6s
+[10/10] utsahamu|dataset/kuchimanchi_timmakavi:kuchimanchi-787|baseline|43: eos tok=80 gana=False prasa=False yati=False 3.8s
+[1/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1046|baseline|42: eos tok=50 gana=True prasa=False yati=False 3.7s
+[2/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1046|baseline|43: eos tok=56 gana=True prasa=False yati=False 2.9s
+[3/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|baseline|42: eos tok=59 gana=False prasa=False yati=False 3.5s
+[4/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1201|baseline|43: eos tok=66 gana=False prasa=False yati=False 3.1s
+[5/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1207|baseline|42: eos tok=58 gana=False prasa=False yati=False 2.8s
+[6/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1207|baseline|43: eos tok=49 gana=False prasa=False yati=False 2.6s
+[7/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1651|baseline|42: eos tok=58 gana=False prasa=False yati=False 2.8s
+[8/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-1651|baseline|43: eos tok=52 gana=False prasa=False yati=False 3.3s
+[9/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-625|baseline|42: eos tok=142 gana=False prasa=False yati=False 6.6s
+[10/10] madhuragati_ragada|dataset/kuchimanchi_timmakavi:kuchimanchi-625|baseline|43: eos tok=58 gana=False prasa=False yati=False 2.7s
+[1/30] seesamu|dataset/bhagavatam:10.2-248-సీ.|baseline|42: eos tok=182 gana=False prasa=False yati=False 10.5s
+[2/30] seesamu|dataset/bhagavatam:10.2-248-సీ.|baseline|43: eos tok=185 gana=False prasa=False yati=False 8.1s
+[3/30] seesamu|dataset/bhagavatam:3-753-సీ.|baseline|42: eos tok=114 gana=False prasa=False yati=False 5.5s
+[4/30] seesamu|dataset/bhagavatam:3-753-సీ.|baseline|43: eos tok=184 gana=False prasa=False yati=False 9.1s
+[5/30] seesamu|dataset/bhagavatam:4-359-సీ.|baseline|42: eos tok=186 gana=False prasa=False yati=False 9.3s
+[6/30] seesamu|dataset/bhagavatam:4-359-సీ.|baseline|43: eos tok=118 gana=False prasa=False yati=False 6.2s
+[7/30] seesamu|dataset/bhagavatam:4-365-సీ.|baseline|42: eos tok=119 gana=False prasa=False yati=False 5.6s
+[8/30] seesamu|dataset/bhagavatam:4-365-సీ.|baseline|43: eos tok=166 gana=False prasa=False yati=False 7.9s
+[9/30] seesamu|dataset/bhagavatam:4-436-సీ.|baseline|42: eos tok=188 gana=False prasa=False yati=False 9.4s
+[10/30] seesamu|dataset/bhagavatam:4-436-సీ.|baseline|43: eos tok=182 gana=False prasa=False yati=False 8.6s
+[11/30] seesamu|dataset/bhagavatam:4-53-సీ.|baseline|42: eos tok=184 gana=False prasa=False yati=False 10.0s
+[12/30] seesamu|dataset/bhagavatam:4-53-సీ.|baseline|43: eos tok=119 gana=False prasa=False yati=False 5.8s
+[13/30] seesamu|dataset/bhagavatam:4-569-సీ.|baseline|42: eos tok=195 gana=False prasa=False yati=False 9.2s
+[14/30] seesamu|dataset/bhagavatam:4-569-సీ.|baseline|43: eos tok=121 gana=False prasa=False yati=False 5.7s
+[15/30] seesamu|dataset/bhagavatam:4-58-సీ.|baseline|42: eos tok=186 gana=False prasa=False yati=False 9.5s
+[16/30] seesamu|dataset/bhagavatam:4-58-సీ.|baseline|43: eos tok=180 gana=False prasa=False yati=False 8.4s
+[17/30] seesamu|dataset/bhagavatam:4-669-సీ.|baseline|42: eos tok=196 gana=False prasa=False yati=False 9.3s
+[18/30] seesamu|dataset/bhagavatam:4-669-సీ.|baseline|43: eos tok=190 gana=False prasa=False yati=False 9.0s
+[19/30] seesamu|dataset/bhagavatam:4-830-సీ.|baseline|42: eos tok=183 gana=False prasa=False yati=False 9.7s
+[20/30] seesamu|dataset/bhagavatam:4-830-సీ.|baseline|43: eos tok=189 gana=False prasa=False yati=False 9.0s
+[21/30] seesamu|dataset/bhagavatam:5.1-66-సీ.|baseline|42: eos tok=184 gana=False prasa=False yati=False 9.0s
+[22/30] seesamu|dataset/bhagavatam:5.1-66-సీ.|baseline|43: eos tok=188 gana=False prasa=False yati=False 8.9s
+[23/30] seesamu|dataset/bhagavatam:6-245-సీ.|baseline|42: eos tok=129 gana=False prasa=False yati=False 6.0s
+[24/30] seesamu|dataset/bhagavatam:6-245-సీ.|baseline|43: eos tok=195 gana=False prasa=False yati=False 9.2s
+[25/30] seesamu|dataset/bhagavatam:9-327-సీ.|baseline|42: eos tok=162 gana=False prasa=False yati=False 10.1s
+[26/30] seesamu|dataset/bhagavatam:9-327-సీ.|baseline|43: eos tok=177 gana=False prasa=False yati=False 8.6s
+[27/30] seesamu|dataset/bhagavatam:9-431-సీ.|baseline|42: eos tok=189 gana=False prasa=False yati=False 8.5s
+[28/30] seesamu|dataset/bhagavatam:9-431-సీ.|baseline|43: eos tok=187 gana=False prasa=False yati=False 9.1s
+[29/30] seesamu|dataset/kuchimanchi_timmakavi:kuchimanchi-106|baseline|42: eos tok=190 gana=False prasa=False yati=False 9.0s
+[30/30] seesamu|dataset/kuchimanchi_timmakavi:kuchimanchi-106|baseline|43: eos tok=182 gana=False prasa=False yati=False 11.9s
+[1/30] ataveladi|dataset/bhagavatam:10.1-1146-ఆ.|baseline|42: eos tok=62 gana=True prasa=True yati=False 5.3s
+[2/30] ataveladi|dataset/bhagavatam:10.1-1146-ఆ.|baseline|43: eos tok=65 gana=True prasa=True yati=False 3.7s
+[3/30] ataveladi|dataset/bhagavatam:10.1-1366-ఆ.|baseline|42: eos tok=61 gana=True prasa=True yati=False 2.9s
+[4/30] ataveladi|dataset/bhagavatam:10.1-1366-ఆ.|baseline|43: eos tok=58 gana=True prasa=True yati=False 3.7s
+[5/30] ataveladi|dataset/bhagavatam:5.1-13-ఆ.|baseline|42: eos tok=63 gana=False prasa=True yati=True 4.2s
+[6/30] ataveladi|dataset/bhagavatam:5.1-13-ఆ.|baseline|43: eos tok=57 gana=False prasa=False yati=False 2.7s
+[7/30] ataveladi|dataset/bhagavatam:9-235-ఆ.|baseline|42: eos tok=61 gana=True prasa=True yati=False 4.2s
+[8/30] ataveladi|dataset/bhagavatam:9-235-ఆ.|baseline|43: eos tok=60 gana=True prasa=True yati=False 2.9s
+[9/30] ataveladi|dataset/bhagavatam:9-88-ఆ.|baseline|42: eos tok=64 gana=False prasa=False yati=False 3.0s
+[10/30] ataveladi|dataset/bhagavatam:9-88-ఆ.|baseline|43: eos tok=54 gana=True prasa=True yati=True 4.7s
+[11/30] ataveladi|dataset/vemana:vemana-1106-ఆ.|baseline|42: eos tok=54 gana=True prasa=True yati=False 2.7s
+[12/30] ataveladi|dataset/vemana:vemana-1106-ఆ.|baseline|43: eos tok=49 gana=True prasa=True yati=True 4.1s
+[13/30] ataveladi|dataset/vemana:vemana-219-ఆ.|baseline|42: eos tok=60 gana=True prasa=True yati=False 3.0s
+[14/30] ataveladi|dataset/vemana:vemana-219-ఆ.|baseline|43: eos tok=60 gana=True prasa=True yati=False 4.3s
+[15/30] ataveladi|dataset/vemana:vemana-357-ఆ.|baseline|42: eos tok=55 gana=True prasa=True yati=False 4.1s
+[16/30] ataveladi|dataset/vemana:vemana-357-ఆ.|baseline|43: eos tok=52 gana=False prasa=False yati=False 2.6s
+[17/30] ataveladi|dataset/vemana:vemana-367-ఆ.|baseline|42: eos tok=57 gana=True prasa=True yati=True 2.8s
+[18/30] ataveladi|dataset/vemana:vemana-367-ఆ.|baseline|43: eos tok=54 gana=True prasa=True yati=False 6.3s
+[19/30] ataveladi|dataset/vemana:vemana-463-ఆ.|baseline|42: eos tok=62 gana=True prasa=True yati=True 3.2s
+[20/30] ataveladi|dataset/vemana:vemana-463-ఆ.|baseline|43: eos tok=62 gana=True prasa=True yati=True 3.3s
+[21/30] ataveladi|dataset/vemana:vemana-560-ఆ.|baseline|42: eos tok=69 gana=False prasa=False yati=False 5.4s
+[22/30] ataveladi|dataset/vemana:vemana-560-ఆ.|baseline|43: eos tok=58 gana=True prasa=True yati=False 5.1s
+[23/30] ataveladi|dataset/vemana:vemana-568-ఆ.|baseline|42: eos tok=62 gana=True prasa=True yati=True 3.1s
+[24/30] ataveladi|dataset/vemana:vemana-568-ఆ.|baseline|43: eos tok=53 gana=True prasa=True yati=True 2.8s
+[25/30] ataveladi|dataset/vemana:vemana-641-ఆ.|baseline|42: eos tok=62 gana=True prasa=True yati=False 2.9s
+[26/30] ataveladi|dataset/vemana:vemana-641-ఆ.|baseline|43: eos tok=57 gana=False prasa=True yati=False 2.6s
+[27/30] ataveladi|dataset/vemana:vemana-67-ఆ.|baseline|42: eos tok=52 gana=True prasa=True yati=True 5.5s
+[28/30] ataveladi|dataset/vemana:vemana-67-ఆ.|baseline|43: eos tok=49 gana=True prasa=True yati=True 5.3s
+[29/30] ataveladi|dataset/vemana:vemana-79-ఆ.|baseline|42: eos tok=56 gana=False prasa=False yati=False 2.9s
+[30/30] ataveladi|dataset/vemana:vemana-79-ఆ.|baseline|43: eos tok=60 gana=True prasa=True yati=False 3.4s
+[1/30] tetagiti|dataset/bhagavatam:10.2-1050-తే.|baseline|42: eos tok=65 gana=True prasa=True yati=False 5.2s
+[2/30] tetagiti|dataset/bhagavatam:10.2-1050-తే.|baseline|43: eos tok=68 gana=True prasa=True yati=False 4.2s
+[3/30] tetagiti|dataset/bhagavatam:10.2-644-తే.|baseline|42: eos tok=65 gana=False prasa=False yati=False 3.1s
+[4/30] tetagiti|dataset/bhagavatam:10.2-644-తే.|baseline|43: eos tok=64 gana=True prasa=True yati=False 3.5s
+[5/30] tetagiti|dataset/bhagavatam:10.2-671-తే.|baseline|42: eos tok=61 gana=True prasa=True yati=False 3.6s
+[6/30] tetagiti|dataset/bhagavatam:10.2-671-తే.|baseline|43: eos tok=64 gana=True prasa=True yati=False 3.0s
+[7/30] tetagiti|dataset/bhagavatam:3-282-తే.|baseline|42: eos tok=65 gana=True prasa=True yati=False 3.4s
+[8/30] tetagiti|dataset/bhagavatam:3-282-తే.|baseline|43: eos tok=66 gana=False prasa=False yati=False 4.0s
+[9/30] tetagiti|dataset/bhagavatam:3-331-తే.|baseline|42: eos tok=60 gana=True prasa=True yati=False 4.0s
+[10/30] tetagiti|dataset/bhagavatam:3-331-తే.|baseline|43: eos tok=62 gana=False prasa=False yati=False 3.0s
+[11/30] tetagiti|dataset/bhagavatam:3-337-తే.|baseline|42: eos tok=66 gana=True prasa=True yati=False 3.2s
+[12/30] tetagiti|dataset/bhagavatam:3-337-తే.|baseline|43: eos tok=74 gana=True prasa=True yati=False 4.6s
+[13/30] tetagiti|dataset/bhagavatam:4-144-తే.|baseline|42: eos tok=66 gana=True prasa=True yati=False 4.2s
+[14/30] tetagiti|dataset/bhagavatam:4-144-తే.|baseline|43: eos tok=59 gana=True prasa=True yati=False 2.7s
+[15/30] tetagiti|dataset/bhagavatam:4-257-తే.|baseline|42: eos tok=58 gana=True prasa=True yati=True 4.9s
+[16/30] tetagiti|dataset/bhagavatam:4-257-తే.|baseline|43: eos tok=67 gana=True prasa=True yati=False 4.9s
+[17/30] tetagiti|dataset/bhagavatam:4-348-తే.|baseline|42: eos tok=65 gana=True prasa=True yati=False 3.4s
+[18/30] tetagiti|dataset/bhagavatam:4-348-తే.|baseline|43: eos tok=61 gana=True prasa=True yati=True 6.8s
+[19/30] tetagiti|dataset/bhagavatam:4-506-తే.|baseline|42: eos tok=61 gana=True prasa=True yati=False 3.0s
+[20/30] tetagiti|dataset/bhagavatam:4-506-తే.|baseline|43: eos tok=60 gana=True prasa=True yati=False 3.1s
+[21/30] tetagiti|dataset/bhagavatam:6-86-తే.|baseline|42: eos tok=61 gana=True prasa=True yati=True 2.9s
+[22/30] tetagiti|dataset/bhagavatam:6-86-తే.|baseline|43: eos tok=58 gana=False prasa=True yati=False 7.3s
+[23/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-1304|baseline|42: eos tok=64 gana=True prasa=True yati=False 3.0s
+[24/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-1304|baseline|43: eos tok=64 gana=False prasa=True yati=False 3.0s
+[25/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-1486|baseline|42: eos tok=66 gana=False prasa=True yati=False 3.2s
+[26/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-1486|baseline|43: eos tok=73 gana=True prasa=True yati=False 3.7s
+[27/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-291|baseline|42: eos tok=58 gana=False prasa=False yati=False 3.0s
+[28/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-291|baseline|43: eos tok=60 gana=True prasa=True yati=True 3.9s
+[29/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-893|baseline|42: eos tok=64 gana=True prasa=True yati=True 9.2s
+[30/30] tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-893|baseline|43: eos tok=62 gana=False prasa=True yati=False 3.3s
+[1/20] malini|dataset/bhagavatam:10.1-1791-మాలి.|baseline|42: eos tok=80 gana=False prasa=False yati=False 5.8s
+[2/20] malini|dataset/bhagavatam:10.1-1791-మాలి.|baseline|43: budget tok=306 gana=False prasa=False yati=False 14.2s
+[3/20] malini|dataset/bhagavatam:10.2-1342-మాలి.|baseline|42: eos tok=72 gana=False prasa=False yati=False 3.4s
+[4/20] malini|dataset/bhagavatam:10.2-1342-మాలి.|baseline|43: eos tok=65 gana=False prasa=False yati=False 3.1s
+[5/20] malini|dataset/bhagavatam:11-126-మాలి.|baseline|42: eos tok=73 gana=False prasa=False yati=False 4.0s
+[6/20] malini|dataset/bhagavatam:11-126-మాలి.|baseline|43: eos tok=68 gana=False prasa=False yati=False 3.2s
+[7/20] malini|dataset/bhagavatam:12-53-మాలి.|baseline|42: eos tok=67 gana=False prasa=False yati=False 3.1s
+[8/20] malini|dataset/bhagavatam:12-53-మాలి.|baseline|43: eos tok=66 gana=False prasa=False yati=False 3.6s
+[9/20] malini|dataset/bhagavatam:3-1054-మాలి.|baseline|42: eos tok=69 gana=False prasa=False yati=False 3.2s
+[10/20] malini|dataset/bhagavatam:3-1054-మాలి.|baseline|43: eos tok=71 gana=False prasa=False yati=False 3.4s
+[11/20] malini|dataset/bhagavatam:4-976-మాలి.|baseline|42: eos tok=93 gana=False prasa=False yati=False 5.0s
+[12/20] malini|dataset/bhagavatam:4-976-మాలి.|baseline|43: eos tok=67 gana=False prasa=False yati=False 4.2s
+[13/20] malini|dataset/bhagavatam:5.1-183-మాలి.|baseline|42: eos tok=56 gana=False prasa=False yati=False 2.6s
+[14/20] malini|dataset/bhagavatam:5.1-183-మాలి.|baseline|43: eos tok=71 gana=False prasa=False yati=False 3.9s
+[15/20] malini|dataset/bhagavatam:8-744-మాలి.|baseline|42: eos tok=73 gana=False prasa=False yati=False 3.5s
+[16/20] malini|dataset/bhagavatam:8-744-మాలి.|baseline|43: eos tok=64 gana=False prasa=False yati=False 3.0s
+[17/20] malini|dataset/bhagavatam:9-735-మాలి.|baseline|42: eos tok=96 gana=False prasa=False yati=False 4.4s
+[18/20] malini|dataset/bhagavatam:9-735-మాలి.|baseline|43: eos tok=94 gana=False prasa=False yati=False 4.3s
+[19/20] malini|dataset/kuchimanchi_timmakavi:kuchimanchi-863|baseline|42: eos tok=73 gana=False prasa=False yati=False 5.0s
+[20/20] malini|dataset/kuchimanchi_timmakavi:kuchimanchi-863|baseline|43: eos tok=71 gana=False prasa=False yati=False 3.5s
+[1/2] manini|dataset/bhagavatam:10.1-214-మాని.|baseline|42: eos tok=107 gana=False prasa=False yati=False 6.5s
+[2/2] manini|dataset/bhagavatam:10.1-214-మాని.|baseline|43: eos tok=107 gana=False prasa=False yati=False 5.2s
+[1/6] kavirajavirajitamu|dataset/bhagavatam:10.2-488-కవి.|baseline|42: eos tok=102 gana=False prasa=False yati=False 6.3s
+[2/6] kavirajavirajitamu|dataset/bhagavatam:10.2-488-కవి.|baseline|43: eos tok=99 gana=False prasa=False yati=False 4.6s
+[3/6] kavirajavirajitamu|dataset/bhagavatam:10.2-489-కవి.|baseline|42: eos tok=90 gana=False prasa=False yati=False 3.7s
+[4/6] kavirajavirajitamu|dataset/bhagavatam:10.2-489-కవి.|baseline|43: eos tok=98 gana=False prasa=False yati=False 4.6s
+[5/6] kavirajavirajitamu|dataset/bhagavatam:4-438-కవి.|baseline|42: eos tok=104 gana=False prasa=False yati=False 4.9s
+[6/6] kavirajavirajitamu|dataset/bhagavatam:4-438-కవి.|baseline|43: eos tok=98 gana=False prasa=False yati=False 4.5s
+[1/2] vanamayuramu|dataset/bhagavatam:6-378-వన.|baseline|42: eos tok=108 gana=False prasa=False yati=False 6.1s
+[2/2] vanamayuramu|dataset/bhagavatam:6-378-వన.|baseline|43: eos tok=101 gana=False prasa=False yati=False 4.9s
+[1/8] layagrahi|dataset/bhagavatam:10.2-739-లగ్రా.|baseline|42: eos tok=68 gana=False prasa=False yati=False 4.5s
+[2/8] layagrahi|dataset/bhagavatam:10.2-739-లగ్రా.|baseline|43: eos tok=65 gana=False prasa=False yati=False 3.5s
+[3/8] layagrahi|dataset/bhagavatam:6-373-లగ్రా.|baseline|42: eos tok=64 gana=False prasa=False yati=False 3.0s
+[4/8] layagrahi|dataset/bhagavatam:6-373-లగ్రా.|baseline|43: eos tok=57 gana=False prasa=False yati=False 2.8s
+[5/8] layagrahi|dataset/bhagavatam:6-385-లగ్రా.|baseline|42: eos tok=195 gana=False prasa=False yati=False 9.2s
+[6/8] layagrahi|dataset/bhagavatam:6-385-లగ్రా.|baseline|43: eos tok=95 gana=False prasa=False yati=False 4.5s
+[7/8] layagrahi|dataset/kuchimanchi_timmakavi:kuchimanchi-1220|baseline|42: eos tok=68 gana=False prasa=False yati=False 3.1s
+[8/8] layagrahi|dataset/kuchimanchi_timmakavi:kuchimanchi-1220|baseline|43: budget tok=276 gana=False prasa=False yati=False 12.9s
+[1/2] layavibhati|dataset/bhagavatam:10.2-737-లవి.|baseline|42: eos tok=72 gana=False prasa=False yati=False 4.9s
+[2/2] layavibhati|dataset/bhagavatam:10.2-737-లవి.|baseline|43: eos tok=67 gana=False prasa=False yati=False 3.1s
+# Token choices under the constraint
+
+Runs: `grid_t5_1b_ft_free`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 366 | 7 | 7 | 90 | -1.002 | 74 | 4 | 0.953 | 1.825 | 45 | 6 | 1 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| baseline | line_start | 878 | -0.992 | 72 | 0 | 0.992 |
+| baseline | prasa | 425 | -0.661 | 88 | 1 | 0.975 |
+| baseline | yati | 331 | -1.120 | 68 | 1 | 0.940 |
+| baseline | other | 6670 | -0.990 | 76 | 0 | 0.985 |
+
+## By meter
+
+| meter | baseline in meter % / logp / lexical % |
+|---|---|
+| ataveladi | 30 / -0.95 / 57 |
+| bhujangaprayatamu | 0 / -1.20 / 44 |
+| champakamala | 3 / -1.00 / 48 |
+| indravajra | 0 / -1.25 / 35 |
+| kandamu | 23 / -0.98 / 51 |
+| kavirajavirajitamu | 0 / -1.04 / 33 |
+| layagrahi | 0 / -1.02 / 42 |
+| layavibhati | 0 / -1.07 / 30 |
+| madhuragati_ragada | 0 / -1.03 / 52 |
+| mahasragdhara | 0 / -1.12 / 30 |
+| malini | 0 / -0.94 / 19 |
+| manini | 0 / -1.12 / 34 |
+| mattakokilamu | 3 / -0.98 / 40 |
+| mattebhavikriditamu | 0 / -0.90 / 41 |
+| pamcacamaramu | 0 / -1.32 / 48 |
+| sardulavikriditamu | 3 / -1.02 / 39 |
+| seesamu | 0 / -1.03 / 54 |
+| sragdhara | 0 / -1.06 / 28 |
+| sragvini | 0 / -1.36 / 48 |
+| tetagiti | 17 / -0.88 / 50 |
+| totakamu | 0 / -1.03 / 36 |
+| upendravajra | 0 / -1.06 / 52 |
+| utpalamala | 3 / -0.97 / 52 |
+| utsahamu | 0 / -1.08 / 55 |
+| vanamayuramu | 0 / -1.16 / 45 |
+
+grid_t5_1b_ft_free: 2029 s

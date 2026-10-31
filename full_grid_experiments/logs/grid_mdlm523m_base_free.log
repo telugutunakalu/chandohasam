@@ -1,0 +1,51 @@
+# Token choices under the constraint
+
+Runs: `grid_mdlm523m_base_free`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline | 366 | 0 | 0 | 266 | -0.638 | 84 | 26 | 0.702 | 1.171 | 46 | 7 | 18 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| baseline | line_start | 387 | -2.854 | 23 | 6 | 0.856 |
+| baseline | prasa | 211 | -1.728 | 74 | 22 | 0.681 |
+| baseline | yati | 1 | -1.605 | 100 | 0 | 0.564 |
+| baseline | other | 809 | -1.359 | 71 | 11 | 0.822 |
+
+## By meter
+
+| meter | baseline in meter % / logp / lexical % |
+|---|---|
+| ataveladi | 0 / -0.59 / 46 |
+| bhujangaprayatamu | 0 / -0.85 / 39 |
+| champakamala | 0 / -0.66 / 43 |
+| indravajra | 0 / -0.67 / 49 |
+| kandamu | 0 / -0.58 / 46 |
+| kavirajavirajitamu | 0 / -0.61 / 48 |
+| layagrahi | 0 / -0.76 / 42 |
+| layavibhati | 0 / -0.60 / 44 |
+| madhuragati_ragada | 0 / -0.47 / 44 |
+| mahasragdhara | 0 / -0.69 / 35 |
+| malini | 0 / -0.66 / 49 |
+| manini | 0 / -0.60 / 48 |
+| mattakokilamu | 0 / -0.61 / 48 |
+| mattebhavikriditamu | 0 / -0.65 / 48 |
+| pamcacamaramu | 0 / -0.79 / 40 |
+| sardulavikriditamu | 0 / -0.78 / 45 |
+| seesamu | 0 / -0.68 / 50 |
+| sragdhara | 0 / -0.73 / 45 |
+| sragvini | 0 / -0.65 / 55 |
+| tetagiti | 0 / -0.58 / 43 |
+| totakamu | 0 / -0.63 / 57 |
+| upendravajra | 0 / -0.86 / 42 |
+| utpalamala | 0 / -0.64 / 46 |
+| utsahamu | 0 / -0.58 / 55 |
+| vanamayuramu | 0 / -0.18 / 50 |
+

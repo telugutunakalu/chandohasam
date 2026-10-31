@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/1119 [00:00<?, ?it/s]Loading weights:  74%|███████▍  | 831/1119 [00:00<00:00, 8289.53it/s]Loading weights: 100%|██████████| 1119/1119 [00:00<00:00, 8170.76it/s]
+grid_t5_1b_base_constrained_smoke: T5Gemma 2 1b google/t5gemma-2-1b-1b (base); slice 1,747 tokens; 2 metres, 30 poems; modes ['masking_backtrack']; seeds free [42], constrained [42]; inventory none; Layer B weight 0.0 (override, all)
+[1/1] kandamu|dataset/bhagavatam:11-102-క.|masking_backtrack|42: complete tok=53 gana=True prasa=True yati=True 5.2s
+[1/1] utpalamala|dataset/bhagavatam:10.1-1145-ఉ.|masking_backtrack|42: complete tok=146 gana=True prasa=True yati=True 15.2s
+# Token choices under the constraint
+
+Runs: `grid_t5_1b_base_constrained_smoke`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| masking_backtrack | 2 | 100 | 100 | 128 | -3.398 | 36 | 49 | 0.465 | 3.638 | 20 | 10 | 0 | 15.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| masking_backtrack | line_start | 14 | -3.143 | 29 | 36 | 0.509 |
+| masking_backtrack | prasa | 13 | -4.679 | 23 | 77 | 0.273 |
+| masking_backtrack | yati | 50 | -5.880 | 6 | 92 | 0.062 |
+| masking_backtrack | other | 178 | -2.628 | 47 | 35 | 0.588 |
+
+## By meter
+
+| meter | masking_backtrack in meter % / logp / lexical % |
+|---|---|
+| kandamu | 100 / -2.38 / 25 |
+| utpalamala | 100 / -3.65 / 17 |
+
+grid_t5_1b_base_constrained_smoke: 28 s
