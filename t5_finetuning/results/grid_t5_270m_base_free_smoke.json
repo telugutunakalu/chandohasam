@@ -1,0 +1,61 @@
+{
+ "by_mode": {
+  "baseline": {
+   "poems": 4,
+   "tokens": 872,
+   "complete": 0.0,
+   "gana_strict": 0.0,
+   "all_strict": 0.0,
+   "tokens_per_poem": 218.0,
+   "mean_logp": -0.34815995756880735,
+   "median_logp": -0.00486,
+   "rank1": 0.9506880733944955,
+   "overridden": 1.0,
+   "valid_mass": 0.21162133333333333,
+   "entropy": 0.7859376490825688,
+   "lexical": 0.09183673469387756,
+   "one_akshara_words": 0.0,
+   "repeated_line": 0.25,
+   "backtracks_per_poem": 0.0
+  }
+ },
+ "by_mode_position": {},
+ "by_meter_mode": {
+  "kandamu|baseline": {
+   "poems": 2,
+   "tokens": 632,
+   "complete": 0.0,
+   "gana_strict": 0.0,
+   "all_strict": 0.0,
+   "tokens_per_poem": 316.0,
+   "mean_logp": -0.06159007753164557,
+   "median_logp": -0.0013925,
+   "rank1": 0.9936708860759493,
+   "overridden": 1.0,
+   "valid_mass": 0.047005,
+   "entropy": 0.22406018987341772,
+   "lexical": 0.04597701149425287,
+   "one_akshara_words": 0.0,
+   "repeated_line": 0.5,
+   "backtracks_per_poem": 0.0
+  },
+  "utpalamala|baseline": {
+   "poems": 2,
+   "tokens": 240,
+   "complete": 0.0,
+   "gana_strict": 0.0,
+   "all_strict": 0.0,
+   "tokens_per_poem": 120.0,
+   "mean_logp": -1.102793975,
+   "median_logp": -0.34928800000000004,
+   "rank1": 0.8375,
+   "overridden": 1.0,
+   "valid_mass": 0.540854,
+   "entropy": 2.2655482916666667,
+   "lexical": 0.45454545454545453,
+   "one_akshara_words": 0.0,
+   "repeated_line": 0.0,
+   "backtracks_per_poem": 0.0
+  }
+ }
+}

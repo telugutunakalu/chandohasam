@@ -92,7 +92,7 @@ python3 -m metrical_decoder inventory                           # rebuild invent
 
 A run directory holds `run.json` (configuration), `prompts.jsonl`, `results.jsonl` (one row per poem with its
 evaluation) and `traces.jsonl` (per-token trace). An interrupted run resumes where it stopped. The model folders
-(`diffusion_finetuning/`, `autoregressive_finetuning/`, `t5_experiments/`, `lora_gemma_diffusion/`, `RL/`,
+(`diffusion_finetuning/`, `autoregressive_finetuning/`, `t5_finetuning/`, `lora_gemma_diffusion/`, `RL/`,
 `full_grid_experiments/`) import the package and plug their own models in as the logits source.
 
 **Inventories.** `inventories/verse.txt` (3,879 syllables of `dataset/`) is committed. `padyarchana.txt` (6,131

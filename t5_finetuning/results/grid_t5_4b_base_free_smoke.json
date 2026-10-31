@@ -1,0 +1,61 @@
+{
+ "by_mode": {
+  "baseline": {
+   "poems": 2,
+   "tokens": 0,
+   "complete": 0.0,
+   "gana_strict": 0.0,
+   "all_strict": 0.0,
+   "tokens_per_poem": 0.0,
+   "mean_logp": null,
+   "median_logp": null,
+   "rank1": null,
+   "overridden": null,
+   "valid_mass": null,
+   "entropy": null,
+   "lexical": null,
+   "one_akshara_words": null,
+   "repeated_line": 0.0,
+   "backtracks_per_poem": 0.0
+  }
+ },
+ "by_mode_position": {},
+ "by_meter_mode": {
+  "mattakokilamu|baseline": {
+   "poems": 1,
+   "tokens": 0,
+   "complete": 0.0,
+   "gana_strict": 0.0,
+   "all_strict": 0.0,
+   "tokens_per_poem": 0.0,
+   "mean_logp": null,
+   "median_logp": null,
+   "rank1": null,
+   "overridden": null,
+   "valid_mass": null,
+   "entropy": null,
+   "lexical": null,
+   "one_akshara_words": null,
+   "repeated_line": 0.0,
+   "backtracks_per_poem": 0.0
+  },
+  "madhuragati_ragada|baseline": {
+   "poems": 1,
+   "tokens": 0,
+   "complete": 0.0,
+   "gana_strict": 0.0,
+   "all_strict": 0.0,
+   "tokens_per_poem": 0.0,
+   "mean_logp": null,
+   "median_logp": null,
+   "rank1": null,
+   "overridden": null,
+   "valid_mass": null,
+   "entropy": null,
+   "lexical": null,
+   "one_akshara_words": null,
+   "repeated_line": 0.0,
+   "backtracks_per_poem": 0.0
+  }
+ }
+}
