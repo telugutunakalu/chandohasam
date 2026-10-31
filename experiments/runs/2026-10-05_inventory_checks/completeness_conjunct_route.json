@@ -1,0 +1,2474 @@
+{
+ "poems": 351,
+ "passed": {
+  "None": 225,
+  "verse": 225,
+  "tokenizer": 224
+ },
+ "lost_with_verse": [],
+ "lost_with_tokenizer": [
+  [
+   "bhagavatam:10.2-952-స్రగ్ద.",
+   "sragdhara"
+  ]
+ ],
+ "results": [
+  {
+   "id": "bhagavatam:1-107-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-159-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-190-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:1-221-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-242-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-246-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:1-248-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-258.1-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-265-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-284-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:1-294.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-295-భు.",
+   "meter": "bhujangaprayatamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:1-309-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-363-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-399-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:1-44-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:1-454-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-464-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-491-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-505-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:1-518-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-529-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:1-96-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-103-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1064-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1080-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1112-ఇం.",
+   "meter": "indravajra",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1124-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1129-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1154-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1187-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1209-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1219-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1258-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-128-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1285-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1317-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1408-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1478-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1492-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1557-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1585-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1625-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1687-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-1688-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1768-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-1769-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-19-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-213-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-295-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-310-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-385-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-474-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-493-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-523-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-553.1-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-558-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-610.1-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-629-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-690-ఇం.",
+   "meter": "indravajra",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-734-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-783-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-817-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-827-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.1-943-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.1-990-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-1005-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-12-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-1202-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-1225-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-1245-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-1316-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-1342-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-136-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-137-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-15-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-182-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-258-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-263-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-359-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-489-కవి.",
+   "meter": "kavirajavirajitamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-500-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-579-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-58-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-598-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-676-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-757-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-82-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-861-ఉత్సా.",
+   "meter": "utsahamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-883-స్రగ్ద.",
+   "meter": "sragdhara",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-887-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-889-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:10.2-931-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-940-మస్ర.",
+   "meter": "mahasragdhara",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-952-స్రగ్ద.",
+   "meter": "sragdhara",
+   "None": true,
+   "verse": true,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:10.2-965.1-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:11-126-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:11-16-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:12-53-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:2-219-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:2-287-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:2-76-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:2-8-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-1006.1-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:3-1053-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-1054-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-142-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-267-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:3-279-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:3-305-త.",
+   "meter": "taralamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:3-400-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-437.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-534-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-540-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-579-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-747-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-781-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-827-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:3-856.1-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:3-899-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-913.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-929.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-963-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:3-985-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-113.1-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-126-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-249.1-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-313.1-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-352-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-383-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-409.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-50-తే.",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-511-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-529-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-55-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-630-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-888-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-891-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-914-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-937-త.",
+   "meter": "taralamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-940-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:4-949-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:4-976-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:5.1-115-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:5.1-117-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:5.1-150-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:5.1-181-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:5.1-183-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:5.2-112.1-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:5.2-161-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:5.2-167-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:5.2-26-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:6-170-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-174-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-184-మం",
+   "meter": "mangalamahasri",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:6-234-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:6-236-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-314.1-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:6-321-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:6-389-ఉత్సా.",
+   "meter": "utsahamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-429-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-450-త.",
+   "meter": "taralamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:6-454-స్రగ్వి.",
+   "meter": "sragvini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-486.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-502-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:6-529-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-530-తో.",
+   "meter": "totakamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:6-55.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-164-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:7-185-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:7-207-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-221-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:7-231-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-289-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-30-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-312-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-436-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-440-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-46-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:7-478-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-481-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:7-81-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:8-168-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-174-క.",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:8-195-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:8-229-మత్త.",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-309-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-320.1-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-322-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:8-323-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-428-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-450-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-508-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-533-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-536.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-575-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:8-596-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:8-629.1-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:8-694.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-744-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:8-8-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-130-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:9-143-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:9-158-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-160-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-222-ఇం.",
+   "meter": "indravajra",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-268-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-283-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-308-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:9-314-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-322-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-331-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-378-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:9-386-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-388-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-464-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-517-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-532-మత్త.",
+   "meter": "mattakokilamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:9-536-త.",
+   "meter": "taralamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-607-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:9-672-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-696-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-721-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "bhagavatam:9-735-మాలి.",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "bhagavatam:9-82.1-తే.",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-bhaktamandaara-22-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-bhaktamandaara-29-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-bhaktamandaara-59-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-bhaktamandaara-63-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-103-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-21-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-23-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-33-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-35-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-56-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-62-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-bhaskara-76-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-daasarathi-102-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-daasarathi-19-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-daasarathi-46-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-daasarathi-76-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-daasarathi-89-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-daasarathi-99-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-devakinandana-14-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-devakinandana-40-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-devakinandana-72-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-krishna-35-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-krishna-36-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-krishna-77-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-kumaara-37-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-kumaara-57-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-maaruthi-102-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-maaruthi-115-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-maaruthi-37-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-maaruthi-60-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-maathru-2-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-maathru-39-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-maathru-61-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-maathru-7-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-113-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-116-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-12-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-2-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-25-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-30-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-4-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-85-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-ontimittaraguveera-98-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-sampangimanna-12-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-sampangimanna-35-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-sarveswara-67-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-srikaalahasteeswara-114-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-srikaalahasteeswara-117-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-srikaalahasteeswara-14-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-srikaalahasteeswara-54-మ.",
+   "meter": "mattebhavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-srikaalahasteeswara-61-శా.",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-srikaalahasteeswara-95-శా.",
+   "meter": "sardulavikriditamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-sumathi-35-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-sumathi-5-క.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-sundariimani-40-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-sundariimani-94-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-venkateswara-30-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-venkateswara-61-చ.",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-venkateswara-75-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-vrushadhipa-102-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-vrushadhipa-104-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-vrushadhipa-12-ఉ.",
+   "meter": "utpalamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "chandassu:chandassu-vrushadhipa-78-ఉ.",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "chandassu:chandassu-vrushadhipa-97-చ.",
+   "meter": "champakamala",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1039",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1091",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1102",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1182",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1195",
+   "meter": "utsahamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1196",
+   "meter": "mattakokilamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1201",
+   "meter": "madhuragati_ragada",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1207",
+   "meter": "madhuragati_ragada",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1209",
+   "meter": "sragvini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1220",
+   "meter": "layagrahi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1271",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1305",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1314",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1377",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1385",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1462",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1472",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1584",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1612",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-1651",
+   "meter": "madhuragati_ragada",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-203",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-211",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-220",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-263",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-266",
+   "meter": "champakamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-330",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-400",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-466",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-553",
+   "meter": "kandamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-594",
+   "meter": "sardulavikriditamu",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-596",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-615",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-625",
+   "meter": "madhuragati_ragada",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-723",
+   "meter": "utpalamala",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-759",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-787",
+   "meter": "utsahamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-816",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-863",
+   "meter": "malini",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-912",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-917",
+   "meter": "tetagiti",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-953",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "kuchimanchi_timmakavi:kuchimanchi-963",
+   "meter": "tetagiti",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "vemana:vemana-10-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-109-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-127-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-143-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-15-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-162-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-200-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-204-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-317-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-470-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-596-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "vemana:vemana-654-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-722-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-754-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "vemana:vemana-788-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-812-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-818-ఆ.",
+   "meter": "kandamu",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-880-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  },
+  {
+   "id": "vemana:vemana-890-ఆ.",
+   "meter": "ataveladi",
+   "None": false,
+   "verse": false,
+   "tokenizer": false
+  },
+  {
+   "id": "vemana:vemana-93-ఆ.",
+   "meter": "ataveladi",
+   "None": true,
+   "verse": true,
+   "tokenizer": true
+  }
+ ]
+}

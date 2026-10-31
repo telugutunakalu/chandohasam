@@ -1,0 +1,1 @@
+removed: the September DiffusionGemma rerun is dropped from the grid queue (user decision 2026-10-28, full_grid_experiments/PLAN.md decision 16); delete this file and run gpu_queue_2026-10-25f.sh lines "lever 2" by hand to run it

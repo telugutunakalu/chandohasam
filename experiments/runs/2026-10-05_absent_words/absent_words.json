@@ -1,0 +1,263 @@
+{
+ "real verse (held out)|—|all": {
+  "words": 33619,
+  "corpus word": 0.5550135340135043,
+  "attested": 0.06615306820547905,
+  "MAF ≥ 4": 0.0840893542342128,
+  "MAF 3": 0.20235581070228145,
+  "junk (MAF ≤ 2)": 0.09238823284452244
+ },
+ "Gemma-4 E4B|baseline|all": {
+  "words": 9544,
+  "corpus word": 0.4208927074601844,
+  "attested": 0.07931684828164291,
+  "MAF ≥ 4": 0.09450963956412406,
+  "MAF 3": 0.30972338642078795,
+  "junk (MAF ≤ 2)": 0.09555741827326068
+ },
+ "Gemma-4 E4B|masking_only|all": {
+  "words": 9410,
+  "corpus word": 0.17874601487778957,
+  "attested": 0.06046758767268863,
+  "MAF ≥ 4": 0.04197662061636557,
+  "MAF 3": 0.15526036131774706,
+  "junk (MAF ≤ 2)": 0.5635494155154092
+ },
+ "Gemma-4 E4B|masking_only|overridden": {
+  "words": 6219,
+  "corpus word": 0.10033767486734202,
+  "attested": 0.049204052098408106,
+  "MAF ≥ 4": 0.041324971860427724,
+  "MAF 3": 0.16111915098890497,
+  "junk (MAF ≤ 2)": 0.6480141501849171
+ },
+ "Gemma-4 E4B|masking_only|model's own": {
+  "words": 3191,
+  "corpus word": 0.33155750548417423,
+  "attested": 0.08241930429332497,
+  "MAF ≥ 4": 0.04324663115010968,
+  "MAF 3": 0.14384205578188655,
+  "junk (MAF ≤ 2)": 0.39893450329050456
+ },
+ "Gemma-4 E4B|masking_backtrack|all": {
+  "words": 9543,
+  "corpus word": 0.20318558105417583,
+  "attested": 0.060882322120926334,
+  "MAF ≥ 4": 0.03793356386880436,
+  "MAF 3": 0.19050613014775228,
+  "junk (MAF ≤ 2)": 0.5074924028083412
+ },
+ "Gemma-4 E4B|masking_backtrack|model's own": {
+  "words": 3489,
+  "corpus word": 0.3665806821438808,
+  "attested": 0.07967899111493265,
+  "MAF ≥ 4": 0.033820578962453426,
+  "MAF 3": 0.17884780739466896,
+  "junk (MAF ≤ 2)": 0.3410719403840642
+ },
+ "Gemma-4 E4B|masking_backtrack|overridden": {
+  "words": 6054,
+  "corpus word": 0.10901883052527254,
+  "attested": 0.050049554013875126,
+  "MAF ≥ 4": 0.04030393128510076,
+  "MAF 3": 0.19722497522299307,
+  "junk (MAF ≤ 2)": 0.6034027089527585
+ },
+ "Gemma-4 E4B|hybrid|all": {
+  "words": 9277,
+  "corpus word": 0.19607631777514284,
+  "attested": 0.056268190147677054,
+  "MAF ≥ 4": 0.04225503934461572,
+  "MAF 3": 0.17354748302252884,
+  "junk (MAF ≤ 2)": 0.5318529697100356
+ },
+ "Gemma-4 E4B|hybrid|overridden": {
+  "words": 6089,
+  "corpus word": 0.1067498768270652,
+  "attested": 0.049269173920183935,
+  "MAF ≥ 4": 0.03974380029561504,
+  "MAF 3": 0.17277056988011166,
+  "junk (MAF ≤ 2)": 0.6314665790770242
+ },
+ "Gemma-4 E4B|hybrid|model's own": {
+  "words": 3188,
+  "corpus word": 0.3666875784190715,
+  "attested": 0.06963613550815559,
+  "MAF ≥ 4": 0.04705144291091593,
+  "MAF 3": 0.17503136762860727,
+  "junk (MAF ≤ 2)": 0.3415934755332497
+ },
+ "Gemma-4 26B-A4B|baseline|all": {
+  "words": 9814,
+  "corpus word": 0.45842673731404116,
+  "attested": 0.12084776849398818,
+  "MAF ≥ 4": 0.08436926839209292,
+  "MAF 3": 0.2444467087833707,
+  "junk (MAF ≤ 2)": 0.09190951701650703
+ },
+ "Gemma-4 26B-A4B|masking_only|all": {
+  "words": 11390,
+  "corpus word": 0.24337137840210712,
+  "attested": 0.10087796312554873,
+  "MAF ≥ 4": 0.030728709394205442,
+  "MAF 3": 0.11431079894644425,
+  "junk (MAF ≤ 2)": 0.5107111501316944
+ },
+ "Gemma-4 26B-A4B|masking_only|model's own": {
+  "words": 6471,
+  "corpus word": 0.33271519085149126,
+  "attested": 0.11018389738834801,
+  "MAF ≥ 4": 0.03523412146499768,
+  "MAF 3": 0.11883789213413692,
+  "junk (MAF ≤ 2)": 0.4030288981610261
+ },
+ "Gemma-4 26B-A4B|masking_only|overridden": {
+  "words": 4919,
+  "corpus word": 0.12583858507826795,
+  "attested": 0.08863590160601749,
+  "MAF ≥ 4": 0.024801788981500306,
+  "MAF 3": 0.1083553567798333,
+  "junk (MAF ≤ 2)": 0.652368367554381
+ },
+ "Gemma-4 26B-A4B|masking_backtrack|all": {
+  "words": 11475,
+  "corpus word": 0.27233115468409586,
+  "attested": 0.1021350762527233,
+  "MAF ≥ 4": 0.029019607843137254,
+  "MAF 3": 0.13420479302832244,
+  "junk (MAF ≤ 2)": 0.46230936819172114
+ },
+ "Gemma-4 26B-A4B|masking_backtrack|model's own": {
+  "words": 6457,
+  "corpus word": 0.37416757007898405,
+  "attested": 0.1180114604305405,
+  "MAF ≥ 4": 0.03050952454700325,
+  "MAF 3": 0.1308657271178566,
+  "junk (MAF ≤ 2)": 0.3464457178256156
+ },
+ "Gemma-4 26B-A4B|masking_backtrack|overridden": {
+  "words": 5018,
+  "corpus word": 0.1412913511359107,
+  "attested": 0.08170585890793144,
+  "MAF ≥ 4": 0.027102431247508968,
+  "MAF 3": 0.13850139497807892,
+  "junk (MAF ≤ 2)": 0.6113989637305699
+ },
+ "Gemma-4 26B-A4B|hybrid|all": {
+  "words": 11146,
+  "corpus word": 0.2721155571505473,
+  "attested": 0.10030504216759376,
+  "MAF ≥ 4": 0.03283689215862193,
+  "MAF 3": 0.1311681320653149,
+  "junk (MAF ≤ 2)": 0.4635743764579221
+ },
+ "Gemma-4 26B-A4B|hybrid|model's own": {
+  "words": 6260,
+  "corpus word": 0.3766773162939297,
+  "attested": 0.11757188498402556,
+  "MAF ≥ 4": 0.03642172523961661,
+  "MAF 3": 0.12667731629392973,
+  "junk (MAF ≤ 2)": 0.3426517571884984
+ },
+ "Gemma-4 26B-A4B|hybrid|overridden": {
+  "words": 4886,
+  "corpus word": 0.1381498158002456,
+  "attested": 0.0781825624232501,
+  "MAF ≥ 4": 0.028243962341383544,
+  "MAF 3": 0.13692181743757675,
+  "junk (MAF ≤ 2)": 0.618501841997544
+ },
+ "DiffusionGemma 26B-A4B|baseline|all": {
+  "words": 9255,
+  "corpus word": 0.4210696920583468,
+  "attested": 0.10934629929767693,
+  "MAF ≥ 4": 0.0460291734197731,
+  "MAF 3": 0.28481901674770393,
+  "junk (MAF ≤ 2)": 0.13873581847649918
+ },
+ "DiffusionGemma 26B-A4B|masking_only|all": {
+  "words": 11760,
+  "corpus word": 0.3251700680272109,
+  "attested": 0.08273809523809524,
+  "MAF ≥ 4": 0.008418367346938776,
+  "MAF 3": 0.11547619047619048,
+  "junk (MAF ≤ 2)": 0.46819727891156465
+ },
+ "DiffusionGemma 26B-A4B|masking_only|overridden": {
+  "words": 7406,
+  "corpus word": 0.1451525789900081,
+  "attested": 0.07453416149068323,
+  "MAF ≥ 4": 0.006481231433972455,
+  "MAF 3": 0.10045908722657305,
+  "junk (MAF ≤ 2)": 0.6733729408587632
+ },
+ "DiffusionGemma 26B-A4B|masking_only|model's own": {
+  "words": 4354,
+  "corpus word": 0.631373449701424,
+  "attested": 0.09669269637115296,
+  "MAF ≥ 4": 0.011713367018833257,
+  "MAF 3": 0.14101975195222782,
+  "junk (MAF ≤ 2)": 0.11920073495636196
+ },
+ "DiffusionGemma 26B-A4B|masking_backtrack|all": {
+  "words": 11601,
+  "corpus word": 0.29066459787949317,
+  "attested": 0.08111369709507801,
+  "MAF ≥ 4": 0.009223342815274545,
+  "MAF 3": 0.1225756400310318,
+  "junk (MAF ≤ 2)": 0.4964227221791225
+ },
+ "DiffusionGemma 26B-A4B|masking_backtrack|overridden": {
+  "words": 7232,
+  "corpus word": 0.15016592920353983,
+  "attested": 0.0702433628318584,
+  "MAF ≥ 4": 0.005945796460176991,
+  "MAF 3": 0.09941924778761062,
+  "junk (MAF ≤ 2)": 0.6742256637168141
+ },
+ "DiffusionGemma 26B-A4B|masking_backtrack|model's own": {
+  "words": 4369,
+  "corpus word": 0.5232318608377203,
+  "attested": 0.09910734721904325,
+  "MAF ≥ 4": 0.014648661020828565,
+  "MAF 3": 0.16090638590066378,
+  "junk (MAF ≤ 2)": 0.2021057450217441
+ },
+ "DiffusionGemma 26B-A4B|hybrid|all": {
+  "words": 11203,
+  "corpus word": 0.3280371329108275,
+  "attested": 0.08479871463000982,
+  "MAF ≥ 4": 0.011336249218959208,
+  "MAF 3": 0.12407390877443542,
+  "junk (MAF ≤ 2)": 0.4517539944657681
+ },
+ "DiffusionGemma 26B-A4B|hybrid|overridden": {
+  "words": 7241,
+  "corpus word": 0.16365142936058555,
+  "attested": 0.07568015467476868,
+  "MAF ≥ 4": 0.009252865626294711,
+  "MAF 3": 0.11103438751553653,
+  "junk (MAF ≤ 2)": 0.6403811628228145
+ },
+ "DiffusionGemma 26B-A4B|hybrid|model's own": {
+  "words": 3962,
+  "corpus word": 0.6284704694598687,
+  "attested": 0.10146390711761737,
+  "MAF ≥ 4": 0.01514386673397274,
+  "MAF 3": 0.14790509843513377,
+  "junk (MAF ≤ 2)": 0.10701665825340737
+ },
+ "real verse (held out)|—|poems_with_junk": 0.7436582109479306,
+ "Gemma-4 E4B|baseline|poems_with_junk": 0.7891891891891892,
+ "Gemma-4 E4B|masking_only|poems_with_junk": 0.9945945945945946,
+ "Gemma-4 E4B|masking_backtrack|poems_with_junk": 0.9765765765765766,
+ "Gemma-4 E4B|hybrid|poems_with_junk": 0.990990990990991,
+ "Gemma-4 26B-A4B|baseline|poems_with_junk": 0.6792792792792792,
+ "Gemma-4 26B-A4B|masking_only|poems_with_junk": 0.9837837837837838,
+ "Gemma-4 26B-A4B|masking_backtrack|poems_with_junk": 0.9441441441441442,
+ "Gemma-4 26B-A4B|hybrid|poems_with_junk": 0.9657657657657658,
+ "DiffusionGemma 26B-A4B|baseline|poems_with_junk": 0.7549549549549549,
+ "DiffusionGemma 26B-A4B|masking_only|poems_with_junk": 0.9855855855855856,
+ "DiffusionGemma 26B-A4B|masking_backtrack|poems_with_junk": 0.9819819819819819,
+ "DiffusionGemma 26B-A4B|hybrid|poems_with_junk": 0.9531531531531532
+}

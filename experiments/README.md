@@ -14,6 +14,74 @@ method and its results are described in [`runs/README.md`](runs/README.md).
 The base pilot120m on the same decoding grid, with its own decoder, is in
 [`pilot_grid/`](pilot_grid/README.md) (2026-09-29).
 
+Status 2026-10-31: the register's specs (EXP-01–41) were last updated on 2026-10-05; the decoder runs go to 2026-10-22 (decoder v2,
+[`runs/README.md`](runs/README.md#decoder-v2-2026-10-05--10-22)); from 10-21 to 10-30 the GPU queues in `scripts/`
+ran the project's trainings, evaluations and the paper's grid, whose results live with each model.
+
+## How this folder is organised
+
+| path | what it holds | in git |
+|---|---|---|
+| `EXP-NN-<slug>.md` | one experiment, written as a replication spec (template below) | yes |
+| `expNN/` | that experiment's artefacts: tables, JSON, figures, small logs | yes |
+| `*.json`, `*.log` at this level | artefacts of the early Gemma decoding experiments (2026-09-24: `gemma_v2`–`v9`, the ablations, the composer) | yes |
+| `runs/<YYYY-MM-DD>_<model>_<variant>/` | one decoder run: `run.json`, `prompts.jsonl`, `results.jsonl` (the poems), `traces.jsonl`, `summary.md`, `report.md`; each described in [`runs/README.md`](runs/README.md) | yes |
+| `pilot_grid/` | the base pilot120m on the same grid | yes |
+| `notes/` | engineering and planning records that are not model experiments | yes |
+| `scripts/` | every script of these experiments and runs, and the GPU queues (table at the end) | yes |
+
+The decoder's inventories built from the confidential crawled corpus stay out of git (`../.gitignore`). The runs
+added since 2026-10-05 hold generated poems, counts and syllable statistics, no corpus text.
+
+## How to record results and interpretations
+
+Every entry keeps four things apart: **what was asked, how it was run, what was measured, and what it means.** A
+reader must be able to check the measured part against the files without trusting the interpretation.
+
+**An experiment** (`EXP-NN-<slug>.md`; the next free number, never a retired one):
+
+```
+# EXP-NN: <title>
+Status: done | partial | negative | parked | closed | blocked  (date)
+Question:      one sentence; the hypothesis if there is one (NH / P numbers)
+Held fixed:    model, data, prompts, seeds, decoding settings: what must not change for a rerun on another model
+Varies:        what a rerun may legitimately change
+Method:        the steps, with the exact commands (scripts/…) and the inputs
+Controls:      the control that could prove the naive reading wrong (random weights, random logits, shuffled text, …)
+Metrics:       definitions, units, and the chance or ceiling level
+Expected:      the prediction, written before the run
+Result:        numbers only, each with its source file (expNN/…); intervals where there is sampling noise
+Interpretation: what the result supports and what it does not; which control decided it
+Artefacts:     expNN/… and the logs
+```
+
+Then add a row to the [Index](#index). A control that changed a conclusion goes into
+[Controls that changed a conclusion](#controls-that-changed-a-conclusion).
+
+**A decoder run** (a folder under `runs/` and an entry in `runs/README.md`):
+
+```
+### <run folder>
+What:           the model and the question this run answers
+How:            the exact command or launcher script; what it was seeded from
+Result:         a table recomputed from the run's own results.jsonl (poems, ended by, in meter, tokens, seconds, …)
+Interpretation: what changes because of it (a fix, a decision, the next run)
+History:        reruns, superseded rows (superseded_*.jsonl), rule changes, with dates
+Files:          what the folder holds beyond the standard set
+```
+
+and a row in its Overview table.
+
+**Rules:**
+- Recompute every number from the artefacts before writing it; never copy a number from a log line that a later rerun
+  may have changed.
+- Keep negative and failed results, marked as such: they record what not to try again (e.g.
+  `runs/2026-10-07_e4b_v2_verse_attest2_override`).
+- Never edit a finished run. A rerun moves the replaced rows to `superseded_*.jsonl`, and the README entry records why
+  under History.
+- Date every status and every user decision. Name the decision's source (a plan section, the user).
+- An interpretation that rests on one control says so; a result without its control is reported as provisional.
+
 ## Sources consolidated
 
 | source | active specs | character |
@@ -192,3 +260,53 @@ wrong answer:
 | EXP-25 | metrical round trip | training on targets that are silently 50% corrupt |
 | EXP-28 | downstream task, not loss | ranking objectives by an incommensurable number |
 | EXP-35 | uniform bound ln V = 12.48 (pending rerun) | reading a worse-than-uniform, broken-input result as "the model confidently expects something else" |
+
+## Scripts
+
+Every script in `scripts/`, run from the repository root unless its header says otherwise.
+
+**Experiments of the register:**
+
+| script | experiment |
+|---|---|
+| `exp05_probe.py` | EXP-05: per-layer guru/laghu probe and its lookup control |
+| `exp07_register_probe.py` | EXP-07: poem against bhāvam register probe |
+| `exp08_order_contrast.py`, `exp08_prose_control.py` | EXP-08: metrical-order NLL against shuffled and reordered prose |
+| `exp19_generate.py`, `exp19_analyse.py` | EXP-19: generation-time tracking, decay and regression |
+| `exp22_directions.py` | EXP-22: chandas directions, all pairs |
+| `exp24_rsa.py` | EXP-24: representational similarity against gaṇa distance |
+| `exp35_surprisal.py`, `exp35_tests.py` | EXP-35: teacher-forced surprisal gap, its gates and tests |
+| `exp38_tight_contrast.py` | EXP-38: the synthetic tight contrast set |
+| `pilot_grid.py` | the base pilot120m on the decoding grid (`pilot_grid/`) |
+
+**Decoder runs and decoder v2** (described in [`runs/README.md`](runs/README.md#scripts-scripts)):
+`run_e4b_constrained.sh`, `run_diffusion_constrained.sh`, `run_hf_grid.sh`, `queue_after.sh`, `rerun_vowel_chain.sh`,
+`audit_rule_change.py`, `make_samples.py`, `export_inference_json.py`, `measure_absent_words.py`,
+`compare_akshara_inventories.py`, `check_inventory_completeness.py`, `compare_inventory_trial.py`,
+`run_layer_b_trial.sh`, `check_layer_b_heldout.py`.
+
+**The machine** (the GB10 shares one memory between GPU and CPU):
+
+| script | role |
+|---|---|
+| `mem_watchdog.sh` | stops a run if available memory falls below a floor |
+| `mem_trace.sh` | memory trace, synced to disk so it survives a crash |
+| `evict_model_cache.py` | drops the page cache of large model files so CUDA sees that memory (CUDA's free memory is MemFree); no root needed |
+
+**The GPU queues, 2026-10-21 → 10-30.** After a system OOM on 10-21 (two large jobs at once), every GPU job ran
+through one sequential queue. Each queue was a systemd user unit with a 2-s memory watchdog that stops only its own
+job. A queue was replaced, never edited while running. They are kept as the record of what ran, in what order; the
+log is `runs/gpu_queue_2026-10-21.log`. Their jobs belong to other folders, whose READMEs give the results.
+
+| script | what it ran |
+|---|---|
+| `gpu_queue_2026-10-21.sh` | the first queue after the OOM: T5Gemma 2 270M full fine-tuning, the DiffusionGemma constrained E6 runs |
+| `gpu_queue_2026-10-21b.sh`, `…c.sh`, `…d.sh`, `…d2.sh` | the second queue, four versions as decisions came in: T5Gemma 2 1B, then the 4B LoRA (r 32, then r 128 on the whole pool with a 48k snapshot) |
+| `gpu_queue_2026-10-22e.sh` | third: the grid's retold prompts (Gemma-4 26B), the batch-size test and DiffusionGemma's whole-pool LoRA |
+| `gpu_queue_2026-10-23f.sh`, `…25f.sh` | fourth: the full grid (replaced before it started) |
+| `gpu_queue_2026-10-28g.sh` | fifth: the 100-prompt grid (one seed, masking + backtracking) |
+| `gpu_queue_2026-10-29h.sh`, `…i.sh`, `…j.sh`, `…k.sh` | sixth: decoder v2 A + B on the grid; `k` after the 10-29 power outage finished the grid and its table (10-30 03:32) |
+| `grid_small_alongside_2026-10-24.sh`, `…25.sh` | the grid's small-model cells beside the DiffusionGemma training |
+| `grid_mid_alongside_2026-10-27.sh` | the grid's mid-size cells beside the training |
+| `grid_v2_side_2026-10-29.sh` | the v2 cells of the 14 smaller rows beside the GPU queue |
+| `grid100_autoapprove_2026-10-28.sh` | approves the 100-prompt grid's retold prompts by the automatic checks (the user approved in advance) |

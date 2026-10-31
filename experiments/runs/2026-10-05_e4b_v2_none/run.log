@@ -1,0 +1,230 @@
+loading google/gemma-4-E4B-it …
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:   0%|          | 8/2076 [00:00<00:46, 44.54it/s]Loading weights:   1%|          | 14/2076 [00:00<00:46, 44.13it/s]Loading weights:   2%|▏         | 34/2076 [00:00<00:23, 87.44it/s]Loading weights:   3%|▎         | 55/2076 [00:00<00:16, 123.14it/s]Loading weights:   4%|▎         | 75/2076 [00:00<00:23, 85.85it/s] Loading weights:   5%|▌         | 104/2076 [00:01<00:16, 119.23it/s]Loading weights:   6%|▌         | 119/2076 [00:01<00:16, 117.09it/s]Loading weights:   6%|▋         | 133/2076 [00:01<00:25, 77.29it/s] Loading weights:   7%|▋         | 144/2076 [00:01<00:25, 76.72it/s]Loading weights:   8%|▊         | 157/2076 [00:01<00:22, 83.79it/s]Loading weights:   8%|▊         | 175/2076 [00:01<00:19, 99.74it/s]Loading weights:   9%|▉         | 194/2076 [00:02<00:20, 93.44it/s]Loading weights:  11%|█▏        | 238/2076 [00:02<00:11, 158.36it/s]Loading weights:  12%|█▏        | 258/2076 [00:02<00:13, 135.22it/s]Loading weights:  13%|█▎        | 275/2076 [00:02<00:15, 112.92it/s]Loading weights:  14%|█▍        | 289/2076 [00:02<00:15, 114.84it/s]Loading weights:  15%|█▍        | 305/2076 [00:02<00:14, 122.33it/s]Loading weights:  15%|█▌        | 319/2076 [00:03<00:24, 72.41it/s] Loading weights:  16%|█▌        | 330/2076 [00:03<00:28, 62.35it/s]Loading weights:  17%|█▋        | 347/2076 [00:03<00:22, 78.45it/s]Loading weights:  19%|█▉        | 392/2076 [00:03<00:11, 141.13it/s]Loading weights:  20%|██        | 422/2076 [00:03<00:09, 171.61it/s]Loading weights:  21%|██▏       | 445/2076 [00:04<00:16, 99.53it/s] Loading weights:  22%|██▏       | 463/2076 [00:04<00:16, 98.06it/s]Loading weights:  23%|██▎       | 478/2076 [00:04<00:15, 103.50it/s]Loading weights:  24%|██▎       | 493/2076 [00:04<00:15, 99.23it/s] Loading weights:  24%|██▍       | 506/2076 [00:05<00:15, 99.05it/s]Loading weights:  26%|██▌       | 544/2076 [00:05<00:10, 144.52it/s]Loading weights:  27%|██▋       | 561/2076 [00:05<00:14, 101.41it/s]Loading weights:  28%|██▊       | 575/2076 [00:05<00:14, 101.81it/s]Loading weights:  28%|██▊       | 588/2076 [00:05<00:16, 90.45it/s] Loading weights:  29%|██▉       | 599/2076 [00:05<00:15, 92.66it/s]Loading weights:  29%|██▉       | 612/2076 [00:06<00:14, 99.05it/s]Loading weights:  30%|███       | 624/2076 [00:06<00:15, 94.77it/s]Loading weights:  31%|███       | 635/2076 [00:06<00:19, 74.00it/s]Loading weights:  31%|███▏      | 650/2076 [00:06<00:17, 83.66it/s]Loading weights:  33%|███▎      | 675/2076 [00:06<00:13, 105.72it/s]Loading weights:  33%|███▎      | 687/2076 [00:07<00:20, 68.38it/s] Loading weights:  34%|███▎      | 696/2076 [00:07<00:21, 65.03it/s]Loading weights:  34%|███▍      | 704/2076 [00:07<00:23, 59.33it/s]Loading weights:  35%|███▌      | 728/2076 [00:07<00:14, 90.82it/s]Loading weights:  36%|███▌      | 740/2076 [00:07<00:14, 94.26it/s]Loading weights:  36%|███▌      | 752/2076 [00:07<00:16, 80.83it/s]Loading weights:  36%|███▌      | 752/2076 [00:20<00:16, 80.83it/s]Loading weights:  36%|███▋      | 754/2076 [00:31<15:16,  1.44it/s]Loading weights:  36%|███▋      | 755/2076 [01:52<1:26:32,  3.93s/it]Loading weights:  37%|███▋      | 760/2076 [01:52<1:07:03,  3.06s/it]Loading weights:  37%|███▋      | 769/2076 [01:52<42:33,  1.95s/it]  Loading weights:  37%|███▋      | 776/2076 [01:53<31:14,  1.44s/it]Loading weights:  38%|███▊      | 788/2076 [01:54<18:21,  1.17it/s]Loading weights:  38%|███▊      | 793/2076 [01:55<15:29,  1.38it/s]Loading weights:  38%|███▊      | 797/2076 [01:55<12:42,  1.68it/s]Loading weights:  39%|███▊      | 803/2076 [01:55<09:17,  2.28it/s]Loading weights:  39%|███▉      | 807/2076 [01:55<07:29,  2.82it/s]Loading weights:  39%|███▉      | 810/2076 [01:58<09:20,  2.26it/s]Loading weights:  40%|███▉      | 823/2076 [01:58<05:05,  4.10it/s]Loading weights:  40%|███▉      | 827/2076 [01:59<04:50,  4.31it/s]Loading weights:  40%|███▉      | 829/2076 [02:00<05:21,  3.88it/s]Loading weights:  40%|████      | 837/2076 [02:00<03:34,  5.78it/s]Loading weights:  40%|████      | 839/2076 [02:01<03:27,  5.96it/s]Loading weights:  41%|████      | 843/2076 [02:02<04:19,  4.74it/s]Loading weights:  41%|████      | 844/2076 [02:03<05:22,  3.82it/s]Loading weights:  41%|████      | 845/2076 [02:04<06:32,  3.14it/s]Loading weights:  41%|████      | 853/2076 [02:04<03:01,  6.73it/s]Loading weights:  41%|████      | 856/2076 [02:04<03:19,  6.10it/s]Loading weights:  41%|████▏     | 859/2076 [02:05<03:59,  5.09it/s]Loading weights:  41%|████▏     | 861/2076 [02:06<04:44,  4.28it/s]Loading weights:  42%|████▏     | 863/2076 [02:07<05:22,  3.76it/s]Loading weights:  42%|████▏     | 867/2076 [02:07<03:36,  5.57it/s]Loading weights:  42%|████▏     | 877/2076 [02:08<02:39,  7.52it/s]Loading weights:  42%|████▏     | 879/2076 [02:08<02:26,  8.14it/s]Loading weights:  43%|████▎     | 885/2076 [02:08<01:42, 11.59it/s]Loading weights:  43%|████▎     | 890/2076 [02:08<01:20, 14.68it/s]Loading weights:  43%|████▎     | 894/2076 [02:09<02:09,  9.15it/s]Loading weights:  43%|████▎     | 896/2076 [02:11<04:35,  4.29it/s]Loading weights:  43%|████▎     | 903/2076 [02:12<03:04,  6.37it/s]Loading weights:  44%|████▍     | 911/2076 [02:12<02:34,  7.56it/s]Loading weights:  44%|████▍     | 913/2076 [02:14<04:12,  4.61it/s]Loading weights:  45%|████▍     | 928/2076 [02:15<02:25,  7.89it/s]Loading weights:  45%|████▍     | 930/2076 [02:16<03:41,  5.18it/s]Loading weights:  45%|████▍     | 933/2076 [02:17<03:15,  5.85it/s]Loading weights:  45%|████▌     | 942/2076 [02:17<02:37,  7.21it/s]Loading weights:  46%|████▌     | 946/2076 [02:18<03:04,  6.14it/s]Loading weights:  46%|████▌     | 955/2076 [02:19<01:55,  9.72it/s]Loading weights:  46%|████▋     | 963/2076 [02:19<01:23, 13.28it/s]Loading weights:  47%|████▋     | 973/2076 [02:19<00:55, 19.70it/s]Loading weights:  47%|████▋     | 980/2076 [02:19<00:51, 21.40it/s]Loading weights:  48%|████▊     | 989/2076 [02:20<00:51, 21.06it/s]Loading weights:  48%|████▊     | 996/2076 [02:20<01:12, 14.92it/s]Loading weights:  48%|████▊     | 999/2076 [02:22<02:25,  7.42it/s]Loading weights:  49%|████▊     | 1010/2076 [02:22<01:28, 12.07it/s]Loading weights:  49%|████▉     | 1014/2076 [02:23<01:47,  9.91it/s]Loading weights:  49%|████▉     | 1017/2076 [02:24<02:12,  7.97it/s]Loading weights:  49%|████▉     | 1023/2076 [02:24<01:54,  9.16it/s]Loading weights:  50%|████▉     | 1030/2076 [02:25<02:07,  8.21it/s]Loading weights:  50%|████▉     | 1032/2076 [02:27<03:44,  4.65it/s]Loading weights:  50%|█████     | 1041/2076 [02:27<02:14,  7.68it/s]Loading weights:  50%|█████     | 1044/2076 [02:27<02:02,  8.41it/s]Loading weights:  50%|█████     | 1046/2076 [02:28<02:53,  5.94it/s]Loading weights:  50%|█████     | 1048/2076 [02:30<04:19,  3.96it/s]Loading weights:  51%|█████     | 1050/2076 [02:33<09:25,  1.81it/s]Loading weights:  51%|█████     | 1055/2076 [02:34<06:21,  2.68it/s]Loading weights:  51%|█████     | 1057/2076 [02:35<06:37,  2.56it/s]Loading weights:  51%|█████▏    | 1064/2076 [02:35<04:12,  4.01it/s]Loading weights:  51%|█████▏    | 1065/2076 [02:36<05:02,  3.34it/s]Loading weights:  52%|█████▏    | 1073/2076 [02:36<02:40,  6.23it/s]Loading weights:  52%|█████▏    | 1077/2076 [02:36<02:06,  7.90it/s]Loading weights:  52%|█████▏    | 1081/2076 [02:37<02:37,  6.31it/s]Loading weights:  52%|█████▏    | 1083/2076 [02:39<04:24,  3.75it/s]Loading weights:  53%|█████▎    | 1092/2076 [02:39<02:26,  6.71it/s]Loading weights:  53%|█████▎    | 1098/2076 [02:40<01:52,  8.69it/s]Loading weights:  53%|█████▎    | 1109/2076 [02:40<01:10, 13.73it/s]Loading weights:  54%|█████▎    | 1112/2076 [02:40<01:07, 14.33it/s]Loading weights:  54%|█████▎    | 1115/2076 [02:42<02:23,  6.68it/s]Loading weights:  54%|█████▍    | 1117/2076 [02:42<02:11,  7.31it/s]Loading weights:  54%|█████▍    | 1126/2076 [02:42<01:18, 12.14it/s]Loading weights:  54%|█████▍    | 1129/2076 [02:42<01:11, 13.26it/s]Loading weights:  55%|█████▍    | 1132/2076 [02:43<02:00,  7.82it/s]Loading weights:  55%|█████▍    | 1134/2076 [02:43<01:49,  8.58it/s]Loading weights:  55%|█████▌    | 1143/2076 [02:43<00:57, 16.11it/s]Loading weights:  55%|█████▌    | 1149/2076 [02:44<01:26, 10.67it/s]Loading weights:  55%|█████▌    | 1152/2076 [02:46<02:45,  5.59it/s]Loading weights:  56%|█████▌    | 1160/2076 [02:47<02:05,  7.27it/s]Loading weights:  56%|█████▌    | 1165/2076 [02:47<02:13,  6.84it/s]Loading weights:  56%|█████▋    | 1171/2076 [02:48<01:35,  9.51it/s]Loading weights:  57%|█████▋    | 1174/2076 [02:48<01:24, 10.70it/s]Loading weights:  57%|█████▋    | 1177/2076 [02:48<01:14, 12.10it/s]Loading weights:  57%|█████▋    | 1180/2076 [02:49<01:51,  8.01it/s]Loading weights:  57%|█████▋    | 1189/2076 [02:49<01:10, 12.58it/s]Loading weights:  57%|█████▋    | 1192/2076 [02:50<01:36,  9.14it/s]Loading weights:  58%|█████▊    | 1194/2076 [02:50<02:12,  6.66it/s]Loading weights:  58%|█████▊    | 1196/2076 [02:51<02:40,  5.50it/s]Loading weights:  58%|█████▊    | 1206/2076 [02:51<01:15, 11.52it/s]Loading weights:  58%|█████▊    | 1210/2076 [02:51<01:07, 12.85it/s]Loading weights:  59%|█████▊    | 1215/2076 [02:52<01:03, 13.55it/s]Loading weights:  59%|█████▉    | 1223/2076 [02:53<01:17, 11.07it/s]Loading weights:  59%|█████▉    | 1235/2076 [02:53<00:46, 18.27it/s]Loading weights:  60%|█████▉    | 1239/2076 [02:53<00:42, 19.77it/s]Loading weights:  60%|█████▉    | 1245/2076 [02:53<00:41, 20.19it/s]Loading weights:  60%|██████    | 1248/2076 [02:53<00:48, 17.14it/s]Loading weights:  60%|██████    | 1251/2076 [02:54<01:18, 10.51it/s]Loading weights:  60%|██████    | 1253/2076 [02:55<01:51,  7.40it/s]Loading weights:  61%|██████    | 1259/2076 [02:55<01:17, 10.48it/s]Loading weights:  61%|██████    | 1261/2076 [02:55<01:13, 11.11it/s]Loading weights:  61%|██████    | 1264/2076 [02:56<01:51,  7.27it/s]Loading weights:  61%|██████▏   | 1273/2076 [02:56<01:03, 12.69it/s]Loading weights:  61%|██████▏   | 1276/2076 [02:56<00:58, 13.65it/s]Loading weights:  62%|██████▏   | 1279/2076 [02:57<01:30,  8.82it/s]Loading weights:  62%|██████▏   | 1287/2076 [02:57<00:57, 13.65it/s]Loading weights:  63%|██████▎   | 1301/2076 [02:58<00:32, 24.15it/s]Loading weights:  63%|██████▎   | 1306/2076 [02:58<00:47, 16.26it/s]Loading weights:  63%|██████▎   | 1309/2076 [02:59<01:10, 10.91it/s]Loading weights:  63%|██████▎   | 1315/2076 [02:59<00:53, 14.16it/s]Loading weights:  63%|██████▎   | 1318/2076 [02:59<00:50, 15.00it/s]Loading weights:  64%|██████▎   | 1321/2076 [03:00<01:19,  9.54it/s]Loading weights:  64%|██████▎   | 1323/2076 [03:01<01:50,  6.84it/s]Loading weights:  64%|██████▍   | 1327/2076 [03:01<01:33,  8.05it/s]Loading weights:  64%|██████▍   | 1331/2076 [03:01<01:20,  9.22it/s]Loading weights:  64%|██████▍   | 1334/2076 [03:02<01:44,  7.12it/s]Loading weights:  64%|██████▍   | 1336/2076 [03:03<02:50,  4.35it/s]Loading weights:  65%|██████▍   | 1343/2076 [03:03<01:32,  7.90it/s]Loading weights:  65%|██████▍   | 1346/2076 [03:04<01:49,  6.70it/s]Loading weights:  65%|██████▍   | 1349/2076 [03:04<01:32,  7.88it/s]Loading weights:  65%|██████▌   | 1351/2076 [03:05<01:54,  6.33it/s]Loading weights:  65%|██████▌   | 1358/2076 [03:06<01:33,  7.71it/s]Loading weights:  66%|██████▌   | 1363/2076 [03:06<01:41,  6.99it/s]Loading weights:  66%|██████▌   | 1364/2076 [03:07<02:08,  5.55it/s]Loading weights:  66%|██████▌   | 1368/2076 [03:07<01:42,  6.88it/s]Loading weights:  66%|██████▌   | 1375/2076 [03:08<01:29,  7.84it/s]Loading weights:  66%|██████▋   | 1376/2076 [03:09<02:13,  5.26it/s]Loading weights:  67%|██████▋   | 1385/2076 [03:10<02:03,  5.60it/s]Loading weights:  67%|██████▋   | 1392/2076 [03:11<01:27,  7.83it/s]Loading weights:  67%|██████▋   | 1397/2076 [03:11<01:18,  8.69it/s]Loading weights:  68%|██████▊   | 1404/2076 [03:12<01:13,  9.12it/s]Loading weights:  68%|██████▊   | 1406/2076 [03:13<01:47,  6.21it/s]Loading weights:  68%|██████▊   | 1415/2076 [03:13<01:07,  9.76it/s]Loading weights:  68%|██████▊   | 1417/2076 [03:14<01:22,  7.96it/s]Loading weights:  69%|██████▉   | 1441/2076 [03:14<00:27, 22.93it/s]Loading weights:  71%|███████   | 1468/2076 [03:14<00:14, 42.93it/s]Loading weights:  72%|███████▏  | 1504/2076 [03:14<00:07, 76.51it/s]Loading weights:  74%|███████▍  | 1540/2076 [03:14<00:04, 112.39it/s]Loading weights:  75%|███████▌  | 1563/2076 [03:14<00:04, 122.95it/s]Loading weights:  76%|███████▋  | 1584/2076 [03:14<00:03, 133.13it/s]Loading weights:  77%|███████▋  | 1604/2076 [03:15<00:03, 144.10it/s]Loading weights:  79%|███████▊  | 1631/2076 [03:15<00:02, 170.24it/s]Loading weights:  80%|███████▉  | 1653/2076 [03:15<00:02, 175.25it/s]Loading weights:  81%|████████  | 1674/2076 [03:15<00:02, 163.08it/s]Loading weights:  82%|████████▏ | 1703/2076 [03:15<00:01, 187.86it/s]Loading weights:  83%|████████▎ | 1725/2076 [03:15<00:01, 195.79it/s]Loading weights:  84%|████████▍ | 1750/2076 [03:15<00:01, 208.81it/s]Loading weights:  85%|████████▌ | 1774/2076 [03:15<00:01, 216.23it/s]Loading weights:  87%|████████▋ | 1797/2076 [03:15<00:01, 184.67it/s]Loading weights:  88%|████████▊ | 1817/2076 [03:16<00:01, 186.61it/s]Loading weights:  88%|████████▊ | 1837/2076 [03:16<00:01, 189.59it/s]Loading weights:  90%|████████▉ | 1863/2076 [03:16<00:01, 207.85it/s]Loading weights:  91%|█████████ | 1885/2076 [03:16<00:00, 194.67it/s]Loading weights:  92%|█████████▏| 1918/2076 [03:16<00:00, 228.61it/s]Loading weights:  94%|█████████▎| 1942/2076 [03:16<00:00, 199.71it/s]Loading weights:  95%|█████████▍| 1964/2076 [03:16<00:00, 177.11it/s]Loading weights:  96%|█████████▌| 1996/2076 [03:16<00:00, 199.70it/s]Loading weights:  97%|█████████▋| 2017/2076 [03:17<00:00, 195.28it/s]Loading weights:  99%|█████████▊| 2047/2076 [03:17<00:00, 216.61it/s]Loading weights: 100%|██████████| 2076/2076 [03:17<00:00, 146.24it/s]Loading weights: 100%|██████████| 2076/2076 [03:17<00:00, 10.51it/s] 
+loaded Gemma4ForConditionalGeneration: slice 1747 tokens, eos (1, 106, 50)
+[1/111] utpalamala|T1|masking_only|42: complete tok=144 gana=True prasa=True yati=True 31.2s
+[2/111] utpalamala|T1|masking_backtrack|42: complete tok=95 gana=True prasa=True yati=True 36.9s
+[3/111] utpalamala|T1|hybrid|42: complete tok=125 gana=True prasa=True yati=True 27.8s
+[4/111] champakamala|T1|masking_only|42: complete tok=106 gana=True prasa=True yati=True 21.2s
+[5/111] champakamala|T1|masking_backtrack|42: complete tok=100 gana=True prasa=True yati=True 36.2s
+[6/111] champakamala|T1|hybrid|42: complete tok=111 gana=True prasa=True yati=True 21.5s
+[7/111] mattebhavikriditamu|T1|masking_only|42: complete tok=143 gana=True prasa=True yati=True 27.9s
+[8/111] mattebhavikriditamu|T1|masking_backtrack|42: complete tok=183 gana=True prasa=True yati=True 55.5s
+[9/111] mattebhavikriditamu|T1|hybrid|42: complete tok=193 gana=True prasa=True yati=True 37.7s
+[10/111] sardulavikriditamu|T1|masking_only|42: complete tok=114 gana=True prasa=True yati=True 21.7s
+[11/111] sardulavikriditamu|T1|masking_backtrack|42: complete tok=141 gana=True prasa=True yati=True 53.0s
+[12/111] sardulavikriditamu|T1|hybrid|42: complete tok=135 gana=True prasa=True yati=True 28.3s
+[13/111] sragdhara|T1|masking_only|42: complete tok=179 gana=True prasa=True yati=True 35.5s
+[14/111] sragdhara|T1|masking_backtrack|42: complete tok=165 gana=True prasa=True yati=True 51.1s
+[15/111] sragdhara|T1|hybrid|42: complete tok=183 gana=True prasa=True yati=True 43.4s
+[16/111] mahasragdhara|T1|masking_only|42: complete tok=167 gana=True prasa=True yati=True 28.5s
+[17/111] mahasragdhara|T1|masking_backtrack|42: complete tok=231 gana=True prasa=True yati=True 58.1s
+[18/111] mahasragdhara|T1|hybrid|42: complete tok=156 gana=True prasa=True yati=True 30.0s
+[19/111] totakamu|T1|masking_only|42: complete tok=71 gana=True prasa=True yati=True 11.7s
+[20/111] totakamu|T1|masking_backtrack|42: complete tok=93 gana=True prasa=True yati=True 31.6s
+[21/111] totakamu|T1|hybrid|42: complete tok=65 gana=True prasa=True yati=True 11.8s
+[22/111] bhujangaprayatamu|T1|masking_only|42: complete tok=95 gana=True prasa=True yati=True 16.1s
+[23/111] bhujangaprayatamu|T1|masking_backtrack|42: complete tok=107 gana=True prasa=True yati=True 31.8s
+[24/111] bhujangaprayatamu|T1|hybrid|42: complete tok=83 gana=True prasa=True yati=True 14.1s
+[25/111] mattakokilamu|T1|masking_only|42: complete tok=109 gana=True prasa=True yati=True 18.1s
+[26/111] mattakokilamu|T1|masking_backtrack|42: complete tok=101 gana=True prasa=True yati=True 33.5s
+[27/111] mattakokilamu|T1|hybrid|42: complete tok=111 gana=True prasa=True yati=True 20.4s
+[28/111] pamcacamaramu|T1|masking_only|42: complete tok=131 gana=True prasa=True yati=True 21.4s
+[29/111] pamcacamaramu|T1|masking_backtrack|42: complete tok=85 gana=True prasa=True yati=True 29.0s
+[30/111] pamcacamaramu|T1|hybrid|42: complete tok=108 gana=True prasa=True yati=True 19.8s
+[31/111] vasamtatilakamu|T1|masking_only|42: complete tok=79 gana=True prasa=True yati=True 12.8s
+[32/111] vasamtatilakamu|T1|masking_backtrack|42: complete tok=54 gana=True prasa=True yati=True 12.8s
+[33/111] vasamtatilakamu|T1|hybrid|42: complete tok=81 gana=True prasa=True yati=True 14.2s
+[34/111] indravajra|T1|masking_only|42: complete tok=73 gana=True prasa=True yati=True 11.9s
+[35/111] indravajra|T1|masking_backtrack|42: complete tok=72 gana=True prasa=True yati=True 25.8s
+[36/111] indravajra|T1|hybrid|42: complete tok=62 gana=True prasa=True yati=True 10.8s
+[37/111] upendravajra|T1|masking_only|42: complete tok=75 gana=True prasa=True yati=True 12.6s
+[38/111] upendravajra|T1|masking_backtrack|42: complete tok=75 gana=True prasa=True yati=True 20.5s
+[39/111] upendravajra|T1|hybrid|42: complete tok=67 gana=True prasa=True yati=True 10.8s
+[40/111] salini|T1|masking_only|42: complete tok=71 gana=True prasa=True yati=True 12.4s
+[41/111] salini|T1|masking_backtrack|42: complete tok=71 gana=True prasa=True yati=True 30.8s
+[42/111] salini|T1|hybrid|42: complete tok=87 gana=True prasa=True yati=True 15.1s
+[43/111] rathoddhata|T1|masking_only|42: complete tok=53 gana=True prasa=True yati=True 6.1s
+[44/111] rathoddhata|T1|masking_backtrack|42: complete tok=55 gana=True prasa=True yati=True 9.2s
+[45/111] rathoddhata|T1|hybrid|42: complete tok=39 gana=True prasa=True yati=True 6.3s
+[46/111] sragvini|T1|masking_only|42: complete tok=98 gana=True prasa=True yati=True 16.9s
+[47/111] sragvini|T1|masking_backtrack|42: complete tok=83 gana=True prasa=True yati=True 29.3s
+[48/111] sragvini|T1|hybrid|42: complete tok=91 gana=True prasa=True yati=True 17.3s
+[49/111] vidyunmala|T1|masking_only|42: complete tok=69 gana=True prasa=True yati=True 11.4s
+[50/111] vidyunmala|T1|masking_backtrack|42: complete tok=81 gana=True prasa=True yati=True 28.3s
+[51/111] vidyunmala|T1|hybrid|42: complete tok=72 gana=True prasa=True yati=True 14.8s
+[52/111] lalita|T1|masking_only|42: complete tok=78 gana=True prasa=True yati=True 12.7s
+[53/111] lalita|T1|masking_backtrack|42: complete tok=59 gana=True prasa=True yati=True 10.9s
+[54/111] lalita|T1|hybrid|42: complete tok=85 gana=True prasa=True yati=True 15.1s
+[55/111] kandamu|T1|masking_only|42: complete tok=54 gana=True prasa=True yati=True 9.2s
+[56/111] kandamu|T1|masking_backtrack|42: complete tok=53 gana=True prasa=True yati=True 22.3s
+[57/111] kandamu|T1|hybrid|42: complete tok=51 gana=True prasa=True yati=True 8.5s
+[58/111] utsahamu|T1|masking_only|42: complete tok=85 gana=True prasa=True yati=True 14.4s
+[59/111] utsahamu|T1|masking_backtrack|42: complete tok=81 gana=True prasa=True yati=True 24.9s
+[60/111] utsahamu|T1|hybrid|42: complete tok=81 gana=True prasa=True yati=True 14.2s
+[61/111] taruvoja|T1|masking_only|42: complete tok=136 gana=True prasa=True yati=True 23.4s
+[62/111] taruvoja|T1|masking_backtrack|42: complete tok=138 gana=True prasa=True yati=True 37.0s
+[63/111] taruvoja|T1|hybrid|42: complete tok=156 gana=True prasa=True yati=True 31.1s
+[64/111] dvipada|T1|masking_only|42: complete tok=31 gana=True prasa=True yati=True 5.2s
+[65/111] dvipada|T1|masking_backtrack|42: complete tok=25 gana=True prasa=True yati=True 19.9s
+[66/111] dvipada|T1|hybrid|42: complete tok=27 gana=True prasa=True yati=True 4.2s
+[67/111] madhyakkara|T1|masking_only|42: complete tok=100 gana=True prasa=True yati=True 16.6s
+[68/111] madhyakkara|T1|masking_backtrack|42: complete tok=78 gana=True prasa=True yati=True 22.9s
+[69/111] madhyakkara|T1|hybrid|42: complete tok=79 gana=True prasa=True yati=True 14.4s
+[70/111] madhuragati_ragada|T1|masking_only|42: complete tok=28 gana=True prasa=True yati=True 4.6s
+[71/111] madhuragati_ragada|T1|masking_backtrack|42: complete tok=24 gana=True prasa=True yati=True 17.0s
+[72/111] madhuragati_ragada|T1|hybrid|42: complete tok=27 gana=True prasa=True yati=True 4.4s
+[73/111] turagagati_ragada|T1|masking_only|42: complete tok=98 gana=True prasa=True yati=True 15.9s
+[74/111] turagagati_ragada|T1|masking_backtrack|42: complete tok=96 gana=True prasa=True yati=True 32.2s
+[75/111] turagagati_ragada|T1|hybrid|42: complete tok=83 gana=True prasa=True yati=True 15.2s
+[76/111] hayapracara_ragada|T1|masking_only|42: complete tok=25 gana=True prasa=True yati=True 4.1s
+[77/111] hayapracara_ragada|T1|masking_backtrack|42: complete tok=22 gana=True prasa=True yati=True 6.4s
+[78/111] hayapracara_ragada|T1|hybrid|42: complete tok=23 gana=True prasa=True yati=True 3.5s
+[79/111] seesamu|T1|masking_only|42: complete tok=115 gana=True prasa=True yati=True 19.0s
+[80/111] seesamu|T1|masking_backtrack|42: complete tok=123 gana=True prasa=True yati=True 38.0s
+[81/111] seesamu|T1|hybrid|42: complete tok=106 gana=True prasa=True yati=True 19.7s
+[82/111] ataveladi|T1|masking_only|42: complete tok=58 gana=True prasa=True yati=True 9.4s
+[83/111] ataveladi|T1|masking_backtrack|42: complete tok=59 gana=True prasa=True yati=True 23.5s
+[84/111] ataveladi|T1|hybrid|42: complete tok=56 gana=True prasa=True yati=True 8.9s
+[85/111] tetagiti|T1|masking_only|42: complete tok=60 gana=True prasa=True yati=True 9.7s
+[86/111] tetagiti|T1|masking_backtrack|42: complete tok=65 gana=True prasa=True yati=True 24.3s
+[87/111] tetagiti|T1|hybrid|42: complete tok=59 gana=True prasa=True yati=True 10.1s
+[88/111] taralamu|T1|masking_only|42: complete tok=122 gana=True prasa=True yati=True 19.3s
+[89/111] taralamu|T1|masking_backtrack|42: complete tok=116 gana=True prasa=True yati=True 37.0s
+[90/111] taralamu|T1|hybrid|42: complete tok=100 gana=True prasa=True yati=True 18.4s
+[91/111] malini|T1|masking_only|42: complete tok=98 gana=True prasa=True yati=True 16.9s
+[92/111] malini|T1|masking_backtrack|42: complete tok=93 gana=True prasa=True yati=True 32.1s
+[93/111] malini|T1|hybrid|42: complete tok=104 gana=True prasa=True yati=True 18.0s
+[94/111] manini|T1|masking_only|42: complete tok=191 gana=True prasa=True yati=True 32.4s
+[95/111] manini|T1|masking_backtrack|42: complete tok=157 gana=True prasa=True yati=True 46.1s
+[96/111] manini|T1|hybrid|42: complete tok=206 gana=True prasa=True yati=True 32.0s
+[97/111] kavirajavirajitamu|T1|masking_only|42: complete tok=141 gana=True prasa=True yati=True 24.7s
+[98/111] kavirajavirajitamu|T1|masking_backtrack|42: complete tok=143 gana=True prasa=True yati=True 42.2s
+[99/111] kavirajavirajitamu|T1|hybrid|42: complete tok=161 gana=True prasa=True yati=True 20.9s
+[100/111] vanamayuramu|T1|masking_only|42: complete tok=93 gana=True prasa=True yati=True 14.5s
+[101/111] vanamayuramu|T1|masking_backtrack|42: complete tok=100 gana=True prasa=True yati=True 29.1s
+[102/111] vanamayuramu|T1|hybrid|42: complete tok=68 gana=True prasa=True yati=True 10.4s
+[103/111] mangalamahasri|T1|masking_only|42: complete tok=169 gana=True prasa=True yati=True 28.6s
+[104/111] mangalamahasri|T1|masking_backtrack|42: complete tok=122 gana=True prasa=True yati=True 34.0s
+[105/111] mangalamahasri|T1|hybrid|42: complete tok=150 gana=True prasa=True yati=True 26.6s
+[106/111] layagrahi|T1|masking_only|42: complete tok=215 gana=True prasa=True yati=True 35.1s
+[107/111] layagrahi|T1|masking_backtrack|42: complete tok=190 gana=True prasa=True yati=True 48.6s
+[108/111] layagrahi|T1|hybrid|42: complete tok=175 gana=True prasa=True yati=True 15.3s
+[109/111] layavibhati|T1|masking_only|42: complete tok=167 gana=True prasa=True yati=True 26.7s
+[110/111] layavibhati|T1|masking_backtrack|42: complete tok=183 gana=True prasa=True yati=True 47.3s
+[111/111] layavibhati|T1|hybrid|42: complete tok=228 gana=True prasa=True yati=True 48.0s
+| meter | mode | n | gana_strict | gana | prasa_strict | yati_strict | all_strict | all_relaxed | tok | s | logp | valid_mass | argmax_valid | bt |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ataveladi | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 58 | 9.4 | -3.491 | 0.616 | 0.655 | 0.0 |
+| ataveladi | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 59 | 23.5 | -2.259 | 0.676 | 0.678 | 30.0 |
+| ataveladi | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 56 | 8.9 | -3.503 | 0.672 | 0.698 | 0.0 |
+| bhujangaprayatamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 95 | 16.1 | -0.880 | 0.832 | 0.870 | 0.0 |
+| bhujangaprayatamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 107 | 31.8 | -2.098 | 0.613 | 0.654 | 30.0 |
+| bhujangaprayatamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 83 | 14.1 | -1.069 | 0.784 | 0.838 | 0.0 |
+| champakamala | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 106 | 21.2 | -2.991 | 0.541 | 0.553 | 0.0 |
+| champakamala | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 36.2 | -2.292 | 0.569 | 0.621 | 30.0 |
+| champakamala | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 111 | 21.5 | -2.891 | 0.517 | 0.556 | 0.0 |
+| dvipada | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 31 | 5.2 | -3.318 | 0.634 | 0.633 | 0.0 |
+| dvipada | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 25 | 19.9 | -2.323 | 0.751 | 0.771 | 25.0 |
+| dvipada | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 27 | 4.2 | -3.034 | 0.627 | 0.615 | 0.0 |
+| hayapracara_ragada | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 25 | 4.1 | -4.936 | 0.605 | 0.625 | 0.0 |
+| hayapracara_ragada | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 22 | 6.4 | -3.418 | 0.752 | 0.788 | 9.0 |
+| hayapracara_ragada | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 23 | 3.5 | -4.790 | 0.603 | 0.636 | 0.0 |
+| indravajra | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 73 | 11.9 | -2.611 | 0.595 | 0.657 | 0.0 |
+| indravajra | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 72 | 25.8 | -2.500 | 0.655 | 0.674 | 30.0 |
+| indravajra | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 62 | 10.8 | -2.508 | 0.587 | 0.644 | 0.0 |
+| kandamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 54 | 9.2 | -3.364 | 0.602 | 0.627 | 0.0 |
+| kandamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 53 | 22.3 | -2.330 | 0.687 | 0.660 | 18.0 |
+| kandamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 51 | 8.5 | -2.123 | 0.757 | 0.771 | 0.0 |
+| kavirajavirajitamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 141 | 24.7 | -2.143 | 0.630 | 0.674 | 0.0 |
+| kavirajavirajitamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 143 | 42.2 | -1.639 | 0.659 | 0.645 | 28.0 |
+| kavirajavirajitamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 161 | 20.9 | -2.181 | 0.602 | 0.646 | 0.0 |
+| lalita | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 78 | 12.7 | -3.356 | 0.506 | 0.547 | 0.0 |
+| lalita | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 59 | 10.9 | -0.916 | 0.846 | 0.831 | 3.0 |
+| lalita | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 85 | 15.1 | -1.729 | 0.726 | 0.780 | 0.0 |
+| layagrahi | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 215 | 35.1 | -1.787 | 0.726 | 0.750 | 0.0 |
+| layagrahi | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 190 | 48.6 | -2.397 | 0.642 | 0.665 | 30.0 |
+| layagrahi | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 175 | 15.3 | -1.565 | 0.787 | 0.826 | 0.0 |
+| layavibhati | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 167 | 26.7 | -2.373 | 0.588 | 0.659 | 0.0 |
+| layavibhati | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 183 | 47.3 | -1.134 | 0.767 | 0.762 | 25.0 |
+| layavibhati | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 228 | 48.0 | -1.192 | 0.767 | 0.809 | 0.0 |
+| madhuragati_ragada | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 28 | 4.6 | -3.106 | 0.721 | 0.778 | 0.0 |
+| madhuragati_ragada | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 24 | 17.0 | -2.270 | 0.683 | 0.725 | 29.0 |
+| madhuragati_ragada | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 27 | 4.4 | -3.965 | 0.655 | 0.692 | 0.0 |
+| madhyakkara | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 16.6 | -2.579 | 0.626 | 0.629 | 0.0 |
+| madhyakkara | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 78 | 22.9 | -1.557 | 0.788 | 0.784 | 15.0 |
+| madhyakkara | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 79 | 14.4 | -2.326 | 0.708 | 0.697 | 0.0 |
+| mahasragdhara | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 167 | 28.5 | -0.954 | 0.824 | 0.823 | 0.0 |
+| mahasragdhara | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 231 | 58.1 | -1.171 | 0.816 | 0.806 | 30.0 |
+| mahasragdhara | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 156 | 30.0 | -1.189 | 0.808 | 0.797 | 0.0 |
+| malini | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 98 | 16.9 | -2.366 | 0.565 | 0.579 | 0.0 |
+| malini | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 93 | 32.1 | -2.372 | 0.576 | 0.600 | 30.0 |
+| malini | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 104 | 18.0 | -1.631 | 0.701 | 0.723 | 0.0 |
+| mangalamahasri | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 169 | 28.6 | -3.284 | 0.498 | 0.518 | 0.0 |
+| mangalamahasri | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 122 | 34.0 | -2.535 | 0.556 | 0.557 | 30.0 |
+| mangalamahasri | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 150 | 26.6 | -2.874 | 0.561 | 0.585 | 0.0 |
+| manini | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 191 | 32.4 | -2.366 | 0.618 | 0.622 | 0.0 |
+| manini | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 157 | 46.1 | -1.927 | 0.656 | 0.655 | 30.0 |
+| manini | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 206 | 32.0 | -1.167 | 0.785 | 0.788 | 0.0 |
+| mattakokilamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 109 | 18.1 | -2.587 | 0.593 | 0.632 | 0.0 |
+| mattakokilamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 101 | 33.5 | -2.419 | 0.610 | 0.632 | 30.0 |
+| mattakokilamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 111 | 20.4 | -2.841 | 0.549 | 0.611 | 0.0 |
+| mattebhavikriditamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 143 | 27.9 | -1.044 | 0.826 | 0.814 | 0.0 |
+| mattebhavikriditamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 183 | 55.5 | -1.854 | 0.663 | 0.683 | 30.0 |
+| mattebhavikriditamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 193 | 37.7 | -0.919 | 0.818 | 0.811 | 0.0 |
+| pamcacamaramu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 131 | 21.4 | -0.667 | 0.884 | 0.898 | 0.0 |
+| pamcacamaramu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 85 | 29.0 | -2.134 | 0.659 | 0.664 | 30.0 |
+| pamcacamaramu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 108 | 19.8 | -1.051 | 0.824 | 0.838 | 0.0 |
+| rathoddhata | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 53 | 6.1 | -2.325 | 0.582 | 0.600 | 0.0 |
+| rathoddhata | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 55 | 9.2 | -1.362 | 0.798 | 0.800 | 5.0 |
+| rathoddhata | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 39 | 6.3 | -0.962 | 0.926 | 0.972 | 0.0 |
+| salini | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 71 | 12.4 | -1.044 | 0.841 | 0.853 | 0.0 |
+| salini | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 71 | 30.8 | -2.244 | 0.606 | 0.626 | 30.0 |
+| salini | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 87 | 15.1 | -2.277 | 0.649 | 0.702 | 0.0 |
+| sardulavikriditamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 114 | 21.7 | -2.877 | 0.552 | 0.586 | 0.0 |
+| sardulavikriditamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 141 | 53.0 | -2.329 | 0.590 | 0.579 | 30.0 |
+| sardulavikriditamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 135 | 28.3 | -2.618 | 0.556 | 0.553 | 0.0 |
+| seesamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 115 | 19.0 | -2.918 | 0.676 | 0.661 | 0.0 |
+| seesamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 123 | 38.0 | -2.728 | 0.658 | 0.625 | 30.0 |
+| seesamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 106 | 19.7 | -3.095 | 0.727 | 0.728 | 0.0 |
+| sragdhara | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 179 | 35.5 | -0.750 | 0.844 | 0.858 | 0.0 |
+| sragdhara | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 165 | 51.1 | -1.364 | 0.750 | 0.746 | 30.0 |
+| sragdhara | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 183 | 43.4 | -1.686 | 0.680 | 0.706 | 0.0 |
+| sragvini | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 98 | 16.9 | -2.255 | 0.657 | 0.684 | 0.0 |
+| sragvini | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 83 | 29.3 | -2.124 | 0.634 | 0.683 | 30.0 |
+| sragvini | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 91 | 17.3 | -2.864 | 0.577 | 0.602 | 0.0 |
+| taralamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 122 | 19.3 | -2.864 | 0.544 | 0.555 | 0.0 |
+| taralamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 116 | 37.0 | -2.662 | 0.506 | 0.505 | 30.0 |
+| taralamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 18.4 | -3.019 | 0.512 | 0.485 | 0.0 |
+| taruvoja | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 136 | 23.4 | -2.425 | 0.726 | 0.752 | 0.0 |
+| taruvoja | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 138 | 37.0 | -2.440 | 0.610 | 0.597 | 30.0 |
+| taruvoja | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 156 | 31.1 | -1.988 | 0.767 | 0.778 | 0.0 |
+| tetagiti | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 60 | 9.7 | -2.709 | 0.773 | 0.807 | 0.0 |
+| tetagiti | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 65 | 24.3 | -2.133 | 0.773 | 0.685 | 30.0 |
+| tetagiti | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 59 | 10.1 | -3.119 | 0.694 | 0.732 | 0.0 |
+| totakamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 71 | 11.7 | -1.554 | 0.779 | 0.809 | 0.0 |
+| totakamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 93 | 31.6 | -1.608 | 0.724 | 0.759 | 30.0 |
+| totakamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 65 | 11.8 | -2.581 | 0.609 | 0.597 | 0.0 |
+| turagagati_ragada | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 98 | 15.9 | -2.840 | 0.679 | 0.684 | 0.0 |
+| turagagati_ragada | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 96 | 32.2 | -1.997 | 0.740 | 0.836 | 30.0 |
+| turagagati_ragada | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 83 | 15.2 | -1.970 | 0.824 | 0.850 | 0.0 |
+| upendravajra | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 75 | 12.6 | -0.937 | 0.838 | 0.861 | 0.0 |
+| upendravajra | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 75 | 20.5 | -1.302 | 0.742 | 0.787 | 14.0 |
+| upendravajra | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 67 | 10.8 | -0.828 | 0.847 | 0.875 | 0.0 |
+| utpalamala | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 144 | 31.2 | -2.631 | 0.568 | 0.610 | 0.0 |
+| utpalamala | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 95 | 36.9 | -3.059 | 0.433 | 0.455 | 30.0 |
+| utpalamala | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 125 | 27.8 | -3.263 | 0.510 | 0.516 | 0.0 |
+| utsahamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 85 | 14.4 | -2.180 | 0.678 | 0.707 | 0.0 |
+| utsahamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 81 | 24.9 | -2.017 | 0.603 | 0.583 | 20.0 |
+| utsahamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 81 | 14.2 | -1.886 | 0.728 | 0.769 | 0.0 |
+| vanamayuramu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 93 | 14.5 | -2.484 | 0.551 | 0.600 | 0.0 |
+| vanamayuramu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 29.1 | -2.640 | 0.578 | 0.628 | 30.0 |
+| vanamayuramu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 68 | 10.4 | -2.968 | 0.504 | 0.538 | 0.0 |
+| vasamtatilakamu | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 79 | 12.8 | -2.474 | 0.557 | 0.605 | 0.0 |
+| vasamtatilakamu | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 54 | 12.8 | -1.151 | 0.827 | 0.809 | 8.0 |
+| vasamtatilakamu | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 81 | 14.2 | -3.421 | 0.518 | 0.603 | 0.0 |
+| vidyunmala | masking_only | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 69 | 11.4 | -1.404 | 0.818 | 0.833 | 0.0 |
+| vidyunmala | masking_backtrack | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 81 | 28.3 | -1.811 | 0.672 | 0.719 | 30.0 |
+| vidyunmala | hybrid | 1 | 100 | 100 | 100 | 100 | 100 | 100 | 72 | 14.8 | -2.724 | 0.660 | 0.725 | 0.0 |
+| ALL | masking_only | 37 | 100 | 100 | 100 | 100 | 100 | 100 | 104 | 17.8 | -2.348 | 0.667 | 0.692 | 0.0 |
+| ALL | masking_backtrack | 37 | 100 | 100 | 100 | 100 | 100 | 100 | 101 | 31.6 | -2.068 | 0.672 | 0.683 | 25.6 |
+| ALL | hybrid | 37 | 100 | 100 | 100 | 100 | 100 | 100 | 103 | 18.5 | -2.319 | 0.679 | 0.705 | 0.0 |

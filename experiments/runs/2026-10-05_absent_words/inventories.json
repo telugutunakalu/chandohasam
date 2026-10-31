@@ -1,0 +1,151 @@
+{
+ "real verse (held out)": {
+  "words": 33619,
+  "tokenizer": {
+   "aksharas_outside": 7.789496642726947e-06,
+   "words_outside": 2.9745084624765756e-05
+  },
+  "verse": {
+   "aksharas_outside": 0.0007010546978454252,
+   "words_outside": 0.0026473125316041524
+  }
+ },
+ "Gemma-4 E4B | baseline": {
+  "words": 9544,
+  "tokenizer": {
+   "aksharas_outside": 0.00011752607609813428,
+   "words_outside": 0.00041911148365465214
+  },
+  "verse": {
+   "aksharas_outside": 0.0005876303804906713,
+   "words_outside": 0.0020955574182732607
+  }
+ },
+ "Gemma-4 E4B | masking_only": {
+  "words": 9410,
+  "tokenizer": {
+   "aksharas_outside": 0.04814150766678263,
+   "words_outside": 0.1622741764080765
+  },
+  "verse": {
+   "aksharas_outside": 0.0979956648558966,
+   "words_outside": 0.30403825717322
+  }
+ },
+ "Gemma-4 E4B | masking_backtrack": {
+  "words": 9543,
+  "tokenizer": {
+   "aksharas_outside": 0.031535869041887335,
+   "words_outside": 0.1059415278214398
+  },
+  "verse": {
+   "aksharas_outside": 0.0734499545284331,
+   "words_outside": 0.24290055538090746
+  }
+ },
+ "Gemma-4 E4B | hybrid": {
+  "words": 9277,
+  "tokenizer": {
+   "aksharas_outside": 0.045324940822035725,
+   "words_outside": 0.1540368653659588
+  },
+  "verse": {
+   "aksharas_outside": 0.08397891112545729,
+   "words_outside": 0.2681901476770508
+  }
+ },
+ "Gemma-4 26B-A4B | baseline": {
+  "words": 9814,
+  "tokenizer": {
+   "aksharas_outside": 9.113278046113187e-05,
+   "words_outside": 0.00030568575504381494
+  },
+  "verse": {
+   "aksharas_outside": 0.0001518879674352198,
+   "words_outside": 0.0005094762584063583
+  }
+ },
+ "Gemma-4 26B-A4B | masking_only": {
+  "words": 11390,
+  "tokenizer": {
+   "aksharas_outside": 0.05502302666809468,
+   "words_outside": 0.16084284460052678
+  },
+  "verse": {
+   "aksharas_outside": 0.10637785155831637,
+   "words_outside": 0.29376646180860405
+  }
+ },
+ "Gemma-4 26B-A4B | masking_backtrack": {
+  "words": 11475,
+  "tokenizer": {
+   "aksharas_outside": 0.03826462588661938,
+   "words_outside": 0.11633986928104575
+  },
+  "verse": {
+   "aksharas_outside": 0.0832488933923524,
+   "words_outside": 0.23381263616557735
+  }
+ },
+ "Gemma-4 26B-A4B | hybrid": {
+  "words": 11146,
+  "tokenizer": {
+   "aksharas_outside": 0.047866220735785954,
+   "words_outside": 0.14058855194688677
+  },
+  "verse": {
+   "aksharas_outside": 0.08104347826086956,
+   "words_outside": 0.2228602189126144
+  }
+ },
+ "DiffusionGemma 26B-A4B | baseline": {
+  "words": 9255,
+  "tokenizer": {
+   "aksharas_outside": 0.002435206122803966,
+   "words_outside": 0.0074554294975688815
+  },
+  "verse": {
+   "aksharas_outside": 0.0035484432075143504,
+   "words_outside": 0.011021069692058346
+  }
+ },
+ "DiffusionGemma 26B-A4B | masking_only": {
+  "words": 11760,
+  "tokenizer": {
+   "aksharas_outside": 0.047408294498971645,
+   "words_outside": 0.14081632653061224
+  },
+  "verse": {
+   "aksharas_outside": 0.09692535992293874,
+   "words_outside": 0.25595238095238093
+  }
+ },
+ "DiffusionGemma 26B-A4B | masking_backtrack": {
+  "words": 11601,
+  "tokenizer": {
+   "aksharas_outside": 0.047601620703176056,
+   "words_outside": 0.14214291871390397
+  },
+  "verse": {
+   "aksharas_outside": 0.09920271859887596,
+   "words_outside": 0.2647185587449358
+  }
+ },
+ "DiffusionGemma 26B-A4B | hybrid": {
+  "words": 11203,
+  "tokenizer": {
+   "aksharas_outside": 0.04011983847857236,
+   "words_outside": 0.12693028653039365
+  },
+  "verse": {
+   "aksharas_outside": 0.07250227953627719,
+   "words_outside": 0.20869409979469786
+  }
+ },
+ "invented": {
+  "occurrences": 29955,
+  "distinct": 8105,
+  "accepted_by_tokenizer_distinct": 1836,
+  "accepted_by_tokenizer_share": 0.49514271407110666
+ }
+}

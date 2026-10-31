@@ -1,0 +1,38 @@
+| set | ablation | words | corpus word | attested | MAF ≥ 4 | MAF 3 | junk (MAF ≤ 2) | poems with junk |
+|---|---|---|---|---|---|---|---|---|
+| real verse (held out) | — | 33619 | 55.5% | 6.6% | 8.4% | 20.2% | 9.2% | 74% |
+| Gemma-4 E4B | baseline | 9544 | 42.1% | 7.9% | 9.5% | 31.0% | 9.6% | 79% |
+| Gemma-4 E4B | masking_only | 9410 | 17.9% | 6.0% | 4.2% | 15.5% | 56.4% | 99% |
+| Gemma-4 E4B | masking_backtrack | 9543 | 20.3% | 6.1% | 3.8% | 19.1% | 50.7% | 98% |
+| Gemma-4 E4B | hybrid | 9277 | 19.6% | 5.6% | 4.2% | 17.4% | 53.2% | 99% |
+| Gemma-4 26B-A4B | baseline | 9814 | 45.8% | 12.1% | 8.4% | 24.4% | 9.2% | 68% |
+| Gemma-4 26B-A4B | masking_only | 11390 | 24.3% | 10.1% | 3.1% | 11.4% | 51.1% | 98% |
+| Gemma-4 26B-A4B | masking_backtrack | 11475 | 27.2% | 10.2% | 2.9% | 13.4% | 46.2% | 94% |
+| Gemma-4 26B-A4B | hybrid | 11146 | 27.2% | 10.0% | 3.3% | 13.1% | 46.4% | 97% |
+| DiffusionGemma 26B-A4B | baseline | 9255 | 42.1% | 10.9% | 4.6% | 28.5% | 13.9% | 75% |
+| DiffusionGemma 26B-A4B | masking_only | 11760 | 32.5% | 8.3% | 0.8% | 11.5% | 46.8% | 99% |
+| DiffusionGemma 26B-A4B | masking_backtrack | 11601 | 29.1% | 8.1% | 0.9% | 12.3% | 49.6% | 98% |
+| DiffusionGemma 26B-A4B | hybrid | 11203 | 32.8% | 8.5% | 1.1% | 12.4% | 45.2% | 95% |
+
+Constrained poems, words split by whether the constraint overrode the model on one of their tokens:
+
+| model | ablation | words | split | corpus word | attested | MAF ≥ 4 | MAF 3 | junk (MAF ≤ 2) |
+|---|---|---|---|---|---|---|---|---|
+| Gemma-4 E4B | masking_only | 3191 | model's own | 33.2% | 8.2% | 4.3% | 14.4% | 39.9% |
+| Gemma-4 E4B | masking_only | 6219 | overridden | 10.0% | 4.9% | 4.1% | 16.1% | 64.8% |
+| Gemma-4 E4B | masking_backtrack | 3489 | model's own | 36.7% | 8.0% | 3.4% | 17.9% | 34.1% |
+| Gemma-4 E4B | masking_backtrack | 6054 | overridden | 10.9% | 5.0% | 4.0% | 19.7% | 60.3% |
+| Gemma-4 E4B | hybrid | 3188 | model's own | 36.7% | 7.0% | 4.7% | 17.5% | 34.2% |
+| Gemma-4 E4B | hybrid | 6089 | overridden | 10.7% | 4.9% | 4.0% | 17.3% | 63.1% |
+| Gemma-4 26B-A4B | masking_only | 6471 | model's own | 33.3% | 11.0% | 3.5% | 11.9% | 40.3% |
+| Gemma-4 26B-A4B | masking_only | 4919 | overridden | 12.6% | 8.9% | 2.5% | 10.8% | 65.2% |
+| Gemma-4 26B-A4B | masking_backtrack | 6457 | model's own | 37.4% | 11.8% | 3.1% | 13.1% | 34.6% |
+| Gemma-4 26B-A4B | masking_backtrack | 5018 | overridden | 14.1% | 8.2% | 2.7% | 13.9% | 61.1% |
+| Gemma-4 26B-A4B | hybrid | 6260 | model's own | 37.7% | 11.8% | 3.6% | 12.7% | 34.3% |
+| Gemma-4 26B-A4B | hybrid | 4886 | overridden | 13.8% | 7.8% | 2.8% | 13.7% | 61.9% |
+| DiffusionGemma 26B-A4B | masking_only | 4354 | model's own | 63.1% | 9.7% | 1.2% | 14.1% | 11.9% |
+| DiffusionGemma 26B-A4B | masking_only | 7406 | overridden | 14.5% | 7.5% | 0.6% | 10.0% | 67.3% |
+| DiffusionGemma 26B-A4B | masking_backtrack | 4369 | model's own | 52.3% | 9.9% | 1.5% | 16.1% | 20.2% |
+| DiffusionGemma 26B-A4B | masking_backtrack | 7232 | overridden | 15.0% | 7.0% | 0.6% | 9.9% | 67.4% |
+| DiffusionGemma 26B-A4B | hybrid | 3962 | model's own | 62.8% | 10.1% | 1.5% | 14.8% | 10.7% |
+| DiffusionGemma 26B-A4B | hybrid | 7241 | overridden | 16.4% | 7.6% | 0.9% | 11.1% | 64.0% |

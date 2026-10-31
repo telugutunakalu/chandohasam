@@ -1,9 +1,11 @@
 # Runs — constrained decoding of Telugu padyams
 
 Every run of [`meter_engine/metrical_decoder`](../../meter_engine/metrical_decoder/)
-from 2026-09-24 to 2026-09-26. The decoder generates a padyam in any of the 37
+kept here: the v1 grids of 2026-09-24 to 09-26, then the development of decoder v2 from 2026-10-05 to 10-22
+([below](#decoder-v2-2026-10-05--10-22)). The decoder generates a padyam in any of the 37
 catalogued meters. It uses the three IndicNeuroSym decoding strategies on top of
-the metrical DAWG (gaṇa) and the prāsa and yati engines.
+the metrical DAWG (gaṇa) and the prāsa and yati engines. The later grids of the fine-tuned models live with those
+models (`../../full_grid_experiments/`, `../../diffusion_finetuning/`, …).
 
 The design, and every finding that changed it, is in
 [`meter_engine/CONSTRAINED_DECODING_PLAN.md`](../../meter_engine/CONSTRAINED_DECODING_PLAN.md):
@@ -31,6 +33,17 @@ what it shows. Every count below was recomputed from the run's own
 | [`2026-09-26_g26b_trial`](#2026-09-26_g26b_trial) | Gemma-4 26B-A4B | baseline + 3 constrained | 148 | constrained 111 / 111; baseline 0 / 37 |
 | [`2026-09-26_g26b`](#2026-09-26_g26b) | Gemma-4 26B-A4B | baseline + 3 constrained | 2,220 | **constrained 1,665 / 1,665**; baseline 0 / 555 |
 | [`2026-09-26_diffusion_baseline`](#2026-09-26_diffusion_baseline) | DiffusionGemma 26B-A4B | free baseline | 555 | 0 / 555 in meter |
+| [`2026-10-05_absent_words`](#2026-10-05_absent_words) | (measurement) | — | 6,660 generated + held-out verse | the constraint, not the model, writes the junk words |
+| [`2026-10-05_inventory_checks`](#2026-10-05_inventory_checks) | (completeness) | — | 351 real poems | verse inventory loses no real poem (225 / 225) |
+| [`2026-10-05_control_inventory`](#2026-10-05_control_inventory) | random logits | 3 constrained, verse inventory | 555 | 555 / 555 complete and in meter |
+| [`2026-10-05_e4b_v2_none`](#2026-10-05_e4b_v2_none--2026-10-05_e4b_v2_verse) | Gemma-4 E4B | 3 constrained, v2 code, no inventory | 111 | identical to v1, token for token |
+| [`2026-10-05_e4b_v2_verse`](#2026-10-05_e4b_v2_none--2026-10-05_e4b_v2_verse) | Gemma-4 E4B | 3 constrained, Layer A (verse) | 111 | invented aksharas 24–32% → 0; real words +0.6 points |
+| [`2026-10-07_e4b_v2_verse_attest2_override`](#2026-10-07_e4b_v2_verse_attest2_override) | Gemma-4 E4B | A + Layer B, first scoring | 111 | **failed**: rewarded single-akshara words |
+| [`2026-10-07_e4b_v2_verse_attestB_override`](#2026-10-07_e4b_v2_verse_attestb_) | Gemma-4 E4B | A + B where overridden | 111 | real words up a little |
+| [`2026-10-07_e4b_v2_verse_attestB_all`](#2026-10-07_e4b_v2_verse_attestb_) | Gemma-4 E4B | A + B at every step | 111 | **real words +8.9 points**, 111 / 111 in meter: v2 |
+| [`2026-10-07_e4b_v2_verse_attestB_all_train90`](#2026-10-07_e4b_v2_verse_attestb_) | Gemma-4 E4B | A + B from 90% of the verse | 111 | held-out check: +8.2 points, so not copying the metric's lexicon |
+| [`2026-10-22_padyarchana_inventory`](#2026-10-22_padyarchana_inventory) | (inventory) + random logits | 3 constrained | 111 | Layer A from the training corpus: control 111 / 111 |
+| [`2026-10-22_diffusion_trial_entropyfix`](#2026-10-22_diffusion_trial_entropyfix) | — | — | 0 | a queue marker only; the rerun was dropped |
 
 "In meter" means complete and accepted under the enforcer's own rules, gaṇa
 (canonical scansion), prāsa and yati, all strict. See [Evaluation](#evaluation).
@@ -434,6 +447,154 @@ finished with every constrained poem in meter (`../queue.log`).
   - another (మధురగతి రగడ, T2 / 42) has the gaṇas right under the canonical
     scansion but fails yati.
 
+## Decoder v2 (2026-10-05 → 10-22)
+
+**Why.** Every v1 constrained poem is in metre, but its words are often not Telugu: the mask allows any syllable
+the orthography can spell, and where the model's first choice is not allowed the constraint fills in what scans.
+Decoder v2 adds two layers, both off by default, committed as c93ee08 (2026-10-08):
+- **Layer A**, an akshara inventory (`--inventory verse|padyarchana`): only syllables real verse uses, composed exactly
+  with the metre's automaton;
+- **Layer B**, word attestation (`--attest-weight 2 --attest-where all`): among the allowed tokens, prefer those that
+  keep the current word a corpus word or the start of one.
+
+v2 = `--inventory verse --attest-weight 2 --attest-where all` (later `--inventory padyarchana --attest-corpus
+padyarchana`). The trials below use the v1 grid's program on its trial cells: Gemma-4 E4B, 37 meters × 3 strategies,
+T1, seed 42, 111 poems, strict profile. The design and its motivation are in
+`../../meter_engine/CONSTRAINED_DECODING_PLAN.md` §17 and the note at its top.
+
+### 2026-10-05_absent_words
+
+**What:** does the junk come from the model or from the constraint? A minimal-absent-factor measurement of every
+generated word against real verse.
+
+**How:** `../scripts/measure_absent_words.py` builds a suffix automaton (Blumer's DAWG, the structure of arXiv
+2307.01428) over the words of 90% of the real poems in `dataset/*.json` and scores each word by its shortest run of
+aksharas that no real word contains. The 6,660 poems of the v1 grids against the held-out 10%.
+
+**Result** (`README.md`, `absent_words.md`, `inventories.md` in the folder):
+- Free generation looks like real verse (corpus words 42–46% against 55.5%).
+- Constrained poems: 18–33% corpus words, and 21–30% of words contain an akshara that real verse never uses. 8.8% of
+  all aksharas in constrained poems are invented (8,090 distinct, e.g. ల్రు, న్యె).
+- Words where the constraint overrode the model are 60–67% junk; words the model wrote itself are 33–63% corpus words.
+
+**Interpretation:** the constraint, not the model, writes the junk. A syllable inventory (Layer A) and a preference
+for attested words (Layer B) target exactly that.
+
+### 2026-10-05_inventory_checks
+
+**What:** with an inventory, can real poems still get through the enforcer? A missing syllable could make a real
+poem impossible.
+
+**How:** `../scripts/check_inventory_completeness.py`: 351 held-out real poems over 21 meters, each cleaned to what a
+model can write and fed through the enforcer under two random token chunkings, without an inventory, with the verse
+inventory and with the tokenizer's inventory. Variants recorded the fixes along the way (`completeness_before_*`,
+`_conjunct_route`, `_strict_guru`).
+
+**Result:** passed without an inventory 225, with verse 225, with the tokenizer's 224, of 351. The comparison is the
+point: the 126 poems that fail without any inventory fail with every inventory too, so they do not measure Layer A.
+
+**Interpretation:** the verse inventory loses no real poem. The tokenizer inventory was dropped: it lost one poem and
+needed 7–8 GB per process.
+
+### 2026-10-05_control_inventory
+
+**What / How:** the random-logit control (as `2026-09-26_control_vowel`) with Layer A (verse): 37 meters × 3
+strategies × 5 seeds on T1, groups `verse/g1`–`g5`.
+
+**Result:** 555 / 555 complete and in meter, no dead end.
+
+**Interpretation:** the inventory composes exactly with the metre's automaton: no dead end. This is the acceptance
+criterion before any model run.
+
+### 2026-10-05_e4b_v2_none / 2026-10-05_e4b_v2_verse
+
+**What:** v2's code without an inventory (it must equal v1), and with Layer A (verse).
+
+**How:** `python -m metrical_decoder run --model google/gemma-4-E4B-it --modes masking_only,masking_backtrack,hybrid
+--meters all --topics T1 --seeds 42 --enforce gana,prasa,yati --profile strict --inventory none|verse`.
+`compare_v1.md` in each folder (`../scripts/compare_inventory_trial.py`).
+
+**Result:**
+- **v2 with no inventory** reproduces v1 token for token.
+- **With the verse inventory:**
+  - invented-akshara words 24–32% → 0%;
+  - junk words (MAF ≤ 2) 48–56% → 38–46%;
+  - corpus words only +1–2 points, and real words of 2+ aksharas +0.6 points (interval includes 0;
+    `2026-10-07_e4b_v2_verse_attestB_all_train90/heldout_check.md`);
+  - 111 / 111 in meter.
+
+**Interpretation:** Layer A removes invented syllables but does not make words real: the constraint now fills with
+real syllables in non-words. Something must prefer whole words (Layer B).
+
+### 2026-10-07_e4b_v2_verse_attest2_override
+
+**What:** Layer A + the first version of Layer B (weight 2, only where the model's first choice was not allowed).
+
+**Result:** **failed, kept for the record** (`README.md`). The first scoring rule paid for every finished corpus word,
+and single aksharas are corpus words (త, గ), so ending a word after almost every akshara paid best:
+single-akshara words 3–6% → 37–46%, real words of 2+ aksharas fell. The every-step arm was stopped at its start
+(`../2026-10-07_layer_b_trial.log`).
+
+**Interpretation:** a word preference must count only words of 2+ aksharas, and judge a token that ends a word by
+that word alone. Fixed and rerun as the three runs below.
+
+### 2026-10-07_e4b_v2_verse_attestB_*
+
+**What:** Layer A + the fixed Layer B, weight 2:
+- `_override`: only where the model's first choice was not allowed;
+- `_all`: at every step;
+- `_all_train90`: at every step, with Layer B's corpus built from 90% of the verse only, the held-out check.
+
+**How:** `../scripts/run_layer_b_trial.sh` (`--inventory verse --attest-weight 2 --attest-where override|all
+[--attest-corpus train90]`); `../scripts/check_layer_b_heldout.py` → `_all_train90/heldout_check.md`.
+
+**Result** (real words = words of 2+ aksharas in the corpus; 111 poems per run, every one in meter):
+
+| run | masking only | masking + backtracking | hybrid | per poem against v1 (95% interval) |
+|---|---|---|---|---|
+| v1 | 23.1% | 24.3% | 24.0% | |
+| A (verse) | 23.4% | 23.1% | 25.4% | +0.6 [−1.6, +2.7] |
+| A + B at every step | 30.3% | 37.1% | 33.2% | **+8.9 [+6.0, +12.1]** |
+| A + B at every step, B from 90% of the verse | 29.6% | 36.6% | 32.5% | **+8.2 [+5.3, +11.2]** |
+
+- Measured the same way here for this README (`metrical_decoder.analysis.corpus_lexicon`, words of 2+ consonants), the
+  override-only arm sits between the two: 26–30%, against 24–26% for A alone and 31–39% at every step.
+- Single-akshara words, log-probability and repeated lines are unchanged.
+
+**Interpretation:**
+- **Layer B at every step is the useful layer:** about +9 points of real words at no cost to the metre.
+- **It is not just copying the measure's lexicon.** Built from 90% of the verse, it keeps the gain (+8.2), and some
+  words it writes occur only in the held-out 10%.
+- Adopted as v2: `--inventory verse --attest-weight 2 --attest-where all`.
+
+### 2026-10-22_padyarchana_inventory
+
+**What:** Layer A from every akshara of the crawled training corpus (the user's request) instead of `dataset/`'s
+verse alone.
+
+**How:** `metrical_decoder.inventory.build_padyarchana_inventory()`, from the E6 training split (the corpus minus
+`dataset/`, 365,679 poems), so it holds no syllable only held-out poems have. Kept: syllables seen in ≥ 3 poems
+(6,131); the inventory file itself is never committed (`.gitignore`; rebuilt by `python3 -m metrical_decoder
+inventory`). Then the completeness check and the random-logit control.
+
+**Result** (`README.md` in the folder):
+- held-out verse syllable tokens allowed 99.975%;
+- completeness 219 / 225, the 6 losses all explained by syllables under the threshold;
+- control 111 / 111 complete and in metre.
+
+**Interpretation:** a larger, held-out-safe inventory with no liveness flaw. It blocks about 83% of the junk the verse
+inventory blocked; some of the "junk" the verse inventory blocked is real Telugu (వ్రి, in 27 training poems).
+Layer B's word corpus got the same treatment the next day (`--attest-corpus padyarchana`). That setting, v2 A + B, is
+the grid's v2 (`../../full_grid_experiments/`).
+
+### 2026-10-22_diffusion_trial_entropyfix
+
+**What:** the folder for rerunning the September DiffusionGemma trial with the shared decoder's NaN-entropy bug fixed
+(`../../lora_gemma_diffusion/README.md`). It holds only `DONE`: a placeholder the GPU queues' skip rules honour.
+
+**Result:** not run. The rerun was dropped (user decision 2026-10-28, `full_grid_experiments/PLAN.md` decision 16).
+`DONE` says how to run it by hand.
+
 ## Scripts (`../scripts/`)
 
 | script | role |
@@ -448,6 +609,12 @@ finished with every constrained poem in meter (`../queue.log`).
 | `mem_trace.sh` | memory trace, synced to disk |
 | `make_samples.py` | Markdown samples of the best metrically perfect poems per meter × strategy, with every token's probability |
 | `export_inference_json.py` | every poem of one model's runs as one JSON document (split into parts under a size limit), superseded rows excluded |
+| `measure_absent_words.py` | `2026-10-05_absent_words`: minimal absent factors of generated words against real verse |
+| `compare_akshara_inventories.py` | which inventory v2 should use: the syllable tokenizer's or the verse corpus's |
+| `check_inventory_completeness.py` | can real poems still pass the enforcer with an inventory (`2026-10-05_inventory_checks`, `2026-10-22_padyarchana_inventory`) |
+| `compare_inventory_trial.py` | v1 against v2 on the same poems (`compare_v1.md`) |
+| `run_layer_b_trial.sh` | launcher of the Layer B trials (override, then every step) |
+| `check_layer_b_heldout.py` | Layer B built from 90% of the verse against v1, A and B from all the verse (`heldout_check.md`) |
 
 ## Logs at this level
 
@@ -456,6 +623,8 @@ finished with every constrained poem in meter (`../queue.log`).
 | `audit_rule_change.log` | the audit of both constrained grids for the vowel rule: 3,330 poems replayed, 843 flagged (E4B 420, DiffusionGemma 423) |
 | `rerun_vowel_chain.log` | the rerun chain on 2026-09-26: control passed (555 / 555); DiffusionGemma rerun 09:07–12:12; E4B rerun done at 13:20; then the 26B trial started |
 | `queue.log` | `queue_after.sh` starting `2026-09-26_diffusion_baseline` when `2026-09-26_g26b` finished |
+| `2026-10-07_layer_b_trial.log`, `…_fixed.log` | the Layer B trials: the first scoring (override done, every-step arm stopped), then the fixed scoring (both arms, 111 rows each) |
+| `gpu_queue_2026-10-21.log` | every GPU queue from 2026-10-21 to 10-30 (`../scripts/gpu_queue_*.sh`): each job's start and end, the T5Gemma and DiffusionGemma trainings, the evaluations and the paper's grid, to the final table at 2026-10-30 03:32 |
 
 ## Reproducing
 

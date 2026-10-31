@@ -1,0 +1,420 @@
+[2026-10-21 12:33:46] start t5g-270m-full
+[2026-10-21 16:59:25] end t5g-270m-full (exit 0)
+[2026-10-21 16:59:25] start e6_dg_base_val_constrained
+[2026-10-21 19:10:41] placeholders set: the first queue stops after its base run
+[2026-10-21 19:24:14] second queue replaced by v2 (gpu-queue-1021c): + the T5Gemma 2 4B LoRA after the 1B
+[2026-10-21 20:16:45] second queue replaced by v3 (gpu-queue-1021d): T5 4B LoRA on the whole pool with a 48k snapshot; DG 24k constrained dropped (user decisions, full_grid_experiments/PLAN.md §9)
+[2026-10-21 20:20:14] September rerun deferred until after the grid (DONE now holds 'deferred…', which gpu-queue-1021d neither removes nor runs past)
+[2026-10-21 20:26:04] third queue started (gpu-queue-1022e): waits for gpu-queue-1021d, then DiffusionGemma speed test → whole-pool LoRA (lora-full) → E6 free → table
+[2026-10-21 20:40:53] third queue restarted (gpu-queue-1022e v2): + the grid's P1 prompts first (Gemma-4 26B), then the DiffusionGemma speed test → whole-pool LoRA
+[2026-10-21 20:41:34] fourth queue started (gpu-queue-1023f): the full grid; waits for gpu-queue-1022e and for full_grid_experiments/prompts/e6_p1/records/test.jsonl (after the user's prompt review)
+[2026-10-21 20:54:33] second queue replaced by v4 (gpu-queue-1021d, gpu_queue_2026-10-21d2.sh): T5 4B LoRA rank 128 (user decision), run t5g-4b-r128-full; the third and fourth queues restarted around it (all were waiting)
+[2026-10-21 20:56:59] end e6_dg_base_val_constrained (exit 0)
+[2026-10-21 20:56:59] queue done
+[2026-10-21 20:57:03] first queue ended; second queue (v4) starts
+[2026-10-21 20:57:03] start t5g-1b-full
+[2026-10-22 09:26:34] end t5g-1b-full (exit 0)
+[2026-10-22 09:26:34] start e6_t5g_1b_val
+[2026-10-22 09:30:01] end e6_t5g_1b_val (exit 0)
+[2026-10-22 09:30:01] start t5g-4b-r128-full
+[2026-10-22 18:27:55] t5-constrained-1022 (outside the queues, user decision): T5 270M and 1B constrained (masking + backtracking) on the 114 E6 val prompts, then score_e6; small (≈ 2–5 GB) beside the 4B
+[2026-10-22 22:43:08] t5-v2a-1022 (outside the queues, user decision 'do all one by one'): T5 1B constrained with the padyarchana inventory (v2 Layer A) on the 114 E6 val prompts
+[2026-10-22 23:11:51] t5-v2ab-1022 (user: 'do all one by one', task 2): decoder tests → T5 1B constrained with v2 A + B (padyarchana inventory + words, weight 2, every step) on the 114 E6 val prompts → score_e6
+[2026-10-22 23:52:00] t5-memo-1022 (task 3): memorisation of the T5 E6 val poems against the train split (CPU)
+[2026-10-23 00:07:42] mauve-more-1023 (task 4): MAUVE vs Padyarchana for the T5 and DiffusionGemma E6 val sets (EmbeddingGemma 2, small)
+[2026-10-24 11:07:53] end t5g-4b-r128-full (exit 0)
+[2026-10-24 11:07:53] start e6_t5g_4b_48k_val
+[2026-10-24 11:21:03] end e6_t5g_4b_48k_val (exit 0)
+[2026-10-24 11:21:03] start e6_t5g_4b_val
+[2026-10-24 11:33:33] end e6_t5g_4b_val (exit 0)
+[2026-10-24 11:33:33] start score_e6
+[2026-10-24 11:34:43] end score_e6 (exit 0)
+[2026-10-24 11:34:43] second queue (v4) done
+[2026-10-24 11:34:47] second queue ended; third queue (P1 prompts, DiffusionGemma whole pool) starts
+[2026-10-24 11:34:47] start p1_prompts
+[2026-10-24 12:01:14] end p1_prompts (exit 0)
+[2026-10-24 12:01:14] start speed_batch
+[2026-10-24 12:03:42] end speed_batch (exit 0)
+[2026-10-24 12:03:42] DiffusionGemma whole pool: --batch 1
+[2026-10-24 12:03:42] start lora-full
+[2026-10-24 22:20:10] alongside: smoke: 20 small-model cells
+[2026-10-24 22:20:10] alongside: start grid_nandi_base_free_smoke
+[2026-10-24 22:21:20] alongside: end grid_nandi_base_free_smoke (exit 1)
+[2026-10-24 22:21:20] alongside: smoke: grid_nandi_base_free_smoke FAILED (see logs/grid_nandi_base_free_smoke.log)
+[2026-10-24 22:21:20] alongside: start grid_nandi_base_constrained_smoke
+[2026-10-24 22:22:10] alongside: restarted after the smoke shard fix (grid.py: smoke cells use 2 shards)
+[2026-10-24 22:22:10] alongside: smoke: 20 small-model cells
+[2026-10-24 22:22:10] alongside: start grid_nandi_base_free_smoke
+[2026-10-24 22:22:42] alongside: end grid_nandi_base_free_smoke (exit 0)
+[2026-10-24 22:22:42] alongside: start grid_nandi_base_constrained_smoke
+[2026-10-24 22:24:02] alongside: end grid_nandi_base_constrained_smoke (exit 0)
+[2026-10-24 22:24:02] alongside: start grid_nandi_ft_free_smoke
+[2026-10-24 22:24:52] alongside: end grid_nandi_ft_free_smoke (exit 0)
+[2026-10-24 22:24:52] alongside: start grid_nandi_ft_constrained_smoke
+[2026-10-24 22:25:46] alongside: end grid_nandi_ft_constrained_smoke (exit 0)
+[2026-10-24 22:25:46] alongside: start grid_t5_270m_base_free_smoke
+[2026-10-24 22:26:43] alongside: end grid_t5_270m_base_free_smoke (exit 0)
+[2026-10-24 22:26:43] alongside: start grid_t5_270m_base_constrained_smoke
+[2026-10-24 22:27:29] alongside: end grid_t5_270m_base_constrained_smoke (exit 0)
+[2026-10-24 22:27:29] alongside: start grid_t5_270m_ft_free_smoke
+[2026-10-24 22:28:09] alongside: end grid_t5_270m_ft_free_smoke (exit 0)
+[2026-10-24 22:28:09] alongside: start grid_t5_270m_ft_constrained_smoke
+[2026-10-24 22:28:47] alongside: end grid_t5_270m_ft_constrained_smoke (exit 0)
+[2026-10-24 22:28:47] alongside: start grid_t5_1b_base_free_smoke
+[2026-10-24 22:30:31] alongside: end grid_t5_1b_base_free_smoke (exit 0)
+[2026-10-24 22:30:31] alongside: start grid_t5_1b_base_constrained_smoke
+[2026-10-24 22:31:41] alongside: end grid_t5_1b_base_constrained_smoke (exit 0)
+[2026-10-24 22:31:41] alongside: start grid_t5_1b_ft_free_smoke
+[2026-10-24 22:32:43] alongside: end grid_t5_1b_ft_free_smoke (exit 0)
+[2026-10-24 22:32:43] alongside: start grid_t5_1b_ft_constrained_smoke
+[2026-10-24 22:33:42] alongside: end grid_t5_1b_ft_constrained_smoke (exit 0)
+[2026-10-24 22:33:42] alongside: start grid_mdlm120m_base_free_smoke
+[2026-10-24 22:34:52] alongside: end grid_mdlm120m_base_free_smoke (exit 0)
+[2026-10-24 22:34:52] alongside: start grid_mdlm120m_base_constrained_smoke
+[2026-10-24 22:36:40] alongside: end grid_mdlm120m_base_constrained_smoke (exit 0)
+[2026-10-24 22:36:40] alongside: start grid_mdlm120m_ft_free_smoke
+[2026-10-24 22:37:50] alongside: end grid_mdlm120m_ft_free_smoke (exit 0)
+[2026-10-24 22:37:50] alongside: start grid_mdlm120m_ft_constrained_smoke
+[2026-10-24 22:39:18] alongside: end grid_mdlm120m_ft_constrained_smoke (exit 0)
+[2026-10-24 22:39:18] alongside: start grid_mdlm523m_base_free_smoke
+[2026-10-24 22:41:31] alongside: end grid_mdlm523m_base_free_smoke (exit 0)
+[2026-10-24 22:41:31] alongside: start grid_mdlm523m_base_constrained_smoke
+[2026-10-24 22:44:15] alongside: end grid_mdlm523m_base_constrained_smoke (exit 0)
+[2026-10-24 22:44:15] alongside: start grid_mdlm523m_ft_free_smoke
+[2026-10-24 22:46:56] alongside: end grid_mdlm523m_ft_free_smoke (exit 0)
+[2026-10-24 22:46:56] alongside: start grid_mdlm523m_ft_constrained_smoke
+[2026-10-24 22:48:32] alongside: end grid_mdlm523m_ft_constrained_smoke (exit 0)
+[2026-10-24 22:48:32] alongside: core: 20 small-model cells
+[2026-10-24 22:48:32] alongside: start grid_nandi_base_free
+[2026-10-24 23:13:13] alongside: end grid_nandi_base_free (exit 0)
+[2026-10-24 23:13:13] alongside: start grid_nandi_base_constrained
+[2026-10-24 23:44:16] alongside: end grid_nandi_base_constrained (exit 0)
+[2026-10-24 23:44:16] alongside: start grid_nandi_ft_free
+[2026-10-24 23:58:16] alongside: end grid_nandi_ft_free (exit 0)
+[2026-10-24 23:58:16] alongside: start grid_nandi_ft_constrained
+[2026-10-25 00:27:15] alongside: end grid_nandi_ft_constrained (exit 0)
+[2026-10-25 00:27:15] alongside: start grid_t5_270m_base_free
+[2026-10-25 01:14:11] alongside: end grid_t5_270m_base_free (exit 0)
+[2026-10-25 01:14:11] alongside: start grid_t5_270m_base_constrained
+[2026-10-25 01:52:13] alongside: end grid_t5_270m_base_constrained (exit 0)
+[2026-10-25 01:52:13] alongside: start grid_t5_270m_ft_free
+[2026-10-25 02:19:05] alongside: end grid_t5_270m_ft_free (exit 0)
+[2026-10-25 02:19:05] alongside: start grid_t5_270m_ft_constrained
+[2026-10-25 02:49:11] alongside: end grid_t5_270m_ft_constrained (exit 0)
+[2026-10-25 02:49:11] alongside: start grid_t5_1b_base_free
+[2026-10-25 03:55:16] alongside: end grid_t5_1b_base_free (exit 0)
+[2026-10-25 03:55:16] alongside: start grid_t5_1b_base_constrained
+[2026-10-25 04:41:33] alongside: end grid_t5_1b_base_constrained (exit 0)
+[2026-10-25 04:41:33] alongside: start grid_t5_1b_ft_free
+[2026-10-25 05:15:52] alongside: end grid_t5_1b_ft_free (exit 0)
+[2026-10-25 05:15:52] alongside: start grid_t5_1b_ft_constrained
+[2026-10-25 05:48:59] alongside: end grid_t5_1b_ft_constrained (exit 0)
+[2026-10-25 05:48:59] alongside: start grid_mdlm120m_base_free
+[2026-10-25 06:08:07] alongside: end grid_mdlm120m_base_free (exit 0)
+[2026-10-25 06:08:07] alongside: start grid_mdlm120m_base_constrained
+[2026-10-25 06:55:05] alongside: end grid_mdlm120m_base_constrained (exit 0)
+[2026-10-25 06:55:05] alongside: start grid_mdlm120m_ft_free
+[2026-10-25 07:06:07] alongside: end grid_mdlm120m_ft_free (exit 0)
+[2026-10-25 07:06:07] alongside: start grid_mdlm120m_ft_constrained
+[2026-10-25 07:45:11] alongside: end grid_mdlm120m_ft_constrained (exit 0)
+[2026-10-25 07:45:11] alongside: start grid_mdlm523m_base_free
+[2026-10-25 07:52:10] alongside: restarted with the MDLM 523M rows at 2 shards (4 × 8 GB host memory had left 17 GB available beside the training; the partial 523M base free cell removed)
+[2026-10-25 07:52:10] alongside: smoke: 0 small-model cells
+[2026-10-25 07:52:10] alongside: core: 4 small-model cells
+[2026-10-25 07:52:10] alongside: start grid_mdlm523m_base_free
+[2026-10-25 07:52:23] alongside: restarted with FLOOR_GB=20 (its watchdog now stops its own cell well before the training queue's 10 GB floor)
+[2026-10-25 07:52:23] alongside: smoke: 0 small-model cells
+[2026-10-25 07:52:23] alongside: core: 4 small-model cells
+[2026-10-25 07:52:23] alongside: start grid_mdlm523m_base_free
+[2026-10-25 08:38:30] alongside: end grid_mdlm523m_base_free (exit 0)
+[2026-10-25 08:38:30] alongside: start grid_mdlm523m_base_constrained
+[2026-10-25 09:57:43] alongside: end grid_mdlm523m_base_constrained (exit 0)
+[2026-10-25 09:57:43] alongside: start grid_mdlm523m_ft_free
+[2026-10-25 10:00:15] alongside: grid_mdlm523m_ft_free: MemAvailable 19 GB < 20 GB: SIGTERM to 1215485
+[2026-10-25 10:00:47] alongside: end grid_mdlm523m_ft_free (exit 143)
+[2026-10-25 10:00:47] alongside: core: grid_mdlm523m_ft_free FAILED (see logs/grid_mdlm523m_ft_free.log)
+[2026-10-25 10:00:47] alongside: start grid_mdlm523m_ft_constrained
+[2026-10-25 10:00:49] alongside: grid_mdlm523m_ft_constrained: MemAvailable 19 GB < 20 GB: SIGTERM to 1216674
+[2026-10-25 10:01:15] alongside: STOPPED by Claude — the watchdog's SIGTERM ended the 523M cells' parent processes but their shard processes (≈ 14 GB each, the 8.4 GB checkpoint with optimizer state loaded whole) lived on; memory available fell to 15 GB beside the training
+[2026-10-25 10:03:15] grid queue replaced by v2 (gpu_queue_2026-10-25f.sh: process-group watchdog), still waiting; small cells resumed as grid-small-1025 (v2 script; MDLM loader memory-mapped; the two killed 523M FT cells cleared)
+[2026-10-25 10:03:16] alongside: smoke: 0 small-model cells
+[2026-10-25 10:03:16] alongside: core: 2 small-model cells
+[2026-10-25 10:03:16] alongside: start grid_mdlm523m_ft_free
+[2026-10-25 10:28:39] alongside: end grid_mdlm523m_ft_free (exit 0)
+[2026-10-25 10:28:39] alongside: start grid_mdlm523m_ft_constrained
+[2026-10-25 11:30:26] alongside: end grid_mdlm523m_ft_constrained (exit 0)
+[2026-10-25 11:30:26] alongside: extra: 4 small-model cells
+[2026-10-25 11:30:26] alongside: start grid_nandi_base_extra
+[2026-10-25 12:10:58] alongside: end grid_nandi_base_extra (exit 0)
+[2026-10-25 12:10:58] alongside: start grid_nandi_ft_extra
+[2026-10-25 12:55:33] alongside: end grid_nandi_ft_extra (exit 0)
+[2026-10-25 12:55:33] alongside: start grid_mdlm523m_base_extra
+[2026-10-25 14:57:17] alongside: end grid_mdlm523m_base_extra (exit 0)
+[2026-10-25 14:57:17] alongside: start grid_mdlm523m_ft_extra
+[2026-10-25 16:42:16] alongside: end grid_mdlm523m_ft_extra (exit 0)
+[2026-10-25 16:42:16] alongside: done
+[2026-10-28 17:41:55] gpu-queue-1023f stopped while idle (user decision 2026-10-28: 100-prompt grid; replaced by a new queue)
+[2026-10-28 18:11:08] grid100-approve: waiting for the 56 P1 prompts (/home/samvaran/phd_workspace/chandohasam/full_grid_experiments/prompts/grid100/p1/summary.json)
+[2026-10-28 22:53:00] end lora-full (exit 0)
+[2026-10-28 22:53:00] start e6_dg_full_val_free
+[2026-10-28 23:20:01] end e6_dg_full_val_free (exit 0)
+[2026-10-28 23:20:01] start score_e6
+[2026-10-28 23:21:15] end score_e6 (exit 0)
+[2026-10-28 23:21:15] third queue done
+[2026-10-28 23:21:32] third queue ended; the 100-prompt grid starts (records /home/samvaran/phd_workspace/chandohasam/full_grid_experiments/prompts/grid100/records)
+[2026-10-28 23:21:32] start p1_grid100
+[2026-10-28 23:32:38] end p1_grid100 (exit 0)
+[2026-10-28 23:32:38] P1 of the new Vemana poems → prompts/grid100/p1/p1_review.md: waiting for the user's review (APPROVED)
+[2026-10-28 23:32:38] grid smoke: 15 cells to run
+[2026-10-28 23:32:38] start grid_gemma4_e4b_free_smoke
+[2026-10-28 23:33:10] grid100-approve: approved (56 P1 prompts, 0 kept with a failed check): APPROVED written, records updated
+[2026-10-28 23:34:38] end grid_gemma4_e4b_free_smoke (exit 0)
+[2026-10-28 23:34:38] start grid_gemma4_e4b_constrained_smoke
+[2026-10-28 23:36:50] end grid_gemma4_e4b_constrained_smoke (exit 0)
+[2026-10-28 23:36:50] start grid_gemma4_26b_free_smoke
+[2026-10-28 23:42:09] end grid_gemma4_26b_free_smoke (exit 0)
+[2026-10-28 23:42:09] start grid_gemma4_26b_constrained_smoke
+[2026-10-28 23:47:35] end grid_gemma4_26b_constrained_smoke (exit 0)
+[2026-10-28 23:47:35] start grid_t5_4b_base_free_smoke
+[2026-10-28 23:48:57] end grid_t5_4b_base_free_smoke (exit 0)
+[2026-10-28 23:48:57] start grid_t5_4b_base_constrained_smoke
+[2026-10-28 23:50:46] end grid_t5_4b_base_constrained_smoke (exit 0)
+[2026-10-28 23:50:46] start grid_t5_4b_ft_free_smoke
+[2026-10-28 23:52:30] end grid_t5_4b_ft_free_smoke (exit 0)
+[2026-10-28 23:52:30] start grid_t5_4b_ft_constrained_smoke
+[2026-10-28 23:54:02] end grid_t5_4b_ft_constrained_smoke (exit 0)
+[2026-10-28 23:54:02] start grid_t5_4b_48k_free_smoke
+[2026-10-28 23:55:40] end grid_t5_4b_48k_free_smoke (exit 0)
+[2026-10-28 23:55:40] start grid_t5_4b_48k_constrained_smoke
+[2026-10-28 23:57:26] end grid_t5_4b_48k_constrained_smoke (exit 0)
+[2026-10-28 23:57:26] start grid_dg_base_free_smoke
+[2026-10-28 23:58:49] end grid_dg_base_free_smoke (exit 0)
+[2026-10-28 23:58:49] start grid_dg_base_constrained_smoke
+[2026-10-29 00:06:12] end grid_dg_base_constrained_smoke (exit 0)
+[2026-10-29 00:06:12] start grid_dg_48k_free_smoke
+[2026-10-29 00:07:48] end grid_dg_48k_free_smoke (exit 0)
+[2026-10-29 00:07:48] start grid_dg_full_free_smoke
+[2026-10-29 00:09:24] end grid_dg_full_free_smoke (exit 0)
+[2026-10-29 00:09:24] start grid_dg_full_constrained_smoke
+[2026-10-29 00:14:53] end grid_dg_full_constrained_smoke (exit 0)
+[2026-10-29 00:14:53] grid core: 15 cells to run
+[2026-10-29 00:14:53] start grid_gemma4_e4b_free
+[2026-10-29 00:20:02] end grid_gemma4_e4b_free (exit 0)
+[2026-10-29 00:20:02] start grid_gemma4_e4b_constrained
+[2026-10-29 00:31:31] end grid_gemma4_e4b_constrained (exit 0)
+[2026-10-29 00:31:31] start grid_gemma4_26b_free
+[2026-10-29 00:40:04] end grid_gemma4_26b_free (exit 0)
+[2026-10-29 00:40:04] start grid_gemma4_26b_constrained
+[2026-10-29 00:54:20] end grid_gemma4_26b_constrained (exit 0)
+[2026-10-29 00:54:20] start grid_t5_4b_base_free
+[2026-10-29 00:58:39] end grid_t5_4b_base_free (exit 0)
+[2026-10-29 00:58:39] start grid_t5_4b_base_constrained
+[2026-10-29 01:08:06] end grid_t5_4b_base_constrained (exit 0)
+[2026-10-29 01:08:06] start grid_t5_4b_ft_free
+[2026-10-29 01:13:21] end grid_t5_4b_ft_free (exit 0)
+[2026-10-29 01:13:21] start grid_t5_4b_ft_constrained
+[2026-10-29 01:21:54] end grid_t5_4b_ft_constrained (exit 0)
+[2026-10-29 01:21:54] start grid_t5_4b_48k_free
+[2026-10-29 01:27:23] end grid_t5_4b_48k_free (exit 0)
+[2026-10-29 01:27:23] start grid_t5_4b_48k_constrained
+[2026-10-29 01:38:24] end grid_t5_4b_48k_constrained (exit 0)
+[2026-10-29 01:38:24] start grid_dg_base_free
+[2026-10-29 01:42:41] end grid_dg_base_free (exit 0)
+[2026-10-29 01:42:41] start grid_dg_base_constrained
+[2026-10-29 03:04:57] end grid_dg_base_constrained (exit 0)
+[2026-10-29 03:04:57] start grid_dg_48k_free
+[2026-10-29 03:13:48] end grid_dg_48k_free (exit 0)
+[2026-10-29 03:13:48] start grid_dg_full_free
+[2026-10-29 03:22:47] end grid_dg_full_free (exit 0)
+[2026-10-29 03:22:47] start grid_dg_full_constrained
+[2026-10-29 05:06:49] end grid_dg_full_constrained (exit 0)
+[2026-10-29 05:06:49] start score_grid
+[2026-10-29 05:07:49] end score_grid (exit 0)
+[2026-10-29 05:07:49] grid100: the new prompts approved; their cells start
+[2026-10-29 05:07:49] grid new: 35 cells to run
+[2026-10-29 05:07:49] start grid_nandi_base_free_new
+[2026-10-29 05:11:07] end grid_nandi_base_free_new (exit 0)
+[2026-10-29 05:11:07] start grid_nandi_base_constrained_new
+[2026-10-29 05:20:57] end grid_nandi_base_constrained_new (exit 0)
+[2026-10-29 05:20:57] start grid_nandi_ft_free_new
+[2026-10-29 05:23:53] end grid_nandi_ft_free_new (exit 0)
+[2026-10-29 05:23:53] start grid_nandi_ft_constrained_new
+[2026-10-29 05:29:48] end grid_nandi_ft_constrained_new (exit 0)
+[2026-10-29 05:29:48] start grid_gemma4_e4b_free_new
+[2026-10-29 05:37:33] end grid_gemma4_e4b_free_new (exit 0)
+[2026-10-29 05:37:33] start grid_gemma4_e4b_constrained_new
+[2026-10-29 05:55:35] end grid_gemma4_e4b_constrained_new (exit 0)
+[2026-10-29 05:55:35] start grid_gemma4_26b_free_new
+[2026-10-29 06:07:17] end grid_gemma4_26b_free_new (exit 0)
+[2026-10-29 06:07:17] start grid_gemma4_26b_constrained_new
+[2026-10-29 06:29:34] end grid_gemma4_26b_constrained_new (exit 0)
+[2026-10-29 06:29:34] start grid_t5_270m_base_free_new
+[2026-10-29 06:33:18] end grid_t5_270m_base_free_new (exit 0)
+[2026-10-29 06:33:18] start grid_t5_270m_base_constrained_new
+[2026-10-29 06:41:27] end grid_t5_270m_base_constrained_new (exit 0)
+[2026-10-29 06:41:27] start grid_t5_270m_ft_free_new
+[2026-10-29 06:44:17] end grid_t5_270m_ft_free_new (exit 0)
+[2026-10-29 06:44:17] start grid_t5_270m_ft_constrained_new
+[2026-10-29 06:49:22] end grid_t5_270m_ft_constrained_new (exit 0)
+[2026-10-29 06:49:22] start grid_t5_1b_base_free_new
+[2026-10-29 06:54:39] end grid_t5_1b_base_free_new (exit 0)
+[2026-10-29 06:54:39] start grid_t5_1b_base_constrained_new
+[2026-10-29 07:04:15] gpu-queue-1029h stopped while it waited (user decision 2026-10-29: v2 split into two lanes); replaced by gpu-queue-1029i (big rows) + grid-v2-side-1029 (14 smaller rows, now)
+[2026-10-29 07:04:15] side: DAWG v2 A+B for the 14 smaller rows starts beside the grid queue (floor 20 GB)
+[2026-10-29 07:04:15] side: grid v2smoke (smaller rows): 14 cells to run
+[2026-10-29 07:04:15] side: start grid_nandi_base_constrained_smoke_v2
+[2026-10-29 07:04:38] end grid_t5_1b_base_constrained_new (exit 0)
+[2026-10-29 07:04:38] start grid_t5_1b_ft_free_new
+[2026-10-29 07:05:01] side: end grid_nandi_base_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:05:01] side: start grid_nandi_ft_constrained_smoke_v2
+[2026-10-29 07:05:49] side: end grid_nandi_ft_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:05:49] side: start grid_gemma4_e4b_constrained_smoke_v2
+[2026-10-29 07:08:22] side: end grid_gemma4_e4b_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:08:22] side: page cache of 247 model files dropped: MemFree 82 → 103 GB (MemAvailable 105 GB)
+[2026-10-29 07:08:22] side: start grid_t5_270m_base_constrained_smoke_v2
+[2026-10-29 07:08:26] end grid_t5_1b_ft_free_new (exit 0)
+[2026-10-29 07:08:26] start grid_t5_1b_ft_constrained_new
+[2026-10-29 07:09:06] side: end grid_t5_270m_base_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:09:06] side: start grid_t5_270m_ft_constrained_smoke_v2
+[2026-10-29 07:09:44] side: end grid_t5_270m_ft_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:09:44] side: page cache of 247 model files dropped: MemFree 94 → 102 GB (MemAvailable 104 GB)
+[2026-10-29 07:09:44] side: start grid_t5_1b_base_constrained_smoke_v2
+[2026-10-29 07:10:48] side: end grid_t5_1b_base_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:10:48] side: start grid_t5_1b_ft_constrained_smoke_v2
+[2026-10-29 07:11:31] side: end grid_t5_1b_ft_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:11:31] side: page cache of 247 model files dropped: MemFree 94 → 103 GB (MemAvailable 105 GB)
+[2026-10-29 07:11:31] side: start grid_t5_4b_base_constrained_smoke_v2
+[2026-10-29 07:13:35] side: end grid_t5_4b_base_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:13:35] side: page cache of 247 model files dropped: MemFree 89 → 103 GB (MemAvailable 105 GB)
+[2026-10-29 07:13:35] side: start grid_t5_4b_ft_constrained_smoke_v2
+[2026-10-29 07:14:17] end grid_t5_1b_ft_constrained_new (exit 0)
+[2026-10-29 07:14:17] start grid_t5_4b_base_free_new
+[2026-10-29 07:15:19] side: end grid_t5_4b_ft_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:15:20] side: page cache of 247 model files dropped: MemFree 82 → 98 GB (MemAvailable 100 GB)
+[2026-10-29 07:15:20] side: start grid_t5_4b_48k_constrained_smoke_v2
+[2026-10-29 07:17:56] side: end grid_t5_4b_48k_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:17:56] side: page cache of 247 model files dropped: MemFree 78 → 94 GB (MemAvailable 96 GB)
+[2026-10-29 07:17:56] side: start grid_mdlm120m_base_constrained_smoke_v2
+[2026-10-29 07:18:21] end grid_t5_4b_base_free_new (exit 0)
+[2026-10-29 07:18:21] start grid_t5_4b_base_constrained_new
+[2026-10-29 07:19:00] side: end grid_mdlm120m_base_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:19:00] side: start grid_mdlm120m_ft_constrained_smoke_v2
+[2026-10-29 07:20:09] side: end grid_mdlm120m_ft_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:20:09] side: page cache of 247 model files dropped: MemFree 78 → 92 GB (MemAvailable 95 GB)
+[2026-10-29 07:20:09] side: start grid_mdlm523m_base_constrained_smoke_v2
+[2026-10-29 07:21:17] side: end grid_mdlm523m_base_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:21:17] side: start grid_mdlm523m_ft_constrained_smoke_v2
+[2026-10-29 07:22:31] side: end grid_mdlm523m_ft_constrained_smoke_v2 (exit 0)
+[2026-10-29 07:22:31] side: grid v2 (smaller rows): 14 cells to run
+[2026-10-29 07:22:31] side: start grid_nandi_base_constrained_v2
+[2026-10-29 07:35:54] end grid_t5_4b_base_constrained_new (exit 0)
+[2026-10-29 07:35:54] start grid_t5_4b_ft_free_new
+[2026-10-29 07:39:50] side: end grid_nandi_base_constrained_v2 (exit 0)
+[2026-10-29 07:39:50] side: page cache of 247 model files dropped: MemFree 71 → 91 GB (MemAvailable 94 GB)
+[2026-10-29 07:39:50] side: start grid_nandi_ft_constrained_v2
+[2026-10-29 07:45:03] end grid_t5_4b_ft_free_new (exit 0)
+[2026-10-29 07:45:03] start grid_t5_4b_ft_constrained_new
+[2026-10-29 07:52:46] side: end grid_nandi_ft_constrained_v2 (exit 0)
+[2026-10-29 07:52:46] side: page cache of 247 model files dropped: MemFree 74 → 91 GB (MemAvailable 94 GB)
+[2026-10-29 07:52:46] side: start grid_gemma4_e4b_constrained_v2
+[2026-10-29 07:58:19] end grid_t5_4b_ft_constrained_new (exit 0)
+[2026-10-29 07:58:19] start grid_t5_4b_48k_free_new
+[2026-10-29 08:12:53] end grid_t5_4b_48k_free_new (exit 0)
+[2026-10-29 08:12:53] start grid_t5_4b_48k_constrained_new
+[2026-10-29 08:34:08] end grid_t5_4b_48k_constrained_new (exit 0)
+[2026-10-29 08:34:08] start grid_mdlm120m_base_free_new
+[2026-10-29 08:38:37] side: end grid_gemma4_e4b_constrained_v2 (exit 0)
+[2026-10-29 08:38:37] side: page cache of 247 model files dropped: MemFree 76 → 107 GB (MemAvailable 110 GB)
+[2026-10-29 08:38:37] side: start grid_t5_270m_base_constrained_v2
+[2026-10-29 08:38:45] end grid_mdlm120m_base_free_new (exit 0)
+[2026-10-29 08:38:45] start grid_mdlm120m_base_constrained_new
+[2026-10-29 08:49:16] end grid_mdlm120m_base_constrained_new (exit 0)
+[2026-10-29 08:49:16] start grid_mdlm120m_ft_free_new
+[2026-10-29 08:51:58] end grid_mdlm120m_ft_free_new (exit 0)
+[2026-10-29 08:51:58] start grid_mdlm120m_ft_constrained_new
+[2026-10-29 08:54:49] side: end grid_t5_270m_base_constrained_v2 (exit 0)
+[2026-10-29 08:54:49] side: start grid_t5_270m_ft_constrained_v2
+[2026-10-29 09:01:56] end grid_mdlm120m_ft_constrained_new (exit 0)
+[2026-10-29 09:01:56] start grid_mdlm523m_base_free_new
+[2026-10-29 09:07:26] end grid_mdlm523m_base_free_new (exit 0)
+[2026-10-29 09:07:26] start grid_mdlm523m_base_constrained_new
+[2026-10-29 09:09:19] side: end grid_t5_270m_ft_constrained_v2 (exit 0)
+[2026-10-29 09:09:19] side: start grid_t5_1b_base_constrained_v2
+[2026-10-29 09:26:21] end grid_mdlm523m_base_constrained_new (exit 0)
+[2026-10-29 09:26:21] start grid_mdlm523m_ft_free_new
+[2026-10-29 09:29:10] side: end grid_t5_1b_base_constrained_v2 (exit 0)
+[2026-10-29 09:29:10] side: page cache of 247 model files dropped: MemFree 87 → 99 GB (MemAvailable 102 GB)
+[2026-10-29 09:29:10] side: start grid_t5_1b_ft_constrained_v2
+[2026-10-29 09:30:03] end grid_mdlm523m_ft_free_new (exit 0)
+[2026-10-29 09:30:03] start grid_mdlm523m_ft_constrained_new
+[2026-10-29 09:30:30] gpu-queue-1029i stopped while it waited (user decision 2026-10-29: whole-pool DiffusionGemma v2 first, a table tonight); replaced by gpu-queue-1029j
+[2026-10-29 09:42:45] end grid_mdlm523m_ft_constrained_new (exit 0)
+[2026-10-29 09:42:45] start grid_dg_base_free_new
+[2026-10-29 09:43:18] side: end grid_t5_1b_ft_constrained_v2 (exit 0)
+[2026-10-29 09:43:18] side: page cache of 247 model files dropped: MemFree 82 → 93 GB (MemAvailable 96 GB)
+[2026-10-29 09:43:18] side: start grid_t5_4b_base_constrained_v2
+[2026-10-29 09:53:13] end grid_dg_base_free_new (exit 0)
+[2026-10-29 09:53:13] start grid_dg_base_constrained_new
+[2026-10-29 10:30:14] side: end grid_t5_4b_base_constrained_v2 (exit 0)
+[2026-10-29 10:30:15] side: page cache of 247 model files dropped: MemFree 40 → 52 GB (MemAvailable 54 GB)
+[2026-10-29 10:30:15] side: start grid_t5_4b_ft_constrained_v2
+[2026-10-29 11:07:53] side: end grid_t5_4b_ft_constrained_v2 (exit 0)
+[2026-10-29 11:07:53] side: page cache of 247 model files dropped: MemFree 36 → 52 GB (MemAvailable 55 GB)
+[2026-10-29 11:07:53] side: start grid_t5_4b_48k_constrained_v2
+[2026-10-29 11:53:43] side: end grid_t5_4b_48k_constrained_v2 (exit 0)
+[2026-10-29 11:53:43] side: page cache of 247 model files dropped: MemFree 36 → 52 GB (MemAvailable 55 GB)
+[2026-10-29 11:53:43] side: start grid_mdlm120m_base_constrained_v2
+[2026-10-29 12:17:10] side: end grid_mdlm120m_base_constrained_v2 (exit 0)
+[2026-10-29 12:17:10] side: start grid_mdlm120m_ft_constrained_v2
+[2026-10-29 12:41:28] side: end grid_mdlm120m_ft_constrained_v2 (exit 0)
+[2026-10-29 12:41:28] side: start grid_mdlm523m_base_constrained_v2
+[2026-10-29 13:21:25] side: end grid_mdlm523m_base_constrained_v2 (exit 0)
+[2026-10-29 13:21:25] side: start grid_mdlm523m_ft_constrained_v2
+[2026-10-29 13:33:18] end grid_dg_base_constrained_new (exit 0)
+[2026-10-29 13:33:18] start grid_dg_48k_free_new
+[2026-10-29 13:57:24] power outage ≈ 13:51 (reboot 13:51:56): queues gone; cut off: grid_dg_48k_free_new (row dropped, user decision 2026-10-29) and grid_mdlm523m_ft_constrained_v2 (86/100 poems; shard_0/m_tetagiti had NUL bytes → moved to diffusion_finetuning/runs/_interrupted_2026-10-29/, the rest resumes). 84 done cells validated. Restarted: grid-v2-side-1029 (same script) + gpu-queue-1029k
+[2026-10-29 13:57:24] side: DAWG v2 A+B for the 14 smaller rows starts beside the grid queue (floor 20 GB)
+[2026-10-29 13:57:24] after the power outage (rebooted 13:51): the rest of the 100-prompt grid, then DAWG v2 A+B for the big rows
+[2026-10-29 13:57:24] side: grid v2smoke (smaller rows): 0 cells to run
+[2026-10-29 13:57:24] side: grid v2 (smaller rows): 1 cells to run
+[2026-10-29 13:57:24] grid new (the grid's last cells): 2 cells to run
+[2026-10-29 13:57:24] side: page cache of 247 model files dropped: MemFree 102 → 110 GB (MemAvailable 115 GB)
+[2026-10-29 13:57:24] page cache of 247 model files dropped: MemFree 102 → 110 GB (MemAvailable 115 GB)
+[2026-10-29 13:57:24] side: start grid_mdlm523m_ft_constrained_v2
+[2026-10-29 13:57:24] start grid_dg_full_free_new
+[2026-10-29 14:06:07] side: end grid_mdlm523m_ft_constrained_v2 (exit 0)
+[2026-10-29 14:06:07] side: start score_grid_interim
+[2026-10-29 14:10:40] side: end score_grid_interim (exit 0)
+[2026-10-29 14:10:40] side: side queue done: interim results/grid.md and results/grid_v2_samples.md (the big rows' v2 cells follow in gpu-queue-1029i)
+[2026-10-29 14:15:07] end grid_dg_full_free_new (exit 0)
+[2026-10-29 14:15:07] start grid_dg_full_constrained_new
+[2026-10-29 17:32:54] end grid_dg_full_constrained_new (exit 0)
+[2026-10-29 17:32:54] page cache of 247 model files dropped: MemFree 100 → 105 GB (MemAvailable 113 GB)
+[2026-10-29 17:32:54] start score_grid_v1
+[2026-10-29 17:34:52] end score_grid_v1 (exit 0)
+[2026-10-29 17:34:52] grid done: results/grid.md (100 prompts, v1; v2 for the rows done)
+[2026-10-29 17:34:52] grid v2smoke (big rows): 3 cells to run
+[2026-10-29 17:34:52] start grid_gemma4_26b_constrained_smoke_v2
+[2026-10-29 17:40:37] end grid_gemma4_26b_constrained_smoke_v2 (exit 0)
+[2026-10-29 17:40:38] page cache of 247 model files dropped: MemFree 97 → 115 GB (MemAvailable 116 GB)
+[2026-10-29 17:40:38] start grid_dg_base_constrained_smoke_v2
+[2026-10-29 17:45:30] end grid_dg_base_constrained_smoke_v2 (exit 0)
+[2026-10-29 17:45:30] start grid_dg_full_constrained_smoke_v2
+[2026-10-29 17:52:16] end grid_dg_full_constrained_smoke_v2 (exit 0)
+[2026-10-29 17:52:16] grid v2 (Gemma-4 26B, DiffusionGemma whole pool): 2 cells to run
+[2026-10-29 17:52:16] start grid_gemma4_26b_constrained_v2
+[2026-10-29 18:23:44] end grid_gemma4_26b_constrained_v2 (exit 0)
+[2026-10-29 18:23:44] page cache of 247 model files dropped: MemFree 97 → 115 GB (MemAvailable 116 GB)
+[2026-10-29 18:23:44] start grid_dg_full_constrained_v2
+[2026-10-29 23:19:45] end grid_dg_full_constrained_v2 (exit 0)
+[2026-10-29 23:19:45] grid v2 (smaller rows left over): 0 cells to run
+[2026-10-29 23:19:45] start score_grid_tonight
+[2026-10-29 23:21:47] end score_grid_tonight (exit 0)
+[2026-10-29 23:21:47] table without DiffusionGemma base v2: results/grid.md, results/grid_v2_samples.md; DiffusionGemma base v2 follows
+[2026-10-29 23:21:47] grid v2 (DiffusionGemma base): 1 cells to run
+[2026-10-29 23:21:47] start grid_dg_base_constrained_v2
+[2026-10-30 03:30:50] end grid_dg_base_constrained_v2 (exit 0)
+[2026-10-30 03:30:50] grid v2 (left over): 0 cells to run
+[2026-10-30 03:30:50] start score_grid
+[2026-10-30 03:32:55] end score_grid (exit 0)
+[2026-10-30 03:32:55] v2 queue done: results/grid.md (v1 and v2, every row), results/grid_v2_samples.md
