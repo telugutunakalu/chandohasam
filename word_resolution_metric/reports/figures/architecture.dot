@@ -1,0 +1,31 @@
+digraph G {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.4, bgcolor="white", pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, fillcolor="#f4f6fa", color="#6b7a90", penwidth=1.1, margin="0.18,0.08"];
+  edge  [color="#6b7a90", arrowsize=0.75, penwidth=1.0];
+
+  subgraph cluster_in { label="Inputs"; style="rounded,dashed"; color="#9aa7b8"; fontsize=11;
+    corpus [label="Padyarchana v3 poems\n382,052 poems · 5.48M word occurrences\neditorial glossary in 44% of poems\nmachine glossary in 99%", fillcolor="#e8f1ff"];
+    db     [label="padarchana.db\n50 dictionaries · 133,539 entries\n367,100 definitions · 608,520 meanings\nvariants, redirects, search index, glossaries", fillcolor="#e8f1ff"];
+    models [label="Models\nBiLSTM splitter · ByT5 distilled splitter / resolver\nmeaning resolver · context BiLSTM", fillcolor="#e8f1ff"];
+    rules  [label="Rules & indexes\nguaranteed.tsv (1,803 words)\nlexicon rules (inflection, particles, sandhi)\nparadigm index (generated forms)", fillcolor="#e8f1ff"];
+  }
+  subgraph cluster_pipe { label="Resolution pipeline (run_pipeline_v28.sh)"; style="rounded"; color="#6b7a90"; fontsize=11;
+    tok  [label="1 · Tokenisation\ncorpus_lines / make_joined_counts\nline-end joins + v16 spacing rules\n→ 2,004,820 word types"];
+    dict [label="2 · Dictionary pass\nresolve_corpus.py\nguaranteed rule → lexicon reading →\neditorial split vs model candidates"];
+    att  [label="3 · Attestation\nattest_corpus.py\ndictionary text, Annamayya & Padyarchana\nglossaries vouch for forms"];
+    fin  [label="4 · Final stage\nresolve_final.py --stage all\nmeaning resolver · ByT5 4-beam ·\ngloss support · line joins"];
+    join [label="5 · Context joins & fragment scan\nresolve_join.py\nmerge pieces with their neighbours"];
+    mrg  [label="6 · Merge\nresolve_final.py --stage gloss"];
+    ctx  [label="7 · Context pass\ncontext_pass.py\nper-token headword majority\nfrom the poem's glossary"];
+    out  [label="Output\nresolved_words_final.tsv\nword · class · analysis · confidence · source · count", fillcolor="#e9f7ec", color="#4e8a5a"];
+    tok -> dict -> att -> fin -> join -> mrg -> ctx -> out;
+  }
+  subgraph cluster_eval { label="Evaluation & feedback"; style="rounded,dashed"; color="#9aa7b8"; fontsize=11;
+    app   [label="Judging app (annotate/)\nreview queue · random sample · human check\nexternal model or human verdicts", fillcolor="#fff4e5"];
+    gold  [label="Gold\n14,129 verdicts · 6,348 words\ncompile_gold → test set, rules, headwords", fillcolor="#fff4e5"];
+    score [label="Scorers\ncompare_resolutions (held-out precision)\nscore_random_sample (corpus-wide)\npoem_metrics (per poem)", fillcolor="#fff4e5"];
+  }
+  corpus -> tok; db -> dict; models -> dict; rules -> dict; models -> fin; db -> att; db -> fin; corpus -> ctx;
+  out -> app; app -> gold; gold -> rules [label="guaranteed rules\njudge headwords (dict 46)", fontsize=9];
+  out -> score; gold -> score;
+}

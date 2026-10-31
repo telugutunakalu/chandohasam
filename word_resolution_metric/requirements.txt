@@ -1,0 +1,4 @@
+# the lexicon, the table and the CLI need only the standard library (sqlite3, gzip, json, re)
+# the optional ByT5 model needs:
+torch>=2.1
+transformers>=4.40

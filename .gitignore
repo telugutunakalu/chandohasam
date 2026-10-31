@@ -47,14 +47,14 @@ padyarchana_exports/
 # the v3 poems with word-by-word meanings (prathipadārtham), copied from padyarchana_exports/: never commit
 padyarchana_final_corpus/
 padyarchana_final_corpus.tar.xz
-# word resolution: the vendored minimal_setup (word_resolution_metric/ is its extracted copy). Its database holds the
-# Padyarchana word-by-word glossary: never commit it, the model or the precomputed tables
-minimal_setup.tar.xz
-# the Hugging Face release's staged weights (hf_release/build.py rebuilds them)
-hf_release/stage/
+# word resolution: word_resolution_metric/'s database holds the Padyarchana word-by-word glossary: never commit it,
+# the model (released on Hugging Face) or the precomputed tables
 word_resolution_metric/db/
 word_resolution_metric/models/
 word_resolution_metric/data/
+word_resolution_metric/results/padyarchana/
+# the Hugging Face release's staged weights (hf_release/build.py rebuilds them)
+hf_release/stage/
 # stage-2 weights, poem token files and runs (derived from padyarchana_exports/)
 diffusion_finetuning/models/
 diffusion_finetuning/data/

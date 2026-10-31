@@ -1,0 +1,24 @@
+digraph D {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.3, ranksep=0.4, bgcolor="white", pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, fillcolor="#f4f6fa", color="#6b7a90", penwidth=1.1, margin="0.16,0.07"];
+  edge  [color="#6b7a90", arrowsize=0.75, fontname="Helvetica", fontsize=9];
+
+  w    [label="word type (with its occurrence count)"];
+  g    [label="in the guaranteed table?", shape=diamond, fillcolor="#fff9e6", color="#b08a2e"];
+  gy   [label="its analysis, written first\n(closed-class rule or agreed verdict)", fillcolor="#e9f7ec", color="#4e8a5a"];
+  l    [label="lexicon reads the whole word?", shape=diamond, fillcolor="#fff9e6", color="#b08a2e"];
+  lh   [label="headword / variant / redirect\n→ class headword", fillcolor="#e9f7ec", color="#4e8a5a"];
+  li   [label="inflected form, particle split, trika split\n→ class inflected (or split-all-known)", fillcolor="#e9f7ec", color="#4e8a5a"];
+  opt  [label="candidates: editorial split (if any)\n+ BiLSTM splits at 3 thresholds + unsplit\nscored by the share of parts the lexicon knows"];
+  all  [label="every part known?", shape=diamond, fillcolor="#fff9e6", color="#b08a2e"];
+  ak   [label="annotated-all-known (editors' split)\nor split-all-known (model split)", fillcolor="#e9f7ec", color="#4e8a5a"];
+  part [label="partial (some parts known)\nor unresolved"];
+  att  [label="attestation: form seen in dictionary text\nor a glossary → attested-in-text,\nsplit-parts-attested"];
+  fin  [label="final stage on the residue:\nmeaning resolver → resolved-by-resolver / resolver-guess\nByT5 4-beam → resolved-by-byt5\ngloss support → split-attested+gloss, resolved-by-gloss"];
+  jn   [label="joins with neighbours:\njoined-with-context, fragment+known"];
+  ctx  [label="context pass: per-token headword\nfrom the poem's glossary (homographs)"];
+  w -> g; g -> gy [label="yes"]; g -> l [label="no"];
+  l -> lh [label="listed word"]; l -> li [label="inflection"]; l -> opt [label="no reading"];
+  opt -> all; all -> ak [label="yes"]; all -> part [label="no"];
+  part -> att -> fin -> jn -> ctx; gy -> ctx; lh -> ctx; li -> ctx; ak -> ctx;
+}

@@ -1,0 +1,23 @@
+digraph S {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.3, ranksep=0.6, bgcolor="white", pad=0.3];
+  node  [shape=record, style="filled", fontname="Helvetica", fontsize=9.5, fillcolor="#f4f6fa", color="#6b7a90", penwidth=1.1];
+  edge  [color="#6b7a90", arrowsize=0.7, fontname="Helvetica", fontsize=9];
+  dictionaries [label="{dictionaries · 50|dict_id, name, author, year, source_type}", fillcolor="#e8f1ff"];
+  entries      [label="{entries · 133,539|id, word (headword spelling), first_aksharam, browse_rank|tamil, kannada, english}", fillcolor="#e8f1ff"];
+  definitions  [label="{definitions · 367,100|def_id, entry_id, ord, dict_id, g_id, etymology}", fillcolor="#e8f1ff"];
+  meanings     [label="{meanings · 608,520|def_id, ord, number, text, cross_refs}"];
+  grammar      [label="{grammar · 36,500|g_id, grammar_raw, pos (JSON), origin, gender, ending}"];
+  variants     [label="{variants · 110,801|entry_id, ord, variant spelling}"];
+  comments     [label="{comments · 37,014 | examples}"];
+  sources      [label="{sources · 156,366|entry_id, source_type, original_id}"];
+  redirects    [label="{token_redirects · 3,728|token → base_token (variant, stem, inflection, compound)}"];
+  tokens       [label="{tokens · 641,544|token, token_id, kinds: headword/variant/synonym/fulltext}", fillcolor="#f3eefc"];
+  keys         [label="{search_keys · 2,257,278|token_id → entry_id, kind}", fillcolor="#f3eefc"];
+  ftp          [label="{fulltext_post · 1,769,995 | fts (FTS5)}", fillcolor="#f3eefc"];
+  thes         [label="{thesaurus · synonym_lists|synonym groups}"];
+  anna         [label="{annamayya_forms · 131,910|form, gloss, attestations (dictionary 44, opt-in)}", fillcolor="#fff4e5"];
+  pady         [label="{padyarchana_forms · 4,766,005|form, layer (editorial/generated), gloss, split, status (dictionary 50, opt-in)}", fillcolor="#fff4e5"];
+  dictionaries -> definitions [label="1:n"]; entries -> definitions [label="1:n"]; definitions -> meanings [label="1:n"]; definitions -> grammar [label="n:1"];
+  entries -> variants; entries -> comments; entries -> sources; redirects -> entries;
+  tokens -> keys -> entries; tokens -> ftp; entries -> thes;
+}

@@ -1,0 +1,18 @@
+digraph E {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.4, bgcolor="white", pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, fillcolor="#f4f6fa", color="#6b7a90", penwidth=1.1, margin="0.16,0.07"];
+  edge  [color="#6b7a90", arrowsize=0.75, fontname="Helvetica", fontsize=9];
+  out  [label="pipeline output\nresolved_words_final.tsv", fillcolor="#e9f7ec", color="#4e8a5a"];
+  rs   [label="random sample\n500 occurrences drawn uniformly\nfull words only (pieces rejected)", fillcolor="#e8f1ff"];
+  rq   [label="review queue\nhard cases by class ·\nfrequency-first set (3,300 words)", fillcolor="#e8f1ff"];
+  hc   [label="human check\n300 random model-judged held-out words", fillcolor="#e8f1ff"];
+  app  [label="judging app\nprompt → external model → import (annotator = model)\nbuttons (annotator = human)", fillcolor="#fff4e5"];
+  ann  [label="annotations.jsonl\n14,129 verdicts on 6,348 words\n(78 human)"];
+  cg   [label="compile_gold.py\ngold.tsv · splits · headword pairs ·\nheld-out 30% by word hash"];
+  rul  [label="build_rules.py → guaranteed.tsv\nbackfill_judge_headwords.py → dictionary 46\n(agreed or human verdicts only)", fillcolor="#e9f7ec", color="#4e8a5a"];
+  s1   [label="compare_resolutions.py\nfair held-out precision, full-word rule\nversion comparison, flips"];
+  s2   [label="score_random_sample.py\ncorpus-wide precision ± interval"];
+  s3   [label="poem_metrics.py\nresolved / attested per poem"];
+  out -> rs; out -> rq; out -> hc; rs -> app; rq -> app; hc -> app; app -> ann; ann -> cg; cg -> rul; rul -> out [label="next run", style=dashed];
+  cg -> s1; ann -> s2; out -> s1; out -> s2; out -> s3;
+}
