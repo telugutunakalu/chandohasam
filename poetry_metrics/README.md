@@ -29,7 +29,7 @@ Every metric follows the same contract:
 | 3 | Euphony index | *mādhurya* | [`madhurya.py`](madhurya.py) | **done**: [spec](specs/03_madhurya.md) |
 | 4 | Word-density index | *ojas* | [`ojas.py`](ojas.py) | **done**: [spec](specs/04_ojas.md) |
 | 5 | Clarity index | *prasāda* | [`prasada.py`](prasada.py) | **done**: [spec](specs/05_prasada.md) |
-| 6 | Word-resolution rate | — | [`../word_resolution_metric`](../word_resolution_metric) | built as its own folder (the resolver); scored on `dataset/` and the grid by [`../final_report_metrics`](../final_report_metrics). Here, [`real_words.py`](real_words.py) is the simpler lexicon measure the grid reports (through `../lora_gemma_diffusion/score_e6.py` and `../RL/reward.py`). |
+| 6 | Word-resolution rate | — | [`../word_resolution_metric`](../word_resolution_metric) | built as its own folder (the resolver); scored on `dataset/` and the grid by [`../final_report_metrics`](../final_report_metrics), and on every poem source here by [`word_resolution_sources.py`](word_resolution_sources.py). Here, [`real_words.py`](real_words.py) is the simpler lexicon measure the grid reports (through `../lora_gemma_diffusion/score_e6.py` and `../RL/reward.py`). |
 | 7 | Defect penalties | *doṣa* | — | planned |
 | 8 | Chandas distance (the edit-distance half of the *laya* item) | *chandobhaṅga* | [`chandas_distance.py`](chandas_distance.py) | **done**: [spec](specs/08_chandas_distance.md) |
 
@@ -223,6 +223,53 @@ apart, and one syllable repeated (కకకక) never counts. The exact rate is 
 looser one (it admits a few false compounds such as గదా + దడ). Compare models with gold in the training-lexicon
 column: gold val/test poems reach 86.5% / 87.6% there.
 
+## Every poem source: the suite and word resolution
+
+Two runners score every poem source of the project, the poets' and the AI's, and write one JSON per source
+(2026-10-31):
+
+| sources | poems | from |
+|---|---|---|
+| `dataset_bhagavatam`, `dataset_vemana`, `dataset_kuchimanchi_timmakavi`, `dataset_chandassu` | 7,366 / 1,164 / 1,642 / 2,532 | the verse records of `../dataset/*.json` |
+| `human_evals_study1_bhagavatam`, `…_vemana`, `…_kuchimanchi`, `…_textbook`, `…_gemini` | 227 / 47 / 70 / 72 / 84 | study 1's 500 poems (`../human_evals/human_eval_poems_strict.json`), by source; the Gemini poems are AI-written |
+| `human_evals_study2_mdlm523m_ft`, `…_t5_1b_ft`, `…_nandi_ft` | 33 each | study 2's 99 AI poems (`../human_evals/human_eval_poems_study2.json`): three fine-tuned models under the v2 metrical decoder, on the same 33 prompts |
+
+- **[`score_sources.py`](score_sources.py)** (system `python3`, ≈ 1 min): every metric of the suite, each with its own
+  `score_poem` and frozen baseline. That is anuprāsa 1.0, 2.0 and 3.0; mādhurya 1.1 and 2.0; ojas 2.0; prasāda 1.0
+  and 2.0; and chandas distance 1.1, against the poem's own metre. Output: `outputs/sources/<source>.json`,
+  `outputs/sources/summary.json`, [`reports/sources.md`](reports/sources.md).
+- **[`word_resolution_sources.py`](word_resolution_sources.py)** (`../.venv`, ≈ 15 s with its ByT5 cache, ≈ 5 min
+  without, on the CPU): the resolver of [`../word_resolution_metric`](../word_resolution_metric), with the readings
+  and the functions of `../final_report_metrics/score_resolution.py`. It reuses that run's answers for the word types
+  it already resolved, and reproduces its per-poem readings exactly for all 12,704 dataset poems. Output:
+  `outputs/word_resolution/<source>.json`, `outputs/word_resolution/summary.json`,
+  [`reports/word_resolution_sources.md`](reports/word_resolution_sources.md).
+
+Each source's file holds:
+- per metric (or reading), the summary over its poems: mean, sd, p10, median, p90, and every label's count and share;
+- the same by metre;
+- every poem's values by id (no text);
+- word resolution adds the token-weighted shares, the live path's class shares and the 40 most frequent unresolved
+  words;
+- study 2's files compare each poem with the gold poem of its prompt (its study-1 poem).
+
+In short (medians and shares from the two reports):
+- **Word resolution** (*resolved*: the live path with the verified ByT5 gate, the paper's reading):
+  - the four dataset files: 86.7–88.5% of a poem's tokens;
+  - study 1: the poets' poems 85.8–90.1%, the textbook examples 77.7%, Gemini 96.5%;
+  - study 2: MDLM 523M 85.6%, T5Gemma 2 1B 84.4%, Nandi 79.2%. Against the gold poems of their own prompts that is
+    −2.0, −3.2 and −8.5 points; the model's poem resolves more on 48%, 33% and 21% of the prompts.
+- **Metre:** chandas distance rates every study-2 poem, every Gemini poem and every textbook example exact. In the
+  dataset files: Bhāgavatam 99.6%, Kūcimañci 93.1%, Vemana 84.4%, chandassu 81.4%.
+- **Prasāda:** study 2's poems are more obscure than their golds. Their surprisal is higher by 0.22 (MDLM 523M),
+  0.39 (T5Gemma) and 0.63 (Nandi), on 52%, 64% and 70% of the prompts.
+- **Ojas:** MDLM 523M writes lighter poems than its golds (−3.3; denser on 18% of the prompts). So does Gemini
+  against the poets: median ojas 37.3, against 41.3–43.8 for the poets' study-1 poems.
+- **Anuprāsa 3.0:** MDLM 523M repeats consonant patterns more than its golds (+0.60; on 55% of the prompts). In the
+  dataset files, the chandassu examples reach the strong level most often (37.8% of poems), Bhāgavatam least
+  (15.2%). Two textbook examples, alliteration showpieces, score A = 50 and 176, so means mislead here: the reports
+  give medians.
+
 ## Version 2 candidates: scores no poet moves (under evaluation)
 
 Version 1 of anuprāsa, mādhurya and prasāda takes a constant from the four
@@ -260,6 +307,8 @@ python3 <metric>.py score --dataset vemana --no-lines --out outputs/<metric>_vem
 python3 <metric>.py build-baseline                        # 5–10 s; chandas_distance and prasada about 75 s
 python3 <metric>.py validate                              # 25–35 s; chandas_distance about 4 min
 python3 samples_analysis.py                               # the metrics on ../samples/json, ~2 min
+python3 score_sources.py                                  # the suite on every poem source, ~1 min -> outputs/sources/
+../.venv/bin/python word_resolution_sources.py            # word resolution on every poem source -> outputs/word_resolution/
 python3 degradation_protocol.py                           # the admission test on every metric, ~2 min
 python3 <metric>_v2.py score --text "..."                 # a version 2.0 candidate (anuprasa, madhurya, prasada)
 python3 compare_versions.py                               # versions 1 and 2 side by side, ~75 s
@@ -304,12 +353,14 @@ poetry_metrics/
   anuprasa_v2.py, madhurya_v2.py, prasada_v2.py   version 2.0 candidates: no statistic of the four files in a score or label
   compare_versions.py      versions 1 and 2 side by side on every admission check
   samples_analysis.py      the five metrics on the generated poems of ../samples/json
+  score_sources.py         the whole suite on every poem source (dataset files, both human-evaluation studies)
+  word_resolution_sources.py   word resolution on the same sources (../word_resolution_metric, ../.venv)
   degradation_protocol.py  the proposal's degradations applied to every metric
   real_words.py            real words v2: lexicon + compound-aware share of real words, one-akshara filler
   meaning_similarity_check.py   can poem–bhāvam embedding similarity measure meaning? (three checks)
   fixtures/                classical_exemplars.json: verses the classical texts quote, the pairs they contrast, their broken-meter examples
   baselines/               frozen corpus statistics, one JSON per metric; the prasāda model (two .tsv.gz)
-  outputs/                 validation and analysis results (JSON)
+  outputs/                 validation and analysis results (JSON); sources/ and word_resolution/: one file per poem source
   reports/                 written findings
   specs/                   one spec per metric
   tests/

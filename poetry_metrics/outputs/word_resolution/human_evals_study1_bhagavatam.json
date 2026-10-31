@@ -1,0 +1,820 @@
+{
+ "source": "human_evals_study1_bhagavatam",
+ "title": "Pothana's Bhāgavatam",
+ "family": "human_evals_study1",
+ "kind": "human",
+ "from": "human_evals/human_eval_poems_strict.json (source_dataset bhagavatam)",
+ "summary": {
+  "n_poems": 227,
+  "n_tokens": 3767,
+  "readings": {
+   "resolved_live_verified": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.8575,
+     "sd": 0.0967,
+     "p10": 0.7222,
+     "median": 0.875,
+     "p90": 1.0
+    },
+    "over_tokens": 0.8609
+   },
+   "resolved_live": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.9933,
+     "sd": 0.0225,
+     "p10": 1.0,
+     "median": 1.0,
+     "p90": 1.0
+    },
+    "over_tokens": 0.9942
+   },
+   "resolved_live_strict": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.3566,
+     "sd": 0.1628,
+     "p10": 0.1429,
+     "median": 0.3571,
+     "p90": 0.5588
+    },
+    "over_tokens": 0.3815
+   },
+   "resolved": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.9105,
+     "sd": 0.075,
+     "p10": 0.8182,
+     "median": 0.9231,
+     "p90": 1.0
+    },
+    "over_tokens": 0.914
+   },
+   "resolved_verified": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.8488,
+     "sd": 0.0936,
+     "p10": 0.7222,
+     "median": 0.8571,
+     "p90": 0.9524
+    },
+    "over_tokens": 0.8535
+   },
+   "resolved_strict": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.6704,
+     "sd": 0.158,
+     "p10": 0.4737,
+     "median": 0.6957,
+     "p90": 0.8571
+    },
+    "over_tokens": 0.6889
+   },
+   "in_table": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.8599,
+     "sd": 0.1335,
+     "p10": 0.6667,
+     "median": 0.875,
+     "p90": 1.0
+    },
+    "over_tokens": 0.8715
+   },
+   "attested": {
+    "over_poems": {
+     "n": 227,
+     "mean": 0.9866,
+     "sd": 0.0281,
+     "p10": 0.9375,
+     "median": 1.0,
+     "p90": 1.0
+    },
+    "over_tokens": 0.987
+   }
+  },
+  "classes_live": {
+   "resolved-by-byt5": {
+    "tokens": 2148,
+    "share": 0.5702
+   },
+   "inflected": {
+    "tokens": 964,
+    "share": 0.2559
+   },
+   "headword": {
+    "tokens": 628,
+    "share": 0.1667
+   },
+   "unresolved": {
+    "tokens": 22,
+    "share": 0.0058
+   },
+   "split-all-known": {
+    "tokens": 5,
+    "share": 0.0013
+   }
+  },
+  "unresolved_live_verified": {
+   "tokens": 524,
+   "types": 519,
+   "most_frequent": [
+    [
+     "స్వగురుహృదయతోషీ",
+     2
+    ],
+    [
+     "ధరణిదుహితృరంతా",
+     2
+    ],
+    [
+     "సురభయపరిహర్తా",
+     2
+    ],
+    [
+     "లెల్ల",
+     2
+    ],
+    [
+     "లెమ్ము",
+     2
+    ],
+    [
+     "మృత్యుదు",
+     1
+    ],
+    [
+     "వెల్గుచుండఁదనచెల్వము",
+     1
+    ],
+    [
+     "గొనరింపఁగాఁదగున్",
+     1
+    ],
+    [
+     "విరాట్పురుషుండు",
+     1
+    ],
+    [
+     "లొక్కొకటికిదశగుణితంబులైతవిలి",
+     1
+    ],
+    [
+     "యుండునుగ్రమమున",
+     1
+    ],
+    [
+     "విలసించునులోలత",
+     1
+    ],
+    [
+     "గలఁడో",
+     1
+    ],
+    [
+     "నీకంబెందు",
+     1
+    ],
+    [
+     "భూరికుసుమవృష్టిఁగురిసిపొగడిరి",
+     1
+    ],
+    [
+     "గిరివిహారణ",
+     1
+    ],
+    [
+     "కీర్తనీయమహారణా",
+     1
+    ],
+    [
+     "వలవదుయదువులార",
+     1
+    ],
+    [
+     "కిపుడ",
+     1
+    ],
+    [
+     "గుల్మలతాతృణాదులచేత",
+     1
+    ],
+    [
+     "శ్చలనికుంజములందు",
+     1
+    ],
+    [
+     "దుర్జనసంజ్ఞలంగల",
+     1
+    ],
+    [
+     "విపద్దశన్",
+     1
+    ],
+    [
+     "మత్కాంతుండు",
+     1
+    ],
+    [
+     "తారింటింట",
+     1
+    ],
+    [
+     "నెనమం",
+     1
+    ],
+    [
+     "గుడిసుట్టుపట్టి",
+     1
+    ],
+    [
+     "విష్టపవ్యాపకుం",
+     1
+    ],
+    [
+     "సద్విలక్షణమునఁబంచకోశవ్యవస్థనభివృద్ధిఁబొరయుచునందులోపల",
+     1
+    ],
+    [
+     "చతుష్కోశంబులవ్వల",
+     1
+    ],
+    [
+     "స్వప్రకాశుండవు",
+     1
+    ],
+    [
+     "సుయోధను",
+     1
+    ],
+    [
+     "భవదాకృతిం",
+     1
+    ],
+    [
+     "మాంసపుఁగన్నులం",
+     1
+    ],
+    [
+     "నివారియై",
+     1
+    ],
+    [
+     "మదవతీరాసశ్రమోత్తారియై",
+     1
+    ],
+    [
+     "ప్రమదామానస",
+     1
+    ],
+    [
+     "సంపత్కారియై",
+     1
+    ],
+    [
+     "విసరెంగల్యాణభావంబునన్",
+     1
+    ],
+    [
+     "ననుఁగొల్వఁజింతించినారు",
+     1
+    ]
+   ]
+  }
+ },
+ "by_metre": {
+  "mattakokilamu": {
+   "n_poems": 34,
+   "n_tokens": 614,
+   "resolved_live_verified": 0.8961,
+   "resolved_live": 0.9932,
+   "resolved_live_strict": 0.4213,
+   "resolved": 0.9121,
+   "resolved_verified": 0.8718,
+   "resolved_strict": 0.7158,
+   "in_table": 0.897,
+   "attested": 0.9879
+  },
+  "seesamu": {
+   "n_poems": 29,
+   "n_tokens": 531,
+   "resolved_live_verified": 0.8688,
+   "resolved_live": 0.9933,
+   "resolved_live_strict": 0.3231,
+   "resolved": 0.9274,
+   "resolved_verified": 0.8632,
+   "resolved_strict": 0.6451,
+   "in_table": 0.8117,
+   "attested": 0.9914
+  },
+  "mattebhavikriditamu": {
+   "n_poems": 26,
+   "n_tokens": 485,
+   "resolved_live_verified": 0.7988,
+   "resolved_live": 0.9924,
+   "resolved_live_strict": 0.3581,
+   "resolved": 0.8796,
+   "resolved_verified": 0.7895,
+   "resolved_strict": 0.6472,
+   "in_table": 0.8773,
+   "attested": 0.9799
+  },
+  "sardulavikriditamu": {
+   "n_poems": 25,
+   "n_tokens": 439,
+   "resolved_live_verified": 0.8223,
+   "resolved_live": 0.9912,
+   "resolved_live_strict": 0.3432,
+   "resolved": 0.9147,
+   "resolved_verified": 0.8266,
+   "resolved_strict": 0.6241,
+   "in_table": 0.8116,
+   "attested": 0.9768
+  },
+  "taralamu": {
+   "n_poems": 20,
+   "n_tokens": 340,
+   "resolved_live_verified": 0.8555,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.3698,
+   "resolved": 0.9112,
+   "resolved_verified": 0.8629,
+   "resolved_strict": 0.7578,
+   "in_table": 0.9079,
+   "attested": 0.9905
+  },
+  "tetagiti": {
+   "n_poems": 19,
+   "n_tokens": 235,
+   "resolved_live_verified": 0.9156,
+   "resolved_live": 0.9962,
+   "resolved_live_strict": 0.3693,
+   "resolved": 0.9384,
+   "resolved_verified": 0.8903,
+   "resolved_strict": 0.7166,
+   "in_table": 0.8589,
+   "attested": 0.9925
+  },
+  "champakamala": {
+   "n_poems": 14,
+   "n_tokens": 269,
+   "resolved_live_verified": 0.8576,
+   "resolved_live": 0.9958,
+   "resolved_live_strict": 0.3873,
+   "resolved": 0.9193,
+   "resolved_verified": 0.8581,
+   "resolved_strict": 0.7331,
+   "in_table": 0.9198,
+   "attested": 1.0
+  },
+  "malini": {
+   "n_poems": 12,
+   "n_tokens": 119,
+   "resolved_live_verified": 0.826,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.1314,
+   "resolved": 0.8431,
+   "resolved_verified": 0.8104,
+   "resolved_strict": 0.4953,
+   "in_table": 0.9824,
+   "attested": 0.9948
+  },
+  "utpalamala": {
+   "n_poems": 12,
+   "n_tokens": 211,
+   "resolved_live_verified": 0.8599,
+   "resolved_live": 0.9944,
+   "resolved_live_strict": 0.3562,
+   "resolved": 0.9011,
+   "resolved_verified": 0.8439,
+   "resolved_strict": 0.7257,
+   "in_table": 0.9235,
+   "attested": 0.9871
+  },
+  "kandamu": {
+   "n_poems": 7,
+   "n_tokens": 79,
+   "resolved_live_verified": 0.9103,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.4494,
+   "resolved": 0.9401,
+   "resolved_verified": 0.9014,
+   "resolved_strict": 0.6393,
+   "in_table": 0.7972,
+   "attested": 1.0
+  },
+  "ataveladi": {
+   "n_poems": 6,
+   "n_tokens": 56,
+   "resolved_live_verified": 0.9097,
+   "resolved_live": 0.9606,
+   "resolved_live_strict": 0.3011,
+   "resolved": 0.9468,
+   "resolved_verified": 0.9097,
+   "resolved_strict": 0.618,
+   "in_table": 0.6557,
+   "attested": 0.9606
+  },
+  "layagrahi": {
+   "n_poems": 3,
+   "n_tokens": 84,
+   "resolved_live_verified": 0.8734,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.5415,
+   "resolved": 0.9674,
+   "resolved_verified": 0.873,
+   "resolved_strict": 0.7885,
+   "in_table": 0.9275,
+   "attested": 0.9892
+  },
+  "sragdhara": {
+   "n_poems": 3,
+   "n_tokens": 48,
+   "resolved_live_verified": 0.7302,
+   "resolved_live": 0.9744,
+   "resolved_live_strict": 0.2992,
+   "resolved": 0.9155,
+   "resolved_verified": 0.7488,
+   "resolved_strict": 0.6284,
+   "in_table": 0.7068,
+   "attested": 0.9352
+  },
+  "utsahamu": {
+   "n_poems": 3,
+   "n_tokens": 42,
+   "resolved_live_verified": 0.8136,
+   "resolved_live": 0.9667,
+   "resolved_live_strict": 0.3798,
+   "resolved": 0.8645,
+   "resolved_verified": 0.8294,
+   "resolved_strict": 0.6584,
+   "in_table": 0.7781,
+   "attested": 0.9491
+  },
+  "indravajra": {
+   "n_poems": 2,
+   "n_tokens": 18,
+   "resolved_live_verified": 0.775,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.375,
+   "resolved": 0.9,
+   "resolved_verified": 0.7875,
+   "resolved_strict": 0.5625,
+   "in_table": 0.725,
+   "attested": 1.0
+  },
+  "layavibhati": {
+   "n_poems": 2,
+   "n_tokens": 58,
+   "resolved_live_verified": 0.8639,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.446,
+   "resolved": 0.9584,
+   "resolved_verified": 0.8848,
+   "resolved_strict": 0.6863,
+   "in_table": 0.8014,
+   "attested": 1.0
+  },
+  "mahasragdhara": {
+   "n_poems": 2,
+   "n_tokens": 28,
+   "resolved_live_verified": 0.7857,
+   "resolved_live": 0.9643,
+   "resolved_live_strict": 0.25,
+   "resolved": 0.8571,
+   "resolved_verified": 0.7857,
+   "resolved_strict": 0.5357,
+   "in_table": 0.8214,
+   "attested": 0.9643
+  },
+  "bhujangaprayatamu": {
+   "n_poems": 1,
+   "n_tokens": 12,
+   "resolved_live_verified": 0.9167,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.5833,
+   "resolved": 0.8333,
+   "resolved_verified": 0.8333,
+   "resolved_strict": 0.75,
+   "in_table": 1.0,
+   "attested": 1.0
+  },
+  "mangalamahasri": {
+   "n_poems": 1,
+   "n_tokens": 28,
+   "resolved_live_verified": 0.8571,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.6429,
+   "resolved": 0.9286,
+   "resolved_verified": 0.8929,
+   "resolved_strict": 0.75,
+   "in_table": 0.8214,
+   "attested": 0.9643
+  },
+  "manini": {
+   "n_poems": 1,
+   "n_tokens": 14,
+   "resolved_live_verified": 0.7857,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.2857,
+   "resolved": 0.9286,
+   "resolved_verified": 0.7857,
+   "resolved_strict": 0.5,
+   "in_table": 0.6429,
+   "attested": 1.0
+  },
+  "pamcacamaramu": {
+   "n_poems": 1,
+   "n_tokens": 15,
+   "resolved_live_verified": 0.8667,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.4667,
+   "resolved": 0.9333,
+   "resolved_verified": 0.8667,
+   "resolved_strict": 0.5333,
+   "in_table": 0.8667,
+   "attested": 1.0
+  },
+  "sragvini": {
+   "n_poems": 1,
+   "n_tokens": 14,
+   "resolved_live_verified": 1.0,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.0714,
+   "resolved": 1.0,
+   "resolved_verified": 1.0,
+   "resolved_strict": 0.6429,
+   "in_table": 0.6429,
+   "attested": 1.0
+  },
+  "totakamu": {
+   "n_poems": 1,
+   "n_tokens": 7,
+   "resolved_live_verified": 0.8571,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.0,
+   "resolved": 0.7143,
+   "resolved_verified": 0.7143,
+   "resolved_strict": 0.7143,
+   "in_table": 1.0,
+   "attested": 1.0
+  },
+  "upendravajra": {
+   "n_poems": 1,
+   "n_tokens": 9,
+   "resolved_live_verified": 0.7778,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.4444,
+   "resolved": 1.0,
+   "resolved_verified": 0.8889,
+   "resolved_strict": 0.5556,
+   "in_table": 0.6667,
+   "attested": 1.0
+  },
+  "vanamayuramu": {
+   "n_poems": 1,
+   "n_tokens": 12,
+   "resolved_live_verified": 0.9167,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.4167,
+   "resolved": 0.9167,
+   "resolved_verified": 0.75,
+   "resolved_strict": 0.5833,
+   "in_table": 0.75,
+   "attested": 1.0
+  }
+ },
+ "poems": [
+  {"id":"he_0001","metre":"utpalamala","source_id":"6-44-ఉ.","n_tokens":15,"resolved_live_verified":0.8,"resolved_live":0.9333,"resolved_live_strict":0.2667,"resolved":0.8,"resolved_verified":0.7333,"resolved_strict":0.7333,"in_table":0.9333,"attested":0.9333,"classes_live":{"resolved-by-byt5":10,"headword":2,"inflected":2,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0002","metre":"seesamu","source_id":"3-897-సీ.","n_tokens":16,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.125,"resolved":0.875,"resolved_verified":0.75,"resolved_strict":0.5625,"in_table":0.75,"attested":1.0,"classes_live":{"resolved-by-byt5":13,"headword":2,"inflected":1},"n_unresolved":4},
+  {"id":"he_0006","metre":"sardulavikriditamu","source_id":"2-75-శా.","n_tokens":22,"resolved_live_verified":0.9091,"resolved_live":1.0,"resolved_live_strict":0.3182,"resolved":0.9545,"resolved_verified":0.8636,"resolved_strict":0.5455,"in_table":0.7727,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"headword":5,"inflected":3},"n_unresolved":2},
+  {"id":"he_0008","metre":"kandamu","source_id":"10.1-1385-క.","n_tokens":12,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":0.9167,"resolved_strict":0.8333,"in_table":0.8333,"attested":1.0,"classes_live":{"resolved-by-byt5":4,"inflected":5,"headword":3},"n_unresolved":1},
+  {"id":"he_0010","metre":"taralamu","source_id":"6-529-త.","n_tokens":11,"resolved_live_verified":0.8182,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.8182,"resolved_verified":0.8182,"resolved_strict":0.7273,"in_table":0.9091,"attested":1.0,"classes_live":{"resolved-by-byt5":11},"n_unresolved":2},
+  {"id":"he_0011","metre":"tetagiti","source_id":"11-87.1-తే.","n_tokens":11,"resolved_live_verified":0.8182,"resolved_live":1.0,"resolved_live_strict":0.2727,"resolved":0.8182,"resolved_verified":0.7273,"resolved_strict":0.6364,"in_table":0.8182,"attested":1.0,"classes_live":{"inflected":5,"resolved-by-byt5":6},"n_unresolved":2},
+  {"id":"he_0013","metre":"taralamu","source_id":"5.1-166-త.","n_tokens":13,"resolved_live_verified":0.6923,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":0.9231,"resolved_verified":0.8462,"resolved_strict":0.6923,"in_table":0.7692,"attested":0.9231,"classes_live":{"inflected":2,"headword":2,"resolved-by-byt5":9},"n_unresolved":4},
+  {"id":"he_0015","metre":"mattebhavikriditamu","source_id":"1-266-మ.","n_tokens":26,"resolved_live_verified":0.8846,"resolved_live":1.0,"resolved_live_strict":0.4231,"resolved":0.8462,"resolved_verified":0.8462,"resolved_strict":0.6923,"in_table":1.0,"attested":1.0,"classes_live":{"headword":8,"resolved-by-byt5":15,"inflected":3},"n_unresolved":3},
+  {"id":"he_0017","metre":"mattakokilamu","source_id":"6-236-మత్త.","n_tokens":18,"resolved_live_verified":0.9444,"resolved_live":1.0,"resolved_live_strict":0.4444,"resolved":1.0,"resolved_verified":0.9444,"resolved_strict":0.8889,"in_table":0.8333,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":6,"headword":2},"n_unresolved":1},
+  {"id":"he_0019","metre":"tetagiti","source_id":"4-7.1-తే.","n_tokens":14,"resolved_live_verified":0.9286,"resolved_live":1.0,"resolved_live_strict":0.5714,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7857,"in_table":0.7857,"attested":1.0,"classes_live":{"headword":7,"resolved-by-byt5":6,"inflected":1},"n_unresolved":1},
+  {"id":"he_0020","metre":"seesamu","source_id":"10.2-1211-సీ.","n_tokens":16,"resolved_live_verified":0.8125,"resolved_live":1.0,"resolved_live_strict":0.375,"resolved":0.9375,"resolved_verified":0.8125,"resolved_strict":0.625,"in_table":0.75,"attested":1.0,"classes_live":{"inflected":2,"headword":5,"resolved-by-byt5":9},"n_unresolved":3},
+  {"id":"he_0022","metre":"utpalamala","source_id":"3-32-ఉ.","n_tokens":19,"resolved_live_verified":0.9474,"resolved_live":1.0,"resolved_live_strict":0.4737,"resolved":0.9474,"resolved_verified":0.8947,"resolved_strict":0.7368,"in_table":0.8421,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":6,"headword":4},"n_unresolved":1},
+  {"id":"he_0024","metre":"mattakokilamu","source_id":"10.1-128-మత్త.","n_tokens":14,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.4286,"resolved":0.8571,"resolved_verified":0.8571,"resolved_strict":0.5,"in_table":0.6429,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"headword":4,"inflected":2},"n_unresolved":2},
+  {"id":"he_0027","metre":"mattebhavikriditamu","source_id":"10.1-1091-మ.","n_tokens":18,"resolved_live_verified":0.7222,"resolved_live":1.0,"resolved_live_strict":0.2778,"resolved":0.9444,"resolved_verified":0.7778,"resolved_strict":0.7222,"in_table":0.8889,"attested":0.9444,"classes_live":{"inflected":3,"resolved-by-byt5":12,"headword":3},"n_unresolved":5},
+  {"id":"he_0034","metre":"seesamu","source_id":"10.1-849-సీ.","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":0.9474,"resolved_live_strict":0.3158,"resolved":0.8947,"resolved_verified":0.8421,"resolved_strict":0.5789,"in_table":0.7895,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":5,"headword":2,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0035","metre":"mattebhavikriditamu","source_id":"9-384-మ.","n_tokens":20,"resolved_live_verified":0.85,"resolved_live":0.95,"resolved_live_strict":0.4,"resolved":0.85,"resolved_verified":0.75,"resolved_strict":0.55,"in_table":0.8,"attested":1.0,"classes_live":{"inflected":4,"headword":5,"resolved-by-byt5":10,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0038","metre":"mattebhavikriditamu","source_id":"10.1-1036-మ.","n_tokens":20,"resolved_live_verified":0.8,"resolved_live":1.0,"resolved_live_strict":0.35,"resolved":0.8,"resolved_verified":0.8,"resolved_strict":0.7,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":7,"resolved-by-byt5":13},"n_unresolved":4},
+  {"id":"he_0039","metre":"seesamu","source_id":"4-150-సీ.","n_tokens":26,"resolved_live_verified":0.9231,"resolved_live":1.0,"resolved_live_strict":0.4231,"resolved":0.9231,"resolved_verified":0.9231,"resolved_strict":0.8462,"in_table":1.0,"attested":1.0,"classes_live":{"headword":5,"inflected":8,"resolved-by-byt5":13},"n_unresolved":2},
+  {"id":"he_0047","metre":"totakamu","source_id":"6-530-తో.","n_tokens":7,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.7143,"resolved_verified":0.7143,"resolved_strict":0.7143,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"inflected":1},"n_unresolved":1},
+  {"id":"he_0049","metre":"tetagiti","source_id":"10.2-394.1-తే.","n_tokens":13,"resolved_live_verified":0.9231,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":0.8462,"resolved_verified":0.8462,"resolved_strict":0.6154,"in_table":0.8462,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":5,"headword":2},"n_unresolved":1},
+  {"id":"he_0050","metre":"seesamu","source_id":"9-16-సీ.","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":1.0,"resolved_live_strict":0.3158,"resolved":0.9474,"resolved_verified":0.8947,"resolved_strict":0.7368,"in_table":0.8421,"attested":1.0,"classes_live":{"headword":4,"resolved-by-byt5":13,"inflected":2},"n_unresolved":3},
+  {"id":"he_0051","metre":"pamcacamaramu","source_id":"10.1-586-పంచ.","n_tokens":15,"resolved_live_verified":0.8667,"resolved_live":1.0,"resolved_live_strict":0.4667,"resolved":0.9333,"resolved_verified":0.8667,"resolved_strict":0.5333,"in_table":0.8667,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":5,"headword":3},"n_unresolved":2},
+  {"id":"he_0053","metre":"taralamu","source_id":"1-60-త.","n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.3,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.85,"in_table":0.95,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":3,"inflected":8},"n_unresolved":1},
+  {"id":"he_0054","metre":"champakamala","source_id":"10.2-937-చ.","n_tokens":17,"resolved_live_verified":0.8824,"resolved_live":0.9412,"resolved_live_strict":0.2353,"resolved":0.9412,"resolved_verified":0.8824,"resolved_strict":0.7647,"in_table":0.9412,"attested":1.0,"classes_live":{"inflected":5,"resolved-by-byt5":10,"unresolved":1,"headword":1},"n_unresolved":2},
+  {"id":"he_0056","metre":"seesamu","source_id":"2-221-సీ.","n_tokens":21,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5238,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7619,"in_table":0.8571,"attested":1.0,"classes_live":{"inflected":10,"resolved-by-byt5":9,"headword":2},"n_unresolved":0},
+  {"id":"he_0057","metre":"malini","source_id":"3-1054-మాలి.","n_tokens":10,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.1,"resolved":0.9,"resolved_verified":0.9,"resolved_strict":0.7,"in_table":0.9,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":2},"n_unresolved":1},
+  {"id":"he_0058","metre":"seesamu","source_id":"5.1-147-సీ.","n_tokens":22,"resolved_live_verified":0.9091,"resolved_live":1.0,"resolved_live_strict":0.4091,"resolved":0.9091,"resolved_verified":0.9091,"resolved_strict":0.6818,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":13,"inflected":5,"headword":4},"n_unresolved":2},
+  {"id":"he_0060","metre":"layavibhati","source_id":"10.1-1563-లవి.","n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.9167,"resolved_verified":0.9167,"resolved_strict":0.6667,"in_table":0.75,"attested":1.0,"classes_live":{"inflected":8,"resolved-by-byt5":15,"headword":1},"n_unresolved":3},
+  {"id":"he_0061","metre":"champakamala","source_id":"3-119-చ.","n_tokens":18,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.8333,"resolved_verified":0.8333,"resolved_strict":0.7778,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":11,"headword":1},"n_unresolved":4},
+  {"id":"he_0063","metre":"sardulavikriditamu","source_id":"10.2-408-శా.","n_tokens":15,"resolved_live_verified":0.6667,"resolved_live":1.0,"resolved_live_strict":0.2,"resolved":0.8,"resolved_verified":0.6,"resolved_strict":0.4667,"in_table":0.8,"attested":0.9333,"classes_live":{"inflected":2,"resolved-by-byt5":11,"headword":2},"n_unresolved":5},
+  {"id":"he_0066","metre":"mattakokilamu","source_id":"10.1-310-మత్త.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.3684,"resolved":1.0,"resolved_verified":0.8947,"resolved_strict":0.6842,"in_table":0.7368,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"headword":6,"inflected":1},"n_unresolved":2},
+  {"id":"he_0067","metre":"taralamu","source_id":"1-77-త.","n_tokens":20,"resolved_live_verified":0.8,"resolved_live":1.0,"resolved_live_strict":0.4,"resolved":0.9,"resolved_verified":0.8,"resolved_strict":0.75,"in_table":0.9,"attested":0.95,"classes_live":{"headword":5,"resolved-by-byt5":10,"inflected":5},"n_unresolved":4},
+  {"id":"he_0070","metre":"tetagiti","source_id":"7-376.1-తే.","n_tokens":12,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.4167,"resolved":1.0,"resolved_verified":0.9167,"resolved_strict":0.6667,"in_table":0.6667,"attested":1.0,"classes_live":{"inflected":3,"resolved-by-byt5":6,"headword":3},"n_unresolved":1},
+  {"id":"he_0071","metre":"layavibhati","source_id":"10.2-737-లవి.","n_tokens":34,"resolved_live_verified":0.8529,"resolved_live":1.0,"resolved_live_strict":0.5588,"resolved":1.0,"resolved_verified":0.8529,"resolved_strict":0.7059,"in_table":0.8529,"attested":1.0,"classes_live":{"resolved-by-byt5":13,"inflected":19,"headword":2},"n_unresolved":5},
+  {"id":"he_0072","metre":"mattebhavikriditamu","source_id":"3-799-మ.","n_tokens":14,"resolved_live_verified":0.6429,"resolved_live":1.0,"resolved_live_strict":0.2143,"resolved":0.8571,"resolved_verified":0.7143,"resolved_strict":0.4286,"in_table":0.8571,"attested":0.9286,"classes_live":{"resolved-by-byt5":10,"inflected":4},"n_unresolved":5},
+  {"id":"he_0074","metre":"seesamu","source_id":"10.1-1347-సీ.","n_tokens":20,"resolved_live_verified":0.85,"resolved_live":1.0,"resolved_live_strict":0.4,"resolved":0.95,"resolved_verified":0.85,"resolved_strict":0.8,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":6,"headword":4},"n_unresolved":3},
+  {"id":"he_0076","metre":"ataveladi","source_id":"10.1-803-ఆ.","n_tokens":5,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.4,"in_table":0.4,"attested":1.0,"classes_live":{"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"he_0081","metre":"sardulavikriditamu","source_id":"10.1-1185-శా.","n_tokens":13,"resolved_live_verified":0.6154,"resolved_live":1.0,"resolved_live_strict":0.1538,"resolved":0.6923,"resolved_verified":0.6154,"resolved_strict":0.2308,"in_table":0.6154,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":1,"headword":1},"n_unresolved":5},
+  {"id":"he_0082","metre":"seesamu","source_id":"9-728-సీ.","n_tokens":13,"resolved_live_verified":0.7692,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":0.9231,"resolved_verified":0.7692,"resolved_strict":0.4615,"in_table":0.6154,"attested":0.9231,"classes_live":{"headword":1,"resolved-by-byt5":9,"inflected":3},"n_unresolved":3},
+  {"id":"he_0083","metre":"taralamu","source_id":"2-8-త.","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":1.0,"resolved_live_strict":0.4211,"resolved":0.8421,"resolved_verified":0.7895,"resolved_strict":0.6842,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":4,"headword":5},"n_unresolved":3},
+  {"id":"he_0084","metre":"mattakokilamu","source_id":"8-168-మత్త.","n_tokens":22,"resolved_live_verified":0.8636,"resolved_live":1.0,"resolved_live_strict":0.6818,"resolved":0.9545,"resolved_verified":0.9091,"resolved_strict":0.8636,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":9,"headword":6,"resolved-by-byt5":7},"n_unresolved":3},
+  {"id":"he_0086","metre":"mattebhavikriditamu","source_id":"7-295-మ.","n_tokens":15,"resolved_live_verified":0.8667,"resolved_live":1.0,"resolved_live_strict":0.1333,"resolved":0.8667,"resolved_verified":0.7333,"resolved_strict":0.5333,"in_table":0.7333,"attested":1.0,"classes_live":{"resolved-by-byt5":13,"inflected":2},"n_unresolved":2},
+  {"id":"he_0087","metre":"mattebhavikriditamu","source_id":"10.1-1074-మ.","n_tokens":15,"resolved_live_verified":0.8,"resolved_live":1.0,"resolved_live_strict":0.4667,"resolved":0.9333,"resolved_verified":0.8,"resolved_strict":0.6667,"in_table":0.8667,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":7},"n_unresolved":3},
+  {"id":"he_0090","metre":"sardulavikriditamu","source_id":"7-207-శా.","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":0.9474,"resolved_live_strict":0.4737,"resolved":0.8947,"resolved_verified":0.8947,"resolved_strict":0.8421,"in_table":0.8947,"attested":0.9474,"classes_live":{"resolved-by-byt5":9,"inflected":4,"headword":5,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0091","metre":"malini","source_id":"9-735-మాలి.","n_tokens":9,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.1111,"resolved":0.8889,"resolved_verified":0.8889,"resolved_strict":0.1111,"in_table":0.8889,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"headword":1},"n_unresolved":1},
+  {"id":"he_0094","metre":"mattakokilamu","source_id":"10.1-103-మత్త.","n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9375,"resolved_verified":0.8125,"resolved_strict":0.625,"in_table":0.875,"attested":0.9375,"classes_live":{"headword":6,"resolved-by-byt5":8,"inflected":2},"n_unresolved":1},
+  {"id":"he_0095","metre":"mattakokilamu","source_id":"7-225-మత్త.","n_tokens":17,"resolved_live_verified":0.8824,"resolved_live":1.0,"resolved_live_strict":0.2941,"resolved":0.9412,"resolved_verified":0.9412,"resolved_strict":0.7647,"in_table":0.9412,"attested":1.0,"classes_live":{"inflected":4,"headword":2,"resolved-by-byt5":11},"n_unresolved":2},
+  {"id":"he_0099","metre":"sardulavikriditamu","source_id":"1-1-శా.","n_tokens":18,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.8889,"resolved_verified":0.8889,"resolved_strict":0.6667,"in_table":0.7778,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":5,"inflected":3},"n_unresolved":4},
+  {"id":"he_0100","metre":"champakamala","source_id":"3-277-చ.","n_tokens":18,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.8889,"resolved_verified":0.7778,"resolved_strict":0.7222,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":6,"headword":2},"n_unresolved":2},
+  {"id":"he_0102","metre":"seesamu","source_id":"5.2-98-సీ.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.4211,"resolved":1.0,"resolved_verified":0.9474,"resolved_strict":0.6842,"in_table":0.7895,"attested":1.0,"classes_live":{"headword":4,"resolved-by-byt5":10,"inflected":5},"n_unresolved":2},
+  {"id":"he_0106","metre":"seesamu","source_id":"4-541-సీ.","n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.1875,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.5625,"in_table":0.625,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"headword":3,"inflected":1},"n_unresolved":0},
+  {"id":"he_0111","metre":"mattakokilamu","source_id":"10.1-34-మత్త.","n_tokens":19,"resolved_live_verified":0.7895,"resolved_live":1.0,"resolved_live_strict":0.3684,"resolved":0.8421,"resolved_verified":0.8421,"resolved_strict":0.7895,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":3,"headword":5},"n_unresolved":4},
+  {"id":"he_0117","metre":"champakamala","source_id":"6-399-చ.","n_tokens":25,"resolved_live_verified":0.88,"resolved_live":1.0,"resolved_live_strict":0.52,"resolved":0.88,"resolved_verified":0.84,"resolved_strict":0.76,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":8,"resolved-by-byt5":11,"headword":6},"n_unresolved":3},
+  {"id":"he_0118","metre":"utpalamala","source_id":"10.2-1106-ఉ.","n_tokens":16,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":1.0,"resolved_verified":0.75,"resolved_strict":0.6875,"in_table":0.9375,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"headword":3,"inflected":2},"n_unresolved":4},
+  {"id":"he_0120","metre":"malini","source_id":"10.1-1791-మాలి.","n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.375,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.875,"in_table":1.0,"attested":0.9375,"classes_live":{"resolved-by-byt5":9,"inflected":6,"headword":1},"n_unresolved":1},
+  {"id":"he_0121","metre":"mattakokilamu","source_id":"10.1-990-మత్త.","n_tokens":16,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.1875,"resolved":0.9375,"resolved_verified":0.875,"resolved_strict":0.5625,"in_table":0.6875,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"headword":2,"inflected":2},"n_unresolved":2},
+  {"id":"he_0123","metre":"sardulavikriditamu","source_id":"10.2-222-శా.","n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.625,"in_table":0.75,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"headword":3,"inflected":1},"n_unresolved":1},
+  {"id":"he_0124","metre":"mahasragdhara","source_id":"10.2-940-మస్ర.","n_tokens":14,"resolved_live_verified":0.7857,"resolved_live":1.0,"resolved_live_strict":0.2143,"resolved":0.9286,"resolved_verified":0.8571,"resolved_strict":0.6429,"in_table":0.8571,"attested":1.0,"classes_live":{"inflected":5,"resolved-by-byt5":9},"n_unresolved":3},
+  {"id":"he_0128","metre":"ataveladi","source_id":"8-66-ఆ.","n_tokens":9,"resolved_live_verified":0.6667,"resolved_live":0.8889,"resolved_live_strict":0.2222,"resolved":0.8889,"resolved_verified":0.6667,"resolved_strict":0.5556,"in_table":0.5556,"attested":0.8889,"classes_live":{"resolved-by-byt5":6,"unresolved":1,"inflected":2},"n_unresolved":3},
+  {"id":"he_0129","metre":"tetagiti","source_id":"10.2-1329.1-తే.","n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.625,"resolved":0.9375,"resolved_verified":0.9375,"resolved_strict":0.875,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"headword":7,"inflected":4},"n_unresolved":0},
+  {"id":"he_0132","metre":"taralamu","source_id":"9-388-త.","n_tokens":12,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.1667,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8333,"in_table":0.8333,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":2},"n_unresolved":0},
+  {"id":"he_0133","metre":"layagrahi","source_id":"10.2-739-లగ్రా.","n_tokens":23,"resolved_live_verified":0.7826,"resolved_live":1.0,"resolved_live_strict":0.4783,"resolved":1.0,"resolved_verified":0.7826,"resolved_strict":0.6957,"in_table":0.7826,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":10,"headword":1},"n_unresolved":5},
+  {"id":"he_0139","metre":"utpalamala","source_id":"10.1-1188-ఉ.","n_tokens":18,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.3889,"resolved":0.9444,"resolved_verified":0.7778,"resolved_strict":0.6667,"in_table":0.8889,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":3,"headword":4},"n_unresolved":4},
+  {"id":"he_0141","metre":"manini","source_id":"10.1-214-మాని.","n_tokens":14,"resolved_live_verified":0.7857,"resolved_live":1.0,"resolved_live_strict":0.2857,"resolved":0.9286,"resolved_verified":0.7857,"resolved_strict":0.5,"in_table":0.6429,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":3,"headword":1},"n_unresolved":3},
+  {"id":"he_0142","metre":"sardulavikriditamu","source_id":"10.1-827-శా.","n_tokens":19,"resolved_live_verified":0.7895,"resolved_live":1.0,"resolved_live_strict":0.4211,"resolved":0.9474,"resolved_verified":0.7368,"resolved_strict":0.5263,"in_table":0.6316,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"headword":3,"inflected":5},"n_unresolved":4},
+  {"id":"he_0145","metre":"kandamu","source_id":"3-13-క.","n_tokens":12,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9167,"in_table":0.9167,"attested":1.0,"classes_live":{"inflected":7,"resolved-by-byt5":4,"headword":1},"n_unresolved":0},
+  {"id":"he_0146","metre":"mattebhavikriditamu","source_id":"8-475-మ.","n_tokens":23,"resolved_live_verified":0.8261,"resolved_live":1.0,"resolved_live_strict":0.4348,"resolved":0.8696,"resolved_verified":0.7826,"resolved_strict":0.7826,"in_table":0.9565,"attested":1.0,"classes_live":{"inflected":5,"resolved-by-byt5":12,"headword":6},"n_unresolved":4},
+  {"id":"he_0148","metre":"mattakokilamu","source_id":"9-351-మత్త.","n_tokens":17,"resolved_live_verified":0.9412,"resolved_live":1.0,"resolved_live_strict":0.3529,"resolved":1.0,"resolved_verified":0.9412,"resolved_strict":0.6471,"in_table":0.7647,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"headword":3,"inflected":3},"n_unresolved":1},
+  {"id":"he_0150","metre":"seesamu","source_id":"3-686-సీ.","n_tokens":12,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.9167,"resolved_verified":0.75,"resolved_strict":0.4167,"in_table":0.6667,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":2,"headword":2},"n_unresolved":2},
+  {"id":"he_0152","metre":"sardulavikriditamu","source_id":"7-215-శా.","n_tokens":16,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.8125,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":4},"n_unresolved":2},
+  {"id":"he_0154","metre":"mattakokilamu","source_id":"1-328-మత్త.","n_tokens":21,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7143,"resolved":0.8571,"resolved_verified":0.8571,"resolved_strict":0.8571,"in_table":1.0,"attested":1.0,"classes_live":{"headword":9,"resolved-by-byt5":5,"inflected":7},"n_unresolved":0},
+  {"id":"he_0156","metre":"vanamayuramu","source_id":"6-378-వన.","n_tokens":12,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.4167,"resolved":0.9167,"resolved_verified":0.75,"resolved_strict":0.5833,"in_table":0.75,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"headword":2,"inflected":3},"n_unresolved":1},
+  {"id":"he_0158","metre":"malini","source_id":"7-481-మాలి.","n_tokens":8,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.625,"resolved_verified":0.625,"resolved_strict":0.125,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8},"n_unresolved":2},
+  {"id":"he_0160","metre":"tetagiti","source_id":"4-742.1-తే.","n_tokens":12,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.4167,"resolved":0.9167,"resolved_verified":0.9167,"resolved_strict":0.8333,"in_table":1.0,"attested":1.0,"classes_live":{"headword":3,"resolved-by-byt5":7,"inflected":2},"n_unresolved":1},
+  {"id":"he_0162","metre":"champakamala","source_id":"2-140-చ.","n_tokens":17,"resolved_live_verified":0.8235,"resolved_live":1.0,"resolved_live_strict":0.4118,"resolved":0.7647,"resolved_verified":0.7647,"resolved_strict":0.7059,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":6,"headword":2},"n_unresolved":3},
+  {"id":"he_0166","metre":"mattakokilamu","source_id":"10.2-1152-మత్త.","n_tokens":16,"resolved_live_verified":0.8125,"resolved_live":0.9375,"resolved_live_strict":0.25,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.6875,"in_table":0.875,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":3,"headword":2,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0167","metre":"kandamu","source_id":"7-247-క.","n_tokens":8,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":1.0,"resolved_verified":0.875,"resolved_strict":0.375,"in_table":0.375,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"inflected":2},"n_unresolved":1},
+  {"id":"he_0169","metre":"tetagiti","source_id":"10.2-1276.1-తే.","n_tokens":10,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.3,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8,"in_table":0.9,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"headword":3,"inflected":1},"n_unresolved":0},
+  {"id":"he_0170","metre":"seesamu","source_id":"4-409-సీ.","n_tokens":17,"resolved_live_verified":0.7059,"resolved_live":1.0,"resolved_live_strict":0.1765,"resolved":0.8235,"resolved_verified":0.7647,"resolved_strict":0.5882,"in_table":0.8235,"attested":0.9412,"classes_live":{"inflected":4,"resolved-by-byt5":12,"headword":1},"n_unresolved":5},
+  {"id":"he_0173","metre":"mattebhavikriditamu","source_id":"8-35-మ.","n_tokens":21,"resolved_live_verified":0.9524,"resolved_live":1.0,"resolved_live_strict":0.7619,"resolved":0.9524,"resolved_verified":0.8571,"resolved_strict":0.8571,"in_table":1.0,"attested":0.9524,"classes_live":{"inflected":15,"resolved-by-byt5":5,"headword":1},"n_unresolved":1},
+  {"id":"he_0174","metre":"sardulavikriditamu","source_id":"10.1-1378-శా.","n_tokens":19,"resolved_live_verified":0.9474,"resolved_live":1.0,"resolved_live_strict":0.7368,"resolved":1.0,"resolved_verified":0.9474,"resolved_strict":0.7368,"in_table":0.8947,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"headword":5,"inflected":9},"n_unresolved":1},
+  {"id":"he_0175","metre":"taralamu","source_id":"9-158-త.","n_tokens":21,"resolved_live_verified":0.8095,"resolved_live":1.0,"resolved_live_strict":0.5238,"resolved":0.9524,"resolved_verified":0.8095,"resolved_strict":0.6667,"in_table":0.8095,"attested":1.0,"classes_live":{"inflected":7,"resolved-by-byt5":10,"headword":4},"n_unresolved":4},
+  {"id":"he_0176","metre":"mattakokilamu","source_id":"1-272-మత్త.","n_tokens":18,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.3889,"resolved":0.9444,"resolved_verified":0.9444,"resolved_strict":0.7778,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":7,"headword":2,"resolved-by-byt5":9},"n_unresolved":2},
+  {"id":"he_0177","metre":"mattebhavikriditamu","source_id":"7-289-మ.","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":1.0,"resolved_live_strict":0.4737,"resolved":0.8947,"resolved_verified":0.8421,"resolved_strict":0.7895,"in_table":0.8947,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":5,"inflected":4},"n_unresolved":3},
+  {"id":"he_0183","metre":"mattebhavikriditamu","source_id":"8-159-మ.","n_tokens":21,"resolved_live_verified":0.8095,"resolved_live":1.0,"resolved_live_strict":0.5238,"resolved":0.9048,"resolved_verified":0.8571,"resolved_strict":0.8571,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":6,"headword":5},"n_unresolved":4},
+  {"id":"he_0186","metre":"taralamu","source_id":"6-170-త.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.5789,"resolved":1.0,"resolved_verified":0.9474,"resolved_strict":0.8421,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":5,"headword":6,"resolved-by-byt5":8},"n_unresolved":2},
+  {"id":"he_0187","metre":"utpalamala","source_id":"6-278-ఉ.","n_tokens":13,"resolved_live_verified":0.7692,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":0.9231,"resolved_verified":0.9231,"resolved_strict":0.6923,"in_table":0.8462,"attested":1.0,"classes_live":{"inflected":4,"resolved-by-byt5":8,"headword":1},"n_unresolved":3},
+  {"id":"he_0189","metre":"mattakokilamu","source_id":"6-321-మత్త.","n_tokens":22,"resolved_live_verified":0.9545,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9091,"resolved_verified":0.9091,"resolved_strict":0.8182,"in_table":1.0,"attested":1.0,"classes_live":{"headword":5,"resolved-by-byt5":9,"inflected":8},"n_unresolved":1},
+  {"id":"he_0190","metre":"bhujangaprayatamu","source_id":"1-295-భు.","n_tokens":12,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.5833,"resolved":0.8333,"resolved_verified":0.8333,"resolved_strict":0.75,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":5,"headword":1},"n_unresolved":1},
+  {"id":"he_0191","metre":"sragdhara","source_id":"10.2-952-స్రగ్ద.","n_tokens":13,"resolved_live_verified":0.7692,"resolved_live":0.9231,"resolved_live_strict":0.3846,"resolved":0.9231,"resolved_verified":0.7692,"resolved_strict":0.6923,"in_table":0.6923,"attested":0.9231,"classes_live":{"inflected":5,"resolved-by-byt5":7,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0195","metre":"seesamu","source_id":"1-79-సీ.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.2632,"resolved":0.8947,"resolved_verified":0.8947,"resolved_strict":0.4737,"in_table":0.6842,"attested":1.0,"classes_live":{"inflected":4,"resolved-by-byt5":12,"headword":3},"n_unresolved":2},
+  {"id":"he_0196","metre":"taralamu","source_id":"10.1-1080-త.","n_tokens":14,"resolved_live_verified":0.9286,"resolved_live":1.0,"resolved_live_strict":0.3571,"resolved":0.9286,"resolved_verified":0.8571,"resolved_strict":0.7143,"in_table":0.7857,"attested":1.0,"classes_live":{"headword":2,"resolved-by-byt5":9,"inflected":3},"n_unresolved":1},
+  {"id":"he_0197","metre":"mattebhavikriditamu","source_id":"8-437-మ.","n_tokens":24,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.8333,"resolved_verified":0.8333,"resolved_strict":0.7917,"in_table":1.0,"attested":0.9167,"classes_live":{"headword":3,"resolved-by-byt5":11,"inflected":10},"n_unresolved":4},
+  {"id":"he_0201","metre":"champakamala","source_id":"3-1011-చ.","n_tokens":22,"resolved_live_verified":0.9545,"resolved_live":1.0,"resolved_live_strict":0.5909,"resolved":1.0,"resolved_verified":0.9545,"resolved_strict":0.7273,"in_table":0.7727,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"headword":7,"inflected":8},"n_unresolved":1},
+  {"id":"he_0208","metre":"layagrahi","source_id":"6-373-లగ్రా.","n_tokens":31,"resolved_live_verified":0.871,"resolved_live":1.0,"resolved_live_strict":0.6129,"resolved":0.9355,"resolved_verified":0.9032,"resolved_strict":0.9032,"in_table":1.0,"attested":0.9677,"classes_live":{"resolved-by-byt5":11,"inflected":15,"headword":5},"n_unresolved":4},
+  {"id":"he_0209","metre":"mattebhavikriditamu","source_id":"2-40-మ.","n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":0.9375,"resolved_verified":0.875,"resolved_strict":0.625,"in_table":0.875,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"headword":4,"inflected":1},"n_unresolved":1},
+  {"id":"he_0213","metre":"tetagiti","source_id":"4-531.1-తే.","n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.4667,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8,"in_table":0.8667,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":6,"headword":3},"n_unresolved":0},
+  {"id":"he_0215","metre":"champakamala","source_id":"4-608-చ.","n_tokens":23,"resolved_live_verified":0.8261,"resolved_live":1.0,"resolved_live_strict":0.4348,"resolved":0.913,"resolved_verified":0.913,"resolved_strict":0.7826,"in_table":0.9565,"attested":1.0,"classes_live":{"inflected":8,"headword":5,"resolved-by-byt5":10},"n_unresolved":4},
+  {"id":"he_0217","metre":"layagrahi","source_id":"6-385-లగ్రా.","n_tokens":30,"resolved_live_verified":0.9667,"resolved_live":1.0,"resolved_live_strict":0.5333,"resolved":0.9667,"resolved_verified":0.9333,"resolved_strict":0.7667,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":12,"resolved-by-byt5":14,"headword":4},"n_unresolved":1},
+  {"id":"he_0218","metre":"utpalamala","source_id":"3-380-ఉ.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.3684,"resolved":0.9474,"resolved_verified":0.9474,"resolved_strict":0.7895,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":3,"headword":4},"n_unresolved":2},
+  {"id":"he_0219","metre":"malini","source_id":"2-287-మాలి.","n_tokens":7,"resolved_live_verified":0.7143,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.8571,"resolved_verified":0.8571,"resolved_strict":0.7143,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":7},"n_unresolved":2},
+  {"id":"he_0220","metre":"mattebhavikriditamu","source_id":"10.2-627-మ.","n_tokens":13,"resolved_live_verified":0.5385,"resolved_live":1.0,"resolved_live_strict":0.2308,"resolved":0.9231,"resolved_verified":0.6154,"resolved_strict":0.5385,"in_table":0.6923,"attested":0.9231,"classes_live":{"resolved-by-byt5":10,"headword":2,"inflected":1},"n_unresolved":6},
+  {"id":"he_0223","metre":"malini","source_id":"4-976-మాలి.","n_tokens":13,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.4615,"resolved":0.9231,"resolved_verified":0.9231,"resolved_strict":0.9231,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":6},"n_unresolved":0},
+  {"id":"he_0226","metre":"indravajra","source_id":"10.1-1112-ఇం.","n_tokens":10,"resolved_live_verified":0.8,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.8,"resolved_verified":0.7,"resolved_strict":0.5,"in_table":0.7,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"inflected":5},"n_unresolved":2},
+  {"id":"he_0227","metre":"taralamu","source_id":"10.1-570-త.","n_tokens":18,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.4444,"resolved":0.8333,"resolved_verified":0.8333,"resolved_strict":0.7778,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":6,"headword":2},"n_unresolved":3},
+  {"id":"he_0228","metre":"tetagiti","source_id":"10.1-305.1-తే.","n_tokens":13,"resolved_live_verified":0.6154,"resolved_live":1.0,"resolved_live_strict":0.3846,"resolved":0.9231,"resolved_verified":0.6923,"resolved_strict":0.6154,"in_table":0.8462,"attested":1.0,"classes_live":{"headword":3,"resolved-by-byt5":7,"inflected":3},"n_unresolved":5},
+  {"id":"he_0231","metre":"ataveladi","source_id":"6-519.1-ఆ.","n_tokens":7,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.1429,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.2857,"in_table":0.4286,"attested":1.0,"classes_live":{"inflected":1,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"he_0232","metre":"malini","source_id":"8-744-మాలి.","n_tokens":8,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.875,"resolved_verified":0.75,"resolved_strict":0.25,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8},"n_unresolved":2},
+  {"id":"he_0233","metre":"tetagiti","source_id":"2-150.1-తే.","n_tokens":11,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.4545,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7273,"in_table":0.8182,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"inflected":4,"headword":2},"n_unresolved":0},
+  {"id":"he_0234","metre":"mattebhavikriditamu","source_id":"10.2-50-మ.","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":1.0,"resolved_live_strict":0.2632,"resolved":0.9474,"resolved_verified":0.7368,"resolved_strict":0.5263,"in_table":0.7368,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"headword":3,"inflected":2},"n_unresolved":3},
+  {"id":"he_0235","metre":"tetagiti","source_id":"9-54-తే.","n_tokens":14,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.5714,"resolved":1.0,"resolved_verified":0.8571,"resolved_strict":0.6429,"in_table":0.7857,"attested":1.0,"classes_live":{"headword":5,"resolved-by-byt5":6,"inflected":3},"n_unresolved":2},
+  {"id":"he_0237","metre":"malini","source_id":"1-529-మాలి.","n_tokens":17,"resolved_live_verified":0.8824,"resolved_live":1.0,"resolved_live_strict":0.5294,"resolved":0.9412,"resolved_verified":0.9412,"resolved_strict":0.9412,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"headword":5,"inflected":6},"n_unresolved":2},
+  {"id":"he_0238","metre":"mattakokilamu","source_id":"7-358-మత్త.","n_tokens":17,"resolved_live_verified":0.8235,"resolved_live":1.0,"resolved_live_strict":0.2941,"resolved":0.9412,"resolved_verified":0.7647,"resolved_strict":0.7059,"in_table":1.0,"attested":0.9412,"classes_live":{"resolved-by-byt5":12,"headword":3,"inflected":2},"n_unresolved":3},
+  {"id":"he_0241","metre":"sardulavikriditamu","source_id":"10.1-408-శా.","n_tokens":15,"resolved_live_verified":0.6667,"resolved_live":1.0,"resolved_live_strict":0.4,"resolved":1.0,"resolved_verified":0.6667,"resolved_strict":0.5333,"in_table":0.6,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":2,"headword":4},"n_unresolved":5},
+  {"id":"he_0242","metre":"mattakokilamu","source_id":"8-696-మత్త.","n_tokens":22,"resolved_live_verified":0.9091,"resolved_live":1.0,"resolved_live_strict":0.5455,"resolved":0.9091,"resolved_verified":0.8636,"resolved_strict":0.8182,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":5,"inflected":7},"n_unresolved":2},
+  {"id":"he_0243","metre":"sardulavikriditamu","source_id":"8-71-శా.","n_tokens":18,"resolved_live_verified":0.7222,"resolved_live":0.9444,"resolved_live_strict":0.2222,"resolved":0.7222,"resolved_verified":0.7222,"resolved_strict":0.5,"in_table":0.8333,"attested":0.9444,"classes_live":{"resolved-by-byt5":13,"inflected":2,"unresolved":1,"headword":2},"n_unresolved":5},
+  {"id":"he_0245","metre":"mattakokilamu","source_id":"10.1-1769-మత్త.","n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.45,"resolved":0.9,"resolved_verified":0.9,"resolved_strict":0.7,"in_table":1.0,"attested":0.95,"classes_live":{"headword":4,"inflected":6,"resolved-by-byt5":10},"n_unresolved":1},
+  {"id":"he_0247","metre":"seesamu","source_id":"7-124-సీ.","n_tokens":17,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.1176,"resolved":1.0,"resolved_verified":0.8824,"resolved_strict":0.5882,"in_table":0.7059,"attested":1.0,"classes_live":{"inflected":3,"resolved-by-byt5":13,"headword":1},"n_unresolved":0},
+  {"id":"he_0248","metre":"sragdhara","source_id":"10.2-883-స్రగ్ద.","n_tokens":17,"resolved_live_verified":0.5882,"resolved_live":1.0,"resolved_live_strict":0.2353,"resolved":0.8235,"resolved_verified":0.5882,"resolved_strict":0.4706,"in_table":0.7059,"attested":0.8824,"classes_live":{"resolved-by-byt5":12,"inflected":4,"headword":1},"n_unresolved":7},
+  {"id":"he_0249","metre":"kandamu","source_id":"3-347-క.","n_tokens":16,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.3125,"resolved":0.875,"resolved_verified":0.8125,"resolved_strict":0.5,"in_table":1.0,"attested":1.0,"classes_live":{"headword":3,"resolved-by-byt5":10,"inflected":3},"n_unresolved":2},
+  {"id":"he_0250","metre":"malini","source_id":"11-126-మాలి.","n_tokens":8,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.625,"resolved_verified":0.625,"resolved_strict":0.25,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8},"n_unresolved":2},
+  {"id":"he_0251","metre":"mattakokilamu","source_id":"10.1-1768-మత్త.","n_tokens":21,"resolved_live_verified":0.9524,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":0.9524,"resolved_verified":0.9524,"resolved_strict":0.8571,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":5,"headword":9},"n_unresolved":1},
+  {"id":"he_0252","metre":"champakamala","source_id":"4-713-చ.","n_tokens":17,"resolved_live_verified":0.9412,"resolved_live":1.0,"resolved_live_strict":0.3529,"resolved":0.9412,"resolved_verified":0.8824,"resolved_strict":0.8235,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":5,"headword":2},"n_unresolved":1},
+  {"id":"he_0253","metre":"utsahamu","source_id":"10.2-860-ఉత్సా.","n_tokens":13,"resolved_live_verified":0.8462,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":0.8462,"resolved_verified":0.8462,"resolved_strict":0.5385,"in_table":0.6923,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":2,"inflected":2},"n_unresolved":2},
+  {"id":"he_0257","metre":"mattakokilamu","source_id":"10.1-739-మత్త.","n_tokens":17,"resolved_live_verified":0.8824,"resolved_live":1.0,"resolved_live_strict":0.4706,"resolved":0.8824,"resolved_verified":0.8235,"resolved_strict":0.4706,"in_table":0.7059,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":8,"headword":1},"n_unresolved":2},
+  {"id":"he_0260","metre":"kandamu","source_id":"3-693-క.","n_tokens":12,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.4167,"resolved":0.9167,"resolved_verified":0.9167,"resolved_strict":0.9167,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"headword":4,"inflected":1},"n_unresolved":1},
+  {"id":"he_0262","metre":"utpalamala","source_id":"5.1-137-ఉ.","n_tokens":17,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5882,"resolved":0.8235,"resolved_verified":0.8235,"resolved_strict":0.7647,"in_table":0.9412,"attested":1.0,"classes_live":{"headword":3,"resolved-by-byt5":7,"inflected":7},"n_unresolved":0},
+  {"id":"he_0266","metre":"mattakokilamu","source_id":"8-596-మత్త.","n_tokens":20,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.45,"resolved":0.85,"resolved_verified":0.8,"resolved_strict":0.7,"in_table":0.95,"attested":0.9,"classes_live":{"inflected":5,"resolved-by-byt5":11,"headword":4},"n_unresolved":5},
+  {"id":"he_0267","metre":"taralamu","source_id":"10.1-426-త.","n_tokens":16,"resolved_live_verified":0.6875,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":0.75,"resolved_verified":0.6875,"resolved_strict":0.5625,"in_table":0.9375,"attested":0.9375,"classes_live":{"resolved-by-byt5":12,"headword":2,"inflected":2},"n_unresolved":5},
+  {"id":"he_0272","metre":"champakamala","source_id":"10.1-959-చ.","n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.64,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.92,"in_table":0.96,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":9,"inflected":7},"n_unresolved":0},
+  {"id":"he_0275","metre":"taralamu","source_id":"3-185-త.","n_tokens":13,"resolved_live_verified":0.8462,"resolved_live":1.0,"resolved_live_strict":0.2308,"resolved":0.7692,"resolved_verified":0.7692,"resolved_strict":0.4615,"in_table":0.8462,"attested":1.0,"classes_live":{"inflected":2,"resolved-by-byt5":10,"headword":1},"n_unresolved":2},
+  {"id":"he_0276","metre":"mattakokilamu","source_id":"10.1-531-మత్త.","n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.375,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.4375,"in_table":0.625,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":4,"headword":2},"n_unresolved":0},
+  {"id":"he_0277","metre":"mattakokilamu","source_id":"4-646-మత్త.","n_tokens":21,"resolved_live_verified":0.9048,"resolved_live":1.0,"resolved_live_strict":0.381,"resolved":0.9524,"resolved_verified":0.9048,"resolved_strict":0.8571,"in_table":0.9048,"attested":1.0,"classes_live":{"inflected":4,"resolved-by-byt5":11,"headword":6},"n_unresolved":2},
+  {"id":"he_0278","metre":"tetagiti","source_id":"10.2-1183.1-తే.","n_tokens":11,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.2727,"resolved":0.9091,"resolved_verified":0.9091,"resolved_strict":0.8182,"in_table":0.9091,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":3},"n_unresolved":0},
+  {"id":"he_0279","metre":"malini","source_id":"5.1-183-మాలి.","n_tokens":7,"resolved_live_verified":0.7143,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.8571,"resolved_verified":0.7143,"resolved_strict":0.4286,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":7},"n_unresolved":2},
+  {"id":"he_0282","metre":"mattebhavikriditamu","source_id":"10.1-876-మ.","n_tokens":21,"resolved_live_verified":0.9524,"resolved_live":1.0,"resolved_live_strict":0.381,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.619,"in_table":0.7619,"attested":1.0,"classes_live":{"inflected":8,"headword":2,"resolved-by-byt5":11},"n_unresolved":1},
+  {"id":"he_0284","metre":"mattebhavikriditamu","source_id":"7-355-మ.","n_tokens":21,"resolved_live_verified":0.8095,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.8095,"resolved_verified":0.8095,"resolved_strict":0.7143,"in_table":1.0,"attested":0.9524,"classes_live":{"resolved-by-byt5":13,"inflected":4,"headword":4},"n_unresolved":4},
+  {"id":"he_0285","metre":"mattakokilamu","source_id":"10.2-15-మత్త.","n_tokens":20,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":1.0,"resolved_verified":0.9,"resolved_strict":0.8,"in_table":0.9,"attested":1.0,"classes_live":{"split-all-known":1,"headword":6,"resolved-by-byt5":9,"inflected":4},"n_unresolved":2},
+  {"id":"he_0286","metre":"sardulavikriditamu","source_id":"10.1-1651-శా.","n_tokens":15,"resolved_live_verified":0.9333,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.9333,"resolved_verified":0.9333,"resolved_strict":0.5333,"in_table":0.7333,"attested":0.9333,"classes_live":{"resolved-by-byt5":10,"headword":2,"inflected":3},"n_unresolved":1},
+  {"id":"he_0287","metre":"ataveladi","source_id":"8-206-ఆ.","n_tokens":12,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.9167,"resolved_verified":0.9167,"resolved_strict":0.9167,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":3,"headword":1},"n_unresolved":1},
+  {"id":"he_0289","metre":"seesamu","source_id":"2-250-సీ.","n_tokens":18,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.2222,"resolved":0.7778,"resolved_verified":0.7222,"resolved_strict":0.5556,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":13,"headword":3,"inflected":2},"n_unresolved":4},
+  {"id":"he_0296","metre":"mattebhavikriditamu","source_id":"3-757-మ.","n_tokens":12,"resolved_live_verified":0.6667,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":0.75,"resolved_verified":0.75,"resolved_strict":0.5,"in_table":0.8333,"attested":0.9167,"classes_live":{"resolved-by-byt5":8,"inflected":4},"n_unresolved":4},
+  {"id":"he_0305","metre":"utpalamala","source_id":"2-210-ఉ.","n_tokens":14,"resolved_live_verified":0.9286,"resolved_live":1.0,"resolved_live_strict":0.2143,"resolved":0.9286,"resolved_verified":0.9286,"resolved_strict":0.7857,"in_table":0.9286,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"headword":2,"inflected":1},"n_unresolved":1},
+  {"id":"he_0308","metre":"sardulavikriditamu","source_id":"2-81-శా.","n_tokens":15,"resolved_live_verified":0.6667,"resolved_live":1.0,"resolved_live_strict":0.0667,"resolved":0.8667,"resolved_verified":0.6667,"resolved_strict":0.3333,"in_table":0.6,"attested":0.9333,"classes_live":{"resolved-by-byt5":13,"inflected":2},"n_unresolved":5},
+  {"id":"he_0310","metre":"sardulavikriditamu","source_id":"9-115-శా.","n_tokens":21,"resolved_live_verified":0.8095,"resolved_live":1.0,"resolved_live_strict":0.4762,"resolved":1.0,"resolved_verified":0.9524,"resolved_strict":0.8571,"in_table":1.0,"attested":1.0,"classes_live":{"headword":8,"resolved-by-byt5":9,"inflected":4},"n_unresolved":4},
+  {"id":"he_0318","metre":"sardulavikriditamu","source_id":"10.1-1322-శా.","n_tokens":17,"resolved_live_verified":0.8235,"resolved_live":0.9412,"resolved_live_strict":0.4706,"resolved":0.8235,"resolved_verified":0.8235,"resolved_strict":0.7647,"in_table":1.0,"attested":0.9412,"classes_live":{"headword":2,"inflected":7,"resolved-by-byt5":7,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0320","metre":"mattebhavikriditamu","source_id":"2-83-మ.","n_tokens":22,"resolved_live_verified":0.9091,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9545,"resolved_verified":0.8636,"resolved_strict":0.7273,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"headword":5,"inflected":6},"n_unresolved":2},
+  {"id":"he_0324","metre":"champakamala","source_id":"3-112-చ.","n_tokens":15,"resolved_live_verified":0.6667,"resolved_live":1.0,"resolved_live_strict":0.0667,"resolved":0.8667,"resolved_verified":0.7333,"resolved_strict":0.5333,"in_table":0.8667,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":2,"headword":1},"n_unresolved":5},
+  {"id":"he_0325","metre":"seesamu","source_id":"8-192-సీ.","n_tokens":23,"resolved_live_verified":0.8696,"resolved_live":1.0,"resolved_live_strict":0.4348,"resolved":0.9565,"resolved_verified":0.8696,"resolved_strict":0.6957,"in_table":0.8696,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":12,"headword":5},"n_unresolved":3},
+  {"id":"he_0328","metre":"mattakokilamu","source_id":"9-532-మత్త.","n_tokens":19,"resolved_live_verified":0.9474,"resolved_live":1.0,"resolved_live_strict":0.4211,"resolved":0.9474,"resolved_verified":0.8947,"resolved_strict":0.8421,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":3,"inflected":6},"n_unresolved":1},
+  {"id":"he_0333","metre":"sragvini","source_id":"6-454-స్రగ్వి.","n_tokens":14,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.0714,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.6429,"in_table":0.6429,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":3},"n_unresolved":0},
+  {"id":"he_0334","metre":"mattebhavikriditamu","source_id":"8-498-మ.","n_tokens":18,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9444,"resolved_verified":0.7778,"resolved_strict":0.7222,"in_table":0.8333,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":6,"headword":3},"n_unresolved":4},
+  {"id":"he_0336","metre":"mahasragdhara","source_id":"6-403-మస్ర.","n_tokens":14,"resolved_live_verified":0.7857,"resolved_live":0.9286,"resolved_live_strict":0.2857,"resolved":0.7857,"resolved_verified":0.7143,"resolved_strict":0.4286,"in_table":0.7857,"attested":0.9286,"classes_live":{"resolved-by-byt5":9,"inflected":3,"unresolved":1,"headword":1},"n_unresolved":3},
+  {"id":"he_0337","metre":"seesamu","source_id":"10.2-1025-సీ.","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":1.0,"resolved_live_strict":0.4737,"resolved":0.8947,"resolved_verified":0.8421,"resolved_strict":0.6842,"in_table":0.8421,"attested":1.0,"classes_live":{"headword":4,"resolved-by-byt5":10,"inflected":5},"n_unresolved":3},
+  {"id":"he_0342","metre":"seesamu","source_id":"10.2-939-సీ.","n_tokens":23,"resolved_live_verified":0.8261,"resolved_live":1.0,"resolved_live_strict":0.4783,"resolved":0.8696,"resolved_verified":0.8696,"resolved_strict":0.7826,"in_table":1.0,"attested":0.9565,"classes_live":{"headword":6,"resolved-by-byt5":10,"inflected":7},"n_unresolved":4},
+  {"id":"he_0343","metre":"kandamu","source_id":"10.2-1062-క.","n_tokens":10,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9,"resolved_verified":0.9,"resolved_strict":0.6,"in_table":0.9,"attested":1.0,"classes_live":{"headword":1,"resolved-by-byt5":5,"inflected":4},"n_unresolved":1},
+  {"id":"he_0348","metre":"mattakokilamu","source_id":"8-229-మత్త.","n_tokens":20,"resolved_live_verified":0.85,"resolved_live":1.0,"resolved_live_strict":0.45,"resolved":0.8,"resolved_verified":0.75,"resolved_strict":0.6,"in_table":1.0,"attested":0.95,"classes_live":{"resolved-by-byt5":11,"inflected":5,"headword":4},"n_unresolved":3},
+  {"id":"he_0352","metre":"utpalamala","source_id":"10.2-1117-ఉ.","n_tokens":25,"resolved_live_verified":0.72,"resolved_live":1.0,"resolved_live_strict":0.16,"resolved":0.76,"resolved_verified":0.72,"resolved_strict":0.68,"in_table":1.0,"attested":0.96,"classes_live":{"resolved-by-byt5":11,"inflected":14},"n_unresolved":7},
+  {"id":"he_0354","metre":"mattakokilamu","source_id":"1-257-మత్త.","n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.8667,"resolved_verified":0.7333,"resolved_strict":0.6667,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":3,"headword":2},"n_unresolved":0},
+  {"id":"he_0355","metre":"taralamu","source_id":"4-891-త.","n_tokens":17,"resolved_live_verified":0.8824,"resolved_live":1.0,"resolved_live_strict":0.4706,"resolved":0.8824,"resolved_verified":0.8824,"resolved_strict":0.8824,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":2,"inflected":6},"n_unresolved":2},
+  {"id":"he_0356","metre":"utpalamala","source_id":"10.2-317-ఉ.","n_tokens":18,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9444,"resolved_verified":0.8333,"resolved_strict":0.7222,"in_table":0.8889,"attested":1.0,"classes_live":{"headword":6,"resolved-by-byt5":9,"inflected":2,"split-all-known":1},"n_unresolved":2},
+  {"id":"he_0359","metre":"mattakokilamu","source_id":"11-16-మత్త.","n_tokens":18,"resolved_live_verified":0.9444,"resolved_live":1.0,"resolved_live_strict":0.2222,"resolved":0.9444,"resolved_verified":0.9444,"resolved_strict":0.5556,"in_table":0.7222,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"inflected":3,"headword":1},"n_unresolved":1},
+  {"id":"he_0360","metre":"mattakokilamu","source_id":"10.2-12-మత్త.","n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.65,"resolved":0.95,"resolved_verified":0.95,"resolved_strict":0.75,"in_table":0.8,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"headword":9,"inflected":4},"n_unresolved":1},
+  {"id":"he_0361","metre":"mattebhavikriditamu","source_id":"10.1-1465-మ.","n_tokens":18,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.2222,"resolved":0.8889,"resolved_verified":0.8889,"resolved_strict":0.7222,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"inflected":4},"n_unresolved":2},
+  {"id":"he_0363","metre":"taralamu","source_id":"10.1-817-త.","n_tokens":18,"resolved_live_verified":0.9444,"resolved_live":1.0,"resolved_live_strict":0.6111,"resolved":0.9444,"resolved_verified":0.8889,"resolved_strict":0.8889,"in_table":0.9444,"attested":1.0,"classes_live":{"inflected":9,"resolved-by-byt5":7,"headword":2},"n_unresolved":1},
+  {"id":"he_0367","metre":"mattakokilamu","source_id":"1-246-మత్త.","n_tokens":14,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.2857,"resolved":0.9286,"resolved_verified":0.7857,"resolved_strict":0.6429,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":2,"headword":2},"n_unresolved":2},
+  {"id":"he_0368","metre":"taralamu","source_id":"3-1053-త.","n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.1333,"resolved":1.0,"resolved_verified":0.9333,"resolved_strict":0.9333,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":13,"inflected":2},"n_unresolved":0},
+  {"id":"he_0371","metre":"ataveladi","source_id":"8-715-ఆ.","n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7333,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8,"in_table":0.8,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":4,"headword":5},"n_unresolved":0},
+  {"id":"he_0374","metre":"taralamu","source_id":"6-103-త.","n_tokens":18,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.4444,"resolved":0.9444,"resolved_verified":0.7778,"resolved_strict":0.6667,"in_table":0.8333,"attested":1.0,"classes_live":{"headword":6,"resolved-by-byt5":9,"inflected":3},"n_unresolved":4},
+  {"id":"he_0378","metre":"champakamala","source_id":"3-134-చ.","n_tokens":20,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.45,"resolved":0.9,"resolved_verified":0.85,"resolved_strict":0.7,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"headword":2,"inflected":7},"n_unresolved":2},
+  {"id":"he_0381","metre":"malini","source_id":"12-53-మాలి.","n_tokens":8,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.875,"resolved_verified":0.75,"resolved_strict":0.0,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8},"n_unresolved":2},
+  {"id":"he_0382","metre":"sardulavikriditamu","source_id":"7-258-శా.","n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.45,"resolved":0.9,"resolved_verified":0.85,"resolved_strict":0.75,"in_table":1.0,"attested":0.95,"classes_live":{"inflected":7,"resolved-by-byt5":10,"headword":3},"n_unresolved":1},
+  {"id":"he_0385","metre":"ataveladi","source_id":"10.1-594-ఆ.","n_tokens":8,"resolved_live_verified":0.875,"resolved_live":0.875,"resolved_live_strict":0.375,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.75,"in_table":0.75,"attested":0.875,"classes_live":{"resolved-by-byt5":4,"split-all-known":1,"headword":1,"inflected":1,"unresolved":1},"n_unresolved":1},
+  {"id":"he_0388","metre":"sardulavikriditamu","source_id":"8-662-శా.","n_tokens":17,"resolved_live_verified":0.7647,"resolved_live":1.0,"resolved_live_strict":0.2941,"resolved":0.8235,"resolved_verified":0.7059,"resolved_strict":0.6471,"in_table":1.0,"attested":0.9412,"classes_live":{"resolved-by-byt5":12,"headword":1,"inflected":4},"n_unresolved":4},
+  {"id":"he_0390","metre":"seesamu","source_id":"1-83-సీ.","n_tokens":20,"resolved_live_verified":0.85,"resolved_live":1.0,"resolved_live_strict":0.3,"resolved":0.95,"resolved_verified":0.9,"resolved_strict":0.75,"in_table":0.85,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":12,"headword":2},"n_unresolved":3},
+  {"id":"he_0391","metre":"kandamu","source_id":"10.1-1087-క.","n_tokens":9,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.8889,"resolved_verified":0.8889,"resolved_strict":0.3333,"in_table":0.5556,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"inflected":2,"headword":1},"n_unresolved":1},
+  {"id":"he_0394","metre":"sardulavikriditamu","source_id":"6-405-శా.","n_tokens":15,"resolved_live_verified":0.8,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":1.0,"resolved_verified":0.8,"resolved_strict":0.6667,"in_table":0.6667,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":2,"headword":3},"n_unresolved":3},
+  {"id":"he_0395","metre":"seesamu","source_id":"8-471-సీ.","n_tokens":18,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.3889,"resolved":0.8889,"resolved_verified":0.8333,"resolved_strict":0.7222,"in_table":0.8889,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":6,"inflected":2},"n_unresolved":2},
+  {"id":"he_0396","metre":"sardulavikriditamu","source_id":"1-75-శా.","n_tokens":23,"resolved_live_verified":0.913,"resolved_live":1.0,"resolved_live_strict":0.6087,"resolved":0.9565,"resolved_verified":0.913,"resolved_strict":0.8696,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":11,"headword":3,"resolved-by-byt5":9},"n_unresolved":2},
+  {"id":"he_0398","metre":"sardulavikriditamu","source_id":"10.1-235-శా.","n_tokens":19,"resolved_live_verified":0.7895,"resolved_live":0.9474,"resolved_live_strict":0.5263,"resolved":0.8947,"resolved_verified":0.7895,"resolved_strict":0.6842,"in_table":0.8421,"attested":0.9474,"classes_live":{"resolved-by-byt5":8,"headword":5,"unresolved":1,"inflected":5},"n_unresolved":4},
+  {"id":"he_0399","metre":"indravajra","source_id":"9-222-ఇం.","n_tokens":8,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":1.0,"resolved_verified":0.875,"resolved_strict":0.625,"in_table":0.75,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"inflected":2},"n_unresolved":2},
+  {"id":"he_0400","metre":"taralamu","source_id":"9-536-త.","n_tokens":16,"resolved_live_verified":0.8125,"resolved_live":1.0,"resolved_live_strict":0.4375,"resolved":0.9375,"resolved_verified":0.875,"resolved_strict":0.6875,"in_table":0.75,"attested":1.0,"classes_live":{"inflected":3,"resolved-by-byt5":9,"headword":4},"n_unresolved":3},
+  {"id":"he_0405","metre":"mattakokilamu","source_id":"5.2-167-మత్త.","n_tokens":17,"resolved_live_verified":0.7647,"resolved_live":1.0,"resolved_live_strict":0.1765,"resolved":0.9412,"resolved_verified":0.8824,"resolved_strict":0.8235,"in_table":0.9412,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"headword":2,"inflected":1},"n_unresolved":4},
+  {"id":"he_0413","metre":"utsahamu","source_id":"10.2-861-ఉత్సా.","n_tokens":10,"resolved_live_verified":0.7,"resolved_live":0.9,"resolved_live_strict":0.2,"resolved":0.8,"resolved_verified":0.8,"resolved_strict":0.7,"in_table":0.8,"attested":0.9,"classes_live":{"unresolved":1,"resolved-by-byt5":6,"inflected":3},"n_unresolved":3},
+  {"id":"he_0415","metre":"seesamu","source_id":"4-720-సీ.","n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9583,"resolved_verified":0.875,"resolved_strict":0.6667,"in_table":0.75,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":12,"headword":6},"n_unresolved":3},
+  {"id":"he_0417","metre":"tetagiti","source_id":"3-272.1-తే.","n_tokens":9,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.1111,"resolved":1.0,"resolved_verified":0.7778,"resolved_strict":0.7778,"in_table":0.8889,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":2},"n_unresolved":2},
+  {"id":"he_0419","metre":"taralamu","source_id":"3-305-త.","n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.45,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.95,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":11,"headword":2},"n_unresolved":1},
+  {"id":"he_0421","metre":"sardulavikriditamu","source_id":"10.1-978-శా.","n_tokens":17,"resolved_live_verified":0.8824,"resolved_live":1.0,"resolved_live_strict":0.2941,"resolved":1.0,"resolved_verified":0.8824,"resolved_strict":0.5294,"in_table":0.6471,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":4,"headword":1},"n_unresolved":2},
+  {"id":"he_0422","metre":"utsahamu","source_id":"6-389-ఉత్సా.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.6316,"resolved":0.9474,"resolved_verified":0.8421,"resolved_strict":0.7368,"in_table":0.8421,"attested":0.9474,"classes_live":{"headword":6,"inflected":6,"resolved-by-byt5":7},"n_unresolved":2},
+  {"id":"he_0426","metre":"taralamu","source_id":"4-937-త.","n_tokens":18,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.2778,"resolved":0.8889,"resolved_verified":0.8333,"resolved_strict":0.7222,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":5,"headword":3,"resolved-by-byt5":10},"n_unresolved":4},
+  {"id":"he_0427","metre":"tetagiti","source_id":"4-508.1-తే.","n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.375,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.875,"in_table":0.9375,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":7,"headword":3},"n_unresolved":0},
+  {"id":"he_0428","metre":"mattebhavikriditamu","source_id":"9-394-మ.","n_tokens":18,"resolved_live_verified":0.6111,"resolved_live":0.9444,"resolved_live_strict":0.3333,"resolved":0.8889,"resolved_verified":0.6111,"resolved_strict":0.4444,"in_table":0.6667,"attested":0.9444,"classes_live":{"resolved-by-byt5":11,"headword":4,"unresolved":1,"inflected":2},"n_unresolved":7},
+  {"id":"he_0430","metre":"mattakokilamu","source_id":"3-146-మత్త.","n_tokens":13,"resolved_live_verified":0.9231,"resolved_live":0.9231,"resolved_live_strict":0.3077,"resolved":0.7692,"resolved_verified":0.7692,"resolved_strict":0.6923,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"headword":2,"unresolved":1,"inflected":2},"n_unresolved":1},
+  {"id":"he_0432","metre":"champakamala","source_id":"4-861-చ.","n_tokens":17,"resolved_live_verified":0.7647,"resolved_live":1.0,"resolved_live_strict":0.3529,"resolved":0.9412,"resolved_verified":0.7647,"resolved_strict":0.5294,"in_table":0.6471,"attested":1.0,"classes_live":{"inflected":4,"resolved-by-byt5":11,"headword":2},"n_unresolved":4},
+  {"id":"he_0434","metre":"malini","source_id":"10.2-1342-మాలి.","n_tokens":8,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.625,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8},"n_unresolved":1},
+  {"id":"he_0435","metre":"utpalamala","source_id":"1-71-ఉ.","n_tokens":21,"resolved_live_verified":0.9048,"resolved_live":1.0,"resolved_live_strict":0.381,"resolved":0.8571,"resolved_verified":0.8571,"resolved_strict":0.7619,"in_table":1.0,"attested":0.9524,"classes_live":{"headword":5,"resolved-by-byt5":13,"inflected":3},"n_unresolved":2},
+  {"id":"he_0438","metre":"taralamu","source_id":"10.1-558-త.","n_tokens":22,"resolved_live_verified":0.8636,"resolved_live":1.0,"resolved_live_strict":0.5909,"resolved":0.9091,"resolved_verified":0.9091,"resolved_strict":0.8636,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"headword":7,"inflected":6,"split-all-known":1},"n_unresolved":3},
+  {"id":"he_0439","metre":"sardulavikriditamu","source_id":"10.1-1570-శా.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.3158,"resolved":0.8947,"resolved_verified":0.8947,"resolved_strict":0.7895,"in_table":1.0,"attested":0.9474,"classes_live":{"headword":4,"resolved-by-byt5":13,"inflected":2},"n_unresolved":2},
+  {"id":"he_0440","metre":"mattakokilamu","source_id":"7-81-మత్త.","n_tokens":22,"resolved_live_verified":0.8182,"resolved_live":1.0,"resolved_live_strict":0.4091,"resolved":0.8182,"resolved_verified":0.8182,"resolved_strict":0.5455,"in_table":0.7727,"attested":1.0,"classes_live":{"headword":5,"resolved-by-byt5":12,"inflected":5},"n_unresolved":4},
+  {"id":"he_0442","metre":"mattakokilamu","source_id":"1-190-మత్త.","n_tokens":17,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5294,"resolved":0.9412,"resolved_verified":0.9412,"resolved_strict":0.9412,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":4,"resolved-by-byt5":8,"headword":5},"n_unresolved":0},
+  {"id":"he_0445","metre":"mattebhavikriditamu","source_id":"10.1-1784-మ.","n_tokens":21,"resolved_live_verified":0.7619,"resolved_live":0.9524,"resolved_live_strict":0.3333,"resolved":0.8095,"resolved_verified":0.7619,"resolved_strict":0.7143,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":2,"inflected":9,"unresolved":1},"n_unresolved":5},
+  {"id":"he_0447","metre":"seesamu","source_id":"10.1-75-సీ.","n_tokens":20,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.45,"resolved":0.9,"resolved_verified":0.85,"resolved_strict":0.7,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":5,"headword":4},"n_unresolved":2},
+  {"id":"he_0448","metre":"mattakokilamu","source_id":"1-303-మత్త.","n_tokens":19,"resolved_live_verified":0.7895,"resolved_live":1.0,"resolved_live_strict":0.4737,"resolved":0.8421,"resolved_verified":0.8421,"resolved_strict":0.7368,"in_table":1.0,"attested":1.0,"classes_live":{"headword":6,"resolved-by-byt5":10,"inflected":3},"n_unresolved":4},
+  {"id":"he_0449","metre":"upendravajra","source_id":"10.1-407-ఉపేం.","n_tokens":9,"resolved_live_verified":0.7778,"resolved_live":1.0,"resolved_live_strict":0.4444,"resolved":1.0,"resolved_verified":0.8889,"resolved_strict":0.5556,"in_table":0.6667,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"inflected":4},"n_unresolved":2},
+  {"id":"he_0455","metre":"sardulavikriditamu","source_id":"10.2-213-శా.","n_tokens":17,"resolved_live_verified":0.9412,"resolved_live":1.0,"resolved_live_strict":0.2353,"resolved":1.0,"resolved_verified":0.9412,"resolved_strict":0.4706,"in_table":0.7647,"attested":1.0,"classes_live":{"resolved-by-byt5":13,"inflected":2,"headword":2},"n_unresolved":1},
+  {"id":"he_0459","metre":"mattebhavikriditamu","source_id":"8-446-మ.","n_tokens":13,"resolved_live_verified":0.6154,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":0.6923,"resolved_verified":0.6154,"resolved_strict":0.5385,"in_table":0.8462,"attested":1.0,"classes_live":{"inflected":3,"resolved-by-byt5":9,"headword":1},"n_unresolved":5},
+  {"id":"he_0460","metre":"tetagiti","source_id":"10.2-574.1-తే.","n_tokens":13,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5385,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7692,"in_table":0.9231,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"inflected":6,"headword":1},"n_unresolved":0},
+  {"id":"he_0463","metre":"seesamu","source_id":"10.1-608-సీ.","n_tokens":14,"resolved_live_verified":0.8571,"resolved_live":0.8571,"resolved_live_strict":0.1429,"resolved":0.8571,"resolved_verified":0.8571,"resolved_strict":0.5714,"in_table":0.7857,"attested":0.9286,"classes_live":{"inflected":1,"unresolved":2,"resolved-by-byt5":9,"headword":2},"n_unresolved":2},
+  {"id":"he_0466","metre":"tetagiti","source_id":"3-569-తే.","n_tokens":14,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.2857,"resolved":0.8571,"resolved_verified":0.8571,"resolved_strict":0.5714,"in_table":0.9286,"attested":0.9286,"classes_live":{"headword":3,"resolved-by-byt5":9,"inflected":2},"n_unresolved":2},
+  {"id":"he_0467","metre":"champakamala","source_id":"10.2-283-చ.","n_tokens":15,"resolved_live_verified":0.8,"resolved_live":1.0,"resolved_live_strict":0.2,"resolved":1.0,"resolved_verified":0.8667,"resolved_strict":0.6667,"in_table":0.7333,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"headword":2,"inflected":1},"n_unresolved":3},
+  {"id":"he_0470","metre":"seesamu","source_id":"3-293-సీ.","n_tokens":10,"resolved_live_verified":0.7,"resolved_live":1.0,"resolved_live_strict":0.0,"resolved":0.9,"resolved_verified":0.7,"resolved_strict":0.7,"in_table":0.8,"attested":1.0,"classes_live":{"inflected":2,"resolved-by-byt5":8},"n_unresolved":3},
+  {"id":"he_0471","metre":"seesamu","source_id":"8-578-సీ.","n_tokens":17,"resolved_live_verified":0.9412,"resolved_live":1.0,"resolved_live_strict":0.2941,"resolved":1.0,"resolved_verified":0.8824,"resolved_strict":0.5294,"in_table":0.6471,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"headword":3,"inflected":2},"n_unresolved":1},
+  {"id":"he_0473","metre":"sardulavikriditamu","source_id":"10.1-1597-శా.","n_tokens":18,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.1667,"resolved":1.0,"resolved_verified":0.8889,"resolved_strict":0.7222,"in_table":0.7778,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":8,"headword":1},"n_unresolved":2},
+  {"id":"he_0474","metre":"champakamala","source_id":"4-865-చ.","n_tokens":20,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":1.0,"resolved_verified":0.95,"resolved_strict":0.85,"in_table":1.0,"attested":1.0,"classes_live":{"headword":4,"resolved-by-byt5":7,"inflected":9},"n_unresolved":2},
+  {"id":"he_0475","metre":"seesamu","source_id":"6-483-సీ.","n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.2,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.6667,"in_table":0.7333,"attested":1.0,"classes_live":{"inflected":1,"resolved-by-byt5":12,"headword":2},"n_unresolved":0},
+  {"id":"he_0476","metre":"mattebhavikriditamu","source_id":"9-537-మ.","n_tokens":14,"resolved_live_verified":0.7143,"resolved_live":1.0,"resolved_live_strict":0.1429,"resolved":0.8571,"resolved_verified":0.7143,"resolved_strict":0.5,"in_table":0.7857,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"headword":1,"inflected":1},"n_unresolved":4},
+  {"id":"he_0478","metre":"tetagiti","source_id":"10.1-853.1-తే.","n_tokens":14,"resolved_live_verified":0.7857,"resolved_live":0.9286,"resolved_live_strict":0.2857,"resolved":0.8571,"resolved_verified":0.7143,"resolved_strict":0.5,"in_table":0.8571,"attested":0.9286,"classes_live":{"resolved-by-byt5":8,"inflected":4,"split-all-known":1,"unresolved":1},"n_unresolved":3},
+  {"id":"he_0480","metre":"tetagiti","source_id":"3-911.1-తే.","n_tokens":8,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.75,"in_table":0.875,"attested":1.0,"classes_live":{"headword":2,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"he_0484","metre":"seesamu","source_id":"8-403-సీ.","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.4737,"resolved":1.0,"resolved_verified":0.8947,"resolved_strict":0.6316,"in_table":0.6842,"attested":1.0,"classes_live":{"inflected":7,"resolved-by-byt5":10,"headword":2},"n_unresolved":2},
+  {"id":"he_0485","metre":"mangalamahasri","source_id":"6-184-మం","n_tokens":28,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.6429,"resolved":0.9286,"resolved_verified":0.8929,"resolved_strict":0.75,"in_table":0.8214,"attested":0.9643,"classes_live":{"resolved-by-byt5":10,"inflected":12,"headword":6},"n_unresolved":4},
+  {"id":"he_0488","metre":"sragdhara","source_id":"6-272-స్రగ్ద.","n_tokens":18,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.2778,"resolved":1.0,"resolved_verified":0.8889,"resolved_strict":0.7222,"in_table":0.7222,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":6,"headword":1},"n_unresolved":3},
+  {"id":"he_0489","metre":"seesamu","source_id":"4-629-సీ.","n_tokens":19,"resolved_live_verified":0.9474,"resolved_live":1.0,"resolved_live_strict":0.3158,"resolved":0.9474,"resolved_verified":0.9474,"resolved_strict":0.6842,"in_table":0.7895,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":4,"headword":4},"n_unresolved":1},
+  {"id":"he_0492","metre":"tetagiti","source_id":"10.2-658-తే.","n_tokens":9,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.1111,"resolved":0.8889,"resolved_verified":0.8889,"resolved_strict":0.5556,"in_table":0.6667,"attested":1.0,"classes_live":{"headword":1,"resolved-by-byt5":7,"inflected":1},"n_unresolved":0},
+  {"id":"he_0494","metre":"mattebhavikriditamu","source_id":"10.1-714-మ.","n_tokens":23,"resolved_live_verified":0.913,"resolved_live":0.9565,"resolved_live_strict":0.3043,"resolved":0.913,"resolved_verified":0.913,"resolved_strict":0.5652,"in_table":0.7826,"attested":1.0,"classes_live":{"resolved-by-byt5":15,"inflected":1,"headword":6,"unresolved":1},"n_unresolved":2},
+  {"id":"he_0495","metre":"sardulavikriditamu","source_id":"10.1-1617-శా.","n_tokens":16,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.25,"resolved":1.0,"resolved_verified":0.8125,"resolved_strict":0.5,"in_table":0.6875,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":1,"headword":3},"n_unresolved":4},
+  {"id":"he_0497","metre":"utpalamala","source_id":"10.2-3-ఉ.","n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.375,"resolved":0.9375,"resolved_verified":0.9375,"resolved_strict":0.6875,"in_table":0.875,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":4,"headword":2},"n_unresolved":1},
+  {"id":"he_0500","metre":"mattakokilamu","source_id":"10.1-1104-మత్త.","n_tokens":11,"resolved_live_verified":0.9091,"resolved_live":0.9091,"resolved_live_strict":0.4545,"resolved":0.8182,"resolved_verified":0.8182,"resolved_strict":0.7273,"in_table":0.8182,"attested":0.9091,"classes_live":{"inflected":4,"resolved-by-byt5":5,"unresolved":1,"headword":1},"n_unresolved":1}
+ ]
+}

@@ -1,0 +1,1332 @@
+{
+ "source": "human_evals_study2_t5_1b_ft",
+ "title": "T5Gemma 2 1B, fine-tuned, v2 decoder",
+ "family": "human_evals_study2",
+ "kind": "ai",
+ "from": "human_evals/human_eval_poems_study2.json (source_dataset t5_1b_ft)",
+ "n_poems": 33,
+ "metrics": {
+  "anuprasa_v1": "1.0",
+  "anuprasa_v2": "2.0",
+  "anuprasa_v3": "3.0",
+  "madhurya_v1": "1.1",
+  "madhurya_v2": "2.0",
+  "ojas": "2.0",
+  "prasada_v1": "1.0",
+  "prasada_v2": "2.0",
+  "chandas_distance": "1.1",
+  "main_value": {
+   "anuprasa_v1": "z",
+   "anuprasa_v2": "z",
+   "anuprasa_v3": "anuprasa",
+   "madhurya_v1": "madhurya",
+   "madhurya_v2": "madhurya",
+   "ojas": "ojas",
+   "prasada_v1": "surprisal",
+   "prasada_v2": "surprisal",
+   "chandas_distance": "skill"
+  }
+ },
+ "summary": {
+  "anuprasa_v1": {
+   "value": {
+    "n": 33,
+    "mean": 0.7533,
+    "sd": 1.3752,
+    "p10": -0.551,
+    "median": 0.551,
+    "p90": 2.058
+   },
+   "labels": {
+    "none": {
+     "n": 23,
+     "share": 0.697
+    },
+    "weak": {
+     "n": 9,
+     "share": 0.2727
+    },
+    "marked": {
+     "n": 1,
+     "share": 0.0303
+    },
+    "strong": {
+     "n": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "anuprasa_v2": {
+   "value": {
+    "n": 33,
+    "mean": 0.6799,
+    "sd": 1.349,
+    "p10": -0.579,
+    "median": 0.473,
+    "p90": 1.92
+   },
+   "labels": {
+    "none": {
+     "n": 23,
+     "share": 0.697
+    },
+    "weak": {
+     "n": 9,
+     "share": 0.2727
+    },
+    "marked": {
+     "n": 1,
+     "share": 0.0303
+    },
+    "strong": {
+     "n": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "anuprasa_v3": {
+   "value": {
+    "n": 33,
+    "mean": 1.3585,
+    "sd": 0.7154,
+    "p10": 0.8958,
+    "median": 1.0482,
+    "p90": 2.0294
+   },
+   "labels": {
+    "none": {
+     "n": 0,
+     "share": 0.0
+    },
+    "weak": {
+     "n": 3,
+     "share": 0.0909
+    },
+    "marked": {
+     "n": 22,
+     "share": 0.6667
+    },
+    "strong": {
+     "n": 8,
+     "share": 0.2424
+    }
+   }
+  },
+  "madhurya_v1": {
+   "value": {
+    "n": 33,
+    "mean": -0.0857,
+    "sd": 0.2331,
+    "p10": -0.3636,
+    "median": -0.0312,
+    "p90": 0.2059
+   },
+   "labels": {
+    "harsh": {
+     "n": 6,
+     "share": 0.1818
+    },
+    "leaning_harsh": {
+     "n": 4,
+     "share": 0.1212
+    },
+    "balanced": {
+     "n": 14,
+     "share": 0.4242
+    },
+    "leaning_soft": {
+     "n": 5,
+     "share": 0.1515
+    },
+    "soft": {
+     "n": 4,
+     "share": 0.1212
+    }
+   }
+  },
+  "madhurya_v2": {
+   "value": {
+    "n": 33,
+    "mean": -0.0857,
+    "sd": 0.2331,
+    "p10": -0.3636,
+    "median": -0.0312,
+    "p90": 0.2059
+   },
+   "labels": {
+    "harsh": {
+     "n": 3,
+     "share": 0.0909
+    },
+    "leaning_harsh": {
+     "n": 7,
+     "share": 0.2121
+    },
+    "balanced": {
+     "n": 18,
+     "share": 0.5455
+    },
+    "leaning_soft": {
+     "n": 5,
+     "share": 0.1515
+    },
+    "soft": {
+     "n": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "ojas": {
+   "value": {
+    "n": 33,
+    "mean": 42.1387,
+    "sd": 5.3258,
+    "p10": 37.0,
+    "median": 41.304,
+    "p90": 48.214
+   },
+   "labels": {
+    "light": {
+     "n": 10,
+     "share": 0.303
+    },
+    "leaning_light": {
+     "n": 9,
+     "share": 0.2727
+    },
+    "moderate": {
+     "n": 8,
+     "share": 0.2424
+    },
+    "leaning_dense": {
+     "n": 2,
+     "share": 0.0606
+    },
+    "dense": {
+     "n": 4,
+     "share": 0.1212
+    }
+   }
+  },
+  "prasada_v1": {
+   "value": {
+    "n": 33,
+    "mean": 6.8905,
+    "sd": 1.7915,
+    "p10": 5.392,
+    "median": 6.245,
+    "p90": 8.925
+   },
+   "labels": {
+    "obscure": {
+     "n": 10,
+     "share": 0.303
+    },
+    "leaning_obscure": {
+     "n": 6,
+     "share": 0.1818
+    },
+    "ordinary": {
+     "n": 10,
+     "share": 0.303
+    },
+    "leaning_clear": {
+     "n": 6,
+     "share": 0.1818
+    },
+    "clear": {
+     "n": 1,
+     "share": 0.0303
+    }
+   }
+  },
+  "prasada_v2": {
+   "value": {
+    "n": 33,
+    "mean": 6.8905,
+    "sd": 1.7915,
+    "p10": 5.392,
+    "median": 6.245,
+    "p90": 8.925
+   },
+   "labels": {
+    "obscure": {
+     "n": 13,
+     "share": 0.3939
+    },
+    "leaning_obscure": {
+     "n": 5,
+     "share": 0.1515
+    },
+    "ordinary": {
+     "n": 5,
+     "share": 0.1515
+    },
+    "leaning_clear": {
+     "n": 7,
+     "share": 0.2121
+    },
+    "clear": {
+     "n": 3,
+     "share": 0.0909
+    }
+   }
+  },
+  "chandas_distance": {
+   "value": {
+    "n": 33,
+    "mean": 1.0,
+    "sd": 0.0,
+    "p10": 1.0,
+    "median": 1.0,
+    "p90": 1.0
+   },
+   "labels": {
+    "unmetered": {
+     "n": 0,
+     "share": 0.0
+    },
+    "weak": {
+     "n": 0,
+     "share": 0.0
+    },
+    "partial": {
+     "n": 0,
+     "share": 0.0
+    },
+    "slip": {
+     "n": 0,
+     "share": 0.0
+    },
+    "exact": {
+     "n": 33,
+     "share": 1.0
+    }
+   },
+   "distance": {
+    "n": 33,
+    "mean": 0.0,
+    "sd": 0.0,
+    "p10": 0,
+    "median": 0,
+    "p90": 0
+   },
+   "edits_per_100_aksharas": {
+    "n": 33,
+    "mean": 0.0,
+    "sd": 0.0,
+    "p10": 0.0,
+    "median": 0.0,
+    "p90": 0.0
+   },
+   "metre_given": 33
+  }
+ },
+ "by_metre": {
+  "kandamu": {
+   "n": 5,
+   "anuprasa_v1": {
+    "mean": 0.193,
+    "labels": {
+     "none": 4,
+     "weak": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.1434,
+    "labels": {
+     "none": 4,
+     "weak": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.145,
+    "labels": {
+     "marked": 4,
+     "strong": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": 0.0848,
+    "labels": {
+     "soft": 2,
+     "balanced": 2,
+     "leaning_soft": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": 0.0848,
+    "labels": {
+     "leaning_soft": 2,
+     "balanced": 3
+    }
+   },
+   "ojas": {
+    "mean": 38.9046,
+    "labels": {
+     "moderate": 1,
+     "light": 3,
+     "leaning_light": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 5.6092,
+    "labels": {
+     "leaning_clear": 2,
+     "ordinary": 3
+    }
+   },
+   "prasada_v2": {
+    "mean": 5.6092,
+    "labels": {
+     "clear": 2,
+     "ordinary": 3
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 5
+    }
+   }
+  },
+  "tetagiti": {
+   "n": 5,
+   "anuprasa_v1": {
+    "mean": 0.8128,
+    "labels": {
+     "weak": 2,
+     "none": 3
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.752,
+    "labels": {
+     "weak": 2,
+     "none": 3
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.6015,
+    "labels": {
+     "strong": 1,
+     "marked": 4
+    }
+   },
+   "madhurya_v1": {
+    "mean": 0.0792,
+    "labels": {
+     "soft": 2,
+     "balanced": 3
+    }
+   },
+   "madhurya_v2": {
+    "mean": 0.0792,
+    "labels": {
+     "leaning_soft": 2,
+     "balanced": 3
+    }
+   },
+   "ojas": {
+    "mean": 40.7956,
+    "labels": {
+     "moderate": 2,
+     "leaning_light": 2,
+     "light": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 5.9104,
+    "labels": {
+     "leaning_clear": 1,
+     "ordinary": 3,
+     "leaning_obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 5.9104,
+    "labels": {
+     "leaning_clear": 3,
+     "leaning_obscure": 2
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 5
+    }
+   }
+  },
+  "ataveladi": {
+   "n": 4,
+   "anuprasa_v1": {
+    "mean": 0.656,
+    "labels": {
+     "none": 3,
+     "weak": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.6008,
+    "labels": {
+     "none": 3,
+     "weak": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 0.9437,
+    "labels": {
+     "marked": 3,
+     "weak": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.1012,
+    "labels": {
+     "balanced": 3,
+     "leaning_harsh": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.1012,
+    "labels": {
+     "balanced": 3,
+     "leaning_harsh": 1
+    }
+   },
+   "ojas": {
+    "mean": 39.2578,
+    "labels": {
+     "leaning_light": 2,
+     "light": 2
+    }
+   },
+   "prasada_v1": {
+    "mean": 6.276,
+    "labels": {
+     "leaning_obscure": 2,
+     "leaning_clear": 1,
+     "ordinary": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 6.276,
+    "labels": {
+     "leaning_obscure": 2,
+     "leaning_clear": 1,
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 4
+    }
+   }
+  },
+  "champakamala": {
+   "n": 4,
+   "anuprasa_v1": {
+    "mean": 0.4695,
+    "labels": {
+     "none": 2,
+     "weak": 2
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.3875,
+    "labels": {
+     "none": 2,
+     "weak": 2
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.8226,
+    "labels": {
+     "marked": 2,
+     "strong": 2
+    }
+   },
+   "madhurya_v1": {
+    "mean": 0.0699,
+    "labels": {
+     "leaning_soft": 2,
+     "balanced": 2
+    }
+   },
+   "madhurya_v2": {
+    "mean": 0.0699,
+    "labels": {
+     "balanced": 3,
+     "leaning_soft": 1
+    }
+   },
+   "ojas": {
+    "mean": 40.0295,
+    "labels": {
+     "leaning_light": 1,
+     "light": 2,
+     "moderate": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 6.0125,
+    "labels": {
+     "ordinary": 2,
+     "obscure": 1,
+     "clear": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 6.0125,
+    "labels": {
+     "leaning_clear": 1,
+     "obscure": 1,
+     "clear": 1,
+     "ordinary": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 4
+    }
+   }
+  },
+  "mattebhavikriditamu": {
+   "n": 3,
+   "anuprasa_v1": {
+    "mean": 0.7823,
+    "labels": {
+     "none": 2,
+     "weak": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.694,
+    "labels": {
+     "none": 2,
+     "weak": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.3583,
+    "labels": {
+     "marked": 2,
+     "strong": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.1333,
+    "labels": {
+     "harsh": 1,
+     "balanced": 2
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.1333,
+    "labels": {
+     "leaning_harsh": 1,
+     "balanced": 2
+    }
+   },
+   "ojas": {
+    "mean": 43.75,
+    "labels": {
+     "leaning_dense": 1,
+     "leaning_light": 1,
+     "moderate": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 7.9147,
+    "labels": {
+     "obscure": 3
+    }
+   },
+   "prasada_v2": {
+    "mean": 7.9147,
+    "labels": {
+     "obscure": 3
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 3
+    }
+   }
+  },
+  "madhuragati_ragada": {
+   "n": 2,
+   "anuprasa_v1": {
+    "mean": -0.099,
+    "labels": {
+     "none": 2
+    }
+   },
+   "anuprasa_v2": {
+    "mean": -0.1325,
+    "labels": {
+     "none": 2
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 0.7238,
+    "labels": {
+     "marked": 1,
+     "weak": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.2127,
+    "labels": {
+     "leaning_harsh": 2
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.2127,
+    "labels": {
+     "leaning_harsh": 2
+    }
+   },
+   "ojas": {
+    "mean": 37.6165,
+    "labels": {
+     "light": 1,
+     "leaning_light": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 5.728,
+    "labels": {
+     "leaning_clear": 1,
+     "ordinary": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 5.728,
+    "labels": {
+     "leaning_clear": 1,
+     "ordinary": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 2
+    }
+   }
+  },
+  "utpalamala": {
+   "n": 2,
+   "anuprasa_v1": {
+    "mean": 0.9505,
+    "labels": {
+     "weak": 1,
+     "none": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.8635,
+    "labels": {
+     "weak": 1,
+     "none": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.076,
+    "labels": {
+     "marked": 2
+    }
+   },
+   "madhurya_v1": {
+    "mean": 0.0469,
+    "labels": {
+     "leaning_soft": 1,
+     "balanced": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": 0.0469,
+    "labels": {
+     "balanced": 2
+    }
+   },
+   "ojas": {
+    "mean": 41.25,
+    "labels": {
+     "moderate": 1,
+     "light": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 6.0115,
+    "labels": {
+     "leaning_obscure": 1,
+     "leaning_clear": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 6.0115,
+    "labels": {
+     "obscure": 1,
+     "leaning_clear": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 2
+    }
+   }
+  },
+  "layagrahi": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": 5.46,
+    "labels": {
+     "marked": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 5.267,
+    "labels": {
+     "marked": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 2.7167,
+    "labels": {
+     "strong": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.6875,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.6875,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "ojas": {
+    "mean": 46.667,
+    "labels": {
+     "leaning_dense": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 10.592,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 10.592,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  },
+  "layavibhati": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": 2.058,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 1.92,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 2.0294,
+    "labels": {
+     "strong": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.3125,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.3125,
+    "labels": {
+     "leaning_harsh": 1
+    }
+   },
+   "ojas": {
+    "mean": 40.441,
+    "labels": {
+     "leaning_light": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 8.661,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 8.661,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  },
+  "malini": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": 0.124,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.061,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 2.0167,
+    "labels": {
+     "strong": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.5667,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.5667,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "ojas": {
+    "mean": 55.833,
+    "labels": {
+     "dense": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 6.702,
+    "labels": {
+     "leaning_obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 6.702,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  },
+  "manini": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": 1.412,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 1.301,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.2386,
+    "labels": {
+     "marked": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.3636,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.3636,
+    "labels": {
+     "leaning_harsh": 1
+    }
+   },
+   "ojas": {
+    "mean": 49.432,
+    "labels": {
+     "dense": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 10.726,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 10.726,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  },
+  "pamcacamaramu": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": -0.336,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": -0.395,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.3175,
+    "labels": {
+     "marked": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.2812,
+    "labels": {
+     "leaning_harsh": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.2812,
+    "labels": {
+     "leaning_harsh": 1
+    }
+   },
+   "ojas": {
+    "mean": 42.188,
+    "labels": {
+     "moderate": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 6.476,
+    "labels": {
+     "leaning_obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 6.476,
+    "labels": {
+     "leaning_obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  },
+  "sardulavikriditamu": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": 1.616,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 1.517,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.1333,
+    "labels": {
+     "marked": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": 0.0526,
+    "labels": {
+     "leaning_soft": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": 0.0526,
+    "labels": {
+     "balanced": 1
+    }
+   },
+   "ojas": {
+    "mean": 44.079,
+    "labels": {
+     "moderate": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 8.37,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 8.37,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  },
+  "sragdhara": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": 1.031,
+    "labels": {
+     "weak": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": 0.932,
+    "labels": {
+     "weak": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 1.0238,
+    "labels": {
+     "marked": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.0417,
+    "labels": {
+     "balanced": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.0417,
+    "labels": {
+     "balanced": 1
+    }
+   },
+   "ojas": {
+    "mean": 48.214,
+    "labels": {
+     "dense": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 8.925,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 8.925,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  },
+  "upendravajra": {
+   "n": 1,
+   "anuprasa_v1": {
+    "mean": -0.087,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v2": {
+    "mean": -0.139,
+    "labels": {
+     "none": 1
+    }
+   },
+   "anuprasa_v3": {
+    "mean": 0.8837,
+    "labels": {
+     "weak": 1
+    }
+   },
+   "madhurya_v1": {
+    "mean": -0.5909,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "madhurya_v2": {
+    "mean": -0.5909,
+    "labels": {
+     "harsh": 1
+    }
+   },
+   "ojas": {
+    "mean": 59.091,
+    "labels": {
+     "dense": 1
+    }
+   },
+   "prasada_v1": {
+    "mean": 12.959,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "prasada_v2": {
+    "mean": 12.959,
+    "labels": {
+     "obscure": 1
+    }
+   },
+   "chandas_distance": {
+    "mean": 1.0,
+    "labels": {
+     "exact": 1
+    }
+   }
+  }
+ },
+ "against_gold": {
+  "anuprasa_v1": {
+   "n_pairs": 33,
+   "mean_difference": -0.2169,
+   "share_above_gold": 0.3636,
+   "share_equal": 0.0
+  },
+  "anuprasa_v2": {
+   "n_pairs": 33,
+   "mean_difference": -0.219,
+   "share_above_gold": 0.3636,
+   "share_equal": 0.0
+  },
+  "anuprasa_v3": {
+   "n_pairs": 33,
+   "mean_difference": 0.1404,
+   "share_above_gold": 0.5152,
+   "share_equal": 0.0
+  },
+  "madhurya_v1": {
+   "n_pairs": 33,
+   "mean_difference": -0.0298,
+   "share_above_gold": 0.5455,
+   "share_equal": 0.0
+  },
+  "madhurya_v2": {
+   "n_pairs": 33,
+   "mean_difference": -0.0298,
+   "share_above_gold": 0.5455,
+   "share_equal": 0.0
+  },
+  "ojas": {
+   "n_pairs": 33,
+   "mean_difference": -0.2285,
+   "share_above_gold": 0.3939,
+   "share_equal": 0.0303
+  },
+  "prasada_v1": {
+   "n_pairs": 33,
+   "mean_difference": 0.3859,
+   "share_above_gold": 0.6364,
+   "share_equal": 0.0
+  },
+  "prasada_v2": {
+   "n_pairs": 33,
+   "mean_difference": 0.3859,
+   "share_above_gold": 0.6364,
+   "share_equal": 0.0
+  },
+  "chandas_distance": {
+   "n_pairs": 33,
+   "mean_difference": 0.0,
+   "share_above_gold": 0.0,
+   "share_equal": 1.0
+  }
+ },
+ "poems": [
+  {"id":"he2_0002","metre":"utpalamala","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1341","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1341","gold_eval_id":"he_0329","anuprasa_v1":{"value":1.35,"level":0.75,"label":"weak"},"anuprasa_v2":{"value":1.254,"level":0.5,"label":"weak"},"anuprasa_v3":{"value":1.0253,"level":2,"label":"marked","longest_repeated_ngram":2,"percentile":43.8},"madhurya_v1":{"value":0.0688,"level":3,"label":"leaning_soft","percentile":74.4,"pileup":0.0813,"sonority":10.362},"madhurya_v2":{"value":0.0688,"level":2,"label":"balanced"},"ojas":{"value":44.375,"level":2,"label":"moderate","percentile":71.0,"conjunct_rate":13.75,"word_length":4.0},"prasada_v1":{"value":6.631,"level":1,"label":"leaning_obscure","percentile":19.9,"known_word_share":0.55,"zipf":3.357},"prasada_v2":{"value":6.631,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"utpalamala","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0005","metre":"mattebhavikriditamu","n_lines":4,"source_id":"dataset/bhagavatam:3-799-మ.","prompt_id":"dataset/bhagavatam:3-799-మ.","gold_eval_id":"he_0072","anuprasa_v1":{"value":1.371,"level":0.25,"label":"none"},"anuprasa_v2":{"value":1.271,"level":0.25,"label":"none"},"anuprasa_v3":{"value":1.175,"level":2,"label":"marked","longest_repeated_ngram":4,"percentile":65.0},"madhurya_v1":{"value":-0.2875,"level":0,"label":"harsh","percentile":9.7,"pileup":0.3187,"sonority":10.36},"madhurya_v2":{"value":-0.2875,"level":1,"label":"leaning_harsh"},"ojas":{"value":46.875,"level":3,"label":"leaning_dense","percentile":89.0,"conjunct_rate":17.5,"word_length":4.211},"prasada_v1":{"value":7.925,"level":0,"label":"obscure","percentile":1.9,"known_word_share":0.474,"zipf":2.892},"prasada_v2":{"value":7.925,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"mattebhavikriditamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0009","metre":"malini","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-863","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-863","gold_eval_id":"he_0205","anuprasa_v1":{"value":0.124,"level":0.25,"label":"none"},"anuprasa_v2":{"value":0.061,"level":0.25,"label":"none"},"anuprasa_v3":{"value":2.0167,"level":3,"label":"strong","longest_repeated_ngram":6,"percentile":96.7},"madhurya_v1":{"value":-0.5667,"level":0,"label":"harsh","percentile":1.3,"pileup":0.475,"sonority":10.365},"madhurya_v2":{"value":-0.5667,"level":0,"label":"harsh"},"ojas":{"value":55.833,"level":4,"label":"dense","percentile":99.8,"conjunct_rate":21.67,"word_length":10.0},"prasada_v1":{"value":6.702,"level":1,"label":"leaning_obscure","percentile":17.9,"known_word_share":0.167,"zipf":2.31},"prasada_v2":{"value":6.702,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"malini","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0014","metre":"ataveladi","n_lines":4,"source_id":"dataset/vemana:vemana-532-ఆ.","prompt_id":"dataset/vemana:vemana-532-ఆ.","gold_eval_id":"he_0104","anuprasa_v1":{"value":-0.47,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.515,"level":0.0,"label":"none"},"anuprasa_v3":{"value":0.96,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":32.3},"madhurya_v1":{"value":-0.07,"level":2,"label":"balanced","percentile":41.0,"pileup":0.09,"sonority":10.622},"madhurya_v2":{"value":-0.07,"level":2,"label":"balanced"},"ojas":{"value":41.0,"level":1,"label":"leaning_light","percentile":32.0,"conjunct_rate":12.0,"word_length":3.333},"prasada_v1":{"value":6.418,"level":1,"label":"leaning_obscure","percentile":26.7,"known_word_share":0.733,"zipf":3.608},"prasada_v2":{"value":6.418,"level":1,"label":"leaning_obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"ataveladi","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0015","metre":"sragdhara","n_lines":4,"source_id":"dataset/bhagavatam:6-272-స్రగ్ద.","prompt_id":"dataset/bhagavatam:6-272-స్రగ్ద.","gold_eval_id":"he_0488","anuprasa_v1":{"value":1.031,"level":0.5,"label":"weak"},"anuprasa_v2":{"value":0.932,"level":0.5,"label":"weak"},"anuprasa_v3":{"value":1.0238,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":43.4},"madhurya_v1":{"value":-0.0417,"level":2,"label":"balanced","percentile":47.6,"pileup":0.0952,"sonority":10.206},"madhurya_v2":{"value":-0.0417,"level":2,"label":"balanced"},"ojas":{"value":48.214,"level":4,"label":"dense","percentile":94.2,"conjunct_rate":19.05,"word_length":4.421},"prasada_v1":{"value":8.925,"level":0,"label":"obscure","percentile":0.8,"known_word_share":0.526,"zipf":3.102},"prasada_v2":{"value":8.925,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"sragdhara","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0018","metre":"tetagiti","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-604","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-604","gold_eval_id":"he_0259","anuprasa_v1":{"value":2.936,"level":0.75,"label":"weak"},"anuprasa_v2":{"value":2.852,"level":0.75,"label":"weak"},"anuprasa_v3":{"value":3.661,"level":3,"label":"strong","longest_repeated_ngram":9,"percentile":99.0},"madhurya_v1":{"value":0.2881,"level":4,"label":"soft","percentile":98.9,"pileup":0.0169,"sonority":11.144},"madhurya_v2":{"value":0.2881,"level":3,"label":"leaning_soft"},"ojas":{"value":43.22,"level":2,"label":"moderate","percentile":58.6,"conjunct_rate":8.47,"word_length":4.538},"prasada_v1":{"value":5.53,"level":3,"label":"leaning_clear","percentile":70.4,"known_word_share":0.615,"zipf":3.181},"prasada_v2":{"value":5.53,"level":3,"label":"leaning_clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"tetagiti","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0020","metre":"mattebhavikriditamu","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-87","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-87","gold_eval_id":"he_0029","anuprasa_v1":{"value":-0.787,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.854,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.8875,"level":3,"label":"strong","longest_repeated_ngram":6,"percentile":95.6},"madhurya_v1":{"value":-0.0312,"level":2,"label":"balanced","percentile":50.0,"pileup":0.075,"sonority":10.344},"madhurya_v2":{"value":-0.0312,"level":2,"label":"balanced"},"ojas":{"value":41.875,"level":1,"label":"leaning_light","percentile":42.0,"conjunct_rate":11.25,"word_length":3.636},"prasada_v1":{"value":7.848,"level":0,"label":"obscure","percentile":2.2,"known_word_share":0.591,"zipf":2.956},"prasada_v2":{"value":7.848,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"mattebhavikriditamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0024","metre":"upendravajra","n_lines":4,"source_id":"dataset/bhagavatam:10.1-407-ఉపేం.","prompt_id":"dataset/bhagavatam:10.1-407-ఉపేం.","gold_eval_id":"he_0449","anuprasa_v1":{"value":-0.087,"level":0.25,"label":"none"},"anuprasa_v2":{"value":-0.139,"level":0.0,"label":"none"},"anuprasa_v3":{"value":0.8837,"level":1,"label":"weak","longest_repeated_ngram":3,"percentile":20.4},"madhurya_v1":{"value":-0.5909,"level":0,"label":"harsh","percentile":1.0,"pileup":0.3864,"sonority":10.205},"madhurya_v2":{"value":-0.5909,"level":0,"label":"harsh"},"ojas":{"value":59.091,"level":4,"label":"dense","percentile":100.0,"conjunct_rate":40.91,"word_length":4.4},"prasada_v1":{"value":12.959,"level":0,"label":"obscure","percentile":0.0,"known_word_share":0.1,"zipf":2.178},"prasada_v2":{"value":12.959,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"upendravajra","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0026","metre":"tetagiti","n_lines":4,"source_id":"dataset/vemana:vemana-531-ఆ.","prompt_id":"dataset/vemana:vemana-531-ఆ.","gold_eval_id":"he_0112","anuprasa_v1":{"value":-0.252,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.304,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.0,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":40.0},"madhurya_v1":{"value":-0.0263,"level":2,"label":"balanced","percentile":51.5,"pileup":0.0614,"sonority":10.477},"madhurya_v2":{"value":-0.0263,"level":2,"label":"balanced"},"ojas":{"value":44.737,"level":2,"label":"moderate","percentile":74.5,"conjunct_rate":21.05,"word_length":3.167},"prasada_v1":{"value":5.663,"level":2,"label":"ordinary","percentile":63.1,"known_word_share":0.833,"zipf":3.64},"prasada_v2":{"value":5.663,"level":3,"label":"leaning_clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"tetagiti","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0029","metre":"sardulavikriditamu","n_lines":4,"source_id":"dataset/bhagavatam:10.1-1185-శా.","prompt_id":"dataset/bhagavatam:10.1-1185-శా.","gold_eval_id":"he_0081","anuprasa_v1":{"value":1.616,"level":0.25,"label":"none"},"anuprasa_v2":{"value":1.517,"level":0.25,"label":"none"},"anuprasa_v3":{"value":1.1333,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":59.8},"madhurya_v1":{"value":0.0526,"level":3,"label":"leaning_soft","percentile":70.8,"pileup":0.1184,"sonority":10.194},"madhurya_v2":{"value":0.0526,"level":2,"label":"balanced"},"ojas":{"value":44.079,"level":2,"label":"moderate","percentile":68.4,"conjunct_rate":18.42,"word_length":3.304},"prasada_v1":{"value":8.37,"level":0,"label":"obscure","percentile":1.0,"known_word_share":0.696,"zipf":3.27},"prasada_v2":{"value":8.37,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"sardulavikriditamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0033","metre":"utpalamala","n_lines":4,"source_id":"dataset/vemana:vemana-1006-ఆ.","prompt_id":"dataset/vemana:vemana-1006-ఆ.","gold_eval_id":"he_0457","anuprasa_v1":{"value":0.551,"level":0.25,"label":"none"},"anuprasa_v2":{"value":0.473,"level":0.25,"label":"none"},"anuprasa_v3":{"value":1.1266,"level":2,"label":"marked","longest_repeated_ngram":2,"percentile":59.0},"madhurya_v1":{"value":0.025,"level":2,"label":"balanced","percentile":64.0,"pileup":0.075,"sonority":10.406},"madhurya_v2":{"value":0.025,"level":2,"label":"balanced"},"ojas":{"value":38.125,"level":0,"label":"light","percentile":9.9,"conjunct_rate":8.75,"word_length":3.077},"prasada_v1":{"value":5.392,"level":3,"label":"leaning_clear","percentile":77.8,"known_word_share":0.923,"zipf":3.918},"prasada_v2":{"value":5.392,"level":3,"label":"leaning_clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"utpalamala","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0034","metre":"madhuragati_ragada","n_lines":2,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1201","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1201","gold_eval_id":"he_0311","anuprasa_v1":{"value":0.353,"level":0.0,"label":"none"},"anuprasa_v2":{"value":0.314,"level":0.0,"label":"none"},"anuprasa_v3":{"value":0.9259,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":27.1},"madhurya_v1":{"value":-0.1429,"level":1,"label":"leaning_harsh","percentile":26.7,"pileup":0.0536,"sonority":10.517},"madhurya_v2":{"value":-0.1429,"level":1,"label":"leaning_harsh"},"ojas":{"value":33.929,"level":0,"label":"light","percentile":0.8,"conjunct_rate":0.0,"word_length":3.111},"prasada_v1":{"value":5.409,"level":3,"label":"leaning_clear","percentile":76.9,"known_word_share":0.889,"zipf":3.81},"prasada_v2":{"value":5.409,"level":3,"label":"leaning_clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"madhuragati_ragada","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0036","metre":"layavibhati","n_lines":4,"source_id":"dataset/bhagavatam:10.2-737-లవి.","prompt_id":"dataset/bhagavatam:10.2-737-లవి.","gold_eval_id":"he_0071","anuprasa_v1":{"value":2.058,"level":0.25,"label":"none"},"anuprasa_v2":{"value":1.92,"level":0.25,"label":"none"},"anuprasa_v3":{"value":2.0294,"level":3,"label":"strong","longest_repeated_ngram":5,"percentile":96.8},"madhurya_v1":{"value":-0.3125,"level":0,"label":"harsh","percentile":8.0,"pileup":0.1875,"sonority":10.885},"madhurya_v2":{"value":-0.3125,"level":1,"label":"leaning_harsh"},"ojas":{"value":40.441,"level":1,"label":"leaning_light","percentile":26.6,"conjunct_rate":10.29,"word_length":3.4},"prasada_v1":{"value":8.661,"level":0,"label":"obscure","percentile":0.9,"known_word_share":0.6,"zipf":3.08},"prasada_v2":{"value":8.661,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"layavibhati","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0037","metre":"ataveladi","n_lines":4,"source_id":"dataset/vemana:vemana-866-ఆ.","prompt_id":"dataset/vemana:vemana-866-ఆ.","gold_eval_id":"he_0307","anuprasa_v1":{"value":4.036,"level":1.25,"label":"weak"},"anuprasa_v2":{"value":3.949,"level":1.25,"label":"weak"},"anuprasa_v3":{"value":1.0,"level":2,"label":"marked","longest_repeated_ngram":2,"percentile":40.0},"madhurya_v1":{"value":-0.11,"level":2,"label":"balanced","percentile":32.4,"pileup":0.12,"sonority":10.673},"madhurya_v2":{"value":-0.11,"level":2,"label":"balanced"},"ojas":{"value":38.0,"level":0,"label":"light","percentile":9.0,"conjunct_rate":12.0,"word_length":2.778},"prasada_v1":{"value":5.512,"level":3,"label":"leaning_clear","percentile":71.3,"known_word_share":0.889,"zipf":4.161},"prasada_v2":{"value":5.512,"level":3,"label":"leaning_clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"ataveladi","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0038","metre":"champakamala","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-266","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-266","gold_eval_id":"he_0270","anuprasa_v1":{"value":0.001,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.075,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.2262,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":70.1},"madhurya_v1":{"value":0.0774,"level":3,"label":"leaning_soft","percentile":76.1,"pileup":0.131,"sonority":10.753},"madhurya_v2":{"value":0.0774,"level":2,"label":"balanced"},"ojas":{"value":41.071,"level":1,"label":"leaning_light","percentile":33.0,"conjunct_rate":4.76,"word_length":4.421},"prasada_v1":{"value":5.709,"level":2,"label":"ordinary","percentile":60.5,"known_word_share":0.579,"zipf":3.349},"prasada_v2":{"value":5.709,"level":3,"label":"leaning_clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"champakamala","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0047","metre":"kandamu","n_lines":4,"source_id":"dataset/vemana:vemana-801-ఆ.","prompt_id":"dataset/vemana:vemana-801-ఆ.","gold_eval_id":"he_0031","anuprasa_v1":{"value":-0.331,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.378,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.0,"level":2,"label":"marked","longest_repeated_ngram":2,"percentile":40.0},"madhurya_v1":{"value":0.2059,"level":4,"label":"soft","percentile":95.3,"pileup":0.0196,"sonority":10.562},"madhurya_v2":{"value":0.2059,"level":3,"label":"leaning_soft"},"ojas":{"value":43.137,"level":2,"label":"moderate","percentile":58.0,"conjunct_rate":15.69,"word_length":3.4},"prasada_v1":{"value":5.141,"level":3,"label":"leaning_clear","percentile":89.4,"known_word_share":1.0,"zipf":3.871},"prasada_v2":{"value":5.141,"level":4,"label":"clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"kandamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0048","metre":"manini","n_lines":4,"source_id":"dataset/bhagavatam:10.1-214-మాని.","prompt_id":"dataset/bhagavatam:10.1-214-మాని.","gold_eval_id":"he_0141","anuprasa_v1":{"value":1.412,"level":0.25,"label":"none"},"anuprasa_v2":{"value":1.301,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.2386,"level":2,"label":"marked","longest_repeated_ngram":4,"percentile":71.4},"madhurya_v1":{"value":-0.3636,"level":0,"label":"harsh","percentile":5.6,"pileup":0.3239,"sonority":10.512},"madhurya_v2":{"value":-0.3636,"level":1,"label":"leaning_harsh"},"ojas":{"value":49.432,"level":4,"label":"dense","percentile":97.1,"conjunct_rate":28.41,"word_length":3.385},"prasada_v1":{"value":10.726,"level":0,"label":"obscure","percentile":0.4,"known_word_share":0.538,"zipf":2.816},"prasada_v2":{"value":10.726,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"manini","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0049","metre":"tetagiti","n_lines":4,"source_id":"dataset/vemana:vemana-327-ఆ.","prompt_id":"dataset/vemana:vemana-327-ఆ.","gold_eval_id":"he_0107","anuprasa_v1":{"value":0.323,"level":0.0,"label":"none"},"anuprasa_v2":{"value":0.263,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.3279,"level":2,"label":"marked","longest_repeated_ngram":4,"percentile":78.4},"madhurya_v1":{"value":-0.1066,"level":2,"label":"balanced","percentile":33.0,"pileup":0.0984,"sonority":10.908},"madhurya_v2":{"value":-0.1066,"level":2,"label":"balanced"},"ojas":{"value":39.344,"level":1,"label":"leaning_light","percentile":17.7,"conjunct_rate":9.84,"word_length":3.211},"prasada_v1":{"value":6.243,"level":2,"label":"ordinary","percentile":33.3,"known_word_share":0.842,"zipf":3.829},"prasada_v2":{"value":6.243,"level":1,"label":"leaning_obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"tetagiti","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0050","metre":"champakamala","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-674","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-674","gold_eval_id":"he_0093","anuprasa_v1":{"value":0.793,"level":0.5,"label":"weak"},"anuprasa_v2":{"value":0.708,"level":0.5,"label":"weak"},"anuprasa_v3":{"value":1.0482,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":47.1},"madhurya_v1":{"value":0.0417,"level":2,"label":"balanced","percentile":68.2,"pileup":0.1012,"sonority":10.807},"madhurya_v2":{"value":0.0417,"level":2,"label":"balanced"},"ojas":{"value":38.095,"level":0,"label":"light","percentile":9.7,"conjunct_rate":5.95,"word_length":3.36},"prasada_v1":{"value":7.355,"level":0,"label":"obscure","percentile":5.9,"known_word_share":0.68,"zipf":3.372},"prasada_v2":{"value":7.355,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"champakamala","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0055","metre":"kandamu","n_lines":4,"source_id":"dataset/vemana:vemana-1094-ఆ.","prompt_id":"dataset/vemana:vemana-1094-ఆ.","gold_eval_id":"he_0425","anuprasa_v1":{"value":0.579,"level":0.0,"label":"none"},"anuprasa_v2":{"value":0.527,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.28,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":75.2},"madhurya_v1":{"value":0.2647,"level":4,"label":"soft","percentile":98.3,"pileup":0.0196,"sonority":11.257},"madhurya_v2":{"value":0.2647,"level":3,"label":"leaning_soft"},"ojas":{"value":34.314,"level":0,"label":"light","percentile":0.9,"conjunct_rate":3.92,"word_length":2.833},"prasada_v1":{"value":5.74,"level":2,"label":"ordinary","percentile":58.8,"known_word_share":0.833,"zipf":3.966},"prasada_v2":{"value":5.74,"level":2,"label":"ordinary"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"kandamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0061","metre":"pamcacamaramu","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1197","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1197","gold_eval_id":"he_0387","anuprasa_v1":{"value":-0.336,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.395,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.3175,"level":2,"label":"marked","longest_repeated_ngram":4,"percentile":77.7},"madhurya_v1":{"value":-0.2812,"level":1,"label":"leaning_harsh","percentile":10.2,"pileup":0.2578,"sonority":10.476},"madhurya_v2":{"value":-0.2812,"level":1,"label":"leaning_harsh"},"ojas":{"value":42.188,"level":2,"label":"moderate","percentile":45.5,"conjunct_rate":12.5,"word_length":3.556},"prasada_v1":{"value":6.476,"level":1,"label":"leaning_obscure","percentile":24.9,"known_word_share":0.833,"zipf":3.838},"prasada_v2":{"value":6.476,"level":1,"label":"leaning_obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"pamcacamaramu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0062","metre":"kandamu","n_lines":4,"source_id":"dataset/vemana:vemana-51-ఆ.","prompt_id":"dataset/vemana:vemana-51-ఆ.","gold_eval_id":"he_0244","anuprasa_v1":{"value":0.589,"level":0.0,"label":"none"},"anuprasa_v2":{"value":0.536,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.0,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":40.0},"madhurya_v1":{"value":-0.03,"level":2,"label":"balanced","percentile":50.5,"pileup":0.14,"sonority":10.792},"madhurya_v2":{"value":-0.03,"level":2,"label":"balanced"},"ojas":{"value":37.0,"level":0,"label":"light","percentile":5.1,"conjunct_rate":6.0,"word_length":3.125},"prasada_v1":{"value":5.845,"level":2,"label":"ordinary","percentile":52.7,"known_word_share":0.938,"zipf":3.83},"prasada_v2":{"value":5.845,"level":2,"label":"ordinary"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"kandamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0070","metre":"ataveladi","n_lines":4,"source_id":"dataset/vemana:vemana-57-ఆ.","prompt_id":"dataset/vemana:vemana-57-ఆ.","gold_eval_id":"he_0444","anuprasa_v1":{"value":-0.278,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.325,"level":0.0,"label":"none"},"anuprasa_v3":{"value":0.94,"level":2,"label":"marked","longest_repeated_ngram":2,"percentile":29.2},"madhurya_v1":{"value":0.0098,"level":2,"label":"balanced","percentile":60.0,"pileup":0.0784,"sonority":10.465},"madhurya_v2":{"value":0.0098,"level":2,"label":"balanced"},"ojas":{"value":38.235,"level":0,"label":"light","percentile":10.6,"conjunct_rate":13.73,"word_length":2.684},"prasada_v1":{"value":6.245,"level":2,"label":"ordinary","percentile":33.3,"known_word_share":0.842,"zipf":3.849},"prasada_v2":{"value":6.245,"level":1,"label":"leaning_obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"ataveladi","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0071","metre":"champakamala","n_lines":4,"source_id":"dataset/bhagavatam:3-277-చ.","prompt_id":"dataset/bhagavatam:3-277-చ.","gold_eval_id":"he_0100","anuprasa_v1":{"value":0.873,"level":0.5,"label":"weak"},"anuprasa_v2":{"value":0.787,"level":0.5,"label":"weak"},"anuprasa_v3":{"value":1.3614,"level":3,"label":"strong","longest_repeated_ngram":4,"percentile":80.6},"madhurya_v1":{"value":0.0238,"level":2,"label":"balanced","percentile":63.8,"pileup":0.1131,"sonority":10.516},"madhurya_v2":{"value":0.0238,"level":2,"label":"balanced"},"ojas":{"value":42.857,"level":2,"label":"moderate","percentile":54.0,"conjunct_rate":4.76,"word_length":5.25},"prasada_v1":{"value":5.106,"level":4,"label":"clear","percentile":90.5,"known_word_share":0.562,"zipf":3.333},"prasada_v2":{"value":5.106,"level":4,"label":"clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"champakamala","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0078","metre":"tetagiti","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-654","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-654","gold_eval_id":"he_0357","anuprasa_v1":{"value":1.191,"level":0.5,"label":"weak"},"anuprasa_v2":{"value":1.132,"level":0.5,"label":"weak"},"anuprasa_v3":{"value":1.0,"level":2,"label":"marked","longest_repeated_ngram":2,"percentile":40.0},"madhurya_v1":{"value":-0.0094,"level":2,"label":"balanced","percentile":55.6,"pileup":0.1132,"sonority":10.226},"madhurya_v2":{"value":-0.0094,"level":2,"label":"balanced"},"ojas":{"value":40.566,"level":1,"label":"leaning_light","percentile":28.0,"conjunct_rate":11.32,"word_length":3.312},"prasada_v1":{"value":5.669,"level":2,"label":"ordinary","percentile":62.7,"known_word_share":0.75,"zipf":3.773},"prasada_v2":{"value":5.669,"level":3,"label":"leaning_clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"tetagiti","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0079","metre":"madhuragati_ragada","n_lines":2,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1207","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1207","gold_eval_id":"he_0469","anuprasa_v1":{"value":-0.551,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.579,"level":0.0,"label":"none"},"anuprasa_v3":{"value":0.5217,"level":1,"label":"weak","longest_repeated_ngram":1,"percentile":0.2},"madhurya_v1":{"value":-0.2826,"level":1,"label":"leaning_harsh","percentile":10.0,"pileup":0.1957,"sonority":10.725},"madhurya_v2":{"value":-0.2826,"level":1,"label":"leaning_harsh"},"ojas":{"value":41.304,"level":1,"label":"leaning_light","percentile":35.6,"conjunct_rate":17.39,"word_length":2.875},"prasada_v1":{"value":6.047,"level":2,"label":"ordinary","percentile":42.4,"known_word_share":0.875,"zipf":3.955},"prasada_v2":{"value":6.047,"level":2,"label":"ordinary"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"madhuragati_ragada","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0081","metre":"champakamala","n_lines":4,"source_id":"dataset/bhagavatam:6-399-చ.","prompt_id":"dataset/bhagavatam:6-399-చ.","gold_eval_id":"he_0117","anuprasa_v1":{"value":0.211,"level":0.0,"label":"none"},"anuprasa_v2":{"value":0.13,"level":0.0,"label":"none"},"anuprasa_v3":{"value":3.6548,"level":3,"label":"strong","longest_repeated_ngram":10,"percentile":99.0},"madhurya_v1":{"value":0.1369,"level":3,"label":"leaning_soft","percentile":87.1,"pileup":0.0238,"sonority":10.909},"madhurya_v2":{"value":0.1369,"level":3,"label":"leaning_soft"},"ojas":{"value":38.095,"level":0,"label":"light","percentile":9.7,"conjunct_rate":10.71,"word_length":2.897},"prasada_v1":{"value":5.88,"level":2,"label":"ordinary","percentile":50.7,"known_word_share":0.966,"zipf":4.102},"prasada_v2":{"value":5.88,"level":2,"label":"ordinary"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"champakamala","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0085","metre":"kandamu","n_lines":4,"source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-668","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-668","gold_eval_id":"he_0347","anuprasa_v1":{"value":-1.284,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-1.32,"level":0.0,"label":"none"},"anuprasa_v3":{"value":0.8958,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":22.2},"madhurya_v1":{"value":0.0714,"level":3,"label":"leaning_soft","percentile":75.0,"pileup":0.0816,"sonority":10.532},"madhurya_v2":{"value":0.0714,"level":2,"label":"balanced"},"ojas":{"value":41.837,"level":1,"label":"leaning_light","percentile":41.0,"conjunct_rate":14.29,"word_length":3.267},"prasada_v1":{"value":6.05,"level":2,"label":"ordinary","percentile":42.3,"known_word_share":0.933,"zipf":3.845},"prasada_v2":{"value":6.05,"level":2,"label":"ordinary"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"kandamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0087","metre":"tetagiti","n_lines":4,"source_id":"dataset/vemana:vemana-1145-ఆ.","prompt_id":"dataset/vemana:vemana-1145-ఆ.","gold_eval_id":"he_0416","anuprasa_v1":{"value":-0.134,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.183,"level":0.0,"label":"none"},"anuprasa_v3":{"value":1.0185,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":41.9},"madhurya_v1":{"value":0.25,"level":4,"label":"soft","percentile":97.8,"pileup":0.0278,"sonority":10.941},"madhurya_v2":{"value":0.25,"level":3,"label":"leaning_soft"},"ojas":{"value":36.111,"level":0,"label":"light","percentile":2.9,"conjunct_rate":9.26,"word_length":2.7},"prasada_v1":{"value":6.447,"level":1,"label":"leaning_obscure","percentile":25.8,"known_word_share":0.95,"zipf":3.925},"prasada_v2":{"value":6.447,"level":1,"label":"leaning_obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"tetagiti","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0089","metre":"ataveladi","n_lines":4,"source_id":"dataset/vemana:vemana-558-ఆ.","prompt_id":"dataset/vemana:vemana-558-ఆ.","gold_eval_id":"he_0341","anuprasa_v1":{"value":-0.664,"level":0.0,"label":"none"},"anuprasa_v2":{"value":-0.706,"level":0.0,"label":"none"},"anuprasa_v3":{"value":0.875,"level":1,"label":"weak","longest_repeated_ngram":3,"percentile":19.0},"madhurya_v1":{"value":-0.2347,"level":1,"label":"leaning_harsh","percentile":14.5,"pileup":0.2041,"sonority":10.25},"madhurya_v2":{"value":-0.2347,"level":1,"label":"leaning_harsh"},"ojas":{"value":39.796,"level":1,"label":"leaning_light","percentile":21.0,"conjunct_rate":16.33,"word_length":2.722},"prasada_v1":{"value":6.929,"level":1,"label":"leaning_obscure","percentile":12.4,"known_word_share":0.944,"zipf":3.769},"prasada_v2":{"value":6.929,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"ataveladi","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0094","metre":"mattebhavikriditamu","n_lines":4,"source_id":"dataset/bhagavatam:10.1-714-మ.","prompt_id":"dataset/bhagavatam:10.1-714-మ.","gold_eval_id":"he_0494","anuprasa_v1":{"value":1.763,"level":0.75,"label":"weak"},"anuprasa_v2":{"value":1.665,"level":0.75,"label":"weak"},"anuprasa_v3":{"value":1.0125,"level":2,"label":"marked","longest_repeated_ngram":3,"percentile":41.0},"madhurya_v1":{"value":-0.0813,"level":2,"label":"balanced","percentile":38.5,"pileup":0.1375,"sonority":10.217},"madhurya_v2":{"value":-0.0813,"level":2,"label":"balanced"},"ojas":{"value":42.5,"level":2,"label":"moderate","percentile":50.0,"conjunct_rate":10.0,"word_length":4.0},"prasada_v1":{"value":7.971,"level":0,"label":"obscure","percentile":1.8,"known_word_share":0.6,"zipf":3.017},"prasada_v2":{"value":7.971,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"mattebhavikriditamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0095","metre":"kandamu","n_lines":4,"source_id":"dataset/vemana:vemana-22-ఆ.","prompt_id":"dataset/vemana:vemana-22-ఆ.","gold_eval_id":"he_0199","anuprasa_v1":{"value":1.412,"level":0.5,"label":"weak"},"anuprasa_v2":{"value":1.352,"level":0.5,"label":"weak"},"anuprasa_v3":{"value":1.549,"level":3,"label":"strong","longest_repeated_ngram":5,"percentile":88.8},"madhurya_v1":{"value":-0.0882,"level":2,"label":"balanced","percentile":37.0,"pileup":0.1471,"sonority":10.701},"madhurya_v2":{"value":-0.0882,"level":2,"label":"balanced"},"ojas":{"value":38.235,"level":0,"label":"light","percentile":10.6,"conjunct_rate":5.88,"word_length":3.4},"prasada_v1":{"value":5.27,"level":3,"label":"leaning_clear","percentile":84.2,"known_word_share":0.933,"zipf":3.764},"prasada_v2":{"value":5.27,"level":4,"label":"clear"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"kandamu","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}},
+  {"id":"he2_0098","metre":"layagrahi","n_lines":4,"source_id":"dataset/bhagavatam:10.2-739-లగ్రా.","prompt_id":"dataset/bhagavatam:10.2-739-లగ్రా.","gold_eval_id":"he_0133","anuprasa_v1":{"value":5.46,"level":2.0,"label":"marked"},"anuprasa_v2":{"value":5.267,"level":2.0,"label":"marked"},"anuprasa_v3":{"value":2.7167,"level":3,"label":"strong","longest_repeated_ngram":4,"percentile":98.9},"madhurya_v1":{"value":-0.6875,"level":0,"label":"harsh","percentile":0.9,"pileup":0.45,"sonority":10.062},"madhurya_v2":{"value":-0.6875,"level":0,"label":"harsh"},"ojas":{"value":46.667,"level":3,"label":"leaning_dense","percentile":87.8,"conjunct_rate":30.83,"word_length":2.667},"prasada_v1":{"value":10.592,"level":0,"label":"obscure","percentile":0.4,"known_word_share":0.444,"zipf":2.897},"prasada_v2":{"value":10.592,"level":0,"label":"obscure"},"chandas_distance":{"value":1.0,"level":4,"label":"exact","meter":"layagrahi","meter_given":true,"distance":0,"edits_per_100_aksharas":0.0}}
+ ]
+}

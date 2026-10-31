@@ -1,0 +1,548 @@
+{
+ "source": "human_evals_study2_t5_1b_ft",
+ "title": "T5Gemma 2 1B, fine-tuned, v2 decoder",
+ "family": "human_evals_study2",
+ "kind": "ai",
+ "from": "human_evals/human_eval_poems_study2.json (source_dataset t5_1b_ft)",
+ "summary": {
+  "n_poems": 33,
+  "n_tokens": 617,
+  "readings": {
+   "resolved_live_verified": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.8441,
+     "sd": 0.162,
+     "p10": 0.6471,
+     "median": 0.8947,
+     "p90": 1.0
+    },
+    "over_tokens": 0.8331
+   },
+   "resolved_live": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.9966,
+     "sd": 0.019,
+     "p10": 1.0,
+     "median": 1.0,
+     "p90": 1.0
+    },
+    "over_tokens": 0.9984
+   },
+   "resolved_live_strict": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.5217,
+     "sd": 0.1993,
+     "p10": 0.3077,
+     "median": 0.5455,
+     "p90": 0.8077
+    },
+    "over_tokens": 0.5267
+   },
+   "resolved": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.9489,
+     "sd": 0.061,
+     "p10": 0.8333,
+     "median": 0.96,
+     "p90": 1.0
+    },
+    "over_tokens": 0.9514
+   },
+   "resolved_verified": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.8212,
+     "sd": 0.1577,
+     "p10": 0.6279,
+     "median": 0.8571,
+     "p90": 1.0
+    },
+    "over_tokens": 0.812
+   },
+   "resolved_strict": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.637,
+     "sd": 0.2042,
+     "p10": 0.4231,
+     "median": 0.6667,
+     "p90": 0.875
+    },
+    "over_tokens": 0.637
+   },
+   "in_table": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.6978,
+     "sd": 0.2258,
+     "p10": 0.4884,
+     "median": 0.6667,
+     "p90": 0.9444
+    },
+    "over_tokens": 0.7066
+   },
+   "attested": {
+    "over_poems": {
+     "n": 33,
+     "mean": 0.9966,
+     "sd": 0.019,
+     "p10": 1.0,
+     "median": 1.0,
+     "p90": 1.0
+    },
+    "over_tokens": 0.9984
+   }
+  },
+  "classes_live": {
+   "resolved-by-byt5": {
+    "tokens": 268,
+    "share": 0.4344
+   },
+   "inflected": {
+    "tokens": 207,
+    "share": 0.3355
+   },
+   "headword": {
+    "tokens": 140,
+    "share": 0.2269
+   },
+   "unresolved": {
+    "tokens": 1,
+    "share": 0.0016
+   },
+   "split-all-known": {
+    "tokens": 1,
+    "share": 0.0016
+   }
+  },
+  "unresolved_live_verified": {
+   "tokens": 103,
+   "types": 100,
+   "most_frequent": [
+    [
+     "బెడిదపు",
+     2
+    ],
+    [
+     "ముల్లు",
+     2
+    ],
+    [
+     "కడ్రొ",
+     2
+    ],
+    [
+     "వృక్షశిలాశనిదఘ్రదంఘ్రికా",
+     1
+    ],
+    [
+     "ముస్రధారలన్",
+     1
+    ],
+    [
+     "కీర్పుల్",
+     1
+    ],
+    [
+     "విముక్",
+     1
+    ],
+    [
+     "సకలసురవరప్రశ్రాంతవిశ్వంభరారీ",
+     1
+    ],
+    [
+     "నిష్ప్రసాద",
+     1
+    ],
+    [
+     "సముదగదఖిలస్ఫారచాపాస్త్రదండంబై",
+     1
+    ],
+    [
+     "రథ్యద్విప్యుపాయం",
+     1
+    ],
+    [
+     "దివౌకస్వరులును",
+     1
+    ],
+    [
+     "మహులౌర్జాన్నిరస్తాత్మజంబై",
+     1
+    ],
+    [
+     "తత్తనువ్యాఘ్రులు",
+     1
+    ],
+    [
+     "రాక్షోవిభేదంబునన్",
+     1
+    ],
+    [
+     "బేపున",
+     1
+    ],
+    [
+     "గైదుష్యదాసారులున్",
+     1
+    ],
+    [
+     "సౌభ్రవులు",
+     1
+    ],
+    [
+     "దుష్కవుల్",
+     1
+    ],
+    [
+     "లున్న",
+     1
+    ],
+    [
+     "గెట్లన్",
+     1
+    ],
+    [
+     "అనఘ్య",
+     1
+    ],
+    [
+     "త్త్యాగమత్యా",
+     1
+    ],
+    [
+     "దపస్విమ్యశమిత్యపిశ్రా",
+     1
+    ],
+    [
+     "వృనిం",
+     1
+    ],
+    [
+     "దపోనిర్నిమి",
+     1
+    ],
+    [
+     "త్త్విక్రయేణ్యుంశ్రి",
+     1
+    ],
+    [
+     "నీశ్చతుర్విష్వపదృశ్యవాచ్యుం",
+     1
+    ],
+    [
+     "మయ్యని",
+     1
+    ],
+    [
+     "డన్వ్యాఘ్రాయుధుం",
+     1
+    ],
+    [
+     "దొలంగించివా",
+     1
+    ],
+    [
+     "జొన్టిస్తంబుగా",
+     1
+    ],
+    [
+     "బద్దెము",
+     1
+    ],
+    [
+     "జెలుంగుగతిన్",
+     1
+    ],
+    [
+     "లలమ్రిసి",
+     1
+    ],
+    [
+     "డిసము",
+     1
+    ],
+    [
+     "నిసుమ్రా",
+     1
+    ],
+    [
+     "వడరి",
+     1
+    ],
+    [
+     "లెసగ",
+     1
+    ],
+    [
+     "బెనుగ్రుదులు",
+     1
+    ]
+   ]
+  }
+ },
+ "by_metre": {
+  "kandamu": {
+   "n_poems": 5,
+   "n_tokens": 78,
+   "resolved_live_verified": 0.9624,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.667,
+   "resolved": 0.9397,
+   "resolved_verified": 0.9028,
+   "resolved_strict": 0.8495,
+   "in_table": 0.9373,
+   "attested": 1.0
+  },
+  "tetagiti": {
+   "n_poems": 5,
+   "n_tokens": 86,
+   "resolved_live_verified": 0.9414,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.5262,
+   "resolved": 0.9403,
+   "resolved_verified": 0.8942,
+   "resolved_strict": 0.6875,
+   "in_table": 0.8093,
+   "attested": 1.0
+  },
+  "ataveladi": {
+   "n_poems": 4,
+   "n_tokens": 68,
+   "resolved_live_verified": 0.9131,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.5609,
+   "resolved": 0.8983,
+   "resolved_verified": 0.8817,
+   "resolved_strict": 0.7181,
+   "in_table": 0.8483,
+   "attested": 1.0
+  },
+  "champakamala": {
+   "n_poems": 4,
+   "n_tokens": 88,
+   "resolved_live_verified": 0.8779,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.5521,
+   "resolved": 0.99,
+   "resolved_verified": 0.8779,
+   "resolved_strict": 0.6073,
+   "in_table": 0.6907,
+   "attested": 1.0
+  },
+  "mattebhavikriditamu": {
+   "n_poems": 3,
+   "n_tokens": 60,
+   "resolved_live_verified": 0.8214,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.4194,
+   "resolved": 0.9522,
+   "resolved_verified": 0.8014,
+   "resolved_strict": 0.5853,
+   "in_table": 0.563,
+   "attested": 1.0
+  },
+  "madhuragati_ragada": {
+   "n_poems": 2,
+   "n_tokens": 14,
+   "resolved_live_verified": 0.8334,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.6041,
+   "resolved": 0.9166,
+   "resolved_verified": 0.8334,
+   "resolved_strict": 0.6875,
+   "in_table": 0.7084,
+   "attested": 1.0
+  },
+  "utpalamala": {
+   "n_poems": 2,
+   "n_tokens": 46,
+   "resolved_live_verified": 0.9116,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.6788,
+   "resolved": 0.9616,
+   "resolved_verified": 0.8923,
+   "resolved_strict": 0.7038,
+   "in_table": 0.7808,
+   "attested": 1.0
+  },
+  "layagrahi": {
+   "n_poems": 1,
+   "n_tokens": 43,
+   "resolved_live_verified": 0.6512,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.3488,
+   "resolved": 0.9535,
+   "resolved_verified": 0.6279,
+   "resolved_strict": 0.3953,
+   "in_table": 0.4884,
+   "attested": 1.0
+  },
+  "layavibhati": {
+   "n_poems": 1,
+   "n_tokens": 40,
+   "resolved_live_verified": 0.575,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.425,
+   "resolved": 0.95,
+   "resolved_verified": 0.6,
+   "resolved_strict": 0.475,
+   "in_table": 0.6,
+   "attested": 1.0
+  },
+  "malini": {
+   "n_poems": 1,
+   "n_tokens": 6,
+   "resolved_live_verified": 0.8333,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.1667,
+   "resolved": 1.0,
+   "resolved_verified": 0.8333,
+   "resolved_strict": 0.1667,
+   "in_table": 0.1667,
+   "attested": 1.0
+  },
+  "manini": {
+   "n_poems": 1,
+   "n_tokens": 26,
+   "resolved_live_verified": 0.6154,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.3077,
+   "resolved": 1.0,
+   "resolved_verified": 0.6154,
+   "resolved_strict": 0.4231,
+   "in_table": 0.5385,
+   "attested": 1.0
+  },
+  "pamcacamaramu": {
+   "n_poems": 1,
+   "n_tokens": 14,
+   "resolved_live_verified": 0.8571,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7143,
+   "resolved": 1.0,
+   "resolved_verified": 0.8571,
+   "resolved_strict": 0.7143,
+   "in_table": 0.5714,
+   "attested": 1.0
+  },
+  "sardulavikriditamu": {
+   "n_poems": 1,
+   "n_tokens": 22,
+   "resolved_live_verified": 0.8182,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.5455,
+   "resolved": 0.9545,
+   "resolved_verified": 0.8182,
+   "resolved_strict": 0.6818,
+   "in_table": 0.6364,
+   "attested": 1.0
+  },
+  "sragdhara": {
+   "n_poems": 1,
+   "n_tokens": 17,
+   "resolved_live_verified": 0.6471,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.3529,
+   "resolved": 1.0,
+   "resolved_verified": 0.6471,
+   "resolved_strict": 0.5294,
+   "in_table": 0.4706,
+   "attested": 1.0
+  },
+  "upendravajra": {
+   "n_poems": 1,
+   "n_tokens": 9,
+   "resolved_live_verified": 0.2222,
+   "resolved_live": 0.8889,
+   "resolved_live_strict": 0.1111,
+   "resolved": 0.8889,
+   "resolved_verified": 0.2222,
+   "resolved_strict": 0.1111,
+   "in_table": 0.0,
+   "attested": 0.8889
+  }
+ },
+ "against_gold": {
+  "resolved_live_verified": {
+   "n_pairs": 33,
+   "mean_difference": -0.0324,
+   "share_above_gold": 0.3333
+  },
+  "resolved_live": {
+   "n_pairs": 33,
+   "mean_difference": -0.002,
+   "share_above_gold": 0.0303
+  },
+  "resolved_live_strict": {
+   "n_pairs": 33,
+   "mean_difference": 0.0485,
+   "share_above_gold": 0.5758
+  },
+  "resolved": {
+   "n_pairs": 33,
+   "mean_difference": 0.0175,
+   "share_above_gold": 0.4848
+  },
+  "resolved_verified": {
+   "n_pairs": 33,
+   "mean_difference": -0.058,
+   "share_above_gold": 0.303
+  },
+  "resolved_strict": {
+   "n_pairs": 33,
+   "mean_difference": -0.1462,
+   "share_above_gold": 0.1818
+  },
+  "in_table": {
+   "n_pairs": 33,
+   "mean_difference": -0.2392,
+   "share_above_gold": 0.0303
+  },
+  "attested": {
+   "n_pairs": 33,
+   "mean_difference": -0.0012,
+   "share_above_gold": 0.0303
+  }
+ },
+ "poems": [
+  {"id":"he2_0002","metre":"utpalamala","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1341","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1341","gold_eval_id":"he_0329","n_tokens":20,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.55,"resolved":1.0,"resolved_verified":0.9,"resolved_strict":0.6,"in_table":0.6,"attested":1.0,"classes_live":{"headword":3,"resolved-by-byt5":9,"inflected":8},"n_unresolved":2},
+  {"id":"he2_0005","metre":"mattebhavikriditamu","source_id":"dataset/bhagavatam:3-799-మ.","prompt_id":"dataset/bhagavatam:3-799-మ.","gold_eval_id":"he_0072","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.5789,"resolved":0.9474,"resolved_verified":0.7895,"resolved_strict":0.6842,"in_table":0.5263,"attested":1.0,"classes_live":{"headword":1,"resolved-by-byt5":8,"inflected":10},"n_unresolved":2},
+  {"id":"he2_0009","metre":"malini","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-863","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-863","gold_eval_id":"he_0205","n_tokens":6,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.1667,"resolved":1.0,"resolved_verified":0.8333,"resolved_strict":0.1667,"in_table":0.1667,"attested":1.0,"classes_live":{"inflected":1,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"he2_0014","metre":"ataveladi","source_id":"dataset/vemana:vemana-532-ఆ.","prompt_id":"dataset/vemana:vemana-532-ఆ.","gold_eval_id":"he_0104","n_tokens":15,"resolved_live_verified":0.9333,"resolved_live":1.0,"resolved_live_strict":0.2667,"resolved":0.9333,"resolved_verified":0.8667,"resolved_strict":0.6667,"in_table":0.7333,"attested":1.0,"classes_live":{"headword":2,"resolved-by-byt5":9,"inflected":4},"n_unresolved":1},
+  {"id":"he2_0015","metre":"sragdhara","source_id":"dataset/bhagavatam:6-272-స్రగ్ద.","prompt_id":"dataset/bhagavatam:6-272-స్రగ్ద.","gold_eval_id":"he_0488","n_tokens":17,"resolved_live_verified":0.6471,"resolved_live":1.0,"resolved_live_strict":0.3529,"resolved":1.0,"resolved_verified":0.6471,"resolved_strict":0.5294,"in_table":0.4706,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":5,"headword":1},"n_unresolved":6},
+  {"id":"he2_0018","metre":"tetagiti","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-604","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-604","gold_eval_id":"he_0259","n_tokens":13,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.5385,"in_table":0.6154,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":4},"n_unresolved":0},
+  {"id":"he2_0020","metre":"mattebhavikriditamu","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-87","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-87","gold_eval_id":"he_0029","n_tokens":22,"resolved_live_verified":0.7273,"resolved_live":1.0,"resolved_live_strict":0.3636,"resolved":0.9091,"resolved_verified":0.7727,"resolved_strict":0.5455,"in_table":0.6364,"attested":1.0,"classes_live":{"headword":6,"resolved-by-byt5":13,"inflected":3},"n_unresolved":6},
+  {"id":"he2_0024","metre":"upendravajra","source_id":"dataset/bhagavatam:10.1-407-ఉపేం.","prompt_id":"dataset/bhagavatam:10.1-407-ఉపేం.","gold_eval_id":"he_0449","n_tokens":9,"resolved_live_verified":0.2222,"resolved_live":0.8889,"resolved_live_strict":0.1111,"resolved":0.8889,"resolved_verified":0.2222,"resolved_strict":0.1111,"in_table":0.0,"attested":0.8889,"classes_live":{"resolved-by-byt5":7,"inflected":1,"unresolved":1},"n_unresolved":7},
+  {"id":"he2_0026","metre":"tetagiti","source_id":"dataset/vemana:vemana-531-ఆ.","prompt_id":"dataset/vemana:vemana-531-ఆ.","gold_eval_id":"he_0112","n_tokens":18,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":0.8889,"resolved_verified":0.8889,"resolved_strict":0.7222,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":6,"headword":7,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"he2_0029","metre":"sardulavikriditamu","source_id":"dataset/bhagavatam:10.1-1185-శా.","prompt_id":"dataset/bhagavatam:10.1-1185-శా.","gold_eval_id":"he_0081","n_tokens":22,"resolved_live_verified":0.8182,"resolved_live":1.0,"resolved_live_strict":0.5455,"resolved":0.9545,"resolved_verified":0.8182,"resolved_strict":0.6818,"in_table":0.6364,"attested":1.0,"classes_live":{"inflected":9,"resolved-by-byt5":10,"headword":3},"n_unresolved":4},
+  {"id":"he2_0033","metre":"utpalamala","source_id":"dataset/vemana:vemana-1006-ఆ.","prompt_id":"dataset/vemana:vemana-1006-ఆ.","gold_eval_id":"he_0457","n_tokens":26,"resolved_live_verified":0.9231,"resolved_live":1.0,"resolved_live_strict":0.8077,"resolved":0.9231,"resolved_verified":0.8846,"resolved_strict":0.8077,"in_table":0.9615,"attested":1.0,"classes_live":{"headword":7,"inflected":14,"resolved-by-byt5":5},"n_unresolved":2},
+  {"id":"he2_0034","metre":"madhuragati_ragada","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1201","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1201","gold_eval_id":"he_0311","n_tokens":8,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.875,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.875,"in_table":0.75,"attested":1.0,"classes_live":{"inflected":5,"resolved-by-byt5":1,"headword":2},"n_unresolved":0},
+  {"id":"he2_0036","metre":"layavibhati","source_id":"dataset/bhagavatam:10.2-737-లవి.","prompt_id":"dataset/bhagavatam:10.2-737-లవి.","gold_eval_id":"he_0071","n_tokens":40,"resolved_live_verified":0.575,"resolved_live":1.0,"resolved_live_strict":0.425,"resolved":0.95,"resolved_verified":0.6,"resolved_strict":0.475,"in_table":0.6,"attested":1.0,"classes_live":{"headword":13,"resolved-by-byt5":23,"inflected":4},"n_unresolved":17},
+  {"id":"he2_0037","metre":"ataveladi","source_id":"dataset/vemana:vemana-866-ఆ.","prompt_id":"dataset/vemana:vemana-866-ఆ.","gold_eval_id":"he_0307","n_tokens":17,"resolved_live_verified":0.9412,"resolved_live":1.0,"resolved_live_strict":0.5882,"resolved":0.8824,"resolved_verified":0.8824,"resolved_strict":0.7059,"in_table":0.8824,"attested":1.0,"classes_live":{"headword":7,"inflected":4,"resolved-by-byt5":6},"n_unresolved":1},
+  {"id":"he2_0038","metre":"champakamala","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-266","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-266","gold_eval_id":"he_0270","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.4737,"resolved":1.0,"resolved_verified":0.8947,"resolved_strict":0.5789,"in_table":0.6316,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":4,"headword":6},"n_unresolved":2},
+  {"id":"he2_0047","metre":"kandamu","source_id":"dataset/vemana:vemana-801-ఆ.","prompt_id":"dataset/vemana:vemana-801-ఆ.","gold_eval_id":"he_0031","n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5333,"resolved":1.0,"resolved_verified":0.9333,"resolved_strict":0.8667,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":8,"resolved-by-byt5":5,"headword":2},"n_unresolved":0},
+  {"id":"he2_0048","metre":"manini","source_id":"dataset/bhagavatam:10.1-214-మాని.","prompt_id":"dataset/bhagavatam:10.1-214-మాని.","gold_eval_id":"he_0141","n_tokens":26,"resolved_live_verified":0.6154,"resolved_live":1.0,"resolved_live_strict":0.3077,"resolved":1.0,"resolved_verified":0.6154,"resolved_strict":0.4231,"in_table":0.5385,"attested":1.0,"classes_live":{"headword":6,"resolved-by-byt5":16,"inflected":4},"n_unresolved":10},
+  {"id":"he2_0049","metre":"tetagiti","source_id":"dataset/vemana:vemana-327-ఆ.","prompt_id":"dataset/vemana:vemana-327-ఆ.","gold_eval_id":"he_0107","n_tokens":19,"resolved_live_verified":0.8947,"resolved_live":1.0,"resolved_live_strict":0.6316,"resolved":1.0,"resolved_verified":0.8947,"resolved_strict":0.7895,"in_table":0.8421,"attested":1.0,"classes_live":{"headword":4,"inflected":9,"resolved-by-byt5":6},"n_unresolved":2},
+  {"id":"he2_0050","metre":"champakamala","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-674","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-674","gold_eval_id":"he_0093","n_tokens":25,"resolved_live_verified":0.84,"resolved_live":1.0,"resolved_live_strict":0.44,"resolved":0.96,"resolved_verified":0.84,"resolved_strict":0.52,"in_table":0.64,"attested":1.0,"classes_live":{"headword":6,"resolved-by-byt5":14,"inflected":5},"n_unresolved":4},
+  {"id":"he2_0055","metre":"kandamu","source_id":"dataset/vemana:vemana-1094-ఆ.","prompt_id":"dataset/vemana:vemana-1094-ఆ.","gold_eval_id":"he_0425","n_tokens":17,"resolved_live_verified":0.9412,"resolved_live":1.0,"resolved_live_strict":0.7059,"resolved":0.8235,"resolved_verified":0.7059,"resolved_strict":0.7059,"in_table":0.8824,"attested":1.0,"classes_live":{"inflected":8,"resolved-by-byt5":5,"headword":4},"n_unresolved":1},
+  {"id":"he2_0061","metre":"pamcacamaramu","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1197","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1197","gold_eval_id":"he_0387","n_tokens":14,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.7143,"resolved":1.0,"resolved_verified":0.8571,"resolved_strict":0.7143,"in_table":0.5714,"attested":1.0,"classes_live":{"resolved-by-byt5":4,"inflected":7,"headword":3},"n_unresolved":2},
+  {"id":"he2_0062","metre":"kandamu","source_id":"dataset/vemana:vemana-51-ఆ.","prompt_id":"dataset/vemana:vemana-51-ఆ.","gold_eval_id":"he_0244","n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.5625,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.875,"in_table":0.9375,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":4,"headword":4,"split-all-known":1},"n_unresolved":1},
+  {"id":"he2_0070","metre":"ataveladi","source_id":"dataset/vemana:vemana-57-ఆ.","prompt_id":"dataset/vemana:vemana-57-ఆ.","gold_eval_id":"he_0444","n_tokens":18,"resolved_live_verified":0.9444,"resolved_live":1.0,"resolved_live_strict":0.7222,"resolved":0.8333,"resolved_verified":0.8333,"resolved_strict":0.6667,"in_table":0.8333,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"headword":6,"inflected":7},"n_unresolved":1},
+  {"id":"he2_0071","metre":"champakamala","source_id":"dataset/bhagavatam:3-277-చ.","prompt_id":"dataset/bhagavatam:3-277-చ.","gold_eval_id":"he_0100","n_tokens":16,"resolved_live_verified":0.8125,"resolved_live":1.0,"resolved_live_strict":0.4375,"resolved":1.0,"resolved_verified":0.8125,"resolved_strict":0.4375,"in_table":0.5625,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":4,"inflected":3},"n_unresolved":3},
+  {"id":"he2_0078","metre":"tetagiti","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-654","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-654","gold_eval_id":"he_0357","n_tokens":16,"resolved_live_verified":0.8125,"resolved_live":1.0,"resolved_live_strict":0.375,"resolved":0.8125,"resolved_verified":0.6875,"resolved_strict":0.4375,"in_table":0.75,"attested":1.0,"classes_live":{"headword":4,"resolved-by-byt5":8,"inflected":4},"n_unresolved":3},
+  {"id":"he2_0079","metre":"madhuragati_ragada","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1207","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-1207","gold_eval_id":"he_0469","n_tokens":6,"resolved_live_verified":0.6667,"resolved_live":1.0,"resolved_live_strict":0.3333,"resolved":0.8333,"resolved_verified":0.6667,"resolved_strict":0.5,"in_table":0.6667,"attested":1.0,"classes_live":{"resolved-by-byt5":4,"inflected":1,"headword":1},"n_unresolved":2},
+  {"id":"he2_0081","metre":"champakamala","source_id":"dataset/bhagavatam:6-399-చ.","prompt_id":"dataset/bhagavatam:6-399-చ.","gold_eval_id":"he_0117","n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.8571,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.8929,"in_table":0.9286,"attested":1.0,"classes_live":{"inflected":17,"headword":8,"resolved-by-byt5":3},"n_unresolved":1},
+  {"id":"he2_0085","metre":"kandamu","source_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-668","prompt_id":"dataset/kuchimanchi_timmakavi:kuchimanchi-668","gold_eval_id":"he_0347","n_tokens":15,"resolved_live_verified":0.9333,"resolved_live":1.0,"resolved_live_strict":0.8667,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9333,"in_table":0.9333,"attested":1.0,"classes_live":{"inflected":11,"headword":2,"resolved-by-byt5":2},"n_unresolved":1},
+  {"id":"he2_0087","metre":"tetagiti","source_id":"dataset/vemana:vemana-1145-ఆ.","prompt_id":"dataset/vemana:vemana-1145-ఆ.","gold_eval_id":"he_0416","n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.65,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.95,"in_table":0.95,"attested":1.0,"classes_live":{"headword":5,"inflected":11,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"he2_0089","metre":"ataveladi","source_id":"dataset/vemana:vemana-558-ఆ.","prompt_id":"dataset/vemana:vemana-558-ఆ.","gold_eval_id":"he_0341","n_tokens":18,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":0.9444,"resolved_verified":0.9444,"resolved_strict":0.8333,"in_table":0.9444,"attested":1.0,"classes_live":{"headword":8,"inflected":4,"resolved-by-byt5":6},"n_unresolved":3},
+  {"id":"he2_0094","metre":"mattebhavikriditamu","source_id":"dataset/bhagavatam:10.1-714-మ.","prompt_id":"dataset/bhagavatam:10.1-714-మ.","gold_eval_id":"he_0494","n_tokens":19,"resolved_live_verified":0.8421,"resolved_live":1.0,"resolved_live_strict":0.3158,"resolved":1.0,"resolved_verified":0.8421,"resolved_strict":0.5263,"in_table":0.5263,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":6,"headword":2},"n_unresolved":3},
+  {"id":"he2_0095","metre":"kandamu","source_id":"dataset/vemana:vemana-22-ఆ.","prompt_id":"dataset/vemana:vemana-22-ఆ.","gold_eval_id":"he_0199","n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8667,"in_table":0.9333,"attested":1.0,"classes_live":{"resolved-by-byt5":3,"inflected":9,"headword":3},"n_unresolved":0},
+  {"id":"he2_0098","metre":"layagrahi","source_id":"dataset/bhagavatam:10.2-739-లగ్రా.","prompt_id":"dataset/bhagavatam:10.2-739-లగ్రా.","gold_eval_id":"he_0133","n_tokens":43,"resolved_live_verified":0.6512,"resolved_live":1.0,"resolved_live_strict":0.3488,"resolved":0.9535,"resolved_verified":0.6279,"resolved_strict":0.3953,"in_table":0.4884,"attested":1.0,"classes_live":{"resolved-by-byt5":26,"inflected":11,"headword":6},"n_unresolved":15}
+ ]
+}
