@@ -1,0 +1,55 @@
+# Token choices under the constraint
+
+Runs: `grid_nandi_ft_extra`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| masking_only | 183 | 100 | 100 | 82 | -1.865 | 69 | 17 | 0.829 | 1.599 | 41 | 13 | 0 | 0.0 |
+| hybrid | 183 | 100 | 100 | 78 | -1.988 | 65 | 16 | 0.840 | 1.639 | 40 | 11 | 0 | 0.0 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| masking_only | line_start | 628 | -1.009 | 76 | 3 | 0.965 |
+| masking_only | prasa | 619 | -0.926 | 82 | 9 | 0.894 |
+| masking_only | yati | 1371 | -4.859 | 44 | 47 | 0.504 |
+| masking_only | other | 12445 | -1.626 | 70 | 14 | 0.855 |
+| hybrid | line_start | 627 | -1.174 | 73 | 3 | 0.957 |
+| hybrid | prasa | 604 | -0.976 | 82 | 9 | 0.896 |
+| hybrid | yati | 1337 | -4.781 | 43 | 47 | 0.515 |
+| hybrid | other | 11701 | -1.765 | 66 | 13 | 0.868 |
+
+## By meter
+
+| meter | masking_only in meter % / logp / lexical % | hybrid in meter % / logp / lexical % |
+|---|---|---|
+| ataveladi | 100 / -1.33 / 50 | 100 / -1.60 / 46 |
+| bhujangaprayatamu | 100 / -1.29 / 28 | 100 / -1.92 / 12 |
+| champakamala | 100 / -0.98 / 46 | 100 / -1.09 / 45 |
+| indravajra | 100 / -2.31 / 18 | 100 / -2.76 / 16 |
+| kandamu | 100 / -1.19 / 47 | 100 / -1.50 / 51 |
+| kavirajavirajitamu | 100 / -3.65 / 31 | 100 / -3.73 / 27 |
+| layagrahi | 100 / -3.02 / 29 | 100 / -2.64 / 31 |
+| layavibhati | 100 / -3.15 / 34 | 100 / -2.96 / 33 |
+| madhuragati_ragada | 100 / -2.25 / 44 | 100 / -2.90 / 32 |
+| mahasragdhara | 100 / -2.71 / 27 | 100 / -2.31 / 30 |
+| malini | 100 / -1.59 / 8 | 100 / -1.74 / 8 |
+| manini | 100 / -4.14 / 36 | 100 / -4.60 / 18 |
+| mattakokilamu | 100 / -1.41 / 43 | 100 / -1.47 / 44 |
+| mattebhavikriditamu | 100 / -1.64 / 35 | 100 / -1.57 / 37 |
+| pamcacamaramu | 100 / -1.40 / 24 | 100 / -2.06 / 30 |
+| sardulavikriditamu | 100 / -1.63 / 36 | 100 / -1.81 / 34 |
+| seesamu | 100 / -2.88 / 53 | 100 / -3.30 / 47 |
+| sragdhara | 100 / -2.54 / 20 | 100 / -2.15 / 14 |
+| sragvini | 100 / -2.38 / 17 | 100 / -1.84 / 12 |
+| tetagiti | 100 / -1.32 / 46 | 100 / -1.62 / 48 |
+| totakamu | 100 / -1.52 / 10 | 100 / -1.67 / 39 |
+| upendravajra | 100 / -2.13 / 20 | 100 / -3.19 / 23 |
+| utpalamala | 100 / -1.36 / 43 | 100 / -1.34 / 45 |
+| utsahamu | 100 / -1.71 / 49 | 100 / -1.65 / 47 |
+| vanamayuramu | 100 / -1.89 / 33 | 100 / -1.28 / 24 |

@@ -1,0 +1,21 @@
+# Runs deploy/curves_queue.sh: after the Nandi fine-tuning, the memorisation probe of the three models, then the
+# training-curve figures. Resumable: finished steps are skipped.
+# Install: cp deploy/curves.service ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now curves
+# Status:  systemctl --user status curves ; tail runs/curves-queue.log
+
+[Unit]
+Description=Training-curve figures: memorisation probe and plots (MDLM 120M, 523M, Nandi)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning
+Environment=PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Environment=PYTHONUNBUFFERED=1
+Nice=5
+ExecStart=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning/deploy/curves_queue.sh
+Restart=on-failure
+RestartSec=600
+TimeoutStopSec=300
+
+[Install]
+WantedBy=default.target

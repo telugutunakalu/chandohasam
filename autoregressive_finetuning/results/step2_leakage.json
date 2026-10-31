@@ -1,0 +1,60 @@
+{
+ "weights": "FrontiersMind/Nandi-Mini-150M@31c8ace (base)",
+ "poems": 11655,
+ "probe_seconds": 1027,
+ "by_corpus": {
+  "bhagavatam": {
+   "poems": 6317,
+   "run_ge_12_pct": 0.0,
+   "run_ge_24_pct": 0.0,
+   "max_run": 6,
+   "mean_run": 0.9457020737691942
+  },
+  "all": {
+   "poems": 11655,
+   "run_ge_12_pct": 0.0,
+   "run_ge_24_pct": 0.0,
+   "max_run": 7,
+   "mean_run": 0.9522951522951523
+  },
+  "positive control (leakage.json poem hits)": {
+   "poems": 112,
+   "run_ge_12_pct": 0.0,
+   "run_ge_24_pct": 0.0,
+   "max_run": 4,
+   "mean_run": 1.2232142857142858
+  },
+  "vemana": {
+   "poems": 1164,
+   "run_ge_12_pct": 0.0,
+   "run_ge_24_pct": 0.0,
+   "max_run": 7,
+   "mean_run": 0.9810996563573883
+  },
+  "kuchimanchi_timmakavi": {
+   "poems": 1642,
+   "run_ge_12_pct": 0.0,
+   "run_ge_24_pct": 0.0,
+   "max_run": 5,
+   "mean_run": 0.9104750304506699
+  },
+  "chandassu": {
+   "poems": 2532,
+   "run_ge_12_pct": 0.0,
+   "run_ge_24_pct": 0.0,
+   "max_run": 6,
+   "mean_run": 0.9826224328593997
+  }
+ },
+ "excluded_at": 24,
+ "excluded": [],
+ "likelihood": {
+  "val_nll/T1": 4.185480190378993,
+  "val_nll_tok/T1": 5.105875989033284,
+  "val_nll/T0": 4.283524630665561,
+  "val_nll_tok/T0": 5.225480605647673,
+  "val_nll/bhavam_prose": 2.5884267570894424,
+  "val_items": 899,
+  "bhavam_items": 906
+ }
+}

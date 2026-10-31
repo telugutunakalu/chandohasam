@@ -1,0 +1,27 @@
+# Token choices under the constraint
+
+Runs: `grid_nandi_base_constrained_smoke`
+
+logp: the model's log-probability of the chosen token (whole vocabulary, T = 1); overridden: the model's first choice was not allowed; valid mass: the model's probability on allowed tokens (baseline: known only while its text is still in meter); lexical: share of words found in the corpora; 1-akshara words: words of a single akshara (the lexical rate counts filler such as క క క as words); repeated line: a poem that writes some line twice; complete (baseline): a whole poem in meter.
+
+## By strategy
+
+| strategy | poems | complete % | in meter % | tokens | mean logp | rank 1 % | overridden % | valid mass | entropy | lexical % | 1-akshara words % | repeated line % | backtracks |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| masking_backtrack | 2 | 100 | 100 | 140 | -3.984 | 28 | 41 | 0.520 | 4.989 | 38 | 52 | 0 | 17.5 |
+
+## By position in the line
+
+| strategy | position | tokens | mean logp | rank 1 % | overridden % | valid mass |
+|---|---|---|---|---|---|---|
+| masking_backtrack | line_start | 17 | -3.706 | 35 | 35 | 0.443 |
+| masking_backtrack | prasa | 11 | -2.791 | 64 | 36 | 0.397 |
+| masking_backtrack | yati | 23 | -4.559 | 17 | 78 | 0.200 |
+| masking_backtrack | other | 229 | -4.004 | 27 | 38 | 0.564 |
+
+## By meter
+
+| meter | masking_backtrack in meter % / logp / lexical % |
+|---|---|
+| kandamu | 100 / -2.43 / 47 |
+| utpalamala | 100 / -4.76 / 22 |

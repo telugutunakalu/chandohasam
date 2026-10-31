@@ -1,0 +1,116 @@
+{
+ "model": "FrontiersMind/Nandi-Mini-150M",
+ "revision": "31c8aceaa16e2611a5773bbefc6564db39043370",
+ "seed": 20261018,
+ "code": {
+  "modeling_nandi.py": {
+   "lines": 480,
+   "risky_lines": []
+  },
+  "configuration_nandi.py": {
+   "lines": 120,
+   "risky_lines": []
+  },
+  "tokenization_nandi.py": {
+   "lines": 144,
+   "risky_lines": []
+  }
+ },
+ "tokenizer": {
+  "wrapper_encode_equal": 200,
+  "wrapper_call_equal": 200,
+  "wrapper_n": 200,
+  "wrapper_decode_keeps_space": true,
+  "newline_id": [
+   188
+  ],
+  "space_id": [
+   210
+  ],
+  "round_trip": [
+   10000,
+   10000
+  ],
+  "vocab": 131072,
+  "partial_ids": 1329,
+  "slice_size": 7394,
+  "coverage_train_sample": {
+   "poems": 10000,
+   "telugu_chars": 1138237,
+   "chars_spellable_pct": 99.9856796080254,
+   "poems_with_unspellable_char": 130,
+   "unspellable": {
+    "ఙ": 75,
+    "ఝ": 63,
+    "ఽ": 6,
+    "౽": 5,
+    "౼": 3,
+    "౹": 2,
+    "ౢ": 2,
+    "౤": 1,
+    "ౘ": 1,
+    "ౄ": 1,
+    "ౠ": 1,
+    "ఌ": 1,
+    "ౡ": 1,
+    "ౝ": 1
+   },
+   "tokens": 571449,
+   "tokens_outside_slice_pct": 0.9881896722192182,
+   "poems_with_token_outside_slice": 2115,
+   "poems_with_token_outside_slice_pct": 21.15
+  },
+  "coverage_held_out": {
+   "poems": 11655,
+   "telugu_chars": 1782327,
+   "chars_spellable_pct": 99.99259395161494,
+   "poems_with_unspellable_char": 114,
+   "unspellable": {
+    "ఝ": 75,
+    "ఙ": 55,
+    "ఽ": 2
+   },
+   "tokens": 914629,
+   "tokens_outside_slice_pct": 1.1400250812077903,
+   "poems_with_token_outside_slice": 3692,
+   "poems_with_token_outside_slice_pct": 31.67739167739168
+  },
+  "t1_prefix_mismatch": [
+   0,
+   21596
+  ],
+  "t1_tokens": {
+   "p50": 150,
+   "p99": 412,
+   "max": 2377,
+   "over_1024": 8
+  }
+ },
+ "weights_bytes": 306842392,
+ "model_checks": {
+  "load_s": 0.1,
+  "class": "NandiForCausalLM",
+  "attn_implementation": "sdpa",
+  "params": 153412928,
+  "params_embedding": 25690112,
+  "lm_head_tied": true,
+  "unique_layers": 16,
+  "layer_applications": 32,
+  "weights_dtype_on_disk": "torch.bfloat16",
+  "finite_logits": [
+   10,
+   10
+  ],
+  "bf16_vs_fp32": {
+   "max_abs_logit_diff": 0.154,
+   "top1_agree": 10
+  },
+  "right_padding_max_diff": 3.556162118911743e-05,
+  "backward": {
+   "loss_nats_per_token": 3.63,
+   "params_with_grad": 148,
+   "params": 148,
+   "all_finite": true
+  }
+ }
+}

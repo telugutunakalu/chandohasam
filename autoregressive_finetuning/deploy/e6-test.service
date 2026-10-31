@@ -1,0 +1,21 @@
+# Runs deploy/e6_test_queue.sh: the E6 test evaluation (15 poems per metre) of the 120M, the 523M and Nandi, then
+# memorisation. Resumable: finished steps are skipped.
+# Install: cp deploy/e6-test.service ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now e6-test
+# Status:  systemctl --user status e6-test ; tail runs/e6-test-queue.log
+
+[Unit]
+Description=E6 test evaluation of the three final models (120M, 523M, Nandi)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning
+Environment=PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Environment=PYTHONUNBUFFERED=1
+Nice=5
+ExecStart=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning/deploy/e6_test_queue.sh
+Restart=on-failure
+RestartSec=600
+TimeoutStopSec=300
+
+[Install]
+WantedBy=default.target

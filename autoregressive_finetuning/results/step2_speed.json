@@ -1,0 +1,35 @@
+{
+ "date": "2026-10-18",
+ "batch": 128,
+ "micro_tokens": 8192,
+ "padding_pct": 7.8,
+ "compiled": {
+  "steps_measured": [
+   10,
+   45
+  ],
+  "tok_per_s": 12521,
+  "seq_per_s": 77.7,
+  "peak_gb": 11.1
+ },
+ "eager": {
+  "steps_measured": [
+   10,
+   20
+  ],
+  "tok_per_s": 8879,
+  "seq_per_s": 54.6,
+  "peak_gb": 13.7
+ },
+ "epoch_hours_compiled": 1.08,
+ "same_loss_compiled_vs_eager": {
+  "step 10": [
+   4.897,
+   4.897
+  ],
+  "step 20": [
+   4.7087,
+   4.7088
+  ]
+ }
+}

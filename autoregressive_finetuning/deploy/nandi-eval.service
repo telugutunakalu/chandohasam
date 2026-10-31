@@ -1,0 +1,20 @@
+# Runs deploy/nandi_eval_queue.sh: waits for the Nandi fine-tuning (nandi-ft) to finish, then its E6 evaluation
+# and memorisation. Resumable: finished steps are skipped.
+# Install: cp deploy/nandi-eval.service ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now nandi-eval
+# Status:  systemctl --user status nandi-eval ; tail runs/nandi-eval-queue.log
+
+[Unit]
+Description=Nandi-Mini-150M E6 evaluation, after its fine-tuning
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning
+Environment=PYTHONUNBUFFERED=1
+Nice=5
+ExecStart=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning/deploy/nandi_eval_queue.sh
+Restart=on-failure
+RestartSec=600
+TimeoutStopSec=300
+
+[Install]
+WantedBy=default.target

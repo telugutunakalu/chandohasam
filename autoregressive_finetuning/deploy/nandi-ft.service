@@ -1,0 +1,22 @@
+# Runs run_nandi.sh: the leakage probe, the learning-rate sweep and the final meaning → poem run of Nandi-Mini-150M.
+# Resumable at every step.
+# Install: cp deploy/nandi-ft.service ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now nandi-ft
+# Status:  systemctl --user status nandi-ft ; tail runs/nandi.chain.log runs/nandi-t1*.log
+# Pause:   systemctl --user stop nandi-ft  (a running trainer saves first; starting again resumes)
+
+[Unit]
+Description=Nandi-Mini-150M meaning -> poem fine-tuning (leakage probe, sweep, final run)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning
+Environment=PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Environment=PYTHONUNBUFFERED=1
+Nice=5
+ExecStart=/home/samvaran/phd_workspace/chandohasam/autoregressive_finetuning/run_nandi.sh
+Restart=on-failure
+RestartSec=600
+TimeoutStopSec=300
+
+[Install]
+WantedBy=default.target

@@ -59,8 +59,10 @@ word_resolution_metric/data/
 diffusion_finetuning/models/
 diffusion_finetuning/data/
 diffusion_finetuning/runs/
-# autoregressive fine-tuning: checkpoints and generated poems (the Nandi weights stay in the HF cache)
+# autoregressive fine-tuning: checkpoints and generated poems (the Nandi weights stay in the HF cache), and the
+# tokenized training examples (derived from padyarchana_exports/)
 autoregressive_finetuning/runs/
+autoregressive_finetuning/data/
 # real_words.py lexicon cache (derived from the Padyarchana training split: never committed)
 poetry_metrics/cache/
 # MAUVE reference embeddings and texts (derived from the Padyarchana training split: never committed)

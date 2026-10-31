@@ -1,0 +1,4 @@
+{
+ "rule": "longest shared akshara run >= 24 (leakage_probe.py, base model)",
+ "ids": []
+}

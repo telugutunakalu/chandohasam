@@ -1,0 +1,404 @@
+{
+ "train_records": 900,
+ "val_records": 812,
+ "seed": 20261018,
+ "unit": "nats per MDLM target token (T1); seen/unseen: per Nandi token",
+ "points": [
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0001000.pt EMA, step 1000",
+   "passes": 0.2127921320109189,
+   "T1_train": 2.4328649229480686,
+   "T1_val": 2.692828147929976,
+   "gap": 0.25996322498190727
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0002000.pt EMA, step 2000",
+   "passes": 0.4255842640218378,
+   "T1_train": 2.333888590802135,
+   "T1_val": 2.592750753788754,
+   "gap": 0.258862162986619
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0003000.pt EMA, step 3000",
+   "passes": 0.6383763960327566,
+   "T1_train": 2.2430677871011206,
+   "T1_val": 2.529757752466149,
+   "gap": 0.28668996536502833
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0004000.pt EMA, step 4000",
+   "passes": 0.8511685280436756,
+   "T1_train": 2.179989544717799,
+   "T1_val": 2.4720180825023816,
+   "gap": 0.2920285377845828
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0005000.pt EMA, step 5000",
+   "passes": 1.0639606600545946,
+   "T1_train": 2.133191317515497,
+   "T1_val": 2.4342619275824298,
+   "gap": 0.3010706100669327
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0006000.pt EMA, step 6000",
+   "passes": 1.2767527920655133,
+   "T1_train": 2.090810260716107,
+   "T1_val": 2.393030219026692,
+   "gap": 0.3022199583105847
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0007000.pt EMA, step 7000",
+   "passes": 1.4895449240764322,
+   "T1_train": 2.0542113011973053,
+   "T1_val": 2.364136280891439,
+   "gap": 0.30992497969413346
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0008000.pt EMA, step 8000",
+   "passes": 1.7023370560873512,
+   "T1_train": 2.02626929305867,
+   "T1_val": 2.3459419435721203,
+   "gap": 0.3196726505134504
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0009000.pt EMA, step 9000",
+   "passes": 1.9151291880982702,
+   "T1_train": 2.0009475267573382,
+   "T1_val": 2.3289821959682206,
+   "gap": 0.3280346692108824
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0010000.pt EMA, step 10000",
+   "passes": 2.127921320109189,
+   "T1_train": 1.9845572767385464,
+   "T1_val": 2.315747481779699,
+   "gap": 0.3311902050411524
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m/snapshots/ema_step_0011000.pt EMA, step 11000",
+   "passes": 2.340713452120108,
+   "T1_train": 1.9718528591828663,
+   "T1_val": 2.304963001745086,
+   "gap": 0.3331101425622198
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-s2-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-120m EMA, step 11748",
+   "passes": 2.499881966864275,
+   "T1_train": 1.9639369476485753,
+   "T1_val": 2.298011911575227,
+   "gap": 0.3340749639266518
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-t1-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-t1-120m/snapshots/ema_step_0001000.pt EMA, step 1000",
+   "passes": 2.925466230886113,
+   "T1_train": 1.9564371245358232,
+   "T1_val": 2.2922244971604044,
+   "gap": 0.33578737262458125
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-t1-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-t1-120m/snapshots/ema_step_0002000.pt EMA, step 2000",
+   "passes": 3.351050494907951,
+   "T1_train": 1.9346141583648755,
+   "T1_val": 2.277341232627944,
+   "gap": 0.34272707426306837
+  },
+  {
+   "model": "mdlm-120m",
+   "run": "e6-t1-120m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-t1-120m EMA, step 2350",
+   "passes": 3.500004987315594,
+   "T1_train": 1.9316124948234548,
+   "T1_val": 2.273704868170698,
+   "gap": 0.3420923733472432
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0001000.pt EMA, step 1000",
+   "passes": 0.2127921320109189,
+   "T1_train": 2.0205407984318273,
+   "T1_val": 2.292785371758938,
+   "gap": 0.27224457332711083
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0002000.pt EMA, step 2000",
+   "passes": 0.4255842640218378,
+   "T1_train": 1.9489940955113425,
+   "T1_val": 2.217834052809212,
+   "gap": 0.26883995729786947
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0003000.pt EMA, step 3000",
+   "passes": 0.6383763960327566,
+   "T1_train": 1.8745786428301467,
+   "T1_val": 2.164381891579631,
+   "gap": 0.2898032487494844
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0004000.pt EMA, step 4000",
+   "passes": 0.8511685280436756,
+   "T1_train": 1.8252836216611943,
+   "T1_val": 2.115906944302158,
+   "gap": 0.2906233226409638
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0005000.pt EMA, step 5000",
+   "passes": 1.0639606600545946,
+   "T1_train": 1.7777749997936407,
+   "T1_val": 2.0741442138969446,
+   "gap": 0.29636921410330386
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0006000.pt EMA, step 6000",
+   "passes": 1.2767527920655133,
+   "T1_train": 1.7383352080198429,
+   "T1_val": 2.0450803907716644,
+   "gap": 0.3067451827518215
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0007000.pt EMA, step 7000",
+   "passes": 1.4895449240764322,
+   "T1_train": 1.7037708168245886,
+   "T1_val": 2.029348624781536,
+   "gap": 0.32557780795694735
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0008000.pt EMA, step 8000",
+   "passes": 1.7023370560873512,
+   "T1_train": 1.6775401406725066,
+   "T1_val": 2.0084128795540357,
+   "gap": 0.3308727388815291
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0009000.pt EMA, step 9000",
+   "passes": 1.9151291880982702,
+   "T1_train": 1.655371712004685,
+   "T1_val": 1.994829129677715,
+   "gap": 0.33945741767303006
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0010000.pt EMA, step 10000",
+   "passes": 2.127921320109189,
+   "T1_train": 1.641404267084619,
+   "T1_val": 1.984045846762966,
+   "gap": 0.3426415796783471
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m/snapshots/ema_step_0011000.pt EMA, step 11000",
+   "passes": 2.340713452120108,
+   "T1_train": 1.6273383391052472,
+   "T1_val": 1.9755769830434196,
+   "gap": 0.3482386439381724
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-s2-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-s2-523m EMA, step 11748",
+   "passes": 2.499881966864275,
+   "T1_train": 1.618446730847046,
+   "T1_val": 1.9706451296731182,
+   "gap": 0.3521983988260722
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-t1-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-t1-523m/snapshots/ema_step_0001000.pt EMA, step 1000",
+   "passes": 2.925466230886113,
+   "T1_train": 1.6093753937840536,
+   "T1_val": 1.9692108672051216,
+   "gap": 0.35983547342106803
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-t1-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-t1-523m/snapshots/ema_step_0002000.pt EMA, step 2000",
+   "passes": 3.351050494907951,
+   "T1_train": 1.5853830465641439,
+   "T1_val": 1.9519203417015158,
+   "gap": 0.366537295137372
+  },
+  {
+   "model": "mdlm-523m",
+   "run": "e6-t1-523m",
+   "weights": "/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/runs/e6-t1-523m EMA, step 2350",
+   "passes": 3.500004987315594,
+   "T1_train": 1.580946971782516,
+   "T1_val": 1.949691321617046,
+   "gap": 0.36874434983452997
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0001000.pt",
+   "passes": 0.4255842640218378,
+   "final": false,
+   "T1_train": 1.921861810774675,
+   "T1_val": 2.2234075628005487,
+   "gap": 0.30154575202587375,
+   "seen_nll_tok": 2.1322940828889423,
+   "unseen_nll_tok": 2.441776497572144,
+   "matched_pairs": 1565,
+   "unseen_pct": 66.8322460949189
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0002000.pt",
+   "passes": 0.8511685280436756,
+   "final": false,
+   "T1_train": 1.617659283460403,
+   "T1_val": 2.011878087562385,
+   "gap": 0.39421880410198207,
+   "seen_nll_tok": 1.7645858736246811,
+   "unseen_nll_tok": 2.084729250932216,
+   "matched_pairs": 1324,
+   "unseen_pct": 46.60129936627633
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0003000.pt",
+   "passes": 1.2767527920655133,
+   "final": false,
+   "T1_train": 1.4459107154865571,
+   "T1_val": 1.9147432018076893,
+   "gap": 0.46883248632113217,
+   "seen_nll_tok": 1.5891151464033715,
+   "unseen_nll_tok": 1.9106417693195246,
+   "matched_pairs": 1208,
+   "unseen_pct": 33.86997027550023
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0004000.pt",
+   "passes": 1.7023370560873512,
+   "final": false,
+   "T1_train": 1.3205297892658137,
+   "T1_val": 1.875875852814082,
+   "gap": 0.5553460635482683,
+   "seen_nll_tok": 1.4010464860491394,
+   "unseen_nll_tok": 1.848007577695249,
+   "matched_pairs": 1140,
+   "unseen_pct": 25.66913373364986
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0005000.pt",
+   "passes": 2.127921320109189,
+   "final": false,
+   "T1_train": 1.229842651931194,
+   "T1_val": 1.8827633791257505,
+   "gap": 0.6529207271945565,
+   "seen_nll_tok": 1.302775088633007,
+   "unseen_nll_tok": 1.8083185048646748,
+   "matched_pairs": 1115,
+   "unseen_pct": 20.096953737506734
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0006000.pt",
+   "passes": 2.5535055841310266,
+   "final": false,
+   "T1_train": 1.1286488904599052,
+   "T1_val": 1.9350034451634655,
+   "gap": 0.8063545547035602,
+   "seen_nll_tok": 1.1839142416291069,
+   "unseen_nll_tok": 1.8286756798424435,
+   "matched_pairs": 1096,
+   "unseen_pct": 16.225121524660697
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0007000.pt",
+   "passes": 2.9790898481528645,
+   "final": false,
+   "T1_train": 1.0490953889256298,
+   "T1_val": 2.005958798049279,
+   "gap": 0.956863409123649,
+   "seen_nll_tok": 1.0395169782826907,
+   "unseen_nll_tok": 1.8935523389764997,
+   "matched_pairs": 1088,
+   "unseen_pct": 13.398966624773076
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0008000.pt",
+   "passes": 3.4046741121747024,
+   "final": false,
+   "T1_train": 0.9782148863279115,
+   "T1_val": 2.0933771407183857,
+   "gap": 1.1151622543904742,
+   "seen_nll_tok": 0.9030349527905528,
+   "unseen_nll_tok": 1.9440308326710076,
+   "matched_pairs": 1059,
+   "unseen_pct": 11.235794415517917
+  },
+  {
+   "model": "nandi",
+   "run": "nandi-t1",
+   "weights": "ema_step_0008225.pt",
+   "passes": 3.500430571579616,
+   "final": true,
+   "T1_train": 0.9654605762530398,
+   "T1_val": 2.114405630723054,
+   "gap": 1.1489450544700142,
+   "seen_nll_tok": 0.8916061432641574,
+   "unseen_nll_tok": 1.969934270389477,
+   "matched_pairs": 1036,
+   "unseen_pct": 10.820183400828562
+  }
+ ]
+}
