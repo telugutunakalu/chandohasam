@@ -66,7 +66,8 @@ cd autoregressive_finetuning
 
 - **Pool:** E6's meaning → poem (T1) pool from `../diffusion_finetuning`: the 300,763 training poems with a metre
   the engines confirm and a meaning. The four `dataset/` works are held out whole, exactly as for the MDLMs.
-- **Length cap:** examples over 1,024 Nandi tokens are dropped (0.04%; the longest is 2,377, above the 2,048 context).
+- **Length cap:** examples over 1,024 Nandi tokens are dropped. That drops one poem, so 300,762 are trained on (the
+  longest is 2,377 tokens, above the 2,048 context).
 - **Prompt:** the MDLMs' T1 header as plain text, encoded `[1] + encode(" " + text)` (= the wrapper's
   `<|im_start|> ` prefix):
 
@@ -83,13 +84,20 @@ training example. This holds for all 21,596 checked examples (`results/step1_che
 
 ### Recipe (`finetune.py`, mirroring E6's T1 phase with an AR loss)
 
+- **Strategy:** full-parameter supervised fine-tuning of all 153,412,928 parameters of
+  FrontiersMind/Nandi-Mini-150M (revision `31c8ace`). Nothing is frozen and no adapter (LoRA) is used.
 - **Loss:** next-token cross-entropy on the poem tokens and the final `<|endoftext|>`; the prompt carries no loss.
 - **Batches:** 128 examples per step, drawn with E6's metre weights (rare metres up-sampled, dvipada capped). One
   epoch = 2,350 steps. Batches are a pure function of (seed, step), so a resumed run is identical.
+- **Micro-batches:** each step runs as micro-batches of 8,192 padded tokens, with the gradients accumulated. No
+  gradient checkpointing; seed 20261018.
 - **Optimiser:** AdamW, β (0.9, 0.98), weight decay 0.1 on matrices, clip 1.0, 100 warm-up steps then cosine to 10%,
-  bf16 autocast over fp32 weights.
-- **EMA:** decay 0.999; the EMA is what is evaluated and saved.
-- **Speed:** torch.compile, 12.5k tokens/s, 1.08 h per epoch, 11 GB (`results/step2_speed.md`).
+  bf16 autocast over fp32 weights and optimizer state (`runs/nandi-t1/config.json`).
+- **EMA:** decay 0.999; the EMA is what is evaluated and saved. The released weights are its bf16 snapshot at step
+  8,225.
+- **Validation:** the E6 val poems in the T1 pool, T1 and T0 NLL every 250 steps.
+- **Speed:** torch.compile; the final run averaged 12.0k tokens/s, ≈ 1.16 h per epoch, peak 13.5 GB
+  (`runs/nandi-t1/metrics.jsonl`).
 - **Length:** 3.5 epochs = 8,225 steps. This is the meaning → poem exposure of the MDLM partner: E6's 2.5 passes
   plus its 1-epoch T1 phase.
 

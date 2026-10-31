@@ -99,8 +99,9 @@ cd lora_gemma_diffusion
 
 | | |
 |---|---|
-| adapter | rank 16, α 32, on q, k, v, o of the language layers. One adapter per tied encoder/decoder pair (115), so 11.5M parameters; the base frozen. Gradients reach the lower layers through the frozen NVFP4 experts (`F.grouped_mm` backpropagates: checked 2026-10-20) |
-| optimiser | AdamW on the LoRA parameters, lr 1e-4, 30 warm-up steps, cosine to 10%, gradient clipping 1.0 |
+| strategy | parameter-efficient fine-tuning: LoRA adapters train, every base weight stays frozen |
+| adapter | rank 16, α 32, dropout 0, on q, k, v, o of the 30 language layers; fp32 A (Kaiming-uniform) and B (zero, so the model is unchanged at step 0). One adapter per tied encoder/decoder pair: 115 (25 layers × 4, and 5 layers with no v_proj × 3), 11,489,280 parameters. Gradients reach the lower layers through the frozen NVFP4 experts (`F.grouped_mm` backpropagates: checked 2026-10-20) |
+| optimiser | AdamW on the LoRA parameters, β (0.9, 0.99), eps 1e-8, weight decay 0; lr 1e-4, 30 warm-up steps, cosine to 10%, gradient clipping 1.0 |
 | batch | 8 examples per step: 1 per forward × 8 accumulated. Batched forwards were tried (`speed_batch.py`) and failed the equality gate (cross-entropy differences up to 0.07 nats) |
 | memory and speed | decoder gradient checkpointing, bf16 autocast; ≈ 1.3 s per example, peak 56–60 GB |
 | validation | 48 E6 val poems at t = 0.25, 0.5, 0.75, fixed noise, no self-conditioning, every 250 / 1,000 steps |
@@ -112,7 +113,7 @@ cd lora_gemma_diffusion
   up-sampled, dvipada capped, weighted random keys in log form.
 - **Whole pool** (`--n 0 --name train_full`): every pool poem that fits, at its natural mix. 300,762 of the 300,763
   fit (poem in one canvas, prompt ≤ 768 tokens).
-- **Validation:** 200 E6 val poems.
+- **Validation:** 200 E6 val poems built; training-time validation uses the first 48.
 - The four `dataset/` works are held out whole, as for every model of the project.
 
 ### Gates before training (`check_model.py`; PLAN.md §3, §6)

@@ -9,13 +9,17 @@ Status 2026-10-31: three sizes trained, evaluated, and released. This folder was
 
 | model | base | fine-tuning | trainable parameters | run (here) | released as |
 |---|---|---|---|---|---|
-| T5Gemma 2 270M | `google/t5gemma-2-270m-270m` | full | 786M | `runs/t5g-270m-full/final` | [`t5gemma2-270m-padyam`](https://huggingface.co/samvaran/chandohasam/tree/main/t5gemma2-270m-padyam) |
-| T5Gemma 2 1B | `google/t5gemma-2-1b-1b` | full | 1,699M | `runs/t5g-1b-full/final` | [`t5gemma2-1b-padyam`](https://huggingface.co/samvaran/chandohasam/tree/main/t5gemma2-1b-padyam) |
+| T5Gemma 2 270M | `google/t5gemma-2-270m-270m` | full | 369M (the text model) | `runs/t5g-270m-full/final` | [`t5gemma2-270m-padyam`](https://huggingface.co/samvaran/chandohasam/tree/main/t5gemma2-270m-padyam) |
+| T5Gemma 2 1B | `google/t5gemma-2-1b-1b` | full | 1,699M (the text model) | `runs/t5g-1b-full/final` | [`t5gemma2-1b-padyam`](https://huggingface.co/samvaran/chandohasam/tree/main/t5gemma2-1b-padyam) |
 | T5Gemma 2 4B | `google/t5gemma-2-4b-4b` | LoRA r 128, α 256, on q, k, v, o, gate, up, down of every text layer | 477M (476 projections) | `runs/t5g-4b-r128-full/lora.pt` | [`t5gemma2-4b-padyam-lora`](https://huggingface.co/samvaran/chandohasam/tree/main/t5gemma2-4b-padyam-lora) |
 | T5Gemma 2 4B, first 48k | the same | the same run's adapter after its first 48,000 examples | | `runs/t5g-4b-r128-full/lora_at_48000.pt` | not released |
 
-- **Names and sizes:** each name counts one stack, so the 1B holds 2.12B parameters (encoder + decoder + an unused
-  vision tower). The vision tower stays frozen at every size.
+- **Strategy:** the 270M and the 1B are full-parameter supervised fine-tunes: every weight of the text model (encoder,
+  decoder, embeddings) trains. The 4B trains LoRA adapters only, on a frozen bf16 base.
+- **Names and sizes:** each name counts one stack, so the 1B holds 2.12B parameters (encoder + decoder + a vision
+  tower of 417M). The vision tower never sees an image here and never changes. In the 1B and 4B runs it is frozen
+  (`common.freeze_vision`). The 270M ran on an earlier `train.py` without that freeze: its tower sat in the optimizer
+  but never received a gradient, so its weights are the base's and the training is the same.
 - **Untrained bases:** all three are also evaluated as they are, as reference rows.
 - **Licence:** the bases are under the Gemma Terms of Use, and so are the released models.
 
@@ -111,7 +115,8 @@ used it, and that attempt was replaced.
 
 | | 270M | 1B | 4B |
 |---|---|---|---|
-| method | full fine-tuning, fp32 weights | full fine-tuning, fp32 weights | LoRA r 128 (α = 2r) on a bf16 base, fp32 adapters, gradient checkpointing |
+| method | full fine-tuning of the text model's 369.2M parameters | full fine-tuning of the text model's 1,699.1M parameters | LoRA r 128, α 256, dropout 0, on q, k, v, o, gate, up, down of all 34 encoder and 34 decoder text layers (476 adapters, 476,839,936 parameters; A Kaiming-uniform, B zero); frozen bf16 base; gradient checkpointing |
+| weight precision | encoder stack and shared embedding bf16 (bf16 AdamW moments), decoder layers fp32 | the same: 999.9M bf16, 697.9M fp32 | bf16 base, fp32 adapters |
 | learning rate, warm-up | 1e-4, 400 | 5e-5, 400 | 2e-4, 400 |
 | peak GPU memory | 21 GB | 50 GB | 31 GB |
 | wall time (mean s/step × steps) | ≈ 4.4 h | ≈ 12.4 h | ≈ 49.5 h |
@@ -119,12 +124,21 @@ used it, and that attempt was replaced.
 | val T0 − T1 (the bhāvam's value), step 0 → end | 0.27 → 0.90 | 0.26 → 1.07 | 0.45 → 0.91 |
 
 All three runs share the same settings:
-- AdamW (β 0.9, 0.98; weight decay 0.01 for full fine-tuning), linear warm-up then cosine to 10%;
-- bf16 autocast, gradient clipping 1.0, seed 20261021;
+- loss: sequence-to-sequence cross-entropy on the target and its `<eos>`, the mean over label tokens;
+- AdamW (β 0.9, 0.98, eps 1e-8; weight decay 0.01 on matrices for full fine-tuning, 0 for the adapters), linear
+  warm-up then cosine to 10%;
+- batches cut from the length-ordered data at 8,192 padded source + target tokens (≈ 16 examples), one optimizer step
+  each, no gradient accumulation;
+- bf16 autocast, gradient clipping 1.0, seed 20261021, TF32; no EMA (the released weights are the last step's);
+- the scansion task replaces 15% of the examples that have a scansion target (≈ 14.5% of all examples);
 - evaluation every 1,000 steps: val loss, plus one greedy poem per E6 metre scored by the engines.
 
-The runs went one at a time through the GPU queues `../experiments/scripts/gpu_queue_2026-10-21*.sh`, systemd user
-units with a memory watchdog. The 4B moved from r 32 to r 128 on 10-21 (the user's decision; `PLAN.md` §6).
+The full fine-tunes asked for fp32 weights (`train.py` loads them with `dtype=torch.float32`), but the trained
+checkpoints hold the encoder stack and the shared embedding in bf16, with bf16 optimizer moments; only the decoder
+layers are fp32 (`last.pt`, `final/model.safetensors`). The released files keep these dtypes.
+
+The runs went one at a time on the GB10 through the GPU queues `../experiments/scripts/gpu_queue_2026-10-21*.sh`,
+systemd user units with a memory watchdog. The 4B moved from r 32 to r 128 on 10-21 (the user's decision; `PLAN.md` §6).
 
 ### Commands
 

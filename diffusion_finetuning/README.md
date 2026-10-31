@@ -82,14 +82,32 @@ Recipe "E6 + T1", identical for both sizes (the user's decisions of 2026-10-13 a
 The metre-and-meaning pool (task T1) is the 300,763 training poems whose metre the engines confirm and that have a
 meaning. Stage 1 reads 85.5M tokens of poem + meaning documents.
 
-### Stages (`ft.train`; batch 128 canvases; 15% of every batch is general Telugu text from pretraining)
+### Strategy: full-parameter supervised fine-tuning
+
+Every weight of the model trains: nothing is frozen and no adapter (LoRA) is used. The three stages below run in
+sequence. Each starts from the previous stage's EMA weights with a fresh optimizer; stage 1 starts from the base's EMA
+(`pilot120m` at step 76,000 for the 120M; the 523M at step 160,000).
+
+| setting | value (`runs/e6-*/config.json`, `ft/train.py`, `ft/loss.py`) |
+|---|---|
+| objective | the MDLM NELBO: each maskable position is masked with probability t (t drawn low-discrepancy across the batch) and scored by −log p / t. Stage 1: every trainable position of a window is maskable, and the sum is divided by the step's tokens. Stages 2 and T1: only the target and the `<eos>` fill after it are maskable (the given part never is), and the sum is divided by the step's target tokens |
+| optimizer | AdamW (fused), β (0.9, 0.98), weight decay 0.1 on matrices, 0 on vectors |
+| schedule | linear warm-up, then cosine decay to 10% of the peak rate |
+| batch | 128 sequences per step: stage 1, 128 windows of 512 tokens; stages 2 and T1, 128 canvases in length buckets of 128 / 256 / 384 / 512 tokens. Each step runs as micro-batches of at most 4,096 tokens, with the gradients accumulated |
+| precision | fp32 weights and optimizer state, bf16 autocast; `torch.compile` on the trunk |
+| clipping, seed | gradient norm 1.0; seed 1 |
+| EMA | decay 0.999. The EMA weights are what is evaluated, what the next stage starts from, and what is released |
+| replay | stage 1 only: each window is general Telugu text from pretraining with probability 0.15 (Sangraha 0.75, IndicCorp 0.20, Wikipedia 0.05). Stages 2 and T1 read poems only; their configs carry the field, unused |
+| sampling | stages 2 and T1 draw canvases with replacement. The metre tasks (T1, T5, T0) are metre-weighted: metres with fewer than 500 poems up-sampled, at most 5×, and dvipada capped at 10%. An epoch is the T1 pool over 128 (2,350 steps) |
+
+### Stages (`ft.train`)
 
 | stage | what | steps | lr | 120M | 523M |
 |---|---|---|---|---|---|
 | 1 | continued pretraining on poem + meaning documents, 512-token windows, 3 passes | 4,606 | 1e-4 (200 warm-up) | 5.9 h | 7.8 h |
 | 2, sweep | the six tasks below, 1 epoch at each of 3e-5 / 6e-5 / 1e-4; keep the rate with the lowest val T1 NELBO | 3 × 4,699 | → **1e-4** for both | 9.0 h | 12.9 h |
 | 2 | the six tasks, 2.5 epochs at the chosen rate | 11,748 | 1e-4 (100 warm-up) | 7.6 h | 10.7 h |
-| T1 | metre + bhāvam → poem only, one pass over the 300,763 poems | 2,350 | 3e-5 = 0.3 × (50 warm-up) | 1.6 h | 2.6 h |
+| T1 | metre + bhāvam → poem only: 2,350 × 128 weighted draws, one epoch of the 300,763-poem pool | 2,350 | 3e-5 = 0.3 × 1e-4 (50 warm-up) | 1.6 h | 2.6 h |
 
 Wall times on the GB10. The 120M trained beside the 523M's pretraining, sharing the GPU.
 

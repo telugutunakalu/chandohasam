@@ -61,10 +61,17 @@ Growth ladder (`mdlm.model.PRESETS`): `small-768` (120M) → `grow-1536x16` (523
 function-preservingly from the one before (the pilot's run folder is now `runs/pilot120m_hf`):
 
 ```bash
-../.venv/bin/python -m mdlm.grow --from runs/pilot120m --to grow-1536x16 --out runs/pilot120m/grown/grow-1536x16.pt
+../.venv/bin/python -m mdlm.grow --from runs/pilot120m_hf --to grow-1536x16 --out runs/pilot120m_hf/grown/grow-1536x16.pt
 ../.venv/bin/python -m mdlm.train --run stage1-523m --preset grow-1536x16 \
-    --init-from runs/pilot120m/grown/grow-1536x16.pt --warmup-steps 1000 ...
+    --init-from runs/pilot120m_hf/grown/grow-1536x16.pt --lr 2e-4 --warmup-steps 2000 --total-steps 160000 \
+    --micro-batch 16 --seed 1092699556 --snapshot-every 2000 --archive-every 10000 \
+    --weights '{"sangraha": 0.75, "indiccorp": 0.20, "wikipedia": 0.05}'
 ```
+
+That is the 523M's run as its service ran it (`deploy/telugu-mdlm-523m.service`; `runs/stage1-523m/config.json`):
+full pre-training of all 523,224,576 parameters with the MDLM objective, AdamW β (0.9, 0.98), weight decay 0.1,
+gradient clipping 1.0, lr 2e-4 with 2,000 warm-up steps then cosine to 2e-5, 128 × 512-token sequences per step in
+micro-batches of 16, EMA 0.9999, 160,000 steps (10.49B tokens).
 
 `mdlm.grow` widens by cloning (HyperCloning: every hidden vector carried k times, each head repeated, linear layers
 as k × k grids of w/k plus noise that cancels across the copies, final RMSNorm gain / k for the tied output) and

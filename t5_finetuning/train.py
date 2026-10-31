@@ -12,7 +12,8 @@
 - **Batches:** examples in order, cut whenever the padded batch would exceed --batch-tokens (source + target tokens);
   padding with attention masks; labels −100 on padding. The loss is the model's own (mean over label tokens).
 - **Optimisation:** AdamW (β 0.9, 0.98; weight decay 0.01 on full fine-tuning), linear warm-up then cosine to 10%,
-  gradient clipping 1.0, bf16 autocast (full fine-tuning keeps fp32 weights; LoRA: bf16 base, fp32 adapters).
+  gradient clipping 1.0, bf16 autocast (full fine-tuning asks for fp32 weights, but the encoder stack and the shared
+  embedding load in bf16, so only the decoder layers train in fp32; LoRA: bf16 base, fp32 adapters).
 - **Evaluation** every --eval-every steps, at 0 and at the end: val loss on the poem given the bhāvam (T1) and given an
   empty bhāvam (T0) — T0 − T1 > 0 means the model uses the meaning —, and one greedy poem for one E6 val prompt per
   metre (11), scored by the strict engines (lines, gaṇa / prāsa / yati).
