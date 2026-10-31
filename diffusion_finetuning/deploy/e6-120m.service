@@ -1,0 +1,23 @@
+# E6 for the 120M (run_e6.sh: stage 1 -> stage-2 sweep -> final -> val evaluation), beside the 523M pretraining.
+# Uncapped: sharing the GPU costs the 523M about the same delay whatever the cap (measured with E5b, 2026-10-09/11),
+# so the 120M runs at full share and finishes soonest.
+# Install: cp deploy/e6-120m.service ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user start e6-120m
+# Status:  systemctl --user status e6-120m ; tail runs/e6-120m.chain.log
+# Pause:   systemctl --user stop e6-120m  (the trainer saves; starting again resumes)
+
+[Unit]
+Description=E6 task fine-tuning of the 120M (Telugu MDLM)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning
+Environment=PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Environment=PYTHONUNBUFFERED=1
+Nice=5
+ExecStart=/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/run_e6.sh 120m /home/samvaran/phd_workspace/chandohasam/diffusion_pretraining/runs/pilot120m_hf/ema_step_0076000.pt "3e-5 6e-5 1e-4"
+Restart=on-failure
+RestartSec=600
+TimeoutStopSec=300
+
+[Install]
+WantedBy=default.target

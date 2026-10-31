@@ -1,0 +1,172 @@
+{
+  "run": "e6_523m_t1_test",
+  "lengths": [
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "refrain_min_poems": 5,
+  "by_mode": {
+    "baseline": {
+      "poems": 183,
+      "longest_run_share": {
+        ">=6": 0.7704918032786885,
+        ">=8": 0.1092896174863388,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "masking_only": {
+      "poems": 183,
+      "longest_run_share": {
+        ">=6": 0.5628415300546448,
+        ">=8": 0.060109289617486336,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "masking_backtrack": {
+      "poems": 183,
+      "longest_run_share": {
+        ">=6": 0.6174863387978142,
+        ">=8": 0.04918032786885246,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "hybrid": {
+      "poems": 183,
+      "longest_run_share": {
+        ">=6": 0.5901639344262295,
+        ">=8": 0.04918032786885246,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    }
+  },
+  "most_copied": [
+    {
+      "key": "utsahamu|dataset/kuchimanchi_timmakavi:kuchimanchi-1195|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|dataset/chandassu:chandassu-bhaskara-27-\u0c09.|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|dataset/chandassu:chandassu-bhaskara-27-\u0c09.|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|dataset/chandassu:chandassu-bhaskara-27-\u0c09.|hybrid|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|dataset/bhagavatam:6-352-\u0c09.|hybrid|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|dataset/bhagavatam:10.1-1708-\u0c09.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/kuchimanchi_timmakavi:kuchimanchi-1304|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:6-86-\u0c24\u0c47.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:4-506-\u0c24\u0c47.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:4-348-\u0c24\u0c47.|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:4-348-\u0c24\u0c47.|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:4-257-\u0c24\u0c47.|hybrid|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:4-144-\u0c24\u0c47.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:3-337-\u0c24\u0c47.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:3-331-\u0c24\u0c47.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "seesamu|dataset/bhagavatam:9-327-\u0c38\u0c40.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "seesamu|dataset/bhagavatam:5.1-66-\u0c38\u0c40.|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "seesamu|dataset/bhagavatam:4-53-\u0c38\u0c40.|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "seesamu|dataset/bhagavatam:4-53-\u0c38\u0c40.|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "seesamu|dataset/bhagavatam:4-53-\u0c38\u0c40.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    }
+  ]
+}

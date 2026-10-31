@@ -1,0 +1,172 @@
+{
+  "run": "e3_e2_pretrained",
+  "lengths": [
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "refrain_min_poems": 5,
+  "by_mode": {
+    "baseline": {
+      "poems": 111,
+      "longest_run_share": {
+        ">=6": 0.6666666666666666,
+        ">=8": 0.0,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "masking_only": {
+      "poems": 111,
+      "longest_run_share": {
+        ">=6": 0.32432432432432434,
+        ">=8": 0.0,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "masking_backtrack": {
+      "poems": 111,
+      "longest_run_share": {
+        ">=6": 0.3063063063063063,
+        ">=8": 0.018018018018018018,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "hybrid": {
+      "poems": 111,
+      "longest_run_share": {
+        ">=6": 0.2972972972972973,
+        ">=8": 0.018018018018018018,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    }
+  },
+  "most_copied": [
+    {
+      "key": "turagagati_ragada|T1|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "taruvoja|T1|hybrid|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "madhyakkara|T2|hybrid|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "ataveladi|T2|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "vidyunmala|T3|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "vidyunmala|T2|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "vasamtatilakamu|T3|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "vasamtatilakamu|T2|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "vasamtatilakamu|T2|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "vanamayuramu|T3|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "vanamayuramu|T2|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "vanamayuramu|T2|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T3|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T3|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T3|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T2|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T2|hybrid|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T2|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T1|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    },
+    {
+      "key": "utsahamu|T1|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 6
+    }
+  ]
+}

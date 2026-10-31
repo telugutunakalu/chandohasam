@@ -1,0 +1,22 @@
+# Runs deploy/e6_queue.sh: waits for the 523M pretraining to end, then E6 for the 523M with the 120M's recipe.
+# Resumable at every step.
+# Install: cp deploy/e6-queue.service ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now e6-queue
+# Status:  systemctl --user status e6-queue ; tail runs/e6-queue.log runs/e6-523m.chain.log
+# Pause:   systemctl --user stop e6-queue  (a running trainer saves first; starting again resumes)
+
+[Unit]
+Description=E6 queue: the 523M with the 120M's recipe, after the 523M pretraining
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning
+Environment=PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+Environment=PYTHONUNBUFFERED=1
+Nice=5
+ExecStart=/home/samvaran/phd_workspace/chandohasam/diffusion_finetuning/deploy/e6_queue.sh
+Restart=on-failure
+RestartSec=600
+TimeoutStopSec=300
+
+[Install]
+WantedBy=default.target

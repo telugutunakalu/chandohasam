@@ -1,0 +1,40 @@
+{
+  "model": "runs/e5_tagged_10ep/final.pt",
+  "weights": "runs/e5_tagged_10ep/final.pt EMA, step 4040",
+  "split": "test",
+  "canvases": {
+    "poems": 503,
+    "poems_tagged": 512,
+    "bhavam": 512
+  },
+  "seconds": 12.4,
+  "results": {
+    "val_nelbo/poems": 2.6380398956018225,
+    "val_ppl_bound/poems": 13.98576316755881,
+    "val_nelbo/poems_tagged": 2.3869033232331276,
+    "val_ppl_bound/poems_tagged": 10.879750652899306,
+    "val_nelbo/bhavam": 2.4877990260720253,
+    "val_ppl_bound/bhavam": 12.034758758881042,
+    "val_nelbo": 2.5034588541794074,
+    "val_ppl_bound": 12.224704388629947,
+    "val_ce_by_t/0.0-0.1": 0.8403902649879456,
+    "val_ce_by_t/0.1-0.2": 1.0064371824264526,
+    "val_ce_by_t/0.2-0.3": 1.316095232963562,
+    "val_ce_by_t/0.3-0.4": 1.6840733289718628,
+    "val_ce_by_t/0.4-0.5": 2.0539824962615967,
+    "val_ce_by_t/0.5-0.6": 2.5536742210388184,
+    "val_ce_by_t/0.6-0.7": 3.0859813690185547,
+    "val_ce_by_t/0.7-0.8": 3.5960445404052734,
+    "val_ce_by_t/0.8-0.9": 4.16610050201416,
+    "val_ce_by_t/0.9-1.0": 4.773664951324463,
+    "masked_acc/15pct": 0.7271537051584185,
+    "masked_acc/50pct": 0.4823005265289591,
+    "masked_acc/85pct": 0.23100596268513177
+  },
+  "stage1_test_reference": {
+    "sangraha": 1.846,
+    "indiccorp": 1.729,
+    "wikipedia": 1.053,
+    "weighted_like_training": 1.783
+  }
+}

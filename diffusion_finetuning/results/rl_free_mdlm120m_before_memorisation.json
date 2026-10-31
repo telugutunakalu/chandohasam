@@ -1,0 +1,130 @@
+{
+  "run": "rl_free_mdlm120m_before",
+  "lengths": [
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "refrain_min_poems": 5,
+  "by_mode": {
+    "free": {
+      "poems": 912,
+      "longest_run_share": {
+        ">=6": 0.7785087719298246,
+        ">=8": 0.039473684210526314,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    }
+  },
+  "most_copied": [
+    {
+      "key": "dataset/bhagavatam:7-400-\u0c36\u0c3e.|6",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:7-374-\u0c06.|5",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:7-31-\u0c1a.|2",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:7-236-\u0c06.|1",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:7-229-\u0c09.|0",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:7-149-\u0c24\u0c47.|5",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-81-\u0c36\u0c3e.|0",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-74-\u0c36\u0c3e.|3",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-58-\u0c2e.|5",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-58-\u0c2e.|3",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-283-\u0c15.|7",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-283-\u0c15.|2",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-263-\u0c24\u0c47.|7",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-263-\u0c24\u0c47.|6",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-263-\u0c24\u0c47.|4",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-263-\u0c24\u0c47.|3",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-263-\u0c24\u0c47.|1",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-200-\u0c1a.|7",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-200-\u0c1a.|6",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "dataset/bhagavatam:2-200-\u0c1a.|5",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    }
+  ]
+}

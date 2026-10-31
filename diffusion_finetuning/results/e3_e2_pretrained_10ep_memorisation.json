@@ -1,0 +1,172 @@
+{
+  "run": "e3_e2_pretrained_10ep",
+  "lengths": [
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "refrain_min_poems": 5,
+  "by_mode": {
+    "baseline": {
+      "poems": 555,
+      "longest_run_share": {
+        ">=6": 0.8666666666666667,
+        ">=8": 0.06666666666666667,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "masking_only": {
+      "poems": 555,
+      "longest_run_share": {
+        ">=6": 0.34234234234234234,
+        ">=8": 0.02882882882882883,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "masking_backtrack": {
+      "poems": 555,
+      "longest_run_share": {
+        ">=6": 0.3801801801801802,
+        ">=8": 0.043243243243243246,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    },
+    "hybrid": {
+      "poems": 555,
+      "longest_run_share": {
+        ">=6": 0.3153153153153153,
+        ">=8": 0.03423423423423423,
+        ">=12": 0.0,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    }
+  },
+  "most_copied": [
+    {
+      "key": "vidyunmala|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "vasamtatilakamu|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "vanamayuramu|T3|masking_backtrack|49",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "vanamayuramu|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utsahamu|T3|masking_backtrack|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utsahamu|T2|hybrid|63",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utsahamu|T2|hybrid|56",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utsahamu|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utsahamu|T1|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|T1|masking_backtrack|56",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "upendravajra|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "turagagati_ragada|T2|masking_only|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "turagagati_ragada|T2|masking_only|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "turagagati_ragada|T2|masking_backtrack|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "turagagati_ragada|T2|masking_backtrack|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "turagagati_ragada|T2|hybrid|56",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "turagagati_ragada|T2|hybrid|49",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "turagagati_ragada|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "totakamu|T2|baseline|70",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    }
+  ]
+}

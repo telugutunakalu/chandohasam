@@ -1,0 +1,34 @@
+{
+  "model": "pilot",
+  "weights": "pilot120m EMA, step 76,000",
+  "split": "test",
+  "canvases": {
+    "bhavam": 512
+  },
+  "seconds": 12.0,
+  "results": {
+    "val_nelbo/bhavam": 2.1222907714545727,
+    "val_ppl_bound/bhavam": 8.350244095709359,
+    "val_nelbo": 2.1222907714545727,
+    "val_ppl_bound": 8.350244095709359,
+    "val_ce_by_t/0.0-0.1": 0.46324342489242554,
+    "val_ce_by_t/0.1-0.2": 0.5529229044914246,
+    "val_ce_by_t/0.2-0.3": 0.7892037034034729,
+    "val_ce_by_t/0.3-0.4": 1.077958106994629,
+    "val_ce_by_t/0.4-0.5": 1.538883924484253,
+    "val_ce_by_t/0.5-0.6": 2.1308398246765137,
+    "val_ce_by_t/0.6-0.7": 2.7267966270446777,
+    "val_ce_by_t/0.7-0.8": 3.3188157081604004,
+    "val_ce_by_t/0.8-0.9": 3.978480815887451,
+    "val_ce_by_t/0.9-1.0": 4.610576152801514,
+    "masked_acc/15pct": 0.8114689709347996,
+    "masked_acc/50pct": 0.5776427703523693,
+    "masked_acc/85pct": 0.2573571840738604
+  },
+  "stage1_test_reference": {
+    "sangraha": 1.846,
+    "indiccorp": 1.729,
+    "wikipedia": 1.053,
+    "weighted_like_training": 1.783
+  }
+}

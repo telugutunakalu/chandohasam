@@ -1,0 +1,37 @@
+{
+  "model": "pilot",
+  "weights": "pilot120m EMA, step 76,000",
+  "split": "test",
+  "canvases": {
+    "poems": 503,
+    "bhavam": 512
+  },
+  "seconds": 9.6,
+  "results": {
+    "val_nelbo/poems": 3.493628417047307,
+    "val_ppl_bound/poems": 32.905124879293155,
+    "val_nelbo/bhavam": 2.1222907714545727,
+    "val_ppl_bound/bhavam": 8.350244095709359,
+    "val_nelbo": 2.8018797721768833,
+    "val_ppl_bound": 16.475588032706355,
+    "val_ce_by_t/0.0-0.1": 1.1977388858795166,
+    "val_ce_by_t/0.1-0.2": 1.370212197303772,
+    "val_ce_by_t/0.2-0.3": 1.6270807981491089,
+    "val_ce_by_t/0.3-0.4": 1.9509621858596802,
+    "val_ce_by_t/0.4-0.5": 2.368083953857422,
+    "val_ce_by_t/0.5-0.6": 2.903879165649414,
+    "val_ce_by_t/0.6-0.7": 3.403979539871216,
+    "val_ce_by_t/0.7-0.8": 3.8930017948150635,
+    "val_ce_by_t/0.8-0.9": 4.38886833190918,
+    "val_ce_by_t/0.9-1.0": 4.905309677124023,
+    "masked_acc/15pct": 0.6516103692065985,
+    "masked_acc/50pct": 0.43681652490886996,
+    "masked_acc/85pct": 0.21573860357761107
+  },
+  "stage1_test_reference": {
+    "sangraha": 1.846,
+    "indiccorp": 1.729,
+    "wikipedia": 1.053,
+    "weighted_like_training": 1.783
+  }
+}
