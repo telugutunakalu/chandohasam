@@ -46,7 +46,7 @@ def write_results(args, poems: list, score_poem) -> None:
     for pid, lines in poems:
         result = {"id": pid, **score_poem(lines)}
         if not args.lines:
-            result.pop("lines")
+            result.pop("lines", None)
         indent = 1 if sink is sys.stdout and len(poems) == 1 else None
         print(json.dumps(result, ensure_ascii=False, indent=indent), file=sink)
     if args.out:
