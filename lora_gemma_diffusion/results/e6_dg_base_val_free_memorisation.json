@@ -1,0 +1,130 @@
+{
+  "run": "e6_dg_base_val_free",
+  "lengths": [
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "refrain_min_poems": 5,
+  "by_mode": {
+    "baseline": {
+      "poems": 114,
+      "longest_run_share": {
+        ">=6": 0.9824561403508771,
+        ">=8": 0.22807017543859648,
+        ">=12": 0.008771929824561403,
+        ">=16": 0.0,
+        ">=24": 0.0,
+        ">=32": 0.0
+      },
+      "verbatim_refrain_line_share": 0.0007704160246533128,
+      "verbatim_other_line_share": 0.0,
+      "poems_with_a_copied_ordinary_line": 0.0
+    }
+  },
+  "most_copied": [
+    {
+      "key": "utpalamala|dataset/bhagavatam:1-89-\u0c09.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 12
+    },
+    {
+      "key": "utpalamala|dataset/bhagavatam:1-80-\u0c09.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "utpalamala|dataset/bhagavatam:1-8-\u0c09.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:2-263-\u0c24\u0c47.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "tetagiti|dataset/bhagavatam:2-184-\u0c24\u0c47.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "sardulavikriditamu|dataset/bhagavatam:7-369-\u0c36\u0c3e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "sardulavikriditamu|dataset/bhagavatam:7-145-\u0c36\u0c3e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "sardulavikriditamu|dataset/bhagavatam:2-81-\u0c36\u0c3e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "sardulavikriditamu|dataset/bhagavatam:1-515-\u0c36\u0c3e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "sardulavikriditamu|dataset/bhagavatam:1-318-\u0c36\u0c3e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "sardulavikriditamu|dataset/bhagavatam:1-124-\u0c36\u0c3e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:2-67-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:2-58-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:2-35-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:2-19-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:1-96-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:1-72-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:1-69-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:1-505-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    },
+    {
+      "key": "mattebhavikriditamu|dataset/bhagavatam:1-311-\u0c2e.|baseline|42",
+      "other_verbatim_lines": 0,
+      "longest_run_at_least": 8
+    }
+  ]
+}
