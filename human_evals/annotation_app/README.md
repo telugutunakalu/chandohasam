@@ -1,9 +1,9 @@
 # Padya-eval: human evaluation app for the Chandohasam poems
 
-A small Flask app for rating the 500 poems of the human-evaluation pool
-(`../human_eval_poems_strict.json`) with a ten-question rubric. It is built so
-that the ratings support inter-annotator agreement. It works on phones and on
-desktops.
+A small Flask app for rating poems with the human-evaluation rubric: study 1, the 500 poems of
+`../human_eval_poems_strict.json` (twelve questions), and study 2, 99 model poems at `/study2` (thirteen). It is
+built so that the ratings support inter-annotator agreement. It works on phones and on desktops. The studies, their
+results and the other scripts of `human_evals/` are described in [`../README.md`](../README.md).
 
 For every poem an annotator sees:
 
@@ -100,13 +100,19 @@ together. Sessions last 30 days.
 own password, create `instance/users.json` (it stores only password hashes):
 
 ```bash
-.venv/bin/python -m padya_eval.users set shyam mahesh    # creates them, or gives them new passwords; prints the passwords once
-.venv/bin/python -m padya_eval.users remove mahesh       # their ratings stay; their session ends
+.venv/bin/python -m padya_eval.users set alice bob       # creates them, or gives them new passwords; prints the passwords once
+.venv/bin/python -m padya_eval.users remove bob          # their ratings stay; their session ends
 .venv/bin/python -m padya_eval.users list
 ```
 
 Restart the server after a change. While the file exists, only its users can
 log in and the access code is not asked.
+
+**The live deployment** (since 2026-10-13) runs as two systemd user services, sources in `deploy/`:
+`padya-eval.service` (gunicorn, 2 workers, 127.0.0.1:8000; secrets from `instance/hosting.env`) and
+`padya-eval-ngrok.service` (the public HTTPS tunnel). After a code or data change, reload without dropping requests:
+`systemctl --user kill -s HUP --kill-whom=main padya-eval`. Never delete or re-create `instance/*.db`: back them up
+with `.backup` (above); `instance/backups/` holds the copies taken before every change.
 
 ## 3. How the poems are assigned (inter-annotator agreement design)
 
@@ -119,6 +125,10 @@ design is fully crossed, which is the strongest design for agreement.
 2. **Then the other 475.** Each annotator gets them in their own fixed
    pseudo-random order. This spreads fatigue and order effects, and the order
    stays stable across reloads and devices.
+
+**Phase 1** (2026-10-26). While `data/active_pool.json` exists (`build_active_pool.py`: 100 poems, 20 per source,
+the 25 calibration poems included), every annotator gets those 100 first, after the calibration set, and may then go
+on to the rest of the 500. Progress counts the 100.
 
 **Alternative: k ratings per poem** (`HE_RATINGS_PER_POEM=3`), for when there
 are too many annotators for everyone to do all 500.
@@ -149,8 +159,12 @@ are too many annotators for everyone to do all 500.
 8. Were you able to identify any shabda alankaras? (0/1)
 9. Were you able to identify any artha alankaras? (0/1)
 10. How poetic is it? (1–5)
+11. Is this grānthika (archaic) or ādhunika (modern) Telugu? (rubric v2, from 2026-10-26; stored as 1 = grānthika)
+12. Do you think this poem is AI-generated? (0/1; rubric v2)
+13. How meaningful (coherent) is the poem? (1–5; study 2 only, rubric v3, shown after question 3)
 
-Then an optional comments box.
+Then an optional comments box. A rating made under an older rubric is served again with its earlier answers filled
+in, so the new questions get answered; every update first copies the old row into `annotation_history`.
 
 - The bhavam sits inside question 4 and stays hidden until the annotator
   clicks it, so questions 1–3 measure first-pass understanding.
@@ -187,15 +201,20 @@ the command line:
 
 ```bash
 .venv/bin/python -m padya_eval.report --db instance/annotations.db --out reports/ --bootstrap 1000
+.venv/bin/python -m padya_eval.report --study 2 --out reports/study2_agreement/     # study 2: its DB, data, Q13
 ```
+
+Run these on a copy of the database (`.backup`), or let the results scripts do it: `phase1_results.py`,
+`state_analysis.py` and `study2_results.py` copy the live databases read-only and write `reports/` (gitignored: it
+names the annotators). `../publish_results.py` copies the current reports to `../results/` with codes instead of
+names.
 
 ## 3a. Two studies (2026-10-30)
 
 `create_site()` serves **study 1** (the 500-poem pool, `data/`, `instance/annotations.db`) at `/`, and, when
-`data_study2/poems.json` exists, **study 2** at `/study2` (a second app in the same process). To switch it on, point
-`wsgi.py` at `create_site()` (its docstring), back up `instance/annotations.db` and reload the service; until then
-`wsgi.py` serves study 1 alone, as before. The home page `/`
-offers both; a pill in the top bar names the study and leads back to it.
+`data_study2/poems.json` exists, **study 2** at `/study2` (a second app in the same process). `wsgi.py` has served
+both since 2026-10-30 11:03. The home page `/` offers both; a pill in the top bar names the study and leads back to
+it.
 
 - **Study 2** rates 99 poems (`he2_0001`–`he2_0099`) of the three best fine-tuned grid models with the v2 controller
   (MDLM-523M, T5Gemma 2 1B, Nandi-Mini-150M), 33 prompts × 3 models, the gold poems not shown again (they keep their
@@ -208,6 +227,11 @@ offers both; a pill in the top bar names the study and leads back to it.
 - Rebuild: `../../.venv/bin/python -u build_study2_pool.py`, then
   `../../.venv/bin/python build_data.py --pool-file ../human_eval_poems_study2.json --out data_study2 --overrides data_study2/bhavam_overrides.json`.
   Changing the pool after ratings exist makes the study-2 app refuse to start (the fingerprint), as for study 1.
+
+**Highlights and favourites** (both studies, 2026-10-30). An annotator can select part of a poem and save it with the
+🖍 button under the poem (table `highlights`: line and character offsets in the printed lines, the text recomputed
+on the server, `padya_eval/highlights.py`), and star a poem with ☆ beside the metre name (table `favorites`; ★ on
+*Mine*). Admin export: `/admin/highlights.json` (and `/study2/admin/highlights.json`).
 
 ## 4. The poem data
 
@@ -272,8 +296,7 @@ verdicts.
 ## 5. Tests
 
 ```bash
-.venv/bin/python -m pytest          # 106 tests, about 8 s
-.venv/bin/python -m pytest          # 104 tests, about 10 s
+.venv/bin/python -m pytest          # 143 tests, about 15 s
 ```
 
 They cover:
@@ -283,15 +306,25 @@ They cover:
 - the integrity of the data: lossless text, gaṇa and marks, freshness against `meter_engine`;
 - every route: login, access code, CSRF, blind rating, *not applicable*
   handling, validation, edits, skips, reference, admin, exports;
-- the report CLI.
+- the report CLI;
+- phase 1's active pool, rubric v2 and its form, study 2 (mounting, Q13, its admin), highlights and favourites.
 
 ## 6. Files
 
 ```
 annotation_app/
-├── build_data.py          offline: meter_engine → data/poems.json, data/reference.json
+├── build_data.py          offline: meter_engine → data/poems.json, data/reference.json (study 2: --out data_study2)
 ├── backfill_bhavam.py     offline: Padyarchana export → data/bhavam_padyarchana.json
-├── data/                  generated poem and ruleset data (static, preloaded)
+├── build_active_pool.py   offline: phase 1's 100 poems → data/active_pool.json
+├── build_study2_pool.py   offline: study 2's 99 poems → ../human_eval_poems_study2.json, data_study2/bhavam_overrides.json
+├── phase1_results.py      results of phase 1 (the 100) → reports/phase1/
+├── state_analysis.py      agreement and consistency on every study-1 rating → reports/state/
+├── study2_results.py      results of study 2, against the golds' study-1 ratings → reports/study2_results/
+├── data/                  study 1's generated poem and ruleset data (static, preloaded)
+├── data_study2/           study 2's (its bhāvams are the grid's retold prompts)
+├── deploy/                the systemd user units of the live deployment
+├── instance/              gitignored: the databases, users.json, hosting.env, backups, pseudonyms.json
+├── reports/               gitignored: the results scripts' output (names the annotators)
 ├── padya_eval/
 │   ├── __init__.py        create_app() and configuration
 │   ├── views.py           annotator pages (login, queue, poem form, reference)
@@ -299,11 +332,12 @@ annotation_app/
 │   ├── assignment.py      calibration set, k-redundant depth-first queue, claims
 │   ├── agreement.py       α, κ, AC1, bootstrap (standard library only)
 │   ├── report.py          agreement report, CSV/Markdown export, CLI
-│   ├── rubric.py          the ten questions
+│   ├── rubric.py          the questions (1–12; study 2 adds 13)
 │   ├── db.py              SQLite schema and queries
 │   ├── store.py           read-only access to data/*.json
 │   ├── security.py        sessions, CSRF, guards
 │   ├── users.py           per-annotator passwords (instance/users.json) and their CLI
+│   ├── highlights.py      saved highlights (offsets → text)
 │   ├── templates/         Jinja templates (_gana.html is the gaṇa table)
 │   └── static/            app.css, app.js (progressive enhancement only)
 ├── tests/

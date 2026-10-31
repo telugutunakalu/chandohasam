@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-SQLite storage for the evaluation: annotators, annotations, skips, poem claims and
-the calibration set.
+SQLite storage for the evaluation: annotators, annotations, skips, poem claims, the
+calibration set, and each annotator's highlighted passages and favourite poems.
 
 One database file holds one study. WAL journaling and a busy timeout let several
 gunicorn workers write at once. Every annotation row keeps the answers as JSON,
@@ -72,6 +72,27 @@ CREATE TABLE IF NOT EXISTS annotation_history (
     updated_at     TEXT NOT NULL,
     revisions      INTEGER NOT NULL,
     archived_at    TEXT NOT NULL
+);
+-- passages an annotator highlighted in a poem (padya_eval/highlights.py): lines from 0, characters within the line
+-- as printed, end exclusive; text = the passage, its lines joined with a newline
+CREATE TABLE IF NOT EXISTS highlights (
+    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    annotator_id INTEGER NOT NULL REFERENCES annotators(id),
+    eval_id      TEXT NOT NULL,
+    start_line   INTEGER NOT NULL,
+    start_char   INTEGER NOT NULL,
+    end_line     INTEGER NOT NULL,
+    end_char     INTEGER NOT NULL,
+    text         TEXT NOT NULL,
+    created_at   TEXT NOT NULL,
+    UNIQUE (annotator_id, eval_id, start_line, start_char, end_line, end_char)
+);
+-- poems an annotator starred
+CREATE TABLE IF NOT EXISTS favorites (
+    annotator_id INTEGER NOT NULL REFERENCES annotators(id),
+    eval_id      TEXT NOT NULL,
+    created_at   TEXT NOT NULL,
+    PRIMARY KEY (annotator_id, eval_id)
 );
 """
 
@@ -233,6 +254,55 @@ def release_claim(conn, annotator_id: int) -> None:
 def active_claims(conn, ttl_s: float, now: Optional[float] = None) -> list[sqlite3.Row]:
     cutoff = (time.time() if now is None else now) - ttl_s
     return conn.execute("SELECT * FROM claims WHERE claimed_at >= ?", (cutoff,)).fetchall()
+
+
+# -----------------------------------------------------------------------------
+# highlights and favourites
+# -----------------------------------------------------------------------------
+def add_highlight(conn, annotator_id: int, eval_id: str, span: tuple[int, int, int, int], text: str) -> None:
+    """Record a highlighted passage; the same passage again is ignored."""
+    conn.execute("""INSERT OR IGNORE INTO highlights(annotator_id, eval_id, start_line, start_char, end_line, end_char,
+                                                     text, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+                 (annotator_id, eval_id, *span, text, now_iso()))
+
+
+def highlights_of(conn, annotator_id: int, eval_id: str) -> list[dict]:
+    rows = conn.execute("""SELECT * FROM highlights WHERE annotator_id = ? AND eval_id = ?
+                           ORDER BY start_line, start_char, end_line, end_char""", (annotator_id, eval_id)).fetchall()
+    return [dict(r) for r in rows]
+
+
+def delete_highlight(conn, annotator_id: int, eval_id: str, highlight_id: int) -> bool:
+    """Remove one of the annotator's own highlights; False when there is no such highlight."""
+    cur = conn.execute("DELETE FROM highlights WHERE id = ? AND annotator_id = ? AND eval_id = ?",
+                       (highlight_id, annotator_id, eval_id))
+    return cur.rowcount > 0
+
+
+def all_highlights(conn) -> list[dict]:
+    rows = conn.execute(
+        """SELECT h.*, n.username FROM highlights h JOIN annotators n ON n.id = h.annotator_id
+           ORDER BY h.eval_id, n.username, h.start_line, h.start_char""").fetchall()
+    return [dict(r) for r in rows]
+
+
+def set_favorite(conn, annotator_id: int, eval_id: str, on: bool) -> None:
+    if on:
+        conn.execute("INSERT OR IGNORE INTO favorites(annotator_id, eval_id, created_at) VALUES (?, ?, ?)",
+                     (annotator_id, eval_id, now_iso()))
+    else:
+        conn.execute("DELETE FROM favorites WHERE annotator_id = ? AND eval_id = ?", (annotator_id, eval_id))
+
+
+def favorite_ids(conn, annotator_id: int) -> set[str]:
+    return {r[0] for r in conn.execute("SELECT eval_id FROM favorites WHERE annotator_id = ?", (annotator_id,))}
+
+
+def all_favorites(conn) -> list[dict]:
+    rows = conn.execute(
+        """SELECT f.eval_id, n.username, f.created_at FROM favorites f JOIN annotators n ON n.id = f.annotator_id
+           ORDER BY f.eval_id, n.username""").fetchall()
+    return [dict(r) for r in rows]
 
 
 # -----------------------------------------------------------------------------

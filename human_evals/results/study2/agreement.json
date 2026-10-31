@@ -1,0 +1,1596 @@
+{
+  "study": {
+    "dataset": "chandohasam_study2",
+    "pool": "study2",
+    "poems": 99,
+    "ratings_per_poem": "all",
+    "calibration_size": 6,
+    "rubric_version": "3",
+    "annotators": 3,
+    "annotations": 220,
+    "bootstrap": 1000
+  },
+  "questions": [
+    {
+      "key": "readability",
+      "number": 1,
+      "text": "How easy is it to read?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": 0.276,
+      "alpha_ci": [
+        0.13,
+        0.392
+      ],
+      "pct_agreement": 0.218,
+      "mean_pairwise_kappa": 0.332,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 13,
+        "2": 24,
+        "3": 72,
+        "4": 63,
+        "5": 48
+      },
+      "alpha_interval": 0.276,
+      "within_one": 0.752,
+      "mean": 3.5
+    },
+    {
+      "key": "comprehension",
+      "number": 2,
+      "text": "How easy is it to understand immediately after reading?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": -0.165,
+      "alpha_ci": [
+        -0.268,
+        -0.068
+      ],
+      "pct_agreement": 0.201,
+      "mean_pairwise_kappa": 0.11,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 64,
+        "2": 79,
+        "3": 56,
+        "4": 20,
+        "5": 1
+      },
+      "alpha_interval": -0.158,
+      "within_one": 0.662,
+      "mean": 2.16
+    },
+    {
+      "key": "lexical",
+      "number": 3,
+      "text": "How easy is it to recognize and understand the words in the poem?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": 0.262,
+      "alpha_ci": [
+        0.1,
+        0.398
+      ],
+      "pct_agreement": 0.286,
+      "mean_pairwise_kappa": 0.326,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 9,
+        "2": 47,
+        "3": 88,
+        "4": 57,
+        "5": 19
+      },
+      "alpha_interval": 0.279,
+      "within_one": 0.769,
+      "mean": 3.14
+    },
+    {
+      "key": "coherence",
+      "number": 13,
+      "text": "How meaningful (coherent) is the poem?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": -0.025,
+      "alpha_ci": [
+        -0.158,
+        0.093
+      ],
+      "pct_agreement": 0.286,
+      "mean_pairwise_kappa": 0.176,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 77,
+        "2": 86,
+        "3": 48,
+        "4": 9,
+        "5": 0
+      },
+      "alpha_interval": -0.023,
+      "within_one": 0.803,
+      "mean": 1.95
+    },
+    {
+      "key": "bhavam",
+      "number": 4,
+      "text": "How close is the poem with the bhavam?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": 0.215,
+      "alpha_ci": [
+        0.046,
+        0.365
+      ],
+      "pct_agreement": 0.393,
+      "mean_pairwise_kappa": 0.274,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 87,
+        "2": 93,
+        "3": 34,
+        "4": 5,
+        "5": 1
+      },
+      "alpha_interval": 0.208,
+      "within_one": 0.902,
+      "mean": 1.82
+    },
+    {
+      "key": "chandassu",
+      "number": 5,
+      "text": "Is chandassu correct?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": 0.0,
+      "alpha_ci": [
+        -0.01,
+        0.0
+      ],
+      "pct_agreement": 0.991,
+      "mean_pairwise_kappa": 0.0,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 2,
+      "distribution": {
+        "0": 1,
+        "1": 219
+      },
+      "fleiss_kappa": 0.064,
+      "gwet_ac1": 0.991,
+      "prop_yes": 0.995
+    },
+    {
+      "key": "prasa",
+      "number": 6,
+      "text": "Is prasa correct?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 167,
+      "n_units": 60,
+      "n_paired_units": 59,
+      "alpha": null,
+      "alpha_ci": null,
+      "pct_agreement": 1.0,
+      "mean_pairwise_kappa": null,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 0,
+      "distribution": {
+        "0": 0,
+        "1": 167
+      },
+      "fleiss_kappa": null,
+      "gwet_ac1": 1.0,
+      "prop_yes": 1.0
+    },
+    {
+      "key": "yati",
+      "number": 7,
+      "text": "Is yathi correct?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": 0.0,
+      "alpha_ci": [
+        -0.01,
+        0.0
+      ],
+      "pct_agreement": 0.991,
+      "mean_pairwise_kappa": 0.0,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 2,
+      "distribution": {
+        "0": 1,
+        "1": 219
+      },
+      "fleiss_kappa": 0.064,
+      "gwet_ac1": 0.991,
+      "prop_yes": 0.995
+    },
+    {
+      "key": "shabdalankara",
+      "number": 8,
+      "text": "Were you able to identify any shabda alankaras?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": -0.216,
+      "alpha_ci": [
+        -0.325,
+        -0.091
+      ],
+      "pct_agreement": 0.551,
+      "mean_pairwise_kappa": 0.022,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "0": 162,
+        "1": 58
+      },
+      "fleiss_kappa": -0.149,
+      "gwet_ac1": 0.289,
+      "prop_yes": 0.264
+    },
+    {
+      "key": "arthalankara",
+      "number": 9,
+      "text": "Were you able to identify any artha alankaras?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": -0.057,
+      "alpha_ci": [
+        -0.19,
+        0.136
+      ],
+      "pct_agreement": 0.744,
+      "mean_pairwise_kappa": 0.112,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "0": 188,
+        "1": 32
+      },
+      "fleiss_kappa": -0.024,
+      "gwet_ac1": 0.664,
+      "prop_yes": 0.145
+    },
+    {
+      "key": "poetic",
+      "number": 10,
+      "text": "How poetic is it?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": -0.138,
+      "alpha_ci": [
+        -0.247,
+        -0.026
+      ],
+      "pct_agreement": 0.312,
+      "mean_pairwise_kappa": 0.118,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 107,
+        "2": 63,
+        "3": 36,
+        "4": 14,
+        "5": 0
+      },
+      "alpha_interval": -0.141,
+      "within_one": 0.701,
+      "mean": 1.8
+    },
+    {
+      "key": "register",
+      "number": 11,
+      "text": "Is this grānthika (archaic) or ādhunika (modern) Telugu?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": -0.085,
+      "alpha_ci": [
+        -0.128,
+        -0.049
+      ],
+      "pct_agreement": 0.846,
+      "mean_pairwise_kappa": 0.0,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 2,
+      "distribution": {
+        "0": 18,
+        "1": 202
+      },
+      "fleiss_kappa": -0.015,
+      "gwet_ac1": 0.821,
+      "prop_yes": 0.918
+    },
+    {
+      "key": "ai_generated",
+      "number": 12,
+      "text": "Do you think this poem is AI-generated?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 220,
+      "n_units": 80,
+      "n_paired_units": 78,
+      "alpha": -0.033,
+      "alpha_ci": [
+        -0.059,
+        -0.009
+      ],
+      "pct_agreement": 0.919,
+      "mean_pairwise_kappa": -0.013,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "0": 8,
+        "1": 212
+      },
+      "fleiss_kappa": -0.148,
+      "gwet_ac1": 0.912,
+      "prop_yes": 0.964
+    }
+  ],
+  "calibration": [
+    {
+      "key": "readability",
+      "number": 1,
+      "text": "How easy is it to read?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": -0.271,
+      "alpha_ci": [
+        -0.402,
+        -0.198
+      ],
+      "pct_agreement": 0.056,
+      "mean_pairwise_kappa": -0.008,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 1,
+        "2": 4,
+        "3": 5,
+        "4": 6,
+        "5": 2
+      },
+      "alpha_interval": -0.253,
+      "within_one": 0.556,
+      "mean": 3.22
+    },
+    {
+      "key": "comprehension",
+      "number": 2,
+      "text": "How easy is it to understand immediately after reading?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": 0.082,
+      "alpha_ci": [
+        -0.329,
+        0.355
+      ],
+      "pct_agreement": 0.278,
+      "mean_pairwise_kappa": 0.353,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 7,
+        "2": 7,
+        "3": 2,
+        "4": 2,
+        "5": 0
+      },
+      "alpha_interval": 0.052,
+      "within_one": 0.611,
+      "mean": 1.94
+    },
+    {
+      "key": "lexical",
+      "number": 3,
+      "text": "How easy is it to recognize and understand the words in the poem?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": 0.794,
+      "alpha_ci": [
+        0.047,
+        1.0
+      ],
+      "pct_agreement": 0.778,
+      "mean_pairwise_kappa": 0.714,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 2,
+        "2": 5,
+        "3": 5,
+        "4": 6,
+        "5": 0
+      },
+      "alpha_interval": 0.745,
+      "within_one": 0.889,
+      "mean": 2.83
+    },
+    {
+      "key": "coherence",
+      "number": 13,
+      "text": "How meaningful (coherent) is the poem?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": 0.088,
+      "alpha_ci": [
+        -0.385,
+        0.355
+      ],
+      "pct_agreement": 0.333,
+      "mean_pairwise_kappa": 0.32,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 7,
+        "2": 8,
+        "3": 3,
+        "4": 0,
+        "5": 0
+      },
+      "alpha_interval": 0.067,
+      "within_one": 0.889,
+      "mean": 1.78
+    },
+    {
+      "key": "bhavam",
+      "number": 4,
+      "text": "How close is the poem with the bhavam?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": 0.613,
+      "alpha_ci": [
+        -0.181,
+        0.906
+      ],
+      "pct_agreement": 0.556,
+      "mean_pairwise_kappa": 0.674,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 8,
+        "2": 6,
+        "3": 4,
+        "4": 0,
+        "5": 0
+      },
+      "alpha_interval": 0.66,
+      "within_one": 1.0,
+      "mean": 1.78
+    },
+    {
+      "key": "chandassu",
+      "number": 5,
+      "text": "Is chandassu correct?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": null,
+      "alpha_ci": null,
+      "pct_agreement": 1.0,
+      "mean_pairwise_kappa": null,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 0,
+      "distribution": {
+        "0": 0,
+        "1": 18
+      },
+      "fleiss_kappa": null,
+      "gwet_ac1": 1.0,
+      "prop_yes": 1.0
+    },
+    {
+      "key": "prasa",
+      "number": 6,
+      "text": "Is prasa correct?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": null,
+      "alpha_ci": null,
+      "pct_agreement": 1.0,
+      "mean_pairwise_kappa": null,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 0,
+      "distribution": {
+        "0": 0,
+        "1": 18
+      },
+      "fleiss_kappa": null,
+      "gwet_ac1": 1.0,
+      "prop_yes": 1.0
+    },
+    {
+      "key": "yati",
+      "number": 7,
+      "text": "Is yathi correct?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": null,
+      "alpha_ci": null,
+      "pct_agreement": 1.0,
+      "mean_pairwise_kappa": null,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 0,
+      "distribution": {
+        "0": 0,
+        "1": 18
+      },
+      "fleiss_kappa": null,
+      "gwet_ac1": 1.0,
+      "prop_yes": 1.0
+    },
+    {
+      "key": "shabdalankara",
+      "number": 8,
+      "text": "Were you able to identify any shabda alankaras?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": -0.417,
+      "alpha_ci": [
+        -0.417,
+        -0.417
+      ],
+      "pct_agreement": 0.333,
+      "mean_pairwise_kappa": -0.128,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "0": 12,
+        "1": 6
+      },
+      "fleiss_kappa": -0.5,
+      "gwet_ac1": -0.2,
+      "prop_yes": 0.333
+    },
+    {
+      "key": "arthalankara",
+      "number": 9,
+      "text": "Were you able to identify any artha alankaras?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": -0.133,
+      "alpha_ci": [
+        -0.308,
+        0.0
+      ],
+      "pct_agreement": 0.667,
+      "mean_pairwise_kappa": 0.0,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 2,
+      "distribution": {
+        "0": 15,
+        "1": 3
+      },
+      "fleiss_kappa": -0.2,
+      "gwet_ac1": 0.538,
+      "prop_yes": 0.167
+    },
+    {
+      "key": "poetic",
+      "number": 10,
+      "text": "How poetic is it?",
+      "kind": "likert",
+      "level": "ordinal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": -0.086,
+      "alpha_ci": [
+        -0.359,
+        0.092
+      ],
+      "pct_agreement": 0.167,
+      "mean_pairwise_kappa": 0.184,
+      "kappa_weights": "quadratic",
+      "n_annotator_pairs": 3,
+      "distribution": {
+        "1": 5,
+        "2": 7,
+        "3": 3,
+        "4": 3,
+        "5": 0
+      },
+      "alpha_interval": -0.087,
+      "within_one": 0.556,
+      "mean": 2.22
+    },
+    {
+      "key": "register",
+      "number": 11,
+      "text": "Is this grānthika (archaic) or ādhunika (modern) Telugu?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": null,
+      "alpha_ci": null,
+      "pct_agreement": 1.0,
+      "mean_pairwise_kappa": null,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 0,
+      "distribution": {
+        "0": 0,
+        "1": 18
+      },
+      "fleiss_kappa": null,
+      "gwet_ac1": 1.0,
+      "prop_yes": 1.0
+    },
+    {
+      "key": "ai_generated",
+      "number": 12,
+      "text": "Do you think this poem is AI-generated?",
+      "kind": "binary",
+      "level": "nominal",
+      "n_ratings": 18,
+      "n_units": 6,
+      "n_paired_units": 6,
+      "alpha": -0.062,
+      "alpha_ci": [
+        -0.214,
+        0.0
+      ],
+      "pct_agreement": 0.778,
+      "mean_pairwise_kappa": 0.0,
+      "kappa_weights": "none",
+      "n_annotator_pairs": 2,
+      "distribution": {
+        "0": 2,
+        "1": 16
+      },
+      "fleiss_kappa": -0.125,
+      "gwet_ac1": 0.723,
+      "prop_yes": 0.889
+    }
+  ],
+  "annotators": [
+    {
+      "username": "A5",
+      "rated": 79,
+      "skipped": 0,
+      "calibration_done": 6,
+      "calibration_total": 6,
+      "median_seconds": 130.4,
+      "loo_alpha_delta": -0.126,
+      "mean_kappa": 0.129,
+      "last_update": "2026-10-30T14:57:08+00:00"
+    },
+    {
+      "username": "A3",
+      "rated": 79,
+      "skipped": 0,
+      "calibration_done": 6,
+      "calibration_total": 6,
+      "median_seconds": 103.6,
+      "loo_alpha_delta": -0.133,
+      "mean_kappa": 0.137,
+      "last_update": "2026-10-30T14:55:55+00:00"
+    },
+    {
+      "username": "A1",
+      "rated": 62,
+      "skipped": 0,
+      "calibration_done": 6,
+      "calibration_total": 6,
+      "median_seconds": 188.0,
+      "loo_alpha_delta": 0.116,
+      "mean_kappa": 0.099,
+      "last_update": "2026-10-30T22:32:53+00:00"
+    }
+  ],
+  "by_source": [
+    {
+      "source": "mdlm523m_ft",
+      "n_annotations": 62,
+      "cells": {
+        "readability": {
+          "value": 3.58,
+          "n": 62
+        },
+        "comprehension": {
+          "value": 2.19,
+          "n": 62
+        },
+        "lexical": {
+          "value": 3.27,
+          "n": 62
+        },
+        "coherence": {
+          "value": 1.9,
+          "n": 62
+        },
+        "bhavam": {
+          "value": 1.76,
+          "n": 62
+        },
+        "chandassu": {
+          "value": 0.98,
+          "n": 62
+        },
+        "prasa": {
+          "value": 1.0,
+          "n": 47
+        },
+        "yati": {
+          "value": 0.98,
+          "n": 62
+        },
+        "shabdalankara": {
+          "value": 0.26,
+          "n": 62
+        },
+        "arthalankara": {
+          "value": 0.1,
+          "n": 62
+        },
+        "poetic": {
+          "value": 1.71,
+          "n": 62
+        },
+        "register": {
+          "value": 0.89,
+          "n": 62
+        },
+        "ai_generated": {
+          "value": 0.98,
+          "n": 62
+        }
+      }
+    },
+    {
+      "source": "nandi_ft",
+      "n_annotations": 74,
+      "cells": {
+        "readability": {
+          "value": 3.38,
+          "n": 74
+        },
+        "comprehension": {
+          "value": 2.05,
+          "n": 74
+        },
+        "lexical": {
+          "value": 3.03,
+          "n": 74
+        },
+        "coherence": {
+          "value": 1.84,
+          "n": 74
+        },
+        "bhavam": {
+          "value": 1.66,
+          "n": 74
+        },
+        "chandassu": {
+          "value": 1.0,
+          "n": 74
+        },
+        "prasa": {
+          "value": 1.0,
+          "n": 55
+        },
+        "yati": {
+          "value": 1.0,
+          "n": 74
+        },
+        "shabdalankara": {
+          "value": 0.24,
+          "n": 74
+        },
+        "arthalankara": {
+          "value": 0.14,
+          "n": 74
+        },
+        "poetic": {
+          "value": 1.74,
+          "n": 74
+        },
+        "register": {
+          "value": 0.96,
+          "n": 74
+        },
+        "ai_generated": {
+          "value": 0.96,
+          "n": 74
+        }
+      }
+    },
+    {
+      "source": "t5_1b_ft",
+      "n_annotations": 84,
+      "cells": {
+        "readability": {
+          "value": 3.54,
+          "n": 84
+        },
+        "comprehension": {
+          "value": 2.23,
+          "n": 84
+        },
+        "lexical": {
+          "value": 3.13,
+          "n": 84
+        },
+        "coherence": {
+          "value": 2.08,
+          "n": 84
+        },
+        "bhavam": {
+          "value": 2.0,
+          "n": 84
+        },
+        "chandassu": {
+          "value": 1.0,
+          "n": 84
+        },
+        "prasa": {
+          "value": 1.0,
+          "n": 65
+        },
+        "yati": {
+          "value": 1.0,
+          "n": 84
+        },
+        "shabdalankara": {
+          "value": 0.29,
+          "n": 84
+        },
+        "arthalankara": {
+          "value": 0.19,
+          "n": 84
+        },
+        "poetic": {
+          "value": 1.93,
+          "n": 84
+        },
+        "register": {
+          "value": 0.9,
+          "n": 84
+        },
+        "ai_generated": {
+          "value": 0.95,
+          "n": 84
+        }
+      }
+    }
+  ],
+  "by_source_by_annotator": [
+    {
+      "username": "A5",
+      "rows": [
+        {
+          "source": "mdlm523m_ft",
+          "n_annotations": 22,
+          "cells": {
+            "readability": {
+              "value": 3.68,
+              "n": 22,
+              "norm": 3.68
+            },
+            "comprehension": {
+              "value": 1.45,
+              "n": 22,
+              "norm": 1.91
+            },
+            "lexical": {
+              "value": 3.64,
+              "n": 22,
+              "norm": 3.64
+            },
+            "coherence": {
+              "value": 1.41,
+              "n": 22,
+              "norm": 1.82
+            },
+            "bhavam": {
+              "value": 1.41,
+              "n": 22,
+              "norm": 1.41
+            },
+            "chandassu": {
+              "value": 0.95,
+              "n": 22
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 17
+            },
+            "yati": {
+              "value": 0.95,
+              "n": 22
+            },
+            "shabdalankara": {
+              "value": 0.05,
+              "n": 22
+            },
+            "arthalankara": {
+              "value": 0.05,
+              "n": 22
+            },
+            "poetic": {
+              "value": 1.23,
+              "n": 22,
+              "norm": 1.45
+            },
+            "register": {
+              "value": 1.0,
+              "n": 22
+            },
+            "ai_generated": {
+              "value": 1.0,
+              "n": 22
+            }
+          }
+        },
+        {
+          "source": "nandi_ft",
+          "n_annotations": 27,
+          "cells": {
+            "readability": {
+              "value": 3.56,
+              "n": 27,
+              "norm": 3.56
+            },
+            "comprehension": {
+              "value": 1.26,
+              "n": 27,
+              "norm": 1.52
+            },
+            "lexical": {
+              "value": 3.3,
+              "n": 27,
+              "norm": 3.3
+            },
+            "coherence": {
+              "value": 1.26,
+              "n": 27,
+              "norm": 1.52
+            },
+            "bhavam": {
+              "value": 1.3,
+              "n": 27,
+              "norm": 1.3
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 27
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 20
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 27
+            },
+            "shabdalankara": {
+              "value": 0.04,
+              "n": 27
+            },
+            "arthalankara": {
+              "value": 0.04,
+              "n": 27
+            },
+            "poetic": {
+              "value": 1.07,
+              "n": 27,
+              "norm": 1.15
+            },
+            "register": {
+              "value": 1.0,
+              "n": 27
+            },
+            "ai_generated": {
+              "value": 1.0,
+              "n": 27
+            }
+          }
+        },
+        {
+          "source": "t5_1b_ft",
+          "n_annotations": 30,
+          "cells": {
+            "readability": {
+              "value": 3.8,
+              "n": 30,
+              "norm": 3.8
+            },
+            "comprehension": {
+              "value": 1.5,
+              "n": 30,
+              "norm": 2.0
+            },
+            "lexical": {
+              "value": 3.5,
+              "n": 30,
+              "norm": 3.5
+            },
+            "coherence": {
+              "value": 1.57,
+              "n": 30,
+              "norm": 2.13
+            },
+            "bhavam": {
+              "value": 1.6,
+              "n": 30,
+              "norm": 1.6
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 30
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 23
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 30
+            },
+            "shabdalankara": {
+              "value": 0.03,
+              "n": 30
+            },
+            "arthalankara": {
+              "value": 0.07,
+              "n": 30
+            },
+            "poetic": {
+              "value": 1.37,
+              "n": 30,
+              "norm": 1.73
+            },
+            "register": {
+              "value": 1.0,
+              "n": 30
+            },
+            "ai_generated": {
+              "value": 1.0,
+              "n": 30
+            }
+          }
+        }
+      ],
+      "span": {
+        "readability": {
+          "min": 1,
+          "max": 5
+        },
+        "comprehension": {
+          "min": 1,
+          "max": 3
+        },
+        "lexical": {
+          "min": 1,
+          "max": 5
+        },
+        "coherence": {
+          "min": 1,
+          "max": 3
+        },
+        "bhavam": {
+          "min": 1,
+          "max": 5
+        },
+        "poetic": {
+          "min": 1,
+          "max": 3
+        }
+      }
+    },
+    {
+      "username": "A3",
+      "rows": [
+        {
+          "source": "mdlm523m_ft",
+          "n_annotations": 23,
+          "cells": {
+            "readability": {
+              "value": 3.09,
+              "n": 23,
+              "norm": 3.09
+            },
+            "comprehension": {
+              "value": 2.09,
+              "n": 23,
+              "norm": 2.45
+            },
+            "lexical": {
+              "value": 2.74,
+              "n": 23,
+              "norm": 3.32
+            },
+            "coherence": {
+              "value": 1.78,
+              "n": 23,
+              "norm": 2.57
+            },
+            "bhavam": {
+              "value": 1.96,
+              "n": 23,
+              "norm": 2.28
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 23
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 17
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 23
+            },
+            "shabdalankara": {
+              "value": 0.09,
+              "n": 23
+            },
+            "arthalankara": {
+              "value": 0.0,
+              "n": 23
+            },
+            "poetic": {
+              "value": 1.48,
+              "n": 23,
+              "norm": 1.96
+            },
+            "register": {
+              "value": 1.0,
+              "n": 23
+            },
+            "ai_generated": {
+              "value": 0.96,
+              "n": 23
+            }
+          }
+        },
+        {
+          "source": "nandi_ft",
+          "n_annotations": 26,
+          "cells": {
+            "readability": {
+              "value": 2.85,
+              "n": 26,
+              "norm": 2.85
+            },
+            "comprehension": {
+              "value": 2.0,
+              "n": 26,
+              "norm": 2.33
+            },
+            "lexical": {
+              "value": 2.58,
+              "n": 26,
+              "norm": 3.1
+            },
+            "coherence": {
+              "value": 1.81,
+              "n": 26,
+              "norm": 2.62
+            },
+            "bhavam": {
+              "value": 1.92,
+              "n": 26,
+              "norm": 2.23
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 26
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 19
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 26
+            },
+            "shabdalankara": {
+              "value": 0.08,
+              "n": 26
+            },
+            "arthalankara": {
+              "value": 0.0,
+              "n": 26
+            },
+            "poetic": {
+              "value": 1.46,
+              "n": 26,
+              "norm": 1.92
+            },
+            "register": {
+              "value": 1.0,
+              "n": 26
+            },
+            "ai_generated": {
+              "value": 0.92,
+              "n": 26
+            }
+          }
+        },
+        {
+          "source": "t5_1b_ft",
+          "n_annotations": 30,
+          "cells": {
+            "readability": {
+              "value": 2.97,
+              "n": 30,
+              "norm": 2.97
+            },
+            "comprehension": {
+              "value": 2.1,
+              "n": 30,
+              "norm": 2.47
+            },
+            "lexical": {
+              "value": 2.6,
+              "n": 30,
+              "norm": 3.13
+            },
+            "coherence": {
+              "value": 1.9,
+              "n": 30,
+              "norm": 2.8
+            },
+            "bhavam": {
+              "value": 2.13,
+              "n": 30,
+              "norm": 2.51
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 30
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 23
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 30
+            },
+            "shabdalankara": {
+              "value": 0.1,
+              "n": 30
+            },
+            "arthalankara": {
+              "value": 0.07,
+              "n": 30
+            },
+            "poetic": {
+              "value": 1.57,
+              "n": 30,
+              "norm": 2.13
+            },
+            "register": {
+              "value": 1.0,
+              "n": 30
+            },
+            "ai_generated": {
+              "value": 0.93,
+              "n": 30
+            }
+          }
+        }
+      ],
+      "span": {
+        "readability": {
+          "min": 1,
+          "max": 5
+        },
+        "comprehension": {
+          "min": 1,
+          "max": 4
+        },
+        "lexical": {
+          "min": 1,
+          "max": 4
+        },
+        "coherence": {
+          "min": 1,
+          "max": 3
+        },
+        "bhavam": {
+          "min": 1,
+          "max": 4
+        },
+        "poetic": {
+          "min": 1,
+          "max": 3
+        }
+      }
+    },
+    {
+      "username": "A1",
+      "rows": [
+        {
+          "source": "mdlm523m_ft",
+          "n_annotations": 17,
+          "cells": {
+            "readability": {
+              "value": 4.12,
+              "n": 17,
+              "norm": 3.82
+            },
+            "comprehension": {
+              "value": 3.29,
+              "n": 17,
+              "norm": 2.73
+            },
+            "lexical": {
+              "value": 3.53,
+              "n": 17,
+              "norm": 4.06
+            },
+            "coherence": {
+              "value": 2.71,
+              "n": 17,
+              "norm": 3.27
+            },
+            "bhavam": {
+              "value": 1.94,
+              "n": 17,
+              "norm": 2.25
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 17
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 13
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 17
+            },
+            "shabdalankara": {
+              "value": 0.76,
+              "n": 17
+            },
+            "arthalankara": {
+              "value": 0.29,
+              "n": 17
+            },
+            "poetic": {
+              "value": 2.65,
+              "n": 17,
+              "norm": 2.29
+            },
+            "register": {
+              "value": 0.59,
+              "n": 17
+            },
+            "ai_generated": {
+              "value": 1.0,
+              "n": 17
+            }
+          }
+        },
+        {
+          "source": "nandi_ft",
+          "n_annotations": 21,
+          "cells": {
+            "readability": {
+              "value": 3.81,
+              "n": 21,
+              "norm": 3.41
+            },
+            "comprehension": {
+              "value": 3.14,
+              "n": 21,
+              "norm": 2.52
+            },
+            "lexical": {
+              "value": 3.24,
+              "n": 21,
+              "norm": 3.48
+            },
+            "coherence": {
+              "value": 2.62,
+              "n": 21,
+              "norm": 3.16
+            },
+            "bhavam": {
+              "value": 1.81,
+              "n": 21,
+              "norm": 2.08
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 21
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 16
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 21
+            },
+            "shabdalankara": {
+              "value": 0.71,
+              "n": 21
+            },
+            "arthalankara": {
+              "value": 0.43,
+              "n": 21
+            },
+            "poetic": {
+              "value": 2.95,
+              "n": 21,
+              "norm": 2.9
+            },
+            "register": {
+              "value": 0.86,
+              "n": 21
+            },
+            "ai_generated": {
+              "value": 0.95,
+              "n": 21
+            }
+          }
+        },
+        {
+          "source": "t5_1b_ft",
+          "n_annotations": 24,
+          "cells": {
+            "readability": {
+              "value": 3.92,
+              "n": 24,
+              "norm": 3.56
+            },
+            "comprehension": {
+              "value": 3.29,
+              "n": 24,
+              "norm": 2.72
+            },
+            "lexical": {
+              "value": 3.33,
+              "n": 24,
+              "norm": 3.67
+            },
+            "coherence": {
+              "value": 2.96,
+              "n": 24,
+              "norm": 3.61
+            },
+            "bhavam": {
+              "value": 2.33,
+              "n": 24,
+              "norm": 2.78
+            },
+            "chandassu": {
+              "value": 1.0,
+              "n": 24
+            },
+            "prasa": {
+              "value": 1.0,
+              "n": 19
+            },
+            "yati": {
+              "value": 1.0,
+              "n": 24
+            },
+            "shabdalankara": {
+              "value": 0.83,
+              "n": 24
+            },
+            "arthalankara": {
+              "value": 0.5,
+              "n": 24
+            },
+            "poetic": {
+              "value": 3.08,
+              "n": 24,
+              "norm": 3.17
+            },
+            "register": {
+              "value": 0.67,
+              "n": 24
+            },
+            "ai_generated": {
+              "value": 0.92,
+              "n": 24
+            }
+          }
+        }
+      ],
+      "span": {
+        "readability": {
+          "min": 2,
+          "max": 5
+        },
+        "comprehension": {
+          "min": 2,
+          "max": 5
+        },
+        "lexical": {
+          "min": 2,
+          "max": 4
+        },
+        "coherence": {
+          "min": 1,
+          "max": 4
+        },
+        "bhavam": {
+          "min": 1,
+          "max": 4
+        },
+        "poetic": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    }
+  ]
+}

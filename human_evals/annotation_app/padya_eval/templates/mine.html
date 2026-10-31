@@ -7,13 +7,13 @@
     <h1>నా మూల్యాంకనాలు <span class="muted">· My ratings</span></h1>
     <a class="btn btn-primary" href="{{ url_for('main.next_poem') }}">Next poem →</a>
   </div>
-  <p class="small">{{ rows|length }} rated{% if cal_total %} · calibration {{ cal_done }}/{{ cal_total }}{% endif %}. Open a poem to change your answers.</p>
+  <p class="small">{{ rows|length }} rated{% if cal_total %} · calibration {{ cal_done }}/{{ cal_total }}{% endif %}{% if favorites %} · <span class="fav-mark">★</span> {{ favorites|length }} favourite{{ 's' if favorites|length != 1 }}{% endif %}. Open a poem to change your answers.</p>
   {% if rows %}
   <ul class="list">
     {% for r in rows %}
     <li>
       <a href="{{ url_for('main.poem', eval_id=r.poem.id, next=url_for('main.mine')) }}">
-        <span class="list-id">{{ r.poem.id }}</span>
+        <span class="list-id">{{ r.poem.id }}{% if r.poem.id in favorites %} <span class="fav-mark" title="Favourite">★</span>{% endif %}</span>
         <span class="list-main" lang="te">{{ r.poem.meter_te }} · <span class="muted">{{ r.poem.plain_lines[0][:42] }}…</span></span>
         <span class="list-meta small muted">{{ r.a.updated_at.replace('T', ' ')[:16] }}</span>
       </a>
@@ -27,7 +27,7 @@
   <h2>Skipped <span class="muted small">({{ skipped|length }})</span></h2>
   <ul class="list">
     {% for p in skipped %}
-    <li><a href="{{ url_for('main.poem', eval_id=p.id, next=url_for('main.mine')) }}"><span class="list-id">{{ p.id }}</span><span class="list-main" lang="te">{{ p.meter_te }}</span><span class="list-meta small muted">rate anyway</span></a></li>
+    <li><a href="{{ url_for('main.poem', eval_id=p.id, next=url_for('main.mine')) }}"><span class="list-id">{{ p.id }}{% if p.id in favorites %} <span class="fav-mark" title="Favourite">★</span>{% endif %}</span><span class="list-main" lang="te">{{ p.meter_te }}</span><span class="list-meta small muted">rate anyway</span></a></li>
     {% endfor %}
   </ul>
   {% endif %}

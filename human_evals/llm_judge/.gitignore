@@ -1,0 +1,5 @@
+# judge_vs_human.py's reports name the annotators: their copies with codes are ../results/llm_judge/
+# (../publish_results.py)
+results/*_vs_human*
+results/*.log
+results/smoke.jsonl

@@ -21,7 +21,7 @@ from typing import Iterable, Optional, Sequence
 
 from . import agreement as ag
 from . import db
-from .rubric import QUESTIONS, RUBRIC_VERSION, Question
+from .rubric import QUESTIONS, RUBRIC_VERSION, STUDY2_QUESTIONS, STUDY2_RUBRIC_VERSION, Question
 
 MIN_PAIR_OVERLAP = 5
 
@@ -290,13 +290,19 @@ def main(argv=None) -> int:
     from .store import load_store
     here = Path(__file__).resolve().parent.parent
     ap = argparse.ArgumentParser(description="Write the agreement report and the annotations CSV.")
-    ap.add_argument("--db", type=Path, default=here / "instance" / "annotations.db")
-    ap.add_argument("--data", type=Path, default=here / "data")
+    ap.add_argument("--study", choices=("1", "2"), default="1",
+                    help="2: study 2's questions (with Q13 coherence), database and data unless given")
+    ap.add_argument("--db", type=Path, help="default: instance/annotations.db (study 2: annotations_study2.db)")
+    ap.add_argument("--data", type=Path, help="default: data/ (study 2: data_study2/)")
     ap.add_argument("--out", type=Path, default=here / "reports")
     ap.add_argument("--k", type=int, default=None, help="target ratings per poem (summary only; default: all)")
     ap.add_argument("--bootstrap", type=int, default=1000, help="bootstrap resamples for the α CIs (0 = off)")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args(argv)
+    two = args.study == "2"
+    args.db = args.db or here / "instance" / ("annotations_study2.db" if two else "annotations.db")
+    args.data = args.data or here / ("data_study2" if two else "data")
+    questions = STUDY2_QUESTIONS if two else QUESTIONS
     if not args.db.is_file():
         print(f"no database at {args.db}", file=sys.stderr)
         return 1
@@ -310,11 +316,13 @@ def main(argv=None) -> int:
     finally:
         conn.close()
     report = agreement_report(annotations, store, k=args.k, calibration=calibration, skips=skips,
-                              n_boot=args.bootstrap, seed=args.seed)
+                              n_boot=args.bootstrap, seed=args.seed, questions=questions,
+                              rubric_version=STUDY2_RUBRIC_VERSION if two else RUBRIC_VERSION)
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "agreement.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     (args.out / "agreement.md").write_text(to_markdown(report), encoding="utf-8")
-    (args.out / "annotations.csv").write_text(to_csv(export_rows(annotations, store, calibration)), encoding="utf-8")
+    (args.out / "annotations.csv").write_text(
+        to_csv(export_rows(annotations, store, calibration, questions), questions), encoding="utf-8")
     print(f"wrote agreement.json, agreement.md and annotations.csv ({len(annotations)} annotations) to {args.out}")
     return 0
 

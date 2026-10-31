@@ -1,0 +1,800 @@
+{
+ "candidates": [
+  {
+   "prompt_id": "dataset/bhagavatam:10.1-1185-శా.",
+   "source": "bhagavatam",
+   "meter": "sardulavikriditamu",
+   "gold_eval_id": "he_0081",
+   "gold_score": -0.1094454390325521,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.3647466669926053,
+    "t5_1b_ft": 0.14870750086238696,
+    "nandi_ft": 0.13297820341952452
+   },
+   "ai_score": 0.2154774570915056,
+   "z_gold": 0.3451337652560784,
+   "z_ai": -0.31644528944238315,
+   "score": 0.02868847581369527,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:10.1-214-మాని.",
+   "source": "bhagavatam",
+   "meter": "manini",
+   "gold_eval_id": "he_0141",
+   "gold_score": -0.14944543903255206,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.046418755067752164,
+    "t5_1b_ft": 0.07082385130040211,
+    "nandi_ft": 0.2907210180456645
+   },
+   "ai_score": 0.13598787480460628,
+   "z_gold": 0.19507560644908797,
+   "z_ai": -0.7624823082795011,
+   "score": -0.5674067018304132,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:10.1-407-ఉపేం.",
+   "source": "bhagavatam",
+   "meter": "upendravajra",
+   "gold_eval_id": "he_0449",
+   "gold_score": -0.309445439032552,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.07212246901618924,
+    "t5_1b_ft": 0.21377265414599175,
+    "nandi_ft": 0.04962197301749789
+   },
+   "ai_score": 0.11183903205989296,
+   "z_gold": -0.4051570287788743,
+   "z_ai": -0.8979878363792949,
+   "score": -1.3031448651581692,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:10.1-714-మ.",
+   "source": "bhagavatam",
+   "meter": "mattebhavikriditamu",
+   "gold_eval_id": "he_0494",
+   "gold_score": 0.2105545609674479,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.05494990198077713,
+    "t5_1b_ft": 0.41309859898955387,
+    "nandi_ft": 0.7358462107937498
+   },
+   "ai_score": 0.4012982372546936,
+   "z_gold": 1.5455990357120035,
+   "z_ai": 0.7262441352274934,
+   "score": 2.271843170939497,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:10.2-737-లవి.",
+   "source": "bhagavatam",
+   "meter": "layavibhati",
+   "gold_eval_id": "he_0071",
+   "gold_score": -0.5094454390325522,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.08777838369627325,
+    "t5_1b_ft": 0.16746697541450978,
+    "nandi_ft": 0.07294983274781937
+   },
+   "ai_score": 0.1093983972862008,
+   "z_gold": -1.1554478228138283,
+   "z_ai": -0.9116828820344445,
+   "score": -2.0671307048482728,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:10.2-739-లగ్రా.",
+   "source": "bhagavatam",
+   "meter": "layagrahi",
+   "gold_eval_id": "he_0133",
+   "gold_score": -0.7494454390325521,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.1511865989299378,
+    "t5_1b_ft": 0.4381107779328124,
+    "nandi_ft": 0.12921684599609595
+   },
+   "ai_score": 0.2395047409529487,
+   "z_gold": -2.0557967756557716,
+   "z_ai": -0.181621860308858,
+   "score": -2.2374186359646298,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:3-277-చ.",
+   "source": "bhagavatam",
+   "meter": "champakamala",
+   "gold_eval_id": "he_0100",
+   "gold_score": 0.050554560967447947,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.12886693505314645,
+    "t5_1b_ft": 0.7788386146637589,
+    "nandi_ft": 0.36007281513615974
+   },
+   "ai_score": 0.42259278828435504,
+   "z_gold": 0.9453664004840411,
+   "z_ai": 0.8457334794344319,
+   "score": 1.791099879918473,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:3-799-మ.",
+   "source": "bhagavatam",
+   "meter": "mattebhavikriditamu",
+   "gold_eval_id": "he_0072",
+   "gold_score": 0.010554560967447913,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.700019111538331,
+    "t5_1b_ft": 0.6378477210252018,
+    "nandi_ft": 0.7494706093259598
+   },
+   "ai_score": 0.6957791472964975,
+   "z_gold": 0.7953082416770504,
+   "z_ai": 2.378654217663358,
+   "score": 3.1739624593404083,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:6-272-స్రగ్ద.",
+   "source": "bhagavatam",
+   "meter": "sragdhara",
+   "gold_eval_id": "he_0488",
+   "gold_score": -0.3094454390325521,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.0010801146650969437,
+    "t5_1b_ft": 0.29639097202282405,
+    "nandi_ft": 0.05606214777863953
+   },
+   "ai_score": 0.11784441148885351,
+   "z_gold": -0.4051570287788747,
+   "z_ai": -0.864290067936992,
+   "score": -1.2694470967158669,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/bhagavatam:6-399-చ.",
+   "source": "bhagavatam",
+   "meter": "champakamala",
+   "gold_eval_id": "he_0117",
+   "gold_score": -0.14944543903255222,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.10837162915590859,
+    "t5_1b_ft": 0.0692066026169409,
+    "nandi_ft": 0.6294188767865887
+   },
+   "ai_score": 0.2689990361864794,
+   "z_gold": 0.19507560644908736,
+   "z_ai": -0.01612158794380847,
+   "score": 0.1789540185052789,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1196",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "mattakokilamu",
+   "gold_eval_id": "he_0323",
+   "gold_score": -0.4294454390325521,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.09451999012791724,
+    "t5_1b_ft": 0.27320091378743594,
+    "nandi_ft": 0.09946437434399905
+   },
+   "ai_score": 0.15572842608645074,
+   "z_gold": -0.5388830148236902,
+   "z_ai": -1.2012207958267163,
+   "score": -1.7401038106504063,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1197",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "pamcacamaramu",
+   "gold_eval_id": "he_0387",
+   "gold_score": -0.34944543903255204,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.11068333389382942,
+    "t5_1b_ft": 0.3084674032356203,
+    "nandi_ft": 0.23615869409582327
+   },
+   "ai_score": 0.21843647707509098,
+   "z_gold": -0.28831032913796634,
+   "z_ai": -0.7416856286161173,
+   "score": -1.0299959577540836,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1200",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "bhujangaprayatamu",
+   "gold_eval_id": "he_0092",
+   "gold_score": -0.9494454390325523,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.12203317429659322,
+    "t5_1b_ft": 0.08240323394127605,
+    "nandi_ft": 0.2350595791853442
+   },
+   "ai_score": 0.1464986624744045,
+   "z_gold": -2.1676054717808935,
+   "z_ai": -1.2688580592706769,
+   "score": -3.4364635310515705,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1201",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "madhuragati_ragada",
+   "gold_eval_id": "he_0311",
+   "gold_score": -0.22944543903255205,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.7777483846638397,
+    "t5_1b_ft": 0.382648909059247,
+    "nandi_ft": 0.16434954881403935
+   },
+   "ai_score": 0.44158228084570866,
+   "z_gold": 0.08754869939061896,
+   "z_ai": 0.8935644330809105,
+   "score": 0.9811131324715294,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1207",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "madhuragati_ragada",
+   "gold_eval_id": "he_0469",
+   "gold_score": -0.26944543903255214,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.16486696590127006,
+    "t5_1b_ft": 0.7136186153873212,
+    "nandi_ft": 0.29761071999684496
+   },
+   "ai_score": 0.39203210042847875,
+   "z_gold": -0.0377376434522431,
+   "z_ai": 0.5304523592026781,
+   "score": 0.49271471575043496,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-1341",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "utpalamala",
+   "gold_eval_id": "he_0329",
+   "gold_score": -0.06944543903255207,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.23125846398515632,
+    "t5_1b_ft": 0.679875442484969,
+    "nandi_ft": 0.21692184311833293
+   },
+   "ai_score": 0.3760185831961528,
+   "z_gold": 0.588694070762066,
+   "z_ai": 0.413102605814237,
+   "score": 1.0017966765763031,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-266",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "champakamala",
+   "gold_eval_id": "he_0270",
+   "gold_score": -0.02944543903255221,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.831254236920732,
+    "t5_1b_ft": 0.7127235506259865,
+    "nandi_ft": 0.29135637521468694
+   },
+   "ai_score": 0.6117780542538018,
+   "z_gold": 0.7139804136049274,
+   "z_ai": 2.140787747449164,
+   "score": 2.8547681610540914,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-604",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "tetagiti",
+   "gold_eval_id": "he_0259",
+   "gold_score": 0.21055456096744782,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.04074239493890379,
+    "t5_1b_ft": 0.8318078164408981,
+    "nandi_ft": 0.5427105123033649
+   },
+   "ai_score": 0.4717535745610556,
+   "z_gold": 1.465698470662098,
+   "z_ai": 1.1146647588581173,
+   "score": 2.5803632295202155,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-654",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "tetagiti",
+   "gold_eval_id": "he_0357",
+   "gold_score": 0.010554560967447913,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.1709431610626046,
+    "t5_1b_ft": 0.5488279201752585,
+    "nandi_ft": 0.17492230891416108
+   },
+   "ai_score": 0.2982311300506747,
+   "z_gold": 0.8392667564477895,
+   "z_ai": -0.15693696206468527,
+   "score": 0.6823297943831041,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-668",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0347",
+   "gold_score": -0.3894454390325521,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.21814788914888875,
+    "t5_1b_ft": 0.06179016272335125,
+    "nandi_ft": 0.3915910883992798
+   },
+   "ai_score": 0.22384304675717326,
+   "z_gold": -0.4135966719808282,
+   "z_ai": -0.7020653746978204,
+   "score": -1.1156620466786487,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-674",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "champakamala",
+   "gold_eval_id": "he_0093",
+   "gold_score": 0.21055456096744782,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.546545792410855,
+    "t5_1b_ft": 0.40448710370583757,
+    "nandi_ft": 0.26798023607836663
+   },
+   "ai_score": 0.4063377107316864,
+   "z_gold": 1.465698470662098,
+   "z_ai": 0.6352862827434541,
+   "score": 2.100984753405552,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-754",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "totakamu",
+   "gold_eval_id": "he_0302",
+   "gold_score": -0.34076719483029405,
+   "gold_raters": 4,
+   "p_real": {
+    "mdlm523m_ft": 0.12228843153728661,
+    "t5_1b_ft": 0.025327757107714823,
+    "nandi_ft": 0.2700630828741218
+   },
+   "ai_score": 0.13922642383970774,
+   "z_gold": -0.26112869217801205,
+   "z_ai": -1.3221502497359194,
+   "score": -1.5832789419139315,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-863",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "malini",
+   "gold_eval_id": "he_0205",
+   "gold_score": -0.1894454390325521,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.09541744524691306,
+    "t5_1b_ft": 0.44523324674218656,
+    "nandi_ft": 0.1263012763682719
+   },
+   "ai_score": 0.2223173227857905,
+   "z_gold": 0.2128350422334806,
+   "z_ai": -0.713246137123902,
+   "score": -0.5004110948904213,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/kuchimanchi_timmakavi:kuchimanchi-87",
+   "source": "kuchimanchi_timmakavi",
+   "meter": "mattebhavikriditamu",
+   "gold_eval_id": "he_0029",
+   "gold_score": -0.789445439032552,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.4173059720704247,
+    "t5_1b_ft": 0.30777500112009415,
+    "nandi_ft": 0.3887293675839259
+   },
+   "ai_score": 0.3712701135914816,
+   "z_gold": -1.6664601004094461,
+   "z_ai": 0.37830502018727646,
+   "score": -1.2881550802221697,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-1006-ఆ.",
+   "source": "vemana",
+   "meter": "utpalamala",
+   "gold_eval_id": "he_0457",
+   "gold_score": 0.5305545609674478,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.24302779900194427,
+    "t5_1b_ft": 0.1758529968155158,
+    "nandi_ft": 0.4085148315017725
+   },
+   "ai_score": 0.27579854243974417,
+   "z_gold": 0.6784858157486666,
+   "z_ai": -0.157423031415069,
+   "score": 0.5210627843335977,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-1068-ఆ.",
+   "source": "vemana",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0041",
+   "gold_score": 0.17055456096744778,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.1779745635584738,
+    "t5_1b_ft": 0.5616256905934426,
+    "nandi_ft": 0.23778363872500474
+   },
+   "ai_score": 0.3257946309589737,
+   "z_gold": -1.2940089580868535,
+   "z_ai": 0.33370629016466885,
+   "score": -0.9603026679221847,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-1077-ఆ.",
+   "source": "vemana",
+   "meter": "tetagiti",
+   "gold_eval_id": "he_0319",
+   "gold_score": 0.09055456096744789,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.12883377303487184,
+    "t5_1b_ft": 0.2859259628070131,
+    "nandi_ft": 0.5843079508307903
+   },
+   "ai_score": 0.3330225622242251,
+   "z_gold": -1.7323411300503018,
+   "z_ai": 0.4047088242401606,
+   "score": -1.3276323058101411,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-1094-ఆ.",
+   "source": "vemana",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0425",
+   "gold_score": 0.45055456096744767,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.26818021586149177,
+    "t5_1b_ft": 0.5674638157260269,
+    "nandi_ft": 0.5348832116460951
+   },
+   "ai_score": 0.4568424144112046,
+   "z_gold": 0.24015364378521703,
+   "z_ai": 1.6210351770368452,
+   "score": 1.8611888208220622,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-1130-ఆ.",
+   "source": "vemana",
+   "meter": "ataveladi",
+   "gold_eval_id": "he_0144",
+   "gold_score": 0.37055456096744777,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.02560774343110574,
+    "t5_1b_ft": 0.12236096022660566,
+    "nandi_ft": 0.12102173988285228
+   },
+   "ai_score": 0.0896634811801879,
+   "z_gold": -0.19817852817823137,
+   "z_ai": -1.9858937991521923,
+   "score": -2.1840723273304237,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-1145-ఆ.",
+   "source": "vemana",
+   "meter": "tetagiti",
+   "gold_eval_id": "he_0416",
+   "gold_score": 0.5705545609674476,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.0719655539719198,
+    "t5_1b_ft": 0.10858279672344047,
+    "nandi_ft": 0.717824249469324
+   },
+   "ai_score": 0.2994575333882281,
+   "z_gold": 0.8976519017303901,
+   "z_ai": 0.0749876334576626,
+   "score": 0.9726395351880527,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-202-ఆ.",
+   "source": "vemana",
+   "meter": "ataveladi",
+   "gold_eval_id": "he_0045",
+   "gold_score": 0.5305545609674476,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.03367993019714098,
+    "t5_1b_ft": 0.250316196124187,
+    "nandi_ft": 0.07654065480011171
+   },
+   "ai_score": 0.12017892704047989,
+   "z_gold": 0.6784858157486654,
+   "z_ai": -1.6861297442640966,
+   "score": -1.007643928515431,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-22-ఆ.",
+   "source": "vemana",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0199",
+   "gold_score": 0.45055456096744767,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.23899944603168813,
+    "t5_1b_ft": 0.1613013700400711,
+    "nandi_ft": 0.5695626936701251
+   },
+   "ai_score": 0.3232878365806281,
+   "z_gold": 0.24015364378521703,
+   "z_ai": 0.30908115930261654,
+   "score": 0.5492348030878336,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-327-ఆ.",
+   "source": "vemana",
+   "meter": "tetagiti",
+   "gold_eval_id": "he_0107",
+   "gold_score": 0.33055456096744795,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.16425110742613377,
+    "t5_1b_ft": 0.21670942397978074,
+    "nandi_ft": 0.8878425658580948
+   },
+   "ai_score": 0.4229343657546698,
+   "z_gold": -0.4173446141599548,
+   "z_ai": 1.287944380816427,
+   "score": 0.8705997666564722,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-345-ఆ.",
+   "source": "vemana",
+   "meter": "ataveladi",
+   "gold_eval_id": "he_0294",
+   "gold_score": 0.45055456096744784,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.04814810574007026,
+    "t5_1b_ft": 0.093504111789136,
+    "nandi_ft": 0.20353596002898855
+   },
+   "ai_score": 0.1150627258527316,
+   "z_gold": 0.24015364378521795,
+   "z_ai": -1.736388004316537,
+   "score": -1.496234360531319,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-51-ఆ.",
+   "source": "vemana",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0244",
+   "gold_score": 0.5092328051697056,
+   "gold_raters": 4,
+   "p_real": {
+    "mdlm523m_ft": 0.1867254295323008,
+    "t5_1b_ft": 0.2444842830673105,
+    "nandi_ft": 0.39214083456634785
+   },
+   "ai_score": 0.27445018238865304,
+   "z_gold": 0.5616606716374342,
+   "z_ai": -0.17066845074188097,
+   "score": 0.3909922208955532,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-531-ఆ.",
+   "source": "vemana",
+   "meter": "tetagiti",
+   "gold_eval_id": "he_0112",
+   "gold_score": 0.4905545609674477,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.04228256112031881,
+    "t5_1b_ft": 0.3358047373098247,
+    "nandi_ft": 0.5314129546168864
+   },
+   "ai_score": 0.30316675101567664,
+   "z_gold": 0.4593197297669417,
+   "z_ai": 0.11142459464633103,
+   "score": 0.5707443244132727,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-532-ఆ.",
+   "source": "vemana",
+   "meter": "ataveladi",
+   "gold_eval_id": "he_0104",
+   "gold_score": 0.6105545609674476,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.24062230198388854,
+    "t5_1b_ft": 0.5932429196449268,
+    "nandi_ft": 0.2802628215741919
+   },
+   "ai_score": 0.37137601440100243,
+   "z_gold": 1.1168179877121147,
+   "z_ai": 0.781468396953067,
+   "score": 1.8982863846651816,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-558-ఆ.",
+   "source": "vemana",
+   "meter": "ataveladi",
+   "gold_eval_id": "he_0341",
+   "gold_score": 0.6905545609674477,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.04011193672394352,
+    "t5_1b_ft": 0.059064444593084034,
+    "nandi_ft": 0.9531585221406459
+   },
+   "ai_score": 0.3507783011525578,
+   "z_gold": 1.5551501596755641,
+   "z_ai": 0.579129749402435,
+   "score": 2.134279909077999,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-57-ఆ.",
+   "source": "vemana",
+   "meter": "ataveladi",
+   "gold_eval_id": "he_0444",
+   "gold_score": 0.5705545609674476,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.08168477726491619,
+    "t5_1b_ft": 0.3061512901027556,
+    "nandi_ft": 0.2984271766794679
+   },
+   "ai_score": 0.2287544146823799,
+   "z_gold": 0.8976519017303901,
+   "z_ai": -0.6195541947539422,
+   "score": 0.27809770697644787,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-727-ఆ.",
+   "source": "vemana",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0392",
+   "gold_score": 0.30923280516970586,
+   "gold_raters": 4,
+   "p_real": {
+    "mdlm523m_ft": 0.07808009651997212,
+    "t5_1b_ft": 0.33615861184614315,
+    "nandi_ft": 0.3346325265421456
+   },
+   "ai_score": 0.2496237449694203,
+   "z_gold": -0.5341697582711866,
+   "z_ai": -0.4145473566338872,
+   "score": -0.9487171149050738,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-801-ఆ.",
+   "source": "vemana",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0031",
+   "gold_score": 0.30923280516970586,
+   "gold_raters": 4,
+   "p_real": {
+    "mdlm523m_ft": 0.21532538289170838,
+    "t5_1b_ft": 0.09397950091537467,
+    "nandi_ft": 0.7321420254114706
+   },
+   "ai_score": 0.34714896973951787,
+   "z_gold": -0.5341697582711866,
+   "z_ai": 0.5434775388502282,
+   "score": 0.00930778057904158,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-866-ఆ.",
+   "source": "vemana",
+   "meter": "ataveladi",
+   "gold_eval_id": "he_0307",
+   "gold_score": 0.5305545609674478,
+   "gold_raters": 5,
+   "p_real": {
+    "mdlm523m_ft": 0.08579918287274987,
+    "t5_1b_ft": 0.46809225860921766,
+    "nandi_ft": 0.8236041515160288
+   },
+   "ai_score": 0.4591651976659988,
+   "z_gold": 0.6784858157486666,
+   "z_ai": 1.6438527013250717,
+   "score": 2.3223385170737383,
+   "chosen": true
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-903-ఆ.",
+   "source": "vemana",
+   "meter": "kandamu",
+   "gold_eval_id": "he_0239",
+   "gold_score": 0.209232805169706,
+   "gold_raters": 4,
+   "p_real": {
+    "mdlm523m_ft": 0.03759592237610911,
+    "t5_1b_ft": 0.4028148704852523,
+    "nandi_ft": 0.13495551026383623
+   },
+   "ai_score": 0.1917887677083992,
+   "z_gold": -1.0820849732254971,
+   "z_ai": -0.9826808644153993,
+   "score": -2.0647658376408966,
+   "chosen": false
+  },
+  {
+   "prompt_id": "dataset/vemana:vemana-905-ఆ.",
+   "source": "vemana",
+   "meter": "champakamala",
+   "gold_eval_id": "he_0280",
+   "gold_score": -0.04076719483029423,
+   "gold_raters": 4,
+   "p_real": {
+    "mdlm523m_ft": 0.07662833432061185,
+    "t5_1b_ft": 0.2814588211450769,
+    "nandi_ft": 0.5364623209058618
+   },
+   "ai_score": 0.2981831587905168,
+   "z_gold": -2.4518730106112763,
+   "z_ai": 0.06246899949749448,
+   "score": -2.3894040111137818,
+   "chosen": false
+  }
+ ],
+ "excluded": {
+  "gold rated by fewer than 4": 44,
+  "a model poem out of metre, repeating a line, copying or empty": 2
+ }
+}

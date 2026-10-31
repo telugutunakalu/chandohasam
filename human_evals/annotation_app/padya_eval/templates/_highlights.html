@@ -1,0 +1,17 @@
+{#- The annotator's highlighted passages beside the 🖍 button, each with a ✕ to remove it (app.js swaps this in after a change). -#}
+<div class="hl-list" id="hl-list">
+  {%- if highlights %}
+  <ul aria-label="My highlights ({{ highlights|length }})">
+    {%- for h in highlights %}
+    <li class="hl-item"><mark class="hl" lang="te">{{ h.text|replace('\n', ' / ') }}</mark>
+      <form method="post" action="{{ url_for('main.delete_highlight', eval_id=poem.id, highlight_id=h.id) }}" class="inline" data-hl-form>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        {%- if next_url %}<input type="hidden" name="next" value="{{ next_url }}">{% endif %}
+        <button type="submit" class="hl-del" title="ఈ గుర్తు తీసివేయి · Remove this highlight" aria-label="Remove highlight: {{ h.text }}">✕</button>
+      </form></li>
+    {%- endfor %}
+  </ul>
+  {%- else %}
+  <p class="hl-hint">పద్యంలో పదాలను ఎంచుకుని నొక్కండి · Select words in the poem, then press</p>
+  {%- endif %}
+</div>

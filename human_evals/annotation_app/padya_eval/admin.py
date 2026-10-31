@@ -104,3 +104,15 @@ def annotations_json():
     rows = export_rows(db.all_annotations(get_db()), _store(), current_app.config["CALIBRATION_IDS"], _questions())
     return Response(json.dumps(rows, ensure_ascii=False, indent=1), mimetype="application/json",
                     headers={"Content-Disposition": "attachment; filename=annotations.json"})
+
+
+@bp.route("/highlights.json")
+@admin_required
+def highlights_json():
+    """Every annotator's highlighted passages and favourite poems."""
+    conn = get_db()
+    rows = {"highlights": [{k: h[k] for k in ("eval_id", "username", "start_line", "start_char", "end_line",
+                                              "end_char", "text", "created_at")} for h in db.all_highlights(conn)],
+            "favorites": db.all_favorites(conn)}
+    return Response(json.dumps(rows, ensure_ascii=False, indent=1), mimetype="application/json",
+                    headers={"Content-Disposition": "attachment; filename=highlights.json"})

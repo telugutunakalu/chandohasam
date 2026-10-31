@@ -122,6 +122,88 @@
     showTip("ఆంధ్రభారతిలో · Looking up: " + word);
   });
 
+  // ---------- highlight a passage of the poem (the button's data-hl-add) and the ☆ favourite ----------
+  // A highlight is sent as line and character offsets in the text of each .poem-line (padya_eval/highlights.py);
+  // the server re-renders the poem with its <mark>s and the list under it. As above, the last selection made in the
+  // poem is remembered for phones.
+  var lastRange = null;
+  function poemText() { return document.getElementById("poem-text"); }
+  function cpLength(s) { return Array.from(s).length; }     // code points, as Python counts them
+  function lineOffset(line, node, offset) {
+    var r = document.createRange();
+    r.selectNodeContents(line);
+    r.setEnd(node, offset);
+    return cpLength(r.toString());
+  }
+  function selectedSpan(range) {
+    var poem = poemText();
+    if (!poem || !range) return null;
+    var first = null, last = null;
+    Array.prototype.forEach.call(poem.querySelectorAll(".poem-line"), function (line, i) {
+      if (!range.intersectsNode(line)) return;
+      var s = line.contains(range.startContainer) ? lineOffset(line, range.startContainer, range.startOffset) : 0;
+      var e = line.contains(range.endContainer) ? lineOffset(line, range.endContainer, range.endOffset) : cpLength(line.textContent);
+      if (s >= e) return;
+      if (!first) first = [i, s];
+      last = [i, e];
+    });
+    return first && { start_line: first[0], start_char: first[1], end_line: last[0], end_char: last[1] };
+  }
+  document.addEventListener("selectionchange", function () {
+    var sel = window.getSelection && window.getSelection();
+    if (sel && sel.rangeCount && !sel.isCollapsed && selectedSpan(sel.getRangeAt(0))) lastRange = sel.getRangeAt(0).cloneRange();
+  });
+  function postJSON(url, data) {
+    return fetch(url, { method: "POST", body: data, credentials: "same-origin", headers: { Accept: "application/json" } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+  function replaceHTML(el, html) {
+    var t = document.createElement("template");
+    t.innerHTML = html.trim();
+    if (el) el.replaceWith(t.content);
+  }
+  function showHighlights(res) {
+    replaceHTML(poemText(), res.poem_html);
+    replaceHTML(document.getElementById("hl-list"), res.list_html);
+    lastRange = null;                                        // its nodes are gone
+  }
+  document.addEventListener("click", function (ev) {
+    var btn = ev.target.closest("[data-hl-add]");
+    if (!btn) return;
+    var sel = window.getSelection && window.getSelection();
+    var span = (sel && sel.rangeCount && !sel.isCollapsed && selectedSpan(sel.getRangeAt(0))) || selectedSpan(lastRange);
+    if (!span) { showTip("ముందు పద్యంలో కొంత భాగాన్ని ఎంచుకోండి · Select part of the poem first"); return; }
+    var data = new FormData();
+    data.append("csrf_token", btn.dataset.csrf);
+    if (btn.dataset.next) data.append("next", btn.dataset.next);
+    Object.keys(span).forEach(function (k) { data.append(k, span[k]); });
+    btn.disabled = true;
+    postJSON(btn.dataset.hlAdd, data).then(function (res) {
+      showHighlights(res);
+      if (sel) sel.removeAllRanges();
+      showTip("గుర్తు దాచబడింది · Highlight saved");
+    }, function () {
+      showTip("గుర్తు దాచలేకపోయాం: పేజీని రీలోడ్ చేసి మళ్ళీ ప్రయత్నించండి · Could not save the highlight: reload the page and try again");
+    }).then(function () { btn.disabled = false; });
+  });
+  document.addEventListener("submit", function (ev) {
+    var f = ev.target;
+    if (f.matches("[data-hl-form]")) {
+      ev.preventDefault();
+      postJSON(f.action, new FormData(f)).then(showHighlights, function () {
+        showTip("తీసివేయలేకపోయాం: పేజీని రీలోడ్ చేయండి · Could not remove it: reload the page");
+      });
+    } else if (f.matches("[data-fav-form]")) {
+      ev.preventDefault();
+      var on = f.elements.on;
+      postJSON(f.action, new FormData(f)).then(function (res) {
+        f.querySelector(".fav-btn").setAttribute("aria-pressed", res.favorite ? "true" : "false");
+        on.value = res.favorite ? "0" : "1";
+        showTip(res.favorite ? "★ నచ్చిన పద్యాల్లో చేర్చాం · Added to your favourites" : "☆ తీసివేశాం · Removed from your favourites");
+      }, function () { showTip("మార్చలేకపోయాం: పేజీని రీలోడ్ చేయండి · Could not change it: reload the page"); });
+    }
+  });
+
   // ---------- remember whether the gaṇa panel is open ----------
   var gana = document.getElementById("gana-details");
   if (gana) {

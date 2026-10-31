@@ -1,0 +1,772 @@
+{
+ "judge_file": "gemma4-26b_study1.jsonl",
+ "model": "gemma4-26b",
+ "poems": 148,
+ "raters": [
+  "A5",
+  "A3",
+  "A1"
+ ],
+ "invalid": 0,
+ "likert": {
+  "readability": {
+   "poems_2plus": 100,
+   "judge_rho": 0.671,
+   "human_rho_median": 0.555,
+   "human_rho_range": [
+    0.461,
+    0.614
+   ],
+   "human_rho_by_annotator": {
+    "1": 0.555,
+    "4": 0.614,
+    "12": 0.461
+   },
+   "passes": true,
+   "alpha_humans": 0.333,
+   "alpha_with_judge": 0.367,
+   "judge_counts": {
+    "1": 0,
+    "2": 8,
+    "3": 19,
+    "4": 93,
+    "5": 28
+   },
+   "human_counts": {
+    "1": 0,
+    "2": 5,
+    "3": 59,
+    "4": 104,
+    "5": 142
+   }
+  },
+  "comprehension": {
+   "poems_2plus": 100,
+   "judge_rho": 0.673,
+   "human_rho_median": 0.58,
+   "human_rho_range": [
+    0.514,
+    0.61
+   ],
+   "human_rho_by_annotator": {
+    "1": 0.61,
+    "4": 0.58,
+    "12": 0.514
+   },
+   "passes": true,
+   "alpha_humans": 0.485,
+   "alpha_with_judge": 0.468,
+   "judge_counts": {
+    "1": 1,
+    "2": 30,
+    "3": 73,
+    "4": 42,
+    "5": 2
+   },
+   "human_counts": {
+    "1": 2,
+    "2": 49,
+    "3": 115,
+    "4": 80,
+    "5": 64
+   }
+  },
+  "lexical": {
+   "poems_2plus": 100,
+   "judge_rho": 0.771,
+   "human_rho_median": 0.642,
+   "human_rho_range": [
+    0.437,
+    0.65
+   ],
+   "human_rho_by_annotator": {
+    "1": 0.642,
+    "4": 0.65,
+    "12": 0.437
+   },
+   "passes": true,
+   "alpha_humans": 0.442,
+   "alpha_with_judge": 0.491,
+   "judge_counts": {
+    "1": 1,
+    "2": 0,
+    "3": 24,
+    "4": 82,
+    "5": 41
+   },
+   "human_counts": {
+    "1": 1,
+    "2": 15,
+    "3": 70,
+    "4": 116,
+    "5": 108
+   }
+  },
+  "bhavam": {
+   "poems_2plus": 100,
+   "judge_rho": 0.208,
+   "human_rho_median": 0.499,
+   "human_rho_range": [
+    0.453,
+    0.607
+   ],
+   "human_rho_by_annotator": {
+    "1": 0.453,
+    "4": 0.499,
+    "12": 0.607
+   },
+   "passes": false,
+   "alpha_humans": 0.432,
+   "alpha_with_judge": 0.207,
+   "judge_counts": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 8,
+    "5": 139
+   },
+   "human_counts": {
+    "1": 4,
+    "2": 15,
+    "3": 33,
+    "4": 72,
+    "5": 186
+   }
+  },
+  "poetic": {
+   "poems_2plus": 100,
+   "judge_rho": 0.474,
+   "human_rho_median": 0.464,
+   "human_rho_range": [
+    0.391,
+    0.61
+   ],
+   "human_rho_by_annotator": {
+    "1": 0.391,
+    "4": 0.61,
+    "12": 0.464
+   },
+   "passes": true,
+   "alpha_humans": 0.342,
+   "alpha_with_judge": 0.302,
+   "judge_counts": {
+    "1": 2,
+    "2": 3,
+    "3": 20,
+    "4": 106,
+    "5": 17
+   },
+   "human_counts": {
+    "1": 3,
+    "2": 30,
+    "3": 90,
+    "4": 107,
+    "5": 80
+   }
+  }
+ },
+ "binary": {
+  "chandassu": {
+   "poems": 116,
+   "agreement_with_majority": 0.966,
+   "kappa": 0.0,
+   "human_pairwise_agreement": 1,
+   "yes_human": 1,
+   "yes_judge": 0.966
+  },
+  "prasa": {
+   "poems": 88,
+   "agreement_with_majority": 1.0,
+   "kappa": null,
+   "human_pairwise_agreement": 1,
+   "yes_human": 1,
+   "yes_judge": 0.964
+  },
+  "yati": {
+   "poems": 116,
+   "agreement_with_majority": 1.0,
+   "kappa": null,
+   "human_pairwise_agreement": 0.993,
+   "yes_human": 0.997,
+   "yes_judge": 1
+  },
+  "shabdalankara": {
+   "poems": 115,
+   "agreement_with_majority": 0.417,
+   "kappa": 0.046,
+   "human_pairwise_agreement": 0.503,
+   "yes_human": 0.448,
+   "yes_judge": 0.932
+  },
+  "arthalankara": {
+   "poems": 113,
+   "agreement_with_majority": 0.646,
+   "kappa": 0.282,
+   "human_pairwise_agreement": 0.517,
+   "yes_human": 0.477,
+   "yes_judge": 0.662
+  },
+  "register": {
+   "poems": 103,
+   "agreement_with_majority": 0.854,
+   "kappa": 0.389,
+   "human_pairwise_agreement": 0.767,
+   "yes_human": 0.782,
+   "yes_judge": 0.959
+  },
+  "ai_generated": {
+   "poems": 104,
+   "agreement_with_majority": 0.904,
+   "kappa": 0.68,
+   "human_pairwise_agreement": 0.882,
+   "yes_human": 0.144,
+   "yes_judge": 0.189
+  }
+ },
+ "by_source": {
+  "bhagavatam": {
+   "poems": 53,
+   "readability": {
+    "human": 3.853,
+    "judge": 3.755
+   },
+   "comprehension": {
+    "human": 3.107,
+    "judge": 2.925
+   },
+   "lexical": {
+    "human": 3.787,
+    "judge": 3.868
+   },
+   "bhavam": {
+    "human": 4.547,
+    "judge": 4.943
+   },
+   "poetic": {
+    "human": 4.053,
+    "judge": 3.943
+   },
+   "ai_generated": {
+    "human": 0.016,
+    "judge": 0.075
+   }
+  },
+  "generated": {
+   "poems": 23,
+   "readability": {
+    "human": 4.77,
+    "judge": 4.522
+   },
+   "comprehension": {
+    "human": 4.098,
+    "judge": 3.826
+   },
+   "lexical": {
+    "human": 4.525,
+    "judge": 4.783
+   },
+   "bhavam": {
+    "human": 3.066,
+    "judge": 4.957
+   },
+   "poetic": {
+    "human": 3,
+    "judge": 3.696
+   },
+   "ai_generated": {
+    "human": 0.623,
+    "judge": 0.913
+   }
+  },
+  "kuchimanchi": {
+   "poems": 26,
+   "readability": {
+    "human": 3.914,
+    "judge": 3.769
+   },
+   "comprehension": {
+    "human": 2.983,
+    "judge": 2.923
+   },
+   "lexical": {
+    "human": 3.5,
+    "judge": 3.885
+   },
+   "bhavam": {
+    "human": 4.638,
+    "judge": 4.923
+   },
+   "poetic": {
+    "human": 3.966,
+    "judge": 4.038
+   },
+   "ai_generated": {
+    "human": 0,
+    "judge": 0.038
+   }
+  },
+  "reference": {
+   "poems": 24,
+   "readability": {
+    "human": 3.932,
+    "judge": 3.583
+   },
+   "comprehension": {
+    "human": 3.102,
+    "judge": 2.417
+   },
+   "lexical": {
+    "human": 3.559,
+    "judge": 3.583
+   },
+   "bhavam": {
+    "human": 4.661,
+    "judge": 4.75
+   },
+   "poetic": {
+    "human": 3.712,
+    "judge": 3.542
+   },
+   "ai_generated": {
+    "human": 0.068,
+    "judge": 0.083
+   }
+  },
+  "vemana": {
+   "poems": 22,
+   "readability": {
+    "human": 4.807,
+    "judge": 4.455
+   },
+   "comprehension": {
+    "human": 4.316,
+    "judge": 3.682
+   },
+   "lexical": {
+    "human": 4.772,
+    "judge": 4.727
+   },
+   "bhavam": {
+    "human": 4.895,
+    "judge": 5
+   },
+   "poetic": {
+    "human": 3.947,
+    "judge": 4.227
+   },
+   "ai_generated": {
+    "human": 0,
+    "judge": 0
+   }
+  }
+ },
+ "gemini_minus_poets": {
+  "readability": {
+   "human_centred": 0.566,
+   "judge": 0.503
+  },
+  "comprehension": {
+   "human_centred": 0.674,
+   "judge": 0.663
+  },
+  "lexical": {
+   "human_centred": 0.503,
+   "judge": 0.629
+  },
+  "bhavam": {
+   "human_centred": -1.569,
+   "judge": -0.008
+  },
+  "poetic": {
+   "human_centred": -0.999,
+   "judge": -0.413
+  }
+ },
+ "study2": {
+  "mdlm523m_ft": {
+   "pairs": 33,
+   "readability": {
+    "model": 3.515,
+    "gold": 4.03
+   },
+   "comprehension": {
+    "model": 2.636,
+    "gold": 3.121
+   },
+   "lexical": {
+    "model": 3.727,
+    "gold": 4.152
+   },
+   "bhavam": {
+    "model": 4.394,
+    "gold": 5
+   },
+   "poetic": {
+    "model": 3.182,
+    "gold": 4.273
+   },
+   "ai_flag": {
+    "model": 0.333,
+    "gold": 0
+   }
+  },
+  "nandi_ft": {
+   "pairs": 33,
+   "readability": {
+    "model": 3.515,
+    "gold": 4.03
+   },
+   "comprehension": {
+    "model": 2.667,
+    "gold": 3.121
+   },
+   "lexical": {
+    "model": 3.667,
+    "gold": 4.152
+   },
+   "bhavam": {
+    "model": 4.758,
+    "gold": 5
+   },
+   "poetic": {
+    "model": 3.697,
+    "gold": 4.273
+   },
+   "ai_flag": {
+    "model": 0.091,
+    "gold": 0
+   }
+  },
+  "t5_1b_ft": {
+   "pairs": 33,
+   "readability": {
+    "model": 3.364,
+    "gold": 4.03
+   },
+   "comprehension": {
+    "model": 2.606,
+    "gold": 3.121
+   },
+   "lexical": {
+    "model": 3.697,
+    "gold": 4.152
+   },
+   "bhavam": {
+    "model": 4.606,
+    "gold": 5
+   },
+   "poetic": {
+    "model": 3.455,
+    "gold": 4.273
+   },
+   "ai_flag": {
+    "model": 0.273,
+    "gold": 0
+   }
+  }
+ },
+ "study2_humans": {
+  "poems_rated": 69,
+  "likert": {
+   "readability": {
+    "poems_2plus": 52,
+    "judge_rho": 0.464,
+    "human_rho_median": 0.406,
+    "human_rho_range": [
+     0.328,
+     0.653
+    ],
+    "human_rho_by_annotator": {
+     "1": 0.406,
+     "2": 0.328,
+     "3": 0.653
+    },
+    "passes": true,
+    "alpha_humans": 0.211,
+    "alpha_with_judge": 0.254,
+    "judge_counts": {
+     "1": 1,
+     "2": 17,
+     "3": 20,
+     "4": 57,
+     "5": 4
+    },
+    "human_counts": {
+     "1": 9,
+     "2": 20,
+     "3": 53,
+     "4": 33,
+     "5": 25
+    }
+   },
+   "comprehension": {
+    "poems_2plus": 52,
+    "judge_rho": 0.396,
+    "human_rho_median": 0.336,
+    "human_rho_range": [
+     0.321,
+     0.592
+    ],
+    "human_rho_by_annotator": {
+     "1": 0.321,
+     "2": 0.336,
+     "3": 0.592
+    },
+    "passes": true,
+    "alpha_humans": 0.034,
+    "alpha_with_judge": 0.057,
+    "judge_counts": {
+     "1": 3,
+     "2": 38,
+     "3": 50,
+     "4": 8,
+     "5": 0
+    },
+    "human_counts": {
+     "1": 40,
+     "2": 67,
+     "3": 29,
+     "4": 4,
+     "5": 0
+    }
+   },
+   "lexical": {
+    "poems_2plus": 52,
+    "judge_rho": 0.543,
+    "human_rho_median": 0.593,
+    "human_rho_range": [
+     0.58,
+     0.594
+    ],
+    "human_rho_by_annotator": {
+     "1": 0.594,
+     "2": 0.593,
+     "3": 0.58
+    },
+    "passes": false,
+    "alpha_humans": 0.368,
+    "alpha_with_judge": 0.244,
+    "judge_counts": {
+     "1": 0,
+     "2": 3,
+     "3": 32,
+     "4": 56,
+     "5": 8
+    },
+    "human_counts": {
+     "1": 8,
+     "2": 37,
+     "3": 53,
+     "4": 32,
+     "5": 10
+    }
+   },
+   "bhavam": {
+    "poems_2plus": 52,
+    "judge_rho": 0.141,
+    "human_rho_median": 0.539,
+    "human_rho_range": [
+     0.448,
+     0.545
+    ],
+    "human_rho_by_annotator": {
+     "1": 0.448,
+     "2": 0.545,
+     "3": 0.539
+    },
+    "passes": false,
+    "alpha_humans": 0.305,
+    "alpha_with_judge": -0.186,
+    "judge_counts": {
+     "1": 2,
+     "2": 3,
+     "3": 3,
+     "4": 18,
+     "5": 73
+    },
+    "human_counts": {
+     "1": 58,
+     "2": 57,
+     "3": 23,
+     "4": 2,
+     "5": 0
+    }
+   },
+   "poetic": {
+    "poems_2plus": 52,
+    "judge_rho": 0.149,
+    "human_rho_median": 0.405,
+    "human_rho_range": [
+     0.372,
+     0.419
+    ],
+    "human_rho_by_annotator": {
+     "1": 0.372,
+     "2": 0.419,
+     "3": 0.405
+    },
+    "passes": false,
+    "alpha_humans": 0.069,
+    "alpha_with_judge": -0.248,
+    "judge_counts": {
+     "1": 5,
+     "2": 8,
+     "3": 27,
+     "4": 56,
+     "5": 3
+    },
+    "human_counts": {
+     "1": 79,
+     "2": 39,
+     "3": 15,
+     "4": 7,
+     "5": 0
+    }
+   }
+  },
+  "binary": {
+   "chandassu": {
+    "poems": 68,
+    "agreement_with_majority": 0.912,
+    "kappa": 0.0,
+    "human_pairwise_agreement": 0.989,
+    "yes_human": 0.993,
+    "yes_judge": 0.889
+   },
+   "prasa": {
+    "poems": 52,
+    "agreement_with_majority": 0.942,
+    "kappa": 0.0,
+    "human_pairwise_agreement": 1,
+    "yes_human": 1,
+    "yes_judge": 0.944
+   },
+   "yati": {
+    "poems": 68,
+    "agreement_with_majority": 0.956,
+    "kappa": 0.0,
+    "human_pairwise_agreement": 0.989,
+    "yes_human": 0.993,
+    "yes_judge": 0.939
+   },
+   "shabdalankara": {
+    "poems": 64,
+    "agreement_with_majority": 0.125,
+    "kappa": -0.064,
+    "human_pairwise_agreement": 0.567,
+    "yes_human": 0.179,
+    "yes_judge": 0.808
+   },
+   "arthalankara": {
+    "poems": 66,
+    "agreement_with_majority": 0.47,
+    "kappa": 0.025,
+    "human_pairwise_agreement": 0.789,
+    "yes_human": 0.093,
+    "yes_judge": 0.576
+   },
+   "register": {
+    "poems": 69,
+    "agreement_with_majority": 1.0,
+    "kappa": null,
+    "human_pairwise_agreement": 0.978,
+    "yes_human": 0.993,
+    "yes_judge": 1
+   },
+   "ai_generated": {
+    "poems": 68,
+    "agreement_with_majority": 0.25,
+    "kappa": 0.017,
+    "human_pairwise_agreement": 0.944,
+    "yes_human": 0.964,
+    "yes_judge": 0.232
+   }
+  },
+  "by_model": {
+   "mdlm523m_ft": {
+    "poems": 33,
+    "rated": 18,
+    "readability": {
+     "human": 3.333,
+     "judge": 3.515
+    },
+    "comprehension": {
+     "human": 2.028,
+     "judge": 2.636
+    },
+    "lexical": {
+     "human": 3.056,
+     "judge": 3.727
+    },
+    "bhavam": {
+     "human": 1.75,
+     "judge": 4.394
+    },
+    "poetic": {
+     "human": 1.583,
+     "judge": 3.182
+    },
+    "ai_generated": {
+     "human": 0.972,
+     "judge": 0.333
+    }
+   },
+   "nandi_ft": {
+    "poems": 33,
+    "rated": 25,
+    "readability": {
+     "human": 3.34,
+     "judge": 3.515
+    },
+    "comprehension": {
+     "human": 1.88,
+     "judge": 2.667
+    },
+    "lexical": {
+     "human": 2.9,
+     "judge": 3.667
+    },
+    "bhavam": {
+     "human": 1.52,
+     "judge": 4.758
+    },
+    "poetic": {
+     "human": 1.54,
+     "judge": 3.697
+    },
+    "ai_generated": {
+     "human": 0.96,
+     "judge": 0.091
+    }
+   },
+   "t5_1b_ft": {
+    "poems": 33,
+    "rated": 26,
+    "readability": {
+     "human": 3.296,
+     "judge": 3.364
+    },
+    "comprehension": {
+     "human": 2.037,
+     "judge": 2.606
+    },
+    "lexical": {
+     "human": 3.037,
+     "judge": 3.697
+    },
+    "bhavam": {
+     "human": 2.037,
+     "judge": 4.606
+    },
+    "poetic": {
+     "human": 1.778,
+     "judge": 3.455
+    },
+    "ai_generated": {
+     "human": 0.963,
+     "judge": 0.273
+    }
+   }
+  }
+ }
+}

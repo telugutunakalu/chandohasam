@@ -1,10 +1,14 @@
-{#- The poem as printed, and beside each line its prāsa akshara and yati seats (below the line on phones). -#}
-<div class="poem" lang="te">
-  {%- for line in poem.lines %}
+{#- The poem as printed, and beside each line its prāsa akshara and yati seats (below the line on phones).
+    marked_lines (views._highlight_context) cuts each token's text into parts; the annotator's highlights are <mark>s. -#}
+{%- macro tok(t) -%}
+  {%- for text, hl in t.parts or [(t.t, false)] -%}{%- if hl -%}<mark class="hl">{{ text }}</mark>{%- else -%}{{ text }}{%- endif -%}{%- endfor -%}
+{%- endmacro -%}
+<div class="poem" id="poem-text" lang="te">
+  {%- for line in marked_lines or poem.lines %}
   {%- set n = poem.raw.notes[loop.index0] %}
   <p class="poem-line">
     {%- for t in line -%}
-      {%- if t.s -%}{{ t.t }}{%- elif t.c -%}<span class="ak mk-{{ t.c|join(' mk-') }}">{{ t.t }}</span>{%- else -%}{{ t.t }}{%- endif -%}
+      {%- if t.s -%}{{ tok(t) }}{%- elif t.c -%}<span class="ak mk-{{ t.c|join(' mk-') }}">{{ tok(t) }}</span>{%- else -%}{{ tok(t) }}{%- endif -%}
     {%- endfor -%}
   </p>
   <div class="line-note">

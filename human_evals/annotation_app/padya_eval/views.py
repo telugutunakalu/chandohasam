@@ -7,7 +7,7 @@ import time
 from flask import (Blueprint, abort, current_app, flash, jsonify, redirect, render_template, request, session,
                    url_for)
 
-from . import assignment, db
+from . import assignment, db, highlights
 from .rubric import COMMENTS_MAX, QUESTIONS, RUBRIC_VERSION, applicable, parse_answers
 from .security import (USERNAME_RE, check_csrf, csrf_token, current_annotator, get_db, login_required,
                        normalise_username, safe_next, same_secret)
@@ -136,7 +136,8 @@ def mine():
     skipped = [store().get(e) for e in sorted(db.skipped_ids(conn, ann["id"])) if e in store()]
     cal = calibration()
     cal_done = sum(1 for r in rows if r["poem"].id in set(cal))
-    return render_template("mine.html", rows=rows, skipped=skipped, cal_done=cal_done, cal_total=len(cal))
+    return render_template("mine.html", rows=rows, skipped=skipped, cal_done=cal_done, cal_total=len(cal),
+                           favorites=db.favorite_ids(conn, ann["id"]))
 
 
 # -----------------------------------------------------------------------------
@@ -209,6 +210,7 @@ def poem(eval_id: str):
         existing=existing, started=time.time(), is_calibration=eval_id in set(calibration()),
         next_url=safe_next(request.values.get("next"), ""), meter_cards=store().meter_cards(p),
         backfill=missing if current_app.config.get("BACKFILL_NOTE") else [], bhavam_first=_before_bhavam(qs),
+        favorite=eval_id in db.favorite_ids(conn, ann["id"]), **_highlight_context(conn, ann, p),
     ), (422 if errors else 200)
 
 
@@ -220,6 +222,67 @@ def skip(eval_id: str):
     db.skip(get_db(), current_annotator()["id"], eval_id)
     flash(f"Skipped {eval_id}.", "info")
     return redirect(url_for("main.next_poem"))
+
+
+# -----------------------------------------------------------------------------
+# highlights and favourites: app.js posts these with fetch and asks for JSON; a plain form post comes back to the poem
+# -----------------------------------------------------------------------------
+def _highlight_context(conn, ann, p) -> dict:
+    rows = db.highlights_of(conn, ann["id"], p.id)
+    spans = [tuple(h[k] for k in highlights.SPAN_FIELDS) for h in rows]
+    return {"highlights": rows, "marked_lines": highlights.marked_lines(p.lines, spans)}
+
+
+def _wants_json() -> bool:
+    return request.accept_mimetypes.best == "application/json"
+
+
+def _back_to_poem(eval_id: str):
+    return redirect(url_for("main.poem", eval_id=eval_id, next=safe_next(request.form.get("next"), "") or None))
+
+
+def _highlights_changed(p):
+    if not _wants_json():
+        return _back_to_poem(p.id)
+    ctx = {"poem": p, "next_url": safe_next(request.form.get("next"), ""),
+           **_highlight_context(get_db(), current_annotator(), p)}
+    return jsonify(poem_html=render_template("_poem_text.html", **ctx),
+                   list_html=render_template("_highlights.html", **ctx), count=len(ctx["highlights"]))
+
+
+@bp.route("/poem/<eval_id>/highlights", methods=["POST"])
+@login_required
+def add_highlight(eval_id: str):
+    p = store().get(eval_id)
+    if p is None:
+        abort(404)
+    try:
+        span = highlights.clean_span(p.plain_lines, *(int(request.form[k]) for k in highlights.SPAN_FIELDS))
+    except (KeyError, ValueError):
+        span = None
+    if span is None:
+        abort(400, description="Select some of the poem's text, then press Highlight.")
+    db.add_highlight(get_db(), current_annotator()["id"], eval_id, span, highlights.span_text(p.plain_lines, span))
+    return _highlights_changed(p)
+
+
+@bp.route("/poem/<eval_id>/highlights/<int:highlight_id>/delete", methods=["POST"])
+@login_required
+def delete_highlight(eval_id: str, highlight_id: int):
+    p = store().get(eval_id)
+    if p is None or not db.delete_highlight(get_db(), current_annotator()["id"], eval_id, highlight_id):
+        abort(404)
+    return _highlights_changed(p)
+
+
+@bp.route("/poem/<eval_id>/favorite", methods=["POST"])
+@login_required
+def favorite(eval_id: str):
+    if eval_id not in store():
+        abort(404)
+    on = request.form.get("on") == "1"
+    db.set_favorite(get_db(), current_annotator()["id"], eval_id, on)
+    return jsonify(favorite=on) if _wants_json() else _back_to_poem(eval_id)
 
 
 # -----------------------------------------------------------------------------

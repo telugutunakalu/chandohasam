@@ -76,6 +76,7 @@
     <div class="actions">
       <a class="btn btn-ghost" href="{{ url_for('admin.annotations_csv') }}">annotations.csv</a>
       <a class="btn btn-ghost" href="{{ url_for('admin.annotations_json') }}">annotations.json</a>
+      <a class="btn btn-ghost" href="{{ url_for('admin.highlights_json') }}" title="every annotator's highlighted passages and favourite poems">highlights.json</a>
       <a class="btn btn-ghost" href="{{ url_for('admin.agreement_json', bootstrap=n_boot or None) }}">agreement.json</a>
       <a class="btn btn-ghost" href="{{ url_for('admin.agreement_md', bootstrap=n_boot or None) }}">agreement.md</a>
     </div>

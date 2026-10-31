@@ -1,0 +1,26 @@
+# The annotation app under gunicorn on 127.0.0.1:8000 (systemd user service). Only padya-eval-ngrok
+# exposes it; nothing else on the network can reach the port.
+#
+# Secrets and proxy settings come from instance/hosting.env (gitignored): HE_SECRET_KEY, HE_ACCESS_CODE,
+# HE_ADMIN_PASSWORD, HE_BEHIND_PROXY=1, HE_SECURE_COOKIES=1. Ratings: instance/annotations.db.
+#
+# Install:   cp deploy/padya-eval*.service ~/.config/systemd/user/
+#            systemctl --user daemon-reload && systemctl --user enable --now padya-eval padya-eval-ngrok
+# Status:    systemctl --user status padya-eval   (log: instance/gunicorn.log)
+
+[Unit]
+Description=Padya-eval annotation app (gunicorn, localhost:8000)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/samvaran/phd_workspace/chandohasam/human_evals/annotation_app
+EnvironmentFile=/home/samvaran/phd_workspace/chandohasam/human_evals/annotation_app/instance/hosting.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/samvaran/phd_workspace/chandohasam/human_evals/annotation_app/.venv/bin/gunicorn -w 2 -b 127.0.0.1:8000 --access-logfile - wsgi:app
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/samvaran/phd_workspace/chandohasam/human_evals/annotation_app/instance/gunicorn.log
+StandardError=append:/home/samvaran/phd_workspace/chandohasam/human_evals/annotation_app/instance/gunicorn.log
+
+[Install]
+WantedBy=default.target

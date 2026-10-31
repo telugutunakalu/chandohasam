@@ -9,7 +9,16 @@
       <header class="poem-head">
         <div>
           <p class="eyebrow">{{ poem.id }}{% if is_calibration %} <span class="badge" title="Every annotator rates this poem">calibration</span>{% endif %}{% if existing %} <span class="badge badge-ok">rated</span>{% endif %}</p>
-          <h1 class="meter-name">{{ poem.meter_te }}</h1>
+          <div class="title-row">
+            <h1 class="meter-name">{{ poem.meter_te }}</h1>
+            <form method="post" action="{{ url_for('main.favorite', eval_id=poem.id) }}" class="inline" data-fav-form>
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <input type="hidden" name="on" value="{{ 0 if favorite else 1 }}">
+              {% if next_url %}<input type="hidden" name="next" value="{{ next_url }}">{% endif %}
+              <button type="submit" class="icon-btn fav-btn" aria-pressed="{{ 'true' if favorite else 'false' }}"
+                      title="నచ్చిన పద్యంగా గుర్తించు · Mark as a favourite (only you see it)"><span class="fav-off" aria-hidden="true">☆</span><span class="fav-on" aria-hidden="true">★</span><span class="sr-only">Favourite</span></button>
+            </form>
+          </div>
         </div>
         <div class="poem-actions">
           <button type="button" class="btn btn-ghost ref-btn" data-copy="{{ poem.plain_lines|join('\n') }}"
@@ -21,6 +30,12 @@
         </div>
       </header>
       {% include "_poem_text.html" %}
+      <div class="hl-bar">
+        <button type="button" class="btn btn-ghost hl-btn" data-hl-add="{{ url_for('main.add_highlight', eval_id=poem.id) }}"
+                data-csrf="{{ csrf_token() }}"{% if next_url %} data-next="{{ next_url }}"{% endif %}
+                title="పద్యంలో కొంత భాగాన్ని ఎంచుకుని నొక్కండి: అది గుర్తుగా దాచబడుతుంది · Select part of the poem, then press: the passage is saved as a highlight">🖍 గుర్తించు<span class="hide-sm"> · Highlight</span></button>
+        {% include "_highlights.html" %}
+      </div>
       {% for ps in poem.raw.prasa_summary %}
       <p class="prasa-summary"><span class="ln-k">ప్రాసాక్షరాలు</span>
         {% for a in ps.ak %}<b class="ln-p">{{ a }}</b>{% if not loop.last %} <span class="muted">·</span> {% endif %}{% endfor %}

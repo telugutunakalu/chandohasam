@@ -1,0 +1,21 @@
+# Public HTTPS tunnel to the annotation app (systemd user service), using the authtoken in
+# ~/.config/ngrok/ngrok.yml. The account's ngrok dev domain stays the same across restarts.
+#
+# URL:       curl -s 127.0.0.1:4040/api/tunnels | grep -o 'https://[^"]*'
+# Status:    systemctl --user status padya-eval-ngrok   (log: instance/ngrok.log)
+
+[Unit]
+Description=ngrok tunnel to the padya-eval annotation app
+Requires=padya-eval.service
+After=padya-eval.service network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ngrok http 127.0.0.1:8000 --log stdout --log-format logfmt
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/samvaran/phd_workspace/chandohasam/human_evals/annotation_app/instance/ngrok.log
+StandardError=append:/home/samvaran/phd_workspace/chandohasam/human_evals/annotation_app/instance/ngrok.log
+
+[Install]
+WantedBy=default.target
