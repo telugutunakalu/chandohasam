@@ -6,25 +6,24 @@ prompt sets, prompt formats and decoders. This grid answers one question with ev
 family, size and training, with or without the metre constraint, writes the best padyams for a prompt?
 
 Status 2026-10-31:
-- **Complete.** The grid finished on 2026-10-30 03:32: 17 rows, 34 v1 cells, 8 extra-strategy cells and 17 v2 cells,
-  5,472 scored poems with the gold.
-- **Rescored once,** on 10-30 10:38, after the gold row's layout fix (gold in metre 50% → 53%, recognised 62% → 63%,
-  skill mean 0.89 → 1.00; no model cell changed).
+- **Complete.** 17 rows, 34 v1 cells, 8 extra-strategy cells and 17 v2 cells, 5,472 scored poems with the gold.
 - **Reproduced 10-31:** scored again from the raw runs, the table, the per-poem scores and the v2 samples come out
   byte-identical ([Checks](#checks)).
 
-Every design decision, dated and in the user's words, is in [Decisions](#decisions); other folders cite them by number.
+The user's design decisions, numbered, are listed at the end ([Decisions](#decisions)); other folders cite them by
+number.
 
 ## Contents
 
 1. [The findings, in short](#the-findings-in-short)
 2. [What is where](#what-is-where)
 3. [The design](#the-design): prompts, rows, cells, measures
-4. [How it ran](#how-it-ran), with [Phase 0](#phase-0) and the [Decisions](#decisions)
+4. [How it ran](#how-it-ran), with [Phase 0](#phase-0)
 5. [Results](#results)
 6. [Checks](#checks)
 7. [Caveats](#caveats)
 8. [Scripts](#scripts), [reproducing](#reproducing), [results files](#results-files)
+9. [Decisions](#decisions)
 
 ## The findings, in short
 
@@ -78,10 +77,10 @@ Every number below is from `results/grid.md` (paired tests over the 100 prompts:
 |---|---|---|
 | code | `grid.py`, `prompts.py`, `build_records.py`, `build_grid100.py`, `run_hf.py`, `v2.py`, `score_grid.py`, `sample_review.py`, `analyse_grid.py` | yes |
 | results | `results/`: the table, every poem's scores (numbers only), the per-cell decoder reports, the v2 samples, a sample close reading, the checks | yes |
-| prompts | `prompts/`: the P1 retellings, every attempt, the review and its edits, the selection of the 100, and the grid's records (`prompts/grid100/records/test.jsonl`: the held-out `dataset/` poems with their bhāvams, glosses and P1, and the 10 Gemini records) | yes, except the earlier 183-prompt stage's records (`prompts/e6_p1/records/`, a near-duplicate) and the records' `train.jsonl` / `val.jsonl` links into the confidential E6 split |
+| prompts | `prompts/`: the P1 retellings (first batch: `p1.jsonl`, every attempt, the review sample and the hand edits; second batch: `grid100/p1/`), the selection of the 100, and the grid's records (`prompts/grid100/records/test.jsonl`: the held-out `dataset/` poems with their bhāvams, glosses and P1, and the 10 Gemini records) | yes, except the first batch's records (`prompts/e6_p1/records/`, a near-duplicate) and the records' `train.jsonl` / `val.jsonl` links into the confidential E6 split |
 | generated poems (Gemma-4 rows) | `runs/grid_gemma4_*`: `results.jsonl` (the poems), `traces.jsonl`, `prompts.jsonl`, `run.json` | yes |
 | generated poems (other rows) | each model's own folder: `../autoregressive_finetuning/runs/grid_nandi_*`, `../t5_finetuning/runs/grid_t5_*`, `../diffusion_finetuning/runs/grid_mdlm*`, `../lora_gemma_diffusion/runs/grid_dg_*` (those `runs/` folders also hold checkpoints) | no |
-| logs | `logs/`: one per cell, and the P1 run (`prompts_p1_183.log`); `grid_dg_48k_free_new.log` ends in NUL bytes where the 10-29 power cut stopped it | yes |
+| logs | `logs/`: one per cell, and the first P1 batch's run (`prompts_p1_183.log`) | yes |
 
 The queues that ran the cells are `../experiments/scripts/gpu_queue_2026-10-2*.sh` and `grid_*_2026-10-*.sh`, with
 their log `../experiments/runs/gpu_queue_2026-10-21.log` (described in `../experiments/README.md`).
@@ -106,14 +105,15 @@ their log `../experiments/runs/gpu_queue_2026-10-21.log` (described in `../exper
 
 | origin (`selection.json`) | prompts |
 |---|---|
-| human-eval phase 1, reused from the earlier 183-prompt set | 13 |
-| human-eval phase 1, new P1 | 33 |
+| human-eval phase 1, P1 of the first batch | 13 |
+| human-eval phase 1, P1 of the second batch | 33 |
 | human-eval phase 1, Gemini bhāvam | 10 |
-| rest of the 500-poem pool, reused from the 183 | 21 |
-| rest of the pool, new P1 | 23 |
+| rest of the 500-poem pool, P1 of the first batch | 21 |
+| rest of the pool, P1 of the second batch | 23 |
 
-So 34 prompts carry over from the 183-prompt grid that was planned first, and 66 are new. 56 are phase-1 poems that
-annotators rated; the other 44 are candidates for a phase 2 of the human evaluation
+The P1 retellings were made in two batches: the first for 183 held-out poems, 34 of which are in the grid; the second
+for the 56 grid poems the first did not cover. 56 prompts are phase-1 poems that annotators rated; the other 44 are
+candidates for a phase 2 of the human evaluation
 (`prompts/grid100/phase2_candidates.json`). They span 24 metres: 47 prompts in the 7 common vṛttas whose line pattern
 the scorer checks (utpalamāla, campakamāla, mattebha, śārdūla, mattakōkila, mālini, bhujaṅgaprayāta) and 53 in other
 metres, 16 of them in 11 other fixed-pattern vṛttas (sragdhara, layagrāhi, …). The largest are kandamu and āṭaveladi (11 each), mattebha, campakamāla and
@@ -126,19 +126,18 @@ tēṭagīti (10 each); `results/analysis.md` §1 has them all.
 - **Automatic checks** (`prompts.py`):
   - Telugu script only;
   - meaning kept: LaBSE similarity to the source bhāvam ≥ 0.567 (the 99th percentile of similarities between
-    different bhāvams), and the source bhāvam ranked first among all 183;
+    different bhāvams), and the source bhāvam ranked first among all the batch's sources (the second batch: the 183
+    and its own 56 together);
   - not a copy: ≤ 40% of 2+-akshara words shared with the source bhāvam;
   - no gold text: no run of 12 aksharas shared with the gold poem;
   - length 0.6–1.4× the source;
   - it fits the MDLM canvas.
-- **The 183 earlier prompts** (2026-10-24):
-  - 161 passed every check on the first attempt, 9 on the second and 2 on the third; 11 were flagged and kept for
-    review (`prompts/p1.jsonl`, `p1_attempts.jsonl`).
-  - The user reviewed 30 random prompts and the 11 flagged ones (`prompts/p1_review.md`) and made 24 hand edits
-    (`prompts/p1_edits.jsonl`): rewrites of content, including 3 meaning errors the checks had missed (all three among
-    the flagged prompts), and restorations of addresses and makuṭa cues the retellings had dropped.
-- **The 56 new P1** (2026-10-28): approved in advance by the user (decision 21). They passed the automatic checks
-  with none flagged, but no one read them.
+- **The grid's 90 P1 prompts all passed every automatic check as generated.**
+  - **The 34 of the first batch** (`prompts/p1.jsonl`, every attempt in `p1_attempts.jsonl`): 7 of them were in the
+    user's review sample (`prompts/p1_review.md`), and 4 carry the user's hand edits (`prompts/p1_edits.jsonl`), which
+    restore addresses; one of them (`kuchimanchi-1209`) takes its prompt over the copy limit.
+  - **The 56 of the second batch** (`prompts/grid100/p1/`): approved in advance by the user (decision 21), without a
+    hand review.
 - **Known bias:** the retelling model is itself a grid row (Gemma-4 26B).
 
 ### Rows: 17 checkpoints (`grid.py` ROWS)
@@ -158,15 +157,9 @@ tēṭagīti (10 each); `results/analysis.md` §1 has them all.
 How each was trained is in its own folder's README. Every fine-tuned row saw the whole pool ([Phase 0](#phase-0))
 except the T5Gemma 4B 48k snapshot, which is the data-size point.
 
-Not in the grid, by the user's decisions:
-- Gemma-4 E2B and 12B (decisions 15, 17);
-- DiffusionGemma's 24k and 48k adapters (decisions 13, 25);
-- fine-tuned Gemma-4 (decision 3);
-- the RL variants (negative results, `../RL`).
-
 **Prompt format.** Each model gets the same content (metre + prompt text) in its own format:
-- the instruction-tuned bases (Gemma-4, DiffusionGemma base) get the September grids' instruction prompt (the metre's
-  rules, the prompt as the topic);
+- the instruction-tuned bases (Gemma-4, DiffusionGemma base) get the metrical decoder's instruction prompt
+  (`metrical_decoder.prompts.build_messages`: the metre's rules, the prompt as the topic);
 - the fine-tuned rows get the format they were trained on (the E6 T1 header; T5Gemma's encoder input with the rules);
 - the pre-trained-only bases get the same prompt as their fine-tuned row, so the pair differs only in the weights.
 
@@ -175,7 +168,7 @@ Not in the grid, by the user's decisions:
 | cell | decoding | rows | prompts |
 |---|---|---|---|
 | free | the model alone: temperature 0.7, top-p 0.9 (DiffusionGemma: its own sampler); seed 42 | 17 | 100 |
-| constrained (v1) | `metrical_decoder` masking + backtracking, strict profile, gaṇa + prāsa + yati (DiffusionGemma: the settled decoder with the entropy fix); seed 42 | 17 | 100 |
+| constrained (v1) | `metrical_decoder` masking + backtracking, strict profile, gaṇa + prāsa + yati (DiffusionGemma: the diffusion decoder of `../lora_gemma_diffusion`); seed 42 | 17 | 100 |
 | extra | masking only and hybrid | Nandi ×2, MDLM 523M ×2 | 34 |
 | v2 | the constrained cell with decoder v2: Layer A (the training corpus's syllable inventory) and Layer B (attested-word preference, weight 2, every step) | 17 | 100 |
 
@@ -193,7 +186,7 @@ tokens. DiffusionGemma uses its own 256-token canvas.
 | real words | the share of 2+-akshara words that are known forms of the training split, or compounds of 2–3 known forms; ఁ stripped on both sides for every model |
 | one-akshara words | the share of words of a single akshara |
 | copy | the share of the poem's 2+-akshara words found in its prompt |
-| recognised | LaBSE ranks the poem's own prompt first among it and 9 other prompts of the same metre, drawn from the 100 and the earlier 183; for 21 prompts whose metre has fewer than 9 others there, prompts of other metres fill up (4 metres have none). A topic signal, not meaning |
+| recognised | LaBSE ranks the poem's own prompt first among it and 9 other prompts of the same metre, drawn from the 100 and the 183 of the first P1 batch; for 21 prompts whose metre has fewer than 9 others there, prompts of other metres fill up (4 metres have none). A topic signal, not meaning |
 | repeating a line | the poem writes some line twice |
 | training line | a line identical to a line of the training split |
 | gold copy | a run of ≥ 12 aksharas shared with its own gold poem |
@@ -209,21 +202,9 @@ tokens. DiffusionGemma uses its own 256-token canvas.
 
 ## How it ran
 
-- **2026-10-21:** the design and the first decisions. Phase 0 brought every fine-tuned model to the whole pool,
-  including DiffusionGemma's ≈ 107 h whole-pool LoRA.
-- **10-24:** the 183 P1 prompts and their review. The grid's small-model cells started beside the DiffusionGemma
-  training.
-- **10-28:** decisions 14–21:
-  - masking + backtracking only;
-  - Gemma-4 12B and E2B dropped;
-  - one seed;
-  - the 100-prompt grid drawn from the human-evaluation pool;
-  - the 56 new P1 approved in advance.
-- **10-28 / 10-29:** decoder v2 on every row (decision 22, 10-28), run on 10-29 in two lanes (23, 24). A power outage
-  at 13:51 cut off two cells: the MDLM 523M FT v2 cell was resumed at the poem level; the other was the DiffusionGemma
-  48k row's, and that row was dropped (25).
-- **10-30 03:32:** the grid complete. At 10:38 it was rescored after the gold row's layout fix: five golds in metres
-  written with half-lines had been scored on their first half-lines.
+The cells ran from 2026-10-24 to 2026-10-30 on one GB10, one large job at a time, through the sequential GPU queues
+of `../experiments/scripts` (the 14 smaller rows' v2 cells in a second lane beside them). Every cell resumes at the
+poem level, and every poem is seeded by its key.
 
 ### Phase 0
 
@@ -233,42 +214,8 @@ family and size, not by data:
 - **T5Gemma 1B:** full fine-tuning on the whole pool (10-21 → 10-22).
 - **T5Gemma 4B:** one LoRA r 128 run on the whole pool, keeping its adapter after the first 48,000 examples as the
   data-size point (decision 9; 10-22 → 10-24).
-- **DiffusionGemma:** a fresh LoRA on the whole pool (decision 8).
-  - Lever ① was to put two examples in each forward pass. The batched forward failed the equality check against single
-    forwards (cross-entropy off by up to 0.074 nats).
-  - So the run went one example per forward, 37,595 steps, ≈ 107 h (10-24 → 10-28).
-
-### Decisions
-
-The user's decisions, as recorded at the time; other folders cite them by number.
-
-| # | date | decision | the user's words, where recorded |
-|---|---|---|---|
-| 1 | 10-21 | prompts from held-out poems, never the 300k training pool (the fine-tuned models learned it) | |
-| 2 | 10-21 | P1 retellings by Gemma-4 26B, with automatic checks and the user's review of 30 | |
-| 3 | 10-21 | the optional rows (Gemma-4 12B, DiffusionGemma 24k and 48k) in; Gemma-4 fine-tuning later, outside the grid | |
-| 4 | 10-21 | all three constrained strategies on a subset (the † rows) | |
-| 5 | 10-21 | the grid runs last in the GPU queue | |
-| 6 | 10-21 | Phase 0: every fine-tuned model sees the whole pool before the grid | |
-| 7 | 10-21 | one prompt form (P1, replacing all three) and 2 free samples | |
-| 8 | 10-21 | DiffusionGemma: a fresh run on the whole pool | |
-| 9 | 10-21 | T5Gemma 4B: one whole-pool run with a 48k snapshot; LoRA rank 128 | |
-| 10 | 10-21 | the DiffusionGemma 24k constrained E6 run dropped | |
-| 11 | 10-21 | levers for an Oct 28 finish: ① 2 examples per DiffusionGemma forward, ② the September rerun after the grid, ③ the extra strategies after Oct 28, ④ the DiffusionGemma 48k row free only if ① fails | "yes, and yes" |
-| 12 | 10-21 | P1 is the one prompt form | |
-| 13 | 10-21 | the DiffusionGemma 24k row dropped (the 48k covers the small-data point) | |
-| 14 | 10-28 | masking + backtracking only; the extra cells already run stay | "masking + backtracking is the only strategy proved to be good; drop the other two" |
-| 15 | 10-28 | Gemma-4 12B dropped | |
-| 16 | 10-28 | the September DiffusionGemma rerun removed (its constrained numbers stay pre-fix) | |
-| 17 | 10-28 | Gemma-4 E2B dropped | "no comparable model" |
-| 18 | 10-28 | one seed (42) in every cell | "we can have a single seed" |
-| 19 | 10-28 | the 100-prompt grid: Bhāgavatam 50, Vemana 20, Kūcimañci 20, Gemini 10 | "reduce the distribution … up to 100 prompts" |
-| 20 | 10-28 | every grid prompt a human-evaluation pool poem | "make the 100 out of 100 comparable with human annotators" |
-| 21 | 10-28 | the 56 new P1 approved in advance (no hand review; the automatic checks stand in) | "approve it please" |
-| 22 | 10-28 | decoder v2 (A + B) on every row's constrained cell, all 100 prompts; Layer B built for DiffusionGemma | "once the grid is done, another queue with DAWG v2 (A+B) … samples compared" |
-| 23 | 10-29 | v2 in two lanes: the 14 smaller rows beside the grid, Gemma-4 26B and DiffusionGemma in the GPU queue | "since we have a lot of memory can the inferencing be done in parallel?" |
-| 24 | 10-29 | the queue reordered for a table the same night | "we are due finishing it today right?" |
-| 25 | 10-29 | after the power outage, the DiffusionGemma 48k row dropped | "remove it from the ablation study, we will use only the whole pool one" |
+- **DiffusionGemma:** a fresh LoRA on the whole pool (decision 8), one example per forward pass, 37,595 steps,
+  ≈ 107 h (10-24 → 10-28).
 
 ## Results
 
@@ -370,7 +317,7 @@ Points; p < 0.001 unless given.
 
 ### The extra strategies (`results/analysis.md` §6)
 
-Masking only and hybrid ran on the 34 earlier prompts, on four rows. On the same 34 prompts:
+Masking only and hybrid ran on four rows, on the 34 prompts of the first P1 batch. On the same 34 prompts:
 
 | row | masking + backtracking | masking only | hybrid |
 |---|---|---|---|
@@ -382,8 +329,6 @@ Masking only and hybrid ran on the 34 earlier prompts, on four rows. On the same
 - **On these 34 prompts no strategy wins everywhere.** For MDLM 523M FT masking + backtracking leads on real words
   (62.0% against 56.6% and 58.9%; masking only also doubles its one-akshara words, 25.7% against 13.0%). For Nandi FT
   hybrid leads (60.6% against 57.7%).
-- **The decision on 10-28** to keep masking + backtracking only (decision 14) was made on the earlier 183-prompt
-  version of these cells. There, the MDLM 523M FT lost 6.1 points of real words with either alternative.
 - **Hybrid helps the MDLM 523M base finish in metre** (+11.8 points) but costs the Nandi base as much (−11.8).
 - n = 34, no tests: read these as indications.
 
@@ -411,7 +356,7 @@ Means, on the GB10, sometimes beside other jobs.
 
 ## Checks
 
-Run on 2026-10-31 (`analyse_grid.py` → `results/analysis.md`; the rescore with `score_grid.py --out`, below).
+Run on 2026-10-31 (`analyse_grid.py` → `results/analysis.md`; the reproduction with `score_grid.py --out`, below).
 
 - **Reproducible.** `score_grid.py --out <scratch>`, run again from the raw runs (122 s), writes `grid.md`,
   `grid.json`, `grid_poems.jsonl` and `grid_v2_samples.md` byte-identical to the ones here (`cmp`): every measure of
@@ -419,7 +364,7 @@ Run on 2026-10-31 (`analyse_grid.py` → `results/analysis.md`; the rescore with
 - **The table is the mean of the poems.** Every cell's means in `grid.json` equal the means of its rows in
   `grid_poems.jsonl`.
 - **Integrity of every cell:** all 59 cells (34 v1, 8 extra, 17 v2) hold exactly their 100 prompts (34 for the extra
-  strategies), each once, at seed 42, with no NUL bytes. The power outage's cut-off cell was resumed cleanly.
+  strategies), each once, at seed 42, with no NUL bytes.
 - **Every constrained poem out of metre** (41 of them: 24 in the v1 cells, 17 in the extra cells; none in v2) ended
   at the token budget, unfinished. No finished poem is out of metre.
   - Their metres: layagrāhi 10, mattebha 8, śārdūla 6, sragdhara 5, mahāsragdhara 4, mānini 3, campakamāla 3,
@@ -437,8 +382,8 @@ Run on 2026-10-31 (`analyse_grid.py` → `results/analysis.md`; the rescore with
   say nothing (`results/sample_review_20261029.md` reads one prompt's poems closely).
 - **The strict profile rejects readings poets use,** hence the gold's 53%. In metre here means "accepted by the strict
   engines".
-- **The 56 new P1 prompts were not read by a person.** In the review of the 183, the 30 random prompts needed only
-  restored addresses and makuṭa cues; the 3 meaning errors were among the 11 flagged ones. None of the 56 was flagged.
+- **Few P1 prompts were read in a review:** of the grid's 90, 7 were in the user's review sample; the 56 of the second
+  batch were checked automatically only. The automatic checks cannot see a changed meaning.
 - **The retelling model, Gemma-4 26B, is also a grid row.**
 - **Rows differ in passes over the pool:** 1 to 3.5, and the MDLMs also had the E6 tasks.
 - **The decoders differ by family where they must:**
@@ -453,8 +398,8 @@ Run on 2026-10-31 (`analyse_grid.py` → `results/analysis.md`; the rescore with
 | `grid.py` | The rows and cells, one definition for the queues and the scorer: each cell's command, working folder and results path; `--todo core|extra|smoke|new|v2|v2smoke` lists the cells not yet done as queue lines | | (stdout) |
 | `prompts.py` | Generates the P1 retellings with Gemma-4 26B, runs the six checks (up to three attempts), writes the review file | the held-out records, the model | `prompts/p1.jsonl`, `p1_attempts.jsonl`, `p1_review.md`, `summary.json` |
 | `build_records.py` | Turns the reviewed P1 into the evaluators' records (`meaning` = P1, `meaning_p0` = the original; hand edits from `p1_edits.jsonl`) | `prompts/p1*.jsonl` | `prompts/e6_p1/records` |
-| `build_grid100.py` | Draws the 100 prompts (quotas, human-eval pool, metres in proportion), builds their records and the reference runs; `--approve` applies the new P1 | the 183, the human-eval pool, the new P1 | `prompts/grid100/`, `../diffusion_finetuning/runs/grid100_*_test` |
-| `run_hf.py` | The Gemma-4 rows: the September instruction prompt with P1 as the topic, through `metrical_decoder` | the records, the model | `runs/grid_gemma4_*`, `results/grid_gemma4_*` |
+| `build_grid100.py` | Draws the 100 prompts (quotas, human-eval pool, metres in proportion), builds their records and the reference runs; `--approve` applies the second-batch P1 | the first P1 batch, the human-eval pool, the second batch | `prompts/grid100/`, `../diffusion_finetuning/runs/grid100_*_test` |
+| `run_hf.py` | The Gemma-4 rows: the metrical decoder's instruction prompt with P1 as the topic, through `metrical_decoder` | the records, the model | `runs/grid_gemma4_*`, `results/grid_gemma4_*` |
 | `v2.py` | Runs an evaluator (Nandi, Gemma-4, MDLM, DiffusionGemma) with decoder v2's two layers, without changing its file | the evaluator | its run folder |
 | `score_grid.py` | Scores every cell on disk the same way; the paired tests; the v2 samples | the run folders, the records | `results/grid.{md,json}`, `grid_poems.jsonl`, `grid_v2_samples.md` |
 | `sample_review.py` | One random prompt's poems from every row's free, constrained and v2 cell, beside their metrics, for a close reading | the run folders | `results/sample_review_<seed>.md` |
@@ -468,7 +413,7 @@ P=../.venv/bin/python
 $P grid.py                                  # every cell: done or not, its command
 $P grid.py --todo core                      # the cells still to run, as queue lines (name, folder, command)
 $P -u score_grid.py                         # → results/ (≈ 2 min; LaBSE on the GPU)
-$P -u score_grid.py --out /tmp/rescore      # the reproduction check: then cmp each file with results/
+$P -u score_grid.py --out /tmp/grid_check   # the reproduction check: then cmp each file with results/
 $P analyse_grid.py                          # → results/analysis.md (≈ 1 s)
 ```
 
@@ -483,6 +428,38 @@ poem is seeded by its key.
 | `results/grid.md`, `grid.json` | the table: every cell's measures, and the 50 paired tests |
 | `results/grid_poems.jsonl` | every poem's scores (5,472 rows; no text) |
 | `results/grid_v2_samples.md` | every row's v1 and v2 poems on three fixed prompts |
-| `results/sample_review_20261029.md` | one random prompt (seed 20261029): the gold and 50 poems (every row's free, constrained and v2 cell but DiffusionGemma base v2, not yet run then), read closely beside their metrics |
+| `results/sample_review_20261029.md` | one random prompt (seed 20261029): the gold and 50 poems (every row's free, constrained and v2 cell except DiffusionGemma base v2, which ran after it), read closely beside their metrics |
 | `results/analysis.md`, `analysis.json` | the checks and breakdowns of this README |
 | `results/grid_gemma4_*.{md,json}` | the decoder's token-level report of each Gemma-4 cell (Nandi's, T5Gemma's and the MDLMs' are in their folders' `results/`; DiffusionGemma's evaluator writes none) |
+
+## Decisions
+
+The user's design decisions behind the grid, numbered; other folders cite them by number.
+
+| # | date | decision | the user's words, where recorded |
+|---|---|---|---|
+| 1 | 10-21 | prompts from held-out poems, never the 300k training pool (the fine-tuned models learned it) | |
+| 2 | 10-21 | P1 retellings by Gemma-4 26B, with automatic checks and a review sample read by the user | |
+| 3 | 10-21 | Gemma-4 fine-tuning outside the grid | |
+| 4 | 10-21 | the other two constrained strategies (masking only, hybrid) on a subset of rows: the extra cells | |
+| 5 | 10-21 | the grid runs last in the GPU queue | |
+| 6 | 10-21 | Phase 0: every fine-tuned model sees the whole pool before the grid | |
+| 7 | 10-21 | one prompt form, P1 | |
+| 8 | 10-21 | DiffusionGemma: a fresh LoRA on the whole pool | |
+| 9 | 10-21 | T5Gemma 4B: one whole-pool run with a 48k snapshot; LoRA rank 128 | |
+| 10 | 10-21 | no DiffusionGemma 24k constrained E6 run | |
+| 11 | 10-21 | the schedule for an Oct 28 finish: ① a batched-forward speed test for the DiffusionGemma LoRA, ② the September DiffusionGemma rerun after the grid, ③ the extra strategies after Oct 28 | "yes, and yes" |
+| 12 | 10-21 | P1 is the one prompt form | |
+| 13 | 10-21 | no DiffusionGemma 24k row | |
+| 14 | 10-28 | masking + backtracking is the grid's constrained strategy; the extra cells stay as a comparison | "masking + backtracking is the only strategy proved to be good; drop the other two" |
+| 15 | 10-28 | no Gemma-4 12B row | |
+| 16 | 10-28 | the September DiffusionGemma rerun not in the grid | |
+| 17 | 10-28 | no Gemma-4 E2B row | "no comparable model" |
+| 18 | 10-28 | one seed (42) in every cell | "we can have a single seed" |
+| 19 | 10-28 | the 100-prompt grid: Bhāgavatam 50, Vemana 20, Kūcimañci 20, Gemini 10 | "reduce the distribution … up to 100 prompts" |
+| 20 | 10-28 | every grid prompt a human-evaluation pool poem | "make the 100 out of 100 comparable with human annotators" |
+| 21 | 10-28 | the 56 second-batch P1 approved in advance (no hand review; the automatic checks stand in) | "approve it please" |
+| 22 | 10-28 | decoder v2 (A + B) on every row's constrained cell, all 100 prompts; Layer B built for DiffusionGemma | "once the grid is done, another queue with DAWG v2 (A+B) … samples compared" |
+| 23 | 10-29 | v2 in two lanes: the 14 smaller rows beside the grid, Gemma-4 26B and DiffusionGemma in the GPU queue | "since we have a lot of memory can the inferencing be done in parallel?" |
+| 24 | 10-29 | the queue ordered for a table the same night | "we are due finishing it today right?" |
+| 25 | 10-29 | no DiffusionGemma 48k row: the whole-pool adapter only | "remove it from the ablation study, we will use only the whole pool one" |
