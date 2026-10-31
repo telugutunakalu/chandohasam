@@ -233,6 +233,10 @@ Two runners score every poem source of the project, the poets' and the AI's, and
 | `dataset_bhagavatam`, `dataset_vemana`, `dataset_kuchimanchi_timmakavi`, `dataset_chandassu` | 7,366 / 1,164 / 1,642 / 2,532 | the verse records of `../dataset/*.json` |
 | `human_evals_study1_bhagavatam`, `…_vemana`, `…_kuchimanchi`, `…_textbook`, `…_gemini` | 227 / 47 / 70 / 72 / 84 | study 1's 500 poems (`../human_evals/human_eval_poems_strict.json`), by source; the Gemini poems are AI-written |
 | `human_evals_study2_mdlm523m_ft`, `…_t5_1b_ft`, `…_nandi_ft` | 33 each | study 2's 99 AI poems (`../human_evals/human_eval_poems_study2.json`): three fine-tuned models under the v2 metrical decoder, on the same 33 prompts |
+| `gemini_initial_evals` | 246 | every Gemini-written poem of `../metrics/initial_evals/Outputs/chandas_dataset.json` (255, exact duplicates dropped), study 1's 84 among them; also broken down by the alaṅkāra the prompt asked for and by study-1 pool membership |
+
+`dataset_chandassu` is human verse: 25 śatakams from the open-source Kaggle Chandassu dataset. Gemini wrote only its
+annotations (the `generated` bhāvams and word meanings), as for Vemana and Kūcimañci.
 
 - **[`score_sources.py`](score_sources.py)** (system `python3`, ≈ 1 min): every metric of the suite, each with its own
   `score_poem` and frozen baseline. That is anuprāsa 1.0, 2.0 and 3.0; mādhurya 1.1 and 2.0; ojas 2.0; prasāda 1.0
@@ -256,18 +260,21 @@ Each source's file holds:
 In short (medians and shares from the two reports):
 - **Word resolution** (*resolved*: the live path with the verified ByT5 gate, the paper's reading):
   - the four dataset files: 86.7–88.5% of a poem's tokens;
-  - study 1: the poets' poems 85.8–90.1%, the textbook examples 77.7%, Gemini 96.5%;
+  - study 1: the poets' poems 85.8–90.1%, the textbook examples 77.7%, Gemini 96.5%; all 246 Gemini poems 96.1%;
   - study 2: MDLM 523M 85.6%, T5Gemma 2 1B 84.4%, Nandi 79.2%. Against the gold poems of their own prompts that is
     −2.0, −3.2 and −8.5 points; the model's poem resolves more on 48%, 33% and 21% of the prompts.
-- **Metre:** chandas distance rates every study-2 poem, every Gemini poem and every textbook example exact. In the
+- **Metre:** chandas distance rates every study-2 poem, every study-1 Gemini poem and every textbook example exact.
+  Of all 246 Gemini poems only 46.7% are: the 84 study 1 chose for their metre, and 31 of the other 162. In the
   dataset files: Bhāgavatam 99.6%, Kūcimañci 93.1%, Vemana 84.4%, chandassu 81.4%.
 - **Prasāda:** study 2's poems are more obscure than their golds. Their surprisal is higher by 0.22 (MDLM 523M),
   0.39 (T5Gemma) and 0.63 (Nandi), on 52%, 64% and 70% of the prompts.
 - **Ojas:** MDLM 523M writes lighter poems than its golds (−3.3; denser on 18% of the prompts). So does Gemini
   against the poets: median ojas 37.3, against 41.3–43.8 for the poets' study-1 poems.
 - **Anuprāsa 3.0:** MDLM 523M repeats consonant patterns more than its golds (+0.60; on 55% of the prompts). In the
-  dataset files, the chandassu examples reach the strong level most often (37.8% of poems), Bhāgavatam least
-  (15.2%). Two textbook examples, alliteration showpieces, score A = 50 and 176, so means mislead here: the reports
+  dataset files, the chandassu śatakams reach the strong level most often (37.8% of poems), Bhāgavatam least
+  (15.2%). Gemini poems whose prompt asked for a figure of sound (muktapadagrasta, yamaka, chekānuprāsa,
+  vṛttyanuprāsa, antyānuprāsa) average A 1.33–1.57, against 1.13 when no alaṅkāra was asked (12 poems per figure, 5
+  for chekānuprāsa). Two textbook examples, alliteration showpieces, score A = 50 and 176, so means mislead here: the reports
   give medians.
 
 ## Version 2 candidates: scores no poet moves (under evaluation)

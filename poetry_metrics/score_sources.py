@@ -10,6 +10,10 @@ Sources (the unit is the printed line, a sīsa pāda split into its half-lines a
   app shows), by source: Bhāgavatam, Vemana, Kūcimañci, the textbook examples, and Gemini's poems.
 - `human_evals_study2_<model>`: the 99 poems of study 2 (../human_evals/human_eval_poems_study2.json), by model:
   MDLM 523M, T5Gemma 2 1B and Nandi-Mini-150M, each fine-tuned and under the v2 metrical decoder.
+- `gemini_initial_evals`: every Gemini-written poem of ../metrics/initial_evals/Outputs/chandas_dataset.json (255;
+  exact duplicates dropped by ../human_evals/build_human_eval_sample.py's rule: 246), the set
+  ../final_report_metrics/export_poems.py exports. Study 1's 84 Gemini poems are among them. Broken down also by the
+  alaṅkāra the prompt asked for and by whether the poem is in study 1's pool.
 
 Metrics, each the metric script's own score_poem with its frozen baseline (nothing is rebuilt): anuprāsa 1.0, 2.0
 and 3.0; mādhurya 1.1 and 2.0; ojas 2.0; prasāda 1.0 and 2.0; chandas distance 1.1 against the poem's own metre
@@ -17,7 +21,7 @@ and 3.0; mādhurya 1.1 and 2.0; ojas 2.0; prasāda 1.0 and 2.0; chandas distance
 version 1's scores and change only the labels.
 
 Each source file holds, per metric, the summary of its main value (n, mean, sd, quantiles), its label counts and
-shares, the same by metre, and every poem's main values and labels (no text). Study 2's file also compares each poem
+shares, the same by metre (and by the source's own groups), and every poem's main values and labels (no text). Study 2's file also compares each poem
 with the gold poem of its prompt (its study-1 poem), metric by metric.
 """
 from __future__ import annotations
@@ -39,6 +43,10 @@ import chandas_distance as cd                                               # no
 import madhurya, madhurya_v2, ojas, prasada, prasada_v2                     # noqa: E402,E401
 
 HUMAN_EVALS = HERE.parent / "human_evals"
+GEMINI = HERE.parent / "metrics" / "initial_evals" / "Outputs" / "chandas_dataset.json"
+# chandas_dataset.json's metre ids -> the catalogue's (as ../final_report_metrics/export_poems.py maps them)
+GEMINI_METRES = {"shardulavikriditam": "sardulavikriditamu", "mattebhavikriditam": "mattebhavikriditamu",
+                 "aataveladi": "ataveladi", "seesam": "seesamu", "kandam": "kandamu", "utsaham": "utsahamu"}
 OUT = HERE / "outputs" / "sources"
 REPORT = HERE / "reports" / "sources.md"
 
@@ -61,7 +69,7 @@ LABEL_ORDER = {                                    # the version 2.0 candidates 
     "ojas": ojas.LABELS, "prasada_v1": prasada.LABELS, "prasada_v2": prasada.LABELS, "chandas_distance": cd.LABELS,
 }
 DATASETS = {"bhagavatam": "Pothana's Bhāgavatam", "vemana": "Vemana", "kuchimanchi_timmakavi": "Kūcimañci Timmakavi",
-            "chandassu": "chandassu (prosody examples)"}
+            "chandassu": "chandassu: 25 śatakams (the Kaggle Chandassu dataset)"}
 STUDY1 = {"bhagavatam": ("bhagavatam", "Pothana's Bhāgavatam", "human"), "vemana": ("vemana", "Vemana", "human"),
           "kuchimanchi": ("kuchimanchi", "Kūcimañci Timmakavi", "human"),
           "reference": ("textbook", "textbook examples (prosody textbooks)", "human"),
@@ -109,6 +117,21 @@ def sources() -> dict:
                 short, title, kind = src, groups[src], "ai"
             out[f"human_evals_{study}_{short}"] = {"family": f"human_evals_{study}", "title": title, "kind": kind,
                                                    "from": f"human_evals/{path} (source_dataset {src})", "poems": poems}
+    recs = json.loads(GEMINI.read_text(encoding="utf-8"))["poems"]
+    drop = {max(r["id"], d) for r in recs for d in (r.get("duplicate_exact") or [])}
+    pool = {r["source_id"] for r in json.loads((HUMAN_EVALS / "human_eval_poems_strict.json").read_text(encoding="utf-8"))["poems"]
+            if r["source_dataset"] == "generated"}
+    poems = []
+    for r in recs:
+        if r["id"] in drop:
+            continue
+        metre = GEMINI_METRES.get(r.get("chandassu_id"), r.get("chandassu_id"))
+        lines = [corpus._clean(l) for l in r["lines"] if corpus._clean(l)]
+        extra = {"alankaram": r.get("alankaram_id") or "(none asked)", "in_study1_pool": r["id"] in pool}
+        poems.append((f"gemini:{r['id']}", cd.NAME_MAP.get(metre, metre), metre, lines, extra))
+    out["gemini_initial_evals"] = {"family": "gemini", "title": "Gemini-written poems (metrics/initial_evals)",
+                                   "kind": "ai", "from": "metrics/initial_evals/Outputs/chandas_dataset.json "
+                                   "(exact duplicates dropped)", "poems": poems, "group_by": ["alankaram", "in_study1_pool"]}
     return out
 
 
@@ -149,10 +172,10 @@ def summarise(rows: list) -> dict:
     return out
 
 
-def by_metre(rows: list) -> dict:
+def by_metre(rows: list, key: str = "metre") -> dict:
     groups = defaultdict(list)
     for r in rows:
-        groups[r["metre"] or "(none)"].append(r)
+        groups[str(r[key]) if r[key] is not None else "(none)"].append(r)
     return {m: {"n": len(g), **{name: {"mean": describe([r[name]["value"] for r in g]).get("mean"),
                                        "labels": dict(Counter(r[name]["label"] for r in g))} for name in METRICS}}
             for m, g in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0]))}
@@ -241,6 +264,8 @@ def main(argv=None) -> int:
         doc = {"source": name, "title": src["title"], "family": src["family"], "kind": src["kind"],
                "from": src["from"], "n_poems": len(rows), "metrics": versions(),
                "summary": summarise(rows), "by_metre": by_metre(rows)}
+        for key in src.get("group_by", []):
+            doc[f"by_{key}"] = by_metre(rows, key)
         if name.startswith("human_evals_study2_"):
             doc["against_gold"] = against_gold(rows, gold)
         doc["poems"] = "@POEMS@"                   # one compact line per poem, the rest indented

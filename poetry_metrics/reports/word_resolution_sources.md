@@ -16,6 +16,7 @@ Written by `word_resolution_sources.py` (`outputs/word_resolution/<source>.json`
 | `human_evals_study2_mdlm523m_ft` | ai | 33 | 729 | **85.6%** | 99.9% | 57.3% | 84.1% | 99.2% | 35.9% | 103 |
 | `human_evals_study2_t5_1b_ft` | ai | 33 | 617 | **84.4%** | 99.7% | 52.2% | 82.1% | 99.7% | 43.4% | 100 |
 | `human_evals_study2_nandi_ft` | ai | 33 | 534 | **79.2%** | 98.4% | 41.5% | 78.1% | 97.9% | 53.4% | 115 |
+| `gemini_initial_evals` | ai | 246 | 6,112 | **96.1%** | 100.0% | 74.1% | 95.0% | 99.8% | 22.4% | 153 |
 
 ## Study 2 against the gold poems of the same prompts
 

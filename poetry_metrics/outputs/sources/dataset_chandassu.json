@@ -1,6 +1,6 @@
 {
  "source": "dataset_chandassu",
- "title": "chandassu (prosody examples)",
+ "title": "chandassu: 25 śatakams (the Kaggle Chandassu dataset)",
  "family": "dataset",
  "kind": "human",
  "from": "dataset/chandassu.json (verse records)",

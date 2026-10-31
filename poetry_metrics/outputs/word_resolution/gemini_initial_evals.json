@@ -1,0 +1,791 @@
+{
+ "source": "gemini_initial_evals",
+ "title": "Gemini-written poems (metrics/initial_evals)",
+ "family": "gemini",
+ "kind": "ai",
+ "from": "metrics/initial_evals/Outputs/chandas_dataset.json (exact duplicates dropped)",
+ "summary": {
+  "n_poems": 246,
+  "n_tokens": 6112,
+  "readings": {
+   "resolved_live_verified": {
+    "over_poems": {
+     "n": 246,
+     "mean": 0.961,
+     "sd": 0.0483,
+     "p10": 0.9,
+     "median": 0.9643,
+     "p90": 1.0
+    },
+    "over_tokens": 0.962
+   },
+   "resolved_live": {
+    "over_poems": {
+     "n": 246,
+     "mean": 1.0,
+     "sd": 0.0,
+     "p10": 1.0,
+     "median": 1.0,
+     "p90": 1.0
+    },
+    "over_tokens": 1.0
+   },
+   "resolved_live_strict": {
+    "over_poems": {
+     "n": 246,
+     "mean": 0.7414,
+     "sd": 0.1269,
+     "p10": 0.56,
+     "median": 0.76,
+     "p90": 0.8889
+    },
+    "over_tokens": 0.7433
+   },
+   "resolved": {
+    "over_poems": {
+     "n": 246,
+     "mean": 0.983,
+     "sd": 0.0314,
+     "p10": 0.95,
+     "median": 1.0,
+     "p90": 1.0
+    },
+    "over_tokens": 0.9841
+   },
+   "resolved_verified": {
+    "over_poems": {
+     "n": 246,
+     "mean": 0.9498,
+     "sd": 0.0531,
+     "p10": 0.875,
+     "median": 0.96,
+     "p90": 1.0
+    },
+    "over_tokens": 0.9508
+   },
+   "resolved_strict": {
+    "over_poems": {
+     "n": 246,
+     "mean": 0.8131,
+     "sd": 0.1139,
+     "p10": 0.6522,
+     "median": 0.8276,
+     "p90": 0.95
+    },
+    "over_tokens": 0.8156
+   },
+   "in_table": {
+    "over_poems": {
+     "n": 246,
+     "mean": 0.8006,
+     "sd": 0.1609,
+     "p10": 0.5652,
+     "median": 0.84,
+     "p90": 0.9643
+    },
+    "over_tokens": 0.8025
+   },
+   "attested": {
+    "over_poems": {
+     "n": 246,
+     "mean": 0.9981,
+     "sd": 0.0091,
+     "p10": 1.0,
+     "median": 1.0,
+     "p90": 1.0
+    },
+    "over_tokens": 0.9982
+   }
+  },
+  "classes_live": {
+   "inflected": {
+    "tokens": 3212,
+    "share": 0.5255
+   },
+   "headword": {
+    "tokens": 1525,
+    "share": 0.2495
+   },
+   "resolved-by-byt5": {
+    "tokens": 1369,
+    "share": 0.224
+   },
+   "split-all-known": {
+    "tokens": 6,
+    "share": 0.001
+   }
+  },
+  "unresolved_live_verified": {
+   "tokens": 232,
+   "types": 153,
+   "most_frequent": [
+    [
+     "సన్నారన్",
+     16
+    ],
+    [
+     "వెలుంగు",
+     14
+    ],
+    [
+     "దొలంచి",
+     6
+    ],
+    [
+     "దెలప",
+     4
+    ],
+    [
+     "సుధామ",
+     4
+    ],
+    [
+     "లన్నిటి",
+     3
+    ],
+    [
+     "కొలతల",
+     3
+    ],
+    [
+     "రాగముందగనులై",
+     3
+    ],
+    [
+     "సుయోగ",
+     3
+    ],
+    [
+     "శ్రీయోగతోన్",
+     3
+    ],
+    [
+     "శ్రీతన్నత్మన్",
+     3
+    ],
+    [
+     "శ్రీమిన్నడై",
+     3
+    ],
+    [
+     "శ్రీపాదతోన్",
+     3
+    ],
+    [
+     "విభంగి",
+     3
+    ],
+    [
+     "సురీతి",
+     3
+    ],
+    [
+     "సమాడ్కి",
+     3
+    ],
+    [
+     "వనంధి",
+     3
+    ],
+    [
+     "దివీశ",
+     3
+    ],
+    [
+     "తాపాల్దెగన్",
+     3
+    ],
+    [
+     "పోలెంగూర్",
+     3
+    ],
+    [
+     "కన్నీటి",
+     2
+    ],
+    [
+     "మానవత్వపు",
+     2
+    ],
+    [
+     "లొలుకు",
+     2
+    ],
+    [
+     "లెత్తు",
+     2
+    ],
+    [
+     "బతుకు",
+     2
+    ],
+    [
+     "కోర్వక",
+     2
+    ],
+    [
+     "విభంగిన",
+     2
+    ],
+    [
+     "సుభావ",
+     2
+    ],
+    [
+     "మణీయ",
+     2
+    ],
+    [
+     "సపోల్",
+     2
+    ],
+    [
+     "వలసల్",
+     1
+    ],
+    [
+     "లాంటి",
+     1
+    ],
+    [
+     "గురిసి",
+     1
+    ],
+    [
+     "యిండ్ల",
+     1
+    ],
+    [
+     "సలవి",
+     1
+    ],
+    [
+     "తల్లడిలంగను",
+     1
+    ],
+    [
+     "కాపదల్",
+     1
+    ],
+    [
+     "పచిపెట్టు",
+     1
+    ],
+    [
+     "రయ్యన",
+     1
+    ],
+    [
+     "చెంగట",
+     1
+    ]
+   ]
+  }
+ },
+ "by_metre": {
+  "utpalamala": {
+   "n_poems": 53,
+   "n_tokens": 1404,
+   "resolved_live_verified": 0.9827,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7965,
+   "resolved": 0.9897,
+   "resolved_verified": 0.9739,
+   "resolved_strict": 0.8625,
+   "in_table": 0.8725,
+   "attested": 0.9992
+  },
+  "champakamala": {
+   "n_poems": 49,
+   "n_tokens": 1275,
+   "resolved_live_verified": 0.9597,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7446,
+   "resolved": 0.9845,
+   "resolved_verified": 0.9492,
+   "resolved_strict": 0.8193,
+   "in_table": 0.827,
+   "attested": 0.9976
+  },
+  "sardulavikriditamu": {
+   "n_poems": 43,
+   "n_tokens": 1027,
+   "resolved_live_verified": 0.9158,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.5949,
+   "resolved": 0.9875,
+   "resolved_verified": 0.9128,
+   "resolved_strict": 0.6719,
+   "in_table": 0.5538,
+   "attested": 0.9971
+  },
+  "mattebhavikriditamu": {
+   "n_poems": 37,
+   "n_tokens": 900,
+   "resolved_live_verified": 0.9786,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7296,
+   "resolved": 0.9931,
+   "resolved_verified": 0.9706,
+   "resolved_strict": 0.7642,
+   "in_table": 0.7091,
+   "attested": 1.0
+  },
+  "ataveladi": {
+   "n_poems": 13,
+   "n_tokens": 262,
+   "resolved_live_verified": 0.9621,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.8397,
+   "resolved": 0.9386,
+   "resolved_verified": 0.9236,
+   "resolved_strict": 0.8894,
+   "in_table": 0.9734,
+   "attested": 0.9962
+  },
+  "kandamu": {
+   "n_poems": 13,
+   "n_tokens": 206,
+   "resolved_live_verified": 0.9365,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.8103,
+   "resolved": 0.9558,
+   "resolved_verified": 0.9365,
+   "resolved_strict": 0.8785,
+   "in_table": 0.9276,
+   "attested": 0.9952
+  },
+  "seesamu": {
+   "n_poems": 13,
+   "n_tokens": 453,
+   "resolved_live_verified": 0.9721,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7765,
+   "resolved": 0.9776,
+   "resolved_verified": 0.9493,
+   "resolved_strict": 0.8786,
+   "in_table": 0.9007,
+   "attested": 0.9978
+  },
+  "tetagiti": {
+   "n_poems": 13,
+   "n_tokens": 255,
+   "resolved_live_verified": 0.9767,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7956,
+   "resolved": 0.9844,
+   "resolved_verified": 0.9613,
+   "resolved_strict": 0.9131,
+   "in_table": 0.9684,
+   "attested": 0.9962
+  },
+  "utsahamu": {
+   "n_poems": 12,
+   "n_tokens": 330,
+   "resolved_live_verified": 0.9755,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7685,
+   "resolved": 0.9815,
+   "resolved_verified": 0.9446,
+   "resolved_strict": 0.8928,
+   "in_table": 0.9268,
+   "attested": 1.0
+  }
+ },
+ "by_alankaram": {
+  "(none asked)": {
+   "n_poems": 145,
+   "n_tokens": 3537,
+   "resolved_live_verified": 0.9634,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7415,
+   "resolved": 0.9761,
+   "resolved_verified": 0.9472,
+   "resolved_strict": 0.8282,
+   "in_table": 0.8485,
+   "attested": 0.997
+  },
+  "antyanuprasa": {
+   "n_poems": 12,
+   "n_tokens": 299,
+   "resolved_live_verified": 0.9759,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.8238,
+   "resolved": 0.9852,
+   "resolved_verified": 0.9611,
+   "resolved_strict": 0.8577,
+   "in_table": 0.7883,
+   "attested": 1.0
+  },
+  "atishayokti": {
+   "n_poems": 12,
+   "n_tokens": 298,
+   "resolved_live_verified": 0.9494,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.691,
+   "resolved": 0.9965,
+   "resolved_verified": 0.9354,
+   "resolved_strict": 0.7444,
+   "in_table": 0.6852,
+   "attested": 1.0
+  },
+  "muktapadagrasta": {
+   "n_poems": 12,
+   "n_tokens": 315,
+   "resolved_live_verified": 0.9525,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7727,
+   "resolved": 1.0,
+   "resolved_verified": 0.9525,
+   "resolved_strict": 0.8213,
+   "in_table": 0.7771,
+   "attested": 1.0
+  },
+  "rupaka": {
+   "n_poems": 12,
+   "n_tokens": 303,
+   "resolved_live_verified": 0.9667,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.6949,
+   "resolved": 0.9932,
+   "resolved_verified": 0.9704,
+   "resolved_strict": 0.7648,
+   "in_table": 0.7157,
+   "attested": 1.0
+  },
+  "shlesha": {
+   "n_poems": 12,
+   "n_tokens": 305,
+   "resolved_live_verified": 0.9704,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7606,
+   "resolved": 0.9968,
+   "resolved_verified": 0.9672,
+   "resolved_strict": 0.8079,
+   "in_table": 0.7304,
+   "attested": 1.0
+  },
+  "upama": {
+   "n_poems": 12,
+   "n_tokens": 314,
+   "resolved_live_verified": 0.9096,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.6628,
+   "resolved": 0.9906,
+   "resolved_verified": 0.9095,
+   "resolved_strict": 0.7134,
+   "in_table": 0.6721,
+   "attested": 1.0
+  },
+  "vrittyanuprasa": {
+   "n_poems": 12,
+   "n_tokens": 299,
+   "resolved_live_verified": 0.9893,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7936,
+   "resolved": 1.0,
+   "resolved_verified": 0.9893,
+   "resolved_strict": 0.8182,
+   "in_table": 0.7209,
+   "attested": 1.0
+  },
+  "yamaka": {
+   "n_poems": 12,
+   "n_tokens": 308,
+   "resolved_live_verified": 0.943,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7158,
+   "resolved": 0.9865,
+   "resolved_verified": 0.94,
+   "resolved_strict": 0.7826,
+   "in_table": 0.7371,
+   "attested": 0.9965
+  },
+  "chekanuprasa": {
+   "n_poems": 5,
+   "n_tokens": 134,
+   "resolved_live_verified": 0.9679,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7772,
+   "resolved": 0.9774,
+   "resolved_verified": 0.9607,
+   "resolved_strict": 0.8397,
+   "in_table": 0.7982,
+   "attested": 1.0
+  }
+ },
+ "by_in_study1_pool": {
+  "False": {
+   "n_poems": 162,
+   "n_tokens": 4110,
+   "resolved_live_verified": 0.9588,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.72,
+   "resolved": 0.9838,
+   "resolved_verified": 0.9487,
+   "resolved_strict": 0.7876,
+   "in_table": 0.7569,
+   "attested": 0.9978
+  },
+  "True": {
+   "n_poems": 84,
+   "n_tokens": 2002,
+   "resolved_live_verified": 0.9653,
+   "resolved_live": 1.0,
+   "resolved_live_strict": 0.7827,
+   "resolved": 0.9814,
+   "resolved_verified": 0.9519,
+   "resolved_strict": 0.8622,
+   "in_table": 0.885,
+   "attested": 0.9987
+  }
+ },
+ "poems": [
+  {"id":"gemini:poem_0001","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":0.96,"resolved_verified":0.96,"resolved_strict":0.84,"in_table":0.8,"attested":0.96,"classes_live":{"inflected":13,"resolved-by-byt5":6,"headword":6},"n_unresolved":1},
+  {"id":"gemini:poem_0002","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.8462,"resolved":0.9231,"resolved_verified":0.9231,"resolved_strict":0.8846,"in_table":0.8462,"attested":1.0,"classes_live":{"inflected":14,"headword":8,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0003","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.8571,"resolved":0.9286,"resolved_verified":0.8929,"resolved_strict":0.8214,"in_table":0.8571,"attested":1.0,"classes_live":{"inflected":20,"resolved-by-byt5":4,"split-all-known":1,"headword":3},"n_unresolved":1},
+  {"id":"gemini:poem_0004","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.625,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.75,"in_table":0.7917,"attested":1.0,"classes_live":{"inflected":8,"headword":7,"split-all-known":1,"resolved-by-byt5":8},"n_unresolved":1},
+  {"id":"gemini:poem_0005","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5833,"resolved":0.9583,"resolved_verified":0.9583,"resolved_strict":0.7083,"in_table":0.9167,"attested":1.0,"classes_live":{"inflected":13,"resolved-by-byt5":9,"headword":2},"n_unresolved":0},
+  {"id":"gemini:poem_0006","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7407,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8148,"in_table":0.8519,"attested":1.0,"classes_live":{"inflected":18,"resolved-by-byt5":4,"headword":5},"n_unresolved":0},
+  {"id":"gemini:poem_0007","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8889,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":19,"resolved-by-byt5":5,"headword":3},"n_unresolved":0},
+  {"id":"gemini:poem_0008","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":0.963,"resolved_verified":0.9259,"resolved_strict":0.7778,"in_table":0.7407,"attested":1.0,"classes_live":{"inflected":13,"resolved-by-byt5":8,"headword":6},"n_unresolved":1},
+  {"id":"gemini:poem_0009","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8929,"in_table":0.8929,"attested":1.0,"classes_live":{"inflected":18,"headword":5,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0010","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.88,"resolved_live":1.0,"resolved_live_strict":0.56,"resolved":0.92,"resolved_verified":0.8,"resolved_strict":0.56,"in_table":0.64,"attested":1.0,"classes_live":{"headword":5,"resolved-by-byt5":10,"inflected":10},"n_unresolved":3},
+  {"id":"gemini:poem_0011","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5652,"resolved":0.9565,"resolved_verified":0.9565,"resolved_strict":0.6522,"in_table":0.7391,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":10,"headword":3},"n_unresolved":0},
+  {"id":"gemini:poem_0012","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9259,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.963,"in_table":0.9259,"attested":1.0,"classes_live":{"headword":6,"inflected":18,"resolved-by-byt5":2,"split-all-known":1},"n_unresolved":0},
+  {"id":"gemini:poem_0013","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":0.9231,"resolved_live":1.0,"resolved_live_strict":0.8077,"resolved":0.9615,"resolved_verified":0.9615,"resolved_strict":0.9231,"in_table":0.9231,"attested":1.0,"classes_live":{"inflected":14,"headword":7,"resolved-by-byt5":5},"n_unresolved":2},
+  {"id":"gemini:poem_0014","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.5833,"resolved":0.9583,"resolved_verified":0.9167,"resolved_strict":0.6667,"in_table":0.8333,"attested":1.0,"classes_live":{"inflected":12,"headword":3,"resolved-by-byt5":9},"n_unresolved":1},
+  {"id":"gemini:poem_0015","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":21,"resolved_live_verified":0.9048,"resolved_live":1.0,"resolved_live_strict":0.4762,"resolved":1.0,"resolved_verified":0.9048,"resolved_strict":0.619,"in_table":0.6667,"attested":1.0,"classes_live":{"inflected":9,"resolved-by-byt5":9,"headword":3},"n_unresolved":2},
+  {"id":"gemini:poem_0016","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.72,"resolved":1.0,"resolved_verified":0.96,"resolved_strict":0.84,"in_table":0.88,"attested":1.0,"classes_live":{"headword":10,"inflected":10,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0017","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6087,"resolved":0.9565,"resolved_verified":0.9565,"resolved_strict":0.6957,"in_table":0.6957,"attested":1.0,"classes_live":{"headword":3,"inflected":12,"resolved-by-byt5":8},"n_unresolved":0},
+  {"id":"gemini:poem_0018","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.92,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":0.96,"resolved_verified":0.96,"resolved_strict":0.8,"in_table":0.84,"attested":1.0,"classes_live":{"headword":6,"inflected":13,"resolved-by-byt5":6},"n_unresolved":2},
+  {"id":"gemini:poem_0019","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.8077,"resolved":0.8846,"resolved_verified":0.8846,"resolved_strict":0.7692,"in_table":0.8077,"attested":1.0,"classes_live":{"headword":8,"inflected":14,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0020","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.8519,"resolved":0.963,"resolved_verified":0.963,"resolved_strict":0.8519,"in_table":0.8148,"attested":0.963,"classes_live":{"headword":13,"inflected":10,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0021","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.5769,"resolved":0.9615,"resolved_verified":0.9231,"resolved_strict":0.7692,"in_table":0.7692,"attested":1.0,"classes_live":{"inflected":15,"resolved-by-byt5":6,"headword":5},"n_unresolved":1},
+  {"id":"gemini:poem_0022","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.6087,"resolved":0.9565,"resolved_verified":0.9565,"resolved_strict":0.8261,"in_table":0.7391,"attested":1.0,"classes_live":{"inflected":13,"resolved-by-byt5":9,"headword":1},"n_unresolved":1},
+  {"id":"gemini:poem_0023","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.92,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":1.0,"resolved_verified":0.92,"resolved_strict":0.8,"in_table":0.68,"attested":1.0,"classes_live":{"headword":4,"inflected":15,"resolved-by-byt5":6},"n_unresolved":2},
+  {"id":"gemini:poem_0024","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":0.8182,"resolved_live":1.0,"resolved_live_strict":0.5909,"resolved":0.9545,"resolved_verified":0.8182,"resolved_strict":0.7273,"in_table":0.7273,"attested":0.9545,"classes_live":{"inflected":7,"headword":6,"resolved-by-byt5":9},"n_unresolved":4},
+  {"id":"gemini:poem_0025","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8,"in_table":0.84,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"inflected":15,"headword":5},"n_unresolved":0},
+  {"id":"gemini:poem_0026","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7692,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8462,"in_table":0.8077,"attested":1.0,"classes_live":{"inflected":13,"headword":7,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"gemini:poem_0027","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8077,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8462,"in_table":0.7692,"attested":1.0,"classes_live":{"inflected":16,"headword":5,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0028","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":1.0,"resolved_verified":0.96,"resolved_strict":0.76,"in_table":0.64,"attested":1.0,"classes_live":{"inflected":12,"headword":7,"resolved-by-byt5":6},"n_unresolved":1},
+  {"id":"gemini:poem_0029","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":24,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.4167,"resolved":0.9583,"resolved_verified":0.8333,"resolved_strict":0.5833,"in_table":0.5833,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"inflected":9,"headword":1},"n_unresolved":2},
+  {"id":"gemini:poem_0030","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6957,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7391,"in_table":0.4348,"attested":1.0,"classes_live":{"inflected":14,"resolved-by-byt5":7,"headword":2},"n_unresolved":0},
+  {"id":"gemini:poem_0031","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":0.9545,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":1.0,"resolved_verified":0.9545,"resolved_strict":0.5455,"in_table":0.5455,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":10,"headword":1},"n_unresolved":1},
+  {"id":"gemini:poem_0032","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.68,"resolved":1.0,"resolved_verified":0.96,"resolved_strict":0.68,"in_table":0.64,"attested":1.0,"classes_live":{"inflected":17,"resolved-by-byt5":8},"n_unresolved":1},
+  {"id":"gemini:poem_0033","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.6,"resolved":0.96,"resolved_verified":0.96,"resolved_strict":0.64,"in_table":0.56,"attested":0.96,"classes_live":{"resolved-by-byt5":10,"headword":4,"inflected":11},"n_unresolved":1},
+  {"id":"gemini:poem_0034","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":22,"resolved_live_verified":0.9091,"resolved_live":1.0,"resolved_live_strict":0.6818,"resolved":0.9091,"resolved_verified":0.9091,"resolved_strict":0.7273,"in_table":0.7273,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":12,"headword":3},"n_unresolved":2},
+  {"id":"gemini:poem_0035","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.5417,"resolved":0.9583,"resolved_verified":0.875,"resolved_strict":0.6667,"in_table":0.75,"attested":0.9583,"classes_live":{"inflected":10,"headword":4,"resolved-by-byt5":10},"n_unresolved":3},
+  {"id":"gemini:poem_0036","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":0.8636,"resolved_live":1.0,"resolved_live_strict":0.5455,"resolved":1.0,"resolved_verified":0.8636,"resolved_strict":0.6818,"in_table":0.5909,"attested":1.0,"classes_live":{"headword":2,"inflected":10,"resolved-by-byt5":10},"n_unresolved":3},
+  {"id":"gemini:poem_0037","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.92,"resolved_live":1.0,"resolved_live_strict":0.56,"resolved":1.0,"resolved_verified":0.92,"resolved_strict":0.6,"in_table":0.64,"attested":1.0,"classes_live":{"inflected":9,"headword":5,"resolved-by-byt5":11},"n_unresolved":2},
+  {"id":"gemini:poem_0038","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.72,"resolved":1.0,"resolved_verified":0.96,"resolved_strict":0.76,"in_table":0.76,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":15,"headword":3},"n_unresolved":1},
+  {"id":"gemini:poem_0039","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5909,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.6364,"in_table":0.6364,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":8,"headword":5},"n_unresolved":0},
+  {"id":"gemini:poem_0040","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":23,"resolved_live_verified":0.913,"resolved_live":1.0,"resolved_live_strict":0.6522,"resolved":0.9565,"resolved_verified":0.8696,"resolved_strict":0.6522,"in_table":0.6522,"attested":1.0,"classes_live":{"inflected":15,"resolved-by-byt5":8},"n_unresolved":2},
+  {"id":"gemini:poem_0041","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.7826,"resolved":1.0,"resolved_verified":0.9565,"resolved_strict":0.8261,"in_table":0.8261,"attested":1.0,"classes_live":{"inflected":18,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0042","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.84,"resolved":0.96,"resolved_verified":0.96,"resolved_strict":0.84,"in_table":0.84,"attested":1.0,"classes_live":{"inflected":18,"resolved-by-byt5":4,"headword":3},"n_unresolved":1},
+  {"id":"gemini:poem_0043","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.6,"resolved":1.0,"resolved_verified":0.96,"resolved_strict":0.8,"in_table":0.76,"attested":1.0,"classes_live":{"inflected":14,"headword":1,"resolved-by-byt5":10},"n_unresolved":1},
+  {"id":"gemini:poem_0044","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5833,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.6667,"in_table":0.6667,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":13,"headword":2},"n_unresolved":0},
+  {"id":"gemini:poem_0045","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.84,"in_table":0.8,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"inflected":19,"headword":1},"n_unresolved":0},
+  {"id":"gemini:poem_0046","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":0.9231,"resolved_live":1.0,"resolved_live_strict":0.7692,"resolved":1.0,"resolved_verified":0.9231,"resolved_strict":0.7692,"in_table":0.5769,"attested":1.0,"classes_live":{"inflected":15,"headword":5,"resolved-by-byt5":6},"n_unresolved":2},
+  {"id":"gemini:poem_0047","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.8462,"resolved":1.0,"resolved_verified":0.9615,"resolved_strict":0.8846,"in_table":0.7308,"attested":1.0,"classes_live":{"inflected":20,"resolved-by-byt5":4,"headword":2},"n_unresolved":1},
+  {"id":"gemini:poem_0048","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":22,"resolved_live_verified":0.9091,"resolved_live":1.0,"resolved_live_strict":0.6818,"resolved":0.9545,"resolved_verified":0.8636,"resolved_strict":0.7273,"in_table":0.6364,"attested":1.0,"classes_live":{"inflected":15,"resolved-by-byt5":7},"n_unresolved":2},
+  {"id":"gemini:poem_0049","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.5417,"resolved":1.0,"resolved_verified":0.9167,"resolved_strict":0.5417,"in_table":0.75,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":13},"n_unresolved":0},
+  {"id":"gemini:poem_0050","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8333,"in_table":0.625,"attested":1.0,"classes_live":{"inflected":18,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"gemini:poem_0051","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.625,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.6667,"in_table":0.6667,"attested":1.0,"classes_live":{"inflected":13,"headword":2,"resolved-by-byt5":9},"n_unresolved":1},
+  {"id":"gemini:poem_0052","metre":"mattebhavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":1.0,"resolved_verified":0.963,"resolved_strict":0.8519,"in_table":0.7407,"attested":1.0,"classes_live":{"inflected":19,"resolved-by-byt5":4,"headword":4},"n_unresolved":1},
+  {"id":"gemini:poem_0053","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":1.0,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":1.0,"attested":1.0,"classes_live":{"headword":14,"inflected":6},"n_unresolved":0},
+  {"id":"gemini:poem_0054","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9,"resolved":0.9,"resolved_verified":0.9,"resolved_strict":0.9,"in_table":1.0,"attested":1.0,"classes_live":{"headword":14,"inflected":5,"resolved-by-byt5":1},"n_unresolved":0},
+  {"id":"gemini:poem_0055","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":0.95,"resolved_verified":0.95,"resolved_strict":0.85,"in_table":0.95,"attested":1.0,"classes_live":{"inflected":9,"resolved-by-byt5":3,"headword":8},"n_unresolved":1},
+  {"id":"gemini:poem_0056","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.85,"resolved":0.85,"resolved_verified":0.85,"resolved_strict":0.8,"in_table":1.0,"attested":1.0,"classes_live":{"headword":10,"resolved-by-byt5":2,"inflected":8},"n_unresolved":1},
+  {"id":"gemini:poem_0057","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.85,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.95,"in_table":0.95,"attested":1.0,"classes_live":{"headword":11,"inflected":7,"resolved-by-byt5":2},"n_unresolved":1},
+  {"id":"gemini:poem_0058","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":21,"resolved_live_verified":0.9524,"resolved_live":1.0,"resolved_live_strict":0.8095,"resolved":0.9524,"resolved_verified":0.9048,"resolved_strict":0.8095,"in_table":0.9048,"attested":1.0,"classes_live":{"headword":12,"inflected":5,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0059","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":21,"resolved_live_verified":0.9048,"resolved_live":1.0,"resolved_live_strict":0.8571,"resolved":1.0,"resolved_verified":0.9524,"resolved_strict":0.9524,"in_table":1.0,"attested":1.0,"classes_live":{"headword":12,"inflected":7,"resolved-by-byt5":2},"n_unresolved":2},
+  {"id":"gemini:poem_0060","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":0.9,"resolved_live":1.0,"resolved_live_strict":0.55,"resolved":0.95,"resolved_verified":0.85,"resolved_strict":0.85,"in_table":0.95,"attested":0.95,"classes_live":{"headword":8,"resolved-by-byt5":4,"inflected":8},"n_unresolved":2},
+  {"id":"gemini:poem_0061","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":0.85,"resolved_verified":0.85,"resolved_strict":0.85,"in_table":1.0,"attested":1.0,"classes_live":{"headword":11,"resolved-by-byt5":3,"inflected":6},"n_unresolved":1},
+  {"id":"gemini:poem_0062","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.95,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.95,"in_table":1.0,"attested":1.0,"classes_live":{"headword":14,"inflected":6},"n_unresolved":0},
+  {"id":"gemini:poem_0063","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.95,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":1.0,"attested":1.0,"classes_live":{"headword":9,"inflected":11},"n_unresolved":0},
+  {"id":"gemini:poem_0064","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":0.85,"resolved_verified":0.85,"resolved_strict":0.85,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":7,"headword":9,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0065","metre":"ataveladi","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":0.9,"resolved_verified":0.9,"resolved_strict":0.8,"in_table":0.9,"attested":1.0,"classes_live":{"inflected":12,"headword":5,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0066","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.9,"resolved":0.95,"resolved_verified":0.95,"resolved_strict":0.9,"in_table":1.0,"attested":1.0,"classes_live":{"headword":10,"resolved-by-byt5":2,"inflected":8},"n_unresolved":1},
+  {"id":"gemini:poem_0067","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":18,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7222,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8333,"in_table":0.9444,"attested":1.0,"classes_live":{"inflected":9,"resolved-by-byt5":4,"headword":5},"n_unresolved":0},
+  {"id":"gemini:poem_0068","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":19,"resolved_live_verified":0.9474,"resolved_live":1.0,"resolved_live_strict":0.8421,"resolved":0.9474,"resolved_verified":0.9474,"resolved_strict":0.9474,"in_table":0.9474,"attested":1.0,"classes_live":{"headword":7,"resolved-by-byt5":3,"inflected":9},"n_unresolved":1},
+  {"id":"gemini:poem_0069","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":1.0,"attested":1.0,"classes_live":{"headword":10,"inflected":8,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0070","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":19,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6316,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7895,"in_table":0.9474,"attested":1.0,"classes_live":{"headword":8,"resolved-by-byt5":7,"inflected":4},"n_unresolved":0},
+  {"id":"gemini:poem_0071","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":0.9,"attested":1.0,"classes_live":{"inflected":8,"headword":11,"resolved-by-byt5":1},"n_unresolved":0},
+  {"id":"gemini:poem_0072","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.7,"resolved":0.95,"resolved_verified":0.9,"resolved_strict":0.8,"in_table":1.0,"attested":0.95,"classes_live":{"headword":8,"inflected":6,"resolved-by-byt5":6},"n_unresolved":1},
+  {"id":"gemini:poem_0073","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.85,"resolved":0.95,"resolved_verified":0.95,"resolved_strict":0.95,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":6,"resolved-by-byt5":3,"headword":11},"n_unresolved":1},
+  {"id":"gemini:poem_0074","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":19,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9474,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":8,"headword":10,"resolved-by-byt5":1},"n_unresolved":0},
+  {"id":"gemini:poem_0075","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.65,"resolved":1.0,"resolved_verified":0.9,"resolved_strict":0.85,"in_table":0.95,"attested":1.0,"classes_live":{"inflected":9,"headword":7,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0076","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.85,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":1.0,"attested":1.0,"classes_live":{"headword":10,"inflected":8,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0077","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.85,"resolved":1.0,"resolved_verified":0.95,"resolved_strict":0.95,"in_table":1.0,"attested":1.0,"classes_live":{"headword":12,"inflected":5,"resolved-by-byt5":3},"n_unresolved":1},
+  {"id":"gemini:poem_0078","metre":"tetagiti","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":20,"resolved_live_verified":0.95,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":1.0,"resolved_verified":0.9,"resolved_strict":0.85,"in_table":0.9,"attested":1.0,"classes_live":{"headword":8,"inflected":8,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0079","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":37,"resolved_live_verified":0.9459,"resolved_live":1.0,"resolved_live_strict":0.8649,"resolved":1.0,"resolved_verified":0.9189,"resolved_strict":0.8919,"in_table":0.9459,"attested":1.0,"classes_live":{"headword":17,"inflected":15,"resolved-by-byt5":5},"n_unresolved":2},
+  {"id":"gemini:poem_0080","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":41,"resolved_live_verified":0.9512,"resolved_live":1.0,"resolved_live_strict":0.8537,"resolved":1.0,"resolved_verified":0.9756,"resolved_strict":0.9268,"in_table":0.9512,"attested":1.0,"classes_live":{"headword":24,"inflected":12,"resolved-by-byt5":5},"n_unresolved":2},
+  {"id":"gemini:poem_0081","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":35,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":1.0,"resolved_verified":0.9143,"resolved_strict":0.8857,"in_table":0.9429,"attested":1.0,"classes_live":{"headword":11,"resolved-by-byt5":6,"inflected":18},"n_unresolved":0},
+  {"id":"gemini:poem_0082","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":40,"resolved_live_verified":0.975,"resolved_live":1.0,"resolved_live_strict":0.85,"resolved":0.975,"resolved_verified":0.95,"resolved_strict":0.95,"in_table":0.925,"attested":1.0,"classes_live":{"headword":15,"inflected":22,"resolved-by-byt5":3},"n_unresolved":1},
+  {"id":"gemini:poem_0083","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":32,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7188,"resolved":1.0,"resolved_verified":0.9688,"resolved_strict":0.8438,"in_table":0.9062,"attested":1.0,"classes_live":{"inflected":19,"headword":6,"resolved-by-byt5":7},"n_unresolved":0},
+  {"id":"gemini:poem_0084","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":32,"resolved_live_verified":0.9688,"resolved_live":1.0,"resolved_live_strict":0.6875,"resolved":0.9688,"resolved_verified":0.9375,"resolved_strict":0.8125,"in_table":0.7812,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":17,"headword":6},"n_unresolved":1},
+  {"id":"gemini:poem_0085","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":31,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.871,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9032,"in_table":0.9032,"attested":1.0,"classes_live":{"inflected":17,"resolved-by-byt5":3,"headword":11},"n_unresolved":0},
+  {"id":"gemini:poem_0086","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":35,"resolved_live_verified":0.9429,"resolved_live":1.0,"resolved_live_strict":0.8286,"resolved":0.9143,"resolved_verified":0.9143,"resolved_strict":0.8857,"in_table":0.9429,"attested":0.9714,"classes_live":{"headword":13,"resolved-by-byt5":4,"inflected":18},"n_unresolved":2},
+  {"id":"gemini:poem_0087","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":35,"resolved_live_verified":0.9429,"resolved_live":1.0,"resolved_live_strict":0.6286,"resolved":0.9429,"resolved_verified":0.9429,"resolved_strict":0.8571,"in_table":0.8857,"attested":1.0,"classes_live":{"headword":10,"inflected":15,"resolved-by-byt5":10},"n_unresolved":2},
+  {"id":"gemini:poem_0088","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":35,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7429,"resolved":1.0,"resolved_verified":0.9714,"resolved_strict":0.8571,"in_table":0.8857,"attested":1.0,"classes_live":{"headword":13,"resolved-by-byt5":8,"inflected":14},"n_unresolved":0},
+  {"id":"gemini:poem_0089","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":34,"resolved_live_verified":0.9706,"resolved_live":1.0,"resolved_live_strict":0.7941,"resolved":1.0,"resolved_verified":0.9706,"resolved_strict":0.8824,"in_table":0.8235,"attested":1.0,"classes_live":{"inflected":17,"headword":11,"resolved-by-byt5":6},"n_unresolved":1},
+  {"id":"gemini:poem_0090","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":34,"resolved_live_verified":0.9706,"resolved_live":1.0,"resolved_live_strict":0.7353,"resolved":0.9706,"resolved_verified":0.9706,"resolved_strict":0.8824,"in_table":0.9412,"attested":1.0,"classes_live":{"inflected":18,"resolved-by-byt5":5,"headword":11},"n_unresolved":1},
+  {"id":"gemini:poem_0091","metre":"seesamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":32,"resolved_live_verified":0.9688,"resolved_live":1.0,"resolved_live_strict":0.7188,"resolved":0.9375,"resolved_verified":0.9062,"resolved_strict":0.8438,"in_table":0.875,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":18,"headword":5},"n_unresolved":1},
+  {"id":"gemini:poem_0092","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":0.9375,"resolved_verified":0.9375,"resolved_strict":0.875,"in_table":0.9375,"attested":1.0,"classes_live":{"inflected":11,"resolved-by-byt5":3,"headword":2},"n_unresolved":1},
+  {"id":"gemini:poem_0093","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.875,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9375,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":13,"resolved-by-byt5":2,"headword":1},"n_unresolved":0},
+  {"id":"gemini:poem_0094","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":16,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.6875,"resolved":0.875,"resolved_verified":0.875,"resolved_strict":0.75,"in_table":1.0,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"inflected":11},"n_unresolved":2},
+  {"id":"gemini:poem_0095","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9375,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.875,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":11,"headword":3,"resolved-by-byt5":1,"split-all-known":1},"n_unresolved":0},
+  {"id":"gemini:poem_0096","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.875,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":0.875,"attested":1.0,"classes_live":{"inflected":10,"resolved-by-byt5":2,"headword":4},"n_unresolved":0},
+  {"id":"gemini:poem_0097","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":15,"resolved_live_verified":0.8,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":0.8,"resolved_verified":0.8,"resolved_strict":0.7333,"in_table":0.9333,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"headword":1,"inflected":9},"n_unresolved":3},
+  {"id":"gemini:poem_0098","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":16,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.6875,"resolved":0.9375,"resolved_verified":0.875,"resolved_strict":0.8125,"in_table":0.75,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"headword":2,"inflected":9},"n_unresolved":2},
+  {"id":"gemini:poem_0099","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":16,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.875,"resolved":0.9375,"resolved_verified":0.9375,"resolved_strict":0.9375,"in_table":0.9375,"attested":0.9375,"classes_live":{"inflected":12,"resolved-by-byt5":2,"headword":2},"n_unresolved":2},
+  {"id":"gemini:poem_0100","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.875,"in_table":0.875,"attested":1.0,"classes_live":{"inflected":11,"headword":2,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0101","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":16,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9375,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.875,"in_table":0.875,"attested":1.0,"classes_live":{"headword":4,"inflected":11,"resolved-by-byt5":1},"n_unresolved":0},
+  {"id":"gemini:poem_0102","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":16,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":0.9375,"resolved_verified":0.875,"resolved_strict":0.875,"in_table":0.9375,"attested":1.0,"classes_live":{"resolved-by-byt5":4,"inflected":8,"headword":3,"split-all-known":1},"n_unresolved":2},
+  {"id":"gemini:poem_0103","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":16,"resolved_live_verified":0.9375,"resolved_live":1.0,"resolved_live_strict":0.875,"resolved":1.0,"resolved_verified":0.875,"resolved_strict":0.875,"in_table":0.9375,"attested":1.0,"classes_live":{"inflected":13,"headword":1,"resolved-by-byt5":2},"n_unresolved":1},
+  {"id":"gemini:poem_0104","metre":"kandamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":15,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8667,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":13,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0105","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8214,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":0.9286,"attested":1.0,"classes_live":{"inflected":11,"headword":15,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0106","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.6154,"resolved":0.9615,"resolved_verified":0.9231,"resolved_strict":0.8077,"in_table":0.8077,"attested":1.0,"classes_live":{"headword":12,"inflected":7,"resolved-by-byt5":7},"n_unresolved":1},
+  {"id":"gemini:poem_0107","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":0.9259,"resolved_live":1.0,"resolved_live_strict":0.8519,"resolved":0.963,"resolved_verified":0.9259,"resolved_strict":0.8519,"in_table":0.9259,"attested":1.0,"classes_live":{"inflected":8,"resolved-by-byt5":4,"headword":15},"n_unresolved":2},
+  {"id":"gemini:poem_0108","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7143,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.8571,"in_table":0.9286,"attested":1.0,"classes_live":{"inflected":11,"headword":13,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0109","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":0.963,"resolved_verified":0.8519,"resolved_strict":0.8148,"in_table":0.9259,"attested":1.0,"classes_live":{"headword":15,"inflected":8,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0110","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.8929,"in_table":0.9286,"attested":1.0,"classes_live":{"headword":15,"inflected":7,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"gemini:poem_0111","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8214,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9643,"in_table":0.8571,"attested":1.0,"classes_live":{"inflected":10,"headword":16,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0112","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.6786,"resolved":0.9643,"resolved_verified":0.9643,"resolved_strict":0.9286,"in_table":0.9643,"attested":1.0,"classes_live":{"headword":12,"inflected":12,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0113","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.6538,"resolved":0.9615,"resolved_verified":0.8846,"resolved_strict":0.8462,"in_table":0.9615,"attested":1.0,"classes_live":{"headword":13,"inflected":6,"resolved-by-byt5":7},"n_unresolved":1},
+  {"id":"gemini:poem_0114","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":0.9286,"resolved_live":1.0,"resolved_live_strict":0.8214,"resolved":0.9643,"resolved_verified":0.9643,"resolved_strict":0.8929,"in_table":0.9643,"attested":1.0,"classes_live":{"headword":11,"inflected":13,"resolved-by-byt5":4},"n_unresolved":2},
+  {"id":"gemini:poem_0115","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.8929,"resolved":1.0,"resolved_verified":0.9286,"resolved_strict":0.8929,"in_table":0.9286,"attested":1.0,"classes_live":{"headword":19,"resolved-by-byt5":3,"inflected":6},"n_unresolved":1},
+  {"id":"gemini:poem_0116","metre":"utsahamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7857,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.9643,"in_table":1.0,"attested":1.0,"classes_live":{"headword":12,"inflected":12,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0117","metre":"utpalamala","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.88,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.88,"in_table":0.84,"attested":1.0,"classes_live":{"inflected":14,"headword":8,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0118","metre":"utpalamala","alankaram":"vrittyanuprasa","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9286,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9643,"in_table":0.9643,"attested":1.0,"classes_live":{"inflected":16,"headword":10,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0119","metre":"utpalamala","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9643,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9286,"in_table":0.9643,"attested":1.0,"classes_live":{"inflected":19,"headword":8,"resolved-by-byt5":1},"n_unresolved":0},
+  {"id":"gemini:poem_0120","metre":"utpalamala","alankaram":"antyanuprasa","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.963,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":10,"headword":12,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0121","metre":"utpalamala","alankaram":"antyanuprasa","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8929,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9643,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":12,"headword":13,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0122","metre":"utpalamala","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9643,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9643,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":17,"headword":10,"resolved-by-byt5":1},"n_unresolved":0},
+  {"id":"gemini:poem_0123","metre":"utpalamala","alankaram":"yamaka","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8889,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.963,"in_table":0.8519,"attested":1.0,"classes_live":{"inflected":16,"headword":8,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0124","metre":"utpalamala","alankaram":"yamaka","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8929,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9286,"in_table":0.8929,"attested":1.0,"classes_live":{"inflected":15,"headword":10,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0125","metre":"utpalamala","alankaram":"yamaka","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.9286,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.9286,"in_table":0.8929,"attested":1.0,"classes_live":{"inflected":18,"headword":8,"resolved-by-byt5":2},"n_unresolved":1},
+  {"id":"gemini:poem_0126","metre":"utpalamala","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8519,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.963,"in_table":0.8519,"attested":1.0,"classes_live":{"inflected":13,"headword":10,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0127","metre":"utpalamala","alankaram":"muktapadagrasta","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9286,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":13,"headword":13,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0128","metre":"utpalamala","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.9286,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.9286,"in_table":0.9286,"attested":1.0,"classes_live":{"inflected":17,"headword":9,"resolved-by-byt5":2},"n_unresolved":1},
+  {"id":"gemini:poem_0129","metre":"utpalamala","alankaram":"rupaka","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7778,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8519,"in_table":0.8148,"attested":1.0,"classes_live":{"inflected":11,"headword":10,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"gemini:poem_0130","metre":"utpalamala","alankaram":"rupaka","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8214,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8929,"in_table":0.8571,"attested":1.0,"classes_live":{"inflected":15,"headword":8,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0131","metre":"utpalamala","alankaram":"rupaka","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8077,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8077,"in_table":0.8846,"attested":1.0,"classes_live":{"inflected":14,"resolved-by-byt5":5,"headword":7},"n_unresolved":0},
+  {"id":"gemini:poem_0132","metre":"utpalamala","alankaram":"shlesha","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9259,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":1.0,"in_table":0.9259,"attested":1.0,"classes_live":{"inflected":17,"headword":8,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0133","metre":"utpalamala","alankaram":"shlesha","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8889,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9259,"in_table":0.963,"attested":1.0,"classes_live":{"inflected":18,"headword":6,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0134","metre":"utpalamala","alankaram":"shlesha","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.8929,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.8571,"in_table":0.8929,"attested":1.0,"classes_live":{"inflected":19,"resolved-by-byt5":3,"headword":6},"n_unresolved":1},
+  {"id":"gemini:poem_0135","metre":"utpalamala","alankaram":"chekanuprasa","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8889,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.963,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":15,"headword":9,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0136","metre":"utpalamala","alankaram":"chekanuprasa","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8571,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9286,"in_table":0.9286,"attested":1.0,"classes_live":{"inflected":15,"headword":9,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0137","metre":"utpalamala","alankaram":"chekanuprasa","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9259,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9259,"in_table":0.8519,"attested":1.0,"classes_live":{"inflected":17,"headword":8,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0138","metre":"utpalamala","alankaram":"upama","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.9643,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.9643,"in_table":0.9286,"attested":1.0,"classes_live":{"inflected":16,"headword":11,"resolved-by-byt5":1},"n_unresolved":1},
+  {"id":"gemini:poem_0139","metre":"utpalamala","alankaram":"upama","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7692,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8077,"in_table":0.8846,"attested":1.0,"classes_live":{"inflected":12,"headword":8,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"gemini:poem_0140","metre":"utpalamala","alankaram":"upama","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8519,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":16,"resolved-by-byt5":5,"headword":6},"n_unresolved":0},
+  {"id":"gemini:poem_0141","metre":"utpalamala","alankaram":"atishayokti","in_study1_pool":true,"n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8,"in_table":0.8,"attested":1.0,"classes_live":{"inflected":11,"resolved-by-byt5":6,"headword":8},"n_unresolved":0},
+  {"id":"gemini:poem_0142","metre":"utpalamala","alankaram":"atishayokti","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8077,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9231,"in_table":0.9615,"attested":1.0,"classes_live":{"inflected":14,"headword":8,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0143","metre":"utpalamala","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.8462,"resolved":1.0,"resolved_verified":0.9615,"resolved_strict":0.8462,"in_table":0.7692,"attested":1.0,"classes_live":{"inflected":12,"headword":10,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0144","metre":"champakamala","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8846,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9231,"in_table":0.7692,"attested":1.0,"classes_live":{"inflected":18,"headword":5,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0145","metre":"champakamala","alankaram":"vrittyanuprasa","in_study1_pool":true,"n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.84,"in_table":0.8,"attested":1.0,"classes_live":{"inflected":17,"resolved-by-byt5":5,"headword":3},"n_unresolved":0},
+  {"id":"gemini:poem_0146","metre":"champakamala","alankaram":"vrittyanuprasa","in_study1_pool":true,"n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.76,"in_table":0.68,"attested":1.0,"classes_live":{"inflected":17,"headword":3,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0147","metre":"champakamala","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":19,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9474,"resolved":0.9474,"resolved_verified":0.9474,"resolved_strict":0.8947,"in_table":0.7895,"attested":1.0,"classes_live":{"inflected":15,"resolved-by-byt5":1,"headword":3},"n_unresolved":0},
+  {"id":"gemini:poem_0148","metre":"champakamala","alankaram":"antyanuprasa","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.9259,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9259,"in_table":0.8889,"attested":1.0,"classes_live":{"headword":9,"resolved-by-byt5":2,"inflected":16},"n_unresolved":0},
+  {"id":"gemini:poem_0149","metre":"champakamala","alankaram":"antyanuprasa","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.8214,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.9286,"in_table":0.9643,"attested":1.0,"classes_live":{"headword":9,"inflected":15,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0150","metre":"champakamala","alankaram":"yamaka","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.7407,"resolved":0.963,"resolved_verified":0.9259,"resolved_strict":0.7407,"in_table":0.8148,"attested":1.0,"classes_live":{"headword":8,"inflected":12,"resolved-by-byt5":7},"n_unresolved":1},
+  {"id":"gemini:poem_0151","metre":"champakamala","alankaram":"yamaka","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.8571,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.9286,"in_table":0.9286,"attested":1.0,"classes_live":{"headword":14,"inflected":12,"resolved-by-byt5":2},"n_unresolved":1},
+  {"id":"gemini:poem_0152","metre":"champakamala","alankaram":"yamaka","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":0.9286,"resolved_live":1.0,"resolved_live_strict":0.8571,"resolved":1.0,"resolved_verified":0.9286,"resolved_strict":0.9286,"in_table":1.0,"attested":1.0,"classes_live":{"inflected":18,"headword":8,"resolved-by-byt5":2},"n_unresolved":2},
+  {"id":"gemini:poem_0153","metre":"champakamala","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.7778,"resolved":1.0,"resolved_verified":0.963,"resolved_strict":0.7778,"in_table":0.8148,"attested":1.0,"classes_live":{"headword":7,"inflected":14,"resolved-by-byt5":6},"n_unresolved":1},
+  {"id":"gemini:poem_0154","metre":"champakamala","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8148,"in_table":0.7778,"attested":1.0,"classes_live":{"headword":11,"resolved-by-byt5":5,"inflected":11},"n_unresolved":0},
+  {"id":"gemini:poem_0155","metre":"champakamala","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":0.8889,"resolved_strict":0.8148,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":17,"resolved-by-byt5":6,"headword":4},"n_unresolved":3},
+  {"id":"gemini:poem_0156","metre":"champakamala","alankaram":"chekanuprasa","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.7143,"resolved":0.9286,"resolved_verified":0.9286,"resolved_strict":0.7143,"in_table":0.8214,"attested":1.0,"classes_live":{"headword":7,"inflected":13,"resolved-by-byt5":8},"n_unresolved":1},
+  {"id":"gemini:poem_0159","metre":"champakamala","alankaram":"rupaka","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.72,"resolved":0.96,"resolved_verified":0.96,"resolved_strict":0.8,"in_table":0.8,"attested":1.0,"classes_live":{"headword":7,"inflected":12,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"gemini:poem_0160","metre":"champakamala","alankaram":"rupaka","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":1.0,"resolved_verified":0.963,"resolved_strict":0.8889,"in_table":0.8519,"attested":1.0,"classes_live":{"headword":13,"inflected":10,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0161","metre":"champakamala","alankaram":"rupaka","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":0.8889,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":0.8889,"resolved_strict":0.7407,"in_table":0.8148,"attested":1.0,"classes_live":{"inflected":16,"resolved-by-byt5":5,"headword":6},"n_unresolved":3},
+  {"id":"gemini:poem_0162","metre":"champakamala","alankaram":"shlesha","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8077,"resolved":0.9615,"resolved_verified":0.9615,"resolved_strict":0.8077,"in_table":0.8077,"attested":1.0,"classes_live":{"headword":5,"inflected":16,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0163","metre":"champakamala","alankaram":"shlesha","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.8571,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.8571,"in_table":0.8214,"attested":1.0,"classes_live":{"headword":11,"inflected":13,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0164","metre":"champakamala","alankaram":"shlesha","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.9259,"resolved_live":1.0,"resolved_live_strict":0.7407,"resolved":1.0,"resolved_verified":0.9259,"resolved_strict":0.8519,"in_table":0.8889,"attested":1.0,"classes_live":{"inflected":18,"headword":5,"resolved-by-byt5":4},"n_unresolved":2},
+  {"id":"gemini:poem_0165","metre":"champakamala","alankaram":"upama","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":0.9615,"resolved_live":1.0,"resolved_live_strict":0.7692,"resolved":0.9615,"resolved_verified":0.9231,"resolved_strict":0.7692,"in_table":0.8077,"attested":1.0,"classes_live":{"headword":9,"inflected":11,"resolved-by-byt5":6},"n_unresolved":1},
+  {"id":"gemini:poem_0166","metre":"champakamala","alankaram":"upama","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.8148,"resolved":1.0,"resolved_verified":0.963,"resolved_strict":0.8519,"in_table":0.8148,"attested":1.0,"classes_live":{"headword":12,"inflected":10,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0167","metre":"champakamala","alankaram":"upama","in_study1_pool":true,"n_tokens":28,"resolved_live_verified":0.8571,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":0.8571,"resolved_strict":0.8214,"in_table":0.8214,"attested":1.0,"classes_live":{"inflected":16,"headword":8,"resolved-by-byt5":4},"n_unresolved":4},
+  {"id":"gemini:poem_0168","metre":"champakamala","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":0.9583,"resolved_verified":0.9167,"resolved_strict":0.6667,"in_table":0.7083,"attested":1.0,"classes_live":{"headword":6,"inflected":10,"resolved-by-byt5":8},"n_unresolved":1},
+  {"id":"gemini:poem_0169","metre":"champakamala","alankaram":"atishayokti","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":0.9259,"resolved_live":1.0,"resolved_live_strict":0.8519,"resolved":1.0,"resolved_verified":0.9259,"resolved_strict":0.8519,"in_table":0.8148,"attested":1.0,"classes_live":{"headword":12,"inflected":11,"resolved-by-byt5":4},"n_unresolved":2},
+  {"id":"gemini:poem_0170","metre":"champakamala","alankaram":"atishayokti","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":0.9259,"resolved_live":1.0,"resolved_live_strict":0.6296,"resolved":1.0,"resolved_verified":0.9259,"resolved_strict":0.7778,"in_table":0.8148,"attested":1.0,"classes_live":{"inflected":15,"resolved-by-byt5":7,"headword":5},"n_unresolved":2},
+  {"id":"gemini:poem_0171","metre":"sardulavikriditamu","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":0.9545,"resolved_live":1.0,"resolved_live_strict":0.6818,"resolved":1.0,"resolved_verified":0.9545,"resolved_strict":0.7727,"in_table":0.5909,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"headword":2,"inflected":14},"n_unresolved":1},
+  {"id":"gemini:poem_0172","metre":"sardulavikriditamu","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.625,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.7083,"in_table":0.5,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":15,"headword":1},"n_unresolved":1},
+  {"id":"gemini:poem_0173","metre":"sardulavikriditamu","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.625,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.6667,"in_table":0.4167,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":14,"headword":1},"n_unresolved":1},
+  {"id":"gemini:poem_0174","metre":"sardulavikriditamu","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":0.9545,"resolved_live":1.0,"resolved_live_strict":0.7273,"resolved":1.0,"resolved_verified":0.9545,"resolved_strict":0.8182,"in_table":0.6364,"attested":1.0,"classes_live":{"resolved-by-byt5":5,"headword":2,"inflected":15},"n_unresolved":1},
+  {"id":"gemini:poem_0175","metre":"sardulavikriditamu","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.75,"in_table":0.5417,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":16,"headword":1},"n_unresolved":1},
+  {"id":"gemini:poem_0176","metre":"sardulavikriditamu","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.7083,"in_table":0.375,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":15,"headword":1},"n_unresolved":1},
+  {"id":"gemini:poem_0177","metre":"sardulavikriditamu","alankaram":"yamaka","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.6087,"resolved":1.0,"resolved_verified":0.9565,"resolved_strict":0.6957,"in_table":0.5217,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":13,"headword":2},"n_unresolved":1},
+  {"id":"gemini:poem_0178","metre":"sardulavikriditamu","alankaram":"yamaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.4583,"resolved":0.9583,"resolved_verified":0.8333,"resolved_strict":0.625,"in_table":0.4583,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":13,"headword":1},"n_unresolved":4},
+  {"id":"gemini:poem_0179","metre":"sardulavikriditamu","alankaram":"yamaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.75,"resolved_live":1.0,"resolved_live_strict":0.375,"resolved":0.9167,"resolved_verified":0.75,"resolved_strict":0.4583,"in_table":0.4167,"attested":0.9583,"classes_live":{"resolved-by-byt5":14,"inflected":9,"headword":1},"n_unresolved":6},
+  {"id":"gemini:poem_0180","metre":"sardulavikriditamu","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":0.8636,"resolved_live":1.0,"resolved_live_strict":0.5909,"resolved":1.0,"resolved_verified":0.8636,"resolved_strict":0.6818,"in_table":0.5909,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"headword":2,"inflected":12},"n_unresolved":3},
+  {"id":"gemini:poem_0181","metre":"sardulavikriditamu","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.5417,"resolved":1.0,"resolved_verified":0.875,"resolved_strict":0.625,"in_table":0.5,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"inflected":13,"headword":1},"n_unresolved":3},
+  {"id":"gemini:poem_0182","metre":"sardulavikriditamu","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.5417,"resolved":1.0,"resolved_verified":0.875,"resolved_strict":0.5833,"in_table":0.4167,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":12,"headword":1},"n_unresolved":3},
+  {"id":"gemini:poem_0183","metre":"sardulavikriditamu","alankaram":"chekanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":0.9583,"resolved_verified":0.875,"resolved_strict":0.6667,"in_table":0.5,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"headword":3,"inflected":12},"n_unresolved":3},
+  {"id":"gemini:poem_0186","metre":"sardulavikriditamu","alankaram":"rupaka","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.5217,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.6957,"in_table":0.5652,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":2,"inflected":11},"n_unresolved":1},
+  {"id":"gemini:poem_0187","metre":"sardulavikriditamu","alankaram":"rupaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.4583,"resolved":0.9583,"resolved_verified":0.9167,"resolved_strict":0.6667,"in_table":0.625,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":12,"headword":1},"n_unresolved":3},
+  {"id":"gemini:poem_0188","metre":"sardulavikriditamu","alankaram":"rupaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.5417,"resolved":1.0,"resolved_verified":0.9167,"resolved_strict":0.625,"in_table":0.4167,"attested":1.0,"classes_live":{"resolved-by-byt5":11,"inflected":11,"headword":2},"n_unresolved":2},
+  {"id":"gemini:poem_0189","metre":"sardulavikriditamu","alankaram":"shlesha","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.6522,"resolved":1.0,"resolved_verified":0.9565,"resolved_strict":0.7391,"in_table":0.5217,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":14,"headword":2},"n_unresolved":1},
+  {"id":"gemini:poem_0190","metre":"sardulavikriditamu","alankaram":"shlesha","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.625,"resolved":1.0,"resolved_verified":0.9167,"resolved_strict":0.7083,"in_table":0.5,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":14,"headword":2},"n_unresolved":2},
+  {"id":"gemini:poem_0191","metre":"sardulavikriditamu","alankaram":"shlesha","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9167,"resolved_live":1.0,"resolved_live_strict":0.625,"resolved":1.0,"resolved_verified":0.9167,"resolved_strict":0.6667,"in_table":0.4167,"attested":1.0,"classes_live":{"resolved-by-byt5":9,"inflected":14,"headword":1},"n_unresolved":2},
+  {"id":"gemini:poem_0192","metre":"sardulavikriditamu","alankaram":"upama","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.8148,"resolved_live":1.0,"resolved_live_strict":0.4444,"resolved":0.963,"resolved_verified":0.7778,"resolved_strict":0.5185,"in_table":0.4444,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"headword":3,"inflected":10},"n_unresolved":5},
+  {"id":"gemini:poem_0193","metre":"sardulavikriditamu","alankaram":"upama","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.7407,"resolved_live":1.0,"resolved_live_strict":0.4074,"resolved":0.963,"resolved_verified":0.7778,"resolved_strict":0.5556,"in_table":0.4444,"attested":1.0,"classes_live":{"resolved-by-byt5":14,"inflected":12,"headword":1},"n_unresolved":7},
+  {"id":"gemini:poem_0194","metre":"sardulavikriditamu","alankaram":"upama","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.7407,"resolved_live":1.0,"resolved_live_strict":0.4444,"resolved":1.0,"resolved_verified":0.7778,"resolved_strict":0.5185,"in_table":0.2963,"attested":1.0,"classes_live":{"resolved-by-byt5":15,"inflected":11,"headword":1},"n_unresolved":7},
+  {"id":"gemini:poem_0195","metre":"sardulavikriditamu","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.913,"resolved_live":1.0,"resolved_live_strict":0.5217,"resolved":1.0,"resolved_verified":0.8696,"resolved_strict":0.6087,"in_table":0.4783,"attested":1.0,"classes_live":{"resolved-by-byt5":10,"headword":2,"inflected":11},"n_unresolved":2},
+  {"id":"gemini:poem_0196","metre":"sardulavikriditamu","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.8333,"resolved_live":1.0,"resolved_live_strict":0.4583,"resolved":1.0,"resolved_verified":0.7917,"resolved_strict":0.5417,"in_table":0.4167,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":11,"headword":1},"n_unresolved":4},
+  {"id":"gemini:poem_0197","metre":"sardulavikriditamu","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.875,"resolved_live":1.0,"resolved_live_strict":0.5,"resolved":1.0,"resolved_verified":0.8333,"resolved_strict":0.5417,"in_table":0.3333,"attested":1.0,"classes_live":{"resolved-by-byt5":12,"inflected":11,"headword":1},"n_unresolved":3},
+  {"id":"gemini:poem_0198","metre":"mattebhavikriditamu","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7917,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8333,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":16,"headword":3,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0199","metre":"mattebhavikriditamu","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7917,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7917,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":16,"headword":3,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0200","metre":"mattebhavikriditamu","alankaram":"vrittyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.75,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":16,"resolved-by-byt5":6,"headword":2},"n_unresolved":0},
+  {"id":"gemini:poem_0201","metre":"mattebhavikriditamu","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.8333,"resolved":0.9583,"resolved_verified":0.9167,"resolved_strict":0.8333,"in_table":0.7917,"attested":1.0,"classes_live":{"inflected":18,"headword":2,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0202","metre":"mattebhavikriditamu","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.8333,"resolved":0.9583,"resolved_verified":0.9167,"resolved_strict":0.7917,"in_table":0.7917,"attested":1.0,"classes_live":{"inflected":18,"headword":2,"resolved-by-byt5":4},"n_unresolved":1},
+  {"id":"gemini:poem_0203","metre":"mattebhavikriditamu","alankaram":"antyanuprasa","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.7917,"resolved":0.9583,"resolved_verified":0.9167,"resolved_strict":0.75,"in_table":0.7917,"attested":1.0,"classes_live":{"inflected":18,"resolved-by-byt5":5,"headword":1},"n_unresolved":1},
+  {"id":"gemini:poem_0204","metre":"mattebhavikriditamu","alankaram":"yamaka","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.5652,"resolved":1.0,"resolved_verified":0.9565,"resolved_strict":0.6522,"in_table":0.6087,"attested":1.0,"classes_live":{"inflected":11,"resolved-by-byt5":9,"headword":3},"n_unresolved":1},
+  {"id":"gemini:poem_0205","metre":"mattebhavikriditamu","alankaram":"yamaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7917,"in_table":0.6667,"attested":1.0,"classes_live":{"inflected":16,"resolved-by-byt5":5,"headword":3},"n_unresolved":0},
+  {"id":"gemini:poem_0206","metre":"mattebhavikriditamu","alankaram":"yamaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6667,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.75,"in_table":0.7917,"attested":1.0,"classes_live":{"inflected":15,"resolved-by-byt5":7,"headword":2},"n_unresolved":0},
+  {"id":"gemini:poem_0207","metre":"mattebhavikriditamu","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8889,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9259,"in_table":0.8519,"attested":1.0,"classes_live":{"inflected":18,"headword":6,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0208","metre":"mattebhavikriditamu","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8889,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8889,"in_table":0.8519,"attested":1.0,"classes_live":{"inflected":18,"headword":6,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0209","metre":"mattebhavikriditamu","alankaram":"muktapadagrasta","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8519,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8519,"in_table":0.8519,"attested":1.0,"classes_live":{"inflected":18,"resolved-by-byt5":4,"headword":5},"n_unresolved":0},
+  {"id":"gemini:poem_0213","metre":"mattebhavikriditamu","alankaram":"rupaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7083,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.75,"in_table":0.625,"attested":1.0,"classes_live":{"inflected":14,"resolved-by-byt5":7,"headword":3},"n_unresolved":0},
+  {"id":"gemini:poem_0214","metre":"mattebhavikriditamu","alankaram":"rupaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7917,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7917,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":16,"headword":3,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0215","metre":"mattebhavikriditamu","alankaram":"rupaka","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7083,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.6667,"in_table":0.625,"attested":1.0,"classes_live":{"inflected":14,"headword":3,"resolved-by-byt5":7},"n_unresolved":0},
+  {"id":"gemini:poem_0216","metre":"mattebhavikriditamu","alankaram":"shlesha","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7083,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7917,"in_table":0.6667,"attested":1.0,"classes_live":{"inflected":14,"headword":3,"resolved-by-byt5":7},"n_unresolved":0},
+  {"id":"gemini:poem_0217","metre":"mattebhavikriditamu","alankaram":"shlesha","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6957,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7391,"in_table":0.6522,"attested":1.0,"classes_live":{"inflected":13,"headword":3,"resolved-by-byt5":7},"n_unresolved":0},
+  {"id":"gemini:poem_0218","metre":"mattebhavikriditamu","alankaram":"shlesha","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7083,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.75,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":15,"headword":2,"resolved-by-byt5":7},"n_unresolved":0},
+  {"id":"gemini:poem_0219","metre":"mattebhavikriditamu","alankaram":"upama","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.5833,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.625,"in_table":0.5417,"attested":1.0,"classes_live":{"inflected":11,"resolved-by-byt5":10,"headword":3},"n_unresolved":1},
+  {"id":"gemini:poem_0220","metre":"mattebhavikriditamu","alankaram":"upama","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.6087,"resolved":1.0,"resolved_verified":0.9565,"resolved_strict":0.6522,"in_table":0.6087,"attested":1.0,"classes_live":{"inflected":11,"resolved-by-byt5":9,"headword":3},"n_unresolved":1},
+  {"id":"gemini:poem_0221","metre":"mattebhavikriditamu","alankaram":"upama","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.5833,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.625,"in_table":0.5833,"attested":1.0,"classes_live":{"inflected":12,"resolved-by-byt5":10,"headword":2},"n_unresolved":1},
+  {"id":"gemini:poem_0222","metre":"mattebhavikriditamu","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7917,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":17,"headword":2,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0223","metre":"mattebhavikriditamu","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7917,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":17,"headword":2,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0224","metre":"mattebhavikriditamu","alankaram":"atishayokti","in_study1_pool":false,"n_tokens":24,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7917,"in_table":0.7083,"attested":1.0,"classes_live":{"inflected":17,"headword":2,"resolved-by-byt5":5},"n_unresolved":0},
+  {"id":"gemini:poem_0225","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":29,"resolved_live_verified":0.9655,"resolved_live":1.0,"resolved_live_strict":0.5517,"resolved":1.0,"resolved_verified":0.931,"resolved_strict":0.8276,"in_table":0.8966,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"inflected":17,"headword":5},"n_unresolved":1},
+  {"id":"gemini:poem_0226","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":25,"resolved_live_verified":0.92,"resolved_live":1.0,"resolved_live_strict":0.64,"resolved":1.0,"resolved_verified":0.92,"resolved_strict":0.8,"in_table":0.92,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"headword":8,"inflected":10},"n_unresolved":2},
+  {"id":"gemini:poem_0227","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":24,"resolved_live_verified":0.9583,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":0.9583,"resolved_strict":0.8333,"in_table":0.875,"attested":1.0,"classes_live":{"inflected":12,"headword":7,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0228","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.7407,"resolved":0.963,"resolved_verified":0.9259,"resolved_strict":0.8148,"in_table":0.9259,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"headword":8,"inflected":12},"n_unresolved":1},
+  {"id":"gemini:poem_0229","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":0.9565,"resolved_live":1.0,"resolved_live_strict":0.4783,"resolved":0.9565,"resolved_verified":0.913,"resolved_strict":0.6087,"in_table":0.6522,"attested":1.0,"classes_live":{"inflected":9,"resolved-by-byt5":10,"headword":4},"n_unresolved":1},
+  {"id":"gemini:poem_0230","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.9259,"resolved_live":1.0,"resolved_live_strict":0.6296,"resolved":1.0,"resolved_verified":0.8889,"resolved_strict":0.7778,"in_table":0.8519,"attested":1.0,"classes_live":{"resolved-by-byt5":7,"headword":6,"inflected":14},"n_unresolved":2},
+  {"id":"gemini:poem_0231","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.75,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8214,"in_table":0.8929,"attested":1.0,"classes_live":{"inflected":11,"headword":11,"resolved-by-byt5":6},"n_unresolved":0},
+  {"id":"gemini:poem_0232","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6522,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.7391,"in_table":0.6957,"attested":1.0,"classes_live":{"inflected":11,"headword":5,"resolved-by-byt5":7},"n_unresolved":0},
+  {"id":"gemini:poem_0233","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7308,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8077,"in_table":0.7692,"attested":1.0,"classes_live":{"inflected":14,"resolved-by-byt5":6,"headword":6},"n_unresolved":0},
+  {"id":"gemini:poem_0234","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.7778,"resolved":0.963,"resolved_verified":0.9259,"resolved_strict":0.8889,"in_table":0.963,"attested":1.0,"classes_live":{"headword":12,"inflected":10,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0235","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8462,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9231,"in_table":0.9615,"attested":1.0,"classes_live":{"headword":9,"inflected":14,"resolved-by-byt5":3},"n_unresolved":0},
+  {"id":"gemini:poem_0236","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7826,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8261,"in_table":0.7826,"attested":1.0,"classes_live":{"headword":6,"inflected":13,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0237","metre":"utpalamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7692,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8462,"in_table":0.9231,"attested":1.0,"classes_live":{"headword":9,"inflected":13,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0238","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6522,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8261,"in_table":0.8696,"attested":1.0,"classes_live":{"resolved-by-byt5":6,"inflected":13,"headword":4},"n_unresolved":0},
+  {"id":"gemini:poem_0240","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":29,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8276,"resolved":1.0,"resolved_verified":0.9655,"resolved_strict":0.9655,"in_table":0.8966,"attested":1.0,"classes_live":{"inflected":17,"resolved-by-byt5":3,"headword":9},"n_unresolved":0},
+  {"id":"gemini:poem_0241","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.6429,"resolved":0.9643,"resolved_verified":0.9643,"resolved_strict":0.9286,"in_table":0.9643,"attested":0.9643,"classes_live":{"inflected":17,"headword":6,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0242","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":29,"resolved_live_verified":0.9655,"resolved_live":1.0,"resolved_live_strict":0.7241,"resolved":1.0,"resolved_verified":0.9655,"resolved_strict":0.8276,"in_table":0.8621,"attested":1.0,"classes_live":{"inflected":16,"headword":8,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0243","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":27,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7778,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.9259,"in_table":0.963,"attested":1.0,"classes_live":{"inflected":19,"headword":6,"resolved-by-byt5":2},"n_unresolved":0},
+  {"id":"gemini:poem_0244","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.7857,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.8929,"in_table":0.9286,"attested":1.0,"classes_live":{"headword":10,"split-all-known":1,"inflected":12,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0245","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":22,"resolved_live_verified":0.9091,"resolved_live":1.0,"resolved_live_strict":0.6364,"resolved":1.0,"resolved_verified":0.9091,"resolved_strict":0.6364,"in_table":0.6364,"attested":1.0,"classes_live":{"resolved-by-byt5":8,"inflected":9,"headword":5},"n_unresolved":2},
+  {"id":"gemini:poem_0246","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":28,"resolved_live_verified":0.9643,"resolved_live":1.0,"resolved_live_strict":0.7143,"resolved":1.0,"resolved_verified":0.9643,"resolved_strict":0.8929,"in_table":0.9286,"attested":1.0,"classes_live":{"inflected":15,"headword":8,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0247","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":27,"resolved_live_verified":0.963,"resolved_live":1.0,"resolved_live_strict":0.7407,"resolved":1.0,"resolved_verified":0.963,"resolved_strict":0.8148,"in_table":0.9259,"attested":1.0,"classes_live":{"inflected":12,"headword":8,"resolved-by-byt5":7},"n_unresolved":1},
+  {"id":"gemini:poem_0248","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":29,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7586,"resolved":1.0,"resolved_verified":0.9655,"resolved_strict":0.8621,"in_table":0.8966,"attested":1.0,"classes_live":{"inflected":18,"headword":7,"resolved-by-byt5":4},"n_unresolved":0},
+  {"id":"gemini:poem_0249","metre":"champakamala","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":26,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.6538,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8846,"in_table":0.8462,"attested":1.0,"classes_live":{"inflected":16,"resolved-by-byt5":6,"headword":4},"n_unresolved":0},
+  {"id":"gemini:poem_0250","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.76,"resolved":1.0,"resolved_verified":0.96,"resolved_strict":0.88,"in_table":0.92,"attested":1.0,"classes_live":{"headword":4,"inflected":16,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0251","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":true,"n_tokens":22,"resolved_live_verified":0.9545,"resolved_live":1.0,"resolved_live_strict":0.5455,"resolved":1.0,"resolved_verified":0.9545,"resolved_strict":0.6364,"in_table":0.6364,"attested":1.0,"classes_live":{"inflected":8,"headword":4,"resolved-by-byt5":10},"n_unresolved":1},
+  {"id":"gemini:poem_0252","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.7391,"resolved":1.0,"resolved_verified":0.9565,"resolved_strict":0.6957,"in_table":0.5652,"attested":1.0,"classes_live":{"inflected":13,"resolved-by-byt5":6,"headword":4},"n_unresolved":0},
+  {"id":"gemini:poem_0253","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":25,"resolved_live_verified":0.96,"resolved_live":1.0,"resolved_live_strict":0.8,"resolved":0.96,"resolved_verified":0.96,"resolved_strict":0.84,"in_table":0.84,"attested":1.0,"classes_live":{"headword":2,"inflected":18,"resolved-by-byt5":5},"n_unresolved":1},
+  {"id":"gemini:poem_0254","metre":"sardulavikriditamu","alankaram":"(none asked)","in_study1_pool":false,"n_tokens":23,"resolved_live_verified":1.0,"resolved_live":1.0,"resolved_live_strict":0.8261,"resolved":1.0,"resolved_verified":1.0,"resolved_strict":0.8261,"in_table":0.6522,"attested":1.0,"classes_live":{"inflected":19,"resolved-by-byt5":4},"n_unresolved":0}
+ ]
+}

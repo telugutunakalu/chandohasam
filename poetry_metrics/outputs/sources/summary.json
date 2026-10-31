@@ -929,7 +929,7 @@
    }
   },
   "dataset_chandassu": {
-   "title": "chandassu (prosody examples)",
+   "title": "chandassu: 25 śatakams (the Kaggle Chandassu dataset)",
    "family": "dataset",
    "kind": "human",
    "from": "dataset/chandassu.json (verse records)",
@@ -3811,6 +3811,308 @@
      "mean_difference": 0.0,
      "share_above_gold": 0.0,
      "share_equal": 1.0
+    }
+   }
+  },
+  "gemini_initial_evals": {
+   "title": "Gemini-written poems (metrics/initial_evals)",
+   "family": "gemini",
+   "kind": "ai",
+   "from": "metrics/initial_evals/Outputs/chandas_dataset.json (exact duplicates dropped)",
+   "n_poems": 246,
+   "summary": {
+    "anuprasa_v1": {
+     "value": {
+      "n": 246,
+      "mean": 1.3158,
+      "sd": 1.4343,
+      "p10": -0.409,
+      "median": 1.035,
+      "p90": 3.322
+     },
+     "labels": {
+      "none": {
+       "n": 158,
+       "share": 0.6423
+      },
+      "weak": {
+       "n": 85,
+       "share": 0.3455
+      },
+      "marked": {
+       "n": 3,
+       "share": 0.0122
+      },
+      "strong": {
+       "n": 0,
+       "share": 0.0
+      }
+     }
+    },
+    "anuprasa_v2": {
+     "value": {
+      "n": 246,
+      "mean": 1.2296,
+      "sd": 1.4134,
+      "p10": -0.482,
+      "median": 0.947,
+      "p90": 3.195
+     },
+     "labels": {
+      "none": {
+       "n": 162,
+       "share": 0.6585
+      },
+      "weak": {
+       "n": 82,
+       "share": 0.3333
+      },
+      "marked": {
+       "n": 2,
+       "share": 0.0081
+      },
+      "strong": {
+       "n": 0,
+       "share": 0.0
+      }
+     }
+    },
+    "anuprasa_v3": {
+     "value": {
+      "n": 246,
+      "mean": 1.2136,
+      "sd": 0.2311,
+      "p10": 0.9625,
+      "median": 1.1875,
+      "p90": 1.5
+     },
+     "labels": {
+      "none": {
+       "n": 0,
+       "share": 0.0
+      },
+      "weak": {
+       "n": 15,
+       "share": 0.061
+      },
+      "marked": {
+       "n": 174,
+       "share": 0.7073
+      },
+      "strong": {
+       "n": 57,
+       "share": 0.2317
+      }
+     }
+    },
+    "madhurya_v1": {
+     "value": {
+      "n": 246,
+      "mean": -0.0373,
+      "sd": 0.131,
+      "p10": -0.2021,
+      "median": -0.0263,
+      "p90": 0.1173
+     },
+     "labels": {
+      "harsh": {
+       "n": 10,
+       "share": 0.0407
+      },
+      "leaning_harsh": {
+       "n": 52,
+       "share": 0.2114
+      },
+      "balanced": {
+       "n": 116,
+       "share": 0.4715
+      },
+      "leaning_soft": {
+       "n": 59,
+       "share": 0.2398
+      },
+      "soft": {
+       "n": 9,
+       "share": 0.0366
+      }
+     }
+    },
+    "madhurya_v2": {
+     "value": {
+      "n": 246,
+      "mean": -0.0373,
+      "sd": 0.131,
+      "p10": -0.2021,
+      "median": -0.0263,
+      "p90": 0.1173
+     },
+     "labels": {
+      "harsh": {
+       "n": 2,
+       "share": 0.0081
+      },
+      "leaning_harsh": {
+       "n": 56,
+       "share": 0.2276
+      },
+      "balanced": {
+       "n": 171,
+       "share": 0.6951
+      },
+      "leaning_soft": {
+       "n": 17,
+       "share": 0.0691
+      },
+      "soft": {
+       "n": 0,
+       "share": 0.0
+      }
+     }
+    },
+    "ojas": {
+     "value": {
+      "n": 246,
+      "mean": 38.2706,
+      "sd": 3.065,
+      "p10": 33.929,
+      "median": 38.298,
+      "p90": 41.875
+     },
+     "labels": {
+      "light": {
+       "n": 152,
+       "share": 0.6179
+      },
+      "leaning_light": {
+       "n": 70,
+       "share": 0.2846
+      },
+      "moderate": {
+       "n": 23,
+       "share": 0.0935
+      },
+      "leaning_dense": {
+       "n": 1,
+       "share": 0.0041
+      },
+      "dense": {
+       "n": 0,
+       "share": 0.0
+      }
+     }
+    },
+    "prasada_v1": {
+     "value": {
+      "n": 246,
+      "mean": 6.6464,
+      "sd": 1.1095,
+      "p10": 5.46,
+      "median": 6.307,
+      "p90": 8.31
+     },
+     "labels": {
+      "obscure": {
+       "n": 77,
+       "share": 0.313
+      },
+      "leaning_obscure": {
+       "n": 42,
+       "share": 0.1707
+      },
+      "ordinary": {
+       "n": 97,
+       "share": 0.3943
+      },
+      "leaning_clear": {
+       "n": 27,
+       "share": 0.1098
+      },
+      "clear": {
+       "n": 3,
+       "share": 0.0122
+      }
+     }
+    },
+    "prasada_v2": {
+     "value": {
+      "n": 246,
+      "mean": 6.6464,
+      "sd": 1.1095,
+      "p10": 5.46,
+      "median": 6.307,
+      "p90": 8.31
+     },
+     "labels": {
+      "obscure": {
+       "n": 98,
+       "share": 0.3984
+      },
+      "leaning_obscure": {
+       "n": 44,
+       "share": 0.1789
+      },
+      "ordinary": {
+       "n": 52,
+       "share": 0.2114
+      },
+      "leaning_clear": {
+       "n": 40,
+       "share": 0.1626
+      },
+      "clear": {
+       "n": 12,
+       "share": 0.0488
+      }
+     }
+    },
+    "chandas_distance": {
+     "value": {
+      "n": 246,
+      "mean": 0.9373,
+      "sd": 0.1095,
+      "p10": 0.8457,
+      "median": 0.9629,
+      "p90": 1.0
+     },
+     "labels": {
+      "unmetered": {
+       "n": 0,
+       "share": 0.0
+      },
+      "weak": {
+       "n": 5,
+       "share": 0.0203
+      },
+      "partial": {
+       "n": 11,
+       "share": 0.0447
+      },
+      "slip": {
+       "n": 115,
+       "share": 0.4675
+      },
+      "exact": {
+       "n": 115,
+       "share": 0.4675
+      }
+     },
+     "distance": {
+      "n": 246,
+      "mean": 1.3862,
+      "sd": 2.6368,
+      "p10": 0,
+      "median": 1,
+      "p90": 3
+     },
+     "edits_per_100_aksharas": {
+      "n": 246,
+      "mean": 1.7172,
+      "sd": 3.1326,
+      "p10": 0.0,
+      "median": 1.18,
+      "p90": 3.77
+     },
+     "metre_given": 246
     }
    }
   }

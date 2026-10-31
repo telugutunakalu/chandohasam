@@ -876,7 +876,7 @@
    }
   },
   "dataset_chandassu": {
-   "title": "chandassu (prosody examples)",
+   "title": "chandassu: 25 śatakams (the Kaggle Chandassu dataset)",
    "family": "dataset",
    "kind": "human",
    "from": "dataset/chandassu.json (verse records)",
@@ -3578,6 +3578,290 @@
      "n_pairs": 33,
      "mean_difference": -0.0185,
      "share_above_gold": 0.0303
+    }
+   }
+  },
+  "gemini_initial_evals": {
+   "title": "Gemini-written poems (metrics/initial_evals)",
+   "family": "gemini",
+   "kind": "ai",
+   "from": "metrics/initial_evals/Outputs/chandas_dataset.json (exact duplicates dropped)",
+   "summary": {
+    "n_poems": 246,
+    "n_tokens": 6112,
+    "readings": {
+     "resolved_live_verified": {
+      "over_poems": {
+       "n": 246,
+       "mean": 0.961,
+       "sd": 0.0483,
+       "p10": 0.9,
+       "median": 0.9643,
+       "p90": 1.0
+      },
+      "over_tokens": 0.962
+     },
+     "resolved_live": {
+      "over_poems": {
+       "n": 246,
+       "mean": 1.0,
+       "sd": 0.0,
+       "p10": 1.0,
+       "median": 1.0,
+       "p90": 1.0
+      },
+      "over_tokens": 1.0
+     },
+     "resolved_live_strict": {
+      "over_poems": {
+       "n": 246,
+       "mean": 0.7414,
+       "sd": 0.1269,
+       "p10": 0.56,
+       "median": 0.76,
+       "p90": 0.8889
+      },
+      "over_tokens": 0.7433
+     },
+     "resolved": {
+      "over_poems": {
+       "n": 246,
+       "mean": 0.983,
+       "sd": 0.0314,
+       "p10": 0.95,
+       "median": 1.0,
+       "p90": 1.0
+      },
+      "over_tokens": 0.9841
+     },
+     "resolved_verified": {
+      "over_poems": {
+       "n": 246,
+       "mean": 0.9498,
+       "sd": 0.0531,
+       "p10": 0.875,
+       "median": 0.96,
+       "p90": 1.0
+      },
+      "over_tokens": 0.9508
+     },
+     "resolved_strict": {
+      "over_poems": {
+       "n": 246,
+       "mean": 0.8131,
+       "sd": 0.1139,
+       "p10": 0.6522,
+       "median": 0.8276,
+       "p90": 0.95
+      },
+      "over_tokens": 0.8156
+     },
+     "in_table": {
+      "over_poems": {
+       "n": 246,
+       "mean": 0.8006,
+       "sd": 0.1609,
+       "p10": 0.5652,
+       "median": 0.84,
+       "p90": 0.9643
+      },
+      "over_tokens": 0.8025
+     },
+     "attested": {
+      "over_poems": {
+       "n": 246,
+       "mean": 0.9981,
+       "sd": 0.0091,
+       "p10": 1.0,
+       "median": 1.0,
+       "p90": 1.0
+      },
+      "over_tokens": 0.9982
+     }
+    },
+    "classes_live": {
+     "inflected": {
+      "tokens": 3212,
+      "share": 0.5255
+     },
+     "headword": {
+      "tokens": 1525,
+      "share": 0.2495
+     },
+     "resolved-by-byt5": {
+      "tokens": 1369,
+      "share": 0.224
+     },
+     "split-all-known": {
+      "tokens": 6,
+      "share": 0.001
+     }
+    },
+    "unresolved_live_verified": {
+     "tokens": 232,
+     "types": 153,
+     "most_frequent": [
+      [
+       "సన్నారన్",
+       16
+      ],
+      [
+       "వెలుంగు",
+       14
+      ],
+      [
+       "దొలంచి",
+       6
+      ],
+      [
+       "దెలప",
+       4
+      ],
+      [
+       "సుధామ",
+       4
+      ],
+      [
+       "లన్నిటి",
+       3
+      ],
+      [
+       "కొలతల",
+       3
+      ],
+      [
+       "రాగముందగనులై",
+       3
+      ],
+      [
+       "సుయోగ",
+       3
+      ],
+      [
+       "శ్రీయోగతోన్",
+       3
+      ],
+      [
+       "శ్రీతన్నత్మన్",
+       3
+      ],
+      [
+       "శ్రీమిన్నడై",
+       3
+      ],
+      [
+       "శ్రీపాదతోన్",
+       3
+      ],
+      [
+       "విభంగి",
+       3
+      ],
+      [
+       "సురీతి",
+       3
+      ],
+      [
+       "సమాడ్కి",
+       3
+      ],
+      [
+       "వనంధి",
+       3
+      ],
+      [
+       "దివీశ",
+       3
+      ],
+      [
+       "తాపాల్దెగన్",
+       3
+      ],
+      [
+       "పోలెంగూర్",
+       3
+      ],
+      [
+       "కన్నీటి",
+       2
+      ],
+      [
+       "మానవత్వపు",
+       2
+      ],
+      [
+       "లొలుకు",
+       2
+      ],
+      [
+       "లెత్తు",
+       2
+      ],
+      [
+       "బతుకు",
+       2
+      ],
+      [
+       "కోర్వక",
+       2
+      ],
+      [
+       "విభంగిన",
+       2
+      ],
+      [
+       "సుభావ",
+       2
+      ],
+      [
+       "మణీయ",
+       2
+      ],
+      [
+       "సపోల్",
+       2
+      ],
+      [
+       "వలసల్",
+       1
+      ],
+      [
+       "లాంటి",
+       1
+      ],
+      [
+       "గురిసి",
+       1
+      ],
+      [
+       "యిండ్ల",
+       1
+      ],
+      [
+       "సలవి",
+       1
+      ],
+      [
+       "తల్లడిలంగను",
+       1
+      ],
+      [
+       "కాపదల్",
+       1
+      ],
+      [
+       "పచిపెట్టు",
+       1
+      ],
+      [
+       "రయ్యన",
+       1
+      ],
+      [
+       "చెంగట",
+       1
+      ]
+     ]
     }
    }
   }

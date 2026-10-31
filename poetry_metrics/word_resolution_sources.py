@@ -3,7 +3,8 @@
     ../.venv/bin/python -u word_resolution_sources.py     # ≈ 15 s with its ByT5 cache, ≈ 5 min without (CPU) →
                                                           #   outputs/word_resolution/<source>.json, summary.json, reports/word_resolution_sources.md
 
-The sources are score_sources.py's own (the four dataset files; study 1 by source; study 2 by model), tokenised by
+The sources are score_sources.py's own (the four dataset files; study 1 by source; study 2 by model; every Gemini
+poem of ../metrics/initial_evals), tokenised by
 the resolver itself (`WordResolver.tokens`: the recorded line-end joins, the spacing rules). Each word type is
 resolved exactly as ../final_report_metrics/score_resolution.py does it, with that script's own functions: the live
 path (lexicon, then ByT5's four beams), the resolver's verified gate, and the corpus table. A type that script already
@@ -132,10 +133,10 @@ def summarise(rows: list) -> dict:
     return out
 
 
-def by_metre(rows: list) -> dict:
+def by_metre(rows: list, key: str = "metre") -> dict:
     groups = collections.defaultdict(list)
     for r in rows:
-        groups[r["metre"] or "(none)"].append(r)
+        groups[str(r[key]) if r[key] is not None else "(none)"].append(r)
     return {m: {"n_poems": len(g), "n_tokens": sum(r["n_tokens"] for r in g),
                 **{k: ss.describe([r[k] for r in g]).get("mean") for k in READINGS}}
             for m, g in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0]))}
@@ -205,6 +206,8 @@ def main() -> int:
         src = srcs[name]
         doc = {"source": name, "title": src["title"], "family": src["family"], "kind": src["kind"],
                "from": src["from"], "summary": summarise(rs), "by_metre": by_metre(rs)}
+        for key in src.get("group_by", []):
+            doc[f"by_{key}"] = by_metre(rs, key)
         if name.startswith("human_evals_study2_"):
             doc["against_gold"] = against_gold(rs, gold)
         poems = [{k: v for k, v in r.items() if k not in ("_count", "unresolved")} | {"n_unresolved": len(r["unresolved"])}

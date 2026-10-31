@@ -18,6 +18,7 @@ Directions: anuprāsa A higher = more repeated consonant patterns; mādhurya M h
 | `human_evals_study2_mdlm523m_ft` | ai | 33 | 1.143 [30%] | -0.028 [15%] | 37.037 [9%] | 6.239 [6%] | 1.000 [100%] |
 | `human_evals_study2_t5_1b_ft` | ai | 33 | 1.048 [24%] | -0.031 [18%] | 41.304 [12%] | 6.245 [3%] | 1.000 [100%] |
 | `human_evals_study2_nandi_ft` | ai | 33 | 1.133 [24%] | -0.068 [18%] | 41.071 [6%] | 6.425 [3%] | 1.000 [100%] |
+| `gemini_initial_evals` | ai | 246 | 1.188 [23%] | -0.026 [4%] | 38.298 [0%] | 6.307 [1%] | 0.963 [47%] |
 
 Labels: anuprāsa 3.0 none / weak / marked / strong (A against the treatise's example, 1.33); mādhurya harsh / leaning_harsh / balanced / leaning_soft / soft; ojas light / leaning_light / moderate / leaning_dense / dense; prasāda (1.0) obscure / leaning_obscure / ordinary / leaning_clear / clear; chandas distance unmetered / weak / partial / slip / exact.
 
